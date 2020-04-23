@@ -99,7 +99,7 @@ public class OnlineUsersFragment extends Fragment implements OnlineUsersView, Co
     private long last_rating = 0;
     Prefs mPrefs;
 
-    //Recommended user
+    //Recommended users
     private ImageView mRecommendedImage;
     private CardView mRecommendedContainer;
     private ImageView mRecommendedCloseBtn;
