@@ -85,7 +85,7 @@ public class OnlineUsersFragment extends Fragment implements OnlineUsersView, Co
     private int mCurrentPage = 1;
 
     
-    //Pagination fields
+    //Pagination field
 
     private int total_item = 0;
     private int last_visible_item = 0;
