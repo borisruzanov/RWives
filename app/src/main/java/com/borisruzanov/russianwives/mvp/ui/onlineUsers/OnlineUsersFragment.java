@@ -98,7 +98,7 @@ public class OnlineUsersFragment extends Fragment implements OnlineUsersView, Co
     private boolean isGoneInOnPause;
     private long last_rating = 0;
     Prefs mPrefs;
-
+    //Images
     //Recommended users
     private ImageView mRecommendedImage;
     private CardView mRecommendedContainer;
