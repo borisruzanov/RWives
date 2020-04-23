@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvp.ui.slider.SliderDrinkStatusFragment">
+
+    <TextView
+        android:id="@+id/fragment_slider_drinkstatus_tv_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp16"
+        android:text="@string/how_often_do_you_drink"
+        android:textColor="@color/darkGrey"
+        android:textSize="@dimen/large_text_size" />
+
+        <RadioGroup
+            android:id="@+id/fragment_slider_drink_status_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fragment_slider_drinkstatus_tv_question"
+            android:layout_margin="@dimen/dp16"
+            android:gravity="center"
+            android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/fragment_slider_drink_status_rbtn_never"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:text="@string/never"
+            android:textSize="@dimen/answers_text_size" />
+
+        <RadioButton
+            android:id="@+id/fragment_slider_drink_status_rbtn_friends"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:text="@string/only_with_friends"
+            android:textSize="@dimen/answers_text_size" />
+
+        <RadioButton
+            android:id="@+id/fragment_slider_drink_status_rbtn_moderaely"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:text="@string/moderately"
+            android:textSize="@dimen/answers_text_size" />
+
+        <RadioButton
+            android:id="@+id/fragment_slider_drink_status_rbtn_regularly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:text="@string/regularly"
+            android:textSize="@dimen/answers_text_size" />
+        </RadioGroup>
+
+    <Button
+        android:id="@+id/fragment_slider_drinkstatus_btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_slider_drink_status_radiogroup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp12"
+        android:backgroundTint="@color/colorAccent"
+        android:text="@string/save"
+        android:textColor="@android:color/white" />
+
+
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/fragment_slider_gender_tv_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp16"
+        android:text="@string/select_your_gender"
+        android:textColor="@color/darkGrey"
+        android:textSize="@dimen/large_text_size" />
+
+    <RadioGroup
+        android:id="@+id/fragment_slider_gender_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment_slider_gender_tv_question"
+        android:layout_margin="@dimen/dp16"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/fragment_slider_gender_radiobutton_male"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:text="@string/male_option"
+            android:textSize="@dimen/answers_text_size" />
+
+        <RadioButton
+            android:id="@+id/fragment_slider_gender_radiobutton_female"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:text="@string/female_option"
+            android:textSize="@dimen/answers_text_size" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/fragment_slider_gender_btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_slider_gender_radiogroup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp12"
+        android:backgroundTint="@color/colorAccent"
+        android:text="@string/save"
+        android:textColor="@android:color/white" />
+
+
+</RelativeLayout>

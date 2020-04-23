@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvp.ui.slider.SliderWillingKidsFragment">
+
+    <TextView
+        android:id="@+id/fragment_slider_willingkids_tv_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp16"
+        android:text="@string/do_you_willing_kids"
+        android:textColor="@color/darkGrey"
+        android:textSize="@dimen/large_text_size" />
+
+        <RadioGroup
+            android:id="@+id/fragment_slider_willingkids_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fragment_slider_willingkids_tv_question"
+            android:layout_margin="@dimen/dp16"
+            android:gravity="center"
+            android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/fragment_slider_willingkids_rbtn_definitely"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:text="@string/definitely"
+            android:textSize="@dimen/answers_text_size" />
+
+        <RadioButton
+            android:id="@+id/fragment_slider_willingkids_rbtn_someday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:text="@string/someday"
+            android:textSize="@dimen/answers_text_size" />
+
+        <RadioButton
+            android:id="@+id/fragment_slider_willingkids_rbtn_not_sure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:text="@string/not_sure"
+            android:textSize="@dimen/answers_text_size" />
+
+        <RadioButton
+            android:id="@+id/fragment_slider_willingkids_rbtn_probably"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:text="@string/probably_not"
+            android:textSize="@dimen/answers_text_size" />
+        <RadioButton
+            android:id="@+id/fragment_slider_willingkids_rbtn_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:text="@string/no"
+            android:textSize="@dimen/answers_text_size" />
+        <RadioButton
+            android:id="@+id/fragment_slider_willingkids_rbtn_no_but_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:text="@string/no_but_its_ok_if_partner_has_kids"
+            android:textSize="@dimen/answers_text_size" />
+        </RadioGroup>
+
+    <Button
+        android:id="@+id/fragment_slider_willingkids_btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_slider_willingkids_radiogroup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp12"
+        android:backgroundTint="@color/colorAccent"
+        android:text="@string/save"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

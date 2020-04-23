@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvp.ui.slider.SliderBodytypeFragment">
+
+    <TextView
+        android:id="@+id/fragment_slider_bodytype_tv_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp16"
+        android:text="@string/what_bodytype"
+        android:textColor="@color/darkGrey"
+        android:textSize="@dimen/large_text_size" />
+
+    <RadioGroup
+        android:id="@+id/fragment_slider_bodytype_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment_slider_bodytype_tv_question"
+        android:layout_marginTop="@dimen/dp16"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/fragment_slider_bodytype_rbtn_slender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:text="@string/slender"
+            android:textSize="@dimen/answers_text_size" />
+
+        <RadioButton
+            android:id="@+id/fragment_slider_bodytype_rbtn_average"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:text="@string/about_average"
+            android:textSize="@dimen/answers_text_size" />
+
+        <RadioButton
+            android:id="@+id/fragment_slider_bodytype_rbtn_athletic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:text="@string/athletic"
+            android:textSize="@dimen/answers_text_size" />
+
+        <RadioButton
+            android:id="@+id/fragment_slider_bodytype_rbtn_heavyset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:text="@string/heavyset"
+            android:textSize="@dimen/answers_text_size" />
+
+        <RadioButton
+            android:id="@+id/fragment_slider_bodytype_rbtn_fewextra"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:text="@string/a_few_extra_pounds"
+            android:textSize="@dimen/answers_text_size" />
+
+        <RadioButton
+            android:id="@+id/fragment_slider_bodytype_rbtn_stocky"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:text="@string/stocky"
+            android:textSize="@dimen/answers_text_size" />
+
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/fragment_slider_bodytype_btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_slider_bodytype_radiogroup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/colorAccent"
+        android:text="@string/save"
+        android:textColor="@android:color/white" />
+
+
+</RelativeLayout>

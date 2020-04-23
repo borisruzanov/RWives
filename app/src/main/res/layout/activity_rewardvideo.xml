@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".mvp.ui.rewardvideo.RewardVideoActivity">
+
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:titleTextColor="@color/message_text_color" />
+        </android.support.design.widget.AppBarLayout>
+
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/purchase_free_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appBarLayout"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/purchase_free_activate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:backgroundTint="@color/colorAccent"
+                    android:text="Activate"
+                    android:textColor="@android:color/white" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/purchase_free_activate">
+
+                    <TextView
+                        android:id="@+id/purchase_free_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_toRightOf="@+id/search_recommended_image"
+                        android:text="FREE"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/purchase_free_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/purchase_free_title"
+                        android:layout_margin="4dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Limited functionality"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/purchase_free_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_toRightOf="@+id/purchase_free_title"
+                        android:text="$0"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/purchase_free_img_open"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/purchase_free_description"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_keyboard_arrow_down_black_24dp" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <RelativeLayout
+            android:id="@+id/purchase_free_container_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/purchase_free_container"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:background="@color/lightGrey"
+            android:padding="4dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/purchase_free_features_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Includes main features"
+                android:textSize="@dimen/sp14" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/purchase_regular_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/purchase_free_container_description"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/purchase_regular_activate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:backgroundTint="@color/colorAccent"
+                    android:text="Activate"
+                    android:textColor="@android:color/white" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/purchase_regular_activate">
+
+                    <TextView
+                        android:id="@+id/purchase_regular_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_toRightOf="@+id/search_recommended_image"
+                        android:text="FREE"
+                        android:textSize="20sp"
+
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/purchase_regular_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/purchase_regular_title"
+                        android:layout_margin="4dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Limited functionality"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/purchase_regular_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_toRightOf="@+id/purchase_regular_title"
+                        android:text="$0"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/purchase_regular_img_open"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/purchase_regular_description"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_keyboard_arrow_down_black_24dp" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/purchase_regular_container_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/purchase_regular_container"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:background="@color/lightGrey"
+            android:padding="4dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/purchase_regular_features_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Includes main features"
+                android:textSize="@dimen/sp14" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/purchase_premium_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/purchase_regular_container_description"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/purchase_premium_activate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:backgroundTint="@color/colorAccent"
+                    android:text="Activate"
+                    android:textColor="@android:color/white" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/purchase_premium_activate">
+
+                    <TextView
+                        android:id="@+id/purchase_premium_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_toRightOf="@+id/search_recommended_image"
+                        android:text="FREE"
+                        android:textSize="20sp"
+
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/purchase_premium_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/purchase_premium_title"
+                        android:layout_margin="4dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Limited functionality"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/purchase_premium_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_toRightOf="@+id/purchase_premium_title"
+                        android:text="$0"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/purchase_premium_img_open"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/purchase_premium_description"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_keyboard_arrow_down_black_24dp" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/purchase_premium_container_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/purchase_premium_container"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:background="@color/lightGrey"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/purchase_premium_features_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Includes main features"
+                android:textSize="@dimen/sp14" />
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

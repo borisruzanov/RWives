@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/holo_orange_dark">
+
+    <TextView
+        android:id="@+id/widget_action_likes"
+        style="@style/Base.TextAppearance.AppCompat.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp16"
+        android:text="@string/likes" />
+
+    <TextView
+        android:id="@+id/widget_action_visits"
+        style="@style/Base.TextAppearance.AppCompat.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/widget_action_likes"
+        android:padding="@dimen/dp16"
+        android:text="@string/visits" />
+
+</RelativeLayout>

@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvp.ui.slider.SliderSmokingStatusFragment">
+
+    <TextView
+        android:id="@+id/fragment_slider_smokestatus_tv_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp16"
+        android:text="@string/smoking_status"
+        android:textColor="@color/darkGrey"
+        android:textSize="@dimen/large_text_size" />
+
+        <RadioGroup
+            android:id="@+id/fragment_slider_smoking_status_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp16"
+            android:gravity="center"
+            android:layout_below="@+id/fragment_slider_smokestatus_tv_question"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/fragment_slider_smoking_status_rbtn_no_way"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp8"
+                android:text="@string/no_way"
+                android:textSize="@dimen/answers_text_size" />
+
+            <RadioButton
+                android:id="@+id/fragment_slider_smoking_status_rbtn_occasioally"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp8"
+                android:text="@string/occasionally"
+                android:textSize="@dimen/answers_text_size" />
+
+            <RadioButton
+                android:id="@+id/fragment_slider_smoking_status_rbtn_daily"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/daily"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/fragment_slider_smokine_status_rbtn_cigar_aficionado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp8"
+                android:text="@string/cigar_aficionado"
+                android:textSize="@dimen/answers_text_size" />
+
+            <RadioButton
+                android:id="@+id/fragment_slider_smokine_status_rbtn_quit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp8"
+                android:text="@string/yes_but_trying_to_quit"
+                android:textSize="@dimen/answers_text_size" />
+        </RadioGroup>
+
+    <Button
+        android:id="@+id/fragment_slider_smokestatus_btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_slider_smoking_status_radiogroup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/colorAccent"
+        android:text="@string/save"
+        android:textColor="@android:color/white" />
+
+
+</RelativeLayout>

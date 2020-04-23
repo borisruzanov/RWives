@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvp.ui.slider.SliderHaveKidsFragment">
+
+    <TextView
+        android:id="@+id/fragment_slider_numberofkids_tv_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp16"
+        android:text="@string/do_you_have_kids"
+        android:textColor="@color/darkGrey"
+        android:textSize="@dimen/large_text_size" />
+
+        <RadioGroup
+            android:id="@+id/fragment_slider_number_of_kids_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fragment_slider_numberofkids_tv_question"
+            android:gravity="center"
+            android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/fragment_slider_number_of_kids_rbtn_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:text="@string/no"
+            android:textSize="@dimen/answers_text_size" />
+
+        <RadioButton
+            android:id="@+id/fragment_slider_number_of_kids_rbtn_sometimes_at_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:text="@string/yes_they_sometimes_live_at_home"
+            android:textSize="@dimen/answers_text_size" />
+
+        <RadioButton
+            android:id="@+id/fragment_slider_number_of_kids_rbtn_away"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:text="@string/yes_they_live_away_from_home"
+            android:textSize="@dimen/answers_text_size" />
+
+        <RadioButton
+            android:id="@+id/fragment_slider_number_of_kids_rbtn_at_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:text="@string/yes_they_live_at_home"
+            android:textSize="@dimen/answers_text_size" />
+        </RadioGroup>
+
+    <Button
+        android:id="@+id/fragment_slider_numberofkids_btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_slider_number_of_kids_radiogroup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp12"
+        android:backgroundTint="@color/colorAccent"
+        android:text="@string/save"
+        android:textColor="@android:color/white" />
+
+
+</RelativeLayout>
