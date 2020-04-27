@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\rwvs\\RussianWivesSocNetwork\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw360dp-v13\\values-sw360dp-v13.xml",
+            "outputFile": "D:\\my_project\\Boris\\RWives\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw360dp-v13\\values-sw360dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Public\\.gradle\\caches\\transforms-2\\files-2.1\\438152570008d59e75587e0ef5dba99b\\firebase-ui-auth-4.3.2\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
+                    "source": "C:\\Users\\Abhay patel\\.gradle\\caches\\transforms-2\\files-2.1\\438152570008d59e75587e0ef5dba99b\\firebase-ui-auth-4.3.2\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",

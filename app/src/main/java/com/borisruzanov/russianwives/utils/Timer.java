@@ -24,22 +24,23 @@ public class Timer {
     }
 
     //take date parameter and return remain time value
-    public String getRemainTime(Date compareDate){
+    public int getRemainTime(Date compareDate){
         try {
             currentTime=simpleDateFormat.parse(simpleDateFormat.format(new Date()));
             long diff=compareDate.getTime()-currentTime.getTime();
             int sec= (int) (diff/1000); //convert into seconds
             remainMinutes=(sec/60); //convert into minutes
-            return (remainMinutes!=0)?getHour()+String.valueOf(getMinutes()):"0"; //return string like 845 or 0
+            return (remainMinutes>0)?remainMinutes:0;
+            //return int with remain minutes 245 or 0
         } catch (ParseException e) {
             e.printStackTrace();
-            return "0";
+            return 0;
         }
     }
 
     //return remain hours,call after getRemainTime() method
-    public int getHour(){
-        if (remainMinutes>60){
+    public int getHour(Date date){
+        if (getRemainTime(date)>60){
             return remainMinutes/60;
         }
         else {
@@ -48,9 +49,10 @@ public class Timer {
     }
 
     //return remain minutes,call after getRemainTime() method
-    public int getMinutes(){
-        if (remainMinutes!=0){
-            return remainMinutes%60;
+    public int getMinutes(Date date){
+        int minute=getRemainTime(date);
+        if (minute!=0){
+            return minute%60;
         }
         else {
             return 0;
