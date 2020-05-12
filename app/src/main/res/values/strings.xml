@@ -689,5 +689,12 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="leave_complain">Leave Complain?</string>
     <string name="complain">Complain:</string>
+    <string name="day_limit_is_over">Actions Limit Is Over</string>
+    <string name="limit_message">Free Plan has limit on actions \n \n Please get Premium Plan to get unlimited access</string>
+    <string name="time_to_wait">Time to wait:</string>
+    <string name="subscription">Subscription</string>
+    <string name="switch_plan_title">Premium Trial is over. \n You can switch to Free plan or buy Subscription</string>
+    <string name="buy_subscription">Buy Subscription</string>
+    <string name="switch_to_free">Switch to Free</string>
 
 </resources>

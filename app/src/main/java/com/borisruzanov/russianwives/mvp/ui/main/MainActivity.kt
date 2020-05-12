@@ -67,6 +67,10 @@ class MainActivity : AppCompatActivity(), MainView, FilterDialogFragment.FilterL
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
+    override fun buySubscription() {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
     override fun reviewDialogYes() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
@@ -447,6 +451,10 @@ class MainActivity : AppCompatActivity(), MainView, FilterDialogFragment.FilterL
     }
 
     override fun sendToPlayMarket() {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun switchToFreePlan() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 

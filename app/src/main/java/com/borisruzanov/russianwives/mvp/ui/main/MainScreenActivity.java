@@ -13,14 +13,12 @@ import android.support.annotation.RequiresApi;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.DialogFragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -34,22 +32,12 @@ import com.borisruzanov.russianwives.R;
 import com.borisruzanov.russianwives.models.FsUser;
 import com.borisruzanov.russianwives.mvp.model.data.SystemRepository;
 import com.borisruzanov.russianwives.mvp.model.data.prefs.Prefs;
-import com.borisruzanov.russianwives.mvp.model.interactor.chats.ChatsInteractor;
-import com.borisruzanov.russianwives.mvp.model.interactor.coins.CoinsInteractor;
 import com.borisruzanov.russianwives.mvp.model.interactor.main.MainInteractor;
 import com.borisruzanov.russianwives.mvp.model.interactor.myprofile.MyProfileInteractor;
-import com.borisruzanov.russianwives.mvp.model.interactor.search.SearchInteractor;
-import com.borisruzanov.russianwives.mvp.model.repository.chats.ChatsRepository;
-import com.borisruzanov.russianwives.mvp.model.repository.coins.CoinsRepository;
-import com.borisruzanov.russianwives.mvp.model.repository.filter.FilterRepository;
-import com.borisruzanov.russianwives.mvp.model.repository.friend.FriendRepository;
 import com.borisruzanov.russianwives.mvp.model.repository.hots.HotUsersRepository;
-import com.borisruzanov.russianwives.mvp.model.repository.rating.RatingRepository;
-import com.borisruzanov.russianwives.mvp.model.repository.search.SearchRepository;
 import com.borisruzanov.russianwives.mvp.model.repository.user.UserRepository;
 import com.borisruzanov.russianwives.mvp.ui.actions.ActionsActivity;
 import com.borisruzanov.russianwives.mvp.ui.chats.ChatsActivity;
-import com.borisruzanov.russianwives.mvp.ui.chats.ChatsPresenter;
 import com.borisruzanov.russianwives.mvp.ui.complain.ComplainFragment;
 import com.borisruzanov.russianwives.mvp.ui.confirm.ConfirmDialogFragment;
 import com.borisruzanov.russianwives.mvp.ui.filter.FilterDialogFragment;
@@ -63,15 +51,14 @@ import com.borisruzanov.russianwives.mvp.ui.myprofile.MyProfilePresenter;
 import com.borisruzanov.russianwives.mvp.ui.onlineUsers.OnlineUsersFragment;
 import com.borisruzanov.russianwives.mvp.ui.rewardvideo.RewardVideoActivity;
 import com.borisruzanov.russianwives.mvp.ui.search.SearchFragment;
-import com.borisruzanov.russianwives.mvp.ui.search.SearchPresenter;
-import com.borisruzanov.russianwives.mvp.ui.shop.ServicesActivity;
 import com.borisruzanov.russianwives.mvp.ui.slider.SliderActivity;
 import com.borisruzanov.russianwives.mvp.ui.usersearch.DialogUserSearch;
+import com.borisruzanov.russianwives.utils.ActionsCounter;
 import com.borisruzanov.russianwives.utils.Consts;
+import com.borisruzanov.russianwives.utils.SubscriptionManager;
 import com.bumptech.glide.Glide;
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.IdpResponse;
-import com.google.android.gms.ads.AdView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.analytics.FirebaseAnalytics;
@@ -93,24 +80,23 @@ import static com.borisruzanov.russianwives.models.Contract.RC_SIGN_IN;
 public class MainScreenActivity extends AppCompatActivity implements FilterDialogFragment.FilterListener, MainView, ConfirmDialogFragment.ConfirmListener {
 
     private static final String TAG_CLASS_NAME = "MainScreenActivity";
-    private FirebaseAnalytics firebaseAnalytics;
 
-
+    //Sytem objects
     private MainScreenPresenter mPresenter;
-    private ChatsPresenter mChatsPresenter;
-    private SearchPresenter mSearchPresenter;
     private MyProfilePresenter mMyProfilePresenter;
+    private SearchFragment mSearchFragment;
+    private Prefs mPrefs;
+    private FirebaseAnalytics mFirebaseAnalytics;
+    private SubscriptionManager mSubscriptionManager;
 
-    private boolean mIsUserExist;
 
+    //UI and views
     private Toolbar mToolbar;
     private DrawerLayout mDrawerLayout;
     private TabLayout mTabLayout;
     private CustomViewPager mViewPager;
     private MainPagerAdapter mViewPagerAdapter;
-
     private NavigationView mNavigationView;
-    private MenuItem mDrawerItemSafety;
     private ImageView mCloseDrawerButton;
     private TextView mViewProfileButton;
     private LinearLayout mPurchaseSectionButton;
@@ -120,34 +106,112 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
     private ImageView mChatsButton;
     private ImageView mActionsButton;
     private View mHeaderView;
-
-    private DialogFragment mDialogFragment;
-    private SearchFragment mSearchFragment;
-    private FsUser mFsUser = new FsUser();
-    private Prefs mPrefs;
-    private int mUserInfoCounter;
-
-    private AdView mAdView;
     private FloatingActionButton mFab;
-
     private ImageView mSocMedImgBackground;
     private ImageView mSocMeImgPhoto;
     private Button mYesBtn;
     private Button mNoBtn;
     private CardView mSocMedContainer;
+
+    //Local variables for logic
+    private boolean mIsUserExist;
+    private FsUser mFsUser = new FsUser();
     private int mSocMedCounter;
+    private int mUserInfoCounter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.drawer);
         mPresenter = new MainScreenPresenter(new MainInteractor(new UserRepository(new Prefs(this)), new HotUsersRepository(new Prefs(this)), new SystemRepository(new Prefs(this))), this);
-        mChatsPresenter = new ChatsPresenter(new ChatsInteractor(new ChatsRepository()));
-        mSearchPresenter = new SearchPresenter(new SearchInteractor(new SearchRepository(), new FilterRepository(new Prefs(this)), new FriendRepository(new Prefs(this)), new RatingRepository(), new UserRepository(new Prefs(this)), new HotUsersRepository(new Prefs(this))), new CoinsInteractor(new CoinsRepository()));
+        //Prepare local data
+        mIsUserExist = mPresenter.isUserExist();
+        mPresenter.getConfig();
+        mPresenter.registerSubscribers();
+
         mMyProfilePresenter = new MyProfilePresenter(new MyProfileInteractor(new UserRepository(new Prefs(this))));
-        firebaseAnalytics = FirebaseAnalytics.getInstance(this);
+
+        mSearchFragment = new SearchFragment();
+
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+
         mPrefs = new Prefs(this);
+
+        mSubscriptionManager = new SubscriptionManager(mPrefs);
+
+
+        //Setting subscription plan when open app from DB
+        mPresenter.setUserSubscriptionPlanWhenOpen();
+        mMyProfilePresenter.setAllCurrentUserInfo();
+
+        prepareUI();
+
+        invalidateOptionsMenu();
+
+        //Changing user actions number to call review dialog
         increaseUserActivity();
+
+        //Calling mandatory information dialog
+        showUserInfoDialog();
+
+        //Call gender dialog with first open of the app
+        makeGenderCheck();
+
+        //Show dialog to share user in social media
+        showSocMedDialog();
+
+        //Show dialog to get users review
+        showReviewDialog();
+
+        //Check notifications
+        notificationsStatusCheck();
+        notificationsChatStatusCheck();
+        notificationsActionsStatusCheck();
+    }
+
+    /**
+     * Switch plan dialog allow user change existing plan
+     */
+    private void checkSwitchSubscriptionPlan() {
+        //If premium trial ended show switch plan dialog
+        if (mIsUserExist){
+            if (mPrefs.getValue(Consts.PREMIUM_TRIAL_END_FLAG).equals(Consts.ENABLED) && !mPrefs.getValue(Consts.SUBSCRIPTION).equals(Consts.FREE) &&  !mPrefs.getValue(Consts.SUBSCRIPTION).equals(Consts.PREMIUM) &&  !mPrefs.getValue(Consts.SUBSCRIPTION).equals(Consts.VIP)) {
+                mFirebaseAnalytics.logEvent("subscription_end_dialog_shown", null);
+                getSupportFragmentManager().beginTransaction().add(ConfirmDialogFragment.newInstance(Consts.SWITCH_PLAN_MODULE), ConfirmDialogFragment.TAG).commit();
+            } else {
+                //If PREMIUM_TRIAL_END_FLAG flag does not exist set it to disable
+                mPrefs.setValue(Consts.PREMIUM_TRIAL_END_FLAG, Consts.DISABLED);
+            }
+        }
+    }
+
+    /**
+     * Send user to buy subscription page
+     */
+    @Override
+    public void buySubscription() {
+        Intent subscriptionScreenIntent = new Intent(MainScreenActivity.this, RewardVideoActivity.class);
+        startActivity(subscriptionScreenIntent);
+    }
+
+    /**
+     * Switch user to FREE subscription plan
+     */
+    @Override
+    public void switchToFreePlan() {
+        mSubscriptionManager.setFreePlan();
+    }
+
+    /**
+     * Initialize all ui components
+     */
+    private void prepareUI() {
+
+        //Prepare buttons
+        mFilterButton = findViewById(R.id.toolbar_filter_btn);
+        mRegisterButton = findViewById(R.id.toolbar_login);
+        mChatsButton = findViewById(R.id.toolbar_chats);
+        mActionsButton = findViewById(R.id.toolbar_actions);
         mFab = findViewById(R.id.main_fab);
         mFab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -157,60 +221,64 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
             }
         });
 
-        mIsUserExist = mPresenter.isUserExist();
+        //Prepare toolbar
         mToolbar = findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-
         mDrawerLayout = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, mDrawerLayout, mToolbar, R.string.open, R.string.close);
         mDrawerLayout.setDrawerListener(toggle);
         toggle.syncState();
 
+
+        //Prepare tabs
         mTabLayout = findViewById(R.id.main_tabs);
         mViewPager = findViewById(R.id.main_view_pager);
         mViewPagerAdapter = new MainPagerAdapter(getSupportFragmentManager());
-
-        mFilterButton = findViewById(R.id.toolbar_filter_btn);
-        mRegisterButton = findViewById(R.id.toolbar_login);
-        mChatsButton = findViewById(R.id.toolbar_chats);
-        mActionsButton = findViewById(R.id.toolbar_actions);
-
-
-        mUnregisteredTitle = findViewById(R.id.please_register_to_start_title);
         mTabLayout.setupWithViewPager(mViewPager);
         mViewPager.setSaveEnabled(false);
-        mDialogFragment = new FilterDialogFragment();
-        mSearchFragment = new SearchFragment();
 
-        mAdView = findViewById(R.id.adView);
+        mUnregisteredTitle = findViewById(R.id.please_register_to_start_title);
+
+        mChatsButton.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+            @Override
+            public void onClick(View view) {
+                FirebaseDatabase.getInstance().getReference().child("Users").child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid()).child("newMessage").setValue("no");
+                mChatsButton.setImageDrawable(getDrawable(R.drawable.ic_chat_black_24dp));
+                Intent chatsIntent = new Intent(MainScreenActivity.this, ChatsActivity.class);
+                startActivity(chatsIntent);
+            }
+        });
+
+        mActionsButton.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+            @Override
+            public void onClick(View view) {
+                FirebaseDatabase.getInstance().getReference().child("Users").child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid()).child("newVisit").setValue("no");
+                FirebaseDatabase.getInstance().getReference().child("Users").child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid()).child("newLike").setValue("no");
+                mActionsButton.setImageDrawable(getDrawable(R.drawable.ic_notifications_active_black_24dp));
+
+                Intent chatsIntent = new Intent(MainScreenActivity.this, ActionsActivity.class);
+                startActivity(chatsIntent);
+            }
+        });
+
+        mFilterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mViewPager.setCurrentItem(1);
+                mTabLayout.getTabAt(1).select();
+                FilterDialogFragment filterDialog = new FilterDialogFragment();
+                getSupportFragmentManager().beginTransaction().add(filterDialog, "Dialog Fragment").commit();
+            }
+        });
 
         drawerViewsInit();
-        invalidateOptionsMenu();
-        validateUserExist();
-        mPresenter.getConfig();
-        buttonsListeners();
-        //Get info for inflating in drawer
-        getUserInfo();
-        mPresenter.registerSubscribers();
-
-        callUserInfoDialogs();
-        makeGenderCheck();
-
-        showSocMedDialog();
-
-
-        check_values();
-        chat_notification_change();
-        action_notification_change();
-
-        showReviewDialog();
-
-//        adsRequest();
     }
 
     /**
-     * Increasing level of the activity of the user
+     * Increasing level of the activity of the user to show review dialog
      */
     private void increaseUserActivity() {
         if (!mPrefs.getValue(Consts.USER_ACTIVITY).isEmpty()) {
@@ -233,7 +301,7 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
             if (!mPrefs.getValue(Consts.REVIEW_STATUS).equals(Consts.CONFIRMED)) {
                 if (!mPrefs.getValue(Consts.USER_ACTIVITY).equals(Consts.DEFAULT) && !mPrefs.getValue(Consts.USER_ACTIVITY_CONFIG).equals(Consts.DEFAULT)) {
                     if (Integer.valueOf(mPrefs.getValue(Consts.USER_ACTIVITY)) >= Integer.valueOf(mPrefs.getValue(Consts.USER_ACTIVITY_CONFIG))) {
-                        firebaseAnalytics.logEvent("review_dialog_shown", null);
+                        mFirebaseAnalytics.logEvent("review_dialog_shown", null);
                         mPrefs.setValue(Consts.USER_ACTIVITY, "0");
                         getSupportFragmentManager().beginTransaction().add(ConfirmDialogFragment.newInstance(Consts.RAITING_MODULE), ConfirmDialogFragment.TAG).commit();
                     }
@@ -241,7 +309,6 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
             }
         }
     }
-
 
     /**
      * Share user in social media block
@@ -254,14 +321,14 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
         mYesBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                firebaseAnalytics.logEvent("soc_med_confirmed", null);
+                mFirebaseAnalytics.logEvent("soc_med_confirmed", null);
                 if (mFsUser != null) {
                     if (mFsUser.getGender() != null) {
-                        if (!mFsUser.getGender().equals(Consts.DEFAULT)){
+                        if (!mFsUser.getGender().equals(Consts.DEFAULT)) {
                             if (mFsUser.getGender().equals(Consts.FEMALE)) {
-                                firebaseAnalytics.logEvent("soc_med_female_confirmed", null);
+                                mFirebaseAnalytics.logEvent("soc_med_female_confirmed", null);
                             } else if (mFsUser.getGender().equals(Consts.MALE)) {
-                                firebaseAnalytics.logEvent("soc_med_male_confirmed", null);
+                                mFirebaseAnalytics.logEvent("soc_med_male_confirmed", null);
                             }
                         }
                     }
@@ -276,7 +343,7 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
         mNoBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                firebaseAnalytics.logEvent("soc_med_cancel", null);
+                mFirebaseAnalytics.logEvent("soc_med_cancel", null);
                 mSocMedContainer.setVisibility(GONE);
             }
         });
@@ -301,14 +368,14 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
                                 if (mFsUser.getImage() != null && mFsUser.getCountry() != null) {
                                     if (!mFsUser.getImage().equals(Consts.DEFAULT) && !mFsUser.getCountry().equals(Consts.DEFAULT)) {
                                         if (mFsUser.getGender().equals(Consts.MALE)) {
-                                            firebaseAnalytics.logEvent("soc_med_male_shown", null);
+                                            mFirebaseAnalytics.logEvent("soc_med_male_shown", null);
                                             mSocMedImgBackground.setImageDrawable(getResources().getDrawable(R.drawable.insta_background_m));
                                         } else {
-                                            firebaseAnalytics.logEvent("soc_med_female_shown", null);
+                                            mFirebaseAnalytics.logEvent("soc_med_female_shown", null);
                                             mSocMedImgBackground.setImageDrawable(getResources().getDrawable(R.drawable.insta_background_m));
                                         }
                                         mSocMedContainer.setVisibility(View.VISIBLE);
-                                        firebaseAnalytics.logEvent("soc_med_shown", null);
+                                        mFirebaseAnalytics.logEvent("soc_med_shown", null);
                                         Glide.with(MainScreenActivity.this).load(mFsUser.getImage()).thumbnail(0.5f).into(mSocMeImgPhoto);
                                     }
                                 }
@@ -326,18 +393,6 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
                 String sss = "";
             }
         }
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        hideMenuItems();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Consts.RECOMMENDED_SHOWN = false;
     }
 
     /**
@@ -362,7 +417,7 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
     /**
      * Chain of logic checks must and secondary info to show needed dialog to  registered user
      */
-    private void callUserInfoDialogs() {
+    private void showUserInfoDialog() {
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
@@ -434,7 +489,7 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
      */
     @Override
     public void reviewDialogYes() {
-        firebaseAnalytics.logEvent("review_positive", null);
+        mFirebaseAnalytics.logEvent("review_positive", null);
         getSupportFragmentManager().beginTransaction().add(ConfirmDialogFragment.newInstance(Consts.VOTE_MODULE), ConfirmDialogFragment.TAG).commit();
     }
 
@@ -443,7 +498,7 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
      */
     @Override
     public void reviewDialogNo() {
-        firebaseAnalytics.logEvent("review_negative", null);
+        mFirebaseAnalytics.logEvent("review_negative", null);
         getSupportFragmentManager().beginTransaction().add(ConfirmDialogFragment.newInstance(Consts.NEGATIVE_VOTE_MODULE), ConfirmDialogFragment.TAG).commit();
     }
 
@@ -453,7 +508,7 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
     @Override
     public void sendToPlayMarket() {
         mPrefs.setValue(Consts.REVIEW_STATUS, Consts.CONFIRMED);
-        firebaseAnalytics.logEvent("review_send_to_playmarket", null);
+        mFirebaseAnalytics.logEvent("review_send_to_playmarket", null);
         onUpdateDialog();
     }
 
@@ -526,7 +581,7 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
                 new AuthUI.IdpConfig.EmailBuilder().build(),
                 new AuthUI.IdpConfig.GoogleBuilder().build(),
                 new AuthUI.IdpConfig.FacebookBuilder().build());
-        firebaseAnalytics.logEvent("registration_starts", null);
+        mFirebaseAnalytics.logEvent("registration_starts", null);
 
         startActivityForResult(
                 AuthUI.getInstance()
@@ -548,16 +603,18 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
                 if (resultCode == Activity.RESULT_OK) {
                     IdpResponse response = IdpResponse.fromResultIntent(data);
                     if (response.isNewUser()) {
-                        firebaseAnalytics.logEvent("registration_completed", null);
+                        mFirebaseAnalytics.logEvent("registration_completed", null);
                         mPresenter.saveUser();
-                        reload();
+                        reloadActivity();
                     } else {
-                        reload();
+                        //If user login getting realtime counter value and save in preferences
+                        ActionsCounter.getInstance().updatePreferencesUserCounter(mPrefs);
+                        reloadActivity();
                     }
                 } else {
                     Bundle bundle = new Bundle();
                     bundle.putString("registration_error_type", "registration failed");
-                    firebaseAnalytics.logEvent("registration_failed", bundle);
+                    mFirebaseAnalytics.logEvent("registration_failed", bundle);
                 }
             }
         }
@@ -570,70 +627,33 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
     public void onBackPressed() {
         super.onBackPressed();
         //Close application
-        finishAffinity();
-        System.exit(0);
-    }
+        //When go offline updating Realtime from Preferences
+        ActionsCounter.getInstance().updateRealtimeUserCounter(mPrefs);
+        //Using handler to make delay and update realtime user counter
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-        mPresenter.unregisterSubscribers();
-    }
-
-    private void getUserInfo() {
-        mMyProfilePresenter.setAllCurrentUserInfo();
-    }
-
-    private void buttonsListeners() {
-        mChatsButton.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
             @Override
-            public void onClick(View view) {
-                FirebaseDatabase.getInstance().getReference().child("Users").child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid()).child("newMessage").setValue("no");
-                mChatsButton.setImageDrawable(getDrawable(R.drawable.ic_chat_black_24dp));
-                Intent chatsIntent = new Intent(MainScreenActivity.this, ChatsActivity.class);
-                startActivity(chatsIntent);
+            public void run() {
+                finishAffinity();
+                System.exit(0);
             }
-        });
+        }, 1000);
 
-        mActionsButton.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-            @Override
-            public void onClick(View view) {
-                FirebaseDatabase.getInstance().getReference().child("Users").child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid()).child("newVisit").setValue("no");
-                FirebaseDatabase.getInstance().getReference().child("Users").child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid()).child("newLike").setValue("no");
-                mActionsButton.setImageDrawable(getDrawable(R.drawable.ic_notifications_active_black_24dp));
-
-                Intent chatsIntent = new Intent(MainScreenActivity.this, ActionsActivity.class);
-                startActivity(chatsIntent);
-            }
-        });
-
-        mFilterButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mViewPager.setCurrentItem(1);
-                mTabLayout.getTabAt(1).select();
-                FilterDialogFragment filterDialog = new FilterDialogFragment();
-                getSupportFragmentManager().beginTransaction().add(filterDialog, "Dialog Fragment").commit();
-            }
-        });
     }
 
+    /**
+     * Drawer logic implementation
+     */
     private void drawerViewsInit() {
-        //Drawer инициализация и листенеры
         mNavigationView = findViewById(R.id.nav_view);
-        drawerClickListeners();
         mHeaderView = mNavigationView.getHeaderView(0);
-        Menu menu = mNavigationView.getMenu();
-//        mDrawerItemSafety = menu.findItem(R.id.drawer_top_menu_safety_item);
         mCloseDrawerButton = mHeaderView.findViewById(R.id.drawer_header_close_btn);
         mCloseDrawerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainScreenActivity.this, RewardVideoActivity.class);
                 startActivity(intent);
-//                mDrawerLayout.closeDrawers();
             }
         });
 
@@ -663,18 +683,18 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
                 callAuthWindow();
             }
         });
-    }
 
-    private void drawerClickListeners() {
         mNavigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.drawer_top_menu_logout_item:
+                        //If user log out saving current counter in realtime
+                        ActionsCounter.getInstance().updateRealtimeUserCounter(mPrefs);
                         AuthUI.getInstance().signOut(getApplicationContext()).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
-                                reload();
+                                reloadActivity();
                             }
                         });
                         break;
@@ -684,26 +704,9 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
         });
     }
 
-    private void tabsInit() {
-
-        if (mIsUserExist) {
-
-        } else {
-
-        }
-
-
-    }
-
-    private void validateUserExist() {
-        if (mIsUserExist) {
-
-        } else {
-
-        }
-    }
-
-
+    /**
+     * Logic of hiding and showing views and items
+     */
     private void hideMenuItems() {
         if (mIsUserExist) {
             mViewPagerAdapter.addFragment(new OnlineUsersFragment(), getString(R.string.online_users_title));
@@ -759,7 +762,6 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
             @Override
             public void onPageSelected(int position) {
                 mTabLayout.getTabAt(position).select();
-
             }
 
             @Override
@@ -769,24 +771,19 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
         });
     }
 
-
-    @Override
-    public void setAdapter(boolean isUserExist) {
-
-    }
-
+    /**
+     * Show gender dialog to choose gender
+     */
     @Override
     public void showGenderDialog() {
         getSupportFragmentManager().beginTransaction().add(new GenderDialogFragment(), GenderDialogFragment.TAG).commit();
-
     }
 
-
-    @Override
-    public void openSlider(ArrayList<String> stringList) {
-
-    }
-
+    /**
+     * Set user data to drawer and fsUser local variable
+     *
+     * @param user
+     */
     @Override
     public void setUserData(FsUser user) {
         TextView mDrawerName = mHeaderView.findViewById(R.id.drawer_header_name);
@@ -805,21 +802,20 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
     }
 
 
-    private void reload() {
+    /**
+     * Restart MainScreenActivity
+     */
+    private void reloadActivity() {
         mPresenter.makeDialogOpenDateDefault();
         Intent mainScreenIntent = new Intent(this, MainScreenActivity.class);
         startActivity(mainScreenIntent);
     }
 
-
-    @Override
-    public void onUpdate() {
-        mSearchFragment.onUpdate();
-    }
-
-
+    /**
+     * Chat messages notifications check
+     */
     @SuppressLint("NewApi")
-    private void chat_notification_change() {
+    private void notificationsChatStatusCheck() {
         if (FirebaseAuth.getInstance().getCurrentUser() != null) {
             FirebaseDatabase.getInstance().getReference().child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("newMessage").addValueEventListener(new ValueEventListener() {
                 @Override
@@ -837,8 +833,11 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
         }
     }
 
+    /**
+     * Actions notifications check
+     */
     @SuppressLint("NewApi")
-    private void action_notification_change() {
+    private void notificationsActionsStatusCheck() {
         if (FirebaseAuth.getInstance().getCurrentUser() != null) {
             FirebaseDatabase.getInstance().getReference().child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("newVisit").addValueEventListener(new ValueEventListener() {
                 @Override
@@ -871,7 +870,10 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
         }
     }
 
-    private void check_values() {
+    /**
+     * Notification buttons check
+     */
+    private void notificationsStatusCheck() {
         if (FirebaseAuth.getInstance().getCurrentUser() != null) {
             FirebaseDatabase.getInstance().getReference().child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("newMessage").addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
@@ -892,5 +894,46 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
                 }
             });
         }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //Check if need to switch Subscription plan
+        checkSwitchSubscriptionPlan();
+
+        hideMenuItems();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Consts.RECOMMENDED_SHOWN = false;
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mPresenter.unregisterSubscribers();
+    }
+
+    @Override
+    public void openSlider(ArrayList<String> stringList) {
+        //nothing to implement
+    }
+
+    @Override
+    public void onUpdate() {
+        mSearchFragment.onUpdate();
+    }
+
+    @Override
+    public void setAdapter(boolean isUserExist) {
+        //nothing to implement
     }
 }

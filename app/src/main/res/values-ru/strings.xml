@@ -99,6 +99,15 @@
     <string name="enter_id">Введите ID</string>
     <string name="search">Поиск</string>
 
+    <!-- Subscription -->
+    <string name="day_limit_is_over">Лимит Исчерпан</string>
+    <string name="limit_message">Бесплатный План имеет ограничения \n \nПожалуйста приобретите Premium план, для получения полного доступа</string>
+    <string name="time_to_wait">Осталось ждать:</string>
+    <string name="subscription">Подписка</string>
+    <string name="switch_plan_title">Пробный период окончен. \n Приобретите подписку или перейдите на бесплатный план с ограничениями</string>
+    <string name="buy_subscription">Купить подписку</string>
+    <string name="switch_to_free">Бесплатный</string>
+
     <!-- System safe strings 333-->
     <string name="change_photo">Поменять Фото</string>
     <string name="button_sign_filter">Фильтр...</string>

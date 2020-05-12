@@ -43,7 +43,10 @@ import com.borisruzanov.russianwives.mvp.ui.friendprofile.FriendProfileActivity;
 import com.borisruzanov.russianwives.mvp.ui.main.MainScreenActivity;
 import com.borisruzanov.russianwives.mvp.ui.search.SearchPresenter;
 import com.borisruzanov.russianwives.mvp.ui.slider.SliderActivity;
+import com.borisruzanov.russianwives.mvp.ui.timer.TimerDialogFragment;
 import com.borisruzanov.russianwives.utils.Consts;
+import com.borisruzanov.russianwives.utils.SubscriptionManager;
+import com.borisruzanov.russianwives.utils.Timer;
 import com.bumptech.glide.Glide;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.database.DataSnapshot;
@@ -52,7 +55,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Random;
@@ -83,8 +89,8 @@ public class OnlineUsersFragment extends Fragment implements OnlineUsersView, Co
 
     private boolean mIsUserExist;
     private int mCurrentPage = 1;
+    private SubscriptionManager mSubscriptionManager;
 
-    
     //Pagination field
 
     private int total_item = 0;
@@ -121,11 +127,32 @@ public class OnlineUsersFragment extends Fragment implements OnlineUsersView, Co
     private OnItemClickListener.OnItemClickCallback chatClickCallback = (view, position) -> {
         //Helping fix bug to select needed item after first list loaded
         if (mIsUserExist) {
-            mSearchPresenter.openChatOnlineUser(mUserList.get(position).getUid(), mUserList.get(position).getName(), mUserList.get(position).getImage());
+            checkingAvailabilityOfFeature(position);
         } else {
             Toast.makeText(getContext(), getString(R.string.please_register_to_interact_with_user), Toast.LENGTH_LONG).show();
         }
     };
+
+    /**
+     * Check if user can get this feature
+     * 1st scenario - disabled - user got counter dialog
+     * 2nd scenario - null / not exist - user set plan to free and once allowed to get access to feature
+     * 3rd scenario - enabled / others - allow to get feature
+     */
+    private void checkingAvailabilityOfFeature(int position) {
+        //If feature disabled show counter dialog
+        if (mSubscriptionManager.getFeatureStatus(Consts.OPEN_USER).equals(Consts.DISABLED)) {
+            TimerDialogFragment mustInfoDialogFragment = new TimerDialogFragment();
+            getActivity().getSupportFragmentManager().beginTransaction().add(mustInfoDialogFragment, TimerDialogFragment.TAG).commit();
+        } else if (mPrefs.getValue(Consts.SUBSCRIPTION).equals(Consts.DEFAULT) || mSubscriptionManager.getPlanType() == null) {
+            //In case field not exist set plan to PREMIUM TRIAL
+            mSubscriptionManager.setPremiumTrialPlan();
+            mSearchPresenter.openChatOnlineUser(mUserList.get(position).getUid(), mUserList.get(position).getName(), mUserList.get(position).getImage());
+        } else {
+            //If enabled send him to chat activity
+            mSearchPresenter.openChatOnlineUser(mUserList.get(position).getUid(), mUserList.get(position).getName(), mUserList.get(position).getImage());
+        }
+    }
 
     /**
      * Set like to clicked friend
@@ -166,7 +193,8 @@ public class OnlineUsersFragment extends Fragment implements OnlineUsersView, Co
         app.getComponent().inject(this);
         mPresenter = new OnlineUsersPresenter(new OnlineUsersInteractor(new UserRepository(new Prefs(getContext()))), this);
         mSearchPresenter = new SearchPresenter(new SearchInteractor(new SearchRepository(), new FilterRepository(new Prefs(getContext())), new FriendRepository(new Prefs(getContext())), new RatingRepository(), new UserRepository(new Prefs(getContext())), new HotUsersRepository(new Prefs(getContext()))), new CoinsInteractor(new CoinsRepository()));
-
+        mPrefs = new Prefs(getContext());
+        mSubscriptionManager = new SubscriptionManager(mPrefs);
         mOnlineUsersRecycler = (RecyclerView) getView().findViewById(R.id.online_users_rv);
         mEmptyUsersTextView = (TextView) getView().findViewById(R.id.online_users_empty_text);
         mBottomButtonContainer = (RelativeLayout) getView().findViewById(R.id.to_see_more_users_container);
@@ -184,7 +212,6 @@ public class OnlineUsersFragment extends Fragment implements OnlineUsersView, Co
         mAdapter = new OnlineUsersAdapter(itemClickCallback, chatClickCallback, likeClickCallback);
         mOnlineUsersRecycler.setLayoutManager(layoutManager);
         mOnlineUsersRecycler.setAdapter(mAdapter);
-        mPrefs = new Prefs(getContext());
         getLastKeyNode();
         mProgressBar.setVisibility(View.VISIBLE);
         mOnlineUsersRecycler.addOnScrollListener(new RecyclerView.OnScrollListener() {
@@ -225,7 +252,7 @@ public class OnlineUsersFragment extends Fragment implements OnlineUsersView, Co
                                 recommendedUsers.add(recommendedUser);
                             }
                         }
-                        if (recommendedUsers.size() > 0){
+                        if (recommendedUsers.size() > 0) {
                             firebaseAnalytics.logEvent("recommended_shown", null);
                             mRecommendedContainer.setVisibility(View.VISIBLE);
                             Random randomGenerator = new Random();
@@ -604,6 +631,16 @@ public class OnlineUsersFragment extends Fragment implements OnlineUsersView, Co
 
     @Override
     public void sendComplain() {
+
+    }
+
+    @Override
+    public void buySubscription() {
+
+    }
+
+    @Override
+    public void switchToFreePlan() {
 
     }
 

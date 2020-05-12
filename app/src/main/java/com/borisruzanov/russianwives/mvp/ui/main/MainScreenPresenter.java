@@ -158,4 +158,8 @@ public class MainScreenPresenter {
     public void saveInSocMed(FsUser mFsUser) {
         mInteractor.saveInSocMed(mFsUser);
     }
+
+    public void setUserSubscriptionPlanWhenOpen() {
+        mInteractor.setUserSubscriptionPlanWhenOpen();
+    }
 }

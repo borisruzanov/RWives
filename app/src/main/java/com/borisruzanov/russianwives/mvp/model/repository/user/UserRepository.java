@@ -21,11 +21,13 @@ import com.borisruzanov.russianwives.utils.ActionCallback;
 import com.borisruzanov.russianwives.utils.ActionCountCallback;
 import com.borisruzanov.russianwives.utils.ActionItemCallback;
 import com.borisruzanov.russianwives.utils.ActionsCountInfoCallback;
+import com.borisruzanov.russianwives.utils.ActionsCounter;
 import com.borisruzanov.russianwives.utils.BoolCallback;
 import com.borisruzanov.russianwives.utils.Consts;
 import com.borisruzanov.russianwives.utils.FirebaseRequestManager;
 import com.borisruzanov.russianwives.utils.OnlineUsersCallback;
 import com.borisruzanov.russianwives.utils.StringsCallback;
+import com.borisruzanov.russianwives.utils.SubscriptionManager;
 import com.borisruzanov.russianwives.utils.UserCallback;
 import com.borisruzanov.russianwives.utils.network.ApiClient;
 import com.borisruzanov.russianwives.utils.network.ApiService;
@@ -74,7 +76,9 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 import static com.borisruzanov.russianwives.mvp.model.repository.rating.Achievements.FULL_PROFILE_ACH;
+import static com.borisruzanov.russianwives.utils.Consts.DEFAULT;
 import static com.borisruzanov.russianwives.utils.Consts.ITEM_LOAD_COUNT;
+import static com.borisruzanov.russianwives.utils.FirebaseUtils.checkIsUserAuthorised;
 import static com.borisruzanov.russianwives.utils.FirebaseUtils.getDeviceToken;
 import static com.borisruzanov.russianwives.utils.FirebaseUtils.getUid;
 import static com.borisruzanov.russianwives.utils.FirebaseUtils.getUsers;
@@ -103,6 +107,7 @@ public class UserRepository {
     private String mUserName;
     private String mSendpulseToken; //to store token value
     private JsonObject sendEmailObject;
+    private SubscriptionManager mSubscriptionManager;
 
 
     private FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
@@ -114,6 +119,7 @@ public class UserRepository {
 
     public UserRepository(Prefs mPrefs) {
         this.mPrefs = mPrefs;
+        this.mSubscriptionManager = new SubscriptionManager(mPrefs);
     }
 
     /**
@@ -176,11 +182,11 @@ public class UserRepository {
             ]
         */
         Log.d("data", mailHashMap.toString());
-        if (mPrefs.getValue(Consts.GENDER).equals(Consts.MALE)){
+        if (mPrefs.getValue(Consts.GENDER).equals(Consts.MALE)) {
             mBookId = mMaleBookId;
         }
-        createList(emails,username);//get jsonobject with emails array
-        Call<EmailResponse> responseCall=service.addEmail(mBookId, sendEmailObject);
+        createList(emails, username);//get jsonobject with emails array
+        Call<EmailResponse> responseCall = service.addEmail(mBookId, sendEmailObject);
         responseCall.enqueue(new Callback<EmailResponse>() {
             @Override
             public void onResponse(Call<EmailResponse> call, Response<EmailResponse> response) {
@@ -197,20 +203,18 @@ public class UserRepository {
 
     /**
      * Creating list for sending it to sendpulse
-     * @param email
-     * @param username
      */
     private void createList(String email, String username) {
-        JsonObject variable=new JsonObject();
-        variable.addProperty("Name",username);
+        JsonObject variable = new JsonObject();
+        variable.addProperty("Name", username);
         JsonObject emaildata = new JsonObject();
-        emaildata.addProperty("email",email);
-        emaildata.add("variables",variable);
+        emaildata.addProperty("email", email);
+        emaildata.add("variables", variable);
         JsonArray lisJsonArray = new JsonArray();
         lisJsonArray.add(emaildata);
-        sendEmailObject =new JsonObject();
-        sendEmailObject.addProperty("emails",lisJsonArray.toString());
-        Log.d("data",lisJsonArray.toString());
+        sendEmailObject = new JsonObject();
+        sendEmailObject.addProperty("emails", lisJsonArray.toString());
+        Log.d("data", lisJsonArray.toString());
     }
 
     /**
@@ -284,8 +288,15 @@ public class UserRepository {
         niMap.put(Consts.UID, uid);
         niMap.put(Consts.LIKES, "0");
         niMap.put(Consts.VISITS, "0");
+        //For subscription purpose default values
+        niMap.put(Consts.SUBSCRIPTION, Consts.TRIAL_PLAN);
+        niMap.put(Consts.COUNTER_ACTIONS, "0");
         realtimeReference.child(Consts.USERS_DB).child(uid).setValue(niMap);
-        Log.d(TAG_CLASS_NAME, "createNewUser - user created");
+
+        //For subscription purpose default values
+        mPrefs.setValue(Consts.SUBSCRIPTION, mPrefs.getValue(Consts.TRIAL_PLAN));
+        mPrefs.setValue(Consts.COUNTER_ACTIONS, "0");
+        ActionsCounter.getInstance().createNewCounter(mPrefs);
     }
 
     /**
@@ -973,22 +984,78 @@ public class UserRepository {
         return firebaseUser != null;
     }
 
+    /**
+     * Getting all user data from FIRESTORE and REALTIME save it in prefs and send back to MainScreenActivity as object
+     * If request already been done send FsUser object created from preferences values
+     * @param callback
+     */
     public void getAllCurrentUserInfo(final UserCallback callback) {
-        if (isUserExist()) {
-            users.document(getUid()).get()
-                    .addOnCompleteListener(task -> {
-                        if (task.isSuccessful()) {
-                            DocumentSnapshot snapshot = task.getResult();
-                            if (snapshot.exists()) {
-                                callback.setUser(snapshot.toObject(FsUser.class));
-                            }
+        if (checkIsUserAuthorised()) {
+            //Making request to get user info from database only first time
+            String flag = mPrefs.getValue(Consts.GET_USER_INFO_FLAG);
+//            if(mPrefs.getValue(Consts.GET_USER_INFO_FLAG).equals(DISABLED) || mPrefs.getValue(Consts.GET_USER_INFO_FLAG).equals(DEFAULT)){
+                //Getting all user info from realtime and save it in preferences
+                realtimeReference.child(Consts.USERS_DB).child(firebaseAuth.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        if (!dataSnapshot.hasChild(Consts.FREE_USER_TRIGGER_TIME)){
+                            mPrefs.setValue(Consts.FREE_USER_TRIGGER_TIME, DEFAULT);
                         }
-                    }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    Log.d(Consts.TAG_INFO, "getAllCurrentUserInfo failure");
-                }
-            });
+                        for (DataSnapshot snapshot: dataSnapshot.getChildren()) {
+                            mPrefs.setValue(snapshot.getKey(),snapshot.getValue().toString());
+                        }
+                        mPrefs.setValue(Consts.GET_USER_INFO_FLAG, Consts.ENABLED);
+                        //After login and get subscription type from realtime set plan
+                        mSubscriptionManager.setCurrentUserPlan();
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                        //Disabling flag to try get info next time
+                        mPrefs.setValue(Consts.GET_USER_INFO_FLAG, Consts.DISABLED);
+                    }
+                });
+                //Getting all user data from firestore
+                users.document(getUid()).get()
+                        .addOnCompleteListener(task -> {
+                            if (task.isSuccessful()) {
+                                DocumentSnapshot snapshot = task.getResult();
+                                if (snapshot.exists()) {
+                                    FsUser fsUser = snapshot.toObject(FsUser.class);
+                                    mPrefs.setValue(Consts.AGE,fsUser.getAge());
+                                    mPrefs.setValue(Consts.BODY_TYPE,fsUser.getBody_type());
+                                    mPrefs.setValue(Consts.COUNTRY,fsUser.getCountry());
+                                    mPrefs.setValue(Consts.FULL_PROFILE,fsUser.getFull_profile());
+                                    mPrefs.setValue(Consts.ID_SOC,fsUser.getId_soc());
+                                    mPrefs.setValue(Consts.MUST_INFO,fsUser.getMust_info());
+                                    mPrefs.setValue(Consts.GENDER,fsUser.getGender());
+                                    callback.setUser(snapshot.toObject(FsUser.class));
+                                    mPrefs.setValue(Consts.GET_USER_INFO_FLAG, Consts.ENABLED);
+                                }
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        //Disabling flag to try get info next time
+                        mPrefs.setValue(Consts.GET_USER_INFO_FLAG, Consts.DISABLED);
+                    }
+                });
+//            } else {
+//                //Instead of making another request to db sending to MainScreenActivity FsUser object created from preferences
+//                FsUser fsUser = new FsUser();
+//                fsUser.setAge(Consts.AGE);
+//                fsUser.setBody_type(Consts.BODY_TYPE);
+//                fsUser.setCountry(Consts.COUNTRY);
+//                fsUser.setFull_profile(Consts.FULL_PROFILE);
+//                fsUser.setGender(Consts.GENDER);
+//                fsUser.setHobby(Consts.HOBBY);
+//                fsUser.setId_soc(Consts.ID_SOC);
+//                fsUser.setImage(Consts.IMAGE);
+//                fsUser.setMust_info(Consts.MUST_INFO);
+//                fsUser.setName(Consts.NAME);
+//                fsUser.setUid(Consts.UID);
+//                callback.setUser(fsUser);
+//            }
         }
     }
 
@@ -1334,5 +1401,32 @@ public class UserRepository {
                         }
                     }
                 });
+    }
+
+    /**
+     * Get subscription type from DB and save in preferences
+     */
+    public void setUserSubscriptionPlanWhenOpen() {
+        if (isUserExist()) {
+            realtimeReference.child(Consts.USERS_DB).child(getUid()).child(Consts.SUBSCRIPTION).addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.exists() && dataSnapshot.getValue() != null) {
+                        //Setting in local preferences Subscription plan from database REALTIME
+                        mPrefs.setValue(Consts.SUBSCRIPTION, dataSnapshot.getValue().toString());
+                    } else {
+                        //If there is no subscription field in realtime for user we create it with default plan
+                        realtimeReference.child(Consts.USERS_DB).child(getUid()).child(Consts.SUBSCRIPTION).setValue(Consts.PREMIUM_TRIAL);
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+                    //If there is and error we set subscription field with default plan
+                    realtimeReference.child(Consts.USERS_DB).child(getUid()).child(Consts.SUBSCRIPTION).setValue(Consts.PREMIUM_TRIAL);
+                }
+            });
+        }
+
     }
 }

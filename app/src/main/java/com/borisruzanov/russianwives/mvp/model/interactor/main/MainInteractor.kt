@@ -87,5 +87,9 @@ class MainInteractor @Inject constructor(private val userRepository: UserReposit
         userRepository.saveUserInSendpulse()
     }
 
+    fun setUserSubscriptionPlanWhenOpen() {
+        userRepository.setUserSubscriptionPlanWhenOpen();
+    }
+
 
 }

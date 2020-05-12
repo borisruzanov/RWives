@@ -48,6 +48,10 @@ public class ConfirmDialogFragment extends MvpAppCompatDialogFragment {
         void sendToPlayMarket();
 
         void sendComplain();
+
+        void buySubscription();
+
+        void switchToFreePlan();
     }
 
     public static ConfirmDialogFragment newInstance(String module) {
@@ -111,6 +115,12 @@ public class ConfirmDialogFragment extends MvpAppCompatDialogFragment {
                 confirmButton.setText(R.string.yes_ru);
                 cancelButton.setText(R.string.later);
                 break;
+            case  Consts.SWITCH_PLAN_MODULE:
+                headerTv.setText(R.string.switch_plan_title);
+                confirmButton.setText(R.string.buy_subscription);
+                cancelButton.setText(R.string.switch_to_free);
+                setCancelable(false);
+                break;
         }
 
     }
@@ -139,6 +149,9 @@ public class ConfirmDialogFragment extends MvpAppCompatDialogFragment {
             case Consts.NEGATIVE_VOTE_MODULE:
                 listener.sendComplain();
                 break;
+            case Consts.SWITCH_PLAN_MODULE:
+                listener.buySubscription();
+                break;
         }
         dismiss();
     }
@@ -149,8 +162,10 @@ public class ConfirmDialogFragment extends MvpAppCompatDialogFragment {
             case Consts.RAITING_MODULE:
                 listener.reviewDialogNo();
                 break;
+            case Consts.SWITCH_PLAN_MODULE:
+                listener.switchToFreePlan();
+                break;
         }
         dismiss();
     }
-
 }

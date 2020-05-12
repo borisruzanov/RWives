@@ -1,6 +1,9 @@
 package com.borisruzanov.russianwives.mvp.ui.global.adapter;
 
 import android.content.Context;
+import android.graphics.BlurMaskFilter;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -13,21 +16,27 @@ import com.borisruzanov.russianwives.OnItemClickListener;
 import com.borisruzanov.russianwives.R;
 import com.borisruzanov.russianwives.models.Contract;
 import com.borisruzanov.russianwives.models.UserDescriptionModel;
+import com.borisruzanov.russianwives.mvp.model.data.prefs.Prefs;
+import com.borisruzanov.russianwives.utils.Consts;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+
+import static com.borisruzanov.russianwives.utils.FirebaseUtils.checkIsUserAuthorised;
 
 public class UserDescriptionListAdapter extends RecyclerView.Adapter<UserDescriptionListAdapter.UserDescriptionListViewHolder> {
 
     private List<UserDescriptionModel> userDescriptionList = new ArrayList<>();
     private OnItemClickListener.OnItemClickCallback onItemClickCallback;
     private Context mContext;
+    private Prefs mPrefs;
 
 
     public UserDescriptionListAdapter(OnItemClickListener.OnItemClickCallback onItemClickCallback, Context context) {
         this.onItemClickCallback = onItemClickCallback;
         this.mContext = context;
+        this.mPrefs = new Prefs(mContext);
     }
 
     public void setData(List<UserDescriptionModel> recipesList) {
@@ -195,10 +204,28 @@ public class UserDescriptionListAdapter extends RecyclerView.Adapter<UserDescrip
             super(itemView);
             title = itemView.findViewById(R.id.item_user_profile_title);
             description = itemView.findViewById(R.id.item_user_profile_description);
+            makeBlurEffect(description);
         }
 
         @Override
         public void onClick(View v) {
+        }
+    }
+
+    /**
+     * Making blur effect on the textView if user authorised
+     */
+    private void makeBlurEffect(TextView description) {
+        if (checkIsUserAuthorised()){
+            //If Show friend info flag disabled bluring the information
+            if (mPrefs.getValue(Consts.SHOW_FRIEND_INFO).equals(Consts.DISABLED)) {
+                if (Build.VERSION.SDK_INT >= 11) {
+                    description.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+                }
+                float radius = description.getTextSize() / 3;
+                BlurMaskFilter filter = new BlurMaskFilter(radius, BlurMaskFilter.Blur.NORMAL);
+                description.getPaint().setMaskFilter(filter);
+            }
         }
     }
 }

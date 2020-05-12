@@ -66,7 +66,10 @@ public final class Consts {
     public static final String VOTE_MODULE = "vote_module";
     public static final String NEGATIVE_VOTE_MODULE = "negative_vote_module";
     public static final String USER = "user";
+
+    //Use to show review dialog
     public static final String USER_ACTIVITY = "user_activity";
+
     public static final String USER_ACTIVITY_CONFIG = "user_activity_config";
     public static final String REVIEW_STATUS = "review_status";
     public static final String ACCESS_TOKEN = "acesstoken";
@@ -74,6 +77,10 @@ public final class Consts {
     public static final String TOKEN_TYPE = "tokentype";
     public static final Object BEARER = "tokentype"; //sendpulse
     public static final String SENDPULSE_STATUS = "sendpulse_status";
+    public static final String ENABLED = "enabled";
+    public static final String DISABLED = "disabled";
+
+
 
     public static String ACHIEVEMENTS = "achievements";
 
@@ -126,6 +133,10 @@ public final class Consts {
 
     public static boolean RECOMMENDED_SHOWN = false;
 
+    //General
+    //Flag to recognize does app need to get all user info from database
+    public static final String GET_USER_INFO_FLAG = "get_user_info_flag";
+
     //Purchases
     public static final String PUR_FREE_TITLE = "pur_free_title";
     public static final String PUR_FREE_DESCRIPTION = "pur_free_description";
@@ -142,7 +153,58 @@ public final class Consts {
     public static final String PUR_PREMIUM_PRICE = "pur_premium_price";
     public static final String PUR_PREMIUM_LIST = "pur_premium_list";
 
+    //Counter constants
+    public static final String COUNTER_ACTIONS = "counter_actions";
+    //Counter from config from Realtime
+    public static final String COUNTER_ACTIONS_CONFIG = "counter_actions_config";
+
+    //Subscription constants
+    //Dialog constants
+    public static final String SUBSCRIPTION = "subscription";
+    //Used in dialog when premium trial ends
+    public static final String SWITCH_PLAN_MODULE = "switch_plan_module";
+
+    //Plan constants
     public static final String PREMIUM = "premium";
+    public static final String PREMIUM_TRIAL = "premium_trial";
+    //Plan which user get after registration save from config
+    public static final String TRIAL_PLAN = "trial_plan";
+
+    //Use to recognize if premium trial has been expired
+    public static final String PREMIUM_TRIAL_END_FLAG = "premium_trial_flag";
+
     public static final String VIP = "vip";
+    public static final String VIP_TRIAL = "vip_trial";
+
+    //Features constants
+    public static final String OPEN_USER = "open_user";
+    public static final String SHOW_FRIEND_INFO = "show_friend_info";
+    //Free plan constants for config
+    public static final String FREE = "free";
+    public static final String CONFIG_FREE_OPEN_USER = "config_free_open_user";
+    public static final String CONFIG_FREE_SHOW_FRIEND_INFO = "config_free_show_friend_info";
+
+    public static final String FREE_CLOSED = "free_closed";
+    public static final String CONFIG_FREE_OPEN_USER_CLOSED = "config_free_open_user_closed";
+    public static final String CONFIG_FREE_SHOW_FRIEND_INFO_CLOSED = "config_free_show_friend_info_closed";
+
+    //Number of hours which suppose to be added to current time to open free plan features
+    public static final String FREE_TRIGGER_ADDED_HOURS = "free_trigger_added_hours";
+    //Time when plan switch from FREE_CLOSED to FREE_OPEN saving in Realtime
+    public static final String FREE_USER_TRIGGER_TIME = "free_user_trigger_time";
+
+    //Premium plan constants for config
+    public static final String CONFIG_PREMIUM_OPEN_USER = "config_premium_open_user";
+    public static final String CONFIG_PREMIUM_SHOW_FRIEND_INFO = "config_premium_show_friend_info";
+    //Premium TRIAL constants for config
+    public static final String CONFIG_PREMIUM_TRIAL_OPEN_USER = "config_premium_trial_open_user";
+    public static final String CONFIG_PREMIUM_TRIAL_SHOW_FRIEND_INFO = "config_premium_trial_show_friend_info";
+    //Vip plan constants for config
+    public static final String CONFIG_VIP_OPEN_USER = "config_vip_open_user";
+    public static final String CONFIG_VIP_SHOW_FRIEND_INFO = "config_vip_show_friend_info";
+    //Vip trial constants for config
+    public static final String CONFIG_VIP_TRIAL_OPEN_USER = "config_vip_trial_open_user";
+    public static final String CONFIG_VIP_TRIAL_SHOW_FRIEND_INFO = "config_vip_trial_show_friend_info";
+
 
 }

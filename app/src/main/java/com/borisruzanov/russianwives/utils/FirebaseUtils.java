@@ -29,6 +29,18 @@ public class FirebaseUtils {
         return FirebaseAuth.getInstance().getCurrentUser() != null;
     }
 
+    /**
+     * Checks if user authorised or not
+     */
+    public static boolean checkIsUserAuthorised(){
+        String uid = FirebaseAuth.getInstance().getUid();
+        if (uid != null){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public static String getDeviceToken() {
         return FirebaseInstanceId.getInstance().getToken();
     }
