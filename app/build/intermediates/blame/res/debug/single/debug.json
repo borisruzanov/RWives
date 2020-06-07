@@ -156,12 +156,12 @@
         "source": "D:\\my_project\\Boris\\RWives\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\message_red.png"
     },
     {
-        "merged": "D:\\my_project\\Boris\\RWives\\app\\build\\intermediates\\res\\merged\\debug\\drawable_circle.xml.flat",
-        "source": "D:\\my_project\\Boris\\RWives\\app\\src\\main\\res\\drawable\\circle.xml"
-    },
-    {
         "merged": "D:\\my_project\\Boris\\RWives\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_filter_list_black_24dp.png.flat",
         "source": "D:\\my_project\\Boris\\RWives\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_filter_list_black_24dp.png"
+    },
+    {
+        "merged": "D:\\my_project\\Boris\\RWives\\app\\build\\intermediates\\res\\merged\\debug\\drawable_circle.xml.flat",
+        "source": "D:\\my_project\\Boris\\RWives\\app\\src\\main\\res\\drawable\\circle.xml"
     },
     {
         "merged": "D:\\my_project\\Boris\\RWives\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_notifications_active_black_24dp.xml.flat",
@@ -362,6 +362,10 @@
     {
         "merged": "D:\\my_project\\Boris\\RWives\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
         "source": "D:\\my_project\\Boris\\RWives\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "D:\\my_project\\Boris\\RWives\\app\\build\\intermediates\\res\\merged\\debug\\drawable_block_avatar_ru.png.flat",
+        "source": "D:\\my_project\\Boris\\RWives\\app\\src\\main\\res\\drawable\\block_avatar_ru.png"
     },
     {
         "merged": "D:\\my_project\\Boris\\RWives\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_settings.xml.flat",
@@ -842,6 +846,10 @@
     {
         "merged": "D:\\my_project\\Boris\\RWives\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_edit_black_24dp.png.flat",
         "source": "D:\\my_project\\Boris\\RWives\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_edit_black_24dp.png"
+    },
+    {
+        "merged": "D:\\my_project\\Boris\\RWives\\app\\build\\intermediates\\res\\merged\\debug\\drawable_block_avatar_eng.png.flat",
+        "source": "D:\\my_project\\Boris\\RWives\\app\\src\\main\\res\\drawable\\block_avatar_eng.png"
     },
     {
         "merged": "D:\\my_project\\Boris\\RWives\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_my_profile.xml.flat",
@@ -3294,6 +3302,10 @@
     {
         "merged": "D:\\my_project\\Boris\\RWives\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
         "source": "C:\\Users\\Abhay patel\\.gradle\\caches\\transforms-2\\files-2.1\\6a294f9f0cffc0a1822b2a0b4c01525a\\appcompat-v7-28.0.0\\res\\drawable-xxhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
+    },
+    {
+        "merged": "D:\\my_project\\Boris\\RWives\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_unlock_user.xml.flat",
+        "source": "D:\\my_project\\Boris\\RWives\\app\\src\\main\\res\\layout\\activity_unlock_user.xml"
     },
     {
         "merged": "D:\\my_project\\Boris\\RWives\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_com_facebook_button_like_icon_selected.png.flat",

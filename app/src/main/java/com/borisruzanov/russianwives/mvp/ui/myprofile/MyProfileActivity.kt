@@ -7,10 +7,12 @@ import android.support.design.widget.FloatingActionButton
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.Toolbar
+import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import butterknife.BindView
 import com.arellomobile.mvp.MvpAppCompatActivity
 import com.arellomobile.mvp.presenter.InjectPresenter
@@ -24,14 +26,16 @@ import com.borisruzanov.russianwives.mvp.ui.global.adapter.UserDescriptionListAd
 import com.borisruzanov.russianwives.mvp.ui.main.MainScreenActivity
 import com.borisruzanov.russianwives.mvp.ui.profilesettings.ProfileSettingsActivity
 import com.borisruzanov.russianwives.mvp.ui.search.SearchFragment
+import com.borisruzanov.russianwives.mvp.ui.unlockuser.UnlockUserActivity
 import com.borisruzanov.russianwives.utils.Consts
+import com.borisruzanov.russianwives.utils.UserHideCallback
 import com.bumptech.glide.Glide
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
 import javax.inject.Inject
 
-class MyProfileActivity : MvpAppCompatActivity(), MyProfileView {
+class MyProfileActivity : MvpAppCompatActivity(), MyProfileView, UserHideCallback {
 
     private val APP_ID = "ca-app-pub-5095813023957397~1146672660"
     private var mAdView: AdView? = null
@@ -92,6 +96,11 @@ class MyProfileActivity : MvpAppCompatActivity(), MyProfileView {
             finish()
         }
 
+        //to change hideStatus
+        fab.setOnLongClickListener {
+            presenter.setUserHideStatus(this)
+            return@setOnLongClickListener true
+        }
         imageView = findViewById(R.id.my_profile_image)
         nameText = findViewById(R.id.my_profile_tv_name)
         ageText = findViewById(R.id.my_profile_tv_age)
@@ -172,4 +181,19 @@ class MyProfileActivity : MvpAppCompatActivity(), MyProfileView {
         super.onStop()
         presenter.unsubscribe()
     }
+
+    override fun hideStatusChangeCall(success: Boolean) {
+        if(success)
+        {
+            Toast.makeText(applicationContext,"Your Account is hide",Toast.LENGTH_LONG).show()
+            val intent=Intent(this@MyProfileActivity,MainScreenActivity::class.java).apply {
+                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            }
+            startActivity(intent)
+            finish()
+        }
+    }
+
+
 }

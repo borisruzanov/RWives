@@ -70,3 +70,4 @@ fabric.properties
 !/gradle/wrapper/gradle-wrapper.jar
 
 app/google-services.json
+vcs.xml

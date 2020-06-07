@@ -39,7 +39,6 @@ class SearchRepository {
 
 
         Log.d("RatingDebug", "Page number is $page and last user uid is ${lastUserInPage?.getString(Consts.UID)}")
-
         query = query
                 .whereEqualTo(Consts.MUST_INFO,Consts.TRUE)
                 .whereGreaterThan(Consts.RATING, 0)
@@ -69,6 +68,8 @@ class SearchRepository {
 
     private fun putCallbackData(usersListCallback: UsersListCallback, documentsSnapshot: QuerySnapshot) {
         val fsUserList = ArrayList<FsUser>()
+
+        //check hidden status here
         for (snapshot in documentsSnapshot.documents) {
             if (isUserExist()) {
                 //Remove user from the list
@@ -79,8 +80,18 @@ class SearchRepository {
                 fsUserList.add(snapshot.toObject(FsUser::class.java)!!)
             }
         }
-
         if (fsUserList.isNotEmpty()) {
+
+            //remove if user is hidden
+            val iterator = fsUserList.iterator();
+            while (iterator.hasNext()){
+                val user = iterator.next();
+                if(user.isHide){
+                   // Log.d("cheking","user is removed")
+                    iterator.remove()
+                }
+            }
+
             for (user in fsUserList) {
                 Log.d("RatingDebug", "User uid is ${user.uid} with ${user.rating} points")
             }

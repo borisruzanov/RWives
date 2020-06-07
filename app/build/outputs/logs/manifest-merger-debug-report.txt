@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:2:1-104:12
-INJECTED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:2:1-104:12
-INJECTED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:2:1-104:12
-INJECTED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:2:1-104:12
+ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:2:1-109:12
+INJECTED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:2:1-109:12
+INJECTED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:2:1-109:12
+INJECTED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:2:1-109:12
 MERGED from [com.android.support:multidex:1.0.3] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\4d30f05e4a5c259504ad73be59a188af\multidex-1.0.3\AndroidManifest.xml:17:1-22:12
 MERGED from [com.firebaseui:firebase-ui-auth:4.3.2] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\438152570008d59e75587e0ef5dba99b\firebase-ui-auth-4.3.2\AndroidManifest.xml:2:1-109:12
 MERGED from [com.firebaseui:firebase-ui-database:4.3.2] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\5276e2de76915e1cd0e1889c0422f45d\firebase-ui-database-4.3.2\AndroidManifest.xml:2:1-13:12
@@ -48,7 +48,7 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] C:
 MERGED from [com.google.android.gms:play-services-measurement-base:16.4.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\cb410e13c3e08fdde0fe039ccbf6dac0\play-services-measurement-base-16.4.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\ec536bb45364a22b6b4b5a2f908e287c\play-services-basement-16.2.0\AndroidManifest.xml:17:1-28:12
 MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\0fe9153befa39a40154c1b34da0f98d4\support-v4-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:2.0.0-beta4] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\734803f0f235bd59ad8cb9c8c98ef980\constraint-layout-2.0.0-beta4\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support.constraint:constraint-layout:2.0.0-beta6] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\46f6ed646a75627c441e26bc9e624914\constraint-layout-2.0.0-beta6\AndroidManifest.xml:2:1-11:12
 MERGED from [com.theartofdev.edmodo:android-image-cropper:2.6.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\43fca39eb3ba4fd1cbabf15eae1572cc\android-image-cropper-2.6.0\AndroidManifest.xml:2:1-12:12
 MERGED from [com.airbnb.android:lottie:2.6.1] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\5b6e7161c514f20fb90b476c3ab93276\lottie-2.6.1\AndroidManifest.xml:2:1-13:12
 MERGED from [com.android.support:design:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\0efc63398b0f39f51bd8d2d5a579fcb4\design-28.0.0\AndroidManifest.xml:17:1-24:12
@@ -67,15 +67,16 @@ MERGED from [com.android.billingclient:billing:2.2.0] C:\Users\Abhay patel\.grad
 MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\b6461188e229698230e4803e9651f134\support-media-compat-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\4d41626d9ec2bea1fe8828b6b00a24e1\extensions-1.1.1\AndroidManifest.xml:17:1-30:12
 MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\3755f837a4ec8593f516248bebed5811\support-fragment-28.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\64f2f2bf449b9e530ccb850cf1dddd1c\animated-vector-drawable-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:customtabs:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\b30e057fde8ed7a3d73150d77d9d09be\customtabs-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\11ddd88ceaf4fa4e569c2a2370f33782\recyclerview-v7-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\64f2f2bf449b9e530ccb850cf1dddd1c\animated-vector-drawable-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\878f64be374275fd83f19675ccd1e30c\support-core-ui-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.facebook.android:facebook-places:4.29.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\10d3eee8fe3706545c348bbe86d62308\facebook-places-4.29.0\AndroidManifest.xml:21:1-31:12
 MERGED from [com.facebook.android:facebook-applinks:4.29.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\96ebe9d77bbf48839c7573bf8a92cec5\facebook-applinks-4.29.0\AndroidManifest.xml:21:1-31:12
 MERGED from [com.facebook.android:facebook-messenger:4.29.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\2fac8b320bc758855f551287f5ca700c\facebook-messenger-4.29.0\AndroidManifest.xml:21:1-31:12
 MERGED from [com.facebook.android:facebook-core:4.29.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\0bd0aef81b9df538f59825f1d7871f68\facebook-core-4.29.0\AndroidManifest.xml:21:1-45:12
 MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\6f62da87b8f6eaacef03edb2bdd7576f\support-core-utils-28.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\142d88cfddf851d7c112551eea909639\support-vector-drawable-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:loader:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\0e0b6194d119ea36f4e70338afd63107\loader-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\41aba1258b0bef8bf8cd1c3e0228c12c\viewpager-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\fb07f76f3e6fcd387da04f0ea82f38ed\coordinatorlayout-28.0.0\AndroidManifest.xml:17:1-22:12
@@ -84,19 +85,18 @@ MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Abhay patel\
 MERGED from [com.android.support:customview:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\582ea9c1f3480fe5a7788e83a31fac0c\customview-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\7071ebbbd684adf981764b0706721b93\swiperefreshlayout-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\5dc497e75ab9dda16c9a0eb7c83fd89c\asynclayoutinflater-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\142d88cfddf851d7c112551eea909639\support-vector-drawable-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:transition:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\aaeff0b2e8721931ce455ffc6b798913\transition-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\2bdb8236a3830c932b851b76cd438de4\support-compat-28.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\7dcc26d59c2567f95c74b3e28d4f6ecb\versionedparcelable-28.0.0\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\0ea9030f0325016412d7623eabe665a4\cursoradapter-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\d51fe1947f6f4265ac96e9a7f95885da\gifdecoder-4.6.1\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:exifinterface:27.1.1] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\64795e5b3ece2454fde8a1e7856920af\exifinterface-27.1.1\AndroidManifest.xml:17:1-22:12
 MERGED from [com.firebaseui:firebase-ui-common:4.3.2] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\0280b1bebc203c70b3859ce1ffbe7e25\firebase-ui-common-4.3.2\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\7dcc26d59c2567f95c74b3e28d4f6ecb\versionedparcelable-28.0.0\AndroidManifest.xml:17:1-25:12
 MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\41a31e1fa7f132766284de2ed27488d7\runtime-1.1.1\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\e291f410aeb6f39acb38fef33e6dc099\documentfile-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\7ca72225027c2e8a563573b6074b88cd\localbroadcastmanager-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:print:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\0f13b0de1b313aeaf6cfc5fb56dcd804\print-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\a61d15d54eb6987807542a89c39ce5e9\interpolator-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\0ea9030f0325016412d7623eabe665a4\cursoradapter-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\668aded8168dbf123323e4afd185371f\viewmodel-1.1.1\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\3adcdfb9f62776eee044c76c7a338bfe\livedata-1.1.1\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\ca45f0fb937027b20a202380fcb30825\livedata-core-1.1.1\AndroidManifest.xml:17:1-22:12
@@ -108,20 +108,20 @@ MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.6.8] C:\Users\Abhay 
 MERGED from [com.crashlytics.sdk.android:answers:1.4.7] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\62476e10f35ec47f0aa2e309fa525327\answers-1.4.7\AndroidManifest.xml:2:1-13:12
 MERGED from [io.fabric.sdk.android:fabric:1.4.8] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\2a9683040faf1d12ea7b866e5159a46d\fabric-1.4.8\AndroidManifest.xml:22:1-33:12
 MERGED from [com.crashlytics.sdk.android:beta:1.2.10] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\74c36c9958103b50c155cb3c697413da\beta-1.2.10\AndroidManifest.xml:2:1-13:12
-INJECTED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:2:1-104:12
-INJECTED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:2:1-104:12
-INJECTED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:2:1-104:12
+INJECTED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:2:1-109:12
+INJECTED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:2:1-109:12
+INJECTED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:2:1-109:12
 	package
 		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:3:5-44
 		INJECTED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml
 		INJECTED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:2:1-104:12
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:2:1-109:12
 		INJECTED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:2:1-104:12
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:2:1-109:12
 		INJECTED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:2:11-69
@@ -210,7 +210,7 @@ ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:9:5-81
 	android:name
 		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:9:22-78
 application
-ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:11:5-102:19
+ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:11:5-107:19
 MERGED from [com.firebaseui:firebase-ui-auth:4.3.2] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\438152570008d59e75587e0ef5dba99b\firebase-ui-auth-4.3.2\AndroidManifest.xml:15:5-107:19
 MERGED from [com.firebaseui:firebase-ui-auth:4.3.2] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\438152570008d59e75587e0ef5dba99b\firebase-ui-auth-4.3.2\AndroidManifest.xml:15:5-107:19
 MERGED from [com.facebook.android:facebook-android-sdk:4.29.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\12f92b7c5fc9ff14ff2dc768ba7cb949\facebook-android-sdk-4.29.0\AndroidManifest.xml:28:5-29:19
@@ -285,8 +285,8 @@ MERGED from [com.google.android.gms:play-services-measurement-base:16.4.0] C:\Us
 MERGED from [com.google.android.gms:play-services-measurement-base:16.4.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\cb410e13c3e08fdde0fe039ccbf6dac0\play-services-measurement-base-16.4.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\ec536bb45364a22b6b4b5a2f908e287c\play-services-basement-16.2.0\AndroidManifest.xml:22:5-26:19
 MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\ec536bb45364a22b6b4b5a2f908e287c\play-services-basement-16.2.0\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support.constraint:constraint-layout:2.0.0-beta4] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\734803f0f235bd59ad8cb9c8c98ef980\constraint-layout-2.0.0-beta4\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:2.0.0-beta4] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\734803f0f235bd59ad8cb9c8c98ef980\constraint-layout-2.0.0-beta4\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:2.0.0-beta6] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\46f6ed646a75627c441e26bc9e624914\constraint-layout-2.0.0-beta6\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:2.0.0-beta6] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\46f6ed646a75627c441e26bc9e624914\constraint-layout-2.0.0-beta6\AndroidManifest.xml:9:5-20
 MERGED from [com.airbnb.android:lottie:2.6.1] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\5b6e7161c514f20fb90b476c3ab93276\lottie-2.6.1\AndroidManifest.xml:11:5-20
 MERGED from [com.airbnb.android:lottie:2.6.1] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\5b6e7161c514f20fb90b476c3ab93276\lottie-2.6.1\AndroidManifest.xml:11:5-20
 MERGED from [com.android.support:design:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\0efc63398b0f39f51bd8d2d5a579fcb4\design-28.0.0\AndroidManifest.xml:22:5-20
@@ -311,10 +311,10 @@ MERGED from [com.facebook.android:facebook-core:4.29.0] C:\Users\Abhay patel\.gr
 MERGED from [com.facebook.android:facebook-core:4.29.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\0bd0aef81b9df538f59825f1d7871f68\facebook-core-4.29.0\AndroidManifest.xml:28:5-43:19
 MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\2bdb8236a3830c932b851b76cd438de4\support-compat-28.0.0\AndroidManifest.xml:22:5-94
 MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\2bdb8236a3830c932b851b76cd438de4\support-compat-28.0.0\AndroidManifest.xml:22:5-94
-MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\d51fe1947f6f4265ac96e9a7f95885da\gifdecoder-4.6.1\AndroidManifest.xml:9:5-20
-MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\d51fe1947f6f4265ac96e9a7f95885da\gifdecoder-4.6.1\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\7dcc26d59c2567f95c74b3e28d4f6ecb\versionedparcelable-28.0.0\AndroidManifest.xml:22:5-23:19
 MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\7dcc26d59c2567f95c74b3e28d4f6ecb\versionedparcelable-28.0.0\AndroidManifest.xml:22:5-23:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\d51fe1947f6f4265ac96e9a7f95885da\gifdecoder-4.6.1\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\d51fe1947f6f4265ac96e9a7f95885da\gifdecoder-4.6.1\AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.gms:play-services-ads-base:17.2.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\9c6c466e2a9e76a47d5c5acc375fbcf8\play-services-ads-base-17.2.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-ads-base:17.2.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\9c6c466e2a9e76a47d5c5acc375fbcf8\play-services-ads-base-17.2.0\AndroidManifest.xml:7:5-20
 MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.6.8] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\5a57f504a46f8e0b9b8c6bae077ea2f4\crashlytics-core-2.6.8\AndroidManifest.xml:54:5-20
@@ -342,165 +342,171 @@ MERGED from [com.crashlytics.sdk.android:beta:1.2.10] C:\Users\Abhay patel\.grad
 	android:name
 		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:12:9-28
 activity#com.borisruzanov.russianwives.mvp.ui.actions.ActionsActivity
-ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:19:9-21:52
+ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:20:9-22:52
 	android:screenOrientation
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:21:13-49
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:22:13-49
 	android:name
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:20:13-59
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:21:13-59
 activity#com.borisruzanov.russianwives.mvp.ui.chats.ChatsActivity
-ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:22:9-24:52
+ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:23:9-25:52
 	android:screenOrientation
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:24:13-49
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:25:13-49
 	android:name
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:23:13-55
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:24:13-55
 meta-data#com.facebook.sdk.ApplicationId
-ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:26:9-28:63
+ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:27:9-29:63
 MERGED from [com.firebaseui:firebase-ui-auth:4.3.2] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\438152570008d59e75587e0ef5dba99b\firebase-ui-auth-4.3.2\AndroidManifest.xml:19:9-21:63
 MERGED from [com.firebaseui:firebase-ui-auth:4.3.2] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\438152570008d59e75587e0ef5dba99b\firebase-ui-auth-4.3.2\AndroidManifest.xml:19:9-21:63
 	android:value
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:28:13-60
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:29:13-60
 	android:name
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:27:13-58
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:28:13-58
 meta-data#com.google.android.gms.ads.APPLICATION_ID
-ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:29:9-31:70
+ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:30:9-32:70
 	android:value
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:31:13-67
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:32:13-67
 	android:name
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:30:13-69
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:31:13-69
 activity#com.facebook.FacebookActivity
-ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:33:9-36:48
+ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:34:9-37:48
 MERGED from [com.firebaseui:firebase-ui-auth:4.3.2] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\438152570008d59e75587e0ef5dba99b\firebase-ui-auth-4.3.2\AndroidManifest.xml:83:9-87:48
 MERGED from [com.firebaseui:firebase-ui-auth:4.3.2] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\438152570008d59e75587e0ef5dba99b\firebase-ui-auth-4.3.2\AndroidManifest.xml:83:9-87:48
 MERGED from [com.facebook.android:facebook-common:4.29.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\b653a2e5d6645a377d24dd7b75c57ec3\facebook-common-4.29.0\AndroidManifest.xml:29:9-32:66
 MERGED from [com.facebook.android:facebook-common:4.29.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\b653a2e5d6645a377d24dd7b75c57ec3\facebook-common-4.29.0\AndroidManifest.xml:29:9-32:66
 	android:label
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:36:13-45
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:37:13-45
 	tools:ignore
 		ADDED from [com.firebaseui:firebase-ui-auth:4.3.2] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\438152570008d59e75587e0ef5dba99b\firebase-ui-auth-4.3.2\AndroidManifest.xml:87:13-45
 	android:configChanges
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:35:13-96
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:36:13-96
 	android:theme
 		ADDED from [com.facebook.android:facebook-common:4.29.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\b653a2e5d6645a377d24dd7b75c57ec3\facebook-common-4.29.0\AndroidManifest.xml:32:13-63
 	android:name
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:34:13-57
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:35:13-57
 activity#com.borisruzanov.russianwives.mvp.ui.main.MainActivity
-ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:37:9-39:62
+ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:38:9-40:62
 	android:configChanges
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:39:13-59
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:40:13-59
 	android:name
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:38:13-53
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:39:13-53
 activity#com.theartofdev.edmodo.cropper.CropImageActivity
-ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:40:9-42:59
+ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:41:9-43:59
 	android:theme
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:42:13-56
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:43:13-56
 	android:name
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:41:13-76
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:42:13-76
 activity#com.borisruzanov.russianwives.mvp.ui.rewardvideo.RewardVideoActivity
-ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:43:9-45:52
+ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:44:9-46:52
 	android:screenOrientation
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:45:13-49
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:46:13-49
 	android:name
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:44:13-67
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:45:13-67
 activity#com.borisruzanov.russianwives.mvp.ui.chatmessage.ChatMessageActivity
-ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:46:9-49:52
+ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:47:9-50:52
 	android:screenOrientation
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:49:13-49
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:50:13-49
 	android:parentActivityName
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:48:13-73
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:49:13-73
 	android:name
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:47:13-67
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:48:13-67
 activity#com.borisruzanov.russianwives.mvp.ui.profilesettings.ProfileSettingsActivity
-ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:50:9-52:52
+ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:51:9-53:52
 	android:screenOrientation
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:52:13-49
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:53:13-49
 	android:name
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:51:13-75
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:52:13-75
 activity#com.borisruzanov.russianwives.mvp.ui.myprofile.MyProfileActivity
-ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:53:9-56:59
+ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:54:9-57:59
 	android:screenOrientation
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:55:13-49
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:56:13-49
 	android:theme
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:56:13-56
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:57:13-56
 	android:name
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:54:13-63
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:55:13-63
 activity#com.borisruzanov.russianwives.mvp.ui.slider.SliderActivity
-ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:57:9-64:20
+ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:58:9-65:20
 	android:screenOrientation
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:60:13-49
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:61:13-49
 	android:parentActivityName
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:59:13-73
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:60:13-73
 	android:name
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:58:13-57
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:59:13-57
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:61:13-63:96
+ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:62:13-64:96
 	android:value
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:63:17-93
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:64:17-93
 	android:name
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:62:17-63
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:63:17-63
 activity#com.borisruzanov.russianwives.mvp.ui.friendprofile.FriendProfileActivity
-ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:65:9-67:52
+ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:66:9-68:52
 	android:screenOrientation
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:67:13-49
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:68:13-49
 	android:name
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:66:13-71
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:67:13-71
 receiver#com.borisruzanov.russianwives.widget.ActionWidgetProvider
-ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:69:9-77:20
+ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:70:9-78:20
 	android:name
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:69:19-62
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:70:19-62
 intent-filter#action:name:android.appwidget.action.APPWIDGET_UPDATE
-ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:70:13-72:29
+ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:71:13-73:29
 action#android.appwidget.action.APPWIDGET_UPDATE
-ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:71:17-84
+ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:72:17-84
 	android:name
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:71:25-81
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:72:25-81
 meta-data#android.appwidget.provider
-ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:74:13-76:62
+ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:75:13-77:62
 	android:resource
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:76:17-59
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:77:17-59
 	android:name
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:75:17-58
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:76:17-58
 service#com.borisruzanov.russianwives.widget.ActionWidgetService
-ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:79:9-81:72
+ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:80:9-82:72
 	android:permission
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:81:13-69
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:82:13-69
 	android:name
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:80:13-55
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:81:13-55
 service#com.borisruzanov.russianwives.mvp.model.data.notifications.RwFirebaseMessagingService
-ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:82:9-86:19
+ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:83:9-87:19
 	android:name
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:82:18-89
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:83:18-89
 intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:83:13-85:29
+ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:84:13-86:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:84:17-78
+ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:85:17-78
 	android:name
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:84:25-75
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:85:25-75
 meta-data#com.google.firebase.messaging.default_notification_channel_id
-ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:88:9-90:63
+ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:89:9-91:63
 	android:value
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:90:13-60
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:91:13-60
 	android:name
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:89:13-89
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:90:13-89
 activity#com.borisruzanov.russianwives.mvp.ui.shop.ServicesActivity
-ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:92:9-66
+ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:93:9-66
 	android:name
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:92:19-63
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:93:19-63
 activity#com.borisruzanov.russianwives.mvp.ui.main.MainScreenActivity
-ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:93:9-101:20
+ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:94:9-102:20
 	android:screenOrientation
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:95:13-49
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:96:13-49
 	android:name
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:94:13-59
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:95:13-59
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:96:13-100:29
+ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:97:13-101:29
 action#android.intent.action.MAIN
-ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:97:17-69
+ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:98:17-69
 	android:name
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:97:25-66
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:98:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:99:17-77
+ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:100:17-77
 	android:name
-		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:99:27-74
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:100:27-74
+activity#com.borisruzanov.russianwives.mvp.ui.unlockuser.UnlockUserActivity
+ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:104:9-105:51
+	android:screenOrientation
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:105:13-49
+	android:name
+		ADDED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml:104:19-71
 uses-sdk
 INJECTED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\my_project\Boris\RWives\app\src\main\AndroidManifest.xml
@@ -593,8 +599,8 @@ MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\Abha
 MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\ec536bb45364a22b6b4b5a2f908e287c\play-services-basement-16.2.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\0fe9153befa39a40154c1b34da0f98d4\support-v4-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\0fe9153befa39a40154c1b34da0f98d4\support-v4-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:2.0.0-beta4] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\734803f0f235bd59ad8cb9c8c98ef980\constraint-layout-2.0.0-beta4\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:2.0.0-beta4] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\734803f0f235bd59ad8cb9c8c98ef980\constraint-layout-2.0.0-beta4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:2.0.0-beta6] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\46f6ed646a75627c441e26bc9e624914\constraint-layout-2.0.0-beta6\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:2.0.0-beta6] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\46f6ed646a75627c441e26bc9e624914\constraint-layout-2.0.0-beta6\AndroidManifest.xml:5:5-7:41
 MERGED from [com.theartofdev.edmodo:android-image-cropper:2.6.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\43fca39eb3ba4fd1cbabf15eae1572cc\android-image-cropper-2.6.0\AndroidManifest.xml:8:5-10:41
 MERGED from [com.theartofdev.edmodo:android-image-cropper:2.6.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\43fca39eb3ba4fd1cbabf15eae1572cc\android-image-cropper-2.6.0\AndroidManifest.xml:8:5-10:41
 MERGED from [com.airbnb.android:lottie:2.6.1] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\5b6e7161c514f20fb90b476c3ab93276\lottie-2.6.1\AndroidManifest.xml:7:5-9:41
@@ -631,12 +637,12 @@ MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\Abhay patel\.grad
 MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\4d41626d9ec2bea1fe8828b6b00a24e1\extensions-1.1.1\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\3755f837a4ec8593f516248bebed5811\support-fragment-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\3755f837a4ec8593f516248bebed5811\support-fragment-28.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\64f2f2bf449b9e530ccb850cf1dddd1c\animated-vector-drawable-28.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\64f2f2bf449b9e530ccb850cf1dddd1c\animated-vector-drawable-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:customtabs:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\b30e057fde8ed7a3d73150d77d9d09be\customtabs-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:customtabs:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\b30e057fde8ed7a3d73150d77d9d09be\customtabs-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\11ddd88ceaf4fa4e569c2a2370f33782\recyclerview-v7-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\11ddd88ceaf4fa4e569c2a2370f33782\recyclerview-v7-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\64f2f2bf449b9e530ccb850cf1dddd1c\animated-vector-drawable-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\64f2f2bf449b9e530ccb850cf1dddd1c\animated-vector-drawable-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\878f64be374275fd83f19675ccd1e30c\support-core-ui-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\878f64be374275fd83f19675ccd1e30c\support-core-ui-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.facebook.android:facebook-places:4.29.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\10d3eee8fe3706545c348bbe86d62308\facebook-places-4.29.0\AndroidManifest.xml:24:5-26:41
@@ -649,6 +655,8 @@ MERGED from [com.facebook.android:facebook-core:4.29.0] C:\Users\Abhay patel\.gr
 MERGED from [com.facebook.android:facebook-core:4.29.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\0bd0aef81b9df538f59825f1d7871f68\facebook-core-4.29.0\AndroidManifest.xml:24:5-26:41
 MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\6f62da87b8f6eaacef03edb2bdd7576f\support-core-utils-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\6f62da87b8f6eaacef03edb2bdd7576f\support-core-utils-28.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\142d88cfddf851d7c112551eea909639\support-vector-drawable-28.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\142d88cfddf851d7c112551eea909639\support-vector-drawable-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:loader:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\0e0b6194d119ea36f4e70338afd63107\loader-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:loader:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\0e0b6194d119ea36f4e70338afd63107\loader-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\41aba1258b0bef8bf8cd1c3e0228c12c\viewpager-28.0.0\AndroidManifest.xml:20:5-44
@@ -665,20 +673,20 @@ MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Abhay patel
 MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\7071ebbbd684adf981764b0706721b93\swiperefreshlayout-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\5dc497e75ab9dda16c9a0eb7c83fd89c\asynclayoutinflater-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\5dc497e75ab9dda16c9a0eb7c83fd89c\asynclayoutinflater-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\142d88cfddf851d7c112551eea909639\support-vector-drawable-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\142d88cfddf851d7c112551eea909639\support-vector-drawable-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:transition:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\aaeff0b2e8721931ce455ffc6b798913\transition-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:transition:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\aaeff0b2e8721931ce455ffc6b798913\transition-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\2bdb8236a3830c932b851b76cd438de4\support-compat-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\2bdb8236a3830c932b851b76cd438de4\support-compat-28.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\7dcc26d59c2567f95c74b3e28d4f6ecb\versionedparcelable-28.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\7dcc26d59c2567f95c74b3e28d4f6ecb\versionedparcelable-28.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\0ea9030f0325016412d7623eabe665a4\cursoradapter-28.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\0ea9030f0325016412d7623eabe665a4\cursoradapter-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\d51fe1947f6f4265ac96e9a7f95885da\gifdecoder-4.6.1\AndroidManifest.xml:5:5-7:41
 MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\d51fe1947f6f4265ac96e9a7f95885da\gifdecoder-4.6.1\AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support:exifinterface:27.1.1] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\64795e5b3ece2454fde8a1e7856920af\exifinterface-27.1.1\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:exifinterface:27.1.1] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\64795e5b3ece2454fde8a1e7856920af\exifinterface-27.1.1\AndroidManifest.xml:20:5-44
 MERGED from [com.firebaseui:firebase-ui-common:4.3.2] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\0280b1bebc203c70b3859ce1ffbe7e25\firebase-ui-common-4.3.2\AndroidManifest.xml:7:5-9:41
 MERGED from [com.firebaseui:firebase-ui-common:4.3.2] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\0280b1bebc203c70b3859ce1ffbe7e25\firebase-ui-common-4.3.2\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\7dcc26d59c2567f95c74b3e28d4f6ecb\versionedparcelable-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\7dcc26d59c2567f95c74b3e28d4f6ecb\versionedparcelable-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\41a31e1fa7f132766284de2ed27488d7\runtime-1.1.1\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\41a31e1fa7f132766284de2ed27488d7\runtime-1.1.1\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\e291f410aeb6f39acb38fef33e6dc099\documentfile-28.0.0\AndroidManifest.xml:20:5-44
@@ -689,8 +697,6 @@ MERGED from [com.android.support:print:28.0.0] C:\Users\Abhay patel\.gradle\cach
 MERGED from [com.android.support:print:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\0f13b0de1b313aeaf6cfc5fb56dcd804\print-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\a61d15d54eb6987807542a89c39ce5e9\interpolator-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\a61d15d54eb6987807542a89c39ce5e9\interpolator-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\0ea9030f0325016412d7623eabe665a4\cursoradapter-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\0ea9030f0325016412d7623eabe665a4\cursoradapter-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\668aded8168dbf123323e4afd185371f\viewmodel-1.1.1\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\668aded8168dbf123323e4afd185371f\viewmodel-1.1.1\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Abhay patel\.gradle\caches\transforms-2\files-2.1\3adcdfb9f62776eee044c76c7a338bfe\livedata-1.1.1\AndroidManifest.xml:20:5-44

@@ -1,7 +1,5 @@
 package com.borisruzanov.russianwives.utils;
 
-import org.jetbrains.annotations.Nullable;
-
 import java.util.Arrays;
 import java.util.List;
 
@@ -145,4 +143,5 @@ public final class Consts {
     public static final String PREMIUM = "premium";
     public static final String VIP = "vip";
 
+    public static final String BLOCKED_FRIEND ="block_user";
 }

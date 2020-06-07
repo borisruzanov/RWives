@@ -55,7 +55,6 @@ public final class R {
   }
   public static final class attr {
     /**
-     * Custom divider drawable to use for elements in the action bar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -63,7 +62,6 @@ public final class R {
      */
     public static final int actionBarDivider=0x7f040000;
     /**
-     * Custom item state list drawable background for action bar items.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -71,8 +69,6 @@ public final class R {
      */
     public static final int actionBarItemBackground=0x7f040001;
     /**
-     * Reference to a theme that should be used to inflate popups
-     * shown by widgets in the action bar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -80,8 +76,6 @@ public final class R {
      */
     public static final int actionBarPopupTheme=0x7f040002;
     /**
-     * Size of the Action Bar, including the contextual
-     * bar used to present Action Modes.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -98,10 +92,6 @@ public final class R {
      */
     public static final int actionBarSize=0x7f040003;
     /**
-     * Reference to a style for the split Action Bar. This style
-     * controls the split component that holds the menu/action
-     * buttons. actionBarStyle is still used for the primary
-     * bar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -109,7 +99,6 @@ public final class R {
      */
     public static final int actionBarSplitStyle=0x7f040004;
     /**
-     * Reference to a style for the Action Bar
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -124,7 +113,6 @@ public final class R {
      */
     public static final int actionBarTabBarStyle=0x7f040006;
     /**
-     * Default style for tabs within an action bar
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -139,9 +127,6 @@ public final class R {
      */
     public static final int actionBarTabTextStyle=0x7f040008;
     /**
-     * Reference to a theme that should be used to inflate the
-     * action bar. This will be inherited by any widget inflated
-     * into the action bar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -149,13 +134,6 @@ public final class R {
      */
     public static final int actionBarTheme=0x7f040009;
     /**
-     * Reference to a theme that should be used to inflate widgets
-     * and layouts destined for the action bar. Most of the time
-     * this will be a reference to the current theme, but when
-     * the action bar has a significantly different contrast
-     * profile than the rest of the activity the difference
-     * can become important. If this is set to @null the current
-     * theme will be used.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -163,7 +141,6 @@ public final class R {
      */
     public static final int actionBarWidgetTheme=0x7f04000a;
     /**
-     * Default action button style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -171,7 +148,6 @@ public final class R {
      */
     public static final int actionButtonStyle=0x7f04000b;
     /**
-     * Default ActionBar dropdown style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -179,9 +155,6 @@ public final class R {
      */
     public static final int actionDropDownStyle=0x7f04000c;
     /**
-     * An optional layout to be used as an action view.
-     * See {@link android.view.MenuItem#setActionView(android.view.View)}
-     * for more info.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -189,8 +162,6 @@ public final class R {
      */
     public static final int actionLayout=0x7f04000d;
     /**
-     * TextAppearance style that will be applied to text that
-     * appears within action menu items.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -198,7 +169,6 @@ public final class R {
      */
     public static final int actionMenuTextAppearance=0x7f04000e;
     /**
-     * Color for text that appears within action menu items.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -209,7 +179,6 @@ public final class R {
      */
     public static final int actionMenuTextColor=0x7f04000f;
     /**
-     * Background drawable to use for action mode UI
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -224,7 +193,6 @@ public final class R {
      */
     public static final int actionModeCloseButtonStyle=0x7f040011;
     /**
-     * Drawable to use for the close action mode button
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -232,7 +200,6 @@ public final class R {
      */
     public static final int actionModeCloseDrawable=0x7f040012;
     /**
-     * Drawable to use for the Copy action button in Contextual Action Bar
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -240,7 +207,6 @@ public final class R {
      */
     public static final int actionModeCopyDrawable=0x7f040013;
     /**
-     * Drawable to use for the Cut action button in Contextual Action Bar
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -248,7 +214,6 @@ public final class R {
      */
     public static final int actionModeCutDrawable=0x7f040014;
     /**
-     * Drawable to use for the Find action button in WebView selection action modes
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -256,7 +221,6 @@ public final class R {
      */
     public static final int actionModeFindDrawable=0x7f040015;
     /**
-     * Drawable to use for the Paste action button in Contextual Action Bar
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -264,7 +228,6 @@ public final class R {
      */
     public static final int actionModePasteDrawable=0x7f040016;
     /**
-     * PopupWindow style to use for action modes when showing as a window overlay.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -272,7 +235,6 @@ public final class R {
      */
     public static final int actionModePopupWindowStyle=0x7f040017;
     /**
-     * Drawable to use for the Select all action button in Contextual Action Bar
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -280,7 +242,6 @@ public final class R {
      */
     public static final int actionModeSelectAllDrawable=0x7f040018;
     /**
-     * Drawable to use for the Share action button in WebView selection action modes
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -288,7 +249,6 @@ public final class R {
      */
     public static final int actionModeShareDrawable=0x7f040019;
     /**
-     * Background drawable to use for action mode UI in the lower split bar
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -303,7 +263,6 @@ public final class R {
      */
     public static final int actionModeStyle=0x7f04001b;
     /**
-     * Drawable to use for the Web Search action button in WebView selection action modes
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -325,24 +284,16 @@ public final class R {
      */
     public static final int actionOverflowMenuStyle=0x7f04001e;
     /**
-     * The name of an optional ActionProvider class to instantiate an action view
-     * and perform operations such as default action for that menu item.
-     * See {@link android.view.MenuItem#setActionProvider(android.view.ActionProvider)}
-     * for more info.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int actionProviderClass=0x7f04001f;
     /**
-     * The name of an optional View class to instantiate and use as an
-     * action view. See {@link android.view.MenuItem#setActionView(android.view.View)}
-     * for more info.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int actionViewClass=0x7f040020;
     /**
-     * Default ActivityChooserView style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -384,7 +335,6 @@ public final class R {
      */
     public static final int alertDialogStyle=0x7f040027;
     /**
-     * Theme to use for alert dialogs spawned from this theme.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -392,20 +342,15 @@ public final class R {
      */
     public static final int alertDialogTheme=0x7f040028;
     /**
-     * Whether to automatically stack the buttons when there is not
-     * enough space to lay them out side-by-side.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
     public static final int allowStacking=0x7f040029;
     /**
-     * Alpha multiplier applied to the base color.
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
     public static final int alpha=0x7f04002a;
     /**
-     * The alphabetic modifier key. This is the modifier when using a keyboard
-     * with alphabetic keys. The values should be kept in sync with KeyEvent
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
@@ -454,7 +399,6 @@ public final class R {
      */
     public static final int arcMode=0x7f04002f;
     /**
-     * The length of the arrow head when formed to make an arrow
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -463,7 +407,6 @@ public final class R {
      */
     public static final int arrowHeadLength=0x7f040030;
     /**
-     * The length of the shaft when formed to make an arrow
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -477,7 +420,6 @@ public final class R {
      */
     public static final int attributeName=0x7f040032;
     /**
-     * Default AutoCompleteTextView style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -485,7 +427,6 @@ public final class R {
      */
     public static final int autoCompleteTextViewStyle=0x7f040033;
     /**
-     * The maximum text size constraint to be used when auto-sizing text.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -494,7 +435,6 @@ public final class R {
      */
     public static final int autoSizeMaxTextSize=0x7f040034;
     /**
-     * The minimum text size constraint to be used when auto-sizing text.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -503,9 +443,6 @@ public final class R {
      */
     public static final int autoSizeMinTextSize=0x7f040035;
     /**
-     * Resource array of dimensions to be used in conjunction with
-     * <code>autoSizeTextType</code> set to <code>uniform</code>. Overrides
-     * <code>autoSizeStepGranularity</code> if set.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -513,9 +450,6 @@ public final class R {
      */
     public static final int autoSizePresetSizes=0x7f040036;
     /**
-     * Specify the auto-size step size if <code>autoSizeTextType</code> is set to
-     * <code>uniform</code>. The default is 1px. Overwrites
-     * <code>autoSizePresetSizes</code> if set.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -524,17 +458,14 @@ public final class R {
      */
     public static final int autoSizeStepGranularity=0x7f040037;
     /**
-     * Specify the type of auto-size. Note that this feature is not supported by EditText,
-     * works only for TextView.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>none</td><td>0</td><td>No auto-sizing (default).</td></tr>
-     * <tr><td>uniform</td><td>1</td><td>Uniform horizontal and vertical text size scaling to fit within the
-     * container.</td></tr>
+     * <tr><td>none</td><td>0</td><td></td></tr>
+     * <tr><td>uniform</td><td>1</td><td></td></tr>
      * </table>
      */
     public static final int autoSizeTextType=0x7f040038;
@@ -554,7 +485,6 @@ public final class R {
      */
     public static final int autoTransition=0x7f040039;
     /**
-     * Specifies a background drawable for the action bar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -562,7 +492,6 @@ public final class R {
      */
     public static final int background=0x7f04003a;
     /**
-     * Specifies a background drawable for the bottom component of a split action bar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -573,7 +502,6 @@ public final class R {
      */
     public static final int backgroundSplit=0x7f04003b;
     /**
-     * Specifies a background drawable for a second stacked row of the action bar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -584,36 +512,28 @@ public final class R {
      */
     public static final int backgroundStacked=0x7f04003c;
     /**
-     * Tint to apply to the background.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int backgroundTint=0x7f04003d;
     /**
-     * Blending mode used to apply the background tint.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      */
     public static final int backgroundTintMode=0x7f04003e;
     /**
-     * The length of the bars when they are parallel to each other
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -703,7 +623,6 @@ public final class R {
      */
     public static final int borderWidth=0x7f040049;
     /**
-     * Style for buttons without an explicit border, often used in groups.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -816,7 +735,6 @@ public final class R {
      */
     public static final int brightness=0x7f040058;
     /**
-     * Style for buttons within button bars
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -824,7 +742,6 @@ public final class R {
      */
     public static final int buttonBarButtonStyle=0x7f040059;
     /**
-     * Style for the "negative" buttons within button bars
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -832,7 +749,6 @@ public final class R {
      */
     public static final int buttonBarNegativeButtonStyle=0x7f04005a;
     /**
-     * Style for the "neutral" buttons within button bars
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -840,7 +756,6 @@ public final class R {
      */
     public static final int buttonBarNeutralButtonStyle=0x7f04005b;
     /**
-     * Style for the "positive" buttons within button bars
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -848,7 +763,6 @@ public final class R {
      */
     public static final int buttonBarPositiveButtonStyle=0x7f04005c;
     /**
-     * Style for button bars
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -862,8 +776,8 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td>Push object to the bottom of its container, not changing its size.</td></tr>
-     * <tr><td>top</td><td>30</td><td>Push object to the top of its container, not changing its size.</td></tr>
+     * <tr><td>bottom</td><td>50</td><td></td></tr>
+     * <tr><td>top</td><td>30</td><td></td></tr>
      * </table>
      */
     public static final int buttonGravity=0x7f04005e;
@@ -900,7 +814,6 @@ public final class R {
      */
     public static final int buttonSize=0x7f040061;
     /**
-     * Normal Button style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -908,7 +821,6 @@ public final class R {
      */
     public static final int buttonStyle=0x7f040062;
     /**
-     * Small Button style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -916,43 +828,34 @@ public final class R {
      */
     public static final int buttonStyleSmall=0x7f040063;
     /**
-     * Tint to apply to the button drawable.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int buttonTint=0x7f040064;
     /**
-     * Blending mode used to apply the button tint.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      */
     public static final int buttonTintMode=0x7f040065;
     /**
-     * Background color for CardView.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int cardBackgroundColor=0x7f040066;
     /**
-     * Corner radius for CardView.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -961,7 +864,6 @@ public final class R {
      */
     public static final int cardCornerRadius=0x7f040067;
     /**
-     * Elevation for CardView.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -970,7 +872,6 @@ public final class R {
      */
     public static final int cardElevation=0x7f040068;
     /**
-     * Maximum Elevation for CardView.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -979,13 +880,11 @@ public final class R {
      */
     public static final int cardMaxElevation=0x7f040069;
     /**
-     * Add padding to CardView on v20 and before to prevent intersections between the Card content and rounded corners.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
     public static final int cardPreventCornerOverlap=0x7f04006a;
     /**
-     * Add padding in API v21+ as well to have the same measurements with previous versions.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
@@ -1003,7 +902,6 @@ public final class R {
      */
     public static final int chainUseRtl=0x7f04006d;
     /**
-     * Default Checkbox style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1035,7 +933,6 @@ public final class R {
      */
     public static final int checkedIconVisible=0x7f040072;
     /**
-     * Default CheckedTextView style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1230,7 +1127,6 @@ public final class R {
      */
     public static final int clickAction=0x7f04008d;
     /**
-     * Close button icon
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1278,7 +1174,6 @@ public final class R {
      */
     public static final int closeIconVisible=0x7f040094;
     /**
-     * Specifies a layout to use for the "close" item at the starting edge.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1286,13 +1181,11 @@ public final class R {
      */
     public static final int closeItemLayout=0x7f040095;
     /**
-     * Text to set as the content description for the collapse button.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int collapseContentDescription=0x7f040096;
     /**
-     * Icon drawable to use for the collapse button.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1327,58 +1220,48 @@ public final class R {
      */
     public static final int collapsedTitleTextAppearance=0x7f040099;
     /**
-     * The drawing color for the bars
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int color=0x7f04009a;
     /**
-     * Bright complement to the primary branding color. By default, this is the color applied
-     * to framework controls (via colorControlActivated).
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int colorAccent=0x7f04009b;
     /**
-     * Default color of background imagery for floating components, ex. dialogs, popups, and cards.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int colorBackgroundFloating=0x7f04009c;
     /**
-     * The color applied to framework buttons in their normal state.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int colorButtonNormal=0x7f04009d;
     /**
-     * The color applied to framework controls in their activated (ex. checked) state.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int colorControlActivated=0x7f04009e;
     /**
-     * The color applied to framework control highlights (ex. ripples, list selectors).
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int colorControlHighlight=0x7f04009f;
     /**
-     * The color applied to framework controls in their normal state.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int colorControlNormal=0x7f0400a0;
     /**
-     * Color used for error states and things that need to be drawn to
-     * the user's attention.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1389,16 +1272,12 @@ public final class R {
      */
     public static final int colorError=0x7f0400a1;
     /**
-     * The primary branding color for the app. By default, this is the color applied to the
-     * action bar background.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int colorPrimary=0x7f0400a2;
     /**
-     * Dark variant of the primary branding color. By default, this is the color applied to
-     * the status bar (via statusBarColor) and navigation bar (via navigationBarColor).
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
@@ -1428,7 +1307,6 @@ public final class R {
      */
     public static final int colorSecondary=0x7f0400a5;
     /**
-     * The color applied to framework switch thumbs in their normal state.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
@@ -1544,7 +1422,6 @@ public final class R {
      */
     public static final int com_facebook_tooltip_mode=0x7f0400b2;
     /**
-     * Commit icon shown in the query suggestion row
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1592,14 +1469,11 @@ public final class R {
      */
     public static final int content=0x7f0400b9;
     /**
-     * The content description associated with the item.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int contentDescription=0x7f0400ba;
     /**
-     * Minimum inset for content views within a bar. Navigation buttons and
-     * menu views are excepted. Only valid for some themes and configurations.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1608,8 +1482,6 @@ public final class R {
      */
     public static final int contentInsetEnd=0x7f0400bb;
     /**
-     * Minimum inset for content views within a bar when actions from a menu
-     * are present. Only valid for some themes and configurations.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1618,8 +1490,6 @@ public final class R {
      */
     public static final int contentInsetEndWithActions=0x7f0400bc;
     /**
-     * Minimum inset for content views within a bar. Navigation buttons and
-     * menu views are excepted. Only valid for some themes and configurations.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1628,8 +1498,6 @@ public final class R {
      */
     public static final int contentInsetLeft=0x7f0400bd;
     /**
-     * Minimum inset for content views within a bar. Navigation buttons and
-     * menu views are excepted. Only valid for some themes and configurations.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1638,8 +1506,6 @@ public final class R {
      */
     public static final int contentInsetRight=0x7f0400be;
     /**
-     * Minimum inset for content views within a bar. Navigation buttons and
-     * menu views are excepted. Only valid for some themes and configurations.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1648,8 +1514,6 @@ public final class R {
      */
     public static final int contentInsetStart=0x7f0400bf;
     /**
-     * Minimum inset for content views within a bar when a navigation button
-     * is present, such as the Up button. Only valid for some themes and configurations.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1658,7 +1522,6 @@ public final class R {
      */
     public static final int contentInsetStartWithNavigation=0x7f0400c0;
     /**
-     * Inner padding between the edges of the Card and children of the CardView.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1667,7 +1530,6 @@ public final class R {
      */
     public static final int contentPadding=0x7f0400c1;
     /**
-     * Inner padding between the bottom edge of the Card and children of the CardView.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1676,7 +1538,6 @@ public final class R {
      */
     public static final int contentPaddingBottom=0x7f0400c2;
     /**
-     * Inner padding between the left edge of the Card and children of the CardView.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1685,7 +1546,6 @@ public final class R {
      */
     public static final int contentPaddingLeft=0x7f0400c3;
     /**
-     * Inner padding between the right edge of the Card and children of the CardView.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1694,7 +1554,6 @@ public final class R {
      */
     public static final int contentPaddingRight=0x7f0400c4;
     /**
-     * Inner padding between the top edge of the Card and children of the CardView.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1713,7 +1572,6 @@ public final class R {
      */
     public static final int contrast=0x7f0400c7;
     /**
-     * The background used by framework controls.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2022,7 +1880,6 @@ public final class R {
      */
     public static final int customIntegerValue=0x7f0400f7;
     /**
-     * Specifies a layout for custom navigation. Overrides navigationMode.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2047,8 +1904,6 @@ public final class R {
      */
     public static final int defaultDuration=0x7f0400fb;
     /**
-     * Default query hint used when {@code queryHint} is undefined and
-     * the search view's {@code SearchableInfo} does not provide a hint.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
@@ -2076,7 +1931,6 @@ public final class R {
      */
     public static final int deriveConstraintsFrom=0x7f040100;
     /**
-     * Preferred corner radius of dialogs.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -2085,7 +1939,6 @@ public final class R {
      */
     public static final int dialogCornerRadius=0x7f040101;
     /**
-     * Preferred padding for dialog content.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -2094,7 +1947,6 @@ public final class R {
      */
     public static final int dialogPreferredPadding=0x7f040102;
     /**
-     * Theme to use for dialogs spawned from this theme.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2102,7 +1954,6 @@ public final class R {
      */
     public static final int dialogTheme=0x7f040103;
     /**
-     * Options affecting how the action bar is displayed.
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
@@ -2120,7 +1971,6 @@ public final class R {
      */
     public static final int displayOptions=0x7f040104;
     /**
-     * Specifies the drawable used for item dividers.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2128,7 +1978,6 @@ public final class R {
      */
     public static final int divider=0x7f040105;
     /**
-     * A drawable that may be used as a horizontal divider between visual elements.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2136,7 +1985,6 @@ public final class R {
      */
     public static final int dividerHorizontal=0x7f040106;
     /**
-     * Size of padding on either end of a divider.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -2145,7 +1993,6 @@ public final class R {
      */
     public static final int dividerPadding=0x7f040107;
     /**
-     * A drawable that may be used as a vertical divider between visual elements.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2160,8 +2007,10 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
      * <tr><td>dragDown</td><td>1</td><td></td></tr>
+     * <tr><td>dragEnd</td><td>5</td><td></td></tr>
      * <tr><td>dragLeft</td><td>2</td><td></td></tr>
      * <tr><td>dragRight</td><td>3</td><td></td></tr>
+     * <tr><td>dragStart</td><td>4</td><td></td></tr>
      * <tr><td>dragUp</td><td>0</td><td></td></tr>
      * </table>
      */
@@ -2201,7 +2050,6 @@ public final class R {
      */
     public static final int drawableEndCompat=0x7f04010d;
     /**
-     * The total size of the drawable
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -2231,7 +2079,6 @@ public final class R {
      */
     public static final int drawerArrowStyle=0x7f040111;
     /**
-     * ListPopupWindow compatibility
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2239,7 +2086,6 @@ public final class R {
      */
     public static final int dropDownListViewStyle=0x7f040112;
     /**
-     * The preferred item height for dropdown lists.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -2252,7 +2098,6 @@ public final class R {
      */
     public static final int duration=0x7f040114;
     /**
-     * EditText background drawable.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2260,7 +2105,6 @@ public final class R {
      */
     public static final int editTextBackground=0x7f040115;
     /**
-     * EditText text foreground color.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2271,7 +2115,6 @@ public final class R {
      */
     public static final int editTextColor=0x7f040116;
     /**
-     * Default EditText style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2279,7 +2122,6 @@ public final class R {
      */
     public static final int editTextStyle=0x7f040117;
     /**
-     * Elevation for the action bar itself
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -2310,11 +2152,6 @@ public final class R {
      */
     public static final int errorTextAppearance=0x7f04011c;
     /**
-     * The drawable to show in the button for expanding the activities overflow popup.
-     * <strong>Note:</strong> Clients would like to set this drawable
-     * as a clue about the action the chosen activity will perform. For
-     * example, if share activity is to be chosen the drawable should
-     * give a clue that sharing is to be performed.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2484,8 +2321,6 @@ public final class R {
      */
     public static final int fastScrollVerticalTrackDrawable=0x7f040130;
     /**
-     * Distance from the top of the TextView to the first text baseline. If set, this
-     * overrides the value set for paddingTop.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -2689,8 +2524,6 @@ public final class R {
      */
     public static final int flow_wrapMode=0x7f040145;
     /**
-     * The reference to the font file to be used. This should be a file in the res/font folder
-     * and should therefore have an R reference value. E.g. @font/myfont
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2698,23 +2531,16 @@ public final class R {
      */
     public static final int font=0x7f040146;
     /**
-     * The attribute for the font family.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int fontFamily=0x7f040147;
     /**
-     * The authority of the Font Provider to be used for the request.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int fontProviderAuthority=0x7f040148;
     /**
-     * The sets of hashes for the certificates the provider should be signed with. This is
-     * used to verify the identity of the provider, and is only required if the provider is not
-     * part of the system image. This value may point to one list or a list of lists, where each
-     * individual list represents one collection of signature hashes. Refer to your font provider's
-     * documentation for these values.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2722,34 +2548,18 @@ public final class R {
      */
     public static final int fontProviderCerts=0x7f040149;
     /**
-     * The strategy to be used when fetching font data from a font provider in XML layouts.
-     * This attribute is ignored when the resource is loaded from code, as it is equivalent to the
-     * choice of API between {@link
-     * androidx.core.content.res.ResourcesCompat#getFont(Context, int)} (blocking) and
-     * {@link
-     * androidx.core.content.res.ResourcesCompat#getFont(Context, int, FontCallback, Handler)}
-     * (async).
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>async</td><td>1</td><td>The async font fetch works as follows.
-     * First, check the local cache, then if the requeted font is not cached, trigger a
-     * request the font and continue with layout inflation. Once the font fetch succeeds, the
-     * target text view will be refreshed with the downloaded font data. The
-     * fontProviderFetchTimeout will be ignored if async loading is specified.</td></tr>
-     * <tr><td>blocking</td><td>0</td><td>The blocking font fetch works as follows.
-     * First, check the local cache, then if the requested font is not cached, request the
-     * font from the provider and wait until it is finished.  You can change the length of
-     * the timeout by modifying fontProviderFetchTimeout.  If the timeout happens, the
-     * default typeface will be used instead.</td></tr>
+     * <tr><td>async</td><td>1</td><td></td></tr>
+     * <tr><td>blocking</td><td>0</td><td></td></tr>
      * </table>
      */
     public static final int fontProviderFetchStrategy=0x7f04014a;
     /**
-     * The length of the timeout during fetching.
      * <p>May be an integer value, such as "<code>100</code>".
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -2757,29 +2567,21 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>forever</td><td>ffffffff</td><td>A special value for the timeout. In this case, the blocking font fetching will not
-     * timeout and wait until a reply is received from the font provider.</td></tr>
+     * <tr><td>forever</td><td>ffffffff</td><td></td></tr>
      * </table>
      */
     public static final int fontProviderFetchTimeout=0x7f04014b;
     /**
-     * The package for the Font Provider to be used for the request. This is used to verify
-     * the identity of the provider.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int fontProviderPackage=0x7f04014c;
     /**
-     * The query to be sent over to the provider. Refer to your font provider's documentation
-     * on the format of this string.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int fontProviderQuery=0x7f04014d;
     /**
-     * The style of the given font file. This will be used when the font is being loaded into
-     * the font stack and will override any style information in the font's header tables. If
-     * unspecified, the value in the font's header tables will be used.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
@@ -2792,20 +2594,11 @@ public final class R {
      */
     public static final int fontStyle=0x7f04014e;
     /**
-     * The variation settings to be applied to the font. The string should be in the following
-     * format: "'tag1' value1, 'tag2' value2, ...". If the default variation settings should be
-     * used, or the font used does not support variation settings, this attribute needs not be
-     * specified.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int fontVariationSettings=0x7f04014f;
     /**
-     * The weight of the given font file. This will be used when the font is being loaded into
-     * the font stack and will override any weight information in the font's header tables. Must
-     * be a positive number, a multiple of 100, and between 100 and 900, inclusive. The most
-     * common values are 400 for regular weight and 700 for bold weight. If unspecified, the value
-     * in the font's header tables will be used.
      * <p>May be an integer value, such as "<code>100</code>".
      */
     public static final int fontWeight=0x7f040150;
@@ -2819,7 +2612,6 @@ public final class R {
      */
     public static final int framePosition=0x7f040152;
     /**
-     * The max gap between the bars when they are parallel to each other
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -2828,7 +2620,6 @@ public final class R {
      */
     public static final int gapBetweenBars=0x7f040153;
     /**
-     * Go button icon
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2875,7 +2666,6 @@ public final class R {
      */
     public static final int hideMotionSpec=0x7f04015a;
     /**
-     * Set true to hide the action bar on a vertical nested scroll of content.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
@@ -2903,7 +2693,6 @@ public final class R {
      */
     public static final int hintTextAppearance=0x7f04015f;
     /**
-     * Specifies a drawable to use for the 'home as up' indicator.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2911,7 +2700,6 @@ public final class R {
      */
     public static final int homeAsUpIndicator=0x7f040160;
     /**
-     * Specifies a layout to use for the "home" section of the action bar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2978,37 +2766,28 @@ public final class R {
      */
     public static final int iconStartPadding=0x7f040168;
     /**
-     * Tint to apply to the icon.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int iconTint=0x7f040169;
     /**
-     * Blending mode used to apply the icon tint.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the icon with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the icon, but with the icon’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the icon. The icon’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the icon.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      */
     public static final int iconTintMode=0x7f04016a;
     /**
-     * The default state of the SearchView. If true, it will be iconified when not in
-     * use and expanded when clicked.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
@@ -3031,7 +2810,6 @@ public final class R {
      */
     public static final int imageAspectRatioAdjust=0x7f04016d;
     /**
-     * ImageButton background drawable.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -3039,7 +2817,6 @@ public final class R {
      */
     public static final int imageButtonStyle=0x7f04016e;
     /**
-     * Specifies a style resource to use for an indeterminate progress spinner.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -3047,7 +2824,6 @@ public final class R {
      */
     public static final int indeterminateProgressStyle=0x7f04016f;
     /**
-     * The maximal number of items initially shown in the activity list.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
@@ -3110,8 +2886,6 @@ public final class R {
      */
     public static final int itemIconTint=0x7f040178;
     /**
-     * Specifies padding that should be applied to the left and right sides of
-     * system-provided items in the bar.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -3168,11 +2942,6 @@ public final class R {
      */
     public static final int keyPositionType=0x7f04017f;
     /**
-     * A reference to an array of integers representing the
-     * locations of horizontal keylines in dp from the starting edge.
-     * Child views can refer to these keylines for alignment using
-     * layout_keyline="index" where index is a 0-based index into
-     * this array.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -3194,8 +2963,6 @@ public final class R {
      */
     public static final int labelVisibilityMode=0x7f040181;
     /**
-     * Distance from the bottom of the TextView to the last text baseline. If set, this
-     * overrides the value set for paddingBottom.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -3204,7 +2971,6 @@ public final class R {
      */
     public static final int lastBaselineToBottomHeight=0x7f040182;
     /**
-     * The layout to use for the search view.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -3231,21 +2997,11 @@ public final class R {
      */
     public static final int layoutDuringTransition=0x7f040185;
     /**
-     * Class name of the Layout Manager to be used.
-     * <p/>
-     * The class must extandroidx.recyclerview.widget.RecyclerViewView$LayoutManager
-     * and have either a default constructor or constructor with the signature
-     * (android.content.Context, android.util.AttributeSet, int, int).
-     * <p/>
-     * If the name starts with a '.', application package is prefixed.
-     * Else, if the name contains a '.', the classname is assumed to be a full class name.
-     * Else, the recycler view package naandroidx.appcompat.widgetdget) is prefixed.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int layoutManager=0x7f040186;
     /**
-     * The id of an anchor view that this view should position relative to.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -3253,40 +3009,30 @@ public final class R {
      */
     public static final int layout_anchor=0x7f040187;
     /**
-     * Specifies how an object should position relative to an anchor, on both the X and Y axes,
-     * within its parent's bounds.
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td>Push object to the bottom of its container, not changing its size.</td></tr>
-     * <tr><td>center</td><td>11</td><td>Place the object in the center of its container in both the vertical and horizontal axis, not changing its size.</td></tr>
-     * <tr><td>center_horizontal</td><td>1</td><td>Place object in the horizontal center of its container, not changing its size.</td></tr>
-     * <tr><td>center_vertical</td><td>10</td><td>Place object in the vertical center of its container, not changing its size.</td></tr>
-     * <tr><td>clip_horizontal</td><td>8</td><td>Additional option that can be set to have the left and/or right edges of
-     * the child clipped to its container's bounds.
-     * The clip will be based on the horizontal gravity: a left gravity will clip the right
-     * edge, a right gravity will clip the left edge, and neither will clip both edges.</td></tr>
-     * <tr><td>clip_vertical</td><td>80</td><td>Additional option that can be set to have the top and/or bottom edges of
-     * the child clipped to its container's bounds.
-     * The clip will be based on the vertical gravity: a top gravity will clip the bottom
-     * edge, a bottom gravity will clip the top edge, and neither will clip both edges.</td></tr>
-     * <tr><td>end</td><td>800005</td><td>Push object to the end of its container, not changing its size.</td></tr>
-     * <tr><td>fill</td><td>77</td><td>Grow the horizontal and vertical size of the object if needed so it completely fills its container.</td></tr>
-     * <tr><td>fill_horizontal</td><td>7</td><td>Grow the horizontal size of the object if needed so it completely fills its container.</td></tr>
-     * <tr><td>fill_vertical</td><td>70</td><td>Grow the vertical size of the object if needed so it completely fills its container.</td></tr>
-     * <tr><td>left</td><td>3</td><td>Push object to the left of its container, not changing its size.</td></tr>
-     * <tr><td>right</td><td>5</td><td>Push object to the right of its container, not changing its size.</td></tr>
-     * <tr><td>start</td><td>800003</td><td>Push object to the beginning of its container, not changing its size.</td></tr>
-     * <tr><td>top</td><td>30</td><td>Push object to the top of its container, not changing its size.</td></tr>
+     * <tr><td>bottom</td><td>50</td><td></td></tr>
+     * <tr><td>center</td><td>11</td><td></td></tr>
+     * <tr><td>center_horizontal</td><td>1</td><td></td></tr>
+     * <tr><td>center_vertical</td><td>10</td><td></td></tr>
+     * <tr><td>clip_horizontal</td><td>8</td><td></td></tr>
+     * <tr><td>clip_vertical</td><td>80</td><td></td></tr>
+     * <tr><td>end</td><td>800005</td><td></td></tr>
+     * <tr><td>fill</td><td>77</td><td></td></tr>
+     * <tr><td>fill_horizontal</td><td>7</td><td></td></tr>
+     * <tr><td>fill_vertical</td><td>70</td><td></td></tr>
+     * <tr><td>left</td><td>3</td><td></td></tr>
+     * <tr><td>right</td><td>5</td><td></td></tr>
+     * <tr><td>start</td><td>800003</td><td></td></tr>
+     * <tr><td>top</td><td>30</td><td></td></tr>
      * </table>
      */
     public static final int layout_anchorGravity=0x7f040188;
     /**
-     * The class name of a Behavior class defining special runtime behavior
-     * for this child view.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
@@ -3723,21 +3469,20 @@ public final class R {
      */
     public static final int layout_constraintWidth_percent=0x7f0401b5;
     /**
-     * Specifies how this view dodges the inset edges of the CoordinatorLayout.
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>all</td><td>77</td><td>Dodge all the inset edges.</td></tr>
-     * <tr><td>bottom</td><td>50</td><td>Dodge the bottom inset edge.</td></tr>
-     * <tr><td>end</td><td>800005</td><td>Dodge the end inset edge.</td></tr>
-     * <tr><td>left</td><td>3</td><td>Dodge the left inset edge.</td></tr>
-     * <tr><td>none</td><td>0</td><td>Don't dodge any edges</td></tr>
-     * <tr><td>right</td><td>5</td><td>Dodge the right inset edge.</td></tr>
-     * <tr><td>start</td><td>800003</td><td>Dodge the start inset edge.</td></tr>
-     * <tr><td>top</td><td>30</td><td>Dodge the top inset edge.</td></tr>
+     * <tr><td>all</td><td>77</td><td></td></tr>
+     * <tr><td>bottom</td><td>50</td><td></td></tr>
+     * <tr><td>end</td><td>800005</td><td></td></tr>
+     * <tr><td>left</td><td>3</td><td></td></tr>
+     * <tr><td>none</td><td>0</td><td></td></tr>
+     * <tr><td>right</td><td>5</td><td></td></tr>
+     * <tr><td>start</td><td>800003</td><td></td></tr>
+     * <tr><td>top</td><td>30</td><td></td></tr>
      * </table>
      */
     public static final int layout_dodgeInsetEdges=0x7f0401b6;
@@ -3806,28 +3551,23 @@ public final class R {
      */
     public static final int layout_goneMarginTop=0x7f0401be;
     /**
-     * Specifies how this view insets the CoordinatorLayout and make some other views
-     * dodge it.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td>Inset the bottom edge.</td></tr>
-     * <tr><td>end</td><td>800005</td><td>Inset the end edge.</td></tr>
-     * <tr><td>left</td><td>3</td><td>Inset the left edge.</td></tr>
-     * <tr><td>none</td><td>0</td><td>Don't inset.</td></tr>
-     * <tr><td>right</td><td>5</td><td>Inset the right edge.</td></tr>
-     * <tr><td>start</td><td>800003</td><td>Inset the start edge.</td></tr>
-     * <tr><td>top</td><td>30</td><td>Inset the top edge.</td></tr>
+     * <tr><td>bottom</td><td>50</td><td></td></tr>
+     * <tr><td>end</td><td>800005</td><td></td></tr>
+     * <tr><td>left</td><td>3</td><td></td></tr>
+     * <tr><td>none</td><td>0</td><td></td></tr>
+     * <tr><td>right</td><td>5</td><td></td></tr>
+     * <tr><td>start</td><td>800003</td><td></td></tr>
+     * <tr><td>top</td><td>30</td><td></td></tr>
      * </table>
      */
     public static final int layout_insetEdge=0x7f0401bf;
     /**
-     * The index of a keyline this view should position relative to.
-     * android:layout_gravity will affect how the view aligns to the
-     * specified keyline.
      * <p>May be an integer value, such as "<code>100</code>".
      */
     public static final int layout_keyline=0x7f0401c0;
@@ -3841,7 +3581,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
+     * <tr><td>direct</td><td>1</td><td></td></tr>
      * <tr><td>graph</td><td>40</td><td></td></tr>
      * <tr><td>graph_wrap</td><td>80</td><td></td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
@@ -3880,8 +3620,6 @@ public final class R {
      */
     public static final int liftOnScroll=0x7f0401c4;
     /**
-     * Explicit height between lines of text. If set, this will override the values set
-     * for lineSpacingExtra and lineSpacingMultiplier.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -3898,7 +3636,6 @@ public final class R {
      */
     public static final int lineSpacing=0x7f0401c6;
     /**
-     * Drawable used as a background for selected list items.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -3906,7 +3643,6 @@ public final class R {
      */
     public static final int listChoiceBackgroundIndicator=0x7f0401c7;
     /**
-     * The list divider used in alert dialogs.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -3928,7 +3664,6 @@ public final class R {
      */
     public static final int listLayout=0x7f0401ca;
     /**
-     * Default menu-style ListView style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -3943,7 +3678,6 @@ public final class R {
      */
     public static final int listPopupWindowStyle=0x7f0401cc;
     /**
-     * The preferred list item height.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -3952,7 +3686,6 @@ public final class R {
      */
     public static final int listPreferredItemHeight=0x7f0401cd;
     /**
-     * A larger, more robust list item height.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -3961,7 +3694,6 @@ public final class R {
      */
     public static final int listPreferredItemHeightLarge=0x7f0401ce;
     /**
-     * A smaller, sleeker list item height.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -3970,7 +3702,6 @@ public final class R {
      */
     public static final int listPreferredItemHeightSmall=0x7f0401cf;
     /**
-     * The preferred padding along the left edge of list items.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -3979,7 +3710,6 @@ public final class R {
      */
     public static final int listPreferredItemPaddingLeft=0x7f0401d0;
     /**
-     * The preferred padding along the right edge of list items.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -3988,7 +3718,6 @@ public final class R {
      */
     public static final int listPreferredItemPaddingRight=0x7f0401d1;
     /**
-     * Specifies the drawable used for the application logo.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -3996,8 +3725,6 @@ public final class R {
      */
     public static final int logo=0x7f0401d2;
     /**
-     * A content description string to describe the appearance of the
-     * associated logo image.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
@@ -4145,9 +3872,6 @@ public final class R {
      */
     public static final int maxWidth=0x7f0401e9;
     /**
-     * When set to true, all children with a weight will be considered having
-     * the minimum size of the largest child. If false, all children are
-     * measured normally.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
@@ -4432,15 +4156,11 @@ public final class R {
      */
     public static final int multiChoiceItemLayout=0x7f04020a;
     /**
-     * Text to set as the content description for the navigation button
-     * located at the start of the toolbar.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int navigationContentDescription=0x7f04020b;
     /**
-     * Icon drawable to use for the navigation button located at
-     * the start of the toolbar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4448,16 +4168,15 @@ public final class R {
      */
     public static final int navigationIcon=0x7f04020c;
     /**
-     * The type of navigation to use.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>listMode</td><td>1</td><td>The action bar will use a selection list for navigation.</td></tr>
-     * <tr><td>normal</td><td>0</td><td>Normal static title text</td></tr>
-     * <tr><td>tabMode</td><td>2</td><td>The action bar will use a series of horizontal tabs for navigation.</td></tr>
+     * <tr><td>listMode</td><td>1</td><td></td></tr>
+     * <tr><td>normal</td><td>0</td><td></td></tr>
+     * <tr><td>tabMode</td><td>2</td><td></td></tr>
      * </table>
      */
     public static final int navigationMode=0x7f04020d;
@@ -4469,8 +4188,18 @@ public final class R {
      */
     public static final int navigationViewStyle=0x7f04020e;
     /**
-     * The numeric modifier key. This is the modifier when using a numeric (e.g., 12-key)
-     * keyboard. The values should be kept in sync with KeyEvent
+     * <p>Must be one or more (separated by '|') of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>disablePostScroll</td><td>1</td><td></td></tr>
+     * <tr><td>none</td><td>0</td><td></td></tr>
+     * </table>
+     */
+    public static final int nestedScrollFlags=0x7f04020f;
+    /**
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
@@ -4485,32 +4214,32 @@ public final class R {
      * <tr><td>SYM</td><td>4</td><td></td></tr>
      * </table>
      */
-    public static final int numericModifiers=0x7f04020f;
+    public static final int numericModifiers=0x7f040210;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int onCross=0x7f040210;
+    public static final int onCross=0x7f040211;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int onHide=0x7f040211;
+    public static final int onHide=0x7f040212;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int onNegativeCross=0x7f040212;
+    public static final int onNegativeCross=0x7f040213;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int onPositiveCross=0x7f040213;
+    public static final int onPositiveCross=0x7f040214;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int onShow=0x7f040214;
+    public static final int onShow=0x7f040215;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -4526,102 +4255,94 @@ public final class R {
      * <tr><td>stop</td><td>3</td><td></td></tr>
      * </table>
      */
-    public static final int onTouchUp=0x7f040215;
-    /**
-     * Whether the popup window should overlap its anchor view.
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     */
-    public static final int overlapAnchor=0x7f040216;
+    public static final int onTouchUp=0x7f040216;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int overlay=0x7f040217;
+    public static final int overlapAnchor=0x7f040217;
     /**
-     * Bottom padding to use when no buttons are present.
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int overlay=0x7f040218;
+    /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int paddingBottomNoButtons=0x7f040218;
+    public static final int paddingBottomNoButtons=0x7f040219;
     /**
-     * Sets the padding, in pixels, of the end edge; see {@link android.R.attr#padding}.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int paddingEnd=0x7f040219;
+    public static final int paddingEnd=0x7f04021a;
     /**
-     * Sets the padding, in pixels, of the start edge; see {@link android.R.attr#padding}.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int paddingStart=0x7f04021a;
+    public static final int paddingStart=0x7f04021b;
     /**
-     * Top padding to use when no title is present.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int paddingTopNoTitle=0x7f04021b;
+    public static final int paddingTopNoTitle=0x7f04021c;
     /**
-     * The background of a panel when it is inset from the left and right edges of the screen.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int panelBackground=0x7f04021c;
+    public static final int panelBackground=0x7f04021d;
     /**
-     * Default Panel Menu style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int panelMenuListTheme=0x7f04021d;
+    public static final int panelMenuListTheme=0x7f04021e;
     /**
-     * Default Panel Menu width.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int panelMenuListWidth=0x7f04021e;
+    public static final int panelMenuListWidth=0x7f04021f;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int passwordToggleContentDescription=0x7f04021f;
+    public static final int passwordToggleContentDescription=0x7f040220;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int passwordToggleDrawable=0x7f040220;
+    public static final int passwordToggleDrawable=0x7f040221;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int passwordToggleEnabled=0x7f040221;
+    public static final int passwordToggleEnabled=0x7f040222;
     /**
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int passwordToggleTint=0x7f040222;
+    public static final int passwordToggleTint=0x7f040223;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -4636,7 +4357,7 @@ public final class R {
      * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      */
-    public static final int passwordToggleTintMode=0x7f040223;
+    public static final int passwordToggleTintMode=0x7f040224;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -4650,31 +4371,31 @@ public final class R {
      * <tr><td>startVertical</td><td>1</td><td></td></tr>
      * </table>
      */
-    public static final int pathMotionArc=0x7f040224;
+    public static final int pathMotionArc=0x7f040225;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int path_percent=0x7f040225;
+    public static final int path_percent=0x7f040226;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int percentHeight=0x7f040226;
+    public static final int percentHeight=0x7f040227;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int percentWidth=0x7f040227;
+    public static final int percentWidth=0x7f040228;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int percentX=0x7f040228;
+    public static final int percentX=0x7f040229;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int percentY=0x7f040229;
+    public static final int percentY=0x7f04022a;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int perpendicularPath_percent=0x7f04022a;
+    public static final int perpendicularPath_percent=0x7f04022b;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -4689,7 +4410,7 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int pivotAnchor=0x7f04022b;
+    public static final int pivotAnchor=0x7f04022c;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      * <p>May be a fractional value, which is a floating point number appended with
@@ -4697,7 +4418,7 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int pivotX=0x7f04022c;
+    public static final int pivotX=0x7f04022d;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      * <p>May be a fractional value, which is a floating point number appended with
@@ -4705,7 +4426,7 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int pivotY=0x7f04022d;
+    public static final int pivotY=0x7f04022e;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -4718,38 +4439,33 @@ public final class R {
      * <tr><td>visible</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int placeholder_emptyVisibility=0x7f04022e;
+    public static final int placeholder_emptyVisibility=0x7f04022f;
     /**
-     * Default PopupMenu style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int popupMenuStyle=0x7f04022f;
+    public static final int popupMenuStyle=0x7f040230;
     /**
-     * Reference to a theme that should be used to inflate popups
-     * shown by widgets in the action bar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int popupTheme=0x7f040230;
+    public static final int popupTheme=0x7f040231;
     /**
-     * Default PopupWindow style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int popupWindowStyle=0x7f040231;
+    public static final int popupWindowStyle=0x7f040232;
     /**
-     * Whether space should be reserved in layout when an icon is missing.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int preserveIconSpacing=0x7f040232;
+    public static final int preserveIconSpacing=0x7f040233;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -4757,74 +4473,66 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int pressedTranslationZ=0x7f040233;
+    public static final int pressedTranslationZ=0x7f040234;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int progress=0x7f040234;
+    public static final int progress=0x7f040235;
     /**
-     * Specifies the horizontal padding on either end for an embedded progress bar.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int progressBarPadding=0x7f040235;
+    public static final int progressBarPadding=0x7f040236;
     /**
-     * Specifies a style resource to use for an embedded progress bar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int progressBarStyle=0x7f040236;
+    public static final int progressBarStyle=0x7f040237;
     /**
-     * Background for the section containing the search query
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int queryBackground=0x7f040237;
+    public static final int queryBackground=0x7f040238;
     /**
-     * An optional user-defined query hint string to be displayed in the empty query field.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int queryHint=0x7f040238;
+    public static final int queryHint=0x7f040239;
     /**
-     * Default RadioButton style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int radioButtonStyle=0x7f040239;
+    public static final int radioButtonStyle=0x7f04023a;
     /**
-     * Default RatingBar style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int ratingBarStyle=0x7f04023a;
+    public static final int ratingBarStyle=0x7f04023b;
     /**
-     * Indicator RatingBar style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int ratingBarStyleIndicator=0x7f04023b;
+    public static final int ratingBarStyleIndicator=0x7f04023c;
     /**
-     * Small indicator RatingBar style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int ratingBarStyleSmall=0x7f04023c;
+    public static final int ratingBarStyleSmall=0x7f04023d;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -4832,7 +4540,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int region_heightLessThan=0x7f04023d;
+    public static final int region_heightLessThan=0x7f04023e;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -4840,7 +4548,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int region_heightMoreThan=0x7f04023e;
+    public static final int region_heightMoreThan=0x7f04023f;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -4848,7 +4556,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int region_widthLessThan=0x7f04023f;
+    public static final int region_widthLessThan=0x7f040240;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -4856,18 +4564,18 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int region_widthMoreThan=0x7f040240;
+    public static final int region_widthMoreThan=0x7f040241;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int reverseLayout=0x7f040241;
+    public static final int reverseLayout=0x7f040242;
     /**
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int rippleColor=0x7f040242;
+    public static final int rippleColor=0x7f040243;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -4875,15 +4583,15 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int round=0x7f040243;
+    public static final int round=0x7f040244;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int roundPercent=0x7f040244;
+    public static final int roundPercent=0x7f040245;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int saturation=0x7f040245;
+    public static final int saturation=0x7f040246;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -4892,11 +4600,11 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int scopeUris=0x7f040246;
+    public static final int scopeUris=0x7f040247;
     /**
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int scrimAnimationDuration=0x7f040247;
+    public static final int scrimAnimationDuration=0x7f040248;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -4906,7 +4614,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int scrimBackground=0x7f040248;
+    public static final int scrimBackground=0x7f040249;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -4914,84 +4622,65 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int scrimVisibleHeightTrigger=0x7f040249;
+    public static final int scrimVisibleHeightTrigger=0x7f04024a;
     /**
-     * Search icon displayed as a text field hint
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int searchHintIcon=0x7f04024a;
+    public static final int searchHintIcon=0x7f04024b;
     /**
-     * Search icon
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int searchIcon=0x7f04024b;
+    public static final int searchIcon=0x7f04024c;
     /**
-     * Style for the search query widget.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int searchViewStyle=0x7f04024c;
+    public static final int searchViewStyle=0x7f04024d;
     /**
-     * Default SeekBar style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int seekBarStyle=0x7f04024d;
+    public static final int seekBarStyle=0x7f04024e;
     /**
-     * A style that may be applied to buttons or other selectable items
-     * that should react to pressed and focus states, but that do not
-     * have a clear visual border along the edges.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int selectableItemBackground=0x7f04024e;
+    public static final int selectableItemBackground=0x7f04024f;
     /**
-     * Background drawable for borderless standalone items that need focus/pressed states.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int selectableItemBackgroundBorderless=0x7f04024f;
+    public static final int selectableItemBackgroundBorderless=0x7f040250;
     /**
-     * How this item should display in the Action Bar, if present.
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>always</td><td>2</td><td>Always show this item in an actionbar, even if it would override
-     * the system's limits of how much stuff to put there. This may make
-     * your action bar look bad on some screens. In most cases you should
-     * use "ifRoom" instead. Mutually exclusive with "ifRoom" and "never".</td></tr>
-     * <tr><td>collapseActionView</td><td>8</td><td>This item's action view collapses to a normal menu
-     * item. When expanded, the action view takes over a
-     * larger segment of its container.</td></tr>
-     * <tr><td>ifRoom</td><td>1</td><td>Show this item in an action bar if there is room for it as determined
-     * by the system. Favor this option over "always" where possible.
-     * Mutually exclusive with "never" and "always".</td></tr>
-     * <tr><td>never</td><td>0</td><td>Never show this item in an action bar, show it in the overflow menu instead.
-     * Mutually exclusive with "ifRoom" and "always".</td></tr>
-     * <tr><td>withText</td><td>4</td><td>When this item is shown as an action in the action bar, show a text
-     * label with it even if it has an icon representation.</td></tr>
+     * <tr><td>always</td><td>2</td><td></td></tr>
+     * <tr><td>collapseActionView</td><td>8</td><td></td></tr>
+     * <tr><td>ifRoom</td><td>1</td><td></td></tr>
+     * <tr><td>never</td><td>0</td><td></td></tr>
+     * <tr><td>withText</td><td>4</td><td></td></tr>
      * </table>
      */
-    public static final int showAsAction=0x7f040250;
+    public static final int showAsAction=0x7f040251;
     /**
-     * Setting for which dividers to show.
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
@@ -5004,147 +4693,138 @@ public final class R {
      * <tr><td>none</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int showDividers=0x7f040251;
+    public static final int showDividers=0x7f040252;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int showMotionSpec=0x7f040252;
+    public static final int showMotionSpec=0x7f040253;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int showPaths=0x7f040253;
-    /**
-     * Whether to draw on/off text.
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     */
-    public static final int showText=0x7f040254;
+    public static final int showPaths=0x7f040254;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int showTitle=0x7f040255;
+    public static final int showText=0x7f040255;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int showTitle=0x7f040256;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int singleChoiceItemLayout=0x7f040256;
+    public static final int singleChoiceItemLayout=0x7f040257;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int singleLine=0x7f040257;
+    public static final int singleLine=0x7f040258;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int singleSelection=0x7f040258;
+    public static final int singleSelection=0x7f040259;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int sizePercent=0x7f040259;
+    public static final int sizePercent=0x7f04025a;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int snackbarButtonStyle=0x7f04025a;
+    public static final int snackbarButtonStyle=0x7f04025b;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int snackbarStyle=0x7f04025b;
+    public static final int snackbarStyle=0x7f04025c;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int spacingProportion=0x7f04025c;
+    public static final int spacingProportion=0x7f04025d;
     /**
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int spanCount=0x7f04025d;
+    public static final int spanCount=0x7f04025e;
     /**
-     * Whether bars should rotate or not during transition
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int spinBars=0x7f04025e;
+    public static final int spinBars=0x7f04025f;
     /**
-     * Default Spinner style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int spinnerDropDownItemStyle=0x7f04025f;
+    public static final int spinnerDropDownItemStyle=0x7f040260;
     /**
-     * Default Spinner style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int spinnerStyle=0x7f040260;
+    public static final int spinnerStyle=0x7f040261;
     /**
-     * Whether to split the track and leave a gap for the thumb drawable.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int splitTrack=0x7f040261;
+    public static final int splitTrack=0x7f040262;
     /**
-     * Sets a drawable as the content of this ImageView. Allows the use of vector drawable
-     * when running on older versions of the platform.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int srcCompat=0x7f040262;
+    public static final int srcCompat=0x7f040263;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int stackFromEnd=0x7f040263;
+    public static final int stackFromEnd=0x7f040264;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int staggered=0x7f040264;
-    /**
-     * State identifier indicating the popup will be above the anchor.
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     */
-    public static final int state_above_anchor=0x7f040265;
+    public static final int staggered=0x7f040265;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int state_collapsed=0x7f040266;
+    public static final int state_above_anchor=0x7f040266;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int state_collapsible=0x7f040267;
+    public static final int state_collapsed=0x7f040267;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int state_liftable=0x7f040268;
+    public static final int state_collapsible=0x7f040268;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int state_lifted=0x7f040269;
+    public static final int state_liftable=0x7f040269;
     /**
-     * Drawable to display behind the status bar when the view is set to draw behind it.
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int state_lifted=0x7f04026a;
+    /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -5153,19 +4833,19 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int statusBarBackground=0x7f04026a;
+    public static final int statusBarBackground=0x7f04026b;
     /**
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int statusBarScrim=0x7f04026b;
+    public static final int statusBarScrim=0x7f04026c;
     /**
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int strokeColor=0x7f04026c;
+    public static final int strokeColor=0x7f04026d;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -5173,100 +4853,53 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int strokeWidth=0x7f04026d;
+    public static final int strokeWidth=0x7f04026e;
     /**
-     * Drawable for the arrow icon indicating a particular item is a submenu.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int subMenuArrow=0x7f04026e;
+    public static final int subMenuArrow=0x7f04026f;
     /**
-     * Background for the section containing the action (e.g. voice search)
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int submitBackground=0x7f04026f;
+    public static final int submitBackground=0x7f040270;
     /**
-     * Specifies subtitle text used for navigationMode="normal"
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int subtitle=0x7f040270;
+    public static final int subtitle=0x7f040271;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int subtitleTextAppearance=0x7f040271;
+    public static final int subtitleTextAppearance=0x7f040272;
     /**
-     * A color to apply to the subtitle string.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int subtitleTextColor=0x7f040272;
-    /**
-     * Specifies a style to use for subtitle text.
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int subtitleTextStyle=0x7f040273;
-    /**
-     * Layout for query suggestion rows
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int suggestionRowLayout=0x7f040274;
-    /**
-     * Minimum width for the switch component
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     */
-    public static final int switchMinWidth=0x7f040275;
-    /**
-     * Minimum space between the switch and caption text
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     */
-    public static final int switchPadding=0x7f040276;
-    /**
-     * Default style for the Switch widget.
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int switchStyle=0x7f040277;
-    /**
-     * TextAppearance style for text displayed on the switch thumb.
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int switchTextAppearance=0x7f040278;
+    public static final int subtitleTextColor=0x7f040273;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int tabBackground=0x7f040279;
+    public static final int subtitleTextStyle=0x7f040274;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int suggestionRowLayout=0x7f040275;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -5274,7 +4907,44 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int tabContentStart=0x7f04027a;
+    public static final int switchMinWidth=0x7f040276;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int switchPadding=0x7f040277;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int switchStyle=0x7f040278;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int switchTextAppearance=0x7f040279;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int tabBackground=0x7f04027a;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int tabContentStart=0x7f04027b;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -5286,13 +4956,13 @@ public final class R {
      * <tr><td>fill</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int tabGravity=0x7f04027b;
+    public static final int tabGravity=0x7f04027c;
     /**
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int tabIconTint=0x7f04027c;
+    public static final int tabIconTint=0x7f04027d;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -5308,29 +4978,29 @@ public final class R {
      * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      */
-    public static final int tabIconTintMode=0x7f04027d;
+    public static final int tabIconTintMode=0x7f04027e;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int tabIndicator=0x7f04027e;
+    public static final int tabIndicator=0x7f04027f;
     /**
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int tabIndicatorAnimationDuration=0x7f04027f;
+    public static final int tabIndicatorAnimationDuration=0x7f040280;
     /**
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int tabIndicatorColor=0x7f040280;
+    public static final int tabIndicatorColor=0x7f040281;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int tabIndicatorFullWidth=0x7f040281;
+    public static final int tabIndicatorFullWidth=0x7f040282;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -5344,7 +5014,7 @@ public final class R {
      * <tr><td>top</td><td>2</td><td></td></tr>
      * </table>
      */
-    public static final int tabIndicatorGravity=0x7f040282;
+    public static final int tabIndicatorGravity=0x7f040283;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -5352,12 +5022,12 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int tabIndicatorHeight=0x7f040283;
+    public static final int tabIndicatorHeight=0x7f040284;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int tabInlineLabel=0x7f040284;
+    public static final int tabInlineLabel=0x7f040285;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -5365,7 +5035,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int tabMaxWidth=0x7f040285;
+    public static final int tabMaxWidth=0x7f040286;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -5373,7 +5043,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int tabMinWidth=0x7f040286;
+    public static final int tabMinWidth=0x7f040287;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -5385,7 +5055,7 @@ public final class R {
      * <tr><td>scrollable</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int tabMode=0x7f040287;
+    public static final int tabMode=0x7f040288;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -5393,7 +5063,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int tabPadding=0x7f040288;
+    public static final int tabPadding=0x7f040289;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -5401,7 +5071,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int tabPaddingBottom=0x7f040289;
+    public static final int tabPaddingBottom=0x7f04028a;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -5409,7 +5079,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int tabPaddingEnd=0x7f04028a;
+    public static final int tabPaddingEnd=0x7f04028b;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -5417,7 +5087,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int tabPaddingStart=0x7f04028b;
+    public static final int tabPaddingStart=0x7f04028c;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -5425,61 +5095,61 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int tabPaddingTop=0x7f04028c;
+    public static final int tabPaddingTop=0x7f04028d;
     /**
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int tabRippleColor=0x7f04028d;
+    public static final int tabRippleColor=0x7f04028e;
     /**
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int tabSelectedTextColor=0x7f04028e;
+    public static final int tabSelectedTextColor=0x7f04028f;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int tabStyle=0x7f04028f;
+    public static final int tabStyle=0x7f040290;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int tabTextAppearance=0x7f040290;
+    public static final int tabTextAppearance=0x7f040291;
     /**
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int tabTextColor=0x7f040291;
+    public static final int tabTextColor=0x7f040292;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int tabUnboundedRipple=0x7f040292;
+    public static final int tabUnboundedRipple=0x7f040293;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int targetId=0x7f040293;
+    public static final int targetId=0x7f040294;
     /**
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int telltales_tailColor=0x7f040294;
+    public static final int telltales_tailColor=0x7f040295;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int telltales_tailScale=0x7f040295;
+    public static final int telltales_tailScale=0x7f040296;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -5493,9 +5163,8 @@ public final class R {
      * <tr><td>staticPostLayout</td><td>2</td><td></td></tr>
      * </table>
      */
-    public static final int telltales_velocityMode=0x7f040296;
+    public static final int telltales_velocityMode=0x7f040297;
     /**
-     * Present the text in ALL CAPS. This may use a small-caps form when available.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -5503,164 +5172,155 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int textAllCaps=0x7f040297;
+    public static final int textAllCaps=0x7f040298;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceBody1=0x7f040298;
+    public static final int textAppearanceBody1=0x7f040299;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceBody2=0x7f040299;
+    public static final int textAppearanceBody2=0x7f04029a;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceButton=0x7f04029a;
+    public static final int textAppearanceButton=0x7f04029b;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceCaption=0x7f04029b;
+    public static final int textAppearanceCaption=0x7f04029c;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceHeadline1=0x7f04029c;
+    public static final int textAppearanceHeadline1=0x7f04029d;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceHeadline2=0x7f04029d;
+    public static final int textAppearanceHeadline2=0x7f04029e;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceHeadline3=0x7f04029e;
+    public static final int textAppearanceHeadline3=0x7f04029f;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceHeadline4=0x7f04029f;
+    public static final int textAppearanceHeadline4=0x7f0402a0;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceHeadline5=0x7f0402a0;
+    public static final int textAppearanceHeadline5=0x7f0402a1;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceHeadline6=0x7f0402a1;
-    /**
-     * Text color, typeface, size, and style for the text inside of a popup menu.
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int textAppearanceLargePopupMenu=0x7f0402a2;
-    /**
-     * The preferred TextAppearance for the primary text of list items.
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int textAppearanceListItem=0x7f0402a3;
-    /**
-     * The preferred TextAppearance for the secondary text of list items.
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int textAppearanceListItemSecondary=0x7f0402a4;
-    /**
-     * The preferred TextAppearance for the primary text of small list items.
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int textAppearanceListItemSmall=0x7f0402a5;
+    public static final int textAppearanceHeadline6=0x7f0402a2;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceOverline=0x7f0402a6;
-    /**
-     * Text color, typeface, size, and style for header text inside of a popup menu.
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int textAppearancePopupMenuHeader=0x7f0402a7;
-    /**
-     * Text color, typeface, size, and style for system search result subtitle. Defaults to primary inverse text color.
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int textAppearanceSearchResultSubtitle=0x7f0402a8;
-    /**
-     * Text color, typeface, size, and style for system search result title. Defaults to primary inverse text color.
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int textAppearanceSearchResultTitle=0x7f0402a9;
-    /**
-     * Text color, typeface, size, and style for small text inside of a popup menu.
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int textAppearanceSmallPopupMenu=0x7f0402aa;
+    public static final int textAppearanceLargePopupMenu=0x7f0402a3;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceSubtitle1=0x7f0402ab;
+    public static final int textAppearanceListItem=0x7f0402a4;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceSubtitle2=0x7f0402ac;
+    public static final int textAppearanceListItemSecondary=0x7f0402a5;
     /**
-     * Color of list item text in alert dialogs.
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int textAppearanceListItemSmall=0x7f0402a6;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int textAppearanceOverline=0x7f0402a7;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int textAppearancePopupMenuHeader=0x7f0402a8;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int textAppearanceSearchResultSubtitle=0x7f0402a9;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int textAppearanceSearchResultTitle=0x7f0402aa;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int textAppearanceSmallPopupMenu=0x7f0402ab;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int textAppearanceSubtitle1=0x7f0402ac;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int textAppearanceSubtitle2=0x7f0402ad;
+    /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -5669,9 +5329,8 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int textColorAlertDialogListItem=0x7f0402ad;
+    public static final int textColorAlertDialogListItem=0x7f0402ae;
     /**
-     * Text color for urls in search suggestions, used by things like global search
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -5680,7 +5339,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int textColorSearchUrl=0x7f0402ae;
+    public static final int textColorSearchUrl=0x7f0402af;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -5688,14 +5347,14 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int textEndPadding=0x7f0402af;
+    public static final int textEndPadding=0x7f0402b0;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textInputStyle=0x7f0402b0;
+    public static final int textInputStyle=0x7f0402b1;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -5703,249 +5362,203 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int textStartPadding=0x7f0402b1;
+    public static final int textStartPadding=0x7f0402b2;
     /**
-     * Deprecated.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int theme=0x7f0402b2;
+    public static final int theme=0x7f0402b3;
     /**
-     * The thickness (stroke size) for the bar paint
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int thickness=0x7f0402b3;
+    public static final int thickness=0x7f0402b4;
     /**
-     * Amount of padding on either side of text within the switch thumb.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int thumbTextPadding=0x7f0402b4;
+    public static final int thumbTextPadding=0x7f0402b5;
     /**
-     * Tint to apply to the thumb drawable.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int thumbTint=0x7f0402b5;
+    public static final int thumbTint=0x7f0402b6;
     /**
-     * Blending mode used to apply the thumb tint.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and drawable color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      */
-    public static final int thumbTintMode=0x7f0402b6;
+    public static final int thumbTintMode=0x7f0402b7;
     /**
-     * Drawable displayed at each progress position on a seekbar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int tickMark=0x7f0402b7;
+    public static final int tickMark=0x7f0402b8;
     /**
-     * Tint to apply to the tick mark drawable.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int tickMarkTint=0x7f0402b8;
+    public static final int tickMarkTint=0x7f0402b9;
     /**
-     * Blending mode used to apply the tick mark tint.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and drawable color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      */
-    public static final int tickMarkTintMode=0x7f0402b9;
+    public static final int tickMarkTintMode=0x7f0402ba;
     /**
-     * Tint to apply to the image source.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int tint=0x7f0402ba;
+    public static final int tint=0x7f0402bb;
     /**
-     * Blending mode used to apply the image source tint.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      */
-    public static final int tintMode=0x7f0402bb;
+    public static final int tintMode=0x7f0402bc;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int title=0x7f0402bc;
+    public static final int title=0x7f0402bd;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int titleEnabled=0x7f0402bd;
+    public static final int titleEnabled=0x7f0402be;
     /**
-     * Specifies extra space on the left, start, right and end sides
-     * of the toolbar's title. Margin values should be positive.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int titleMargin=0x7f0402be;
+    public static final int titleMargin=0x7f0402bf;
     /**
-     * Specifies extra space on the bottom side of the toolbar's title.
-     * If both this attribute and titleMargin are specified, then this
-     * attribute takes precedence. Margin values should be positive.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int titleMarginBottom=0x7f0402bf;
+    public static final int titleMarginBottom=0x7f0402c0;
     /**
-     * Specifies extra space on the end side of the toolbar's title.
-     * If both this attribute and titleMargin are specified, then this
-     * attribute takes precedence. Margin values should be positive.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int titleMarginEnd=0x7f0402c0;
+    public static final int titleMarginEnd=0x7f0402c1;
     /**
-     * Specifies extra space on the start side of the toolbar's title.
-     * If both this attribute and titleMargin are specified, then this
-     * attribute takes precedence. Margin values should be positive.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int titleMarginStart=0x7f0402c1;
+    public static final int titleMarginStart=0x7f0402c2;
     /**
-     * Specifies extra space on the top side of the toolbar's title.
-     * If both this attribute and titleMargin are specified, then this
-     * attribute takes precedence. Margin values should be positive.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int titleMarginTop=0x7f0402c2;
+    public static final int titleMarginTop=0x7f0402c3;
     /**
-     * {@deprecated Use titleMargin}
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    @Deprecated
-    public static final int titleMargins=0x7f0402c3;
+    public static final int titleMargins=0x7f0402c4;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int titleTextAppearance=0x7f0402c4;
+    public static final int titleTextAppearance=0x7f0402c5;
     /**
-     * A color to apply to the title string.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int titleTextColor=0x7f0402c5;
-    /**
-     * Specifies a style to use for title text.
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int titleTextStyle=0x7f0402c6;
+    public static final int titleTextColor=0x7f0402c6;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int toolbarId=0x7f0402c7;
+    public static final int titleTextStyle=0x7f0402c7;
     /**
-     * Default Toolar NavigationButtonStyle
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int toolbarNavigationButtonStyle=0x7f0402c8;
+    public static final int toolbarId=0x7f0402c8;
     /**
-     * Default Toolbar style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int toolbarStyle=0x7f0402c9;
+    public static final int toolbarNavigationButtonStyle=0x7f0402c9;
     /**
-     * Foreground color to use for tooltips
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int toolbarStyle=0x7f0402ca;
+    /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -5954,28 +5567,26 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int tooltipForegroundColor=0x7f0402ca;
+    public static final int tooltipForegroundColor=0x7f0402cb;
     /**
-     * Background to use for tooltips
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int tooltipFrameBackground=0x7f0402cb;
+    public static final int tooltipFrameBackground=0x7f0402cc;
     /**
-     * The tooltip text associated with the item.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int tooltipText=0x7f0402cc;
+    public static final int tooltipText=0x7f0402cd;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int touchAnchorId=0x7f0402cd;
+    public static final int touchAnchorId=0x7f0402ce;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -5984,61 +5595,56 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
      * <tr><td>bottom</td><td>3</td><td></td></tr>
+     * <tr><td>end</td><td>6</td><td></td></tr>
      * <tr><td>left</td><td>1</td><td></td></tr>
+     * <tr><td>middle</td><td>4</td><td></td></tr>
      * <tr><td>right</td><td>2</td><td></td></tr>
+     * <tr><td>start</td><td>5</td><td></td></tr>
      * <tr><td>top</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int touchAnchorSide=0x7f0402ce;
+    public static final int touchAnchorSide=0x7f0402cf;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int touchRegionId=0x7f0402cf;
+    public static final int touchRegionId=0x7f0402d0;
     /**
-     * Drawable to use as the "track" that the switch thumb slides within.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int track=0x7f0402d0;
+    public static final int track=0x7f0402d1;
     /**
-     * Tint to apply to the track.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int trackTint=0x7f0402d1;
+    public static final int trackTint=0x7f0402d2;
     /**
-     * Blending mode used to apply the track tint.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and drawable color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      */
-    public static final int trackTintMode=0x7f0402d2;
+    public static final int trackTintMode=0x7f0402d3;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int transitionDisable=0x7f0402d3;
+    public static final int transitionDisable=0x7f0402d4;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -6054,45 +5660,43 @@ public final class R {
      * <tr><td>standard</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int transitionEasing=0x7f0402d4;
+    public static final int transitionEasing=0x7f0402d5;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int transitionPathRotate=0x7f0402d5;
+    public static final int transitionPathRotate=0x7f0402d6;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int triggerId=0x7f0402d6;
+    public static final int triggerId=0x7f0402d7;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int triggerReceiver=0x7f0402d7;
+    public static final int triggerReceiver=0x7f0402d8;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int triggerSlack=0x7f0402d8;
+    public static final int triggerSlack=0x7f0402d9;
     /**
-     * The index of the font in the tcc font file. If the font file referenced is not in the
-     * tcc format, this attribute needs not be specified.
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int ttcIndex=0x7f0402d9;
+    public static final int ttcIndex=0x7f0402da;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int useCompatPadding=0x7f0402da;
+    public static final int useCompatPadding=0x7f0402db;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int viewInflaterClass=0x7f0402db;
+    public static final int viewInflaterClass=0x7f0402dc;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -6104,23 +5708,22 @@ public final class R {
      * <tr><td>normal</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int visibilityMode=0x7f0402dc;
+    public static final int visibilityMode=0x7f0402dd;
     /**
-     * Voice button icon
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int voiceIcon=0x7f0402dd;
+    public static final int voiceIcon=0x7f0402de;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int warmth=0x7f0402de;
+    public static final int warmth=0x7f0402df;
     /**
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int waveDecay=0x7f0402df;
+    public static final int waveDecay=0x7f0402e0;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -6129,11 +5732,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int waveOffset=0x7f0402e0;
+    public static final int waveOffset=0x7f0402e1;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int wavePeriod=0x7f0402e1;
+    public static final int wavePeriod=0x7f0402e2;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -6150,7 +5753,7 @@ public final class R {
      * <tr><td>triangle</td><td>2</td><td></td></tr>
      * </table>
      */
-    public static final int waveShape=0x7f0402e2;
+    public static final int waveShape=0x7f0402e3;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -6162,33 +5765,23 @@ public final class R {
      * <tr><td>position</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int waveVariesBy=0x7f0402e3;
+    public static final int waveVariesBy=0x7f0402e4;
     /**
-     * Flag indicating whether this window should have an Action Bar
-     * in place of the usual title bar.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int windowActionBar=0x7f0402e4;
+    public static final int windowActionBar=0x7f0402e5;
     /**
-     * Flag indicating whether this window's Action Bar should overlay
-     * application content. Does nothing if the window would not
-     * have an Action Bar.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int windowActionBarOverlay=0x7f0402e5;
+    public static final int windowActionBarOverlay=0x7f0402e6;
     /**
-     * Flag indicating whether action modes should overlay window content
-     * when there is not reserved space for their UI (such as an Action Bar).
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int windowActionModeOverlay=0x7f0402e6;
+    public static final int windowActionModeOverlay=0x7f0402e7;
     /**
-     * A fixed height for the window along the major axis of the screen,
-     * that is, when in portrait. Can be either an absolute dimension
-     * or a fraction of the screen size in that dimension.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -6199,11 +5792,8 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowFixedHeightMajor=0x7f0402e7;
+    public static final int windowFixedHeightMajor=0x7f0402e8;
     /**
-     * A fixed height for the window along the minor axis of the screen,
-     * that is, when in landscape. Can be either an absolute dimension
-     * or a fraction of the screen size in that dimension.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -6214,11 +5804,8 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowFixedHeightMinor=0x7f0402e8;
+    public static final int windowFixedHeightMinor=0x7f0402e9;
     /**
-     * A fixed width for the window along the major axis of the screen,
-     * that is, when in landscape. Can be either an absolute dimension
-     * or a fraction of the screen size in that dimension.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -6229,11 +5816,8 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowFixedWidthMajor=0x7f0402e9;
+    public static final int windowFixedWidthMajor=0x7f0402ea;
     /**
-     * A fixed width for the window along the minor axis of the screen,
-     * that is, when in portrait. Can be either an absolute dimension
-     * or a fraction of the screen size in that dimension.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -6244,12 +5828,8 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowFixedWidthMinor=0x7f0402ea;
+    public static final int windowFixedWidthMinor=0x7f0402eb;
     /**
-     * The minimum width the window is allowed to be, along the major
-     * axis of the screen.  That is, when in landscape.  Can be either
-     * an absolute dimension or a fraction of the screen size in that
-     * dimension.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -6260,12 +5840,8 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowMinWidthMajor=0x7f0402eb;
+    public static final int windowMinWidthMajor=0x7f0402ec;
     /**
-     * The minimum width the window is allowed to be, along the minor
-     * axis of the screen.  That is, when in portrait.  Can be either
-     * an absolute dimension or a fraction of the screen size in that
-     * dimension.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -6276,13 +5852,12 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowMinWidthMinor=0x7f0402ec;
+    public static final int windowMinWidthMinor=0x7f0402ed;
     /**
-     * Flag indicating whether there should be no title on this window.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int windowNoTitle=0x7f0402ed;
+    public static final int windowNoTitle=0x7f0402ee;
   }
   public static final class bool {
     public static final int abc_action_bar_embed_tabs=0x7f050000;
@@ -6865,160 +6440,162 @@ public final class R {
     public static final int avd_show_password=0x7f08005f;
     public static final int banner_hot=0x7f080060;
     public static final int bell_red=0x7f080061;
-    public static final int cards_heart=0x7f080062;
-    public static final int cards_heart_red=0x7f080063;
-    public static final int chats_empty=0x7f080064;
-    public static final int circle=0x7f080065;
-    public static final int com_facebook_auth_dialog_background=0x7f080066;
-    public static final int com_facebook_auth_dialog_cancel_background=0x7f080067;
-    public static final int com_facebook_auth_dialog_header_background=0x7f080068;
-    public static final int com_facebook_button_background=0x7f080069;
-    public static final int com_facebook_button_icon=0x7f08006a;
-    public static final int com_facebook_button_icon_blue=0x7f08006b;
-    public static final int com_facebook_button_icon_white=0x7f08006c;
-    public static final int com_facebook_button_like_background=0x7f08006d;
-    public static final int com_facebook_button_like_icon_selected=0x7f08006e;
-    public static final int com_facebook_button_login_background=0x7f08006f;
-    public static final int com_facebook_button_login_logo=0x7f080070;
-    public static final int com_facebook_button_login_silver_background=0x7f080071;
-    public static final int com_facebook_button_send_background=0x7f080072;
-    public static final int com_facebook_button_send_icon_blue=0x7f080073;
-    public static final int com_facebook_button_send_icon_white=0x7f080074;
-    public static final int com_facebook_close=0x7f080075;
-    public static final int com_facebook_favicon_blue=0x7f080076;
-    public static final int com_facebook_profile_picture_blank_portrait=0x7f080077;
-    public static final int com_facebook_profile_picture_blank_square=0x7f080078;
-    public static final int com_facebook_send_button_icon=0x7f080079;
-    public static final int com_facebook_tooltip_black_background=0x7f08007a;
-    public static final int com_facebook_tooltip_black_bottomnub=0x7f08007b;
-    public static final int com_facebook_tooltip_black_topnub=0x7f08007c;
-    public static final int com_facebook_tooltip_black_xout=0x7f08007d;
-    public static final int com_facebook_tooltip_blue_background=0x7f08007e;
-    public static final int com_facebook_tooltip_blue_bottomnub=0x7f08007f;
-    public static final int com_facebook_tooltip_blue_topnub=0x7f080080;
-    public static final int com_facebook_tooltip_blue_xout=0x7f080081;
-    public static final int common_full_open_on_phone=0x7f080082;
-    public static final int common_google_signin_btn_icon_dark=0x7f080083;
-    public static final int common_google_signin_btn_icon_dark_focused=0x7f080084;
-    public static final int common_google_signin_btn_icon_dark_normal=0x7f080085;
-    public static final int common_google_signin_btn_icon_dark_normal_background=0x7f080086;
-    public static final int common_google_signin_btn_icon_disabled=0x7f080087;
-    public static final int common_google_signin_btn_icon_light=0x7f080088;
-    public static final int common_google_signin_btn_icon_light_focused=0x7f080089;
-    public static final int common_google_signin_btn_icon_light_normal=0x7f08008a;
-    public static final int common_google_signin_btn_icon_light_normal_background=0x7f08008b;
-    public static final int common_google_signin_btn_text_dark=0x7f08008c;
-    public static final int common_google_signin_btn_text_dark_focused=0x7f08008d;
-    public static final int common_google_signin_btn_text_dark_normal=0x7f08008e;
-    public static final int common_google_signin_btn_text_dark_normal_background=0x7f08008f;
-    public static final int common_google_signin_btn_text_disabled=0x7f080090;
-    public static final int common_google_signin_btn_text_light=0x7f080091;
-    public static final int common_google_signin_btn_text_light_focused=0x7f080092;
-    public static final int common_google_signin_btn_text_light_normal=0x7f080093;
-    public static final int common_google_signin_btn_text_light_normal_background=0x7f080094;
-    public static final int confirm_button_tint=0x7f080095;
-    public static final int crop_image_menu_flip=0x7f080096;
-    public static final int crop_image_menu_rotate_left=0x7f080097;
-    public static final int crop_image_menu_rotate_right=0x7f080098;
-    public static final int custom_rectangle=0x7f080099;
-    public static final int default_avatar=0x7f08009a;
-    public static final int design_bottom_navigation_item_background=0x7f08009b;
-    public static final int design_fab_background=0x7f08009c;
-    public static final int design_ic_visibility=0x7f08009d;
-    public static final int design_ic_visibility_off=0x7f08009e;
-    public static final int design_password_eye=0x7f08009f;
-    public static final int design_snackbar_background=0x7f0800a0;
-    public static final int fairy_stick=0x7f0800a1;
-    public static final int flame_red=0x7f0800a2;
-    public static final int fui_ic_anonymous_white_24dp=0x7f0800a3;
-    public static final int fui_ic_check_circle_black_128dp=0x7f0800a4;
-    public static final int fui_ic_facebook_white_22dp=0x7f0800a5;
-    public static final int fui_ic_github_white_24dp=0x7f0800a6;
-    public static final int fui_ic_googleg_color_24dp=0x7f0800a7;
-    public static final int fui_ic_mail_white_24dp=0x7f0800a8;
-    public static final int fui_ic_phone_white_24dp=0x7f0800a9;
-    public static final int fui_ic_twitter_bird_white_24dp=0x7f0800aa;
-    public static final int fui_idp_button_background_anonymous=0x7f0800ab;
-    public static final int fui_idp_button_background_email=0x7f0800ac;
-    public static final int fui_idp_button_background_facebook=0x7f0800ad;
-    public static final int fui_idp_button_background_github=0x7f0800ae;
-    public static final int fui_idp_button_background_google=0x7f0800af;
-    public static final int fui_idp_button_background_phone=0x7f0800b0;
-    public static final int fui_idp_button_background_twitter=0x7f0800b1;
-    public static final int googleg_disabled_color_18=0x7f0800b2;
-    public static final int googleg_standard_color_18=0x7f0800b3;
-    public static final int heart_outline=0x7f0800b4;
-    public static final int heart_outline_48=0x7f0800b5;
-    public static final int ic_account_circle_black_24dp=0x7f0800b6;
-    public static final int ic_add_black_24dp=0x7f0800b7;
-    public static final int ic_chat_black_24dp=0x7f0800b8;
-    public static final int ic_chat_red_24dp=0x7f0800b9;
-    public static final int ic_check_black_24dp=0x7f0800ba;
-    public static final int ic_close_black_24dp=0x7f0800bb;
-    public static final int ic_coin=0x7f0800bc;
-    public static final int ic_dollar_coin_money=0x7f0800bd;
-    public static final int ic_edit_black_24dp=0x7f0800be;
-    public static final int ic_favorite=0x7f0800bf;
-    public static final int ic_favorite_48=0x7f0800c0;
-    public static final int ic_favorite_black_24dp=0x7f0800c1;
-    public static final int ic_filter_list_black_24dp=0x7f0800c2;
-    public static final int ic_help_outline_black_24dp=0x7f0800c3;
-    public static final int ic_keyboard_arrow_down_black_24dp=0x7f0800c4;
-    public static final int ic_keyboard_arrow_right_black_24dp=0x7f0800c5;
-    public static final int ic_keyboard_backspace_black_24dp=0x7f0800c6;
-    public static final int ic_launcher_background=0x7f0800c7;
-    public static final int ic_launcher_foreground=0x7f0800c8;
-    public static final int ic_lock_outline_black_24dp=0x7f0800c9;
-    public static final int ic_medal=0x7f0800ca;
-    public static final int ic_mtrl_chip_checked_black=0x7f0800cb;
-    public static final int ic_mtrl_chip_checked_circle=0x7f0800cc;
-    public static final int ic_mtrl_chip_close_circle=0x7f0800cd;
-    public static final int ic_notifications_active_black_24dp=0x7f0800ce;
-    public static final int ic_notifications_active_red_24dp=0x7f0800cf;
-    public static final int ic_person_add=0x7f0800d0;
-    public static final int ic_search_black_24dp=0x7f0800d1;
-    public static final int ic_send_black_24dp=0x7f0800d2;
-    public static final int ic_star_border_black_24dp=0x7f0800d3;
-    public static final int ic_widget=0x7f0800d4;
-    public static final int img=0x7f0800d5;
-    public static final int inbox=0x7f0800d6;
-    public static final int insta_background=0x7f0800d7;
-    public static final int insta_background_m=0x7f0800d8;
-    public static final int logout=0x7f0800d9;
-    public static final int message=0x7f0800da;
-    public static final int message_outline=0x7f0800db;
-    public static final int message_outline_48=0x7f0800dc;
-    public static final int message_red=0x7f0800dd;
-    public static final int message_text_background=0x7f0800de;
-    public static final int message_text_background_user=0x7f0800df;
-    public static final int messenger_bubble_large_blue=0x7f0800e0;
-    public static final int messenger_bubble_large_white=0x7f0800e1;
-    public static final int messenger_bubble_small_blue=0x7f0800e2;
-    public static final int messenger_bubble_small_white=0x7f0800e3;
-    public static final int messenger_button_blue_bg_round=0x7f0800e4;
-    public static final int messenger_button_blue_bg_selector=0x7f0800e5;
-    public static final int messenger_button_send_round_shadow=0x7f0800e6;
-    public static final int messenger_button_white_bg_round=0x7f0800e7;
-    public static final int messenger_button_white_bg_selector=0x7f0800e8;
-    public static final int mtrl_snackbar_background=0x7f0800e9;
-    public static final int mtrl_tabs_default_indicator=0x7f0800ea;
-    public static final int navigation_empty_icon=0x7f0800eb;
-    public static final int notification_action_background=0x7f0800ec;
-    public static final int notification_bg=0x7f0800ed;
-    public static final int notification_bg_low=0x7f0800ee;
-    public static final int notification_bg_low_normal=0x7f0800ef;
-    public static final int notification_bg_low_pressed=0x7f0800f0;
-    public static final int notification_bg_normal=0x7f0800f1;
-    public static final int notification_bg_normal_pressed=0x7f0800f2;
-    public static final int notification_icon_background=0x7f0800f3;
-    public static final int notification_template_icon_bg=0x7f0800f4;
-    public static final int notification_template_icon_low_bg=0x7f0800f5;
-    public static final int notification_tile_bg=0x7f0800f6;
-    public static final int notify_panel_notification_icon_bg=0x7f0800f7;
-    public static final int online_icon=0x7f0800f8;
-    public static final int tab_background_selected=0x7f0800f9;
-    public static final int tooltip_frame_dark=0x7f0800fa;
-    public static final int tooltip_frame_light=0x7f0800fb;
+    public static final int block_avatar_eng=0x7f080062;
+    public static final int block_avatar_ru=0x7f080063;
+    public static final int cards_heart=0x7f080064;
+    public static final int cards_heart_red=0x7f080065;
+    public static final int chats_empty=0x7f080066;
+    public static final int circle=0x7f080067;
+    public static final int com_facebook_auth_dialog_background=0x7f080068;
+    public static final int com_facebook_auth_dialog_cancel_background=0x7f080069;
+    public static final int com_facebook_auth_dialog_header_background=0x7f08006a;
+    public static final int com_facebook_button_background=0x7f08006b;
+    public static final int com_facebook_button_icon=0x7f08006c;
+    public static final int com_facebook_button_icon_blue=0x7f08006d;
+    public static final int com_facebook_button_icon_white=0x7f08006e;
+    public static final int com_facebook_button_like_background=0x7f08006f;
+    public static final int com_facebook_button_like_icon_selected=0x7f080070;
+    public static final int com_facebook_button_login_background=0x7f080071;
+    public static final int com_facebook_button_login_logo=0x7f080072;
+    public static final int com_facebook_button_login_silver_background=0x7f080073;
+    public static final int com_facebook_button_send_background=0x7f080074;
+    public static final int com_facebook_button_send_icon_blue=0x7f080075;
+    public static final int com_facebook_button_send_icon_white=0x7f080076;
+    public static final int com_facebook_close=0x7f080077;
+    public static final int com_facebook_favicon_blue=0x7f080078;
+    public static final int com_facebook_profile_picture_blank_portrait=0x7f080079;
+    public static final int com_facebook_profile_picture_blank_square=0x7f08007a;
+    public static final int com_facebook_send_button_icon=0x7f08007b;
+    public static final int com_facebook_tooltip_black_background=0x7f08007c;
+    public static final int com_facebook_tooltip_black_bottomnub=0x7f08007d;
+    public static final int com_facebook_tooltip_black_topnub=0x7f08007e;
+    public static final int com_facebook_tooltip_black_xout=0x7f08007f;
+    public static final int com_facebook_tooltip_blue_background=0x7f080080;
+    public static final int com_facebook_tooltip_blue_bottomnub=0x7f080081;
+    public static final int com_facebook_tooltip_blue_topnub=0x7f080082;
+    public static final int com_facebook_tooltip_blue_xout=0x7f080083;
+    public static final int common_full_open_on_phone=0x7f080084;
+    public static final int common_google_signin_btn_icon_dark=0x7f080085;
+    public static final int common_google_signin_btn_icon_dark_focused=0x7f080086;
+    public static final int common_google_signin_btn_icon_dark_normal=0x7f080087;
+    public static final int common_google_signin_btn_icon_dark_normal_background=0x7f080088;
+    public static final int common_google_signin_btn_icon_disabled=0x7f080089;
+    public static final int common_google_signin_btn_icon_light=0x7f08008a;
+    public static final int common_google_signin_btn_icon_light_focused=0x7f08008b;
+    public static final int common_google_signin_btn_icon_light_normal=0x7f08008c;
+    public static final int common_google_signin_btn_icon_light_normal_background=0x7f08008d;
+    public static final int common_google_signin_btn_text_dark=0x7f08008e;
+    public static final int common_google_signin_btn_text_dark_focused=0x7f08008f;
+    public static final int common_google_signin_btn_text_dark_normal=0x7f080090;
+    public static final int common_google_signin_btn_text_dark_normal_background=0x7f080091;
+    public static final int common_google_signin_btn_text_disabled=0x7f080092;
+    public static final int common_google_signin_btn_text_light=0x7f080093;
+    public static final int common_google_signin_btn_text_light_focused=0x7f080094;
+    public static final int common_google_signin_btn_text_light_normal=0x7f080095;
+    public static final int common_google_signin_btn_text_light_normal_background=0x7f080096;
+    public static final int confirm_button_tint=0x7f080097;
+    public static final int crop_image_menu_flip=0x7f080098;
+    public static final int crop_image_menu_rotate_left=0x7f080099;
+    public static final int crop_image_menu_rotate_right=0x7f08009a;
+    public static final int custom_rectangle=0x7f08009b;
+    public static final int default_avatar=0x7f08009c;
+    public static final int design_bottom_navigation_item_background=0x7f08009d;
+    public static final int design_fab_background=0x7f08009e;
+    public static final int design_ic_visibility=0x7f08009f;
+    public static final int design_ic_visibility_off=0x7f0800a0;
+    public static final int design_password_eye=0x7f0800a1;
+    public static final int design_snackbar_background=0x7f0800a2;
+    public static final int fairy_stick=0x7f0800a3;
+    public static final int flame_red=0x7f0800a4;
+    public static final int fui_ic_anonymous_white_24dp=0x7f0800a5;
+    public static final int fui_ic_check_circle_black_128dp=0x7f0800a6;
+    public static final int fui_ic_facebook_white_22dp=0x7f0800a7;
+    public static final int fui_ic_github_white_24dp=0x7f0800a8;
+    public static final int fui_ic_googleg_color_24dp=0x7f0800a9;
+    public static final int fui_ic_mail_white_24dp=0x7f0800aa;
+    public static final int fui_ic_phone_white_24dp=0x7f0800ab;
+    public static final int fui_ic_twitter_bird_white_24dp=0x7f0800ac;
+    public static final int fui_idp_button_background_anonymous=0x7f0800ad;
+    public static final int fui_idp_button_background_email=0x7f0800ae;
+    public static final int fui_idp_button_background_facebook=0x7f0800af;
+    public static final int fui_idp_button_background_github=0x7f0800b0;
+    public static final int fui_idp_button_background_google=0x7f0800b1;
+    public static final int fui_idp_button_background_phone=0x7f0800b2;
+    public static final int fui_idp_button_background_twitter=0x7f0800b3;
+    public static final int googleg_disabled_color_18=0x7f0800b4;
+    public static final int googleg_standard_color_18=0x7f0800b5;
+    public static final int heart_outline=0x7f0800b6;
+    public static final int heart_outline_48=0x7f0800b7;
+    public static final int ic_account_circle_black_24dp=0x7f0800b8;
+    public static final int ic_add_black_24dp=0x7f0800b9;
+    public static final int ic_chat_black_24dp=0x7f0800ba;
+    public static final int ic_chat_red_24dp=0x7f0800bb;
+    public static final int ic_check_black_24dp=0x7f0800bc;
+    public static final int ic_close_black_24dp=0x7f0800bd;
+    public static final int ic_coin=0x7f0800be;
+    public static final int ic_dollar_coin_money=0x7f0800bf;
+    public static final int ic_edit_black_24dp=0x7f0800c0;
+    public static final int ic_favorite=0x7f0800c1;
+    public static final int ic_favorite_48=0x7f0800c2;
+    public static final int ic_favorite_black_24dp=0x7f0800c3;
+    public static final int ic_filter_list_black_24dp=0x7f0800c4;
+    public static final int ic_help_outline_black_24dp=0x7f0800c5;
+    public static final int ic_keyboard_arrow_down_black_24dp=0x7f0800c6;
+    public static final int ic_keyboard_arrow_right_black_24dp=0x7f0800c7;
+    public static final int ic_keyboard_backspace_black_24dp=0x7f0800c8;
+    public static final int ic_launcher_background=0x7f0800c9;
+    public static final int ic_launcher_foreground=0x7f0800ca;
+    public static final int ic_lock_outline_black_24dp=0x7f0800cb;
+    public static final int ic_medal=0x7f0800cc;
+    public static final int ic_mtrl_chip_checked_black=0x7f0800cd;
+    public static final int ic_mtrl_chip_checked_circle=0x7f0800ce;
+    public static final int ic_mtrl_chip_close_circle=0x7f0800cf;
+    public static final int ic_notifications_active_black_24dp=0x7f0800d0;
+    public static final int ic_notifications_active_red_24dp=0x7f0800d1;
+    public static final int ic_person_add=0x7f0800d2;
+    public static final int ic_search_black_24dp=0x7f0800d3;
+    public static final int ic_send_black_24dp=0x7f0800d4;
+    public static final int ic_star_border_black_24dp=0x7f0800d5;
+    public static final int ic_widget=0x7f0800d6;
+    public static final int img=0x7f0800d7;
+    public static final int inbox=0x7f0800d8;
+    public static final int insta_background=0x7f0800d9;
+    public static final int insta_background_m=0x7f0800da;
+    public static final int logout=0x7f0800db;
+    public static final int message=0x7f0800dc;
+    public static final int message_outline=0x7f0800dd;
+    public static final int message_outline_48=0x7f0800de;
+    public static final int message_red=0x7f0800df;
+    public static final int message_text_background=0x7f0800e0;
+    public static final int message_text_background_user=0x7f0800e1;
+    public static final int messenger_bubble_large_blue=0x7f0800e2;
+    public static final int messenger_bubble_large_white=0x7f0800e3;
+    public static final int messenger_bubble_small_blue=0x7f0800e4;
+    public static final int messenger_bubble_small_white=0x7f0800e5;
+    public static final int messenger_button_blue_bg_round=0x7f0800e6;
+    public static final int messenger_button_blue_bg_selector=0x7f0800e7;
+    public static final int messenger_button_send_round_shadow=0x7f0800e8;
+    public static final int messenger_button_white_bg_round=0x7f0800e9;
+    public static final int messenger_button_white_bg_selector=0x7f0800ea;
+    public static final int mtrl_snackbar_background=0x7f0800eb;
+    public static final int mtrl_tabs_default_indicator=0x7f0800ec;
+    public static final int navigation_empty_icon=0x7f0800ed;
+    public static final int notification_action_background=0x7f0800ee;
+    public static final int notification_bg=0x7f0800ef;
+    public static final int notification_bg_low=0x7f0800f0;
+    public static final int notification_bg_low_normal=0x7f0800f1;
+    public static final int notification_bg_low_pressed=0x7f0800f2;
+    public static final int notification_bg_normal=0x7f0800f3;
+    public static final int notification_bg_normal_pressed=0x7f0800f4;
+    public static final int notification_icon_background=0x7f0800f5;
+    public static final int notification_template_icon_bg=0x7f0800f6;
+    public static final int notification_template_icon_low_bg=0x7f0800f7;
+    public static final int notification_tile_bg=0x7f0800f8;
+    public static final int notify_panel_notification_icon_bg=0x7f0800f9;
+    public static final int online_icon=0x7f0800fa;
+    public static final int tab_background_selected=0x7f0800fb;
+    public static final int tooltip_frame_dark=0x7f0800fc;
+    public static final int tooltip_frame_light=0x7f0800fd;
   }
   public static final class id {
     public static final int ALT=0x7f090000;
@@ -7114,661 +6691,666 @@ public final class R {
     public static final int button_resend_email=0x7f09005a;
     public static final int button_search=0x7f09005b;
     public static final int button_sign_in=0x7f09005c;
-    public static final int cancel_action=0x7f09005d;
-    public static final int cancel_button=0x7f09005e;
-    public static final int center=0x7f09005f;
-    public static final int centerCrop=0x7f090060;
-    public static final int centerInside=0x7f090061;
-    public static final int center_horizontal=0x7f090062;
-    public static final int center_vertical=0x7f090063;
-    public static final int chain=0x7f090064;
-    public static final int chains=0x7f090065;
-    public static final int chat_action_block_linear=0x7f090066;
-    public static final int chat_add_btn=0x7f090067;
-    public static final int chat_app_bar=0x7f090068;
-    public static final int chat_message_view=0x7f090069;
-    public static final int chat_send_btn=0x7f09006a;
-    public static final int chats_empty_img=0x7f09006b;
-    public static final int chats_empty_rl=0x7f09006c;
-    public static final int chats_empty_text=0x7f09006d;
-    public static final int checkbox=0x7f09006e;
-    public static final int chronometer=0x7f09006f;
-    public static final int circular=0x7f090070;
-    public static final int clip_horizontal=0x7f090071;
-    public static final int clip_vertical=0x7f090072;
-    public static final int collapseActionView=0x7f090073;
-    public static final int collapsing_toolbar_layout=0x7f090074;
-    public static final int colorView=0x7f090075;
-    public static final int com_facebook_body_frame=0x7f090076;
-    public static final int com_facebook_button_xout=0x7f090077;
-    public static final int com_facebook_device_auth_instructions=0x7f090078;
-    public static final int com_facebook_fragment_container=0x7f090079;
-    public static final int com_facebook_login_fragment_progress_bar=0x7f09007a;
-    public static final int com_facebook_smart_instructions_0=0x7f09007b;
-    public static final int com_facebook_smart_instructions_or=0x7f09007c;
-    public static final int com_facebook_tooltip_bubble_view_bottom_pointer=0x7f09007d;
-    public static final int com_facebook_tooltip_bubble_view_text_body=0x7f09007e;
-    public static final int com_facebook_tooltip_bubble_view_top_pointer=0x7f09007f;
-    public static final int complain_input=0x7f090080;
-    public static final int complain_send_button=0x7f090081;
-    public static final int complain_title=0x7f090082;
-    public static final int confirm_button=0x7f090083;
-    public static final int confirm_button_gender=0x7f090084;
-    public static final int confirm_dialog_text=0x7f090085;
-    public static final int confirmation_code=0x7f090086;
-    public static final int confirmation_code_layout=0x7f090087;
-    public static final int container=0x7f090088;
-    public static final int content=0x7f090089;
-    public static final int contentContainerActionsActivity=0x7f09008a;
-    public static final int contentContainerChatsActivity=0x7f09008b;
-    public static final int contentPanel=0x7f09008c;
-    public static final int coordinator=0x7f09008d;
-    public static final int cos=0x7f09008e;
-    public static final int country_list=0x7f09008f;
-    public static final int country_text=0x7f090090;
-    public static final int country_text_mi=0x7f090091;
-    public static final int cropImageView=0x7f090092;
-    public static final int crop_image_menu_crop=0x7f090093;
-    public static final int crop_image_menu_flip=0x7f090094;
-    public static final int crop_image_menu_flip_horizontally=0x7f090095;
-    public static final int crop_image_menu_flip_vertically=0x7f090096;
-    public static final int crop_image_menu_rotate_left=0x7f090097;
-    public static final int crop_image_menu_rotate_right=0x7f090098;
-    public static final int cross_device_linking_body=0x7f090099;
-    public static final int custom=0x7f09009a;
-    public static final int customPanel=0x7f09009b;
-    public static final int custom_bar_image=0x7f09009c;
-    public static final int custom_bar_seen=0x7f09009d;
-    public static final int custom_bar_title=0x7f09009e;
-    public static final int dark=0x7f09009f;
-    public static final int decelerate=0x7f0900a0;
-    public static final int decelerateAndComplete=0x7f0900a1;
-    public static final int decor_content_parent=0x7f0900a2;
-    public static final int default_activity_button=0x7f0900a3;
-    public static final int deltaRelative=0x7f0900a4;
-    public static final int design_bottom_sheet=0x7f0900a5;
-    public static final int design_menu_item_action_area=0x7f0900a6;
-    public static final int design_menu_item_action_area_stub=0x7f0900a7;
-    public static final int design_menu_item_text=0x7f0900a8;
-    public static final int design_navigation_view=0x7f0900a9;
-    public static final int dialog_search_button=0x7f0900aa;
-    public static final int dialog_search_edit=0x7f0900ab;
-    public static final int dialog_spinner_gender=0x7f0900ac;
-    public static final int dimensions=0x7f0900ad;
-    public static final int direct=0x7f0900ae;
-    public static final int disableHome=0x7f0900af;
-    public static final int display_always=0x7f0900b0;
-    public static final int dragDown=0x7f0900b1;
-    public static final int dragLeft=0x7f0900b2;
-    public static final int dragRight=0x7f0900b3;
-    public static final int dragUp=0x7f0900b4;
-    public static final int drawer_header_close_btn=0x7f0900b5;
-    public static final int drawer_header_name=0x7f0900b6;
-    public static final int drawer_header_photo=0x7f0900b7;
-    public static final int drawer_header_purchase_section=0x7f0900b8;
-    public static final int drawer_header_view_profile=0x7f0900b9;
-    public static final int drawer_layout=0x7f0900ba;
-    public static final int drawer_top_menu_logout_item=0x7f0900bb;
-    public static final int drink_status_text=0x7f0900bc;
-    public static final int dynamic=0x7f0900bd;
-    public static final int easeIn=0x7f0900be;
-    public static final int easeInOut=0x7f0900bf;
-    public static final int easeOut=0x7f0900c0;
-    public static final int edit_phone_number=0x7f0900c1;
-    public static final int edit_query=0x7f0900c2;
-    public static final int email=0x7f0900c3;
-    public static final int email_button=0x7f0900c4;
-    public static final int email_footer_tos_and_pp_text=0x7f0900c5;
-    public static final int email_layout=0x7f0900c6;
-    public static final int email_top_layout=0x7f0900c7;
-    public static final int email_tos_and_pp_text=0x7f0900c8;
-    public static final int end=0x7f0900c9;
-    public static final int end_padder=0x7f0900ca;
-    public static final int enterAlways=0x7f0900cb;
-    public static final int enterAlwaysCollapsed=0x7f0900cc;
-    public static final int ethnicity_text=0x7f0900cd;
-    public static final int exitUntilCollapsed=0x7f0900ce;
-    public static final int expand_activities_button=0x7f0900cf;
-    public static final int expanded_menu=0x7f0900d0;
-    public static final int fab_id=0x7f0900d1;
-    public static final int faith_type_text=0x7f0900d2;
-    public static final int fill=0x7f0900d3;
-    public static final int fill_horizontal=0x7f0900d4;
-    public static final int fill_vertical=0x7f0900d5;
-    public static final int filled=0x7f0900d6;
-    public static final int filters_form=0x7f0900d7;
-    public static final int fitCenter=0x7f0900d8;
-    public static final int fixed=0x7f0900d9;
-    public static final int flip=0x7f0900da;
-    public static final int forever=0x7f0900db;
-    public static final int fragment_phone=0x7f0900dc;
-    public static final int fragment_register_email=0x7f0900dd;
-    public static final int fragment_slider_age_18_21=0x7f0900de;
-    public static final int fragment_slider_age_22_26=0x7f0900df;
-    public static final int fragment_slider_age_26_35=0x7f0900e0;
-    public static final int fragment_slider_age_36_45=0x7f0900e1;
-    public static final int fragment_slider_age_45_plus=0x7f0900e2;
-    public static final int fragment_slider_age_btn_save=0x7f0900e3;
-    public static final int fragment_slider_age_radiogroup=0x7f0900e4;
-    public static final int fragment_slider_age_tv_question=0x7f0900e5;
-    public static final int fragment_slider_bodytype_btn_save=0x7f0900e6;
-    public static final int fragment_slider_bodytype_radiogroup=0x7f0900e7;
-    public static final int fragment_slider_bodytype_rbtn_athletic=0x7f0900e8;
-    public static final int fragment_slider_bodytype_rbtn_average=0x7f0900e9;
-    public static final int fragment_slider_bodytype_rbtn_fewextra=0x7f0900ea;
-    public static final int fragment_slider_bodytype_rbtn_heavyset=0x7f0900eb;
-    public static final int fragment_slider_bodytype_rbtn_slender=0x7f0900ec;
-    public static final int fragment_slider_bodytype_rbtn_stocky=0x7f0900ed;
-    public static final int fragment_slider_bodytype_tv_question=0x7f0900ee;
-    public static final int fragment_slider_drink_status_radiogroup=0x7f0900ef;
-    public static final int fragment_slider_drink_status_rbtn_friends=0x7f0900f0;
-    public static final int fragment_slider_drink_status_rbtn_moderaely=0x7f0900f1;
-    public static final int fragment_slider_drink_status_rbtn_never=0x7f0900f2;
-    public static final int fragment_slider_drink_status_rbtn_regularly=0x7f0900f3;
-    public static final int fragment_slider_drinkstatus_btn_save=0x7f0900f4;
-    public static final int fragment_slider_drinkstatus_tv_question=0x7f0900f5;
-    public static final int fragment_slider_ethnicity_btn_save=0x7f0900f6;
-    public static final int fragment_slider_ethnicity_radiobtn_asian=0x7f0900f7;
-    public static final int fragment_slider_ethnicity_radiobtn_black=0x7f0900f8;
-    public static final int fragment_slider_ethnicity_radiobtn_indian=0x7f0900f9;
-    public static final int fragment_slider_ethnicity_radiobtn_latino=0x7f0900fa;
-    public static final int fragment_slider_ethnicity_radiobtn_native=0x7f0900fb;
-    public static final int fragment_slider_ethnicity_radiobtn_other=0x7f0900fc;
-    public static final int fragment_slider_ethnicity_radiobtn_white=0x7f0900fd;
-    public static final int fragment_slider_ethnicity_radiogroup=0x7f0900fe;
-    public static final int fragment_slider_ethnicity_tv_question=0x7f0900ff;
-    public static final int fragment_slider_faith_btn_save=0x7f090100;
-    public static final int fragment_slider_faith_radiogroup=0x7f090101;
-    public static final int fragment_slider_faith_rbtn_adventist=0x7f090102;
-    public static final int fragment_slider_faith_rbtn_atheist=0x7f090103;
-    public static final int fragment_slider_faith_rbtn_black=0x7f090104;
-    public static final int fragment_slider_faith_rbtn_buddist=0x7f090105;
-    public static final int fragment_slider_faith_rbtn_christian=0x7f090106;
-    public static final int fragment_slider_faith_rbtn_muslim=0x7f090107;
-    public static final int fragment_slider_faith_rbtn_other=0x7f090108;
-    public static final int fragment_slider_faith_tv_question=0x7f090109;
-    public static final int fragment_slider_gender_btn_save=0x7f09010a;
-    public static final int fragment_slider_gender_radiobutton_female=0x7f09010b;
-    public static final int fragment_slider_gender_radiobutton_male=0x7f09010c;
-    public static final int fragment_slider_gender_radiogroup=0x7f09010d;
-    public static final int fragment_slider_gender_tv_question=0x7f09010e;
-    public static final int fragment_slider_height_btn_edit=0x7f09010f;
-    public static final int fragment_slider_height_linear_tvs=0x7f090110;
-    public static final int fragment_slider_height_tv_cm=0x7f090111;
-    public static final int fragment_slider_height_tv_number=0x7f090112;
-    public static final int fragment_slider_height_tv_question=0x7f090113;
-    public static final int fragment_slider_hobby_btn_save=0x7f090114;
-    public static final int fragment_slider_hobby_et_answer=0x7f090115;
-    public static final int fragment_slider_hobby_tv_question=0x7f090116;
-    public static final int fragment_slider_image_btn_save=0x7f090117;
-    public static final int fragment_slider_image_tv_question=0x7f090118;
-    public static final int fragment_slider_languages_btn_edit=0x7f090119;
-    public static final int fragment_slider_languages_tv_number=0x7f09011a;
-    public static final int fragment_slider_languages_tv_question=0x7f09011b;
-    public static final int fragment_slider_name_btn_save=0x7f09011c;
-    public static final int fragment_slider_name_et_answer=0x7f09011d;
-    public static final int fragment_slider_name_tv_question=0x7f09011e;
-    public static final int fragment_slider_number_of_kids_radiogroup=0x7f09011f;
-    public static final int fragment_slider_number_of_kids_rbtn_at_home=0x7f090120;
-    public static final int fragment_slider_number_of_kids_rbtn_away=0x7f090121;
-    public static final int fragment_slider_number_of_kids_rbtn_no=0x7f090122;
-    public static final int fragment_slider_number_of_kids_rbtn_sometimes_at_home=0x7f090123;
-    public static final int fragment_slider_numberofkids_btn_save=0x7f090124;
-    public static final int fragment_slider_numberofkids_tv_question=0x7f090125;
-    public static final int fragment_slider_rbtn_divorced=0x7f090126;
-    public static final int fragment_slider_rbtn_never_married=0x7f090127;
-    public static final int fragment_slider_rbtn_separated=0x7f090128;
-    public static final int fragment_slider_rbtn_widow=0x7f090129;
-    public static final int fragment_slider_relationships_btn_save=0x7f09012a;
-    public static final int fragment_slider_relationships_radiogroup=0x7f09012b;
-    public static final int fragment_slider_relationships_tv_question=0x7f09012c;
-    public static final int fragment_slider_smokestatus_btn_save=0x7f09012d;
-    public static final int fragment_slider_smokestatus_tv_question=0x7f09012e;
-    public static final int fragment_slider_smokine_status_rbtn_cigar_aficionado=0x7f09012f;
-    public static final int fragment_slider_smokine_status_rbtn_quit=0x7f090130;
-    public static final int fragment_slider_smoking_status_radiogroup=0x7f090131;
-    public static final int fragment_slider_smoking_status_rbtn_daily=0x7f090132;
-    public static final int fragment_slider_smoking_status_rbtn_no_way=0x7f090133;
-    public static final int fragment_slider_smoking_status_rbtn_occasioally=0x7f090134;
-    public static final int fragment_slider_willingkids_btn_save=0x7f090135;
-    public static final int fragment_slider_willingkids_radiogroup=0x7f090136;
-    public static final int fragment_slider_willingkids_rbtn_definitely=0x7f090137;
-    public static final int fragment_slider_willingkids_rbtn_no=0x7f090138;
-    public static final int fragment_slider_willingkids_rbtn_no_but_ok=0x7f090139;
-    public static final int fragment_slider_willingkids_rbtn_not_sure=0x7f09013a;
-    public static final int fragment_slider_willingkids_rbtn_probably=0x7f09013b;
-    public static final int fragment_slider_willingkids_rbtn_someday=0x7f09013c;
-    public static final int fragment_slider_willingkids_tv_question=0x7f09013d;
-    public static final int friend_activity_block_left_message=0x7f09013e;
-    public static final int friend_activity_block_message_like=0x7f09013f;
-    public static final int friend_activity_block_message_like_linear=0x7f090140;
-    public static final int friend_activity_block_right_like=0x7f090141;
-    public static final int friend_activity_btn_add_friend=0x7f090142;
-    public static final int friend_activity_btn_start_chat=0x7f090143;
-    public static final int friend_activity_cardview_about=0x7f090144;
-    public static final int friend_activity_cardview_buttons_block=0x7f090145;
-    public static final int friend_activity_cardview_list=0x7f090146;
-    public static final int friend_activity_fab=0x7f090147;
-    public static final int friend_activity_image=0x7f090148;
-    public static final int friend_activity_like_img=0x7f090149;
-    public static final int friend_activity_like_tv=0x7f09014a;
-    public static final int friend_activity_message_img=0x7f09014b;
-    public static final int friend_activity_message_tv=0x7f09014c;
-    public static final int friend_activity_phrase_custom=0x7f09014d;
-    public static final int friend_activity_phrase_custom_container=0x7f09014e;
-    public static final int friend_activity_phrase_main_container=0x7f09014f;
-    public static final int friend_activity_phrase_one=0x7f090150;
-    public static final int friend_activity_phrase_one_container=0x7f090151;
-    public static final int friend_activity_phrase_three=0x7f090152;
-    public static final int friend_activity_phrase_three_container=0x7f090153;
-    public static final int friend_activity_phrase_title=0x7f090154;
-    public static final int friend_activity_phrase_two=0x7f090155;
-    public static final int friend_activity_phrase_two_container=0x7f090156;
-    public static final int friend_activity_phrases_close=0x7f090157;
-    public static final int friend_activity_phrases_linear=0x7f090158;
-    public static final int friend_activity_tv_age=0x7f090159;
-    public static final int friend_activity_tv_country=0x7f09015a;
-    public static final int friend_activity_tv_name=0x7f09015b;
-    public static final int friends_fragment_recycler_activities=0x7f09015c;
-    public static final int friends_fragment_recycler_chats=0x7f09015d;
-    public static final int gender_rl=0x7f09015e;
-    public static final int gender_text=0x7f09015f;
-    public static final int ghost_view=0x7f090160;
-    public static final int gone=0x7f090161;
-    public static final int graph=0x7f090162;
-    public static final int graph_wrap=0x7f090163;
-    public static final int group_divider=0x7f090164;
-    public static final int groups=0x7f090165;
-    public static final int have_kids_text=0x7f090166;
-    public static final int header=0x7f090167;
-    public static final int header_ni_dialog=0x7f090168;
-    public static final int header_text=0x7f090169;
-    public static final int heading=0x7f09016a;
-    public static final int home=0x7f09016b;
-    public static final int homeAsUp=0x7f09016c;
-    public static final int honorRequest=0x7f09016d;
-    public static final int horizontal=0x7f09016e;
-    public static final int hot_first_item=0x7f09016f;
-    public static final int hot_image=0x7f090170;
-    public static final int icon=0x7f090171;
-    public static final int icon_group=0x7f090172;
-    public static final int icon_only=0x7f090173;
-    public static final int ifRoom=0x7f090174;
-    public static final int ignore=0x7f090175;
-    public static final int ignoreRequest=0x7f090176;
-    public static final int image=0x7f090177;
-    public static final int info=0x7f090178;
-    public static final int inline=0x7f090179;
-    public static final int invisible=0x7f09017a;
-    public static final int invisible_frame=0x7f09017b;
-    public static final int italic=0x7f09017c;
-    public static final int item_action_container=0x7f09017d;
-    public static final int item_action_image=0x7f09017e;
-    public static final int item_action_name=0x7f09017f;
-    public static final int item_action_time=0x7f090180;
-    public static final int item_action_type_like=0x7f090181;
-    public static final int item_action_type_visit=0x7f090182;
-    public static final int item_country_title=0x7f090183;
-    public static final int item_list_action_top_linear=0x7f090184;
-    public static final int item_list_chat_bottom_linear=0x7f090185;
-    public static final int item_list_chat_container=0x7f090186;
-    public static final int item_list_chat_image=0x7f090187;
-    public static final int item_list_chat_message=0x7f090188;
-    public static final int item_list_chat_name=0x7f090189;
-    public static final int item_list_chat_time=0x7f09018a;
-    public static final int item_list_chat_top_linear=0x7f09018b;
-    public static final int item_request_age=0x7f09018c;
-    public static final int item_request_btn_accept=0x7f09018d;
-    public static final int item_request_btn_decline=0x7f09018e;
-    public static final int item_request_country=0x7f09018f;
-    public static final int item_request_image=0x7f090190;
-    public static final int item_request_name=0x7f090191;
-    public static final int item_service_buy_btn=0x7f090192;
-    public static final int item_service_image=0x7f090193;
-    public static final int item_service_price=0x7f090194;
-    public static final int item_service_title=0x7f090195;
-    public static final int item_touch_helper_previous_elevation=0x7f090196;
-    public static final int item_user_bottom_relative_container=0x7f090197;
-    public static final int item_user_container=0x7f090198;
-    public static final int item_user_description_edit_linear=0x7f090199;
-    public static final int item_user_edit_profile_title=0x7f09019a;
-    public static final int item_user_main_relative_container=0x7f09019b;
-    public static final int item_user_profile_description=0x7f09019c;
-    public static final int item_user_profile_title=0x7f09019d;
-    public static final int item_user_top_relative=0x7f09019e;
-    public static final int item_user_top_relative_container=0x7f09019f;
-    public static final int jumpToEnd=0x7f0901a0;
-    public static final int jumpToStart=0x7f0901a1;
-    public static final int labeled=0x7f0901a2;
-    public static final int large=0x7f0901a3;
-    public static final int largeLabel=0x7f0901a4;
-    public static final int layout=0x7f0901a5;
-    public static final int left=0x7f0901a6;
-    public static final int light=0x7f0901a7;
-    public static final int line1=0x7f0901a8;
-    public static final int line3=0x7f0901a9;
-    public static final int linear=0x7f0901aa;
-    public static final int listMode=0x7f0901ab;
-    public static final int list_item=0x7f0901ac;
-    public static final int logo=0x7f0901ad;
-    public static final int lottieAnimationView=0x7f0901ae;
-    public static final int lottie_layer_name=0x7f0901af;
-    public static final int main_app_bar=0x7f0901b0;
-    public static final int main_fab=0x7f0901b1;
-    public static final int main_tabs=0x7f0901b2;
-    public static final int main_tos_and_pp=0x7f0901b3;
-    public static final int main_view_pager=0x7f0901b4;
-    public static final int masked=0x7f0901b5;
-    public static final int media_actions=0x7f0901b6;
-    public static final int message=0x7f0901b7;
-    public static final int messageTextView=0x7f0901b8;
-    public static final int message_image_layout=0x7f0901b9;
-    public static final int message_profile_layout=0x7f0901ba;
-    public static final int message_single_layout=0x7f0901bb;
-    public static final int message_swipe_layout=0x7f0901bc;
-    public static final int message_text_layout=0x7f0901bd;
-    public static final int messages_list=0x7f0901be;
-    public static final int messenger_send_button=0x7f0901bf;
-    public static final int meta_bar=0x7f0901c0;
-    public static final int mi_header=0x7f0901c1;
-    public static final int middle=0x7f0901c2;
-    public static final int mini=0x7f0901c3;
-    public static final int motion_base=0x7f0901c4;
-    public static final int mtrl_child_content_container=0x7f0901c5;
-    public static final int mtrl_internal_children_alpha_tag=0x7f0901c6;
-    public static final int multiply=0x7f0901c7;
-    public static final int my_profile_cardview_about=0x7f0901c8;
-    public static final int my_profile_cardview_likers_visitors=0x7f0901c9;
-    public static final int my_profile_cardview_list=0x7f0901ca;
-    public static final int my_profile_edit_incognito_switcher=0x7f0901cb;
-    public static final int my_profile_edit_recycler=0x7f0901cc;
-    public static final int my_profile_image=0x7f0901cd;
-    public static final int my_profile_linear_likers=0x7f0901ce;
-    public static final int my_profile_linear_likers_visitors=0x7f0901cf;
-    public static final int my_profile_linear_visitors=0x7f0901d0;
-    public static final int my_profile_list_container=0x7f0901d1;
-    public static final int my_profile_recyler=0x7f0901d2;
-    public static final int my_profile_tv_age=0x7f0901d3;
-    public static final int my_profile_tv_also_like=0x7f0901d4;
-    public static final int my_profile_tv_country=0x7f0901d5;
-    public static final int my_profile_tv_name=0x7f0901d6;
-    public static final int name=0x7f0901d7;
-    public static final int nameTextView=0x7f0901d8;
-    public static final int name_layout=0x7f0901d9;
-    public static final int name_text_layout=0x7f0901da;
-    public static final int nav_view=0x7f0901db;
-    public static final int navigation_header_container=0x7f0901dc;
-    public static final int nested_scroll_view=0x7f0901dd;
-    public static final int never=0x7f0901de;
-    public static final int never_display=0x7f0901df;
-    public static final int none=0x7f0901e0;
-    public static final int normal=0x7f0901e1;
-    public static final int notification_background=0x7f0901e2;
-    public static final int notification_main_column=0x7f0901e3;
-    public static final int notification_main_column_container=0x7f0901e4;
-    public static final int number_of_likes=0x7f0901e5;
-    public static final int number_of_visits=0x7f0901e6;
-    public static final int off=0x7f0901e7;
-    public static final int on=0x7f0901e8;
-    public static final int onTouch=0x7f0901e9;
-    public static final int online_users_empty_text=0x7f0901ea;
-    public static final int online_users_progress=0x7f0901eb;
-    public static final int online_users_rv=0x7f0901ec;
-    public static final int open_graph=0x7f0901ed;
-    public static final int outline=0x7f0901ee;
-    public static final int oval=0x7f0901ef;
-    public static final int packed=0x7f0901f0;
-    public static final int page=0x7f0901f1;
-    public static final int pagination_pb=0x7f0901f2;
-    public static final int parallax=0x7f0901f3;
-    public static final int parent=0x7f0901f4;
-    public static final int parentPanel=0x7f0901f5;
-    public static final int parentRelative=0x7f0901f6;
-    public static final int parent_matrix=0x7f0901f7;
-    public static final int password=0x7f0901f8;
-    public static final int password_layout=0x7f0901f9;
-    public static final int path=0x7f0901fa;
-    public static final int pathRelative=0x7f0901fb;
-    public static final int pb_loading=0x7f0901fc;
-    public static final int percent=0x7f0901fd;
-    public static final int phone_button=0x7f0901fe;
-    public static final int phone_layout=0x7f0901ff;
-    public static final int phone_number=0x7f090200;
-    public static final int photoImageView=0x7f090201;
-    public static final int pin=0x7f090202;
-    public static final int please_register_to_start_title=0x7f090203;
-    public static final int policy_tv=0x7f090204;
-    public static final int position=0x7f090205;
-    public static final int postLayout=0x7f090206;
-    public static final int profile_decline_btn=0x7f090207;
-    public static final int profile_displayName=0x7f090208;
-    public static final int profile_image=0x7f090209;
-    public static final int profile_send_req_btn=0x7f09020a;
-    public static final int profile_settings_tv_image_arrow=0x7f09020b;
-    public static final int profile_status=0x7f09020c;
-    public static final int profile_totalFriends=0x7f09020d;
-    public static final int progress_bar=0x7f09020e;
-    public static final int progress_circular=0x7f09020f;
-    public static final int progress_horizontal=0x7f090210;
-    public static final int purchase_cancel_btn=0x7f090211;
-    public static final int purchase_coins_text=0x7f090212;
-    public static final int purchase_confirm_btn=0x7f090213;
-    public static final int purchase_dialog_text=0x7f090214;
-    public static final int purchase_free_activate=0x7f090215;
-    public static final int purchase_free_container=0x7f090216;
-    public static final int purchase_free_container_description=0x7f090217;
-    public static final int purchase_free_description=0x7f090218;
-    public static final int purchase_free_features_list=0x7f090219;
-    public static final int purchase_free_img_open=0x7f09021a;
-    public static final int purchase_free_price=0x7f09021b;
-    public static final int purchase_free_title=0x7f09021c;
-    public static final int purchase_premium_activate=0x7f09021d;
-    public static final int purchase_premium_container=0x7f09021e;
-    public static final int purchase_premium_container_description=0x7f09021f;
-    public static final int purchase_premium_description=0x7f090220;
-    public static final int purchase_premium_features_list=0x7f090221;
-    public static final int purchase_premium_img_open=0x7f090222;
-    public static final int purchase_premium_price=0x7f090223;
-    public static final int purchase_premium_title=0x7f090224;
-    public static final int purchase_regular_activate=0x7f090225;
-    public static final int purchase_regular_container=0x7f090226;
-    public static final int purchase_regular_container_description=0x7f090227;
-    public static final int purchase_regular_description=0x7f090228;
-    public static final int purchase_regular_features_list=0x7f090229;
-    public static final int purchase_regular_img_open=0x7f09022a;
-    public static final int purchase_regular_price=0x7f09022b;
-    public static final int purchase_regular_title=0x7f09022c;
-    public static final int radio=0x7f09022d;
-    public static final int ratio=0x7f09022e;
-    public static final int recommended_container=0x7f09022f;
-    public static final int rectangle=0x7f090230;
-    public static final int rectangles=0x7f090231;
-    public static final int recycler_list_friendDescription=0x7f090232;
-    public static final int recycler_list_userDescription=0x7f090233;
-    public static final int register_button=0x7f090234;
-    public static final int register_tv=0x7f090235;
-    public static final int relationship_status_text=0x7f090236;
-    public static final int resend_barrier=0x7f090237;
-    public static final int resend_code=0x7f090238;
-    public static final int restart=0x7f090239;
-    public static final int reverse=0x7f09023a;
-    public static final int reverseSawtooth=0x7f09023b;
-    public static final int right=0x7f09023c;
-    public static final int right_icon=0x7f09023d;
-    public static final int right_side=0x7f09023e;
-    public static final int root=0x7f09023f;
-    public static final int save_image_matrix=0x7f090240;
-    public static final int save_non_transition_alpha=0x7f090241;
-    public static final int save_scale_type=0x7f090242;
-    public static final int sawtooth=0x7f090243;
-    public static final int screen=0x7f090244;
-    public static final int scroll=0x7f090245;
-    public static final int scrollIndicatorDown=0x7f090246;
-    public static final int scrollIndicatorUp=0x7f090247;
-    public static final int scrollView=0x7f090248;
-    public static final int scrollable=0x7f090249;
-    public static final int search_badge=0x7f09024a;
-    public static final int search_bar=0x7f09024b;
-    public static final int search_btn_chat=0x7f09024c;
-    public static final int search_btn_image=0x7f09024d;
-    public static final int search_btn_like=0x7f09024e;
-    public static final int search_button=0x7f09024f;
-    public static final int search_close_btn=0x7f090250;
-    public static final int search_edit_frame=0x7f090251;
-    public static final int search_empty_img=0x7f090252;
-    public static final int search_empty_rl=0x7f090253;
-    public static final int search_empty_text=0x7f090254;
-    public static final int search_go_btn=0x7f090255;
-    public static final int search_mag_icon=0x7f090256;
-    public static final int search_plate=0x7f090257;
-    public static final int search_recommended_close=0x7f090258;
-    public static final int search_recommended_image=0x7f090259;
-    public static final int search_recommended_title=0x7f09025a;
-    public static final int search_root_container=0x7f09025b;
-    public static final int search_src_text=0x7f09025c;
-    public static final int search_voice_btn=0x7f09025d;
-    public static final int select_dialog_listview=0x7f09025e;
-    public static final int selected=0x7f09025f;
-    public static final int send_code=0x7f090260;
-    public static final int send_sms_tos=0x7f090261;
-    public static final int service_page_title=0x7f090262;
-    public static final int services_recycler=0x7f090263;
-    public static final int settings_image_btn=0x7f090264;
-    public static final int shortcut=0x7f090265;
-    public static final int showCustom=0x7f090266;
-    public static final int showHome=0x7f090267;
-    public static final int showTitle=0x7f090268;
-    public static final int sign_in_email_sent_header_text=0x7f090269;
-    public static final int sign_in_email_sent_text=0x7f09026a;
-    public static final int sin=0x7f09026b;
-    public static final int slider_button=0x7f09026c;
-    public static final int slider_countries_tv_question=0x7f09026d;
-    public static final int small=0x7f09026e;
-    public static final int smallLabel=0x7f09026f;
-    public static final int smoke_status_text=0x7f090270;
-    public static final int snackbar_action=0x7f090271;
-    public static final int snackbar_text=0x7f090272;
-    public static final int snap=0x7f090273;
-    public static final int snapMargins=0x7f090274;
-    public static final int spacer=0x7f090275;
-    public static final int spinner_age_mi=0x7f090276;
-    public static final int spinner_age_ni=0x7f090277;
-    public static final int spinner_body_types=0x7f090278;
-    public static final int spinner_country=0x7f090279;
-    public static final int spinner_country_mi=0x7f09027a;
-    public static final int spinner_drink_statuses=0x7f09027b;
-    public static final int spinner_ethnicities=0x7f09027c;
-    public static final int spinner_faith_types=0x7f09027d;
-    public static final int spinner_gender_ni=0x7f09027e;
-    public static final int spinner_have_kids_statuses=0x7f09027f;
-    public static final int spinner_relationship_statuses=0x7f090280;
-    public static final int spinner_smoke_statuses=0x7f090281;
-    public static final int spinner_want_kids_statuses=0x7f090282;
-    public static final int spline=0x7f090283;
-    public static final int split_action_bar=0x7f090284;
-    public static final int spread=0x7f090285;
-    public static final int spread_inside=0x7f090286;
-    public static final int square=0x7f090287;
-    public static final int src_atop=0x7f090288;
-    public static final int src_in=0x7f090289;
-    public static final int src_over=0x7f09028a;
-    public static final int standard=0x7f09028b;
-    public static final int start=0x7f09028c;
-    public static final int startHorizontal=0x7f09028d;
-    public static final int startVertical=0x7f09028e;
-    public static final int staticLayout=0x7f09028f;
-    public static final int staticPostLayout=0x7f090290;
-    public static final int status_appBar=0x7f090291;
-    public static final int status_bar_latest_event_content=0x7f090292;
-    public static final int status_input=0x7f090293;
-    public static final int status_save_btn=0x7f090294;
-    public static final int stop=0x7f090295;
-    public static final int stretch=0x7f090296;
-    public static final int strong=0x7f090297;
-    public static final int submenuarrow=0x7f090298;
-    public static final int submit_area=0x7f090299;
-    public static final int tabMode=0x7f09029a;
-    public static final int tag_transition_group=0x7f09029b;
-    public static final int tag_unhandled_key_event_manager=0x7f09029c;
-    public static final int tag_unhandled_key_listeners=0x7f09029d;
-    public static final int text=0x7f09029e;
-    public static final int text2=0x7f09029f;
-    public static final int textSpacerNoButtons=0x7f0902a0;
-    public static final int textSpacerNoTitle=0x7f0902a1;
-    public static final int textStart=0x7f0902a2;
-    public static final int text_input_password_toggle=0x7f0902a3;
-    public static final int textinput_counter=0x7f0902a4;
-    public static final int textinput_error=0x7f0902a5;
-    public static final int textinput_helper_text=0x7f0902a6;
-    public static final int ticker=0x7f0902a7;
-    public static final int time=0x7f0902a8;
-    public static final int time_text_layout=0x7f0902a9;
-    public static final int title=0x7f0902aa;
-    public static final int titleDividerNoCustom=0x7f0902ab;
-    public static final int title_template=0x7f0902ac;
-    public static final int to_see_more_users_button=0x7f0902ad;
-    public static final int to_see_more_users_container=0x7f0902ae;
-    public static final int to_see_more_users_title=0x7f0902af;
-    public static final int toggle=0x7f0902b0;
-    public static final int toolbar=0x7f0902b1;
-    public static final int toolbar_actions=0x7f0902b2;
-    public static final int toolbar_actions_activity=0x7f0902b3;
-    public static final int toolbar_buttons_container=0x7f0902b4;
-    public static final int toolbar_chats=0x7f0902b5;
-    public static final int toolbar_chats_activity=0x7f0902b6;
-    public static final int toolbar_filter_btn=0x7f0902b7;
-    public static final int toolbar_login=0x7f0902b8;
-    public static final int toolbar_slider=0x7f0902b9;
-    public static final int top=0x7f0902ba;
-    public static final int topPanel=0x7f0902bb;
-    public static final int top_level_view=0x7f0902bc;
-    public static final int top_progress_bar=0x7f0902bd;
-    public static final int touch_outside=0x7f0902be;
-    public static final int transitionToEnd=0x7f0902bf;
-    public static final int transitionToStart=0x7f0902c0;
-    public static final int transition_current_scene=0x7f0902c1;
-    public static final int transition_layout_save=0x7f0902c2;
-    public static final int transition_position=0x7f0902c3;
-    public static final int transition_scene_layoutid_cache=0x7f0902c4;
-    public static final int transition_transform=0x7f0902c5;
-    public static final int triangle=0x7f0902c6;
-    public static final int trouble_signing_in=0x7f0902c7;
-    public static final int trouble_signing_in_possible_fixes=0x7f0902c8;
-    public static final int uniform=0x7f0902c9;
-    public static final int unknown=0x7f0902ca;
-    public static final int unlabeled=0x7f0902cb;
-    public static final int up=0x7f0902cc;
-    public static final int useLogo=0x7f0902cd;
-    public static final int user_country=0x7f0902ce;
-    public static final int user_img=0x7f0902cf;
-    public static final int user_name=0x7f0902d0;
-    public static final int user_single_image=0x7f0902d1;
-    public static final int user_single_online_icon=0x7f0902d2;
-    public static final int user_status=0x7f0902d3;
-    public static final int users_appBar=0x7f0902d4;
-    public static final int users_empty_text=0x7f0902d5;
-    public static final int users_hot_recycler=0x7f0902d6;
-    public static final int users_list=0x7f0902d7;
-    public static final int users_recycler_view=0x7f0902d8;
-    public static final int users_swipe_refresh=0x7f0902d9;
-    public static final int view_offset_helper=0x7f0902da;
-    public static final int view_pager_add_info=0x7f0902db;
-    public static final int view_pager_img_test=0x7f0902dc;
-    public static final int view_pager_user_info=0x7f0902dd;
-    public static final int visible=0x7f0902de;
-    public static final int want_kids_text=0x7f0902df;
-    public static final int weak=0x7f0902e0;
-    public static final int welcome_back_email_link_body=0x7f0902e1;
-    public static final int welcome_back_idp_button=0x7f0902e2;
-    public static final int welcome_back_idp_prompt=0x7f0902e3;
-    public static final int welcome_back_password_body=0x7f0902e4;
-    public static final int wide=0x7f0902e5;
-    public static final int widget_action_likes=0x7f0902e6;
-    public static final int widget_action_visits=0x7f0902e7;
-    public static final int widget_container=0x7f0902e8;
-    public static final int withText=0x7f0902e9;
-    public static final int wrap=0x7f0902ea;
-    public static final int wrap_content=0x7f0902eb;
+    public static final int button_unlock_activity=0x7f09005d;
+    public static final int cancel_action=0x7f09005e;
+    public static final int cancel_button=0x7f09005f;
+    public static final int center=0x7f090060;
+    public static final int centerCrop=0x7f090061;
+    public static final int centerInside=0x7f090062;
+    public static final int center_horizontal=0x7f090063;
+    public static final int center_vertical=0x7f090064;
+    public static final int chain=0x7f090065;
+    public static final int chains=0x7f090066;
+    public static final int chat_action_block_linear=0x7f090067;
+    public static final int chat_add_btn=0x7f090068;
+    public static final int chat_app_bar=0x7f090069;
+    public static final int chat_message_view=0x7f09006a;
+    public static final int chat_send_btn=0x7f09006b;
+    public static final int chats_empty_img=0x7f09006c;
+    public static final int chats_empty_rl=0x7f09006d;
+    public static final int chats_empty_text=0x7f09006e;
+    public static final int checkbox=0x7f09006f;
+    public static final int chronometer=0x7f090070;
+    public static final int circular=0x7f090071;
+    public static final int clip_horizontal=0x7f090072;
+    public static final int clip_vertical=0x7f090073;
+    public static final int collapseActionView=0x7f090074;
+    public static final int collapsing_toolbar_layout=0x7f090075;
+    public static final int colorView=0x7f090076;
+    public static final int com_facebook_body_frame=0x7f090077;
+    public static final int com_facebook_button_xout=0x7f090078;
+    public static final int com_facebook_device_auth_instructions=0x7f090079;
+    public static final int com_facebook_fragment_container=0x7f09007a;
+    public static final int com_facebook_login_fragment_progress_bar=0x7f09007b;
+    public static final int com_facebook_smart_instructions_0=0x7f09007c;
+    public static final int com_facebook_smart_instructions_or=0x7f09007d;
+    public static final int com_facebook_tooltip_bubble_view_bottom_pointer=0x7f09007e;
+    public static final int com_facebook_tooltip_bubble_view_text_body=0x7f09007f;
+    public static final int com_facebook_tooltip_bubble_view_top_pointer=0x7f090080;
+    public static final int complain_input=0x7f090081;
+    public static final int complain_send_button=0x7f090082;
+    public static final int complain_title=0x7f090083;
+    public static final int confirm_button=0x7f090084;
+    public static final int confirm_button_gender=0x7f090085;
+    public static final int confirm_dialog_text=0x7f090086;
+    public static final int confirmation_code=0x7f090087;
+    public static final int confirmation_code_layout=0x7f090088;
+    public static final int container=0x7f090089;
+    public static final int content=0x7f09008a;
+    public static final int contentContainerActionsActivity=0x7f09008b;
+    public static final int contentContainerChatsActivity=0x7f09008c;
+    public static final int contentPanel=0x7f09008d;
+    public static final int coordinator=0x7f09008e;
+    public static final int cos=0x7f09008f;
+    public static final int country_list=0x7f090090;
+    public static final int country_text=0x7f090091;
+    public static final int country_text_mi=0x7f090092;
+    public static final int cropImageView=0x7f090093;
+    public static final int crop_image_menu_crop=0x7f090094;
+    public static final int crop_image_menu_flip=0x7f090095;
+    public static final int crop_image_menu_flip_horizontally=0x7f090096;
+    public static final int crop_image_menu_flip_vertically=0x7f090097;
+    public static final int crop_image_menu_rotate_left=0x7f090098;
+    public static final int crop_image_menu_rotate_right=0x7f090099;
+    public static final int cross_device_linking_body=0x7f09009a;
+    public static final int custom=0x7f09009b;
+    public static final int customPanel=0x7f09009c;
+    public static final int custom_bar_image=0x7f09009d;
+    public static final int custom_bar_seen=0x7f09009e;
+    public static final int custom_bar_title=0x7f09009f;
+    public static final int dark=0x7f0900a0;
+    public static final int decelerate=0x7f0900a1;
+    public static final int decelerateAndComplete=0x7f0900a2;
+    public static final int decor_content_parent=0x7f0900a3;
+    public static final int default_activity_button=0x7f0900a4;
+    public static final int deltaRelative=0x7f0900a5;
+    public static final int design_bottom_sheet=0x7f0900a6;
+    public static final int design_menu_item_action_area=0x7f0900a7;
+    public static final int design_menu_item_action_area_stub=0x7f0900a8;
+    public static final int design_menu_item_text=0x7f0900a9;
+    public static final int design_navigation_view=0x7f0900aa;
+    public static final int dialog_search_button=0x7f0900ab;
+    public static final int dialog_search_edit=0x7f0900ac;
+    public static final int dialog_spinner_gender=0x7f0900ad;
+    public static final int dimensions=0x7f0900ae;
+    public static final int direct=0x7f0900af;
+    public static final int disableHome=0x7f0900b0;
+    public static final int disablePostScroll=0x7f0900b1;
+    public static final int display_always=0x7f0900b2;
+    public static final int dragDown=0x7f0900b3;
+    public static final int dragEnd=0x7f0900b4;
+    public static final int dragLeft=0x7f0900b5;
+    public static final int dragRight=0x7f0900b6;
+    public static final int dragStart=0x7f0900b7;
+    public static final int dragUp=0x7f0900b8;
+    public static final int drawer_header_close_btn=0x7f0900b9;
+    public static final int drawer_header_name=0x7f0900ba;
+    public static final int drawer_header_photo=0x7f0900bb;
+    public static final int drawer_header_purchase_section=0x7f0900bc;
+    public static final int drawer_header_view_profile=0x7f0900bd;
+    public static final int drawer_layout=0x7f0900be;
+    public static final int drawer_top_menu_logout_item=0x7f0900bf;
+    public static final int drink_status_text=0x7f0900c0;
+    public static final int dynamic=0x7f0900c1;
+    public static final int easeIn=0x7f0900c2;
+    public static final int easeInOut=0x7f0900c3;
+    public static final int easeOut=0x7f0900c4;
+    public static final int edit_phone_number=0x7f0900c5;
+    public static final int edit_query=0x7f0900c6;
+    public static final int email=0x7f0900c7;
+    public static final int email_button=0x7f0900c8;
+    public static final int email_footer_tos_and_pp_text=0x7f0900c9;
+    public static final int email_layout=0x7f0900ca;
+    public static final int email_top_layout=0x7f0900cb;
+    public static final int email_tos_and_pp_text=0x7f0900cc;
+    public static final int end=0x7f0900cd;
+    public static final int end_padder=0x7f0900ce;
+    public static final int enterAlways=0x7f0900cf;
+    public static final int enterAlwaysCollapsed=0x7f0900d0;
+    public static final int ethnicity_text=0x7f0900d1;
+    public static final int exitUntilCollapsed=0x7f0900d2;
+    public static final int expand_activities_button=0x7f0900d3;
+    public static final int expanded_menu=0x7f0900d4;
+    public static final int fab_id=0x7f0900d5;
+    public static final int faith_type_text=0x7f0900d6;
+    public static final int fill=0x7f0900d7;
+    public static final int fill_horizontal=0x7f0900d8;
+    public static final int fill_vertical=0x7f0900d9;
+    public static final int filled=0x7f0900da;
+    public static final int filters_form=0x7f0900db;
+    public static final int fitCenter=0x7f0900dc;
+    public static final int fixed=0x7f0900dd;
+    public static final int flip=0x7f0900de;
+    public static final int forever=0x7f0900df;
+    public static final int fragment_phone=0x7f0900e0;
+    public static final int fragment_register_email=0x7f0900e1;
+    public static final int fragment_slider_age_18_21=0x7f0900e2;
+    public static final int fragment_slider_age_22_26=0x7f0900e3;
+    public static final int fragment_slider_age_26_35=0x7f0900e4;
+    public static final int fragment_slider_age_36_45=0x7f0900e5;
+    public static final int fragment_slider_age_45_plus=0x7f0900e6;
+    public static final int fragment_slider_age_btn_save=0x7f0900e7;
+    public static final int fragment_slider_age_radiogroup=0x7f0900e8;
+    public static final int fragment_slider_age_tv_question=0x7f0900e9;
+    public static final int fragment_slider_bodytype_btn_save=0x7f0900ea;
+    public static final int fragment_slider_bodytype_radiogroup=0x7f0900eb;
+    public static final int fragment_slider_bodytype_rbtn_athletic=0x7f0900ec;
+    public static final int fragment_slider_bodytype_rbtn_average=0x7f0900ed;
+    public static final int fragment_slider_bodytype_rbtn_fewextra=0x7f0900ee;
+    public static final int fragment_slider_bodytype_rbtn_heavyset=0x7f0900ef;
+    public static final int fragment_slider_bodytype_rbtn_slender=0x7f0900f0;
+    public static final int fragment_slider_bodytype_rbtn_stocky=0x7f0900f1;
+    public static final int fragment_slider_bodytype_tv_question=0x7f0900f2;
+    public static final int fragment_slider_drink_status_radiogroup=0x7f0900f3;
+    public static final int fragment_slider_drink_status_rbtn_friends=0x7f0900f4;
+    public static final int fragment_slider_drink_status_rbtn_moderaely=0x7f0900f5;
+    public static final int fragment_slider_drink_status_rbtn_never=0x7f0900f6;
+    public static final int fragment_slider_drink_status_rbtn_regularly=0x7f0900f7;
+    public static final int fragment_slider_drinkstatus_btn_save=0x7f0900f8;
+    public static final int fragment_slider_drinkstatus_tv_question=0x7f0900f9;
+    public static final int fragment_slider_ethnicity_btn_save=0x7f0900fa;
+    public static final int fragment_slider_ethnicity_radiobtn_asian=0x7f0900fb;
+    public static final int fragment_slider_ethnicity_radiobtn_black=0x7f0900fc;
+    public static final int fragment_slider_ethnicity_radiobtn_indian=0x7f0900fd;
+    public static final int fragment_slider_ethnicity_radiobtn_latino=0x7f0900fe;
+    public static final int fragment_slider_ethnicity_radiobtn_native=0x7f0900ff;
+    public static final int fragment_slider_ethnicity_radiobtn_other=0x7f090100;
+    public static final int fragment_slider_ethnicity_radiobtn_white=0x7f090101;
+    public static final int fragment_slider_ethnicity_radiogroup=0x7f090102;
+    public static final int fragment_slider_ethnicity_tv_question=0x7f090103;
+    public static final int fragment_slider_faith_btn_save=0x7f090104;
+    public static final int fragment_slider_faith_radiogroup=0x7f090105;
+    public static final int fragment_slider_faith_rbtn_adventist=0x7f090106;
+    public static final int fragment_slider_faith_rbtn_atheist=0x7f090107;
+    public static final int fragment_slider_faith_rbtn_black=0x7f090108;
+    public static final int fragment_slider_faith_rbtn_buddist=0x7f090109;
+    public static final int fragment_slider_faith_rbtn_christian=0x7f09010a;
+    public static final int fragment_slider_faith_rbtn_muslim=0x7f09010b;
+    public static final int fragment_slider_faith_rbtn_other=0x7f09010c;
+    public static final int fragment_slider_faith_tv_question=0x7f09010d;
+    public static final int fragment_slider_gender_btn_save=0x7f09010e;
+    public static final int fragment_slider_gender_radiobutton_female=0x7f09010f;
+    public static final int fragment_slider_gender_radiobutton_male=0x7f090110;
+    public static final int fragment_slider_gender_radiogroup=0x7f090111;
+    public static final int fragment_slider_gender_tv_question=0x7f090112;
+    public static final int fragment_slider_height_btn_edit=0x7f090113;
+    public static final int fragment_slider_height_linear_tvs=0x7f090114;
+    public static final int fragment_slider_height_tv_cm=0x7f090115;
+    public static final int fragment_slider_height_tv_number=0x7f090116;
+    public static final int fragment_slider_height_tv_question=0x7f090117;
+    public static final int fragment_slider_hobby_btn_save=0x7f090118;
+    public static final int fragment_slider_hobby_et_answer=0x7f090119;
+    public static final int fragment_slider_hobby_tv_question=0x7f09011a;
+    public static final int fragment_slider_image_btn_save=0x7f09011b;
+    public static final int fragment_slider_image_tv_question=0x7f09011c;
+    public static final int fragment_slider_languages_btn_edit=0x7f09011d;
+    public static final int fragment_slider_languages_tv_number=0x7f09011e;
+    public static final int fragment_slider_languages_tv_question=0x7f09011f;
+    public static final int fragment_slider_name_btn_save=0x7f090120;
+    public static final int fragment_slider_name_et_answer=0x7f090121;
+    public static final int fragment_slider_name_tv_question=0x7f090122;
+    public static final int fragment_slider_number_of_kids_radiogroup=0x7f090123;
+    public static final int fragment_slider_number_of_kids_rbtn_at_home=0x7f090124;
+    public static final int fragment_slider_number_of_kids_rbtn_away=0x7f090125;
+    public static final int fragment_slider_number_of_kids_rbtn_no=0x7f090126;
+    public static final int fragment_slider_number_of_kids_rbtn_sometimes_at_home=0x7f090127;
+    public static final int fragment_slider_numberofkids_btn_save=0x7f090128;
+    public static final int fragment_slider_numberofkids_tv_question=0x7f090129;
+    public static final int fragment_slider_rbtn_divorced=0x7f09012a;
+    public static final int fragment_slider_rbtn_never_married=0x7f09012b;
+    public static final int fragment_slider_rbtn_separated=0x7f09012c;
+    public static final int fragment_slider_rbtn_widow=0x7f09012d;
+    public static final int fragment_slider_relationships_btn_save=0x7f09012e;
+    public static final int fragment_slider_relationships_radiogroup=0x7f09012f;
+    public static final int fragment_slider_relationships_tv_question=0x7f090130;
+    public static final int fragment_slider_smokestatus_btn_save=0x7f090131;
+    public static final int fragment_slider_smokestatus_tv_question=0x7f090132;
+    public static final int fragment_slider_smokine_status_rbtn_cigar_aficionado=0x7f090133;
+    public static final int fragment_slider_smokine_status_rbtn_quit=0x7f090134;
+    public static final int fragment_slider_smoking_status_radiogroup=0x7f090135;
+    public static final int fragment_slider_smoking_status_rbtn_daily=0x7f090136;
+    public static final int fragment_slider_smoking_status_rbtn_no_way=0x7f090137;
+    public static final int fragment_slider_smoking_status_rbtn_occasioally=0x7f090138;
+    public static final int fragment_slider_willingkids_btn_save=0x7f090139;
+    public static final int fragment_slider_willingkids_radiogroup=0x7f09013a;
+    public static final int fragment_slider_willingkids_rbtn_definitely=0x7f09013b;
+    public static final int fragment_slider_willingkids_rbtn_no=0x7f09013c;
+    public static final int fragment_slider_willingkids_rbtn_no_but_ok=0x7f09013d;
+    public static final int fragment_slider_willingkids_rbtn_not_sure=0x7f09013e;
+    public static final int fragment_slider_willingkids_rbtn_probably=0x7f09013f;
+    public static final int fragment_slider_willingkids_rbtn_someday=0x7f090140;
+    public static final int fragment_slider_willingkids_tv_question=0x7f090141;
+    public static final int friend_activity_block_left_message=0x7f090142;
+    public static final int friend_activity_block_message_like=0x7f090143;
+    public static final int friend_activity_block_message_like_linear=0x7f090144;
+    public static final int friend_activity_block_right_like=0x7f090145;
+    public static final int friend_activity_btn_add_friend=0x7f090146;
+    public static final int friend_activity_btn_start_chat=0x7f090147;
+    public static final int friend_activity_cardview_about=0x7f090148;
+    public static final int friend_activity_cardview_buttons_block=0x7f090149;
+    public static final int friend_activity_cardview_list=0x7f09014a;
+    public static final int friend_activity_fab=0x7f09014b;
+    public static final int friend_activity_image=0x7f09014c;
+    public static final int friend_activity_like_img=0x7f09014d;
+    public static final int friend_activity_like_tv=0x7f09014e;
+    public static final int friend_activity_message_img=0x7f09014f;
+    public static final int friend_activity_message_tv=0x7f090150;
+    public static final int friend_activity_phrase_custom=0x7f090151;
+    public static final int friend_activity_phrase_custom_container=0x7f090152;
+    public static final int friend_activity_phrase_main_container=0x7f090153;
+    public static final int friend_activity_phrase_one=0x7f090154;
+    public static final int friend_activity_phrase_one_container=0x7f090155;
+    public static final int friend_activity_phrase_three=0x7f090156;
+    public static final int friend_activity_phrase_three_container=0x7f090157;
+    public static final int friend_activity_phrase_title=0x7f090158;
+    public static final int friend_activity_phrase_two=0x7f090159;
+    public static final int friend_activity_phrase_two_container=0x7f09015a;
+    public static final int friend_activity_phrases_close=0x7f09015b;
+    public static final int friend_activity_phrases_linear=0x7f09015c;
+    public static final int friend_activity_tv_age=0x7f09015d;
+    public static final int friend_activity_tv_country=0x7f09015e;
+    public static final int friend_activity_tv_name=0x7f09015f;
+    public static final int friends_fragment_recycler_activities=0x7f090160;
+    public static final int friends_fragment_recycler_chats=0x7f090161;
+    public static final int gender_rl=0x7f090162;
+    public static final int gender_text=0x7f090163;
+    public static final int ghost_view=0x7f090164;
+    public static final int gone=0x7f090165;
+    public static final int graph=0x7f090166;
+    public static final int graph_wrap=0x7f090167;
+    public static final int group_divider=0x7f090168;
+    public static final int groups=0x7f090169;
+    public static final int have_kids_text=0x7f09016a;
+    public static final int header=0x7f09016b;
+    public static final int header_ni_dialog=0x7f09016c;
+    public static final int header_text=0x7f09016d;
+    public static final int heading=0x7f09016e;
+    public static final int home=0x7f09016f;
+    public static final int homeAsUp=0x7f090170;
+    public static final int honorRequest=0x7f090171;
+    public static final int horizontal=0x7f090172;
+    public static final int hot_first_item=0x7f090173;
+    public static final int hot_image=0x7f090174;
+    public static final int icon=0x7f090175;
+    public static final int icon_group=0x7f090176;
+    public static final int icon_only=0x7f090177;
+    public static final int ifRoom=0x7f090178;
+    public static final int ignore=0x7f090179;
+    public static final int ignoreRequest=0x7f09017a;
+    public static final int image=0x7f09017b;
+    public static final int info=0x7f09017c;
+    public static final int inline=0x7f09017d;
+    public static final int invisible=0x7f09017e;
+    public static final int invisible_frame=0x7f09017f;
+    public static final int italic=0x7f090180;
+    public static final int item_action_container=0x7f090181;
+    public static final int item_action_image=0x7f090182;
+    public static final int item_action_name=0x7f090183;
+    public static final int item_action_time=0x7f090184;
+    public static final int item_action_type_like=0x7f090185;
+    public static final int item_action_type_visit=0x7f090186;
+    public static final int item_country_title=0x7f090187;
+    public static final int item_list_action_top_linear=0x7f090188;
+    public static final int item_list_chat_bottom_linear=0x7f090189;
+    public static final int item_list_chat_container=0x7f09018a;
+    public static final int item_list_chat_image=0x7f09018b;
+    public static final int item_list_chat_message=0x7f09018c;
+    public static final int item_list_chat_name=0x7f09018d;
+    public static final int item_list_chat_time=0x7f09018e;
+    public static final int item_list_chat_top_linear=0x7f09018f;
+    public static final int item_request_age=0x7f090190;
+    public static final int item_request_btn_accept=0x7f090191;
+    public static final int item_request_btn_decline=0x7f090192;
+    public static final int item_request_country=0x7f090193;
+    public static final int item_request_image=0x7f090194;
+    public static final int item_request_name=0x7f090195;
+    public static final int item_service_buy_btn=0x7f090196;
+    public static final int item_service_image=0x7f090197;
+    public static final int item_service_price=0x7f090198;
+    public static final int item_service_title=0x7f090199;
+    public static final int item_touch_helper_previous_elevation=0x7f09019a;
+    public static final int item_user_bottom_relative_container=0x7f09019b;
+    public static final int item_user_container=0x7f09019c;
+    public static final int item_user_description_edit_linear=0x7f09019d;
+    public static final int item_user_edit_profile_title=0x7f09019e;
+    public static final int item_user_main_relative_container=0x7f09019f;
+    public static final int item_user_profile_description=0x7f0901a0;
+    public static final int item_user_profile_title=0x7f0901a1;
+    public static final int item_user_top_relative=0x7f0901a2;
+    public static final int item_user_top_relative_container=0x7f0901a3;
+    public static final int jumpToEnd=0x7f0901a4;
+    public static final int jumpToStart=0x7f0901a5;
+    public static final int labeled=0x7f0901a6;
+    public static final int large=0x7f0901a7;
+    public static final int largeLabel=0x7f0901a8;
+    public static final int layout=0x7f0901a9;
+    public static final int left=0x7f0901aa;
+    public static final int light=0x7f0901ab;
+    public static final int line1=0x7f0901ac;
+    public static final int line3=0x7f0901ad;
+    public static final int linear=0x7f0901ae;
+    public static final int listMode=0x7f0901af;
+    public static final int list_item=0x7f0901b0;
+    public static final int logo=0x7f0901b1;
+    public static final int lottieAnimationView=0x7f0901b2;
+    public static final int lottie_layer_name=0x7f0901b3;
+    public static final int main_app_bar=0x7f0901b4;
+    public static final int main_fab=0x7f0901b5;
+    public static final int main_tabs=0x7f0901b6;
+    public static final int main_tos_and_pp=0x7f0901b7;
+    public static final int main_view_pager=0x7f0901b8;
+    public static final int masked=0x7f0901b9;
+    public static final int media_actions=0x7f0901ba;
+    public static final int message=0x7f0901bb;
+    public static final int messageTextView=0x7f0901bc;
+    public static final int message_image_layout=0x7f0901bd;
+    public static final int message_profile_layout=0x7f0901be;
+    public static final int message_single_layout=0x7f0901bf;
+    public static final int message_swipe_layout=0x7f0901c0;
+    public static final int message_text_layout=0x7f0901c1;
+    public static final int messages_list=0x7f0901c2;
+    public static final int messenger_send_button=0x7f0901c3;
+    public static final int meta_bar=0x7f0901c4;
+    public static final int mi_header=0x7f0901c5;
+    public static final int middle=0x7f0901c6;
+    public static final int mini=0x7f0901c7;
+    public static final int motion_base=0x7f0901c8;
+    public static final int mtrl_child_content_container=0x7f0901c9;
+    public static final int mtrl_internal_children_alpha_tag=0x7f0901ca;
+    public static final int multiply=0x7f0901cb;
+    public static final int my_profile_cardview_about=0x7f0901cc;
+    public static final int my_profile_cardview_likers_visitors=0x7f0901cd;
+    public static final int my_profile_cardview_list=0x7f0901ce;
+    public static final int my_profile_edit_incognito_switcher=0x7f0901cf;
+    public static final int my_profile_edit_recycler=0x7f0901d0;
+    public static final int my_profile_image=0x7f0901d1;
+    public static final int my_profile_linear_likers=0x7f0901d2;
+    public static final int my_profile_linear_likers_visitors=0x7f0901d3;
+    public static final int my_profile_linear_visitors=0x7f0901d4;
+    public static final int my_profile_list_container=0x7f0901d5;
+    public static final int my_profile_recyler=0x7f0901d6;
+    public static final int my_profile_tv_age=0x7f0901d7;
+    public static final int my_profile_tv_also_like=0x7f0901d8;
+    public static final int my_profile_tv_country=0x7f0901d9;
+    public static final int my_profile_tv_name=0x7f0901da;
+    public static final int name=0x7f0901db;
+    public static final int nameTextView=0x7f0901dc;
+    public static final int name_layout=0x7f0901dd;
+    public static final int name_text_layout=0x7f0901de;
+    public static final int nav_view=0x7f0901df;
+    public static final int navigation_header_container=0x7f0901e0;
+    public static final int nested_scroll_view=0x7f0901e1;
+    public static final int never=0x7f0901e2;
+    public static final int never_display=0x7f0901e3;
+    public static final int none=0x7f0901e4;
+    public static final int normal=0x7f0901e5;
+    public static final int notification_background=0x7f0901e6;
+    public static final int notification_main_column=0x7f0901e7;
+    public static final int notification_main_column_container=0x7f0901e8;
+    public static final int number_of_likes=0x7f0901e9;
+    public static final int number_of_visits=0x7f0901ea;
+    public static final int off=0x7f0901eb;
+    public static final int on=0x7f0901ec;
+    public static final int onTouch=0x7f0901ed;
+    public static final int online_users_empty_text=0x7f0901ee;
+    public static final int online_users_progress=0x7f0901ef;
+    public static final int online_users_rv=0x7f0901f0;
+    public static final int open_graph=0x7f0901f1;
+    public static final int outline=0x7f0901f2;
+    public static final int oval=0x7f0901f3;
+    public static final int packed=0x7f0901f4;
+    public static final int page=0x7f0901f5;
+    public static final int pagination_pb=0x7f0901f6;
+    public static final int parallax=0x7f0901f7;
+    public static final int parent=0x7f0901f8;
+    public static final int parentPanel=0x7f0901f9;
+    public static final int parentRelative=0x7f0901fa;
+    public static final int parent_matrix=0x7f0901fb;
+    public static final int password=0x7f0901fc;
+    public static final int password_layout=0x7f0901fd;
+    public static final int path=0x7f0901fe;
+    public static final int pathRelative=0x7f0901ff;
+    public static final int pb_loading=0x7f090200;
+    public static final int percent=0x7f090201;
+    public static final int phone_button=0x7f090202;
+    public static final int phone_layout=0x7f090203;
+    public static final int phone_number=0x7f090204;
+    public static final int photoImageView=0x7f090205;
+    public static final int pin=0x7f090206;
+    public static final int please_register_to_start_title=0x7f090207;
+    public static final int policy_tv=0x7f090208;
+    public static final int position=0x7f090209;
+    public static final int postLayout=0x7f09020a;
+    public static final int profile_decline_btn=0x7f09020b;
+    public static final int profile_displayName=0x7f09020c;
+    public static final int profile_image=0x7f09020d;
+    public static final int profile_send_req_btn=0x7f09020e;
+    public static final int profile_settings_tv_image_arrow=0x7f09020f;
+    public static final int profile_status=0x7f090210;
+    public static final int profile_totalFriends=0x7f090211;
+    public static final int progress_bar=0x7f090212;
+    public static final int progress_circular=0x7f090213;
+    public static final int progress_horizontal=0x7f090214;
+    public static final int purchase_cancel_btn=0x7f090215;
+    public static final int purchase_coins_text=0x7f090216;
+    public static final int purchase_confirm_btn=0x7f090217;
+    public static final int purchase_dialog_text=0x7f090218;
+    public static final int purchase_free_activate=0x7f090219;
+    public static final int purchase_free_container=0x7f09021a;
+    public static final int purchase_free_container_description=0x7f09021b;
+    public static final int purchase_free_description=0x7f09021c;
+    public static final int purchase_free_features_list=0x7f09021d;
+    public static final int purchase_free_img_open=0x7f09021e;
+    public static final int purchase_free_price=0x7f09021f;
+    public static final int purchase_free_title=0x7f090220;
+    public static final int purchase_premium_activate=0x7f090221;
+    public static final int purchase_premium_container=0x7f090222;
+    public static final int purchase_premium_container_description=0x7f090223;
+    public static final int purchase_premium_description=0x7f090224;
+    public static final int purchase_premium_features_list=0x7f090225;
+    public static final int purchase_premium_img_open=0x7f090226;
+    public static final int purchase_premium_price=0x7f090227;
+    public static final int purchase_premium_title=0x7f090228;
+    public static final int purchase_regular_activate=0x7f090229;
+    public static final int purchase_regular_container=0x7f09022a;
+    public static final int purchase_regular_container_description=0x7f09022b;
+    public static final int purchase_regular_description=0x7f09022c;
+    public static final int purchase_regular_features_list=0x7f09022d;
+    public static final int purchase_regular_img_open=0x7f09022e;
+    public static final int purchase_regular_price=0x7f09022f;
+    public static final int purchase_regular_title=0x7f090230;
+    public static final int radio=0x7f090231;
+    public static final int ratio=0x7f090232;
+    public static final int recommended_container=0x7f090233;
+    public static final int rectangle=0x7f090234;
+    public static final int rectangles=0x7f090235;
+    public static final int recycler_list_friendDescription=0x7f090236;
+    public static final int recycler_list_userDescription=0x7f090237;
+    public static final int register_button=0x7f090238;
+    public static final int register_tv=0x7f090239;
+    public static final int relationship_status_text=0x7f09023a;
+    public static final int resend_barrier=0x7f09023b;
+    public static final int resend_code=0x7f09023c;
+    public static final int restart=0x7f09023d;
+    public static final int reverse=0x7f09023e;
+    public static final int reverseSawtooth=0x7f09023f;
+    public static final int right=0x7f090240;
+    public static final int right_icon=0x7f090241;
+    public static final int right_side=0x7f090242;
+    public static final int root=0x7f090243;
+    public static final int save_image_matrix=0x7f090244;
+    public static final int save_non_transition_alpha=0x7f090245;
+    public static final int save_scale_type=0x7f090246;
+    public static final int sawtooth=0x7f090247;
+    public static final int screen=0x7f090248;
+    public static final int scroll=0x7f090249;
+    public static final int scrollIndicatorDown=0x7f09024a;
+    public static final int scrollIndicatorUp=0x7f09024b;
+    public static final int scrollView=0x7f09024c;
+    public static final int scrollable=0x7f09024d;
+    public static final int search_badge=0x7f09024e;
+    public static final int search_bar=0x7f09024f;
+    public static final int search_btn_chat=0x7f090250;
+    public static final int search_btn_image=0x7f090251;
+    public static final int search_btn_like=0x7f090252;
+    public static final int search_button=0x7f090253;
+    public static final int search_close_btn=0x7f090254;
+    public static final int search_edit_frame=0x7f090255;
+    public static final int search_empty_img=0x7f090256;
+    public static final int search_empty_rl=0x7f090257;
+    public static final int search_empty_text=0x7f090258;
+    public static final int search_go_btn=0x7f090259;
+    public static final int search_mag_icon=0x7f09025a;
+    public static final int search_plate=0x7f09025b;
+    public static final int search_recommended_close=0x7f09025c;
+    public static final int search_recommended_image=0x7f09025d;
+    public static final int search_recommended_title=0x7f09025e;
+    public static final int search_root_container=0x7f09025f;
+    public static final int search_src_text=0x7f090260;
+    public static final int search_voice_btn=0x7f090261;
+    public static final int select_dialog_listview=0x7f090262;
+    public static final int selected=0x7f090263;
+    public static final int send_code=0x7f090264;
+    public static final int send_sms_tos=0x7f090265;
+    public static final int service_page_title=0x7f090266;
+    public static final int services_recycler=0x7f090267;
+    public static final int settings_image_btn=0x7f090268;
+    public static final int shortcut=0x7f090269;
+    public static final int showCustom=0x7f09026a;
+    public static final int showHome=0x7f09026b;
+    public static final int showTitle=0x7f09026c;
+    public static final int sign_in_email_sent_header_text=0x7f09026d;
+    public static final int sign_in_email_sent_text=0x7f09026e;
+    public static final int sin=0x7f09026f;
+    public static final int slider_button=0x7f090270;
+    public static final int slider_countries_tv_question=0x7f090271;
+    public static final int small=0x7f090272;
+    public static final int smallLabel=0x7f090273;
+    public static final int smoke_status_text=0x7f090274;
+    public static final int snackbar_action=0x7f090275;
+    public static final int snackbar_text=0x7f090276;
+    public static final int snap=0x7f090277;
+    public static final int snapMargins=0x7f090278;
+    public static final int spacer=0x7f090279;
+    public static final int spinner_age_mi=0x7f09027a;
+    public static final int spinner_age_ni=0x7f09027b;
+    public static final int spinner_body_types=0x7f09027c;
+    public static final int spinner_country=0x7f09027d;
+    public static final int spinner_country_mi=0x7f09027e;
+    public static final int spinner_drink_statuses=0x7f09027f;
+    public static final int spinner_ethnicities=0x7f090280;
+    public static final int spinner_faith_types=0x7f090281;
+    public static final int spinner_gender_ni=0x7f090282;
+    public static final int spinner_have_kids_statuses=0x7f090283;
+    public static final int spinner_relationship_statuses=0x7f090284;
+    public static final int spinner_smoke_statuses=0x7f090285;
+    public static final int spinner_want_kids_statuses=0x7f090286;
+    public static final int spline=0x7f090287;
+    public static final int split_action_bar=0x7f090288;
+    public static final int spread=0x7f090289;
+    public static final int spread_inside=0x7f09028a;
+    public static final int square=0x7f09028b;
+    public static final int src_atop=0x7f09028c;
+    public static final int src_in=0x7f09028d;
+    public static final int src_over=0x7f09028e;
+    public static final int standard=0x7f09028f;
+    public static final int start=0x7f090290;
+    public static final int startHorizontal=0x7f090291;
+    public static final int startVertical=0x7f090292;
+    public static final int staticLayout=0x7f090293;
+    public static final int staticPostLayout=0x7f090294;
+    public static final int status_appBar=0x7f090295;
+    public static final int status_bar_latest_event_content=0x7f090296;
+    public static final int status_input=0x7f090297;
+    public static final int status_save_btn=0x7f090298;
+    public static final int stop=0x7f090299;
+    public static final int stretch=0x7f09029a;
+    public static final int strong=0x7f09029b;
+    public static final int submenuarrow=0x7f09029c;
+    public static final int submit_area=0x7f09029d;
+    public static final int tabMode=0x7f09029e;
+    public static final int tag_transition_group=0x7f09029f;
+    public static final int tag_unhandled_key_event_manager=0x7f0902a0;
+    public static final int tag_unhandled_key_listeners=0x7f0902a1;
+    public static final int text=0x7f0902a2;
+    public static final int text2=0x7f0902a3;
+    public static final int textSpacerNoButtons=0x7f0902a4;
+    public static final int textSpacerNoTitle=0x7f0902a5;
+    public static final int textStart=0x7f0902a6;
+    public static final int textView_unlock_activity=0x7f0902a7;
+    public static final int text_input_password_toggle=0x7f0902a8;
+    public static final int textinput_counter=0x7f0902a9;
+    public static final int textinput_error=0x7f0902aa;
+    public static final int textinput_helper_text=0x7f0902ab;
+    public static final int ticker=0x7f0902ac;
+    public static final int time=0x7f0902ad;
+    public static final int time_text_layout=0x7f0902ae;
+    public static final int title=0x7f0902af;
+    public static final int titleDividerNoCustom=0x7f0902b0;
+    public static final int title_template=0x7f0902b1;
+    public static final int to_see_more_users_button=0x7f0902b2;
+    public static final int to_see_more_users_container=0x7f0902b3;
+    public static final int to_see_more_users_title=0x7f0902b4;
+    public static final int toggle=0x7f0902b5;
+    public static final int toolbar=0x7f0902b6;
+    public static final int toolbar_actions=0x7f0902b7;
+    public static final int toolbar_actions_activity=0x7f0902b8;
+    public static final int toolbar_buttons_container=0x7f0902b9;
+    public static final int toolbar_chats=0x7f0902ba;
+    public static final int toolbar_chats_activity=0x7f0902bb;
+    public static final int toolbar_filter_btn=0x7f0902bc;
+    public static final int toolbar_login=0x7f0902bd;
+    public static final int toolbar_slider=0x7f0902be;
+    public static final int top=0x7f0902bf;
+    public static final int topPanel=0x7f0902c0;
+    public static final int top_level_view=0x7f0902c1;
+    public static final int top_progress_bar=0x7f0902c2;
+    public static final int touch_outside=0x7f0902c3;
+    public static final int transitionToEnd=0x7f0902c4;
+    public static final int transitionToStart=0x7f0902c5;
+    public static final int transition_current_scene=0x7f0902c6;
+    public static final int transition_layout_save=0x7f0902c7;
+    public static final int transition_position=0x7f0902c8;
+    public static final int transition_scene_layoutid_cache=0x7f0902c9;
+    public static final int transition_transform=0x7f0902ca;
+    public static final int triangle=0x7f0902cb;
+    public static final int trouble_signing_in=0x7f0902cc;
+    public static final int trouble_signing_in_possible_fixes=0x7f0902cd;
+    public static final int uniform=0x7f0902ce;
+    public static final int unknown=0x7f0902cf;
+    public static final int unlabeled=0x7f0902d0;
+    public static final int up=0x7f0902d1;
+    public static final int useLogo=0x7f0902d2;
+    public static final int user_country=0x7f0902d3;
+    public static final int user_img=0x7f0902d4;
+    public static final int user_name=0x7f0902d5;
+    public static final int user_single_image=0x7f0902d6;
+    public static final int user_single_online_icon=0x7f0902d7;
+    public static final int user_status=0x7f0902d8;
+    public static final int users_appBar=0x7f0902d9;
+    public static final int users_empty_text=0x7f0902da;
+    public static final int users_hot_recycler=0x7f0902db;
+    public static final int users_list=0x7f0902dc;
+    public static final int users_recycler_view=0x7f0902dd;
+    public static final int users_swipe_refresh=0x7f0902de;
+    public static final int view_offset_helper=0x7f0902df;
+    public static final int view_pager_add_info=0x7f0902e0;
+    public static final int view_pager_img_test=0x7f0902e1;
+    public static final int view_pager_user_info=0x7f0902e2;
+    public static final int visible=0x7f0902e3;
+    public static final int want_kids_text=0x7f0902e4;
+    public static final int weak=0x7f0902e5;
+    public static final int welcome_back_email_link_body=0x7f0902e6;
+    public static final int welcome_back_idp_button=0x7f0902e7;
+    public static final int welcome_back_idp_prompt=0x7f0902e8;
+    public static final int welcome_back_password_body=0x7f0902e9;
+    public static final int wide=0x7f0902ea;
+    public static final int widget_action_likes=0x7f0902eb;
+    public static final int widget_action_visits=0x7f0902ec;
+    public static final int widget_container=0x7f0902ed;
+    public static final int withText=0x7f0902ee;
+    public static final int wrap=0x7f0902ef;
+    public static final int wrap_content=0x7f0902f0;
   }
   public static final class integer {
     public static final int abc_config_activityDefaultDur=0x7f0a0000;
@@ -7837,133 +7419,134 @@ public final class R {
     public static final int activity_settings=0x7f0c0026;
     public static final int activity_slider=0x7f0c0027;
     public static final int activity_status=0x7f0c0028;
-    public static final int activity_user_info_view_pager=0x7f0c0029;
-    public static final int activity_users=0x7f0c002a;
-    public static final int ad_banner=0x7f0c002b;
-    public static final int app_bar_layout=0x7f0c002c;
-    public static final int browser_actions_context_menu_page=0x7f0c002d;
-    public static final int browser_actions_context_menu_row=0x7f0c002e;
-    public static final int chat_custom_bar=0x7f0c002f;
-    public static final int com_facebook_activity_layout=0x7f0c0030;
-    public static final int com_facebook_device_auth_dialog_fragment=0x7f0c0031;
-    public static final int com_facebook_login_fragment=0x7f0c0032;
-    public static final int com_facebook_smart_device_dialog_fragment=0x7f0c0033;
-    public static final int com_facebook_tooltip_bubble=0x7f0c0034;
-    public static final int crop_image_activity=0x7f0c0035;
-    public static final int crop_image_view=0x7f0c0036;
-    public static final int design_bottom_navigation_item=0x7f0c0037;
-    public static final int design_bottom_sheet_dialog=0x7f0c0038;
-    public static final int design_layout_snackbar=0x7f0c0039;
-    public static final int design_layout_snackbar_include=0x7f0c003a;
-    public static final int design_layout_tab_icon=0x7f0c003b;
-    public static final int design_layout_tab_text=0x7f0c003c;
-    public static final int design_menu_item_action_area=0x7f0c003d;
-    public static final int design_navigation_item=0x7f0c003e;
-    public static final int design_navigation_item_header=0x7f0c003f;
-    public static final int design_navigation_item_separator=0x7f0c0040;
-    public static final int design_navigation_item_subheader=0x7f0c0041;
-    public static final int design_navigation_menu=0x7f0c0042;
-    public static final int design_navigation_menu_item=0x7f0c0043;
-    public static final int design_text_input_password_icon=0x7f0c0044;
-    public static final int dialog_confirm_fragment=0x7f0c0045;
-    public static final int dialog_filters=0x7f0c0046;
-    public static final int dialog_gender=0x7f0c0047;
-    public static final int dialog_message=0x7f0c0048;
-    public static final int dialog_must_info=0x7f0c0049;
-    public static final int dialog_purchase_fragment=0x7f0c004a;
-    public static final int dialog_search=0x7f0c004b;
-    public static final int drawer=0x7f0c004c;
-    public static final int drawer_header=0x7f0c004d;
-    public static final int fragment_complain=0x7f0c004e;
-    public static final int fragment_main_tab_activities=0x7f0c004f;
-    public static final int fragment_main_tab_friends=0x7f0c0050;
-    public static final int fragment_main_tab_search=0x7f0c0051;
-    public static final int fragment_online_users=0x7f0c0052;
-    public static final int fragment_register=0x7f0c0053;
-    public static final int fragment_slider_age=0x7f0c0054;
-    public static final int fragment_slider_bodytype=0x7f0c0055;
-    public static final int fragment_slider_countries=0x7f0c0056;
-    public static final int fragment_slider_drink_status=0x7f0c0057;
-    public static final int fragment_slider_ethnicity=0x7f0c0058;
-    public static final int fragment_slider_faith=0x7f0c0059;
-    public static final int fragment_slider_gender=0x7f0c005a;
-    public static final int fragment_slider_height=0x7f0c005b;
-    public static final int fragment_slider_hobby=0x7f0c005c;
-    public static final int fragment_slider_image=0x7f0c005d;
-    public static final int fragment_slider_languages=0x7f0c005e;
-    public static final int fragment_slider_name=0x7f0c005f;
-    public static final int fragment_slider_number_of_kids=0x7f0c0060;
-    public static final int fragment_slider_relationships_status=0x7f0c0061;
-    public static final int fragment_slider_smoking_status=0x7f0c0062;
-    public static final int fragment_slider_willing_kids=0x7f0c0063;
-    public static final int fui_activity_invisible=0x7f0c0064;
-    public static final int fui_activity_register_email=0x7f0c0065;
-    public static final int fui_activity_register_phone=0x7f0c0066;
-    public static final int fui_auth_method_picker_layout=0x7f0c0067;
-    public static final int fui_check_email_layout=0x7f0c0068;
-    public static final int fui_confirmation_code_layout=0x7f0c0069;
-    public static final int fui_dgts_country_row=0x7f0c006a;
-    public static final int fui_email_link_cross_device_linking=0x7f0c006b;
-    public static final int fui_email_link_sign_in_layout=0x7f0c006c;
-    public static final int fui_email_link_trouble_signing_in_layout=0x7f0c006d;
-    public static final int fui_forgot_password_layout=0x7f0c006e;
-    public static final int fui_idp_button_facebook=0x7f0c006f;
-    public static final int fui_idp_button_github=0x7f0c0070;
-    public static final int fui_idp_button_google=0x7f0c0071;
-    public static final int fui_idp_button_twitter=0x7f0c0072;
-    public static final int fui_phone_layout=0x7f0c0073;
-    public static final int fui_provider_button_anonymous=0x7f0c0074;
-    public static final int fui_provider_button_email=0x7f0c0075;
-    public static final int fui_provider_button_phone=0x7f0c0076;
-    public static final int fui_register_email_layout=0x7f0c0077;
-    public static final int fui_welcome_back_email_link_prompt_layout=0x7f0c0078;
-    public static final int fui_welcome_back_idp_prompt_layout=0x7f0c0079;
-    public static final int fui_welcome_back_password_prompt_layout=0x7f0c007a;
-    public static final int item_action=0x7f0c007b;
-    public static final int item_country=0x7f0c007c;
-    public static final int item_hot=0x7f0c007d;
-    public static final int item_hot_first=0x7f0c007e;
-    public static final int item_hot_second=0x7f0c007f;
-    public static final int item_list_chat=0x7f0c0080;
-    public static final int item_message=0x7f0c0081;
-    public static final int item_progress=0x7f0c0082;
-    public static final int item_request=0x7f0c0083;
-    public static final int item_service=0x7f0c0084;
-    public static final int item_user=0x7f0c0085;
-    public static final int item_user_description_edit_item=0x7f0c0086;
-    public static final int item_user_description_item=0x7f0c0087;
-    public static final int loading_item=0x7f0c0088;
-    public static final int message_single_layout=0x7f0c0089;
-    public static final int messenger_button_send_blue_large=0x7f0c008a;
-    public static final int messenger_button_send_blue_round=0x7f0c008b;
-    public static final int messenger_button_send_blue_small=0x7f0c008c;
-    public static final int messenger_button_send_white_large=0x7f0c008d;
-    public static final int messenger_button_send_white_round=0x7f0c008e;
-    public static final int messenger_button_send_white_small=0x7f0c008f;
-    public static final int mtrl_layout_snackbar=0x7f0c0090;
-    public static final int mtrl_layout_snackbar_include=0x7f0c0091;
-    public static final int notification_action=0x7f0c0092;
-    public static final int notification_action_tombstone=0x7f0c0093;
-    public static final int notification_media_action=0x7f0c0094;
-    public static final int notification_media_cancel_action=0x7f0c0095;
-    public static final int notification_template_big_media=0x7f0c0096;
-    public static final int notification_template_big_media_custom=0x7f0c0097;
-    public static final int notification_template_big_media_narrow=0x7f0c0098;
-    public static final int notification_template_big_media_narrow_custom=0x7f0c0099;
-    public static final int notification_template_custom_big=0x7f0c009a;
-    public static final int notification_template_icon_group=0x7f0c009b;
-    public static final int notification_template_lines_media=0x7f0c009c;
-    public static final int notification_template_media=0x7f0c009d;
-    public static final int notification_template_media_custom=0x7f0c009e;
-    public static final int notification_template_part_chronometer=0x7f0c009f;
-    public static final int notification_template_part_time=0x7f0c00a0;
-    public static final int select_dialog_item_material=0x7f0c00a1;
-    public static final int select_dialog_multichoice_material=0x7f0c00a2;
-    public static final int select_dialog_singlechoice_material=0x7f0c00a3;
-    public static final int support_simple_spinner_dropdown_item=0x7f0c00a4;
-    public static final int users_single_layout=0x7f0c00a5;
-    public static final int viewpager_item=0x7f0c00a6;
-    public static final int widget_action=0x7f0c00a7;
+    public static final int activity_unlock_user=0x7f0c0029;
+    public static final int activity_user_info_view_pager=0x7f0c002a;
+    public static final int activity_users=0x7f0c002b;
+    public static final int ad_banner=0x7f0c002c;
+    public static final int app_bar_layout=0x7f0c002d;
+    public static final int browser_actions_context_menu_page=0x7f0c002e;
+    public static final int browser_actions_context_menu_row=0x7f0c002f;
+    public static final int chat_custom_bar=0x7f0c0030;
+    public static final int com_facebook_activity_layout=0x7f0c0031;
+    public static final int com_facebook_device_auth_dialog_fragment=0x7f0c0032;
+    public static final int com_facebook_login_fragment=0x7f0c0033;
+    public static final int com_facebook_smart_device_dialog_fragment=0x7f0c0034;
+    public static final int com_facebook_tooltip_bubble=0x7f0c0035;
+    public static final int crop_image_activity=0x7f0c0036;
+    public static final int crop_image_view=0x7f0c0037;
+    public static final int design_bottom_navigation_item=0x7f0c0038;
+    public static final int design_bottom_sheet_dialog=0x7f0c0039;
+    public static final int design_layout_snackbar=0x7f0c003a;
+    public static final int design_layout_snackbar_include=0x7f0c003b;
+    public static final int design_layout_tab_icon=0x7f0c003c;
+    public static final int design_layout_tab_text=0x7f0c003d;
+    public static final int design_menu_item_action_area=0x7f0c003e;
+    public static final int design_navigation_item=0x7f0c003f;
+    public static final int design_navigation_item_header=0x7f0c0040;
+    public static final int design_navigation_item_separator=0x7f0c0041;
+    public static final int design_navigation_item_subheader=0x7f0c0042;
+    public static final int design_navigation_menu=0x7f0c0043;
+    public static final int design_navigation_menu_item=0x7f0c0044;
+    public static final int design_text_input_password_icon=0x7f0c0045;
+    public static final int dialog_confirm_fragment=0x7f0c0046;
+    public static final int dialog_filters=0x7f0c0047;
+    public static final int dialog_gender=0x7f0c0048;
+    public static final int dialog_message=0x7f0c0049;
+    public static final int dialog_must_info=0x7f0c004a;
+    public static final int dialog_purchase_fragment=0x7f0c004b;
+    public static final int dialog_search=0x7f0c004c;
+    public static final int drawer=0x7f0c004d;
+    public static final int drawer_header=0x7f0c004e;
+    public static final int fragment_complain=0x7f0c004f;
+    public static final int fragment_main_tab_activities=0x7f0c0050;
+    public static final int fragment_main_tab_friends=0x7f0c0051;
+    public static final int fragment_main_tab_search=0x7f0c0052;
+    public static final int fragment_online_users=0x7f0c0053;
+    public static final int fragment_register=0x7f0c0054;
+    public static final int fragment_slider_age=0x7f0c0055;
+    public static final int fragment_slider_bodytype=0x7f0c0056;
+    public static final int fragment_slider_countries=0x7f0c0057;
+    public static final int fragment_slider_drink_status=0x7f0c0058;
+    public static final int fragment_slider_ethnicity=0x7f0c0059;
+    public static final int fragment_slider_faith=0x7f0c005a;
+    public static final int fragment_slider_gender=0x7f0c005b;
+    public static final int fragment_slider_height=0x7f0c005c;
+    public static final int fragment_slider_hobby=0x7f0c005d;
+    public static final int fragment_slider_image=0x7f0c005e;
+    public static final int fragment_slider_languages=0x7f0c005f;
+    public static final int fragment_slider_name=0x7f0c0060;
+    public static final int fragment_slider_number_of_kids=0x7f0c0061;
+    public static final int fragment_slider_relationships_status=0x7f0c0062;
+    public static final int fragment_slider_smoking_status=0x7f0c0063;
+    public static final int fragment_slider_willing_kids=0x7f0c0064;
+    public static final int fui_activity_invisible=0x7f0c0065;
+    public static final int fui_activity_register_email=0x7f0c0066;
+    public static final int fui_activity_register_phone=0x7f0c0067;
+    public static final int fui_auth_method_picker_layout=0x7f0c0068;
+    public static final int fui_check_email_layout=0x7f0c0069;
+    public static final int fui_confirmation_code_layout=0x7f0c006a;
+    public static final int fui_dgts_country_row=0x7f0c006b;
+    public static final int fui_email_link_cross_device_linking=0x7f0c006c;
+    public static final int fui_email_link_sign_in_layout=0x7f0c006d;
+    public static final int fui_email_link_trouble_signing_in_layout=0x7f0c006e;
+    public static final int fui_forgot_password_layout=0x7f0c006f;
+    public static final int fui_idp_button_facebook=0x7f0c0070;
+    public static final int fui_idp_button_github=0x7f0c0071;
+    public static final int fui_idp_button_google=0x7f0c0072;
+    public static final int fui_idp_button_twitter=0x7f0c0073;
+    public static final int fui_phone_layout=0x7f0c0074;
+    public static final int fui_provider_button_anonymous=0x7f0c0075;
+    public static final int fui_provider_button_email=0x7f0c0076;
+    public static final int fui_provider_button_phone=0x7f0c0077;
+    public static final int fui_register_email_layout=0x7f0c0078;
+    public static final int fui_welcome_back_email_link_prompt_layout=0x7f0c0079;
+    public static final int fui_welcome_back_idp_prompt_layout=0x7f0c007a;
+    public static final int fui_welcome_back_password_prompt_layout=0x7f0c007b;
+    public static final int item_action=0x7f0c007c;
+    public static final int item_country=0x7f0c007d;
+    public static final int item_hot=0x7f0c007e;
+    public static final int item_hot_first=0x7f0c007f;
+    public static final int item_hot_second=0x7f0c0080;
+    public static final int item_list_chat=0x7f0c0081;
+    public static final int item_message=0x7f0c0082;
+    public static final int item_progress=0x7f0c0083;
+    public static final int item_request=0x7f0c0084;
+    public static final int item_service=0x7f0c0085;
+    public static final int item_user=0x7f0c0086;
+    public static final int item_user_description_edit_item=0x7f0c0087;
+    public static final int item_user_description_item=0x7f0c0088;
+    public static final int loading_item=0x7f0c0089;
+    public static final int message_single_layout=0x7f0c008a;
+    public static final int messenger_button_send_blue_large=0x7f0c008b;
+    public static final int messenger_button_send_blue_round=0x7f0c008c;
+    public static final int messenger_button_send_blue_small=0x7f0c008d;
+    public static final int messenger_button_send_white_large=0x7f0c008e;
+    public static final int messenger_button_send_white_round=0x7f0c008f;
+    public static final int messenger_button_send_white_small=0x7f0c0090;
+    public static final int mtrl_layout_snackbar=0x7f0c0091;
+    public static final int mtrl_layout_snackbar_include=0x7f0c0092;
+    public static final int notification_action=0x7f0c0093;
+    public static final int notification_action_tombstone=0x7f0c0094;
+    public static final int notification_media_action=0x7f0c0095;
+    public static final int notification_media_cancel_action=0x7f0c0096;
+    public static final int notification_template_big_media=0x7f0c0097;
+    public static final int notification_template_big_media_custom=0x7f0c0098;
+    public static final int notification_template_big_media_narrow=0x7f0c0099;
+    public static final int notification_template_big_media_narrow_custom=0x7f0c009a;
+    public static final int notification_template_custom_big=0x7f0c009b;
+    public static final int notification_template_icon_group=0x7f0c009c;
+    public static final int notification_template_lines_media=0x7f0c009d;
+    public static final int notification_template_media=0x7f0c009e;
+    public static final int notification_template_media_custom=0x7f0c009f;
+    public static final int notification_template_part_chronometer=0x7f0c00a0;
+    public static final int notification_template_part_time=0x7f0c00a1;
+    public static final int select_dialog_item_material=0x7f0c00a2;
+    public static final int select_dialog_multichoice_material=0x7f0c00a3;
+    public static final int select_dialog_singlechoice_material=0x7f0c00a4;
+    public static final int support_simple_spinner_dropdown_item=0x7f0c00a5;
+    public static final int users_single_layout=0x7f0c00a6;
+    public static final int viewpager_item=0x7f0c00a7;
+    public static final int widget_action=0x7f0c00a8;
   }
   public static final class menu {
     public static final int crop_image_menu=0x7f0d0000;
@@ -8444,116 +8027,118 @@ public final class R {
     public static final int ru_smoke_status=0x7f1001ce;
     public static final int ru_someday=0x7f1001cf;
     public static final int ru_stocky=0x7f1001d0;
-    public static final int ru_what_drink_status=0x7f1001d1;
-    public static final int ru_white_caucasian=0x7f1001d2;
-    public static final int ru_widow_widower=0x7f1001d3;
-    public static final int ru_yes_but_trying_to_quit=0x7f1001d4;
-    public static final int ru_yes_they_live_at_home=0x7f1001d5;
-    public static final int ru_yes_they_live_away_from_home=0x7f1001d6;
-    public static final int ru_yes_they_sometimes_live_at_home=0x7f1001d7;
-    public static final int s1=0x7f1001d8;
-    public static final int s2=0x7f1001d9;
-    public static final int s3=0x7f1001da;
-    public static final int s4=0x7f1001db;
-    public static final int s5=0x7f1001dc;
-    public static final int s6=0x7f1001dd;
-    public static final int s7=0x7f1001de;
-    public static final int save=0x7f1001df;
-    public static final int search=0x7f1001e0;
-    public static final int search_btn_like_desc=0x7f1001e1;
-    public static final int search_menu_title=0x7f1001e2;
-    public static final int search_title=0x7f1001e3;
-    public static final int select_image=0x7f1001e4;
-    public static final int select_your_gender=0x7f1001e5;
-    public static final int select_your_smoke_status=0x7f1001e6;
-    public static final int send=0x7f1001e7;
-    public static final int send_friend_request=0x7f1001e8;
-    public static final int send_friend_request_text=0x7f1001e9;
-    public static final int services=0x7f1001ea;
-    public static final int set_languages=0x7f1001eb;
-    public static final int set_status=0x7f1001ec;
-    public static final int set_the_answer=0x7f1001ed;
-    public static final int set_your_body_type=0x7f1001ee;
-    public static final int set_your_ethnicity=0x7f1001ef;
-    public static final int set_your_faith=0x7f1001f0;
-    public static final int set_your_height=0x7f1001f1;
-    public static final int shop=0x7f1001f2;
-    public static final int sign_out=0x7f1001f3;
-    public static final int slender=0x7f1001f4;
-    public static final int slider_language_text=0x7f1001f5;
-    public static final int smoke_status=0x7f1001f6;
-    public static final int smoking_status=0x7f1001f7;
-    public static final int smoking_updated=0x7f1001f8;
-    public static final int soc_med_scrn_msg=0x7f1001f9;
-    public static final int social_drinker=0x7f1001fa;
-    public static final int someday=0x7f1001fb;
-    public static final int something_went_wrong=0x7f1001fc;
-    public static final int status_bar_notification_info_overflow=0x7f1001fd;
-    public static final int status_save_btn_text=0x7f1001fe;
-    public static final int stocky=0x7f1001ff;
-    public static final int support_email=0x7f100200;
-    public static final int text=0x7f100201;
-    public static final int there_is_an_error=0x7f100202;
-    public static final int this_is_not_ready=0x7f100203;
-    public static final int time_of_message_text=0x7f100204;
-    public static final int title_text=0x7f100205;
-    public static final int to_see_more_users_please_register=0x7f100206;
-    public static final int total_friends_text=0x7f100207;
-    public static final int tracker_id=0x7f100208;
-    public static final int twitter_consumer_key=0x7f100209;
-    public static final int twitter_consumer_secret=0x7f10020a;
-    public static final int unfriend=0x7f10020b;
-    public static final int uploading_image=0x7f10020c;
-    public static final int user_avatar=0x7f10020d;
-    public static final int user_default_status=0x7f10020e;
-    public static final int user_information_category=0x7f10020f;
-    public static final int user_profile_text=0x7f100210;
-    public static final int user_single_online_desc=0x7f100211;
-    public static final int visitors=0x7f100212;
-    public static final int visits=0x7f100213;
-    public static final int we_will_post_you_in_our_social_media=0x7f100214;
-    public static final int what_age=0x7f100215;
-    public static final int what_age_looking_for=0x7f100216;
-    public static final int what_bodytype=0x7f100217;
-    public static final int what_bodytype_looking_for=0x7f100218;
-    public static final int what_country_looking_for=0x7f100219;
-    public static final int what_drink_status=0x7f10021a;
-    public static final int what_drink_status_looking_for=0x7f10021b;
-    public static final int what_ethnicity=0x7f10021c;
-    public static final int what_ethnicity_looking_for=0x7f10021d;
-    public static final int what_faith=0x7f10021e;
-    public static final int what_faith_looking_for=0x7f10021f;
-    public static final int what_gender=0x7f100220;
-    public static final int what_is_your_height=0x7f100221;
-    public static final int what_relationship_status=0x7f100222;
-    public static final int what_relationships_looking_for=0x7f100223;
-    public static final int what_smoke_status=0x7f100224;
-    public static final int what_smoke_status_looking_for=0x7f100225;
-    public static final int where_are_you_from=0x7f100226;
-    public static final int where_live=0x7f100227;
-    public static final int which_best_ethnicities_best_describes_you=0x7f100228;
-    public static final int which_ethnicity_best_describe_you=0x7f100229;
-    public static final int white_caucasian=0x7f10022a;
-    public static final int who_are_you_looking_for=0x7f10022b;
-    public static final int widow_widower=0x7f10022c;
-    public static final int willing_kids_status_looking_for=0x7f10022d;
-    public static final int willing_kids_updated=0x7f10022e;
-    public static final int yes=0x7f10022f;
-    public static final int yes_but_trying_to_quit=0x7f100230;
-    public static final int yes_ru=0x7f100231;
-    public static final int yes_they_live_at_home=0x7f100232;
-    public static final int yes_they_live_away_from_home=0x7f100233;
-    public static final int yes_they_sometimes_live_at_home=0x7f100234;
-    public static final int you=0x7f100235;
-    public static final int you_have=0x7f100236;
-    public static final int you_may_also_like_them=0x7f100237;
-    public static final int your_body_type=0x7f100238;
-    public static final int your_gender=0x7f100239;
-    public static final int your_hobby=0x7f10023a;
-    public static final int your_name=0x7f10023b;
-    public static final int your_name_is_here=0x7f10023c;
-    public static final int your_own_variant=0x7f10023d;
-    public static final int your_status_hint=0x7f10023e;
+    public static final int ru_user_block=0x7f1001d1;
+    public static final int ru_what_drink_status=0x7f1001d2;
+    public static final int ru_white_caucasian=0x7f1001d3;
+    public static final int ru_widow_widower=0x7f1001d4;
+    public static final int ru_yes_but_trying_to_quit=0x7f1001d5;
+    public static final int ru_yes_they_live_at_home=0x7f1001d6;
+    public static final int ru_yes_they_live_away_from_home=0x7f1001d7;
+    public static final int ru_yes_they_sometimes_live_at_home=0x7f1001d8;
+    public static final int s1=0x7f1001d9;
+    public static final int s2=0x7f1001da;
+    public static final int s3=0x7f1001db;
+    public static final int s4=0x7f1001dc;
+    public static final int s5=0x7f1001dd;
+    public static final int s6=0x7f1001de;
+    public static final int s7=0x7f1001df;
+    public static final int save=0x7f1001e0;
+    public static final int search=0x7f1001e1;
+    public static final int search_btn_like_desc=0x7f1001e2;
+    public static final int search_menu_title=0x7f1001e3;
+    public static final int search_title=0x7f1001e4;
+    public static final int select_image=0x7f1001e5;
+    public static final int select_your_gender=0x7f1001e6;
+    public static final int select_your_smoke_status=0x7f1001e7;
+    public static final int send=0x7f1001e8;
+    public static final int send_friend_request=0x7f1001e9;
+    public static final int send_friend_request_text=0x7f1001ea;
+    public static final int services=0x7f1001eb;
+    public static final int set_languages=0x7f1001ec;
+    public static final int set_status=0x7f1001ed;
+    public static final int set_the_answer=0x7f1001ee;
+    public static final int set_your_body_type=0x7f1001ef;
+    public static final int set_your_ethnicity=0x7f1001f0;
+    public static final int set_your_faith=0x7f1001f1;
+    public static final int set_your_height=0x7f1001f2;
+    public static final int shop=0x7f1001f3;
+    public static final int sign_out=0x7f1001f4;
+    public static final int slender=0x7f1001f5;
+    public static final int slider_language_text=0x7f1001f6;
+    public static final int smoke_status=0x7f1001f7;
+    public static final int smoking_status=0x7f1001f8;
+    public static final int smoking_updated=0x7f1001f9;
+    public static final int soc_med_scrn_msg=0x7f1001fa;
+    public static final int social_drinker=0x7f1001fb;
+    public static final int someday=0x7f1001fc;
+    public static final int something_went_wrong=0x7f1001fd;
+    public static final int status_bar_notification_info_overflow=0x7f1001fe;
+    public static final int status_save_btn_text=0x7f1001ff;
+    public static final int stocky=0x7f100200;
+    public static final int support_email=0x7f100201;
+    public static final int text=0x7f100202;
+    public static final int there_is_an_error=0x7f100203;
+    public static final int this_is_not_ready=0x7f100204;
+    public static final int time_of_message_text=0x7f100205;
+    public static final int title_text=0x7f100206;
+    public static final int to_see_more_users_please_register=0x7f100207;
+    public static final int total_friends_text=0x7f100208;
+    public static final int tracker_id=0x7f100209;
+    public static final int twitter_consumer_key=0x7f10020a;
+    public static final int twitter_consumer_secret=0x7f10020b;
+    public static final int unfriend=0x7f10020c;
+    public static final int uploading_image=0x7f10020d;
+    public static final int user_avatar=0x7f10020e;
+    public static final int user_block=0x7f10020f;
+    public static final int user_default_status=0x7f100210;
+    public static final int user_information_category=0x7f100211;
+    public static final int user_profile_text=0x7f100212;
+    public static final int user_single_online_desc=0x7f100213;
+    public static final int visitors=0x7f100214;
+    public static final int visits=0x7f100215;
+    public static final int we_will_post_you_in_our_social_media=0x7f100216;
+    public static final int what_age=0x7f100217;
+    public static final int what_age_looking_for=0x7f100218;
+    public static final int what_bodytype=0x7f100219;
+    public static final int what_bodytype_looking_for=0x7f10021a;
+    public static final int what_country_looking_for=0x7f10021b;
+    public static final int what_drink_status=0x7f10021c;
+    public static final int what_drink_status_looking_for=0x7f10021d;
+    public static final int what_ethnicity=0x7f10021e;
+    public static final int what_ethnicity_looking_for=0x7f10021f;
+    public static final int what_faith=0x7f100220;
+    public static final int what_faith_looking_for=0x7f100221;
+    public static final int what_gender=0x7f100222;
+    public static final int what_is_your_height=0x7f100223;
+    public static final int what_relationship_status=0x7f100224;
+    public static final int what_relationships_looking_for=0x7f100225;
+    public static final int what_smoke_status=0x7f100226;
+    public static final int what_smoke_status_looking_for=0x7f100227;
+    public static final int where_are_you_from=0x7f100228;
+    public static final int where_live=0x7f100229;
+    public static final int which_best_ethnicities_best_describes_you=0x7f10022a;
+    public static final int which_ethnicity_best_describe_you=0x7f10022b;
+    public static final int white_caucasian=0x7f10022c;
+    public static final int who_are_you_looking_for=0x7f10022d;
+    public static final int widow_widower=0x7f10022e;
+    public static final int willing_kids_status_looking_for=0x7f10022f;
+    public static final int willing_kids_updated=0x7f100230;
+    public static final int yes=0x7f100231;
+    public static final int yes_but_trying_to_quit=0x7f100232;
+    public static final int yes_ru=0x7f100233;
+    public static final int yes_they_live_at_home=0x7f100234;
+    public static final int yes_they_live_away_from_home=0x7f100235;
+    public static final int yes_they_sometimes_live_at_home=0x7f100236;
+    public static final int you=0x7f100237;
+    public static final int you_have=0x7f100238;
+    public static final int you_may_also_like_them=0x7f100239;
+    public static final int your_body_type=0x7f10023a;
+    public static final int your_gender=0x7f10023b;
+    public static final int your_hobby=0x7f10023c;
+    public static final int your_name=0x7f10023d;
+    public static final int your_name_is_here=0x7f10023e;
+    public static final int your_own_variant=0x7f10023f;
+    public static final int your_status_hint=0x7f100240;
   }
   public static final class style {
     public static final int AlertDialog_AppCompat=0x7f110000;
@@ -9154,39 +8739,35 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #ActionBar_background com.borisruzanov.russianwives:background}</code></td><td>Specifies a background drawable for the action bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_backgroundSplit com.borisruzanov.russianwives:backgroundSplit}</code></td><td>Specifies a background drawable for the bottom component of a split action bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_backgroundStacked com.borisruzanov.russianwives:backgroundStacked}</code></td><td>Specifies a background drawable for a second stacked row of the action bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_contentInsetEnd com.borisruzanov.russianwives:contentInsetEnd}</code></td><td>Minimum inset for content views within a bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_contentInsetEndWithActions com.borisruzanov.russianwives:contentInsetEndWithActions}</code></td><td>Minimum inset for content views within a bar when actions from a menu
-     * are present.</td></tr>
-     * <tr><td><code>{@link #ActionBar_contentInsetLeft com.borisruzanov.russianwives:contentInsetLeft}</code></td><td>Minimum inset for content views within a bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_contentInsetRight com.borisruzanov.russianwives:contentInsetRight}</code></td><td>Minimum inset for content views within a bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_contentInsetStart com.borisruzanov.russianwives:contentInsetStart}</code></td><td>Minimum inset for content views within a bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_contentInsetStartWithNavigation com.borisruzanov.russianwives:contentInsetStartWithNavigation}</code></td><td>Minimum inset for content views within a bar when a navigation button
-     * is present, such as the Up button.</td></tr>
-     * <tr><td><code>{@link #ActionBar_customNavigationLayout com.borisruzanov.russianwives:customNavigationLayout}</code></td><td>Specifies a layout for custom navigation.</td></tr>
-     * <tr><td><code>{@link #ActionBar_displayOptions com.borisruzanov.russianwives:displayOptions}</code></td><td>Options affecting how the action bar is displayed.</td></tr>
-     * <tr><td><code>{@link #ActionBar_divider com.borisruzanov.russianwives:divider}</code></td><td>Specifies the drawable used for item dividers.</td></tr>
-     * <tr><td><code>{@link #ActionBar_elevation com.borisruzanov.russianwives:elevation}</code></td><td>Elevation for the action bar itself</td></tr>
+     * <tr><td><code>{@link #ActionBar_background com.borisruzanov.russianwives:background}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_backgroundSplit com.borisruzanov.russianwives:backgroundSplit}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_backgroundStacked com.borisruzanov.russianwives:backgroundStacked}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_contentInsetEnd com.borisruzanov.russianwives:contentInsetEnd}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_contentInsetEndWithActions com.borisruzanov.russianwives:contentInsetEndWithActions}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_contentInsetLeft com.borisruzanov.russianwives:contentInsetLeft}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_contentInsetRight com.borisruzanov.russianwives:contentInsetRight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_contentInsetStart com.borisruzanov.russianwives:contentInsetStart}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_contentInsetStartWithNavigation com.borisruzanov.russianwives:contentInsetStartWithNavigation}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_customNavigationLayout com.borisruzanov.russianwives:customNavigationLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_displayOptions com.borisruzanov.russianwives:displayOptions}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_divider com.borisruzanov.russianwives:divider}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_elevation com.borisruzanov.russianwives:elevation}</code></td><td></td></tr>
      * <tr><td><code>{@link #ActionBar_height com.borisruzanov.russianwives:height}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_hideOnContentScroll com.borisruzanov.russianwives:hideOnContentScroll}</code></td><td>Set true to hide the action bar on a vertical nested scroll of content.</td></tr>
-     * <tr><td><code>{@link #ActionBar_homeAsUpIndicator com.borisruzanov.russianwives:homeAsUpIndicator}</code></td><td>Specifies a drawable to use for the 'home as up' indicator.</td></tr>
-     * <tr><td><code>{@link #ActionBar_homeLayout com.borisruzanov.russianwives:homeLayout}</code></td><td>Specifies a layout to use for the "home" section of the action bar.</td></tr>
+     * <tr><td><code>{@link #ActionBar_hideOnContentScroll com.borisruzanov.russianwives:hideOnContentScroll}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_homeAsUpIndicator com.borisruzanov.russianwives:homeAsUpIndicator}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_homeLayout com.borisruzanov.russianwives:homeLayout}</code></td><td></td></tr>
      * <tr><td><code>{@link #ActionBar_icon com.borisruzanov.russianwives:icon}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_indeterminateProgressStyle com.borisruzanov.russianwives:indeterminateProgressStyle}</code></td><td>Specifies a style resource to use for an indeterminate progress spinner.</td></tr>
-     * <tr><td><code>{@link #ActionBar_itemPadding com.borisruzanov.russianwives:itemPadding}</code></td><td>Specifies padding that should be applied to the left and right sides of
-     * system-provided items in the bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_logo com.borisruzanov.russianwives:logo}</code></td><td>Specifies the drawable used for the application logo.</td></tr>
-     * <tr><td><code>{@link #ActionBar_navigationMode com.borisruzanov.russianwives:navigationMode}</code></td><td>The type of navigation to use.</td></tr>
-     * <tr><td><code>{@link #ActionBar_popupTheme com.borisruzanov.russianwives:popupTheme}</code></td><td>Reference to a theme that should be used to inflate popups
-     * shown by widgets in the action bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_progressBarPadding com.borisruzanov.russianwives:progressBarPadding}</code></td><td>Specifies the horizontal padding on either end for an embedded progress bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_progressBarStyle com.borisruzanov.russianwives:progressBarStyle}</code></td><td>Specifies a style resource to use for an embedded progress bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_subtitle com.borisruzanov.russianwives:subtitle}</code></td><td>Specifies subtitle text used for navigationMode="normal"</td></tr>
-     * <tr><td><code>{@link #ActionBar_subtitleTextStyle com.borisruzanov.russianwives:subtitleTextStyle}</code></td><td>Specifies a style to use for subtitle text.</td></tr>
+     * <tr><td><code>{@link #ActionBar_indeterminateProgressStyle com.borisruzanov.russianwives:indeterminateProgressStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_itemPadding com.borisruzanov.russianwives:itemPadding}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_logo com.borisruzanov.russianwives:logo}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_navigationMode com.borisruzanov.russianwives:navigationMode}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_popupTheme com.borisruzanov.russianwives:popupTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_progressBarPadding com.borisruzanov.russianwives:progressBarPadding}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_progressBarStyle com.borisruzanov.russianwives:progressBarStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_subtitle com.borisruzanov.russianwives:subtitle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_subtitleTextStyle com.borisruzanov.russianwives:subtitleTextStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #ActionBar_title com.borisruzanov.russianwives:title}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_titleTextStyle com.borisruzanov.russianwives:titleTextStyle}</code></td><td>Specifies a style to use for title text.</td></tr>
+     * <tr><td><code>{@link #ActionBar_titleTextStyle com.borisruzanov.russianwives:titleTextStyle}</code></td><td></td></tr>
      * </table>
      * @see #ActionBar_background
      * @see #ActionBar_backgroundSplit
@@ -9224,14 +8805,13 @@ public final class R {
       0x7f0400c0, 0x7f0400f8, 0x7f040104, 0x7f040105, 
       0x7f040118, 0x7f040156, 0x7f04015b, 0x7f040160, 
       0x7f040161, 0x7f040163, 0x7f04016f, 0x7f040179, 
-      0x7f0401d2, 0x7f04020d, 0x7f040230, 0x7f040235, 
-      0x7f040236, 0x7f040270, 0x7f040273, 0x7f0402bc, 
-      0x7f0402c6
+      0x7f0401d2, 0x7f04020d, 0x7f040231, 0x7f040236, 
+      0x7f040237, 0x7f040271, 0x7f040274, 0x7f0402bd, 
+      0x7f0402c7
     };
     /**
-     * <p>
-     * @attr description
-     * Specifies a background drawable for the action bar.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#background}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9242,9 +8822,8 @@ public final class R {
      */
     public static final int ActionBar_background=0;
     /**
-     * <p>
-     * @attr description
-     * Specifies a background drawable for the bottom component of a split action bar.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#backgroundSplit}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9258,9 +8837,8 @@ public final class R {
      */
     public static final int ActionBar_backgroundSplit=1;
     /**
-     * <p>
-     * @attr description
-     * Specifies a background drawable for a second stacked row of the action bar.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#backgroundStacked}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9274,10 +8852,8 @@ public final class R {
      */
     public static final int ActionBar_backgroundStacked=2;
     /**
-     * <p>
-     * @attr description
-     * Minimum inset for content views within a bar. Navigation buttons and
-     * menu views are excepted. Only valid for some themes and configurations.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#contentInsetEnd}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -9289,10 +8865,8 @@ public final class R {
      */
     public static final int ActionBar_contentInsetEnd=3;
     /**
-     * <p>
-     * @attr description
-     * Minimum inset for content views within a bar when actions from a menu
-     * are present. Only valid for some themes and configurations.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#contentInsetEndWithActions}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -9304,10 +8878,8 @@ public final class R {
      */
     public static final int ActionBar_contentInsetEndWithActions=4;
     /**
-     * <p>
-     * @attr description
-     * Minimum inset for content views within a bar. Navigation buttons and
-     * menu views are excepted. Only valid for some themes and configurations.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#contentInsetLeft}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -9319,10 +8891,8 @@ public final class R {
      */
     public static final int ActionBar_contentInsetLeft=5;
     /**
-     * <p>
-     * @attr description
-     * Minimum inset for content views within a bar. Navigation buttons and
-     * menu views are excepted. Only valid for some themes and configurations.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#contentInsetRight}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -9334,10 +8904,8 @@ public final class R {
      */
     public static final int ActionBar_contentInsetRight=6;
     /**
-     * <p>
-     * @attr description
-     * Minimum inset for content views within a bar. Navigation buttons and
-     * menu views are excepted. Only valid for some themes and configurations.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#contentInsetStart}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -9349,10 +8917,8 @@ public final class R {
      */
     public static final int ActionBar_contentInsetStart=7;
     /**
-     * <p>
-     * @attr description
-     * Minimum inset for content views within a bar when a navigation button
-     * is present, such as the Up button. Only valid for some themes and configurations.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#contentInsetStartWithNavigation}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -9364,9 +8930,8 @@ public final class R {
      */
     public static final int ActionBar_contentInsetStartWithNavigation=8;
     /**
-     * <p>
-     * @attr description
-     * Specifies a layout for custom navigation. Overrides navigationMode.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#customNavigationLayout}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9377,9 +8942,8 @@ public final class R {
      */
     public static final int ActionBar_customNavigationLayout=9;
     /**
-     * <p>
-     * @attr description
-     * Options affecting how the action bar is displayed.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#displayOptions}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -9400,9 +8964,8 @@ public final class R {
      */
     public static final int ActionBar_displayOptions=10;
     /**
-     * <p>
-     * @attr description
-     * Specifies the drawable used for item dividers.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#divider}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9413,9 +8976,8 @@ public final class R {
      */
     public static final int ActionBar_divider=11;
     /**
-     * <p>
-     * @attr description
-     * Elevation for the action bar itself
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#elevation}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -9427,9 +8989,8 @@ public final class R {
      */
     public static final int ActionBar_elevation=12;
     /**
-     * <p>
-     * @attr description
-     * Specifies a fixed height.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#height}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -9441,9 +9002,8 @@ public final class R {
      */
     public static final int ActionBar_height=13;
     /**
-     * <p>
-     * @attr description
-     * Set true to hide the action bar on a vertical nested scroll of content.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#hideOnContentScroll}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -9452,9 +9012,8 @@ public final class R {
      */
     public static final int ActionBar_hideOnContentScroll=14;
     /**
-     * <p>
-     * @attr description
-     * Up navigation glyph
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#homeAsUpIndicator}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9465,9 +9024,8 @@ public final class R {
      */
     public static final int ActionBar_homeAsUpIndicator=15;
     /**
-     * <p>
-     * @attr description
-     * Specifies a layout to use for the "home" section of the action bar.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#homeLayout}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9478,9 +9036,8 @@ public final class R {
      */
     public static final int ActionBar_homeLayout=16;
     /**
-     * <p>
-     * @attr description
-     * Specifies the drawable used for the application icon.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#icon}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9491,9 +9048,8 @@ public final class R {
      */
     public static final int ActionBar_icon=17;
     /**
-     * <p>
-     * @attr description
-     * Specifies a style resource to use for an indeterminate progress spinner.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#indeterminateProgressStyle}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9504,10 +9060,8 @@ public final class R {
      */
     public static final int ActionBar_indeterminateProgressStyle=18;
     /**
-     * <p>
-     * @attr description
-     * Specifies padding that should be applied to the left and right sides of
-     * system-provided items in the bar.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#itemPadding}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -9519,9 +9073,8 @@ public final class R {
      */
     public static final int ActionBar_itemPadding=19;
     /**
-     * <p>
-     * @attr description
-     * Specifies the drawable used for the application logo.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#logo}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9532,9 +9085,8 @@ public final class R {
      */
     public static final int ActionBar_logo=20;
     /**
-     * <p>
-     * @attr description
-     * The type of navigation to use.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#navigationMode}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -9542,19 +9094,17 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>listMode</td><td>1</td><td>The action bar will use a selection list for navigation.</td></tr>
-     * <tr><td>normal</td><td>0</td><td>Normal static title text</td></tr>
-     * <tr><td>tabMode</td><td>2</td><td>The action bar will use a series of horizontal tabs for navigation.</td></tr>
+     * <tr><td>listMode</td><td>1</td><td></td></tr>
+     * <tr><td>normal</td><td>0</td><td></td></tr>
+     * <tr><td>tabMode</td><td>2</td><td></td></tr>
      * </table>
      *
      * @attr name com.borisruzanov.russianwives:navigationMode
      */
     public static final int ActionBar_navigationMode=21;
     /**
-     * <p>
-     * @attr description
-     * Reference to a theme that should be used to inflate popups
-     * shown by widgets in the action bar.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#popupTheme}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9565,9 +9115,8 @@ public final class R {
      */
     public static final int ActionBar_popupTheme=22;
     /**
-     * <p>
-     * @attr description
-     * Specifies the horizontal padding on either end for an embedded progress bar.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#progressBarPadding}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -9579,9 +9128,8 @@ public final class R {
      */
     public static final int ActionBar_progressBarPadding=23;
     /**
-     * <p>
-     * @attr description
-     * Specifies a style resource to use for an embedded progress bar.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#progressBarStyle}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9592,9 +9140,8 @@ public final class R {
      */
     public static final int ActionBar_progressBarStyle=24;
     /**
-     * <p>
-     * @attr description
-     * Specifies subtitle text used for navigationMode="normal"
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#subtitle}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -9603,9 +9150,8 @@ public final class R {
      */
     public static final int ActionBar_subtitle=25;
     /**
-     * <p>
-     * @attr description
-     * Specifies a style to use for subtitle text.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#subtitleTextStyle}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9616,9 +9162,8 @@ public final class R {
      */
     public static final int ActionBar_subtitleTextStyle=26;
     /**
-     * <p>
-     * @attr description
-     * Specifies title text used for navigationMode="normal"
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#title}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -9627,9 +9172,8 @@ public final class R {
      */
     public static final int ActionBar_title=27;
     /**
-     * <p>
-     * @attr description
-     * Specifies a style to use for title text.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#titleTextStyle}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9718,12 +9262,12 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #ActionMode_background com.borisruzanov.russianwives:background}</code></td><td>Specifies a background drawable for the action bar.</td></tr>
-     * <tr><td><code>{@link #ActionMode_backgroundSplit com.borisruzanov.russianwives:backgroundSplit}</code></td><td>Specifies a background drawable for the bottom component of a split action bar.</td></tr>
-     * <tr><td><code>{@link #ActionMode_closeItemLayout com.borisruzanov.russianwives:closeItemLayout}</code></td><td>Specifies a layout to use for the "close" item at the starting edge.</td></tr>
+     * <tr><td><code>{@link #ActionMode_background com.borisruzanov.russianwives:background}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionMode_backgroundSplit com.borisruzanov.russianwives:backgroundSplit}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionMode_closeItemLayout com.borisruzanov.russianwives:closeItemLayout}</code></td><td></td></tr>
      * <tr><td><code>{@link #ActionMode_height com.borisruzanov.russianwives:height}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionMode_subtitleTextStyle com.borisruzanov.russianwives:subtitleTextStyle}</code></td><td>Specifies a style to use for subtitle text.</td></tr>
-     * <tr><td><code>{@link #ActionMode_titleTextStyle com.borisruzanov.russianwives:titleTextStyle}</code></td><td>Specifies a style to use for title text.</td></tr>
+     * <tr><td><code>{@link #ActionMode_subtitleTextStyle com.borisruzanov.russianwives:subtitleTextStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionMode_titleTextStyle com.borisruzanov.russianwives:titleTextStyle}</code></td><td></td></tr>
      * </table>
      * @see #ActionMode_background
      * @see #ActionMode_backgroundSplit
@@ -9734,12 +9278,11 @@ public final class R {
      */
     public static final int[] ActionMode={
       0x7f04003a, 0x7f04003b, 0x7f040095, 0x7f040156, 
-      0x7f040273, 0x7f0402c6
+      0x7f040274, 0x7f0402c7
     };
     /**
-     * <p>
-     * @attr description
-     * Specifies a background for the action mode bar.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#background}
+     * attribute's value can be found in the {@link #ActionMode} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9750,9 +9293,8 @@ public final class R {
      */
     public static final int ActionMode_background=0;
     /**
-     * <p>
-     * @attr description
-     * Specifies a background for the split action mode bar.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#backgroundSplit}
+     * attribute's value can be found in the {@link #ActionMode} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9766,9 +9308,8 @@ public final class R {
      */
     public static final int ActionMode_backgroundSplit=1;
     /**
-     * <p>
-     * @attr description
-     * Specifies a layout to use for the "close" item at the starting edge.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#closeItemLayout}
+     * attribute's value can be found in the {@link #ActionMode} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9779,9 +9320,8 @@ public final class R {
      */
     public static final int ActionMode_closeItemLayout=2;
     /**
-     * <p>
-     * @attr description
-     * Specifies a fixed height for the action mode bar.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#height}
+     * attribute's value can be found in the {@link #ActionMode} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -9793,9 +9333,8 @@ public final class R {
      */
     public static final int ActionMode_height=3;
     /**
-     * <p>
-     * @attr description
-     * Specifies a style to use for subtitle text.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#subtitleTextStyle}
+     * attribute's value can be found in the {@link #ActionMode} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9806,9 +9345,8 @@ public final class R {
      */
     public static final int ActionMode_subtitleTextStyle=4;
     /**
-     * <p>
-     * @attr description
-     * Specifies a style to use for title text.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#titleTextStyle}
+     * attribute's value can be found in the {@link #ActionMode} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9825,8 +9363,8 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable com.borisruzanov.russianwives:expandActivityOverflowButtonDrawable}</code></td><td>The drawable to show in the button for expanding the activities overflow popup.</td></tr>
-     * <tr><td><code>{@link #ActivityChooserView_initialActivityCount com.borisruzanov.russianwives:initialActivityCount}</code></td><td>The maximal number of items initially shown in the activity list.</td></tr>
+     * <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable com.borisruzanov.russianwives:expandActivityOverflowButtonDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActivityChooserView_initialActivityCount com.borisruzanov.russianwives:initialActivityCount}</code></td><td></td></tr>
      * </table>
      * @see #ActivityChooserView_expandActivityOverflowButtonDrawable
      * @see #ActivityChooserView_initialActivityCount
@@ -9835,13 +9373,8 @@ public final class R {
       0x7f04011d, 0x7f040170
     };
     /**
-     * <p>
-     * @attr description
-     * The drawable to show in the button for expanding the activities overflow popup.
-     * <strong>Note:</strong> Clients would like to set this drawable
-     * as a clue about the action the chosen activity will perform. For
-     * example, if share activity is to be chosen the drawable should
-     * give a clue that sharing is to be performed.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#expandActivityOverflowButtonDrawable}
+     * attribute's value can be found in the {@link #ActivityChooserView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9852,9 +9385,8 @@ public final class R {
      */
     public static final int ActivityChooserView_expandActivityOverflowButtonDrawable=0;
     /**
-     * <p>
-     * @attr description
-     * The maximal number of items initially shown in the activity list.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#initialActivityCount}
+     * attribute's value can be found in the {@link #ActivityChooserView} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -9937,7 +9469,7 @@ public final class R {
      */
     public static final int[] AlertDialog={
       0x010100f2, 0x7f04005f, 0x7f040060, 0x7f0401c9, 
-      0x7f0401ca, 0x7f04020a, 0x7f040255, 0x7f040256
+      0x7f0401ca, 0x7f04020a, 0x7f040256, 0x7f040257
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#layout}
@@ -10060,11 +9592,8 @@ public final class R {
       0x0101030c, 0x0101030d
     };
     /**
-     * <p>
-     * @attr description
-     * Enables or disables dithering of the bitmap if the bitmap does not have the
-     * same pixel configuration as the screen (for instance: a ARGB 8888 bitmap with
-     * an RGB 565 screen).
+     * <p>This symbol is the offset where the {@link android.R.attr#dither}
+     * attribute's value can be found in the {@link #AnimatedStateListDrawableCompat} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -10073,9 +9602,8 @@ public final class R {
      */
     public static final int AnimatedStateListDrawableCompat_android_dither=0;
     /**
-     * <p>
-     * @attr description
-     * Indicates whether the drawable should be initially visible.
+     * <p>This symbol is the offset where the {@link android.R.attr#visible}
+     * attribute's value can be found in the {@link #AnimatedStateListDrawableCompat} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -10084,14 +9612,8 @@ public final class R {
      */
     public static final int AnimatedStateListDrawableCompat_android_visible=1;
     /**
-     * <p>
-     * @attr description
-     * If true, allows the drawable's padding to change based on the
-     * current state that is selected.  If false, the padding will
-     * stay the same (based on the maximum padding of all the states).
-     * Enabling this feature requires that the owner of the drawable
-     * deal with performing layout when the state changes, which is
-     * often not supported.
+     * <p>This symbol is the offset where the {@link android.R.attr#variablePadding}
+     * attribute's value can be found in the {@link #AnimatedStateListDrawableCompat} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -10100,12 +9622,8 @@ public final class R {
      */
     public static final int AnimatedStateListDrawableCompat_android_variablePadding=2;
     /**
-     * <p>
-     * @attr description
-     * If true, the drawable's reported internal size will remain
-     * constant as the state changes; the size is the maximum of all
-     * of the states.  If false, the size will vary based on the
-     * current state.
+     * <p>This symbol is the offset where the {@link android.R.attr#constantSize}
+     * attribute's value can be found in the {@link #AnimatedStateListDrawableCompat} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -10114,9 +9632,8 @@ public final class R {
      */
     public static final int AnimatedStateListDrawableCompat_android_constantSize=3;
     /**
-     * <p>
-     * @attr description
-     * Amount of time (in milliseconds) to fade in a new state drawable.
+     * <p>This symbol is the offset where the {@link android.R.attr#enterFadeDuration}
+     * attribute's value can be found in the {@link #AnimatedStateListDrawableCompat} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
@@ -10124,9 +9641,8 @@ public final class R {
      */
     public static final int AnimatedStateListDrawableCompat_android_enterFadeDuration=4;
     /**
-     * <p>
-     * @attr description
-     * Amount of time (in milliseconds) to fade out an old state drawable.
+     * <p>This symbol is the offset where the {@link android.R.attr#exitFadeDuration}
+     * attribute's value can be found in the {@link #AnimatedStateListDrawableCompat} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
@@ -10150,9 +9666,8 @@ public final class R {
       0x010100d0, 0x01010199
     };
     /**
-     * <p>
-     * @attr description
-     * Keyframe identifier for use in specifying transitions.
+     * <p>This symbol is the offset where the {@link android.R.attr#id}
+     * attribute's value can be found in the {@link #AnimatedStateListDrawableItem} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10163,10 +9678,8 @@ public final class R {
      */
     public static final int AnimatedStateListDrawableItem_android_id=0;
     /**
-     * <p>
-     * @attr description
-     * Reference to a drawable resource to use for the frame.  If not
-     * given, the drawable must be defined by the first child tag.
+     * <p>This symbol is the offset where the {@link android.R.attr#drawable}
+     * attribute's value can be found in the {@link #AnimatedStateListDrawableItem} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10197,10 +9710,8 @@ public final class R {
       0x01010199, 0x01010449, 0x0101044a, 0x0101044b
     };
     /**
-     * <p>
-     * @attr description
-     * Reference to a animation drawable resource to use for the frame.  If not
-     * given, the animation drawable must be defined by the first child tag.
+     * <p>This symbol is the offset where the {@link android.R.attr#drawable}
+     * attribute's value can be found in the {@link #AnimatedStateListDrawableTransition} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10211,9 +9722,8 @@ public final class R {
      */
     public static final int AnimatedStateListDrawableTransition_android_drawable=0;
     /**
-     * <p>
-     * @attr description
-     * Keyframe identifier for the ending state.
+     * <p>This symbol is the offset where the {@link android.R.attr#toId}
+     * attribute's value can be found in the {@link #AnimatedStateListDrawableTransition} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10224,9 +9734,8 @@ public final class R {
      */
     public static final int AnimatedStateListDrawableTransition_android_toId=1;
     /**
-     * <p>
-     * @attr description
-     * Keyframe identifier for the starting state.
+     * <p>This symbol is the offset where the {@link android.R.attr#fromId}
+     * attribute's value can be found in the {@link #AnimatedStateListDrawableTransition} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10237,9 +9746,8 @@ public final class R {
      */
     public static final int AnimatedStateListDrawableTransition_android_fromId=2;
     /**
-     * <p>
-     * @attr description
-     * Whether this transition is reversible.
+     * <p>This symbol is the offset where the {@link android.R.attr#reversible}
+     * attribute's value can be found in the {@link #AnimatedStateListDrawableTransition} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -10257,7 +9765,7 @@ public final class R {
      * <tr><td><code>{@link #AppBarLayout_android_background android:background}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppBarLayout_android_touchscreenBlocksFocus android:touchscreenBlocksFocus}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppBarLayout_android_keyboardNavigationCluster android:keyboardNavigationCluster}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppBarLayout_elevation com.borisruzanov.russianwives:elevation}</code></td><td>Elevation for the action bar itself</td></tr>
+     * <tr><td><code>{@link #AppBarLayout_elevation com.borisruzanov.russianwives:elevation}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppBarLayout_expanded com.borisruzanov.russianwives:expanded}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppBarLayout_liftOnScroll com.borisruzanov.russianwives:liftOnScroll}</code></td><td></td></tr>
      * </table>
@@ -10308,9 +9816,8 @@ public final class R {
      */
     public static final int AppBarLayout_android_keyboardNavigationCluster=2;
     /**
-     * <p>
-     * @attr description
-     * Elevation for the action bar itself
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#elevation}
+     * attribute's value can be found in the {@link #AppBarLayout} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -10359,7 +9866,7 @@ public final class R {
      * @see #AppBarLayoutStates_state_lifted
      */
     public static final int[] AppBarLayoutStates={
-      0x7f040266, 0x7f040267, 0x7f040268, 0x7f040269
+      0x7f040267, 0x7f040268, 0x7f040269, 0x7f04026a
     };
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#state_collapsed}
@@ -10458,9 +9965,9 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #AppCompatImageView_android_src android:src}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatImageView_srcCompat com.borisruzanov.russianwives:srcCompat}</code></td><td>Sets a drawable as the content of this ImageView.</td></tr>
-     * <tr><td><code>{@link #AppCompatImageView_tint com.borisruzanov.russianwives:tint}</code></td><td>Tint to apply to the image source.</td></tr>
-     * <tr><td><code>{@link #AppCompatImageView_tintMode com.borisruzanov.russianwives:tintMode}</code></td><td>Blending mode used to apply the image source tint.</td></tr>
+     * <tr><td><code>{@link #AppCompatImageView_srcCompat com.borisruzanov.russianwives:srcCompat}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatImageView_tint com.borisruzanov.russianwives:tint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatImageView_tintMode com.borisruzanov.russianwives:tintMode}</code></td><td></td></tr>
      * </table>
      * @see #AppCompatImageView_android_src
      * @see #AppCompatImageView_srcCompat
@@ -10468,7 +9975,7 @@ public final class R {
      * @see #AppCompatImageView_tintMode
      */
     public static final int[] AppCompatImageView={
-      0x01010119, 0x7f040262, 0x7f0402ba, 0x7f0402bb
+      0x01010119, 0x7f040263, 0x7f0402bb, 0x7f0402bc
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#src}
@@ -10486,10 +9993,8 @@ public final class R {
      */
     public static final int AppCompatImageView_android_src=0;
     /**
-     * <p>
-     * @attr description
-     * Sets a drawable as the content of this ImageView. Allows the use of vector drawable
-     * when running on older versions of the platform.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#srcCompat}
+     * attribute's value can be found in the {@link #AppCompatImageView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10500,9 +10005,8 @@ public final class R {
      */
     public static final int AppCompatImageView_srcCompat=1;
     /**
-     * <p>
-     * @attr description
-     * Tint to apply to the image source.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#tint}
+     * attribute's value can be found in the {@link #AppCompatImageView} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -10512,9 +10016,8 @@ public final class R {
      */
     public static final int AppCompatImageView_tint=2;
     /**
-     * <p>
-     * @attr description
-     * Blending mode used to apply the image source tint.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#tintMode}
+     * attribute's value can be found in the {@link #AppCompatImageView} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -10522,17 +10025,12 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      *
      * @attr name com.borisruzanov.russianwives:tintMode
@@ -10546,9 +10044,9 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #AppCompatSeekBar_android_thumb android:thumb}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatSeekBar_tickMark com.borisruzanov.russianwives:tickMark}</code></td><td>Drawable displayed at each progress position on a seekbar.</td></tr>
-     * <tr><td><code>{@link #AppCompatSeekBar_tickMarkTint com.borisruzanov.russianwives:tickMarkTint}</code></td><td>Tint to apply to the tick mark drawable.</td></tr>
-     * <tr><td><code>{@link #AppCompatSeekBar_tickMarkTintMode com.borisruzanov.russianwives:tickMarkTintMode}</code></td><td>Blending mode used to apply the tick mark tint.</td></tr>
+     * <tr><td><code>{@link #AppCompatSeekBar_tickMark com.borisruzanov.russianwives:tickMark}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatSeekBar_tickMarkTint com.borisruzanov.russianwives:tickMarkTint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatSeekBar_tickMarkTintMode com.borisruzanov.russianwives:tickMarkTintMode}</code></td><td></td></tr>
      * </table>
      * @see #AppCompatSeekBar_android_thumb
      * @see #AppCompatSeekBar_tickMark
@@ -10556,7 +10054,7 @@ public final class R {
      * @see #AppCompatSeekBar_tickMarkTintMode
      */
     public static final int[] AppCompatSeekBar={
-      0x01010142, 0x7f0402b7, 0x7f0402b8, 0x7f0402b9
+      0x01010142, 0x7f0402b8, 0x7f0402b9, 0x7f0402ba
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#thumb}
@@ -10571,9 +10069,8 @@ public final class R {
      */
     public static final int AppCompatSeekBar_android_thumb=0;
     /**
-     * <p>
-     * @attr description
-     * Drawable displayed at each progress position on a seekbar.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#tickMark}
+     * attribute's value can be found in the {@link #AppCompatSeekBar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10584,9 +10081,8 @@ public final class R {
      */
     public static final int AppCompatSeekBar_tickMark=1;
     /**
-     * <p>
-     * @attr description
-     * Tint to apply to the tick mark drawable.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#tickMarkTint}
+     * attribute's value can be found in the {@link #AppCompatSeekBar} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -10596,9 +10092,8 @@ public final class R {
      */
     public static final int AppCompatSeekBar_tickMarkTint=2;
     /**
-     * <p>
-     * @attr description
-     * Blending mode used to apply the tick mark tint.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#tickMarkTintMode}
+     * attribute's value can be found in the {@link #AppCompatSeekBar} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -10606,17 +10101,12 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and drawable color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      *
      * @attr name com.borisruzanov.russianwives:tickMarkTintMode
@@ -10759,18 +10249,16 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #AppCompatTextView_android_textAppearance android:textAppearance}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_autoSizeMaxTextSize com.borisruzanov.russianwives:autoSizeMaxTextSize}</code></td><td>The maximum text size constraint to be used when auto-sizing text.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_autoSizeMinTextSize com.borisruzanov.russianwives:autoSizeMinTextSize}</code></td><td>The minimum text size constraint to be used when auto-sizing text.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_autoSizePresetSizes com.borisruzanov.russianwives:autoSizePresetSizes}</code></td><td>Resource array of dimensions to be used in conjunction with
-     * <code>autoSizeTextType</code> set to <code>uniform</code>.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_autoSizeStepGranularity com.borisruzanov.russianwives:autoSizeStepGranularity}</code></td><td>Specify the auto-size step size if <code>autoSizeTextType</code> is set to
-     * <code>uniform</code>.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_autoSizeTextType com.borisruzanov.russianwives:autoSizeTextType}</code></td><td>Specify the type of auto-size.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_firstBaselineToTopHeight com.borisruzanov.russianwives:firstBaselineToTopHeight}</code></td><td>Distance from the top of the TextView to the first text baseline.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_fontFamily com.borisruzanov.russianwives:fontFamily}</code></td><td>The attribute for the font family.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_lastBaselineToBottomHeight com.borisruzanov.russianwives:lastBaselineToBottomHeight}</code></td><td>Distance from the bottom of the TextView to the last text baseline.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_lineHeight com.borisruzanov.russianwives:lineHeight}</code></td><td>Explicit height between lines of text.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_textAllCaps com.borisruzanov.russianwives:textAllCaps}</code></td><td>Present the text in ALL CAPS.</td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_autoSizeMaxTextSize com.borisruzanov.russianwives:autoSizeMaxTextSize}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_autoSizeMinTextSize com.borisruzanov.russianwives:autoSizeMinTextSize}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_autoSizePresetSizes com.borisruzanov.russianwives:autoSizePresetSizes}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_autoSizeStepGranularity com.borisruzanov.russianwives:autoSizeStepGranularity}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_autoSizeTextType com.borisruzanov.russianwives:autoSizeTextType}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_firstBaselineToTopHeight com.borisruzanov.russianwives:firstBaselineToTopHeight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_fontFamily com.borisruzanov.russianwives:fontFamily}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_lastBaselineToBottomHeight com.borisruzanov.russianwives:lastBaselineToBottomHeight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_lineHeight com.borisruzanov.russianwives:lineHeight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_textAllCaps com.borisruzanov.russianwives:textAllCaps}</code></td><td></td></tr>
      * </table>
      * @see #AppCompatTextView_android_textAppearance
      * @see #AppCompatTextView_autoSizeMaxTextSize
@@ -10787,7 +10275,7 @@ public final class R {
     public static final int[] AppCompatTextView={
       0x01010034, 0x7f040034, 0x7f040035, 0x7f040036, 
       0x7f040037, 0x7f040038, 0x7f040131, 0x7f040147, 
-      0x7f040182, 0x7f0401c5, 0x7f040297
+      0x7f040182, 0x7f0401c5, 0x7f040298
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#textAppearance}
@@ -10802,9 +10290,8 @@ public final class R {
      */
     public static final int AppCompatTextView_android_textAppearance=0;
     /**
-     * <p>
-     * @attr description
-     * The maximum text size constraint to be used when auto-sizing text.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#autoSizeMaxTextSize}
+     * attribute's value can be found in the {@link #AppCompatTextView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -10816,9 +10303,8 @@ public final class R {
      */
     public static final int AppCompatTextView_autoSizeMaxTextSize=1;
     /**
-     * <p>
-     * @attr description
-     * The minimum text size constraint to be used when auto-sizing text.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#autoSizeMinTextSize}
+     * attribute's value can be found in the {@link #AppCompatTextView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -10830,11 +10316,8 @@ public final class R {
      */
     public static final int AppCompatTextView_autoSizeMinTextSize=2;
     /**
-     * <p>
-     * @attr description
-     * Resource array of dimensions to be used in conjunction with
-     * <code>autoSizeTextType</code> set to <code>uniform</code>. Overrides
-     * <code>autoSizeStepGranularity</code> if set.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#autoSizePresetSizes}
+     * attribute's value can be found in the {@link #AppCompatTextView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10845,11 +10328,8 @@ public final class R {
      */
     public static final int AppCompatTextView_autoSizePresetSizes=3;
     /**
-     * <p>
-     * @attr description
-     * Specify the auto-size step size if <code>autoSizeTextType</code> is set to
-     * <code>uniform</code>. The default is 1px. Overwrites
-     * <code>autoSizePresetSizes</code> if set.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#autoSizeStepGranularity}
+     * attribute's value can be found in the {@link #AppCompatTextView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -10861,10 +10341,8 @@ public final class R {
      */
     public static final int AppCompatTextView_autoSizeStepGranularity=4;
     /**
-     * <p>
-     * @attr description
-     * Specify the type of auto-size. Note that this feature is not supported by EditText,
-     * works only for TextView.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#autoSizeTextType}
+     * attribute's value can be found in the {@link #AppCompatTextView} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -10872,19 +10350,16 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>none</td><td>0</td><td>No auto-sizing (default).</td></tr>
-     * <tr><td>uniform</td><td>1</td><td>Uniform horizontal and vertical text size scaling to fit within the
-     * container.</td></tr>
+     * <tr><td>none</td><td>0</td><td></td></tr>
+     * <tr><td>uniform</td><td>1</td><td></td></tr>
      * </table>
      *
      * @attr name com.borisruzanov.russianwives:autoSizeTextType
      */
     public static final int AppCompatTextView_autoSizeTextType=5;
     /**
-     * <p>
-     * @attr description
-     * Distance from the top of the TextView to the first text baseline. If set, this
-     * overrides the value set for paddingTop.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#firstBaselineToTopHeight}
+     * attribute's value can be found in the {@link #AppCompatTextView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -10896,9 +10371,8 @@ public final class R {
      */
     public static final int AppCompatTextView_firstBaselineToTopHeight=6;
     /**
-     * <p>
-     * @attr description
-     * The attribute for the font family.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#fontFamily}
+     * attribute's value can be found in the {@link #AppCompatTextView} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -10907,10 +10381,8 @@ public final class R {
      */
     public static final int AppCompatTextView_fontFamily=7;
     /**
-     * <p>
-     * @attr description
-     * Distance from the bottom of the TextView to the last text baseline. If set, this
-     * overrides the value set for paddingBottom.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#lastBaselineToBottomHeight}
+     * attribute's value can be found in the {@link #AppCompatTextView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -10922,10 +10394,8 @@ public final class R {
      */
     public static final int AppCompatTextView_lastBaselineToBottomHeight=8;
     /**
-     * <p>
-     * @attr description
-     * Explicit height between lines of text. If set, this will override the values set
-     * for lineSpacingExtra and lineSpacingMultiplier.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#lineHeight}
+     * attribute's value can be found in the {@link #AppCompatTextView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -10937,9 +10407,8 @@ public final class R {
      */
     public static final int AppCompatTextView_lineHeight=9;
     /**
-     * <p>
-     * @attr description
-     * Present the text in ALL CAPS. This may use a small-caps form when available.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#textAllCaps}
+     * attribute's value can be found in the {@link #AppCompatTextView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10960,142 +10429,125 @@ public final class R {
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #AppCompatTheme_android_windowIsFloating android:windowIsFloating}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTheme_android_windowAnimationStyle android:windowAnimationStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarDivider com.borisruzanov.russianwives:actionBarDivider}</code></td><td>Custom divider drawable to use for elements in the action bar.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarItemBackground com.borisruzanov.russianwives:actionBarItemBackground}</code></td><td>Custom item state list drawable background for action bar items.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarPopupTheme com.borisruzanov.russianwives:actionBarPopupTheme}</code></td><td>Reference to a theme that should be used to inflate popups
-     * shown by widgets in the action bar.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarSize com.borisruzanov.russianwives:actionBarSize}</code></td><td>Size of the Action Bar, including the contextual
-     * bar used to present Action Modes.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarSplitStyle com.borisruzanov.russianwives:actionBarSplitStyle}</code></td><td>Reference to a style for the split Action Bar.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarStyle com.borisruzanov.russianwives:actionBarStyle}</code></td><td>Reference to a style for the Action Bar</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarDivider com.borisruzanov.russianwives:actionBarDivider}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarItemBackground com.borisruzanov.russianwives:actionBarItemBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarPopupTheme com.borisruzanov.russianwives:actionBarPopupTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarSize com.borisruzanov.russianwives:actionBarSize}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarSplitStyle com.borisruzanov.russianwives:actionBarSplitStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarStyle com.borisruzanov.russianwives:actionBarStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTheme_actionBarTabBarStyle com.borisruzanov.russianwives:actionBarTabBarStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarTabStyle com.borisruzanov.russianwives:actionBarTabStyle}</code></td><td>Default style for tabs within an action bar</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarTabStyle com.borisruzanov.russianwives:actionBarTabStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTheme_actionBarTabTextStyle com.borisruzanov.russianwives:actionBarTabTextStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarTheme com.borisruzanov.russianwives:actionBarTheme}</code></td><td>Reference to a theme that should be used to inflate the
-     * action bar.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarWidgetTheme com.borisruzanov.russianwives:actionBarWidgetTheme}</code></td><td>Reference to a theme that should be used to inflate widgets
-     * and layouts destined for the action bar.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionButtonStyle com.borisruzanov.russianwives:actionButtonStyle}</code></td><td>Default action button style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionDropDownStyle com.borisruzanov.russianwives:actionDropDownStyle}</code></td><td>Default ActionBar dropdown style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionMenuTextAppearance com.borisruzanov.russianwives:actionMenuTextAppearance}</code></td><td>TextAppearance style that will be applied to text that
-     * appears within action menu items.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionMenuTextColor com.borisruzanov.russianwives:actionMenuTextColor}</code></td><td>Color for text that appears within action menu items.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeBackground com.borisruzanov.russianwives:actionModeBackground}</code></td><td>Background drawable to use for action mode UI</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarTheme com.borisruzanov.russianwives:actionBarTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarWidgetTheme com.borisruzanov.russianwives:actionBarWidgetTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionButtonStyle com.borisruzanov.russianwives:actionButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionDropDownStyle com.borisruzanov.russianwives:actionDropDownStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionMenuTextAppearance com.borisruzanov.russianwives:actionMenuTextAppearance}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionMenuTextColor com.borisruzanov.russianwives:actionMenuTextColor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeBackground com.borisruzanov.russianwives:actionModeBackground}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTheme_actionModeCloseButtonStyle com.borisruzanov.russianwives:actionModeCloseButtonStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeCloseDrawable com.borisruzanov.russianwives:actionModeCloseDrawable}</code></td><td>Drawable to use for the close action mode button</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeCopyDrawable com.borisruzanov.russianwives:actionModeCopyDrawable}</code></td><td>Drawable to use for the Copy action button in Contextual Action Bar</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeCutDrawable com.borisruzanov.russianwives:actionModeCutDrawable}</code></td><td>Drawable to use for the Cut action button in Contextual Action Bar</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeFindDrawable com.borisruzanov.russianwives:actionModeFindDrawable}</code></td><td>Drawable to use for the Find action button in WebView selection action modes</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModePasteDrawable com.borisruzanov.russianwives:actionModePasteDrawable}</code></td><td>Drawable to use for the Paste action button in Contextual Action Bar</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModePopupWindowStyle com.borisruzanov.russianwives:actionModePopupWindowStyle}</code></td><td>PopupWindow style to use for action modes when showing as a window overlay.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeSelectAllDrawable com.borisruzanov.russianwives:actionModeSelectAllDrawable}</code></td><td>Drawable to use for the Select all action button in Contextual Action Bar</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeShareDrawable com.borisruzanov.russianwives:actionModeShareDrawable}</code></td><td>Drawable to use for the Share action button in WebView selection action modes</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeSplitBackground com.borisruzanov.russianwives:actionModeSplitBackground}</code></td><td>Background drawable to use for action mode UI in the lower split bar</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeCloseDrawable com.borisruzanov.russianwives:actionModeCloseDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeCopyDrawable com.borisruzanov.russianwives:actionModeCopyDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeCutDrawable com.borisruzanov.russianwives:actionModeCutDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeFindDrawable com.borisruzanov.russianwives:actionModeFindDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModePasteDrawable com.borisruzanov.russianwives:actionModePasteDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModePopupWindowStyle com.borisruzanov.russianwives:actionModePopupWindowStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeSelectAllDrawable com.borisruzanov.russianwives:actionModeSelectAllDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeShareDrawable com.borisruzanov.russianwives:actionModeShareDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeSplitBackground com.borisruzanov.russianwives:actionModeSplitBackground}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTheme_actionModeStyle com.borisruzanov.russianwives:actionModeStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeWebSearchDrawable com.borisruzanov.russianwives:actionModeWebSearchDrawable}</code></td><td>Drawable to use for the Web Search action button in WebView selection action modes</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeWebSearchDrawable com.borisruzanov.russianwives:actionModeWebSearchDrawable}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTheme_actionOverflowButtonStyle com.borisruzanov.russianwives:actionOverflowButtonStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTheme_actionOverflowMenuStyle com.borisruzanov.russianwives:actionOverflowMenuStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_activityChooserViewStyle com.borisruzanov.russianwives:activityChooserViewStyle}</code></td><td>Default ActivityChooserView style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_activityChooserViewStyle com.borisruzanov.russianwives:activityChooserViewStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTheme_alertDialogButtonGroupStyle com.borisruzanov.russianwives:alertDialogButtonGroupStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTheme_alertDialogCenterButtons com.borisruzanov.russianwives:alertDialogCenterButtons}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTheme_alertDialogStyle com.borisruzanov.russianwives:alertDialogStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_alertDialogTheme com.borisruzanov.russianwives:alertDialogTheme}</code></td><td>Theme to use for alert dialogs spawned from this theme.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_autoCompleteTextViewStyle com.borisruzanov.russianwives:autoCompleteTextViewStyle}</code></td><td>Default AutoCompleteTextView style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_borderlessButtonStyle com.borisruzanov.russianwives:borderlessButtonStyle}</code></td><td>Style for buttons without an explicit border, often used in groups.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonBarButtonStyle com.borisruzanov.russianwives:buttonBarButtonStyle}</code></td><td>Style for buttons within button bars</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonBarNegativeButtonStyle com.borisruzanov.russianwives:buttonBarNegativeButtonStyle}</code></td><td>Style for the "negative" buttons within button bars</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonBarNeutralButtonStyle com.borisruzanov.russianwives:buttonBarNeutralButtonStyle}</code></td><td>Style for the "neutral" buttons within button bars</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonBarPositiveButtonStyle com.borisruzanov.russianwives:buttonBarPositiveButtonStyle}</code></td><td>Style for the "positive" buttons within button bars</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonBarStyle com.borisruzanov.russianwives:buttonBarStyle}</code></td><td>Style for button bars</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonStyle com.borisruzanov.russianwives:buttonStyle}</code></td><td>Normal Button style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonStyleSmall com.borisruzanov.russianwives:buttonStyleSmall}</code></td><td>Small Button style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_checkboxStyle com.borisruzanov.russianwives:checkboxStyle}</code></td><td>Default Checkbox style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_checkedTextViewStyle com.borisruzanov.russianwives:checkedTextViewStyle}</code></td><td>Default CheckedTextView style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorAccent com.borisruzanov.russianwives:colorAccent}</code></td><td>Bright complement to the primary branding color.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorBackgroundFloating com.borisruzanov.russianwives:colorBackgroundFloating}</code></td><td>Default color of background imagery for floating components, ex.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorButtonNormal com.borisruzanov.russianwives:colorButtonNormal}</code></td><td>The color applied to framework buttons in their normal state.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorControlActivated com.borisruzanov.russianwives:colorControlActivated}</code></td><td>The color applied to framework controls in their activated (ex.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorControlHighlight com.borisruzanov.russianwives:colorControlHighlight}</code></td><td>The color applied to framework control highlights (ex.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorControlNormal com.borisruzanov.russianwives:colorControlNormal}</code></td><td>The color applied to framework controls in their normal state.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorError com.borisruzanov.russianwives:colorError}</code></td><td>Color used for error states and things that need to be drawn to
-     * the user's attention.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorPrimary com.borisruzanov.russianwives:colorPrimary}</code></td><td>The primary branding color for the app.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorPrimaryDark com.borisruzanov.russianwives:colorPrimaryDark}</code></td><td>Dark variant of the primary branding color.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorSwitchThumbNormal com.borisruzanov.russianwives:colorSwitchThumbNormal}</code></td><td>The color applied to framework switch thumbs in their normal state.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_controlBackground com.borisruzanov.russianwives:controlBackground}</code></td><td>The background used by framework controls.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dialogCornerRadius com.borisruzanov.russianwives:dialogCornerRadius}</code></td><td>Preferred corner radius of dialogs.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dialogPreferredPadding com.borisruzanov.russianwives:dialogPreferredPadding}</code></td><td>Preferred padding for dialog content.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dialogTheme com.borisruzanov.russianwives:dialogTheme}</code></td><td>Theme to use for dialogs spawned from this theme.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dividerHorizontal com.borisruzanov.russianwives:dividerHorizontal}</code></td><td>A drawable that may be used as a horizontal divider between visual elements.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dividerVertical com.borisruzanov.russianwives:dividerVertical}</code></td><td>A drawable that may be used as a vertical divider between visual elements.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dropDownListViewStyle com.borisruzanov.russianwives:dropDownListViewStyle}</code></td><td>ListPopupWindow compatibility</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dropdownListPreferredItemHeight com.borisruzanov.russianwives:dropdownListPreferredItemHeight}</code></td><td>The preferred item height for dropdown lists.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_editTextBackground com.borisruzanov.russianwives:editTextBackground}</code></td><td>EditText background drawable.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_editTextColor com.borisruzanov.russianwives:editTextColor}</code></td><td>EditText text foreground color.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_editTextStyle com.borisruzanov.russianwives:editTextStyle}</code></td><td>Default EditText style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_homeAsUpIndicator com.borisruzanov.russianwives:homeAsUpIndicator}</code></td><td>Specifies a drawable to use for the 'home as up' indicator.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_imageButtonStyle com.borisruzanov.russianwives:imageButtonStyle}</code></td><td>ImageButton background drawable.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listChoiceBackgroundIndicator com.borisruzanov.russianwives:listChoiceBackgroundIndicator}</code></td><td>Drawable used as a background for selected list items.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listDividerAlertDialog com.borisruzanov.russianwives:listDividerAlertDialog}</code></td><td>The list divider used in alert dialogs.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listMenuViewStyle com.borisruzanov.russianwives:listMenuViewStyle}</code></td><td>Default menu-style ListView style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_alertDialogTheme com.borisruzanov.russianwives:alertDialogTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_autoCompleteTextViewStyle com.borisruzanov.russianwives:autoCompleteTextViewStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_borderlessButtonStyle com.borisruzanov.russianwives:borderlessButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonBarButtonStyle com.borisruzanov.russianwives:buttonBarButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonBarNegativeButtonStyle com.borisruzanov.russianwives:buttonBarNegativeButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonBarNeutralButtonStyle com.borisruzanov.russianwives:buttonBarNeutralButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonBarPositiveButtonStyle com.borisruzanov.russianwives:buttonBarPositiveButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonBarStyle com.borisruzanov.russianwives:buttonBarStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonStyle com.borisruzanov.russianwives:buttonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonStyleSmall com.borisruzanov.russianwives:buttonStyleSmall}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_checkboxStyle com.borisruzanov.russianwives:checkboxStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_checkedTextViewStyle com.borisruzanov.russianwives:checkedTextViewStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorAccent com.borisruzanov.russianwives:colorAccent}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorBackgroundFloating com.borisruzanov.russianwives:colorBackgroundFloating}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorButtonNormal com.borisruzanov.russianwives:colorButtonNormal}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorControlActivated com.borisruzanov.russianwives:colorControlActivated}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorControlHighlight com.borisruzanov.russianwives:colorControlHighlight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorControlNormal com.borisruzanov.russianwives:colorControlNormal}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorError com.borisruzanov.russianwives:colorError}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorPrimary com.borisruzanov.russianwives:colorPrimary}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorPrimaryDark com.borisruzanov.russianwives:colorPrimaryDark}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorSwitchThumbNormal com.borisruzanov.russianwives:colorSwitchThumbNormal}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_controlBackground com.borisruzanov.russianwives:controlBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dialogCornerRadius com.borisruzanov.russianwives:dialogCornerRadius}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dialogPreferredPadding com.borisruzanov.russianwives:dialogPreferredPadding}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dialogTheme com.borisruzanov.russianwives:dialogTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dividerHorizontal com.borisruzanov.russianwives:dividerHorizontal}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dividerVertical com.borisruzanov.russianwives:dividerVertical}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dropDownListViewStyle com.borisruzanov.russianwives:dropDownListViewStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dropdownListPreferredItemHeight com.borisruzanov.russianwives:dropdownListPreferredItemHeight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_editTextBackground com.borisruzanov.russianwives:editTextBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_editTextColor com.borisruzanov.russianwives:editTextColor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_editTextStyle com.borisruzanov.russianwives:editTextStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_homeAsUpIndicator com.borisruzanov.russianwives:homeAsUpIndicator}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_imageButtonStyle com.borisruzanov.russianwives:imageButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listChoiceBackgroundIndicator com.borisruzanov.russianwives:listChoiceBackgroundIndicator}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listDividerAlertDialog com.borisruzanov.russianwives:listDividerAlertDialog}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listMenuViewStyle com.borisruzanov.russianwives:listMenuViewStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTheme_listPopupWindowStyle com.borisruzanov.russianwives:listPopupWindowStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeight com.borisruzanov.russianwives:listPreferredItemHeight}</code></td><td>The preferred list item height.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeightLarge com.borisruzanov.russianwives:listPreferredItemHeightLarge}</code></td><td>A larger, more robust list item height.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeightSmall com.borisruzanov.russianwives:listPreferredItemHeightSmall}</code></td><td>A smaller, sleeker list item height.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingLeft com.borisruzanov.russianwives:listPreferredItemPaddingLeft}</code></td><td>The preferred padding along the left edge of list items.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingRight com.borisruzanov.russianwives:listPreferredItemPaddingRight}</code></td><td>The preferred padding along the right edge of list items.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_panelBackground com.borisruzanov.russianwives:panelBackground}</code></td><td>The background of a panel when it is inset from the left and right edges of the screen.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_panelMenuListTheme com.borisruzanov.russianwives:panelMenuListTheme}</code></td><td>Default Panel Menu style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_panelMenuListWidth com.borisruzanov.russianwives:panelMenuListWidth}</code></td><td>Default Panel Menu width.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_popupMenuStyle com.borisruzanov.russianwives:popupMenuStyle}</code></td><td>Default PopupMenu style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_popupWindowStyle com.borisruzanov.russianwives:popupWindowStyle}</code></td><td>Default PopupWindow style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_radioButtonStyle com.borisruzanov.russianwives:radioButtonStyle}</code></td><td>Default RadioButton style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_ratingBarStyle com.borisruzanov.russianwives:ratingBarStyle}</code></td><td>Default RatingBar style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_ratingBarStyleIndicator com.borisruzanov.russianwives:ratingBarStyleIndicator}</code></td><td>Indicator RatingBar style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_ratingBarStyleSmall com.borisruzanov.russianwives:ratingBarStyleSmall}</code></td><td>Small indicator RatingBar style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_searchViewStyle com.borisruzanov.russianwives:searchViewStyle}</code></td><td>Style for the search query widget.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_seekBarStyle com.borisruzanov.russianwives:seekBarStyle}</code></td><td>Default SeekBar style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_selectableItemBackground com.borisruzanov.russianwives:selectableItemBackground}</code></td><td>A style that may be applied to buttons or other selectable items
-     * that should react to pressed and focus states, but that do not
-     * have a clear visual border along the edges.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_selectableItemBackgroundBorderless com.borisruzanov.russianwives:selectableItemBackgroundBorderless}</code></td><td>Background drawable for borderless standalone items that need focus/pressed states.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_spinnerDropDownItemStyle com.borisruzanov.russianwives:spinnerDropDownItemStyle}</code></td><td>Default Spinner style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_spinnerStyle com.borisruzanov.russianwives:spinnerStyle}</code></td><td>Default Spinner style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_switchStyle com.borisruzanov.russianwives:switchStyle}</code></td><td>Default style for the Switch widget.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceLargePopupMenu com.borisruzanov.russianwives:textAppearanceLargePopupMenu}</code></td><td>Text color, typeface, size, and style for the text inside of a popup menu.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceListItem com.borisruzanov.russianwives:textAppearanceListItem}</code></td><td>The preferred TextAppearance for the primary text of list items.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceListItemSecondary com.borisruzanov.russianwives:textAppearanceListItemSecondary}</code></td><td>The preferred TextAppearance for the secondary text of list items.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceListItemSmall com.borisruzanov.russianwives:textAppearanceListItemSmall}</code></td><td>The preferred TextAppearance for the primary text of small list items.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearancePopupMenuHeader com.borisruzanov.russianwives:textAppearancePopupMenuHeader}</code></td><td>Text color, typeface, size, and style for header text inside of a popup menu.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceSearchResultSubtitle com.borisruzanov.russianwives:textAppearanceSearchResultSubtitle}</code></td><td>Text color, typeface, size, and style for system search result subtitle.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceSearchResultTitle com.borisruzanov.russianwives:textAppearanceSearchResultTitle}</code></td><td>Text color, typeface, size, and style for system search result title.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceSmallPopupMenu com.borisruzanov.russianwives:textAppearanceSmallPopupMenu}</code></td><td>Text color, typeface, size, and style for small text inside of a popup menu.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textColorAlertDialogListItem com.borisruzanov.russianwives:textColorAlertDialogListItem}</code></td><td>Color of list item text in alert dialogs.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textColorSearchUrl com.borisruzanov.russianwives:textColorSearchUrl}</code></td><td>Text color for urls in search suggestions, used by things like global search</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_toolbarNavigationButtonStyle com.borisruzanov.russianwives:toolbarNavigationButtonStyle}</code></td><td>Default Toolar NavigationButtonStyle</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_toolbarStyle com.borisruzanov.russianwives:toolbarStyle}</code></td><td>Default Toolbar style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_tooltipForegroundColor com.borisruzanov.russianwives:tooltipForegroundColor}</code></td><td>Foreground color to use for tooltips</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_tooltipFrameBackground com.borisruzanov.russianwives:tooltipFrameBackground}</code></td><td>Background to use for tooltips</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeight com.borisruzanov.russianwives:listPreferredItemHeight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeightLarge com.borisruzanov.russianwives:listPreferredItemHeightLarge}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeightSmall com.borisruzanov.russianwives:listPreferredItemHeightSmall}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingLeft com.borisruzanov.russianwives:listPreferredItemPaddingLeft}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingRight com.borisruzanov.russianwives:listPreferredItemPaddingRight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_panelBackground com.borisruzanov.russianwives:panelBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_panelMenuListTheme com.borisruzanov.russianwives:panelMenuListTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_panelMenuListWidth com.borisruzanov.russianwives:panelMenuListWidth}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_popupMenuStyle com.borisruzanov.russianwives:popupMenuStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_popupWindowStyle com.borisruzanov.russianwives:popupWindowStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_radioButtonStyle com.borisruzanov.russianwives:radioButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_ratingBarStyle com.borisruzanov.russianwives:ratingBarStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_ratingBarStyleIndicator com.borisruzanov.russianwives:ratingBarStyleIndicator}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_ratingBarStyleSmall com.borisruzanov.russianwives:ratingBarStyleSmall}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_searchViewStyle com.borisruzanov.russianwives:searchViewStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_seekBarStyle com.borisruzanov.russianwives:seekBarStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_selectableItemBackground com.borisruzanov.russianwives:selectableItemBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_selectableItemBackgroundBorderless com.borisruzanov.russianwives:selectableItemBackgroundBorderless}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_spinnerDropDownItemStyle com.borisruzanov.russianwives:spinnerDropDownItemStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_spinnerStyle com.borisruzanov.russianwives:spinnerStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_switchStyle com.borisruzanov.russianwives:switchStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceLargePopupMenu com.borisruzanov.russianwives:textAppearanceLargePopupMenu}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceListItem com.borisruzanov.russianwives:textAppearanceListItem}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceListItemSecondary com.borisruzanov.russianwives:textAppearanceListItemSecondary}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceListItemSmall com.borisruzanov.russianwives:textAppearanceListItemSmall}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearancePopupMenuHeader com.borisruzanov.russianwives:textAppearancePopupMenuHeader}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceSearchResultSubtitle com.borisruzanov.russianwives:textAppearanceSearchResultSubtitle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceSearchResultTitle com.borisruzanov.russianwives:textAppearanceSearchResultTitle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceSmallPopupMenu com.borisruzanov.russianwives:textAppearanceSmallPopupMenu}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textColorAlertDialogListItem com.borisruzanov.russianwives:textColorAlertDialogListItem}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textColorSearchUrl com.borisruzanov.russianwives:textColorSearchUrl}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_toolbarNavigationButtonStyle com.borisruzanov.russianwives:toolbarNavigationButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_toolbarStyle com.borisruzanov.russianwives:toolbarStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_tooltipForegroundColor com.borisruzanov.russianwives:tooltipForegroundColor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_tooltipFrameBackground com.borisruzanov.russianwives:tooltipFrameBackground}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTheme_viewInflaterClass com.borisruzanov.russianwives:viewInflaterClass}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowActionBar com.borisruzanov.russianwives:windowActionBar}</code></td><td>Flag indicating whether this window should have an Action Bar
-     * in place of the usual title bar.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowActionBarOverlay com.borisruzanov.russianwives:windowActionBarOverlay}</code></td><td>Flag indicating whether this window's Action Bar should overlay
-     * application content.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowActionModeOverlay com.borisruzanov.russianwives:windowActionModeOverlay}</code></td><td>Flag indicating whether action modes should overlay window content
-     * when there is not reserved space for their UI (such as an Action Bar).</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowFixedHeightMajor com.borisruzanov.russianwives:windowFixedHeightMajor}</code></td><td>A fixed height for the window along the major axis of the screen,
-     * that is, when in portrait.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowFixedHeightMinor com.borisruzanov.russianwives:windowFixedHeightMinor}</code></td><td>A fixed height for the window along the minor axis of the screen,
-     * that is, when in landscape.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowFixedWidthMajor com.borisruzanov.russianwives:windowFixedWidthMajor}</code></td><td>A fixed width for the window along the major axis of the screen,
-     * that is, when in landscape.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowFixedWidthMinor com.borisruzanov.russianwives:windowFixedWidthMinor}</code></td><td>A fixed width for the window along the minor axis of the screen,
-     * that is, when in portrait.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowMinWidthMajor com.borisruzanov.russianwives:windowMinWidthMajor}</code></td><td>The minimum width the window is allowed to be, along the major
-     * axis of the screen.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowMinWidthMinor com.borisruzanov.russianwives:windowMinWidthMinor}</code></td><td>The minimum width the window is allowed to be, along the minor
-     * axis of the screen.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowNoTitle com.borisruzanov.russianwives:windowNoTitle}</code></td><td>Flag indicating whether there should be no title on this window.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowActionBar com.borisruzanov.russianwives:windowActionBar}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowActionBarOverlay com.borisruzanov.russianwives:windowActionBarOverlay}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowActionModeOverlay com.borisruzanov.russianwives:windowActionModeOverlay}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowFixedHeightMajor com.borisruzanov.russianwives:windowFixedHeightMajor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowFixedHeightMinor com.borisruzanov.russianwives:windowFixedHeightMinor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowFixedWidthMajor com.borisruzanov.russianwives:windowFixedWidthMajor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowFixedWidthMinor com.borisruzanov.russianwives:windowFixedWidthMinor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowMinWidthMajor com.borisruzanov.russianwives:windowMinWidthMajor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowMinWidthMinor com.borisruzanov.russianwives:windowMinWidthMinor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowNoTitle com.borisruzanov.russianwives:windowNoTitle}</code></td><td></td></tr>
      * </table>
      * @see #AppCompatTheme_android_windowIsFloating
      * @see #AppCompatTheme_android_windowAnimationStyle
@@ -11240,17 +10692,17 @@ public final class R {
       0x7f040117, 0x7f040160, 0x7f04016e, 0x7f0401c7, 
       0x7f0401c8, 0x7f0401cb, 0x7f0401cc, 0x7f0401cd, 
       0x7f0401ce, 0x7f0401cf, 0x7f0401d0, 0x7f0401d1, 
-      0x7f04021c, 0x7f04021d, 0x7f04021e, 0x7f04022f, 
-      0x7f040231, 0x7f040239, 0x7f04023a, 0x7f04023b, 
-      0x7f04023c, 0x7f04024c, 0x7f04024d, 0x7f04024e, 
-      0x7f04024f, 0x7f04025f, 0x7f040260, 0x7f040277, 
-      0x7f0402a2, 0x7f0402a3, 0x7f0402a4, 0x7f0402a5, 
-      0x7f0402a7, 0x7f0402a8, 0x7f0402a9, 0x7f0402aa, 
-      0x7f0402ad, 0x7f0402ae, 0x7f0402c8, 0x7f0402c9, 
-      0x7f0402ca, 0x7f0402cb, 0x7f0402db, 0x7f0402e4, 
-      0x7f0402e5, 0x7f0402e6, 0x7f0402e7, 0x7f0402e8, 
-      0x7f0402e9, 0x7f0402ea, 0x7f0402eb, 0x7f0402ec, 
-      0x7f0402ed
+      0x7f04021d, 0x7f04021e, 0x7f04021f, 0x7f040230, 
+      0x7f040232, 0x7f04023a, 0x7f04023b, 0x7f04023c, 
+      0x7f04023d, 0x7f04024d, 0x7f04024e, 0x7f04024f, 
+      0x7f040250, 0x7f040260, 0x7f040261, 0x7f040278, 
+      0x7f0402a3, 0x7f0402a4, 0x7f0402a5, 0x7f0402a6, 
+      0x7f0402a8, 0x7f0402a9, 0x7f0402aa, 0x7f0402ab, 
+      0x7f0402ae, 0x7f0402af, 0x7f0402c9, 0x7f0402ca, 
+      0x7f0402cb, 0x7f0402cc, 0x7f0402dc, 0x7f0402e5, 
+      0x7f0402e6, 0x7f0402e7, 0x7f0402e8, 0x7f0402e9, 
+      0x7f0402ea, 0x7f0402eb, 0x7f0402ec, 0x7f0402ed, 
+      0x7f0402ee
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#windowIsFloating}
@@ -11275,9 +10727,8 @@ public final class R {
      */
     public static final int AppCompatTheme_android_windowAnimationStyle=1;
     /**
-     * <p>
-     * @attr description
-     * Custom divider drawable to use for elements in the action bar.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#actionBarDivider}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11288,9 +10739,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionBarDivider=2;
     /**
-     * <p>
-     * @attr description
-     * Custom item state list drawable background for action bar items.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#actionBarItemBackground}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11301,10 +10751,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionBarItemBackground=3;
     /**
-     * <p>
-     * @attr description
-     * Reference to a theme that should be used to inflate popups
-     * shown by widgets in the action bar.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#actionBarPopupTheme}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11315,10 +10763,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionBarPopupTheme=4;
     /**
-     * <p>
-     * @attr description
-     * Size of the Action Bar, including the contextual
-     * bar used to present Action Modes.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#actionBarSize}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -11338,12 +10784,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionBarSize=5;
     /**
-     * <p>
-     * @attr description
-     * Reference to a style for the split Action Bar. This style
-     * controls the split component that holds the menu/action
-     * buttons. actionBarStyle is still used for the primary
-     * bar.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#actionBarSplitStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11354,9 +10796,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionBarSplitStyle=6;
     /**
-     * <p>
-     * @attr description
-     * Reference to a style for the Action Bar
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#actionBarStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11379,9 +10820,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionBarTabBarStyle=8;
     /**
-     * <p>
-     * @attr description
-     * Default style for tabs within an action bar
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#actionBarTabStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11404,11 +10844,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionBarTabTextStyle=10;
     /**
-     * <p>
-     * @attr description
-     * Reference to a theme that should be used to inflate the
-     * action bar. This will be inherited by any widget inflated
-     * into the action bar.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#actionBarTheme}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11419,15 +10856,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionBarTheme=11;
     /**
-     * <p>
-     * @attr description
-     * Reference to a theme that should be used to inflate widgets
-     * and layouts destined for the action bar. Most of the time
-     * this will be a reference to the current theme, but when
-     * the action bar has a significantly different contrast
-     * profile than the rest of the activity the difference
-     * can become important. If this is set to @null the current
-     * theme will be used.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#actionBarWidgetTheme}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11438,9 +10868,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionBarWidgetTheme=12;
     /**
-     * <p>
-     * @attr description
-     * Default action button style.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#actionButtonStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11451,9 +10880,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionButtonStyle=13;
     /**
-     * <p>
-     * @attr description
-     * Default ActionBar dropdown style.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#actionDropDownStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11464,10 +10892,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionDropDownStyle=14;
     /**
-     * <p>
-     * @attr description
-     * TextAppearance style that will be applied to text that
-     * appears within action menu items.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#actionMenuTextAppearance}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11478,9 +10904,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionMenuTextAppearance=15;
     /**
-     * <p>
-     * @attr description
-     * Color for text that appears within action menu items.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#actionMenuTextColor}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11494,9 +10919,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionMenuTextColor=16;
     /**
-     * <p>
-     * @attr description
-     * Background drawable to use for action mode UI
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#actionModeBackground}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11519,9 +10943,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionModeCloseButtonStyle=18;
     /**
-     * <p>
-     * @attr description
-     * Drawable to use for the close action mode button
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#actionModeCloseDrawable}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11532,9 +10955,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionModeCloseDrawable=19;
     /**
-     * <p>
-     * @attr description
-     * Drawable to use for the Copy action button in Contextual Action Bar
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#actionModeCopyDrawable}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11545,9 +10967,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionModeCopyDrawable=20;
     /**
-     * <p>
-     * @attr description
-     * Drawable to use for the Cut action button in Contextual Action Bar
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#actionModeCutDrawable}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11558,9 +10979,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionModeCutDrawable=21;
     /**
-     * <p>
-     * @attr description
-     * Drawable to use for the Find action button in WebView selection action modes
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#actionModeFindDrawable}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11571,9 +10991,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionModeFindDrawable=22;
     /**
-     * <p>
-     * @attr description
-     * Drawable to use for the Paste action button in Contextual Action Bar
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#actionModePasteDrawable}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11584,9 +11003,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionModePasteDrawable=23;
     /**
-     * <p>
-     * @attr description
-     * PopupWindow style to use for action modes when showing as a window overlay.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#actionModePopupWindowStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11597,9 +11015,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionModePopupWindowStyle=24;
     /**
-     * <p>
-     * @attr description
-     * Drawable to use for the Select all action button in Contextual Action Bar
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#actionModeSelectAllDrawable}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11610,9 +11027,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionModeSelectAllDrawable=25;
     /**
-     * <p>
-     * @attr description
-     * Drawable to use for the Share action button in WebView selection action modes
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#actionModeShareDrawable}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11623,9 +11039,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionModeShareDrawable=26;
     /**
-     * <p>
-     * @attr description
-     * Background drawable to use for action mode UI in the lower split bar
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#actionModeSplitBackground}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11648,9 +11063,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionModeStyle=28;
     /**
-     * <p>
-     * @attr description
-     * Drawable to use for the Web Search action button in WebView selection action modes
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#actionModeWebSearchDrawable}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11685,9 +11099,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionOverflowMenuStyle=31;
     /**
-     * <p>
-     * @attr description
-     * Default ActivityChooserView style.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#activityChooserViewStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11732,9 +11145,8 @@ public final class R {
      */
     public static final int AppCompatTheme_alertDialogStyle=35;
     /**
-     * <p>
-     * @attr description
-     * Theme to use for alert dialogs spawned from this theme.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#alertDialogTheme}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11745,9 +11157,8 @@ public final class R {
      */
     public static final int AppCompatTheme_alertDialogTheme=36;
     /**
-     * <p>
-     * @attr description
-     * Default AutoCompleteTextView style.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#autoCompleteTextViewStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11758,9 +11169,8 @@ public final class R {
      */
     public static final int AppCompatTheme_autoCompleteTextViewStyle=37;
     /**
-     * <p>
-     * @attr description
-     * Style for buttons without an explicit border, often used in groups.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#borderlessButtonStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11771,9 +11181,8 @@ public final class R {
      */
     public static final int AppCompatTheme_borderlessButtonStyle=38;
     /**
-     * <p>
-     * @attr description
-     * Style for buttons within button bars
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#buttonBarButtonStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11784,9 +11193,8 @@ public final class R {
      */
     public static final int AppCompatTheme_buttonBarButtonStyle=39;
     /**
-     * <p>
-     * @attr description
-     * Style for the "negative" buttons within button bars
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#buttonBarNegativeButtonStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11797,9 +11205,8 @@ public final class R {
      */
     public static final int AppCompatTheme_buttonBarNegativeButtonStyle=40;
     /**
-     * <p>
-     * @attr description
-     * Style for the "neutral" buttons within button bars
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#buttonBarNeutralButtonStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11810,9 +11217,8 @@ public final class R {
      */
     public static final int AppCompatTheme_buttonBarNeutralButtonStyle=41;
     /**
-     * <p>
-     * @attr description
-     * Style for the "positive" buttons within button bars
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#buttonBarPositiveButtonStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11823,9 +11229,8 @@ public final class R {
      */
     public static final int AppCompatTheme_buttonBarPositiveButtonStyle=42;
     /**
-     * <p>
-     * @attr description
-     * Style for button bars
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#buttonBarStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11836,9 +11241,8 @@ public final class R {
      */
     public static final int AppCompatTheme_buttonBarStyle=43;
     /**
-     * <p>
-     * @attr description
-     * Normal Button style.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#buttonStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11849,9 +11253,8 @@ public final class R {
      */
     public static final int AppCompatTheme_buttonStyle=44;
     /**
-     * <p>
-     * @attr description
-     * Small Button style.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#buttonStyleSmall}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11862,9 +11265,8 @@ public final class R {
      */
     public static final int AppCompatTheme_buttonStyleSmall=45;
     /**
-     * <p>
-     * @attr description
-     * Default Checkbox style.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#checkboxStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11875,9 +11277,8 @@ public final class R {
      */
     public static final int AppCompatTheme_checkboxStyle=46;
     /**
-     * <p>
-     * @attr description
-     * Default CheckedTextView style.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#checkedTextViewStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11888,10 +11289,8 @@ public final class R {
      */
     public static final int AppCompatTheme_checkedTextViewStyle=47;
     /**
-     * <p>
-     * @attr description
-     * Bright complement to the primary branding color. By default, this is the color applied
-     * to framework controls (via colorControlActivated).
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#colorAccent}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -11901,9 +11300,8 @@ public final class R {
      */
     public static final int AppCompatTheme_colorAccent=48;
     /**
-     * <p>
-     * @attr description
-     * Default color of background imagery for floating components, ex. dialogs, popups, and cards.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#colorBackgroundFloating}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -11913,9 +11311,8 @@ public final class R {
      */
     public static final int AppCompatTheme_colorBackgroundFloating=49;
     /**
-     * <p>
-     * @attr description
-     * The color applied to framework buttons in their normal state.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#colorButtonNormal}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -11925,9 +11322,8 @@ public final class R {
      */
     public static final int AppCompatTheme_colorButtonNormal=50;
     /**
-     * <p>
-     * @attr description
-     * The color applied to framework controls in their activated (ex. checked) state.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#colorControlActivated}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -11937,9 +11333,8 @@ public final class R {
      */
     public static final int AppCompatTheme_colorControlActivated=51;
     /**
-     * <p>
-     * @attr description
-     * The color applied to framework control highlights (ex. ripples, list selectors).
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#colorControlHighlight}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -11949,9 +11344,8 @@ public final class R {
      */
     public static final int AppCompatTheme_colorControlHighlight=52;
     /**
-     * <p>
-     * @attr description
-     * The color applied to framework controls in their normal state.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#colorControlNormal}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -11961,10 +11355,8 @@ public final class R {
      */
     public static final int AppCompatTheme_colorControlNormal=53;
     /**
-     * <p>
-     * @attr description
-     * Color used for error states and things that need to be drawn to
-     * the user's attention.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#colorError}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11978,10 +11370,8 @@ public final class R {
      */
     public static final int AppCompatTheme_colorError=54;
     /**
-     * <p>
-     * @attr description
-     * The primary branding color for the app. By default, this is the color applied to the
-     * action bar background.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#colorPrimary}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -11991,10 +11381,8 @@ public final class R {
      */
     public static final int AppCompatTheme_colorPrimary=55;
     /**
-     * <p>
-     * @attr description
-     * Dark variant of the primary branding color. By default, this is the color applied to
-     * the status bar (via statusBarColor) and navigation bar (via navigationBarColor).
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#colorPrimaryDark}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -12004,9 +11392,8 @@ public final class R {
      */
     public static final int AppCompatTheme_colorPrimaryDark=56;
     /**
-     * <p>
-     * @attr description
-     * The color applied to framework switch thumbs in their normal state.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#colorSwitchThumbNormal}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -12016,9 +11403,8 @@ public final class R {
      */
     public static final int AppCompatTheme_colorSwitchThumbNormal=57;
     /**
-     * <p>
-     * @attr description
-     * The background used by framework controls.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#controlBackground}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12029,9 +11415,8 @@ public final class R {
      */
     public static final int AppCompatTheme_controlBackground=58;
     /**
-     * <p>
-     * @attr description
-     * Preferred corner radius of dialogs.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#dialogCornerRadius}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -12043,9 +11428,8 @@ public final class R {
      */
     public static final int AppCompatTheme_dialogCornerRadius=59;
     /**
-     * <p>
-     * @attr description
-     * Preferred padding for dialog content.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#dialogPreferredPadding}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -12057,9 +11441,8 @@ public final class R {
      */
     public static final int AppCompatTheme_dialogPreferredPadding=60;
     /**
-     * <p>
-     * @attr description
-     * Theme to use for dialogs spawned from this theme.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#dialogTheme}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12070,9 +11453,8 @@ public final class R {
      */
     public static final int AppCompatTheme_dialogTheme=61;
     /**
-     * <p>
-     * @attr description
-     * A drawable that may be used as a horizontal divider between visual elements.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#dividerHorizontal}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12083,9 +11465,8 @@ public final class R {
      */
     public static final int AppCompatTheme_dividerHorizontal=62;
     /**
-     * <p>
-     * @attr description
-     * A drawable that may be used as a vertical divider between visual elements.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#dividerVertical}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12096,9 +11477,8 @@ public final class R {
      */
     public static final int AppCompatTheme_dividerVertical=63;
     /**
-     * <p>
-     * @attr description
-     * ListPopupWindow compatibility
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#dropDownListViewStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12109,9 +11489,8 @@ public final class R {
      */
     public static final int AppCompatTheme_dropDownListViewStyle=64;
     /**
-     * <p>
-     * @attr description
-     * The preferred item height for dropdown lists.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#dropdownListPreferredItemHeight}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -12123,9 +11502,8 @@ public final class R {
      */
     public static final int AppCompatTheme_dropdownListPreferredItemHeight=65;
     /**
-     * <p>
-     * @attr description
-     * EditText background drawable.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#editTextBackground}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12136,9 +11514,8 @@ public final class R {
      */
     public static final int AppCompatTheme_editTextBackground=66;
     /**
-     * <p>
-     * @attr description
-     * EditText text foreground color.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#editTextColor}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12152,9 +11529,8 @@ public final class R {
      */
     public static final int AppCompatTheme_editTextColor=67;
     /**
-     * <p>
-     * @attr description
-     * Default EditText style.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#editTextStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12165,9 +11541,8 @@ public final class R {
      */
     public static final int AppCompatTheme_editTextStyle=68;
     /**
-     * <p>
-     * @attr description
-     * Specifies a drawable to use for the 'home as up' indicator.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#homeAsUpIndicator}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12178,9 +11553,8 @@ public final class R {
      */
     public static final int AppCompatTheme_homeAsUpIndicator=69;
     /**
-     * <p>
-     * @attr description
-     * ImageButton background drawable.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#imageButtonStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12191,9 +11565,8 @@ public final class R {
      */
     public static final int AppCompatTheme_imageButtonStyle=70;
     /**
-     * <p>
-     * @attr description
-     * Drawable used as a background for selected list items.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#listChoiceBackgroundIndicator}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12204,9 +11577,8 @@ public final class R {
      */
     public static final int AppCompatTheme_listChoiceBackgroundIndicator=71;
     /**
-     * <p>
-     * @attr description
-     * The list divider used in alert dialogs.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#listDividerAlertDialog}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12217,9 +11589,8 @@ public final class R {
      */
     public static final int AppCompatTheme_listDividerAlertDialog=72;
     /**
-     * <p>
-     * @attr description
-     * Default menu-style ListView style.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#listMenuViewStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12242,9 +11613,8 @@ public final class R {
      */
     public static final int AppCompatTheme_listPopupWindowStyle=74;
     /**
-     * <p>
-     * @attr description
-     * The preferred list item height.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#listPreferredItemHeight}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -12256,9 +11626,8 @@ public final class R {
      */
     public static final int AppCompatTheme_listPreferredItemHeight=75;
     /**
-     * <p>
-     * @attr description
-     * A larger, more robust list item height.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#listPreferredItemHeightLarge}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -12270,9 +11639,8 @@ public final class R {
      */
     public static final int AppCompatTheme_listPreferredItemHeightLarge=76;
     /**
-     * <p>
-     * @attr description
-     * A smaller, sleeker list item height.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#listPreferredItemHeightSmall}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -12284,9 +11652,8 @@ public final class R {
      */
     public static final int AppCompatTheme_listPreferredItemHeightSmall=77;
     /**
-     * <p>
-     * @attr description
-     * The preferred padding along the left edge of list items.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#listPreferredItemPaddingLeft}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -12298,9 +11665,8 @@ public final class R {
      */
     public static final int AppCompatTheme_listPreferredItemPaddingLeft=78;
     /**
-     * <p>
-     * @attr description
-     * The preferred padding along the right edge of list items.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#listPreferredItemPaddingRight}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -12312,9 +11678,8 @@ public final class R {
      */
     public static final int AppCompatTheme_listPreferredItemPaddingRight=79;
     /**
-     * <p>
-     * @attr description
-     * The background of a panel when it is inset from the left and right edges of the screen.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#panelBackground}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12325,9 +11690,8 @@ public final class R {
      */
     public static final int AppCompatTheme_panelBackground=80;
     /**
-     * <p>
-     * @attr description
-     * Default Panel Menu style.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#panelMenuListTheme}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12338,9 +11702,8 @@ public final class R {
      */
     public static final int AppCompatTheme_panelMenuListTheme=81;
     /**
-     * <p>
-     * @attr description
-     * Default Panel Menu width.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#panelMenuListWidth}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -12352,9 +11715,8 @@ public final class R {
      */
     public static final int AppCompatTheme_panelMenuListWidth=82;
     /**
-     * <p>
-     * @attr description
-     * Default PopupMenu style.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#popupMenuStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12365,9 +11727,8 @@ public final class R {
      */
     public static final int AppCompatTheme_popupMenuStyle=83;
     /**
-     * <p>
-     * @attr description
-     * Default PopupWindow style.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#popupWindowStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12378,9 +11739,8 @@ public final class R {
      */
     public static final int AppCompatTheme_popupWindowStyle=84;
     /**
-     * <p>
-     * @attr description
-     * Default RadioButton style.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#radioButtonStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12391,9 +11751,8 @@ public final class R {
      */
     public static final int AppCompatTheme_radioButtonStyle=85;
     /**
-     * <p>
-     * @attr description
-     * Default RatingBar style.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#ratingBarStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12404,9 +11763,8 @@ public final class R {
      */
     public static final int AppCompatTheme_ratingBarStyle=86;
     /**
-     * <p>
-     * @attr description
-     * Indicator RatingBar style.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#ratingBarStyleIndicator}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12417,9 +11775,8 @@ public final class R {
      */
     public static final int AppCompatTheme_ratingBarStyleIndicator=87;
     /**
-     * <p>
-     * @attr description
-     * Small indicator RatingBar style.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#ratingBarStyleSmall}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12430,9 +11787,8 @@ public final class R {
      */
     public static final int AppCompatTheme_ratingBarStyleSmall=88;
     /**
-     * <p>
-     * @attr description
-     * Style for the search query widget.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#searchViewStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12443,9 +11799,8 @@ public final class R {
      */
     public static final int AppCompatTheme_searchViewStyle=89;
     /**
-     * <p>
-     * @attr description
-     * Default SeekBar style.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#seekBarStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12456,11 +11811,8 @@ public final class R {
      */
     public static final int AppCompatTheme_seekBarStyle=90;
     /**
-     * <p>
-     * @attr description
-     * A style that may be applied to buttons or other selectable items
-     * that should react to pressed and focus states, but that do not
-     * have a clear visual border along the edges.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#selectableItemBackground}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12471,9 +11823,8 @@ public final class R {
      */
     public static final int AppCompatTheme_selectableItemBackground=91;
     /**
-     * <p>
-     * @attr description
-     * Background drawable for borderless standalone items that need focus/pressed states.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#selectableItemBackgroundBorderless}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12484,9 +11835,8 @@ public final class R {
      */
     public static final int AppCompatTheme_selectableItemBackgroundBorderless=92;
     /**
-     * <p>
-     * @attr description
-     * Default Spinner style.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#spinnerDropDownItemStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12497,9 +11847,8 @@ public final class R {
      */
     public static final int AppCompatTheme_spinnerDropDownItemStyle=93;
     /**
-     * <p>
-     * @attr description
-     * Default Spinner style.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#spinnerStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12510,9 +11859,8 @@ public final class R {
      */
     public static final int AppCompatTheme_spinnerStyle=94;
     /**
-     * <p>
-     * @attr description
-     * Default style for the Switch widget.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#switchStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12523,9 +11871,8 @@ public final class R {
      */
     public static final int AppCompatTheme_switchStyle=95;
     /**
-     * <p>
-     * @attr description
-     * Text color, typeface, size, and style for the text inside of a popup menu.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#textAppearanceLargePopupMenu}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12536,9 +11883,8 @@ public final class R {
      */
     public static final int AppCompatTheme_textAppearanceLargePopupMenu=96;
     /**
-     * <p>
-     * @attr description
-     * The preferred TextAppearance for the primary text of list items.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#textAppearanceListItem}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12549,9 +11895,8 @@ public final class R {
      */
     public static final int AppCompatTheme_textAppearanceListItem=97;
     /**
-     * <p>
-     * @attr description
-     * The preferred TextAppearance for the secondary text of list items.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#textAppearanceListItemSecondary}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12562,9 +11907,8 @@ public final class R {
      */
     public static final int AppCompatTheme_textAppearanceListItemSecondary=98;
     /**
-     * <p>
-     * @attr description
-     * The preferred TextAppearance for the primary text of small list items.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#textAppearanceListItemSmall}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12575,9 +11919,8 @@ public final class R {
      */
     public static final int AppCompatTheme_textAppearanceListItemSmall=99;
     /**
-     * <p>
-     * @attr description
-     * Text color, typeface, size, and style for header text inside of a popup menu.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#textAppearancePopupMenuHeader}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12588,9 +11931,8 @@ public final class R {
      */
     public static final int AppCompatTheme_textAppearancePopupMenuHeader=100;
     /**
-     * <p>
-     * @attr description
-     * Text color, typeface, size, and style for system search result subtitle. Defaults to primary inverse text color.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#textAppearanceSearchResultSubtitle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12601,9 +11943,8 @@ public final class R {
      */
     public static final int AppCompatTheme_textAppearanceSearchResultSubtitle=101;
     /**
-     * <p>
-     * @attr description
-     * Text color, typeface, size, and style for system search result title. Defaults to primary inverse text color.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#textAppearanceSearchResultTitle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12614,9 +11955,8 @@ public final class R {
      */
     public static final int AppCompatTheme_textAppearanceSearchResultTitle=102;
     /**
-     * <p>
-     * @attr description
-     * Text color, typeface, size, and style for small text inside of a popup menu.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#textAppearanceSmallPopupMenu}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12627,9 +11967,8 @@ public final class R {
      */
     public static final int AppCompatTheme_textAppearanceSmallPopupMenu=103;
     /**
-     * <p>
-     * @attr description
-     * Color of list item text in alert dialogs.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#textColorAlertDialogListItem}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12643,9 +11982,8 @@ public final class R {
      */
     public static final int AppCompatTheme_textColorAlertDialogListItem=104;
     /**
-     * <p>
-     * @attr description
-     * Text color for urls in search suggestions, used by things like global search
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#textColorSearchUrl}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12659,9 +11997,8 @@ public final class R {
      */
     public static final int AppCompatTheme_textColorSearchUrl=105;
     /**
-     * <p>
-     * @attr description
-     * Default Toolar NavigationButtonStyle
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#toolbarNavigationButtonStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12672,9 +12009,8 @@ public final class R {
      */
     public static final int AppCompatTheme_toolbarNavigationButtonStyle=106;
     /**
-     * <p>
-     * @attr description
-     * Default Toolbar style.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#toolbarStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12685,9 +12021,8 @@ public final class R {
      */
     public static final int AppCompatTheme_toolbarStyle=107;
     /**
-     * <p>
-     * @attr description
-     * Foreground color to use for tooltips
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#tooltipForegroundColor}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12701,9 +12036,8 @@ public final class R {
      */
     public static final int AppCompatTheme_tooltipForegroundColor=108;
     /**
-     * <p>
-     * @attr description
-     * Background to use for tooltips
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#tooltipFrameBackground}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12724,10 +12058,8 @@ public final class R {
      */
     public static final int AppCompatTheme_viewInflaterClass=110;
     /**
-     * <p>
-     * @attr description
-     * Flag indicating whether this window should have an Action Bar
-     * in place of the usual title bar.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#windowActionBar}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -12736,11 +12068,8 @@ public final class R {
      */
     public static final int AppCompatTheme_windowActionBar=111;
     /**
-     * <p>
-     * @attr description
-     * Flag indicating whether this window's Action Bar should overlay
-     * application content. Does nothing if the window would not
-     * have an Action Bar.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#windowActionBarOverlay}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -12749,10 +12078,8 @@ public final class R {
      */
     public static final int AppCompatTheme_windowActionBarOverlay=112;
     /**
-     * <p>
-     * @attr description
-     * Flag indicating whether action modes should overlay window content
-     * when there is not reserved space for their UI (such as an Action Bar).
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#windowActionModeOverlay}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -12761,11 +12088,8 @@ public final class R {
      */
     public static final int AppCompatTheme_windowActionModeOverlay=113;
     /**
-     * <p>
-     * @attr description
-     * A fixed height for the window along the major axis of the screen,
-     * that is, when in portrait. Can be either an absolute dimension
-     * or a fraction of the screen size in that dimension.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#windowFixedHeightMajor}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -12781,11 +12105,8 @@ public final class R {
      */
     public static final int AppCompatTheme_windowFixedHeightMajor=114;
     /**
-     * <p>
-     * @attr description
-     * A fixed height for the window along the minor axis of the screen,
-     * that is, when in landscape. Can be either an absolute dimension
-     * or a fraction of the screen size in that dimension.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#windowFixedHeightMinor}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -12801,11 +12122,8 @@ public final class R {
      */
     public static final int AppCompatTheme_windowFixedHeightMinor=115;
     /**
-     * <p>
-     * @attr description
-     * A fixed width for the window along the major axis of the screen,
-     * that is, when in landscape. Can be either an absolute dimension
-     * or a fraction of the screen size in that dimension.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#windowFixedWidthMajor}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -12821,11 +12139,8 @@ public final class R {
      */
     public static final int AppCompatTheme_windowFixedWidthMajor=116;
     /**
-     * <p>
-     * @attr description
-     * A fixed width for the window along the minor axis of the screen,
-     * that is, when in portrait. Can be either an absolute dimension
-     * or a fraction of the screen size in that dimension.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#windowFixedWidthMinor}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -12841,12 +12156,8 @@ public final class R {
      */
     public static final int AppCompatTheme_windowFixedWidthMinor=117;
     /**
-     * <p>
-     * @attr description
-     * The minimum width the window is allowed to be, along the major
-     * axis of the screen.  That is, when in landscape.  Can be either
-     * an absolute dimension or a fraction of the screen size in that
-     * dimension.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#windowMinWidthMajor}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -12862,12 +12173,8 @@ public final class R {
      */
     public static final int AppCompatTheme_windowMinWidthMajor=118;
     /**
-     * <p>
-     * @attr description
-     * The minimum width the window is allowed to be, along the minor
-     * axis of the screen.  That is, when in portrait.  Can be either
-     * an absolute dimension or a fraction of the screen size in that
-     * dimension.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#windowMinWidthMinor}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -12883,9 +12190,8 @@ public final class R {
      */
     public static final int AppCompatTheme_windowMinWidthMinor=119;
     /**
-     * <p>
-     * @attr description
-     * Flag indicating whether there should be no title on this window.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#windowNoTitle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -12900,7 +12206,7 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #BottomAppBar_backgroundTint com.borisruzanov.russianwives:backgroundTint}</code></td><td>Tint to apply to the background.</td></tr>
+     * <tr><td><code>{@link #BottomAppBar_backgroundTint com.borisruzanov.russianwives:backgroundTint}</code></td><td></td></tr>
      * <tr><td><code>{@link #BottomAppBar_fabAlignmentMode com.borisruzanov.russianwives:fabAlignmentMode}</code></td><td></td></tr>
      * <tr><td><code>{@link #BottomAppBar_fabCradleMargin com.borisruzanov.russianwives:fabCradleMargin}</code></td><td></td></tr>
      * <tr><td><code>{@link #BottomAppBar_fabCradleRoundedCornerRadius com.borisruzanov.russianwives:fabCradleRoundedCornerRadius}</code></td><td></td></tr>
@@ -12919,9 +12225,8 @@ public final class R {
       0x7f040129, 0x7f04015c
     };
     /**
-     * <p>
-     * @attr description
-     * Tint to apply to the background.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#backgroundTint}
+     * attribute's value can be found in the {@link #BottomAppBar} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -13003,7 +12308,7 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #BottomNavigationView_elevation com.borisruzanov.russianwives:elevation}</code></td><td>Elevation for the action bar itself</td></tr>
+     * <tr><td><code>{@link #BottomNavigationView_elevation com.borisruzanov.russianwives:elevation}</code></td><td></td></tr>
      * <tr><td><code>{@link #BottomNavigationView_itemBackground com.borisruzanov.russianwives:itemBackground}</code></td><td></td></tr>
      * <tr><td><code>{@link #BottomNavigationView_itemHorizontalTranslationEnabled com.borisruzanov.russianwives:itemHorizontalTranslationEnabled}</code></td><td></td></tr>
      * <tr><td><code>{@link #BottomNavigationView_itemIconSize com.borisruzanov.russianwives:itemIconSize}</code></td><td></td></tr>
@@ -13031,9 +12336,8 @@ public final class R {
       0x7f040181, 0x7f0401eb
     };
     /**
-     * <p>
-     * @attr description
-     * Elevation for the action bar itself
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#elevation}
+     * attribute's value can be found in the {@link #BottomNavigationView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -13234,8 +12538,7 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #ButtonBarLayout_allowStacking com.borisruzanov.russianwives:allowStacking}</code></td><td>Whether to automatically stack the buttons when there is not
-     * enough space to lay them out side-by-side.</td></tr>
+     * <tr><td><code>{@link #ButtonBarLayout_allowStacking com.borisruzanov.russianwives:allowStacking}</code></td><td></td></tr>
      * </table>
      * @see #ButtonBarLayout_allowStacking
      */
@@ -13243,10 +12546,8 @@ public final class R {
       0x7f040029
     };
     /**
-     * <p>
-     * @attr description
-     * Whether to automatically stack the buttons when there is not
-     * enough space to lay them out side-by-side.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#allowStacking}
+     * attribute's value can be found in the {@link #ButtonBarLayout} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -13263,17 +12564,17 @@ public final class R {
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #CardView_android_minWidth android:minWidth}</code></td><td></td></tr>
      * <tr><td><code>{@link #CardView_android_minHeight android:minHeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CardView_cardBackgroundColor com.borisruzanov.russianwives:cardBackgroundColor}</code></td><td>Background color for CardView.</td></tr>
-     * <tr><td><code>{@link #CardView_cardCornerRadius com.borisruzanov.russianwives:cardCornerRadius}</code></td><td>Corner radius for CardView.</td></tr>
-     * <tr><td><code>{@link #CardView_cardElevation com.borisruzanov.russianwives:cardElevation}</code></td><td>Elevation for CardView.</td></tr>
-     * <tr><td><code>{@link #CardView_cardMaxElevation com.borisruzanov.russianwives:cardMaxElevation}</code></td><td>Maximum Elevation for CardView.</td></tr>
-     * <tr><td><code>{@link #CardView_cardPreventCornerOverlap com.borisruzanov.russianwives:cardPreventCornerOverlap}</code></td><td>Add padding to CardView on v20 and before to prevent intersections between the Card content and rounded corners.</td></tr>
-     * <tr><td><code>{@link #CardView_cardUseCompatPadding com.borisruzanov.russianwives:cardUseCompatPadding}</code></td><td>Add padding in API v21+ as well to have the same measurements with previous versions.</td></tr>
-     * <tr><td><code>{@link #CardView_contentPadding com.borisruzanov.russianwives:contentPadding}</code></td><td>Inner padding between the edges of the Card and children of the CardView.</td></tr>
-     * <tr><td><code>{@link #CardView_contentPaddingBottom com.borisruzanov.russianwives:contentPaddingBottom}</code></td><td>Inner padding between the bottom edge of the Card and children of the CardView.</td></tr>
-     * <tr><td><code>{@link #CardView_contentPaddingLeft com.borisruzanov.russianwives:contentPaddingLeft}</code></td><td>Inner padding between the left edge of the Card and children of the CardView.</td></tr>
-     * <tr><td><code>{@link #CardView_contentPaddingRight com.borisruzanov.russianwives:contentPaddingRight}</code></td><td>Inner padding between the right edge of the Card and children of the CardView.</td></tr>
-     * <tr><td><code>{@link #CardView_contentPaddingTop com.borisruzanov.russianwives:contentPaddingTop}</code></td><td>Inner padding between the top edge of the Card and children of the CardView.</td></tr>
+     * <tr><td><code>{@link #CardView_cardBackgroundColor com.borisruzanov.russianwives:cardBackgroundColor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CardView_cardCornerRadius com.borisruzanov.russianwives:cardCornerRadius}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CardView_cardElevation com.borisruzanov.russianwives:cardElevation}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CardView_cardMaxElevation com.borisruzanov.russianwives:cardMaxElevation}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CardView_cardPreventCornerOverlap com.borisruzanov.russianwives:cardPreventCornerOverlap}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CardView_cardUseCompatPadding com.borisruzanov.russianwives:cardUseCompatPadding}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CardView_contentPadding com.borisruzanov.russianwives:contentPadding}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CardView_contentPaddingBottom com.borisruzanov.russianwives:contentPaddingBottom}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CardView_contentPaddingLeft com.borisruzanov.russianwives:contentPaddingLeft}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CardView_contentPaddingRight com.borisruzanov.russianwives:contentPaddingRight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CardView_contentPaddingTop com.borisruzanov.russianwives:contentPaddingTop}</code></td><td></td></tr>
      * </table>
      * @see #CardView_android_minWidth
      * @see #CardView_android_minHeight
@@ -13296,9 +12597,8 @@ public final class R {
       0x7f0400c5
     };
     /**
-     * <p>
-     * @attr description
-     * Workaround to read user defined minimum width
+     * <p>This symbol is the offset where the {@link android.R.attr#minWidth}
+     * attribute's value can be found in the {@link #CardView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -13310,9 +12610,8 @@ public final class R {
      */
     public static final int CardView_android_minWidth=0;
     /**
-     * <p>
-     * @attr description
-     * Workaround to read user defined minimum height
+     * <p>This symbol is the offset where the {@link android.R.attr#minHeight}
+     * attribute's value can be found in the {@link #CardView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -13324,9 +12623,8 @@ public final class R {
      */
     public static final int CardView_android_minHeight=1;
     /**
-     * <p>
-     * @attr description
-     * Background color for CardView.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#cardBackgroundColor}
+     * attribute's value can be found in the {@link #CardView} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -13336,9 +12634,8 @@ public final class R {
      */
     public static final int CardView_cardBackgroundColor=2;
     /**
-     * <p>
-     * @attr description
-     * Corner radius for CardView.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#cardCornerRadius}
+     * attribute's value can be found in the {@link #CardView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -13350,9 +12647,8 @@ public final class R {
      */
     public static final int CardView_cardCornerRadius=3;
     /**
-     * <p>
-     * @attr description
-     * Elevation for CardView.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#cardElevation}
+     * attribute's value can be found in the {@link #CardView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -13364,9 +12660,8 @@ public final class R {
      */
     public static final int CardView_cardElevation=4;
     /**
-     * <p>
-     * @attr description
-     * Maximum Elevation for CardView.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#cardMaxElevation}
+     * attribute's value can be found in the {@link #CardView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -13378,9 +12673,8 @@ public final class R {
      */
     public static final int CardView_cardMaxElevation=5;
     /**
-     * <p>
-     * @attr description
-     * Add padding to CardView on v20 and before to prevent intersections between the Card content and rounded corners.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#cardPreventCornerOverlap}
+     * attribute's value can be found in the {@link #CardView} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -13389,9 +12683,8 @@ public final class R {
      */
     public static final int CardView_cardPreventCornerOverlap=6;
     /**
-     * <p>
-     * @attr description
-     * Add padding in API v21+ as well to have the same measurements with previous versions.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#cardUseCompatPadding}
+     * attribute's value can be found in the {@link #CardView} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -13400,9 +12693,8 @@ public final class R {
      */
     public static final int CardView_cardUseCompatPadding=7;
     /**
-     * <p>
-     * @attr description
-     * Inner padding between the edges of the Card and children of the CardView.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#contentPadding}
+     * attribute's value can be found in the {@link #CardView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -13414,9 +12706,8 @@ public final class R {
      */
     public static final int CardView_contentPadding=8;
     /**
-     * <p>
-     * @attr description
-     * Inner padding between the bottom edge of the Card and children of the CardView.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#contentPaddingBottom}
+     * attribute's value can be found in the {@link #CardView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -13428,9 +12719,8 @@ public final class R {
      */
     public static final int CardView_contentPaddingBottom=9;
     /**
-     * <p>
-     * @attr description
-     * Inner padding between the left edge of the Card and children of the CardView.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#contentPaddingLeft}
+     * attribute's value can be found in the {@link #CardView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -13442,9 +12732,8 @@ public final class R {
      */
     public static final int CardView_contentPaddingLeft=10;
     /**
-     * <p>
-     * @attr description
-     * Inner padding between the right edge of the Card and children of the CardView.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#contentPaddingRight}
+     * attribute's value can be found in the {@link #CardView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -13456,9 +12745,8 @@ public final class R {
      */
     public static final int CardView_contentPaddingRight=11;
     /**
-     * <p>
-     * @attr description
-     * Inner padding between the top edge of the Card and children of the CardView.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#contentPaddingTop}
+     * attribute's value can be found in the {@link #CardView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -13496,7 +12784,7 @@ public final class R {
      * <tr><td><code>{@link #Chip_chipStartPadding com.borisruzanov.russianwives:chipStartPadding}</code></td><td></td></tr>
      * <tr><td><code>{@link #Chip_chipStrokeColor com.borisruzanov.russianwives:chipStrokeColor}</code></td><td></td></tr>
      * <tr><td><code>{@link #Chip_chipStrokeWidth com.borisruzanov.russianwives:chipStrokeWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Chip_closeIcon com.borisruzanov.russianwives:closeIcon}</code></td><td>Close button icon</td></tr>
+     * <tr><td><code>{@link #Chip_closeIcon com.borisruzanov.russianwives:closeIcon}</code></td><td></td></tr>
      * <tr><td><code>{@link #Chip_closeIconEnabled com.borisruzanov.russianwives:closeIconEnabled}</code></td><td></td></tr>
      * <tr><td><code>{@link #Chip_closeIconEndPadding com.borisruzanov.russianwives:closeIconEndPadding}</code></td><td></td></tr>
      * <tr><td><code>{@link #Chip_closeIconSize com.borisruzanov.russianwives:closeIconSize}</code></td><td></td></tr>
@@ -13554,8 +12842,8 @@ public final class R {
       0x7f04007d, 0x7f040082, 0x7f040083, 0x7f040084, 
       0x7f04008e, 0x7f04008f, 0x7f040090, 0x7f040091, 
       0x7f040092, 0x7f040093, 0x7f040094, 0x7f04015a, 
-      0x7f040164, 0x7f040168, 0x7f040242, 0x7f040252, 
-      0x7f0402af, 0x7f0402b1
+      0x7f040164, 0x7f040168, 0x7f040243, 0x7f040253, 
+      0x7f0402b0, 0x7f0402b2
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#textAppearance}
@@ -13798,9 +13086,8 @@ public final class R {
      */
     public static final int Chip_chipStrokeWidth=19;
     /**
-     * <p>
-     * @attr description
-     * Close button icon
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#closeIcon}
+     * attribute's value can be found in the {@link #Chip} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -13990,7 +13277,7 @@ public final class R {
      */
     public static final int[] ChipGroup={
       0x7f04006f, 0x7f04007e, 0x7f04007f, 0x7f040080, 
-      0x7f040257, 0x7f040258
+      0x7f040258, 0x7f040259
     };
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#checkedChip}
@@ -14186,8 +13473,8 @@ public final class R {
     public static final int[] CollapsingToolbarLayout={
       0x7f040098, 0x7f040099, 0x7f0400c6, 0x7f04011f, 
       0x7f040120, 0x7f040121, 0x7f040122, 0x7f040123, 
-      0x7f040124, 0x7f040125, 0x7f040247, 0x7f040249, 
-      0x7f04026b, 0x7f0402bc, 0x7f0402bd, 0x7f0402c7
+      0x7f040124, 0x7f040125, 0x7f040248, 0x7f04024a, 
+      0x7f04026c, 0x7f0402bd, 0x7f0402be, 0x7f0402c8
     };
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#collapsedTitleGravity}
@@ -14456,7 +13743,7 @@ public final class R {
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #ColorStateListItem_android_color android:color}</code></td><td></td></tr>
      * <tr><td><code>{@link #ColorStateListItem_android_alpha android:alpha}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ColorStateListItem_alpha com.borisruzanov.russianwives:alpha}</code></td><td>Alpha multiplier applied to the base color.</td></tr>
+     * <tr><td><code>{@link #ColorStateListItem_alpha com.borisruzanov.russianwives:alpha}</code></td><td></td></tr>
      * </table>
      * @see #ColorStateListItem_android_color
      * @see #ColorStateListItem_android_alpha
@@ -14466,9 +13753,8 @@ public final class R {
       0x010101a5, 0x0101031f, 0x7f04002a
     };
     /**
-     * <p>
-     * @attr description
-     * Base color for this state.
+     * <p>This symbol is the offset where the {@link android.R.attr#color}
+     * attribute's value can be found in the {@link #ColorStateListItem} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -14487,9 +13773,8 @@ public final class R {
      */
     public static final int ColorStateListItem_android_alpha=1;
     /**
-     * <p>
-     * @attr description
-     * Alpha multiplier applied to the base color.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#alpha}
+     * attribute's value can be found in the {@link #ColorStateListItem} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
@@ -14504,8 +13789,8 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #CompoundButton_android_button android:button}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CompoundButton_buttonTint com.borisruzanov.russianwives:buttonTint}</code></td><td>Tint to apply to the button drawable.</td></tr>
-     * <tr><td><code>{@link #CompoundButton_buttonTintMode com.borisruzanov.russianwives:buttonTintMode}</code></td><td>Blending mode used to apply the button tint.</td></tr>
+     * <tr><td><code>{@link #CompoundButton_buttonTint com.borisruzanov.russianwives:buttonTint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CompoundButton_buttonTintMode com.borisruzanov.russianwives:buttonTintMode}</code></td><td></td></tr>
      * </table>
      * @see #CompoundButton_android_button
      * @see #CompoundButton_buttonTint
@@ -14527,9 +13812,8 @@ public final class R {
      */
     public static final int CompoundButton_android_button=0;
     /**
-     * <p>
-     * @attr description
-     * Tint to apply to the button drawable.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#buttonTint}
+     * attribute's value can be found in the {@link #CompoundButton} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -14539,9 +13823,8 @@ public final class R {
      */
     public static final int CompoundButton_buttonTint=1;
     /**
-     * <p>
-     * @attr description
-     * Blending mode used to apply the button tint.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#buttonTintMode}
+     * attribute's value can be found in the {@link #CompoundButton} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -14549,17 +13832,12 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      *
      * @attr name com.borisruzanov.russianwives:buttonTintMode
@@ -14823,8 +14101,8 @@ public final class R {
       0x7f0401b2, 0x7f0401b3, 0x7f0401b4, 0x7f0401b5, 
       0x7f0401b7, 0x7f0401b8, 0x7f0401b9, 0x7f0401ba, 
       0x7f0401bb, 0x7f0401bc, 0x7f0401bd, 0x7f0401be, 
-      0x7f0401f8, 0x7f040224, 0x7f04022b, 0x7f040234, 
-      0x7f0402d4, 0x7f0402d5, 0x7f0402dc
+      0x7f0401f8, 0x7f040225, 0x7f04022c, 0x7f040235, 
+      0x7f0402d5, 0x7f0402d6, 0x7f0402dd
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#orientation}
@@ -16401,10 +15679,14 @@ public final class R {
      * <tr><td><code>{@link #ConstraintLayout_Layout_android_paddingTop android:paddingTop}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintLayout_Layout_android_paddingRight android:paddingRight}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintLayout_Layout_android_paddingBottom android:paddingBottom}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_android_visibility android:visibility}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintLayout_Layout_android_maxWidth android:maxWidth}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintLayout_Layout_android_maxHeight android:maxHeight}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintLayout_Layout_android_minWidth android:minWidth}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintLayout_Layout_android_minHeight android:minHeight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_android_paddingStart android:paddingStart}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_android_paddingEnd android:paddingEnd}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_android_elevation android:elevation}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintLayout_Layout_barrierAllowsGoneWidgets com.borisruzanov.russianwives:barrierAllowsGoneWidgets}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintLayout_Layout_barrierDirection com.borisruzanov.russianwives:barrierDirection}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintLayout_Layout_barrierMargin com.borisruzanov.russianwives:barrierMargin}</code></td><td></td></tr>
@@ -16488,10 +15770,14 @@ public final class R {
      * @see #ConstraintLayout_Layout_android_paddingTop
      * @see #ConstraintLayout_Layout_android_paddingRight
      * @see #ConstraintLayout_Layout_android_paddingBottom
+     * @see #ConstraintLayout_Layout_android_visibility
      * @see #ConstraintLayout_Layout_android_maxWidth
      * @see #ConstraintLayout_Layout_android_maxHeight
      * @see #ConstraintLayout_Layout_android_minWidth
      * @see #ConstraintLayout_Layout_android_minHeight
+     * @see #ConstraintLayout_Layout_android_paddingStart
+     * @see #ConstraintLayout_Layout_android_paddingEnd
+     * @see #ConstraintLayout_Layout_android_elevation
      * @see #ConstraintLayout_Layout_barrierAllowsGoneWidgets
      * @see #ConstraintLayout_Layout_barrierDirection
      * @see #ConstraintLayout_Layout_barrierMargin
@@ -16571,8 +15857,9 @@ public final class R {
      */
     public static final int[] ConstraintLayout_Layout={
       0x010100c4, 0x010100d5, 0x010100d6, 0x010100d7, 
-      0x010100d8, 0x010100d9, 0x0101011f, 0x01010120, 
-      0x0101013f, 0x01010140, 0x7f040040, 0x7f040041, 
+      0x010100d8, 0x010100d9, 0x010100dc, 0x0101011f, 
+      0x01010120, 0x0101013f, 0x01010140, 0x010103b3, 
+      0x010103b4, 0x01010440, 0x7f040040, 0x7f040041, 
       0x7f040042, 0x7f04006d, 0x7f0400b4, 0x7f0400b7, 
       0x7f040133, 0x7f040134, 0x7f040135, 0x7f040136, 
       0x7f040137, 0x7f040138, 0x7f040139, 0x7f04013a, 
@@ -16676,6 +15963,24 @@ public final class R {
      */
     public static final int ConstraintLayout_Layout_android_paddingBottom=5;
     /**
+     * <p>This symbol is the offset where the {@link android.R.attr#visibility}
+     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
+     *
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>gone</td><td>2</td><td></td></tr>
+     * <tr><td>invisible</td><td>1</td><td></td></tr>
+     * <tr><td>visible</td><td>0</td><td></td></tr>
+     * </table>
+     *
+     * @attr name android:visibility
+     */
+    public static final int ConstraintLayout_Layout_android_visibility=6;
+    /**
      * <p>This symbol is the offset where the {@link android.R.attr#maxWidth}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
@@ -16687,7 +15992,7 @@ public final class R {
      *
      * @attr name android:maxWidth
      */
-    public static final int ConstraintLayout_Layout_android_maxWidth=6;
+    public static final int ConstraintLayout_Layout_android_maxWidth=7;
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#maxHeight}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -16700,7 +16005,7 @@ public final class R {
      *
      * @attr name android:maxHeight
      */
-    public static final int ConstraintLayout_Layout_android_maxHeight=7;
+    public static final int ConstraintLayout_Layout_android_maxHeight=8;
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#minWidth}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -16713,7 +16018,7 @@ public final class R {
      *
      * @attr name android:minWidth
      */
-    public static final int ConstraintLayout_Layout_android_minWidth=8;
+    public static final int ConstraintLayout_Layout_android_minWidth=9;
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#minHeight}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -16726,7 +16031,46 @@ public final class R {
      *
      * @attr name android:minHeight
      */
-    public static final int ConstraintLayout_Layout_android_minHeight=9;
+    public static final int ConstraintLayout_Layout_android_minHeight=10;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#paddingStart}
+     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name android:paddingStart
+     */
+    public static final int ConstraintLayout_Layout_android_paddingStart=11;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#paddingEnd}
+     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name android:paddingEnd
+     */
+    public static final int ConstraintLayout_Layout_android_paddingEnd=12;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#elevation}
+     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name android:elevation
+     */
+    public static final int ConstraintLayout_Layout_android_elevation=13;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#barrierAllowsGoneWidgets}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -16736,7 +16080,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:barrierAllowsGoneWidgets
      */
-    public static final int ConstraintLayout_Layout_barrierAllowsGoneWidgets=10;
+    public static final int ConstraintLayout_Layout_barrierAllowsGoneWidgets=14;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#barrierDirection}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -16757,7 +16101,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:barrierDirection
      */
-    public static final int ConstraintLayout_Layout_barrierDirection=11;
+    public static final int ConstraintLayout_Layout_barrierDirection=15;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#barrierMargin}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -16770,7 +16114,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:barrierMargin
      */
-    public static final int ConstraintLayout_Layout_barrierMargin=12;
+    public static final int ConstraintLayout_Layout_barrierMargin=16;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#chainUseRtl}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -16780,7 +16124,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:chainUseRtl
      */
-    public static final int ConstraintLayout_Layout_chainUseRtl=13;
+    public static final int ConstraintLayout_Layout_chainUseRtl=17;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#constraintSet}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -16792,7 +16136,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:constraintSet
      */
-    public static final int ConstraintLayout_Layout_constraintSet=14;
+    public static final int ConstraintLayout_Layout_constraintSet=18;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#constraint_referenced_ids}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -16802,7 +16146,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:constraint_referenced_ids
      */
-    public static final int ConstraintLayout_Layout_constraint_referenced_ids=15;
+    public static final int ConstraintLayout_Layout_constraint_referenced_ids=19;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#flow_firstHorizontalBias}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -16811,7 +16155,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:flow_firstHorizontalBias
      */
-    public static final int ConstraintLayout_Layout_flow_firstHorizontalBias=16;
+    public static final int ConstraintLayout_Layout_flow_firstHorizontalBias=20;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#flow_firstHorizontalStyle}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -16829,7 +16173,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:flow_firstHorizontalStyle
      */
-    public static final int ConstraintLayout_Layout_flow_firstHorizontalStyle=17;
+    public static final int ConstraintLayout_Layout_flow_firstHorizontalStyle=21;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#flow_firstVerticalBias}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -16838,7 +16182,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:flow_firstVerticalBias
      */
-    public static final int ConstraintLayout_Layout_flow_firstVerticalBias=18;
+    public static final int ConstraintLayout_Layout_flow_firstVerticalBias=22;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#flow_firstVerticalStyle}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -16856,7 +16200,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:flow_firstVerticalStyle
      */
-    public static final int ConstraintLayout_Layout_flow_firstVerticalStyle=19;
+    public static final int ConstraintLayout_Layout_flow_firstVerticalStyle=23;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#flow_horizontalAlign}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -16874,7 +16218,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:flow_horizontalAlign
      */
-    public static final int ConstraintLayout_Layout_flow_horizontalAlign=20;
+    public static final int ConstraintLayout_Layout_flow_horizontalAlign=24;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#flow_horizontalBias}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -16883,7 +16227,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:flow_horizontalBias
      */
-    public static final int ConstraintLayout_Layout_flow_horizontalBias=21;
+    public static final int ConstraintLayout_Layout_flow_horizontalBias=25;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#flow_horizontalGap}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -16896,7 +16240,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:flow_horizontalGap
      */
-    public static final int ConstraintLayout_Layout_flow_horizontalGap=22;
+    public static final int ConstraintLayout_Layout_flow_horizontalGap=26;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#flow_horizontalStyle}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -16914,7 +16258,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:flow_horizontalStyle
      */
-    public static final int ConstraintLayout_Layout_flow_horizontalStyle=23;
+    public static final int ConstraintLayout_Layout_flow_horizontalStyle=27;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#flow_lastHorizontalBias}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -16923,7 +16267,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:flow_lastHorizontalBias
      */
-    public static final int ConstraintLayout_Layout_flow_lastHorizontalBias=24;
+    public static final int ConstraintLayout_Layout_flow_lastHorizontalBias=28;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#flow_lastHorizontalStyle}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -16941,7 +16285,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:flow_lastHorizontalStyle
      */
-    public static final int ConstraintLayout_Layout_flow_lastHorizontalStyle=25;
+    public static final int ConstraintLayout_Layout_flow_lastHorizontalStyle=29;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#flow_lastVerticalBias}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -16950,7 +16294,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:flow_lastVerticalBias
      */
-    public static final int ConstraintLayout_Layout_flow_lastVerticalBias=26;
+    public static final int ConstraintLayout_Layout_flow_lastVerticalBias=30;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#flow_lastVerticalStyle}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -16968,7 +16312,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:flow_lastVerticalStyle
      */
-    public static final int ConstraintLayout_Layout_flow_lastVerticalStyle=27;
+    public static final int ConstraintLayout_Layout_flow_lastVerticalStyle=31;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#flow_maxElementsWrap}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -16977,7 +16321,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:flow_maxElementsWrap
      */
-    public static final int ConstraintLayout_Layout_flow_maxElementsWrap=28;
+    public static final int ConstraintLayout_Layout_flow_maxElementsWrap=32;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#flow_verticalAlign}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -16996,7 +16340,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:flow_verticalAlign
      */
-    public static final int ConstraintLayout_Layout_flow_verticalAlign=29;
+    public static final int ConstraintLayout_Layout_flow_verticalAlign=33;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#flow_verticalBias}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17005,7 +16349,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:flow_verticalBias
      */
-    public static final int ConstraintLayout_Layout_flow_verticalBias=30;
+    public static final int ConstraintLayout_Layout_flow_verticalBias=34;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#flow_verticalGap}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17018,7 +16362,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:flow_verticalGap
      */
-    public static final int ConstraintLayout_Layout_flow_verticalGap=31;
+    public static final int ConstraintLayout_Layout_flow_verticalGap=35;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#flow_verticalStyle}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17036,7 +16380,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:flow_verticalStyle
      */
-    public static final int ConstraintLayout_Layout_flow_verticalStyle=32;
+    public static final int ConstraintLayout_Layout_flow_verticalStyle=36;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#flow_wrapMode}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17054,7 +16398,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:flow_wrapMode
      */
-    public static final int ConstraintLayout_Layout_flow_wrapMode=33;
+    public static final int ConstraintLayout_Layout_flow_wrapMode=37;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layoutDescription}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17066,7 +16410,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layoutDescription
      */
-    public static final int ConstraintLayout_Layout_layoutDescription=34;
+    public static final int ConstraintLayout_Layout_layoutDescription=38;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constrainedHeight}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17076,7 +16420,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constrainedHeight
      */
-    public static final int ConstraintLayout_Layout_layout_constrainedHeight=35;
+    public static final int ConstraintLayout_Layout_layout_constrainedHeight=39;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constrainedWidth}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17086,7 +16430,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constrainedWidth
      */
-    public static final int ConstraintLayout_Layout_layout_constrainedWidth=36;
+    public static final int ConstraintLayout_Layout_layout_constrainedWidth=40;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintBaseline_creator}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17095,7 +16439,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintBaseline_creator
      */
-    public static final int ConstraintLayout_Layout_layout_constraintBaseline_creator=37;
+    public static final int ConstraintLayout_Layout_layout_constraintBaseline_creator=41;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintBaseline_toBaselineOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17115,7 +16459,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintBaseline_toBaselineOf
      */
-    public static final int ConstraintLayout_Layout_layout_constraintBaseline_toBaselineOf=38;
+    public static final int ConstraintLayout_Layout_layout_constraintBaseline_toBaselineOf=42;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintBottom_creator}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17124,7 +16468,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintBottom_creator
      */
-    public static final int ConstraintLayout_Layout_layout_constraintBottom_creator=39;
+    public static final int ConstraintLayout_Layout_layout_constraintBottom_creator=43;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintBottom_toBottomOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17144,7 +16488,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintBottom_toBottomOf
      */
-    public static final int ConstraintLayout_Layout_layout_constraintBottom_toBottomOf=40;
+    public static final int ConstraintLayout_Layout_layout_constraintBottom_toBottomOf=44;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintBottom_toTopOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17164,7 +16508,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintBottom_toTopOf
      */
-    public static final int ConstraintLayout_Layout_layout_constraintBottom_toTopOf=41;
+    public static final int ConstraintLayout_Layout_layout_constraintBottom_toTopOf=45;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintCircle}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17176,7 +16520,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintCircle
      */
-    public static final int ConstraintLayout_Layout_layout_constraintCircle=42;
+    public static final int ConstraintLayout_Layout_layout_constraintCircle=46;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintCircleAngle}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17185,7 +16529,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintCircleAngle
      */
-    public static final int ConstraintLayout_Layout_layout_constraintCircleAngle=43;
+    public static final int ConstraintLayout_Layout_layout_constraintCircleAngle=47;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintCircleRadius}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17198,7 +16542,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintCircleRadius
      */
-    public static final int ConstraintLayout_Layout_layout_constraintCircleRadius=44;
+    public static final int ConstraintLayout_Layout_layout_constraintCircleRadius=48;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintDimensionRatio}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17208,7 +16552,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintDimensionRatio
      */
-    public static final int ConstraintLayout_Layout_layout_constraintDimensionRatio=45;
+    public static final int ConstraintLayout_Layout_layout_constraintDimensionRatio=49;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintEnd_toEndOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17228,7 +16572,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintEnd_toEndOf
      */
-    public static final int ConstraintLayout_Layout_layout_constraintEnd_toEndOf=46;
+    public static final int ConstraintLayout_Layout_layout_constraintEnd_toEndOf=50;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintEnd_toStartOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17248,7 +16592,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintEnd_toStartOf
      */
-    public static final int ConstraintLayout_Layout_layout_constraintEnd_toStartOf=47;
+    public static final int ConstraintLayout_Layout_layout_constraintEnd_toStartOf=51;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintGuide_begin}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17261,7 +16605,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintGuide_begin
      */
-    public static final int ConstraintLayout_Layout_layout_constraintGuide_begin=48;
+    public static final int ConstraintLayout_Layout_layout_constraintGuide_begin=52;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintGuide_end}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17274,7 +16618,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintGuide_end
      */
-    public static final int ConstraintLayout_Layout_layout_constraintGuide_end=49;
+    public static final int ConstraintLayout_Layout_layout_constraintGuide_end=53;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintGuide_percent}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17283,7 +16627,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintGuide_percent
      */
-    public static final int ConstraintLayout_Layout_layout_constraintGuide_percent=50;
+    public static final int ConstraintLayout_Layout_layout_constraintGuide_percent=54;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintHeight_default}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17301,7 +16645,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintHeight_default
      */
-    public static final int ConstraintLayout_Layout_layout_constraintHeight_default=51;
+    public static final int ConstraintLayout_Layout_layout_constraintHeight_default=55;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintHeight_max}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17322,7 +16666,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintHeight_max
      */
-    public static final int ConstraintLayout_Layout_layout_constraintHeight_max=52;
+    public static final int ConstraintLayout_Layout_layout_constraintHeight_max=56;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintHeight_min}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17343,7 +16687,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintHeight_min
      */
-    public static final int ConstraintLayout_Layout_layout_constraintHeight_min=53;
+    public static final int ConstraintLayout_Layout_layout_constraintHeight_min=57;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintHeight_percent}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17352,7 +16696,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintHeight_percent
      */
-    public static final int ConstraintLayout_Layout_layout_constraintHeight_percent=54;
+    public static final int ConstraintLayout_Layout_layout_constraintHeight_percent=58;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintHorizontal_bias}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17361,7 +16705,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintHorizontal_bias
      */
-    public static final int ConstraintLayout_Layout_layout_constraintHorizontal_bias=55;
+    public static final int ConstraintLayout_Layout_layout_constraintHorizontal_bias=59;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintHorizontal_chainStyle}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17379,7 +16723,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintHorizontal_chainStyle
      */
-    public static final int ConstraintLayout_Layout_layout_constraintHorizontal_chainStyle=56;
+    public static final int ConstraintLayout_Layout_layout_constraintHorizontal_chainStyle=60;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintHorizontal_weight}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17388,7 +16732,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintHorizontal_weight
      */
-    public static final int ConstraintLayout_Layout_layout_constraintHorizontal_weight=57;
+    public static final int ConstraintLayout_Layout_layout_constraintHorizontal_weight=61;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintLeft_creator}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17397,7 +16741,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintLeft_creator
      */
-    public static final int ConstraintLayout_Layout_layout_constraintLeft_creator=58;
+    public static final int ConstraintLayout_Layout_layout_constraintLeft_creator=62;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintLeft_toLeftOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17417,7 +16761,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintLeft_toLeftOf
      */
-    public static final int ConstraintLayout_Layout_layout_constraintLeft_toLeftOf=59;
+    public static final int ConstraintLayout_Layout_layout_constraintLeft_toLeftOf=63;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintLeft_toRightOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17437,7 +16781,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintLeft_toRightOf
      */
-    public static final int ConstraintLayout_Layout_layout_constraintLeft_toRightOf=60;
+    public static final int ConstraintLayout_Layout_layout_constraintLeft_toRightOf=64;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintRight_creator}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17446,7 +16790,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintRight_creator
      */
-    public static final int ConstraintLayout_Layout_layout_constraintRight_creator=61;
+    public static final int ConstraintLayout_Layout_layout_constraintRight_creator=65;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintRight_toLeftOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17466,7 +16810,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintRight_toLeftOf
      */
-    public static final int ConstraintLayout_Layout_layout_constraintRight_toLeftOf=62;
+    public static final int ConstraintLayout_Layout_layout_constraintRight_toLeftOf=66;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintRight_toRightOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17486,7 +16830,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintRight_toRightOf
      */
-    public static final int ConstraintLayout_Layout_layout_constraintRight_toRightOf=63;
+    public static final int ConstraintLayout_Layout_layout_constraintRight_toRightOf=67;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintStart_toEndOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17506,7 +16850,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintStart_toEndOf
      */
-    public static final int ConstraintLayout_Layout_layout_constraintStart_toEndOf=64;
+    public static final int ConstraintLayout_Layout_layout_constraintStart_toEndOf=68;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintStart_toStartOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17526,7 +16870,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintStart_toStartOf
      */
-    public static final int ConstraintLayout_Layout_layout_constraintStart_toStartOf=65;
+    public static final int ConstraintLayout_Layout_layout_constraintStart_toStartOf=69;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintTag}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17536,7 +16880,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintTag
      */
-    public static final int ConstraintLayout_Layout_layout_constraintTag=66;
+    public static final int ConstraintLayout_Layout_layout_constraintTag=70;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintTop_creator}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17545,7 +16889,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintTop_creator
      */
-    public static final int ConstraintLayout_Layout_layout_constraintTop_creator=67;
+    public static final int ConstraintLayout_Layout_layout_constraintTop_creator=71;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintTop_toBottomOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17565,7 +16909,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintTop_toBottomOf
      */
-    public static final int ConstraintLayout_Layout_layout_constraintTop_toBottomOf=68;
+    public static final int ConstraintLayout_Layout_layout_constraintTop_toBottomOf=72;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintTop_toTopOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17585,7 +16929,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintTop_toTopOf
      */
-    public static final int ConstraintLayout_Layout_layout_constraintTop_toTopOf=69;
+    public static final int ConstraintLayout_Layout_layout_constraintTop_toTopOf=73;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintVertical_bias}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17594,7 +16938,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintVertical_bias
      */
-    public static final int ConstraintLayout_Layout_layout_constraintVertical_bias=70;
+    public static final int ConstraintLayout_Layout_layout_constraintVertical_bias=74;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintVertical_chainStyle}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17612,7 +16956,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintVertical_chainStyle
      */
-    public static final int ConstraintLayout_Layout_layout_constraintVertical_chainStyle=71;
+    public static final int ConstraintLayout_Layout_layout_constraintVertical_chainStyle=75;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintVertical_weight}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17621,7 +16965,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintVertical_weight
      */
-    public static final int ConstraintLayout_Layout_layout_constraintVertical_weight=72;
+    public static final int ConstraintLayout_Layout_layout_constraintVertical_weight=76;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintWidth_default}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17639,7 +16983,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintWidth_default
      */
-    public static final int ConstraintLayout_Layout_layout_constraintWidth_default=73;
+    public static final int ConstraintLayout_Layout_layout_constraintWidth_default=77;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintWidth_max}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17660,7 +17004,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintWidth_max
      */
-    public static final int ConstraintLayout_Layout_layout_constraintWidth_max=74;
+    public static final int ConstraintLayout_Layout_layout_constraintWidth_max=78;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintWidth_min}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17681,7 +17025,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintWidth_min
      */
-    public static final int ConstraintLayout_Layout_layout_constraintWidth_min=75;
+    public static final int ConstraintLayout_Layout_layout_constraintWidth_min=79;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_constraintWidth_percent}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17690,7 +17034,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_constraintWidth_percent
      */
-    public static final int ConstraintLayout_Layout_layout_constraintWidth_percent=76;
+    public static final int ConstraintLayout_Layout_layout_constraintWidth_percent=80;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_editor_absoluteX}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17703,7 +17047,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_editor_absoluteX
      */
-    public static final int ConstraintLayout_Layout_layout_editor_absoluteX=77;
+    public static final int ConstraintLayout_Layout_layout_editor_absoluteX=81;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_editor_absoluteY}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17716,7 +17060,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_editor_absoluteY
      */
-    public static final int ConstraintLayout_Layout_layout_editor_absoluteY=78;
+    public static final int ConstraintLayout_Layout_layout_editor_absoluteY=82;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_goneMarginBottom}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17729,7 +17073,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_goneMarginBottom
      */
-    public static final int ConstraintLayout_Layout_layout_goneMarginBottom=79;
+    public static final int ConstraintLayout_Layout_layout_goneMarginBottom=83;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_goneMarginEnd}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17742,7 +17086,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_goneMarginEnd
      */
-    public static final int ConstraintLayout_Layout_layout_goneMarginEnd=80;
+    public static final int ConstraintLayout_Layout_layout_goneMarginEnd=84;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_goneMarginLeft}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17755,7 +17099,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_goneMarginLeft
      */
-    public static final int ConstraintLayout_Layout_layout_goneMarginLeft=81;
+    public static final int ConstraintLayout_Layout_layout_goneMarginLeft=85;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_goneMarginRight}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17768,7 +17112,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_goneMarginRight
      */
-    public static final int ConstraintLayout_Layout_layout_goneMarginRight=82;
+    public static final int ConstraintLayout_Layout_layout_goneMarginRight=86;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_goneMarginStart}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17781,7 +17125,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_goneMarginStart
      */
-    public static final int ConstraintLayout_Layout_layout_goneMarginStart=83;
+    public static final int ConstraintLayout_Layout_layout_goneMarginStart=87;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_goneMarginTop}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17794,7 +17138,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_goneMarginTop
      */
-    public static final int ConstraintLayout_Layout_layout_goneMarginTop=84;
+    public static final int ConstraintLayout_Layout_layout_goneMarginTop=88;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_optimizationLevel}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -17808,7 +17152,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
+     * <tr><td>direct</td><td>1</td><td></td></tr>
      * <tr><td>graph</td><td>40</td><td></td></tr>
      * <tr><td>graph_wrap</td><td>80</td><td></td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
@@ -17819,7 +17163,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:layout_optimizationLevel
      */
-    public static final int ConstraintLayout_Layout_layout_optimizationLevel=85;
+    public static final int ConstraintLayout_Layout_layout_optimizationLevel=89;
     /**
      * Attributes that can be used with a ConstraintLayout_placeholder.
      * <p>Includes the following attributes:</p>
@@ -17834,7 +17178,7 @@ public final class R {
      * @see #ConstraintLayout_placeholder_placeholder_emptyVisibility
      */
     public static final int[] ConstraintLayout_placeholder={
-      0x7f0400b9, 0x7f04022e
+      0x7f0400b9, 0x7f04022f
     };
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#content}
@@ -18124,8 +17468,8 @@ public final class R {
       0x7f0401b1, 0x7f0401b2, 0x7f0401b3, 0x7f0401b4, 
       0x7f0401b5, 0x7f0401b7, 0x7f0401b8, 0x7f0401b9, 
       0x7f0401ba, 0x7f0401bb, 0x7f0401bc, 0x7f0401bd, 
-      0x7f0401be, 0x7f0401f7, 0x7f0401f8, 0x7f040224, 
-      0x7f04022b, 0x7f0402d4, 0x7f0402d5
+      0x7f0401be, 0x7f0401f7, 0x7f0401f8, 0x7f040225, 
+      0x7f04022c, 0x7f0402d5, 0x7f0402d6
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#orientation}
@@ -19691,24 +19035,18 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_keylines com.borisruzanov.russianwives:keylines}</code></td><td>A reference to an array of integers representing the
-     * locations of horizontal keylines in dp from the starting edge.</td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_statusBarBackground com.borisruzanov.russianwives:statusBarBackground}</code></td><td>Drawable to display behind the status bar when the view is set to draw behind it.</td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_keylines com.borisruzanov.russianwives:keylines}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_statusBarBackground com.borisruzanov.russianwives:statusBarBackground}</code></td><td></td></tr>
      * </table>
      * @see #CoordinatorLayout_keylines
      * @see #CoordinatorLayout_statusBarBackground
      */
     public static final int[] CoordinatorLayout={
-      0x7f040180, 0x7f04026a
+      0x7f040180, 0x7f04026b
     };
     /**
-     * <p>
-     * @attr description
-     * A reference to an array of integers representing the
-     * locations of horizontal keylines in dp from the starting edge.
-     * Child views can refer to these keylines for alignment using
-     * layout_keyline="index" where index is a 0-based index into
-     * this array.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#keylines}
+     * attribute's value can be found in the {@link #CoordinatorLayout} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -19719,9 +19057,8 @@ public final class R {
      */
     public static final int CoordinatorLayout_keylines=0;
     /**
-     * <p>
-     * @attr description
-     * Drawable to display behind the status bar when the view is set to draw behind it.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#statusBarBackground}
+     * attribute's value can be found in the {@link #CoordinatorLayout} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -19742,15 +19079,12 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #CoordinatorLayout_Layout_android_layout_gravity android:layout_gravity}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchor com.borisruzanov.russianwives:layout_anchor}</code></td><td>The id of an anchor view that this view should position relative to.</td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchorGravity com.borisruzanov.russianwives:layout_anchorGravity}</code></td><td>Specifies how an object should position relative to an anchor, on both the X and Y axes,
-     * within its parent's bounds.</td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_behavior com.borisruzanov.russianwives:layout_behavior}</code></td><td>The class name of a Behavior class defining special runtime behavior
-     * for this child view.</td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_dodgeInsetEdges com.borisruzanov.russianwives:layout_dodgeInsetEdges}</code></td><td>Specifies how this view dodges the inset edges of the CoordinatorLayout.</td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_insetEdge com.borisruzanov.russianwives:layout_insetEdge}</code></td><td>Specifies how this view insets the CoordinatorLayout and make some other views
-     * dodge it.</td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_keyline com.borisruzanov.russianwives:layout_keyline}</code></td><td>The index of a keyline this view should position relative to.</td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchor com.borisruzanov.russianwives:layout_anchor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchorGravity com.borisruzanov.russianwives:layout_anchorGravity}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_behavior com.borisruzanov.russianwives:layout_behavior}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_dodgeInsetEdges com.borisruzanov.russianwives:layout_dodgeInsetEdges}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_insetEdge com.borisruzanov.russianwives:layout_insetEdge}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_keyline com.borisruzanov.russianwives:layout_keyline}</code></td><td></td></tr>
      * </table>
      * @see #CoordinatorLayout_Layout_android_layout_gravity
      * @see #CoordinatorLayout_Layout_layout_anchor
@@ -19794,9 +19128,8 @@ public final class R {
      */
     public static final int CoordinatorLayout_Layout_android_layout_gravity=0;
     /**
-     * <p>
-     * @attr description
-     * The id of an anchor view that this view should position relative to.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_anchor}
+     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -19807,10 +19140,8 @@ public final class R {
      */
     public static final int CoordinatorLayout_Layout_layout_anchor=1;
     /**
-     * <p>
-     * @attr description
-     * Specifies how an object should position relative to an anchor, on both the X and Y axes,
-     * within its parent's bounds.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_anchorGravity}
+     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -19818,36 +19149,28 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td>Push object to the bottom of its container, not changing its size.</td></tr>
-     * <tr><td>center</td><td>11</td><td>Place the object in the center of its container in both the vertical and horizontal axis, not changing its size.</td></tr>
-     * <tr><td>center_horizontal</td><td>1</td><td>Place object in the horizontal center of its container, not changing its size.</td></tr>
-     * <tr><td>center_vertical</td><td>10</td><td>Place object in the vertical center of its container, not changing its size.</td></tr>
-     * <tr><td>clip_horizontal</td><td>8</td><td>Additional option that can be set to have the left and/or right edges of
-     * the child clipped to its container's bounds.
-     * The clip will be based on the horizontal gravity: a left gravity will clip the right
-     * edge, a right gravity will clip the left edge, and neither will clip both edges.</td></tr>
-     * <tr><td>clip_vertical</td><td>80</td><td>Additional option that can be set to have the top and/or bottom edges of
-     * the child clipped to its container's bounds.
-     * The clip will be based on the vertical gravity: a top gravity will clip the bottom
-     * edge, a bottom gravity will clip the top edge, and neither will clip both edges.</td></tr>
-     * <tr><td>end</td><td>800005</td><td>Push object to the end of its container, not changing its size.</td></tr>
-     * <tr><td>fill</td><td>77</td><td>Grow the horizontal and vertical size of the object if needed so it completely fills its container.</td></tr>
-     * <tr><td>fill_horizontal</td><td>7</td><td>Grow the horizontal size of the object if needed so it completely fills its container.</td></tr>
-     * <tr><td>fill_vertical</td><td>70</td><td>Grow the vertical size of the object if needed so it completely fills its container.</td></tr>
-     * <tr><td>left</td><td>3</td><td>Push object to the left of its container, not changing its size.</td></tr>
-     * <tr><td>right</td><td>5</td><td>Push object to the right of its container, not changing its size.</td></tr>
-     * <tr><td>start</td><td>800003</td><td>Push object to the beginning of its container, not changing its size.</td></tr>
-     * <tr><td>top</td><td>30</td><td>Push object to the top of its container, not changing its size.</td></tr>
+     * <tr><td>bottom</td><td>50</td><td></td></tr>
+     * <tr><td>center</td><td>11</td><td></td></tr>
+     * <tr><td>center_horizontal</td><td>1</td><td></td></tr>
+     * <tr><td>center_vertical</td><td>10</td><td></td></tr>
+     * <tr><td>clip_horizontal</td><td>8</td><td></td></tr>
+     * <tr><td>clip_vertical</td><td>80</td><td></td></tr>
+     * <tr><td>end</td><td>800005</td><td></td></tr>
+     * <tr><td>fill</td><td>77</td><td></td></tr>
+     * <tr><td>fill_horizontal</td><td>7</td><td></td></tr>
+     * <tr><td>fill_vertical</td><td>70</td><td></td></tr>
+     * <tr><td>left</td><td>3</td><td></td></tr>
+     * <tr><td>right</td><td>5</td><td></td></tr>
+     * <tr><td>start</td><td>800003</td><td></td></tr>
+     * <tr><td>top</td><td>30</td><td></td></tr>
      * </table>
      *
      * @attr name com.borisruzanov.russianwives:layout_anchorGravity
      */
     public static final int CoordinatorLayout_Layout_layout_anchorGravity=2;
     /**
-     * <p>
-     * @attr description
-     * The class name of a Behavior class defining special runtime behavior
-     * for this child view.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_behavior}
+     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -19856,9 +19179,8 @@ public final class R {
      */
     public static final int CoordinatorLayout_Layout_layout_behavior=3;
     /**
-     * <p>
-     * @attr description
-     * Specifies how this view dodges the inset edges of the CoordinatorLayout.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_dodgeInsetEdges}
+     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -19866,24 +19188,22 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>all</td><td>77</td><td>Dodge all the inset edges.</td></tr>
-     * <tr><td>bottom</td><td>50</td><td>Dodge the bottom inset edge.</td></tr>
-     * <tr><td>end</td><td>800005</td><td>Dodge the end inset edge.</td></tr>
-     * <tr><td>left</td><td>3</td><td>Dodge the left inset edge.</td></tr>
-     * <tr><td>none</td><td>0</td><td>Don't dodge any edges</td></tr>
-     * <tr><td>right</td><td>5</td><td>Dodge the right inset edge.</td></tr>
-     * <tr><td>start</td><td>800003</td><td>Dodge the start inset edge.</td></tr>
-     * <tr><td>top</td><td>30</td><td>Dodge the top inset edge.</td></tr>
+     * <tr><td>all</td><td>77</td><td></td></tr>
+     * <tr><td>bottom</td><td>50</td><td></td></tr>
+     * <tr><td>end</td><td>800005</td><td></td></tr>
+     * <tr><td>left</td><td>3</td><td></td></tr>
+     * <tr><td>none</td><td>0</td><td></td></tr>
+     * <tr><td>right</td><td>5</td><td></td></tr>
+     * <tr><td>start</td><td>800003</td><td></td></tr>
+     * <tr><td>top</td><td>30</td><td></td></tr>
      * </table>
      *
      * @attr name com.borisruzanov.russianwives:layout_dodgeInsetEdges
      */
     public static final int CoordinatorLayout_Layout_layout_dodgeInsetEdges=4;
     /**
-     * <p>
-     * @attr description
-     * Specifies how this view insets the CoordinatorLayout and make some other views
-     * dodge it.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_insetEdge}
+     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -19891,24 +19211,21 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td>Inset the bottom edge.</td></tr>
-     * <tr><td>end</td><td>800005</td><td>Inset the end edge.</td></tr>
-     * <tr><td>left</td><td>3</td><td>Inset the left edge.</td></tr>
-     * <tr><td>none</td><td>0</td><td>Don't inset.</td></tr>
-     * <tr><td>right</td><td>5</td><td>Inset the right edge.</td></tr>
-     * <tr><td>start</td><td>800003</td><td>Inset the start edge.</td></tr>
-     * <tr><td>top</td><td>30</td><td>Inset the top edge.</td></tr>
+     * <tr><td>bottom</td><td>50</td><td></td></tr>
+     * <tr><td>end</td><td>800005</td><td></td></tr>
+     * <tr><td>left</td><td>3</td><td></td></tr>
+     * <tr><td>none</td><td>0</td><td></td></tr>
+     * <tr><td>right</td><td>5</td><td></td></tr>
+     * <tr><td>start</td><td>800003</td><td></td></tr>
+     * <tr><td>top</td><td>30</td><td></td></tr>
      * </table>
      *
      * @attr name com.borisruzanov.russianwives:layout_insetEdge
      */
     public static final int CoordinatorLayout_Layout_layout_insetEdge=5;
     /**
-     * <p>
-     * @attr description
-     * The index of a keyline this view should position relative to.
-     * android:layout_gravity will affect how the view aligns to the
-     * specified keyline.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout_keyline}
+     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
@@ -20540,14 +19857,14 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_arrowHeadLength com.borisruzanov.russianwives:arrowHeadLength}</code></td><td>The length of the arrow head when formed to make an arrow</td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_arrowShaftLength com.borisruzanov.russianwives:arrowShaftLength}</code></td><td>The length of the shaft when formed to make an arrow</td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_barLength com.borisruzanov.russianwives:barLength}</code></td><td>The length of the bars when they are parallel to each other</td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_color com.borisruzanov.russianwives:color}</code></td><td>The drawing color for the bars</td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_drawableSize com.borisruzanov.russianwives:drawableSize}</code></td><td>The total size of the drawable</td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_gapBetweenBars com.borisruzanov.russianwives:gapBetweenBars}</code></td><td>The max gap between the bars when they are parallel to each other</td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_spinBars com.borisruzanov.russianwives:spinBars}</code></td><td>Whether bars should rotate or not during transition</td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_thickness com.borisruzanov.russianwives:thickness}</code></td><td>The thickness (stroke size) for the bar paint</td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_arrowHeadLength com.borisruzanov.russianwives:arrowHeadLength}</code></td><td></td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_arrowShaftLength com.borisruzanov.russianwives:arrowShaftLength}</code></td><td></td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_barLength com.borisruzanov.russianwives:barLength}</code></td><td></td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_color com.borisruzanov.russianwives:color}</code></td><td></td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_drawableSize com.borisruzanov.russianwives:drawableSize}</code></td><td></td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_gapBetweenBars com.borisruzanov.russianwives:gapBetweenBars}</code></td><td></td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_spinBars com.borisruzanov.russianwives:spinBars}</code></td><td></td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_thickness com.borisruzanov.russianwives:thickness}</code></td><td></td></tr>
      * </table>
      * @see #DrawerArrowToggle_arrowHeadLength
      * @see #DrawerArrowToggle_arrowShaftLength
@@ -20560,12 +19877,11 @@ public final class R {
      */
     public static final int[] DrawerArrowToggle={
       0x7f040030, 0x7f040031, 0x7f04003f, 0x7f04009a, 
-      0x7f04010e, 0x7f040153, 0x7f04025e, 0x7f0402b3
+      0x7f04010e, 0x7f040153, 0x7f04025f, 0x7f0402b4
     };
     /**
-     * <p>
-     * @attr description
-     * The length of the arrow head when formed to make an arrow
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#arrowHeadLength}
+     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -20577,9 +19893,8 @@ public final class R {
      */
     public static final int DrawerArrowToggle_arrowHeadLength=0;
     /**
-     * <p>
-     * @attr description
-     * The length of the shaft when formed to make an arrow
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#arrowShaftLength}
+     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -20591,9 +19906,8 @@ public final class R {
      */
     public static final int DrawerArrowToggle_arrowShaftLength=1;
     /**
-     * <p>
-     * @attr description
-     * The length of the bars when they are parallel to each other
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#barLength}
+     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -20605,9 +19919,8 @@ public final class R {
      */
     public static final int DrawerArrowToggle_barLength=2;
     /**
-     * <p>
-     * @attr description
-     * The drawing color for the bars
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#color}
+     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -20617,9 +19930,8 @@ public final class R {
      */
     public static final int DrawerArrowToggle_color=3;
     /**
-     * <p>
-     * @attr description
-     * The total size of the drawable
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#drawableSize}
+     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -20631,9 +19943,8 @@ public final class R {
      */
     public static final int DrawerArrowToggle_drawableSize=4;
     /**
-     * <p>
-     * @attr description
-     * The max gap between the bars when they are parallel to each other
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#gapBetweenBars}
+     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -20645,9 +19956,8 @@ public final class R {
      */
     public static final int DrawerArrowToggle_gapBetweenBars=5;
     /**
-     * <p>
-     * @attr description
-     * Whether bars should rotate or not during transition
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#spinBars}
+     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -20656,9 +19966,8 @@ public final class R {
      */
     public static final int DrawerArrowToggle_spinBars=6;
     /**
-     * <p>
-     * @attr description
-     * The thickness (stroke size) for the bar paint
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#thickness}
+     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -20676,10 +19985,10 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #FloatingActionButton_backgroundTint com.borisruzanov.russianwives:backgroundTint}</code></td><td>Tint to apply to the background.</td></tr>
-     * <tr><td><code>{@link #FloatingActionButton_backgroundTintMode com.borisruzanov.russianwives:backgroundTintMode}</code></td><td>Blending mode used to apply the background tint.</td></tr>
+     * <tr><td><code>{@link #FloatingActionButton_backgroundTint com.borisruzanov.russianwives:backgroundTint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FloatingActionButton_backgroundTintMode com.borisruzanov.russianwives:backgroundTintMode}</code></td><td></td></tr>
      * <tr><td><code>{@link #FloatingActionButton_borderWidth com.borisruzanov.russianwives:borderWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FloatingActionButton_elevation com.borisruzanov.russianwives:elevation}</code></td><td>Elevation for the action bar itself</td></tr>
+     * <tr><td><code>{@link #FloatingActionButton_elevation com.borisruzanov.russianwives:elevation}</code></td><td></td></tr>
      * <tr><td><code>{@link #FloatingActionButton_fabCustomSize com.borisruzanov.russianwives:fabCustomSize}</code></td><td></td></tr>
      * <tr><td><code>{@link #FloatingActionButton_fabSize com.borisruzanov.russianwives:fabSize}</code></td><td></td></tr>
      * <tr><td><code>{@link #FloatingActionButton_hideMotionSpec com.borisruzanov.russianwives:hideMotionSpec}</code></td><td></td></tr>
@@ -20707,13 +20016,12 @@ public final class R {
     public static final int[] FloatingActionButton={
       0x7f04003d, 0x7f04003e, 0x7f040049, 0x7f040118, 
       0x7f04012a, 0x7f04012b, 0x7f04015a, 0x7f040162, 
-      0x7f0401e7, 0x7f040233, 0x7f040242, 0x7f040252, 
-      0x7f0402da
+      0x7f0401e7, 0x7f040234, 0x7f040243, 0x7f040253, 
+      0x7f0402db
     };
     /**
-     * <p>
-     * @attr description
-     * Tint to apply to the background.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#backgroundTint}
+     * attribute's value can be found in the {@link #FloatingActionButton} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -20723,9 +20031,8 @@ public final class R {
      */
     public static final int FloatingActionButton_backgroundTint=0;
     /**
-     * <p>
-     * @attr description
-     * Blending mode used to apply the background tint.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#backgroundTintMode}
+     * attribute's value can be found in the {@link #FloatingActionButton} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -20733,17 +20040,12 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      *
      * @attr name com.borisruzanov.russianwives:backgroundTintMode
@@ -20763,9 +20065,8 @@ public final class R {
      */
     public static final int FloatingActionButton_borderWidth=2;
     /**
-     * <p>
-     * @attr description
-     * Elevation for the action bar itself
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#elevation}
+     * attribute's value can be found in the {@link #FloatingActionButton} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -20964,12 +20265,12 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderAuthority com.borisruzanov.russianwives:fontProviderAuthority}</code></td><td>The authority of the Font Provider to be used for the request.</td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderCerts com.borisruzanov.russianwives:fontProviderCerts}</code></td><td>The sets of hashes for the certificates the provider should be signed with.</td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderFetchStrategy com.borisruzanov.russianwives:fontProviderFetchStrategy}</code></td><td>The strategy to be used when fetching font data from a font provider in XML layouts.</td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderFetchTimeout com.borisruzanov.russianwives:fontProviderFetchTimeout}</code></td><td>The length of the timeout during fetching.</td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderPackage com.borisruzanov.russianwives:fontProviderPackage}</code></td><td>The package for the Font Provider to be used for the request.</td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderQuery com.borisruzanov.russianwives:fontProviderQuery}</code></td><td>The query to be sent over to the provider.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderAuthority com.borisruzanov.russianwives:fontProviderAuthority}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderCerts com.borisruzanov.russianwives:fontProviderCerts}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderFetchStrategy com.borisruzanov.russianwives:fontProviderFetchStrategy}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderFetchTimeout com.borisruzanov.russianwives:fontProviderFetchTimeout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderPackage com.borisruzanov.russianwives:fontProviderPackage}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderQuery com.borisruzanov.russianwives:fontProviderQuery}</code></td><td></td></tr>
      * </table>
      * @see #FontFamily_fontProviderAuthority
      * @see #FontFamily_fontProviderCerts
@@ -20983,9 +20284,8 @@ public final class R {
       0x7f04014c, 0x7f04014d
     };
     /**
-     * <p>
-     * @attr description
-     * The authority of the Font Provider to be used for the request.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#fontProviderAuthority}
+     * attribute's value can be found in the {@link #FontFamily} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -20994,13 +20294,8 @@ public final class R {
      */
     public static final int FontFamily_fontProviderAuthority=0;
     /**
-     * <p>
-     * @attr description
-     * The sets of hashes for the certificates the provider should be signed with. This is
-     * used to verify the identity of the provider, and is only required if the provider is not
-     * part of the system image. This value may point to one list or a list of lists, where each
-     * individual list represents one collection of signature hashes. Refer to your font provider's
-     * documentation for these values.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#fontProviderCerts}
+     * attribute's value can be found in the {@link #FontFamily} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -21011,15 +20306,8 @@ public final class R {
      */
     public static final int FontFamily_fontProviderCerts=1;
     /**
-     * <p>
-     * @attr description
-     * The strategy to be used when fetching font data from a font provider in XML layouts.
-     * This attribute is ignored when the resource is loaded from code, as it is equivalent to the
-     * choice of API between {@link
-     * androidx.core.content.res.ResourcesCompat#getFont(Context, int)} (blocking) and
-     * {@link
-     * androidx.core.content.res.ResourcesCompat#getFont(Context, int, FontCallback, Handler)}
-     * (async).
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#fontProviderFetchStrategy}
+     * attribute's value can be found in the {@link #FontFamily} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -21027,25 +20315,16 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>async</td><td>1</td><td>The async font fetch works as follows.
-     * First, check the local cache, then if the requeted font is not cached, trigger a
-     * request the font and continue with layout inflation. Once the font fetch succeeds, the
-     * target text view will be refreshed with the downloaded font data. The
-     * fontProviderFetchTimeout will be ignored if async loading is specified.</td></tr>
-     * <tr><td>blocking</td><td>0</td><td>The blocking font fetch works as follows.
-     * First, check the local cache, then if the requested font is not cached, request the
-     * font from the provider and wait until it is finished.  You can change the length of
-     * the timeout by modifying fontProviderFetchTimeout.  If the timeout happens, the
-     * default typeface will be used instead.</td></tr>
+     * <tr><td>async</td><td>1</td><td></td></tr>
+     * <tr><td>blocking</td><td>0</td><td></td></tr>
      * </table>
      *
      * @attr name com.borisruzanov.russianwives:fontProviderFetchStrategy
      */
     public static final int FontFamily_fontProviderFetchStrategy=2;
     /**
-     * <p>
-     * @attr description
-     * The length of the timeout during fetching.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#fontProviderFetchTimeout}
+     * attribute's value can be found in the {@link #FontFamily} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      * <p>Must be one of the following constant values.</p>
@@ -21054,18 +20333,15 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>forever</td><td>ffffffff</td><td>A special value for the timeout. In this case, the blocking font fetching will not
-     * timeout and wait until a reply is received from the font provider.</td></tr>
+     * <tr><td>forever</td><td>ffffffff</td><td></td></tr>
      * </table>
      *
      * @attr name com.borisruzanov.russianwives:fontProviderFetchTimeout
      */
     public static final int FontFamily_fontProviderFetchTimeout=3;
     /**
-     * <p>
-     * @attr description
-     * The package for the Font Provider to be used for the request. This is used to verify
-     * the identity of the provider.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#fontProviderPackage}
+     * attribute's value can be found in the {@link #FontFamily} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -21074,10 +20350,8 @@ public final class R {
      */
     public static final int FontFamily_fontProviderPackage=4;
     /**
-     * <p>
-     * @attr description
-     * The query to be sent over to the provider. Refer to your font provider's documentation
-     * on the format of this string.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#fontProviderQuery}
+     * attribute's value can be found in the {@link #FontFamily} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -21097,11 +20371,11 @@ public final class R {
      * <tr><td><code>{@link #FontFamilyFont_android_fontStyle android:fontStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #FontFamilyFont_android_ttcIndex android:ttcIndex}</code></td><td></td></tr>
      * <tr><td><code>{@link #FontFamilyFont_android_fontVariationSettings android:fontVariationSettings}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_font com.borisruzanov.russianwives:font}</code></td><td>The reference to the font file to be used.</td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontStyle com.borisruzanov.russianwives:fontStyle}</code></td><td>The style of the given font file.</td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontVariationSettings com.borisruzanov.russianwives:fontVariationSettings}</code></td><td>The variation settings to be applied to the font.</td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontWeight com.borisruzanov.russianwives:fontWeight}</code></td><td>The weight of the given font file.</td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_ttcIndex com.borisruzanov.russianwives:ttcIndex}</code></td><td>The index of the font in the tcc font file.</td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_font com.borisruzanov.russianwives:font}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_fontStyle com.borisruzanov.russianwives:fontStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_fontVariationSettings com.borisruzanov.russianwives:fontVariationSettings}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_fontWeight com.borisruzanov.russianwives:fontWeight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_ttcIndex com.borisruzanov.russianwives:ttcIndex}</code></td><td></td></tr>
      * </table>
      * @see #FontFamilyFont_android_font
      * @see #FontFamilyFont_android_fontWeight
@@ -21117,7 +20391,7 @@ public final class R {
     public static final int[] FontFamilyFont={
       0x01010532, 0x01010533, 0x0101053f, 0x0101056f, 
       0x01010570, 0x7f040146, 0x7f04014e, 0x7f04014f, 
-      0x7f040150, 0x7f0402d9
+      0x7f040150, 0x7f0402da
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#font}
@@ -21141,9 +20415,8 @@ public final class R {
      */
     public static final int FontFamilyFont_android_fontWeight=1;
     /**
-     * <p>
-     * @attr description
-     * References to the framework attrs
+     * <p>This symbol is the offset where the {@link android.R.attr#fontStyle}
+     * attribute's value can be found in the {@link #FontFamilyFont} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -21178,10 +20451,8 @@ public final class R {
      */
     public static final int FontFamilyFont_android_fontVariationSettings=4;
     /**
-     * <p>
-     * @attr description
-     * The reference to the font file to be used. This should be a file in the res/font folder
-     * and should therefore have an R reference value. E.g. @font/myfont
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#font}
+     * attribute's value can be found in the {@link #FontFamilyFont} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -21192,11 +20463,8 @@ public final class R {
      */
     public static final int FontFamilyFont_font=5;
     /**
-     * <p>
-     * @attr description
-     * The style of the given font file. This will be used when the font is being loaded into
-     * the font stack and will override any style information in the font's header tables. If
-     * unspecified, the value in the font's header tables will be used.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#fontStyle}
+     * attribute's value can be found in the {@link #FontFamilyFont} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -21212,12 +20480,8 @@ public final class R {
      */
     public static final int FontFamilyFont_fontStyle=6;
     /**
-     * <p>
-     * @attr description
-     * The variation settings to be applied to the font. The string should be in the following
-     * format: "'tag1' value1, 'tag2' value2, ...". If the default variation settings should be
-     * used, or the font used does not support variation settings, this attribute needs not be
-     * specified.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#fontVariationSettings}
+     * attribute's value can be found in the {@link #FontFamilyFont} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -21226,13 +20490,8 @@ public final class R {
      */
     public static final int FontFamilyFont_fontVariationSettings=7;
     /**
-     * <p>
-     * @attr description
-     * The weight of the given font file. This will be used when the font is being loaded into
-     * the font stack and will override any weight information in the font's header tables. Must
-     * be a positive number, a multiple of 100, and between 100 and 900, inclusive. The most
-     * common values are 400 for regular weight and 700 for bold weight. If unspecified, the value
-     * in the font's header tables will be used.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#fontWeight}
+     * attribute's value can be found in the {@link #FontFamilyFont} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
@@ -21240,10 +20499,8 @@ public final class R {
      */
     public static final int FontFamilyFont_fontWeight=8;
     /**
-     * <p>
-     * @attr description
-     * The index of the font in the tcc font file. If the font file referenced is not in the
-     * tcc format, this attribute needs not be specified.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#ttcIndex}
+     * attribute's value can be found in the {@link #FontFamilyFont} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
@@ -21359,9 +20616,8 @@ public final class R {
       0x01010510, 0x01010511, 0x01010512, 0x01010513
     };
     /**
-     * <p>
-     * @attr description
-     * Start color of the gradient.
+     * <p>This symbol is the offset where the {@link android.R.attr#startColor}
+     * attribute's value can be found in the {@link #GradientColor} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -21371,9 +20627,8 @@ public final class R {
      */
     public static final int GradientColor_android_startColor=0;
     /**
-     * <p>
-     * @attr description
-     * End color of the gradient.
+     * <p>This symbol is the offset where the {@link android.R.attr#endColor}
+     * attribute's value can be found in the {@link #GradientColor} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -21383,9 +20638,8 @@ public final class R {
      */
     public static final int GradientColor_android_endColor=1;
     /**
-     * <p>
-     * @attr description
-     * Type of gradient. The default type is linear.
+     * <p>This symbol is the offset where the {@link android.R.attr#type}
+     * attribute's value can be found in the {@link #GradientColor} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -21402,9 +20656,8 @@ public final class R {
      */
     public static final int GradientColor_android_type=2;
     /**
-     * <p>
-     * @attr description
-     * X coordinate of the center of the gradient within the path.
+     * <p>This symbol is the offset where the {@link android.R.attr#centerX}
+     * attribute's value can be found in the {@link #GradientColor} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      * <p>May be a fractional value, which is a floating point number appended with
@@ -21416,9 +20669,8 @@ public final class R {
      */
     public static final int GradientColor_android_centerX=3;
     /**
-     * <p>
-     * @attr description
-     * Y coordinate of the center of the gradient within the path.
+     * <p>This symbol is the offset where the {@link android.R.attr#centerY}
+     * attribute's value can be found in the {@link #GradientColor} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      * <p>May be a fractional value, which is a floating point number appended with
@@ -21430,9 +20682,8 @@ public final class R {
      */
     public static final int GradientColor_android_centerY=4;
     /**
-     * <p>
-     * @attr description
-     * Radius of the gradient, used only with radial gradient.
+     * <p>This symbol is the offset where the {@link android.R.attr#gradientRadius}
+     * attribute's value can be found in the {@link #GradientColor} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -21449,9 +20700,8 @@ public final class R {
      */
     public static final int GradientColor_android_gradientRadius=5;
     /**
-     * <p>
-     * @attr description
-     * Defines the tile mode of the gradient. SweepGradient doesn't support tiling.
+     * <p>This symbol is the offset where the {@link android.R.attr#tileMode}
+     * attribute's value can be found in the {@link #GradientColor} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -21469,9 +20719,8 @@ public final class R {
      */
     public static final int GradientColor_android_tileMode=6;
     /**
-     * <p>
-     * @attr description
-     * Optional center color.
+     * <p>This symbol is the offset where the {@link android.R.attr#centerColor}
+     * attribute's value can be found in the {@link #GradientColor} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -21481,10 +20730,8 @@ public final class R {
      */
     public static final int GradientColor_android_centerColor=7;
     /**
-     * <p>
-     * @attr description
-     * X coordinate of the start point origin of the gradient.
-     * Defined in same coordinates as the path itself
+     * <p>This symbol is the offset where the {@link android.R.attr#startX}
+     * attribute's value can be found in the {@link #GradientColor} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
@@ -21492,10 +20739,8 @@ public final class R {
      */
     public static final int GradientColor_android_startX=8;
     /**
-     * <p>
-     * @attr description
-     * Y coordinate of the start point of the gradient within the shape.
-     * Defined in same coordinates as the path itself
+     * <p>This symbol is the offset where the {@link android.R.attr#startY}
+     * attribute's value can be found in the {@link #GradientColor} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
@@ -21503,10 +20748,8 @@ public final class R {
      */
     public static final int GradientColor_android_startY=9;
     /**
-     * <p>
-     * @attr description
-     * X coordinate of the end point origin of the gradient.
-     * Defined in same coordinates as the path itself
+     * <p>This symbol is the offset where the {@link android.R.attr#endX}
+     * attribute's value can be found in the {@link #GradientColor} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
@@ -21514,10 +20757,8 @@ public final class R {
      */
     public static final int GradientColor_android_endX=10;
     /**
-     * <p>
-     * @attr description
-     * Y coordinate of the end point of the gradient within the shape.
-     * Defined in same coordinates as the path itself
+     * <p>This symbol is the offset where the {@link android.R.attr#endY}
+     * attribute's value can be found in the {@link #GradientColor} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
@@ -21541,9 +20782,8 @@ public final class R {
       0x010101a5, 0x01010514
     };
     /**
-     * <p>
-     * @attr description
-     * The current color for the offset inside the gradient.
+     * <p>This symbol is the offset where the {@link android.R.attr#color}
+     * attribute's value can be found in the {@link #GradientColorItem} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -21553,10 +20793,8 @@ public final class R {
      */
     public static final int GradientColorItem_android_color=0;
     /**
-     * <p>
-     * @attr description
-     * The offset (or ratio) of this current color item inside the gradient.
-     * The value is only meaningful when it is between 0 and 1.
+     * <p>This symbol is the offset where the {@link android.R.attr#offset}
+     * attribute's value can be found in the {@link #GradientColorItem} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
@@ -21592,8 +20830,8 @@ public final class R {
      */
     public static final int[] ImageFilterView={
       0x7f04002c, 0x7f040058, 0x7f0400c7, 0x7f0400ef, 
-      0x7f040217, 0x7f040243, 0x7f040244, 0x7f040245, 
-      0x7f0402de
+      0x7f040218, 0x7f040244, 0x7f040245, 0x7f040246, 
+      0x7f0402df
     };
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#altSrc}
@@ -21691,7 +20929,6 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #KeyAttribute_android_visibility android:visibility}</code></td><td></td></tr>
      * <tr><td><code>{@link #KeyAttribute_android_alpha android:alpha}</code></td><td></td></tr>
      * <tr><td><code>{@link #KeyAttribute_android_translationX android:translationX}</code></td><td></td></tr>
      * <tr><td><code>{@link #KeyAttribute_android_translationY android:translationY}</code></td><td></td></tr>
@@ -21709,7 +20946,6 @@ public final class R {
      * <tr><td><code>{@link #KeyAttribute_transitionEasing com.borisruzanov.russianwives:transitionEasing}</code></td><td></td></tr>
      * <tr><td><code>{@link #KeyAttribute_transitionPathRotate com.borisruzanov.russianwives:transitionPathRotate}</code></td><td></td></tr>
      * </table>
-     * @see #KeyAttribute_android_visibility
      * @see #KeyAttribute_android_alpha
      * @see #KeyAttribute_android_translationX
      * @see #KeyAttribute_android_translationY
@@ -21728,30 +20964,11 @@ public final class R {
      * @see #KeyAttribute_transitionPathRotate
      */
     public static final int[] KeyAttribute={
-      0x010100dc, 0x0101031f, 0x01010322, 0x01010323, 
-      0x01010324, 0x01010325, 0x01010326, 0x01010327, 
-      0x01010328, 0x010103fa, 0x01010440, 0x7f0400f1, 
-      0x7f040152, 0x7f0401f7, 0x7f0401f9, 0x7f0402d4, 
-      0x7f0402d5
+      0x0101031f, 0x01010322, 0x01010323, 0x01010324, 
+      0x01010325, 0x01010326, 0x01010327, 0x01010328, 
+      0x010103fa, 0x01010440, 0x7f0400f1, 0x7f040152, 
+      0x7f0401f7, 0x7f0401f9, 0x7f0402d5, 0x7f0402d6
     };
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#visibility}
-     * attribute's value can be found in the {@link #KeyAttribute} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>gone</td><td>2</td><td></td></tr>
-     * <tr><td>invisible</td><td>1</td><td></td></tr>
-     * <tr><td>visible</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name android:visibility
-     */
-    public static final int KeyAttribute_android_visibility=0;
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#alpha}
      * attribute's value can be found in the {@link #KeyAttribute} array.
@@ -21760,7 +20977,7 @@ public final class R {
      *
      * @attr name android:alpha
      */
-    public static final int KeyAttribute_android_alpha=1;
+    public static final int KeyAttribute_android_alpha=0;
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#translationX}
      * attribute's value can be found in the {@link #KeyAttribute} array.
@@ -21773,7 +20990,7 @@ public final class R {
      *
      * @attr name android:translationX
      */
-    public static final int KeyAttribute_android_translationX=2;
+    public static final int KeyAttribute_android_translationX=1;
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#translationY}
      * attribute's value can be found in the {@link #KeyAttribute} array.
@@ -21786,7 +21003,7 @@ public final class R {
      *
      * @attr name android:translationY
      */
-    public static final int KeyAttribute_android_translationY=3;
+    public static final int KeyAttribute_android_translationY=2;
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#scaleX}
      * attribute's value can be found in the {@link #KeyAttribute} array.
@@ -21795,7 +21012,7 @@ public final class R {
      *
      * @attr name android:scaleX
      */
-    public static final int KeyAttribute_android_scaleX=4;
+    public static final int KeyAttribute_android_scaleX=3;
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#scaleY}
      * attribute's value can be found in the {@link #KeyAttribute} array.
@@ -21804,7 +21021,7 @@ public final class R {
      *
      * @attr name android:scaleY
      */
-    public static final int KeyAttribute_android_scaleY=5;
+    public static final int KeyAttribute_android_scaleY=4;
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#rotation}
      * attribute's value can be found in the {@link #KeyAttribute} array.
@@ -21813,7 +21030,7 @@ public final class R {
      *
      * @attr name android:rotation
      */
-    public static final int KeyAttribute_android_rotation=6;
+    public static final int KeyAttribute_android_rotation=5;
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#rotationX}
      * attribute's value can be found in the {@link #KeyAttribute} array.
@@ -21822,7 +21039,7 @@ public final class R {
      *
      * @attr name android:rotationX
      */
-    public static final int KeyAttribute_android_rotationX=7;
+    public static final int KeyAttribute_android_rotationX=6;
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#rotationY}
      * attribute's value can be found in the {@link #KeyAttribute} array.
@@ -21831,7 +21048,7 @@ public final class R {
      *
      * @attr name android:rotationY
      */
-    public static final int KeyAttribute_android_rotationY=8;
+    public static final int KeyAttribute_android_rotationY=7;
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#translationZ}
      * attribute's value can be found in the {@link #KeyAttribute} array.
@@ -21844,7 +21061,7 @@ public final class R {
      *
      * @attr name android:translationZ
      */
-    public static final int KeyAttribute_android_translationZ=9;
+    public static final int KeyAttribute_android_translationZ=8;
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#elevation}
      * attribute's value can be found in the {@link #KeyAttribute} array.
@@ -21857,7 +21074,7 @@ public final class R {
      *
      * @attr name android:elevation
      */
-    public static final int KeyAttribute_android_elevation=10;
+    public static final int KeyAttribute_android_elevation=9;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#curveFit}
      * attribute's value can be found in the {@link #KeyAttribute} array.
@@ -21874,7 +21091,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:curveFit
      */
-    public static final int KeyAttribute_curveFit=11;
+    public static final int KeyAttribute_curveFit=10;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#framePosition}
      * attribute's value can be found in the {@link #KeyAttribute} array.
@@ -21883,7 +21100,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:framePosition
      */
-    public static final int KeyAttribute_framePosition=12;
+    public static final int KeyAttribute_framePosition=11;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#motionProgress}
      * attribute's value can be found in the {@link #KeyAttribute} array.
@@ -21892,7 +21109,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:motionProgress
      */
-    public static final int KeyAttribute_motionProgress=13;
+    public static final int KeyAttribute_motionProgress=12;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#motionTarget}
      * attribute's value can be found in the {@link #KeyAttribute} array.
@@ -21906,7 +21123,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:motionTarget
      */
-    public static final int KeyAttribute_motionTarget=14;
+    public static final int KeyAttribute_motionTarget=13;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#transitionEasing}
      * attribute's value can be found in the {@link #KeyAttribute} array.
@@ -21927,7 +21144,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:transitionEasing
      */
-    public static final int KeyAttribute_transitionEasing=15;
+    public static final int KeyAttribute_transitionEasing=14;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#transitionPathRotate}
      * attribute's value can be found in the {@link #KeyAttribute} array.
@@ -21936,7 +21153,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:transitionPathRotate
      */
-    public static final int KeyAttribute_transitionPathRotate=16;
+    public static final int KeyAttribute_transitionPathRotate=15;
     /**
      * Attributes that can be used with a KeyCycle.
      * <p>Includes the following attributes:</p>
@@ -21990,8 +21207,8 @@ public final class R {
       0x0101031f, 0x01010322, 0x01010323, 0x01010324, 
       0x01010325, 0x01010326, 0x01010327, 0x01010328, 
       0x010103fa, 0x01010440, 0x7f0400f1, 0x7f040152, 
-      0x7f0401f7, 0x7f0401f9, 0x7f0402d4, 0x7f0402d5, 
-      0x7f0402e0, 0x7f0402e1, 0x7f0402e2, 0x7f0402e3
+      0x7f0401f7, 0x7f0401f9, 0x7f0402d5, 0x7f0402d6, 
+      0x7f0402e1, 0x7f0402e2, 0x7f0402e3, 0x7f0402e4
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#alpha}
@@ -22281,8 +21498,8 @@ public final class R {
      */
     public static final int[] KeyPosition={
       0x7f0400f1, 0x7f04010b, 0x7f040152, 0x7f04017f, 
-      0x7f0401f9, 0x7f040224, 0x7f040226, 0x7f040227, 
-      0x7f040228, 0x7f040229, 0x7f040259, 0x7f0402d4
+      0x7f0401f9, 0x7f040225, 0x7f040227, 0x7f040228, 
+      0x7f040229, 0x7f04022a, 0x7f04025a, 0x7f0402d5
     };
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#curveFit}
@@ -22501,8 +21718,8 @@ public final class R {
       0x0101031f, 0x01010322, 0x01010323, 0x01010324, 
       0x01010325, 0x01010326, 0x01010327, 0x01010328, 
       0x010103fa, 0x01010440, 0x7f0400f1, 0x7f040152, 
-      0x7f0401f7, 0x7f0401f9, 0x7f0402d4, 0x7f0402d5, 
-      0x7f0402df, 0x7f0402e0, 0x7f0402e1, 0x7f0402e2
+      0x7f0401f7, 0x7f0401f9, 0x7f0402d5, 0x7f0402d6, 
+      0x7f0402e0, 0x7f0402e1, 0x7f0402e2, 0x7f0402e3
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#alpha}
@@ -22774,8 +21991,8 @@ public final class R {
      */
     public static final int[] KeyTrigger={
       0x7f040152, 0x7f0401f9, 0x7f0401fa, 0x7f0401fb, 
-      0x7f040210, 0x7f040212, 0x7f040213, 0x7f0402d6, 
-      0x7f0402d7, 0x7f0402d8
+      0x7f040211, 0x7f040213, 0x7f040214, 0x7f0402d7, 
+      0x7f0402d8, 0x7f0402d9
     };
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#framePosition}
@@ -24034,11 +23251,10 @@ public final class R {
      * <tr><td><code>{@link #LinearLayoutCompat_android_baselineAligned android:baselineAligned}</code></td><td></td></tr>
      * <tr><td><code>{@link #LinearLayoutCompat_android_baselineAlignedChildIndex android:baselineAlignedChildIndex}</code></td><td></td></tr>
      * <tr><td><code>{@link #LinearLayoutCompat_android_weightSum android:weightSum}</code></td><td></td></tr>
-     * <tr><td><code>{@link #LinearLayoutCompat_divider com.borisruzanov.russianwives:divider}</code></td><td>Specifies the drawable used for item dividers.</td></tr>
-     * <tr><td><code>{@link #LinearLayoutCompat_dividerPadding com.borisruzanov.russianwives:dividerPadding}</code></td><td>Size of padding on either end of a divider.</td></tr>
-     * <tr><td><code>{@link #LinearLayoutCompat_measureWithLargestChild com.borisruzanov.russianwives:measureWithLargestChild}</code></td><td>When set to true, all children with a weight will be considered having
-     * the minimum size of the largest child.</td></tr>
-     * <tr><td><code>{@link #LinearLayoutCompat_showDividers com.borisruzanov.russianwives:showDividers}</code></td><td>Setting for which dividers to show.</td></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_divider com.borisruzanov.russianwives:divider}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_dividerPadding com.borisruzanov.russianwives:dividerPadding}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_measureWithLargestChild com.borisruzanov.russianwives:measureWithLargestChild}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_showDividers com.borisruzanov.russianwives:showDividers}</code></td><td></td></tr>
      * </table>
      * @see #LinearLayoutCompat_android_gravity
      * @see #LinearLayoutCompat_android_orientation
@@ -24053,7 +23269,7 @@ public final class R {
     public static final int[] LinearLayoutCompat={
       0x010100af, 0x010100c4, 0x01010126, 0x01010127, 
       0x01010128, 0x7f040105, 0x7f040107, 0x7f0401ea, 
-      0x7f040251
+      0x7f040252
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#gravity}
@@ -24085,11 +23301,8 @@ public final class R {
      */
     public static final int LinearLayoutCompat_android_gravity=0;
     /**
-     * <p>
-     * @attr description
-     * Should the layout be a column or a row?  Use "horizontal"
-     * for a row, "vertical" for a column.  The default is
-     * horizontal.
+     * <p>This symbol is the offset where the {@link android.R.attr#orientation}
+     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -24105,11 +23318,8 @@ public final class R {
      */
     public static final int LinearLayoutCompat_android_orientation=1;
     /**
-     * <p>
-     * @attr description
-     * When set to false, prevents the layout from aligning its children's
-     * baselines. This attribute is particularly useful when the children
-     * use different values for gravity. The default value is true.
+     * <p>This symbol is the offset where the {@link android.R.attr#baselineAligned}
+     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -24118,11 +23328,8 @@ public final class R {
      */
     public static final int LinearLayoutCompat_android_baselineAligned=2;
     /**
-     * <p>
-     * @attr description
-     * When a linear layout is part of another layout that is baseline
-     * aligned, it can specify which of its children to baseline align to
-     * (that is, which child TextView).
+     * <p>This symbol is the offset where the {@link android.R.attr#baselineAlignedChildIndex}
+     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
@@ -24130,13 +23337,8 @@ public final class R {
      */
     public static final int LinearLayoutCompat_android_baselineAlignedChildIndex=3;
     /**
-     * <p>
-     * @attr description
-     * Defines the maximum weight sum. If unspecified, the sum is computed
-     * by adding the layout_weight of all of the children. This can be
-     * used for instance to give a single child 50% of the total available
-     * space by giving it a layout_weight of 0.5 and setting the weightSum
-     * to 1.0.
+     * <p>This symbol is the offset where the {@link android.R.attr#weightSum}
+     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
@@ -24144,9 +23346,8 @@ public final class R {
      */
     public static final int LinearLayoutCompat_android_weightSum=4;
     /**
-     * <p>
-     * @attr description
-     * Drawable to use as a vertical divider between buttons.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#divider}
+     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -24157,9 +23358,8 @@ public final class R {
      */
     public static final int LinearLayoutCompat_divider=5;
     /**
-     * <p>
-     * @attr description
-     * Size of padding on either end of a divider.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#dividerPadding}
+     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -24171,11 +23371,8 @@ public final class R {
      */
     public static final int LinearLayoutCompat_dividerPadding=6;
     /**
-     * <p>
-     * @attr description
-     * When set to true, all children with a weight will be considered having
-     * the minimum size of the largest child. If false, all children are
-     * measured normally.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#measureWithLargestChild}
+     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -24184,9 +23381,8 @@ public final class R {
      */
     public static final int LinearLayoutCompat_measureWithLargestChild=7;
     /**
-     * <p>
-     * @attr description
-     * Setting for which dividers to show.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#showDividers}
+     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -24324,9 +23520,8 @@ public final class R {
       0x010102ac, 0x010102ad
     };
     /**
-     * <p>
-     * @attr description
-     * Amount of pixels by which the drop down should be offset horizontally.
+     * <p>This symbol is the offset where the {@link android.R.attr#dropDownHorizontalOffset}
+     * attribute's value can be found in the {@link #ListPopupWindow} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -24338,9 +23533,8 @@ public final class R {
      */
     public static final int ListPopupWindow_android_dropDownHorizontalOffset=0;
     /**
-     * <p>
-     * @attr description
-     * Amount of pixels by which the drop down should be offset vertically.
+     * <p>This symbol is the offset where the {@link android.R.attr#dropDownVerticalOffset}
+     * attribute's value can be found in the {@link #ListPopupWindow} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -24603,15 +23797,15 @@ public final class R {
      * <tr><td><code>{@link #MaterialButton_android_insetRight android:insetRight}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_android_insetTop android:insetTop}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_android_insetBottom android:insetBottom}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MaterialButton_backgroundTint com.borisruzanov.russianwives:backgroundTint}</code></td><td>Tint to apply to the background.</td></tr>
-     * <tr><td><code>{@link #MaterialButton_backgroundTintMode com.borisruzanov.russianwives:backgroundTintMode}</code></td><td>Blending mode used to apply the background tint.</td></tr>
+     * <tr><td><code>{@link #MaterialButton_backgroundTint com.borisruzanov.russianwives:backgroundTint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MaterialButton_backgroundTintMode com.borisruzanov.russianwives:backgroundTintMode}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_cornerRadius com.borisruzanov.russianwives:cornerRadius}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_icon com.borisruzanov.russianwives:icon}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_iconGravity com.borisruzanov.russianwives:iconGravity}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_iconPadding com.borisruzanov.russianwives:iconPadding}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_iconSize com.borisruzanov.russianwives:iconSize}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MaterialButton_iconTint com.borisruzanov.russianwives:iconTint}</code></td><td>Tint to apply to the icon.</td></tr>
-     * <tr><td><code>{@link #MaterialButton_iconTintMode com.borisruzanov.russianwives:iconTintMode}</code></td><td>Blending mode used to apply the icon tint.</td></tr>
+     * <tr><td><code>{@link #MaterialButton_iconTint com.borisruzanov.russianwives:iconTint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MaterialButton_iconTintMode com.borisruzanov.russianwives:iconTintMode}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_rippleColor com.borisruzanov.russianwives:rippleColor}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_strokeColor com.borisruzanov.russianwives:strokeColor}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_strokeWidth com.borisruzanov.russianwives:strokeWidth}</code></td><td></td></tr>
@@ -24637,7 +23831,7 @@ public final class R {
       0x010101b7, 0x010101b8, 0x010101b9, 0x010101ba, 
       0x7f04003d, 0x7f04003e, 0x7f0400ca, 0x7f040163, 
       0x7f040165, 0x7f040166, 0x7f040167, 0x7f040169, 
-      0x7f04016a, 0x7f040242, 0x7f04026c, 0x7f04026d
+      0x7f04016a, 0x7f040243, 0x7f04026d, 0x7f04026e
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#insetLeft}
@@ -24708,9 +23902,8 @@ public final class R {
      */
     public static final int MaterialButton_android_insetBottom=3;
     /**
-     * <p>
-     * @attr description
-     * Tint to apply to the background.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#backgroundTint}
+     * attribute's value can be found in the {@link #MaterialButton} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -24720,9 +23913,8 @@ public final class R {
      */
     public static final int MaterialButton_backgroundTint=4;
     /**
-     * <p>
-     * @attr description
-     * Blending mode used to apply the background tint.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#backgroundTintMode}
+     * attribute's value can be found in the {@link #MaterialButton} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -24730,17 +23922,12 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      *
      * @attr name com.borisruzanov.russianwives:backgroundTintMode
@@ -24815,9 +24002,8 @@ public final class R {
      */
     public static final int MaterialButton_iconSize=10;
     /**
-     * <p>
-     * @attr description
-     * Tint to apply to the icon.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#iconTint}
+     * attribute's value can be found in the {@link #MaterialButton} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -24827,9 +24013,8 @@ public final class R {
      */
     public static final int MaterialButton_iconTint=11;
     /**
-     * <p>
-     * @attr description
-     * Blending mode used to apply the icon tint.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#iconTintMode}
+     * attribute's value can be found in the {@link #MaterialButton} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -24837,17 +24022,12 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the icon with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the icon, but with the icon’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the icon. The icon’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the icon.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      *
      * @attr name com.borisruzanov.russianwives:iconTintMode
@@ -24902,7 +24082,7 @@ public final class R {
      * @see #MaterialCardView_strokeWidth
      */
     public static final int[] MaterialCardView={
-      0x7f04026c, 0x7f04026d
+      0x7f04026d, 0x7f04026e
     };
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#strokeColor}
@@ -24940,12 +24120,12 @@ public final class R {
      * <tr><td><code>{@link #MaterialComponentsTheme_chipGroupStyle com.borisruzanov.russianwives:chipGroupStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialComponentsTheme_chipStandaloneStyle com.borisruzanov.russianwives:chipStandaloneStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialComponentsTheme_chipStyle com.borisruzanov.russianwives:chipStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MaterialComponentsTheme_colorAccent com.borisruzanov.russianwives:colorAccent}</code></td><td>Bright complement to the primary branding color.</td></tr>
-     * <tr><td><code>{@link #MaterialComponentsTheme_colorBackgroundFloating com.borisruzanov.russianwives:colorBackgroundFloating}</code></td><td>Default color of background imagery for floating components, ex.</td></tr>
-     * <tr><td><code>{@link #MaterialComponentsTheme_colorPrimary com.borisruzanov.russianwives:colorPrimary}</code></td><td>The primary branding color for the app.</td></tr>
-     * <tr><td><code>{@link #MaterialComponentsTheme_colorPrimaryDark com.borisruzanov.russianwives:colorPrimaryDark}</code></td><td>Dark variant of the primary branding color.</td></tr>
+     * <tr><td><code>{@link #MaterialComponentsTheme_colorAccent com.borisruzanov.russianwives:colorAccent}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MaterialComponentsTheme_colorBackgroundFloating com.borisruzanov.russianwives:colorBackgroundFloating}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MaterialComponentsTheme_colorPrimary com.borisruzanov.russianwives:colorPrimary}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MaterialComponentsTheme_colorPrimaryDark com.borisruzanov.russianwives:colorPrimaryDark}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialComponentsTheme_colorSecondary com.borisruzanov.russianwives:colorSecondary}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MaterialComponentsTheme_editTextStyle com.borisruzanov.russianwives:editTextStyle}</code></td><td>Default EditText style.</td></tr>
+     * <tr><td><code>{@link #MaterialComponentsTheme_editTextStyle com.borisruzanov.russianwives:editTextStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialComponentsTheme_floatingActionButtonStyle com.borisruzanov.russianwives:floatingActionButtonStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialComponentsTheme_materialButtonStyle com.borisruzanov.russianwives:materialButtonStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialComponentsTheme_materialCardViewStyle com.borisruzanov.russianwives:materialCardViewStyle}</code></td><td></td></tr>
@@ -25005,11 +24185,11 @@ public final class R {
       0x7f04004d, 0x7f04004e, 0x7f040077, 0x7f040081, 
       0x7f040085, 0x7f04009b, 0x7f04009c, 0x7f0400a2, 
       0x7f0400a3, 0x7f0400a5, 0x7f040117, 0x7f040132, 
-      0x7f0401e1, 0x7f0401e2, 0x7f04020e, 0x7f040248, 
-      0x7f04025a, 0x7f04028f, 0x7f040298, 0x7f040299, 
-      0x7f04029a, 0x7f04029b, 0x7f04029c, 0x7f04029d, 
-      0x7f04029e, 0x7f04029f, 0x7f0402a0, 0x7f0402a1, 
-      0x7f0402a6, 0x7f0402ab, 0x7f0402ac, 0x7f0402b0
+      0x7f0401e1, 0x7f0401e2, 0x7f04020e, 0x7f040249, 
+      0x7f04025b, 0x7f040290, 0x7f040299, 0x7f04029a, 
+      0x7f04029b, 0x7f04029c, 0x7f04029d, 0x7f04029e, 
+      0x7f04029f, 0x7f0402a0, 0x7f0402a1, 0x7f0402a2, 
+      0x7f0402a7, 0x7f0402ac, 0x7f0402ad, 0x7f0402b1
     };
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#bottomSheetDialogTheme}
@@ -25072,10 +24252,8 @@ public final class R {
      */
     public static final int MaterialComponentsTheme_chipStyle=4;
     /**
-     * <p>
-     * @attr description
-     * Bright complement to the primary branding color. By default, this is the color applied
-     * to framework controls (via colorControlActivated).
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#colorAccent}
+     * attribute's value can be found in the {@link #MaterialComponentsTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -25085,9 +24263,8 @@ public final class R {
      */
     public static final int MaterialComponentsTheme_colorAccent=5;
     /**
-     * <p>
-     * @attr description
-     * Default color of background imagery for floating components, ex. dialogs, popups, and cards.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#colorBackgroundFloating}
+     * attribute's value can be found in the {@link #MaterialComponentsTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -25097,10 +24274,8 @@ public final class R {
      */
     public static final int MaterialComponentsTheme_colorBackgroundFloating=6;
     /**
-     * <p>
-     * @attr description
-     * The primary branding color for the app. By default, this is the color applied to the
-     * action bar background.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#colorPrimary}
+     * attribute's value can be found in the {@link #MaterialComponentsTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -25110,10 +24285,8 @@ public final class R {
      */
     public static final int MaterialComponentsTheme_colorPrimary=7;
     /**
-     * <p>
-     * @attr description
-     * Dark variant of the primary branding color. By default, this is the color applied to
-     * the status bar (via statusBarColor) and navigation bar (via navigationBarColor).
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#colorPrimaryDark}
+     * attribute's value can be found in the {@link #MaterialComponentsTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -25134,9 +24307,8 @@ public final class R {
      */
     public static final int MaterialComponentsTheme_colorSecondary=9;
     /**
-     * <p>
-     * @attr description
-     * Default EditText style.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#editTextStyle}
+     * attribute's value can be found in the {@link #MaterialComponentsTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -25694,9 +24866,8 @@ public final class R {
       0x010101df, 0x010101e0
     };
     /**
-     * <p>
-     * @attr description
-     * Whether the items are enabled.
+     * <p>This symbol is the offset where the {@link android.R.attr#enabled}
+     * attribute's value can be found in the {@link #MenuGroup} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -25705,9 +24876,8 @@ public final class R {
      */
     public static final int MenuGroup_android_enabled=0;
     /**
-     * <p>
-     * @attr description
-     * The ID of the group.
+     * <p>This symbol is the offset where the {@link android.R.attr#id}
+     * attribute's value can be found in the {@link #MenuGroup} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -25718,9 +24888,8 @@ public final class R {
      */
     public static final int MenuGroup_android_id=1;
     /**
-     * <p>
-     * @attr description
-     * Whether the items are shown/visible.
+     * <p>This symbol is the offset where the {@link android.R.attr#visible}
+     * attribute's value can be found in the {@link #MenuGroup} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -25729,10 +24898,8 @@ public final class R {
      */
     public static final int MenuGroup_android_visible=2;
     /**
-     * <p>
-     * @attr description
-     * The category applied to all items within this group.
-     * (This will be or'ed with the orderInCategory attribute.)
+     * <p>This symbol is the offset where the {@link android.R.attr#menuCategory}
+     * attribute's value can be found in the {@link #MenuGroup} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -25750,10 +24917,8 @@ public final class R {
      */
     public static final int MenuGroup_android_menuCategory=3;
     /**
-     * <p>
-     * @attr description
-     * The order within the category applied to all items within this group.
-     * (This will be or'ed with the category attribute.)
+     * <p>This symbol is the offset where the {@link android.R.attr#orderInCategory}
+     * attribute's value can be found in the {@link #MenuGroup} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
@@ -25761,9 +24926,8 @@ public final class R {
      */
     public static final int MenuGroup_android_orderInCategory=4;
     /**
-     * <p>
-     * @attr description
-     * Whether the items are capable of displaying a check mark.
+     * <p>This symbol is the offset where the {@link android.R.attr#checkableBehavior}
+     * attribute's value can be found in the {@link #MenuGroup} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -25799,18 +24963,16 @@ public final class R {
      * <tr><td><code>{@link #MenuItem_android_numericShortcut android:numericShortcut}</code></td><td></td></tr>
      * <tr><td><code>{@link #MenuItem_android_checkable android:checkable}</code></td><td></td></tr>
      * <tr><td><code>{@link #MenuItem_android_onClick android:onClick}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MenuItem_actionLayout com.borisruzanov.russianwives:actionLayout}</code></td><td>An optional layout to be used as an action view.</td></tr>
-     * <tr><td><code>{@link #MenuItem_actionProviderClass com.borisruzanov.russianwives:actionProviderClass}</code></td><td>The name of an optional ActionProvider class to instantiate an action view
-     * and perform operations such as default action for that menu item.</td></tr>
-     * <tr><td><code>{@link #MenuItem_actionViewClass com.borisruzanov.russianwives:actionViewClass}</code></td><td>The name of an optional View class to instantiate and use as an
-     * action view.</td></tr>
-     * <tr><td><code>{@link #MenuItem_alphabeticModifiers com.borisruzanov.russianwives:alphabeticModifiers}</code></td><td>The alphabetic modifier key.</td></tr>
-     * <tr><td><code>{@link #MenuItem_contentDescription com.borisruzanov.russianwives:contentDescription}</code></td><td>The content description associated with the item.</td></tr>
-     * <tr><td><code>{@link #MenuItem_iconTint com.borisruzanov.russianwives:iconTint}</code></td><td>Tint to apply to the icon.</td></tr>
-     * <tr><td><code>{@link #MenuItem_iconTintMode com.borisruzanov.russianwives:iconTintMode}</code></td><td>Blending mode used to apply the icon tint.</td></tr>
-     * <tr><td><code>{@link #MenuItem_numericModifiers com.borisruzanov.russianwives:numericModifiers}</code></td><td>The numeric modifier key.</td></tr>
-     * <tr><td><code>{@link #MenuItem_showAsAction com.borisruzanov.russianwives:showAsAction}</code></td><td>How this item should display in the Action Bar, if present.</td></tr>
-     * <tr><td><code>{@link #MenuItem_tooltipText com.borisruzanov.russianwives:tooltipText}</code></td><td>The tooltip text associated with the item.</td></tr>
+     * <tr><td><code>{@link #MenuItem_actionLayout com.borisruzanov.russianwives:actionLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_actionProviderClass com.borisruzanov.russianwives:actionProviderClass}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_actionViewClass com.borisruzanov.russianwives:actionViewClass}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_alphabeticModifiers com.borisruzanov.russianwives:alphabeticModifiers}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_contentDescription com.borisruzanov.russianwives:contentDescription}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_iconTint com.borisruzanov.russianwives:iconTint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_iconTintMode com.borisruzanov.russianwives:iconTintMode}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_numericModifiers com.borisruzanov.russianwives:numericModifiers}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_showAsAction com.borisruzanov.russianwives:showAsAction}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_tooltipText com.borisruzanov.russianwives:tooltipText}</code></td><td></td></tr>
      * </table>
      * @see #MenuItem_android_icon
      * @see #MenuItem_android_enabled
@@ -25842,13 +25004,11 @@ public final class R {
       0x010101e2, 0x010101e3, 0x010101e4, 0x010101e5, 
       0x0101026f, 0x7f04000d, 0x7f04001f, 0x7f040020, 
       0x7f04002b, 0x7f0400ba, 0x7f040169, 0x7f04016a, 
-      0x7f04020f, 0x7f040250, 0x7f0402cc
+      0x7f040210, 0x7f040251, 0x7f0402cd
     };
     /**
-     * <p>
-     * @attr description
-     * The icon associated with this item.  This icon will not always be shown, so
-     * the title should be sufficient in describing this item.
+     * <p>This symbol is the offset where the {@link android.R.attr#icon}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -25859,9 +25019,8 @@ public final class R {
      */
     public static final int MenuItem_android_icon=0;
     /**
-     * <p>
-     * @attr description
-     * Whether the item is enabled.
+     * <p>This symbol is the offset where the {@link android.R.attr#enabled}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -25870,9 +25029,8 @@ public final class R {
      */
     public static final int MenuItem_android_enabled=1;
     /**
-     * <p>
-     * @attr description
-     * The ID of the item.
+     * <p>This symbol is the offset where the {@link android.R.attr#id}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -25883,10 +25041,8 @@ public final class R {
      */
     public static final int MenuItem_android_id=2;
     /**
-     * <p>
-     * @attr description
-     * Whether the item is checked.  Note that you must first have enabled checking with
-     * the checkable attribute or else the check mark will not appear.
+     * <p>This symbol is the offset where the {@link android.R.attr#checked}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -25895,9 +25051,8 @@ public final class R {
      */
     public static final int MenuItem_android_checked=3;
     /**
-     * <p>
-     * @attr description
-     * Whether the item is shown/visible.
+     * <p>This symbol is the offset where the {@link android.R.attr#visible}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -25906,10 +25061,8 @@ public final class R {
      */
     public static final int MenuItem_android_visible=4;
     /**
-     * <p>
-     * @attr description
-     * The category applied to the item.
-     * (This will be or'ed with the orderInCategory attribute.)
+     * <p>This symbol is the offset where the {@link android.R.attr#menuCategory}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -25927,10 +25080,8 @@ public final class R {
      */
     public static final int MenuItem_android_menuCategory=5;
     /**
-     * <p>
-     * @attr description
-     * The order within the category applied to the item.
-     * (This will be or'ed with the category attribute.)
+     * <p>This symbol is the offset where the {@link android.R.attr#orderInCategory}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
@@ -25938,9 +25089,8 @@ public final class R {
      */
     public static final int MenuItem_android_orderInCategory=6;
     /**
-     * <p>
-     * @attr description
-     * The title associated with the item.
+     * <p>This symbol is the offset where the {@link android.R.attr#title}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -25949,10 +25099,8 @@ public final class R {
      */
     public static final int MenuItem_android_title=7;
     /**
-     * <p>
-     * @attr description
-     * The condensed title associated with the item.  This is used in situations where the
-     * normal title may be too long to be displayed.
+     * <p>This symbol is the offset where the {@link android.R.attr#titleCondensed}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -25961,10 +25109,8 @@ public final class R {
      */
     public static final int MenuItem_android_titleCondensed=8;
     /**
-     * <p>
-     * @attr description
-     * The alphabetic shortcut key.  This is the shortcut when using a keyboard
-     * with alphabetic keys.
+     * <p>This symbol is the offset where the {@link android.R.attr#alphabeticShortcut}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -25973,10 +25119,8 @@ public final class R {
      */
     public static final int MenuItem_android_alphabeticShortcut=9;
     /**
-     * <p>
-     * @attr description
-     * The numeric shortcut key.  This is the shortcut when using a numeric (e.g., 12-key)
-     * keyboard.
+     * <p>This symbol is the offset where the {@link android.R.attr#numericShortcut}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -25985,9 +25129,8 @@ public final class R {
      */
     public static final int MenuItem_android_numericShortcut=10;
     /**
-     * <p>
-     * @attr description
-     * Whether the item is capable of displaying a check mark.
+     * <p>This symbol is the offset where the {@link android.R.attr#checkable}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -25996,10 +25139,8 @@ public final class R {
      */
     public static final int MenuItem_android_checkable=11;
     /**
-     * <p>
-     * @attr description
-     * Name of a method on the Context used to inflate the menu that will be
-     * called when the item is clicked.
+     * <p>This symbol is the offset where the {@link android.R.attr#onClick}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -26008,11 +25149,8 @@ public final class R {
      */
     public static final int MenuItem_android_onClick=12;
     /**
-     * <p>
-     * @attr description
-     * An optional layout to be used as an action view.
-     * See {@link android.view.MenuItem#setActionView(android.view.View)}
-     * for more info.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#actionLayout}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -26023,12 +25161,8 @@ public final class R {
      */
     public static final int MenuItem_actionLayout=13;
     /**
-     * <p>
-     * @attr description
-     * The name of an optional ActionProvider class to instantiate an action view
-     * and perform operations such as default action for that menu item.
-     * See {@link android.view.MenuItem#setActionProvider(android.view.ActionProvider)}
-     * for more info.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#actionProviderClass}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -26037,11 +25171,8 @@ public final class R {
      */
     public static final int MenuItem_actionProviderClass=14;
     /**
-     * <p>
-     * @attr description
-     * The name of an optional View class to instantiate and use as an
-     * action view. See {@link android.view.MenuItem#setActionView(android.view.View)}
-     * for more info.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#actionViewClass}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -26050,10 +25181,8 @@ public final class R {
      */
     public static final int MenuItem_actionViewClass=15;
     /**
-     * <p>
-     * @attr description
-     * The alphabetic modifier key. This is the modifier when using a keyboard
-     * with alphabetic keys. The values should be kept in sync with KeyEvent
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#alphabeticModifiers}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -26073,9 +25202,8 @@ public final class R {
      */
     public static final int MenuItem_alphabeticModifiers=16;
     /**
-     * <p>
-     * @attr description
-     * The content description associated with the item.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#contentDescription}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -26084,9 +25212,8 @@ public final class R {
      */
     public static final int MenuItem_contentDescription=17;
     /**
-     * <p>
-     * @attr description
-     * Tint to apply to the icon.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#iconTint}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -26096,9 +25223,8 @@ public final class R {
      */
     public static final int MenuItem_iconTint=18;
     /**
-     * <p>
-     * @attr description
-     * Blending mode used to apply the icon tint.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#iconTintMode}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -26106,27 +25232,20 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the icon with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the icon, but with the icon’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the icon. The icon’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the icon.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      *
      * @attr name com.borisruzanov.russianwives:iconTintMode
      */
     public static final int MenuItem_iconTintMode=19;
     /**
-     * <p>
-     * @attr description
-     * The numeric modifier key. This is the modifier when using a numeric (e.g., 12-key)
-     * keyboard. The values should be kept in sync with KeyEvent
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#numericModifiers}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -26146,9 +25265,8 @@ public final class R {
      */
     public static final int MenuItem_numericModifiers=20;
     /**
-     * <p>
-     * @attr description
-     * How this item should display in the Action Bar, if present.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#showAsAction}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -26156,29 +25274,19 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>always</td><td>2</td><td>Always show this item in an actionbar, even if it would override
-     * the system's limits of how much stuff to put there. This may make
-     * your action bar look bad on some screens. In most cases you should
-     * use "ifRoom" instead. Mutually exclusive with "ifRoom" and "never".</td></tr>
-     * <tr><td>collapseActionView</td><td>8</td><td>This item's action view collapses to a normal menu
-     * item. When expanded, the action view takes over a
-     * larger segment of its container.</td></tr>
-     * <tr><td>ifRoom</td><td>1</td><td>Show this item in an action bar if there is room for it as determined
-     * by the system. Favor this option over "always" where possible.
-     * Mutually exclusive with "never" and "always".</td></tr>
-     * <tr><td>never</td><td>0</td><td>Never show this item in an action bar, show it in the overflow menu instead.
-     * Mutually exclusive with "ifRoom" and "always".</td></tr>
-     * <tr><td>withText</td><td>4</td><td>When this item is shown as an action in the action bar, show a text
-     * label with it even if it has an icon representation.</td></tr>
+     * <tr><td>always</td><td>2</td><td></td></tr>
+     * <tr><td>collapseActionView</td><td>8</td><td></td></tr>
+     * <tr><td>ifRoom</td><td>1</td><td></td></tr>
+     * <tr><td>never</td><td>0</td><td></td></tr>
+     * <tr><td>withText</td><td>4</td><td></td></tr>
      * </table>
      *
      * @attr name com.borisruzanov.russianwives:showAsAction
      */
     public static final int MenuItem_showAsAction=21;
     /**
-     * <p>
-     * @attr description
-     * The tooltip text associated with the item.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#tooltipText}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -26200,8 +25308,8 @@ public final class R {
      * <tr><td><code>{@link #MenuView_android_headerBackground android:headerBackground}</code></td><td></td></tr>
      * <tr><td><code>{@link #MenuView_android_itemBackground android:itemBackground}</code></td><td></td></tr>
      * <tr><td><code>{@link #MenuView_android_itemIconDisabledAlpha android:itemIconDisabledAlpha}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MenuView_preserveIconSpacing com.borisruzanov.russianwives:preserveIconSpacing}</code></td><td>Whether space should be reserved in layout when an icon is missing.</td></tr>
-     * <tr><td><code>{@link #MenuView_subMenuArrow com.borisruzanov.russianwives:subMenuArrow}</code></td><td>Drawable for the arrow icon indicating a particular item is a submenu.</td></tr>
+     * <tr><td><code>{@link #MenuView_preserveIconSpacing com.borisruzanov.russianwives:preserveIconSpacing}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuView_subMenuArrow com.borisruzanov.russianwives:subMenuArrow}</code></td><td></td></tr>
      * </table>
      * @see #MenuView_android_windowAnimationStyle
      * @see #MenuView_android_itemTextAppearance
@@ -26215,13 +25323,12 @@ public final class R {
      */
     public static final int[] MenuView={
       0x010100ae, 0x0101012c, 0x0101012d, 0x0101012e, 
-      0x0101012f, 0x01010130, 0x01010131, 0x7f040232, 
-      0x7f04026e
+      0x0101012f, 0x01010130, 0x01010131, 0x7f040233, 
+      0x7f04026f
     };
     /**
-     * <p>
-     * @attr description
-     * Default animations for the menu.
+     * <p>This symbol is the offset where the {@link android.R.attr#windowAnimationStyle}
+     * attribute's value can be found in the {@link #MenuView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -26232,9 +25339,8 @@ public final class R {
      */
     public static final int MenuView_android_windowAnimationStyle=0;
     /**
-     * <p>
-     * @attr description
-     * Default appearance of menu item text.
+     * <p>This symbol is the offset where the {@link android.R.attr#itemTextAppearance}
+     * attribute's value can be found in the {@link #MenuView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -26245,9 +25351,8 @@ public final class R {
      */
     public static final int MenuView_android_itemTextAppearance=1;
     /**
-     * <p>
-     * @attr description
-     * Default horizontal divider between rows of menu items.
+     * <p>This symbol is the offset where the {@link android.R.attr#horizontalDivider}
+     * attribute's value can be found in the {@link #MenuView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -26258,9 +25363,8 @@ public final class R {
      */
     public static final int MenuView_android_horizontalDivider=2;
     /**
-     * <p>
-     * @attr description
-     * Default vertical divider between menu items.
+     * <p>This symbol is the offset where the {@link android.R.attr#verticalDivider}
+     * attribute's value can be found in the {@link #MenuView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -26271,9 +25375,8 @@ public final class R {
      */
     public static final int MenuView_android_verticalDivider=3;
     /**
-     * <p>
-     * @attr description
-     * Default background for the menu header.
+     * <p>This symbol is the offset where the {@link android.R.attr#headerBackground}
+     * attribute's value can be found in the {@link #MenuView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -26287,9 +25390,8 @@ public final class R {
      */
     public static final int MenuView_android_headerBackground=4;
     /**
-     * <p>
-     * @attr description
-     * Default background for each menu item.
+     * <p>This symbol is the offset where the {@link android.R.attr#itemBackground}
+     * attribute's value can be found in the {@link #MenuView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -26303,9 +25405,8 @@ public final class R {
      */
     public static final int MenuView_android_itemBackground=5;
     /**
-     * <p>
-     * @attr description
-     * Default disabled icon alpha for each menu item that shows an icon.
+     * <p>This symbol is the offset where the {@link android.R.attr#itemIconDisabledAlpha}
+     * attribute's value can be found in the {@link #MenuView} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
@@ -26313,9 +25414,8 @@ public final class R {
      */
     public static final int MenuView_android_itemIconDisabledAlpha=6;
     /**
-     * <p>
-     * @attr description
-     * Whether space should be reserved in layout when an icon is missing.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#preserveIconSpacing}
+     * attribute's value can be found in the {@link #MenuView} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -26324,9 +25424,8 @@ public final class R {
      */
     public static final int MenuView_preserveIconSpacing=7;
     /**
-     * <p>
-     * @attr description
-     * Drawable for the arrow icon indicating a particular item is a submenu.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#subMenuArrow}
+     * attribute's value can be found in the {@link #MenuView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -26447,7 +25546,7 @@ public final class R {
      */
     public static final int[] Motion={
       0x7f04002d, 0x7f04010b, 0x7f0401f6, 0x7f0401f8, 
-      0x7f040224, 0x7f0402d4
+      0x7f040225, 0x7f0402d5
     };
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#animate_relativeTo}
@@ -26554,7 +25653,7 @@ public final class R {
      * @see #MotionHelper_onShow
      */
     public static final int[] MotionHelper={
-      0x7f040211, 0x7f040214
+      0x7f040212, 0x7f040215
     };
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#onHide}
@@ -26599,7 +25698,7 @@ public final class R {
      */
     public static final int[] MotionLayout={
       0x7f04002e, 0x7f0400f0, 0x7f040184, 0x7f0401f4, 
-      0x7f0401f7, 0x7f040253
+      0x7f0401f7, 0x7f040254
     };
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#applyMotionScene}
@@ -26731,7 +25830,7 @@ public final class R {
      * @see #MotionTelltales_telltales_velocityMode
      */
     public static final int[] MotionTelltales={
-      0x7f040294, 0x7f040295, 0x7f040296
+      0x7f040295, 0x7f040296, 0x7f040297
     };
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#telltales_tailColor}
@@ -26782,7 +25881,7 @@ public final class R {
      * <tr><td><code>{@link #NavigationView_android_background android:background}</code></td><td></td></tr>
      * <tr><td><code>{@link #NavigationView_android_fitsSystemWindows android:fitsSystemWindows}</code></td><td></td></tr>
      * <tr><td><code>{@link #NavigationView_android_maxWidth android:maxWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #NavigationView_elevation com.borisruzanov.russianwives:elevation}</code></td><td>Elevation for the action bar itself</td></tr>
+     * <tr><td><code>{@link #NavigationView_elevation com.borisruzanov.russianwives:elevation}</code></td><td></td></tr>
      * <tr><td><code>{@link #NavigationView_headerLayout com.borisruzanov.russianwives:headerLayout}</code></td><td></td></tr>
      * <tr><td><code>{@link #NavigationView_itemBackground com.borisruzanov.russianwives:itemBackground}</code></td><td></td></tr>
      * <tr><td><code>{@link #NavigationView_itemHorizontalPadding com.borisruzanov.russianwives:itemHorizontalPadding}</code></td><td></td></tr>
@@ -26849,9 +25948,8 @@ public final class R {
      */
     public static final int NavigationView_android_maxWidth=2;
     /**
-     * <p>
-     * @attr description
-     * Elevation for the action bar itself
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#elevation}
+     * attribute's value can be found in the {@link #NavigationView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -26972,7 +26070,7 @@ public final class R {
      * @see #OnClick_targetId
      */
     public static final int[] OnClick={
-      0x7f04008d, 0x7f040293
+      0x7f04008d, 0x7f040294
     };
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#clickAction}
@@ -27018,6 +26116,7 @@ public final class R {
      * <tr><td><code>{@link #OnSwipe_maxAcceleration com.borisruzanov.russianwives:maxAcceleration}</code></td><td></td></tr>
      * <tr><td><code>{@link #OnSwipe_maxVelocity com.borisruzanov.russianwives:maxVelocity}</code></td><td></td></tr>
      * <tr><td><code>{@link #OnSwipe_moveWhenScrollAtTop com.borisruzanov.russianwives:moveWhenScrollAtTop}</code></td><td></td></tr>
+     * <tr><td><code>{@link #OnSwipe_nestedScrollFlags com.borisruzanov.russianwives:nestedScrollFlags}</code></td><td></td></tr>
      * <tr><td><code>{@link #OnSwipe_onTouchUp com.borisruzanov.russianwives:onTouchUp}</code></td><td></td></tr>
      * <tr><td><code>{@link #OnSwipe_touchAnchorId com.borisruzanov.russianwives:touchAnchorId}</code></td><td></td></tr>
      * <tr><td><code>{@link #OnSwipe_touchAnchorSide com.borisruzanov.russianwives:touchAnchorSide}</code></td><td></td></tr>
@@ -27028,6 +26127,7 @@ public final class R {
      * @see #OnSwipe_maxAcceleration
      * @see #OnSwipe_maxVelocity
      * @see #OnSwipe_moveWhenScrollAtTop
+     * @see #OnSwipe_nestedScrollFlags
      * @see #OnSwipe_onTouchUp
      * @see #OnSwipe_touchAnchorId
      * @see #OnSwipe_touchAnchorSide
@@ -27035,8 +26135,8 @@ public final class R {
      */
     public static final int[] OnSwipe={
       0x7f040109, 0x7f04010a, 0x7f0401e3, 0x7f0401e8, 
-      0x7f0401fc, 0x7f040215, 0x7f0402cd, 0x7f0402ce, 
-      0x7f0402cf
+      0x7f0401fc, 0x7f04020f, 0x7f040216, 0x7f0402ce, 
+      0x7f0402cf, 0x7f0402d0
     };
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#dragDirection}
@@ -27049,8 +26149,10 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
      * <tr><td>dragDown</td><td>1</td><td></td></tr>
+     * <tr><td>dragEnd</td><td>5</td><td></td></tr>
      * <tr><td>dragLeft</td><td>2</td><td></td></tr>
      * <tr><td>dragRight</td><td>3</td><td></td></tr>
+     * <tr><td>dragStart</td><td>4</td><td></td></tr>
      * <tr><td>dragUp</td><td>0</td><td></td></tr>
      * </table>
      *
@@ -27095,6 +26197,23 @@ public final class R {
      */
     public static final int OnSwipe_moveWhenScrollAtTop=4;
     /**
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#nestedScrollFlags}
+     * attribute's value can be found in the {@link #OnSwipe} array.
+     *
+     * <p>Must be one or more (separated by '|') of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>disablePostScroll</td><td>1</td><td></td></tr>
+     * <tr><td>none</td><td>0</td><td></td></tr>
+     * </table>
+     *
+     * @attr name com.borisruzanov.russianwives:nestedScrollFlags
+     */
+    public static final int OnSwipe_nestedScrollFlags=5;
+    /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#onTouchUp}
      * attribute's value can be found in the {@link #OnSwipe} array.
      *
@@ -27114,7 +26233,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:onTouchUp
      */
-    public static final int OnSwipe_onTouchUp=5;
+    public static final int OnSwipe_onTouchUp=6;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#touchAnchorId}
      * attribute's value can be found in the {@link #OnSwipe} array.
@@ -27126,7 +26245,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:touchAnchorId
      */
-    public static final int OnSwipe_touchAnchorId=6;
+    public static final int OnSwipe_touchAnchorId=7;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#touchAnchorSide}
      * attribute's value can be found in the {@link #OnSwipe} array.
@@ -27138,14 +26257,17 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
      * <tr><td>bottom</td><td>3</td><td></td></tr>
+     * <tr><td>end</td><td>6</td><td></td></tr>
      * <tr><td>left</td><td>1</td><td></td></tr>
+     * <tr><td>middle</td><td>4</td><td></td></tr>
      * <tr><td>right</td><td>2</td><td></td></tr>
+     * <tr><td>start</td><td>5</td><td></td></tr>
      * <tr><td>top</td><td>0</td><td></td></tr>
      * </table>
      *
      * @attr name com.borisruzanov.russianwives:touchAnchorSide
      */
-    public static final int OnSwipe_touchAnchorSide=7;
+    public static final int OnSwipe_touchAnchorSide=8;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#touchRegionId}
      * attribute's value can be found in the {@link #OnSwipe} array.
@@ -27157,7 +26279,7 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:touchRegionId
      */
-    public static final int OnSwipe_touchRegionId=8;
+    public static final int OnSwipe_touchRegionId=9;
     /**
      * Attributes that can be used with a PopupWindow.
      * <p>Includes the following attributes:</p>
@@ -27167,14 +26289,14 @@ public final class R {
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #PopupWindow_android_popupBackground android:popupBackground}</code></td><td></td></tr>
      * <tr><td><code>{@link #PopupWindow_android_popupAnimationStyle android:popupAnimationStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #PopupWindow_overlapAnchor com.borisruzanov.russianwives:overlapAnchor}</code></td><td>Whether the popup window should overlap its anchor view.</td></tr>
+     * <tr><td><code>{@link #PopupWindow_overlapAnchor com.borisruzanov.russianwives:overlapAnchor}</code></td><td></td></tr>
      * </table>
      * @see #PopupWindow_android_popupBackground
      * @see #PopupWindow_android_popupAnimationStyle
      * @see #PopupWindow_overlapAnchor
      */
     public static final int[] PopupWindow={
-      0x01010176, 0x010102c9, 0x7f040216
+      0x01010176, 0x010102c9, 0x7f040217
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#popupBackground}
@@ -27204,9 +26326,8 @@ public final class R {
      */
     public static final int PopupWindow_android_popupAnimationStyle=1;
     /**
-     * <p>
-     * @attr description
-     * Whether the popup window should overlap its anchor view.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#overlapAnchor}
+     * attribute's value can be found in the {@link #PopupWindow} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -27221,17 +26342,16 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #PopupWindowBackgroundState_state_above_anchor com.borisruzanov.russianwives:state_above_anchor}</code></td><td>State identifier indicating the popup will be above the anchor.</td></tr>
+     * <tr><td><code>{@link #PopupWindowBackgroundState_state_above_anchor com.borisruzanov.russianwives:state_above_anchor}</code></td><td></td></tr>
      * </table>
      * @see #PopupWindowBackgroundState_state_above_anchor
      */
     public static final int[] PopupWindowBackgroundState={
-      0x7f040265
+      0x7f040266
     };
     /**
-     * <p>
-     * @attr description
-     * State identifier indicating the popup will be above the anchor.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#state_above_anchor}
+     * attribute's value can be found in the {@link #PopupWindowBackgroundState} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -27260,7 +26380,7 @@ public final class R {
      */
     public static final int[] PropertySet={
       0x010100dc, 0x0101031f, 0x7f0401ab, 0x7f0401f7, 
-      0x7f0402dc
+      0x7f0402dd
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#visibility}
@@ -27332,19 +26452,18 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #RecycleListView_paddingBottomNoButtons com.borisruzanov.russianwives:paddingBottomNoButtons}</code></td><td>Bottom padding to use when no buttons are present.</td></tr>
-     * <tr><td><code>{@link #RecycleListView_paddingTopNoTitle com.borisruzanov.russianwives:paddingTopNoTitle}</code></td><td>Top padding to use when no title is present.</td></tr>
+     * <tr><td><code>{@link #RecycleListView_paddingBottomNoButtons com.borisruzanov.russianwives:paddingBottomNoButtons}</code></td><td></td></tr>
+     * <tr><td><code>{@link #RecycleListView_paddingTopNoTitle com.borisruzanov.russianwives:paddingTopNoTitle}</code></td><td></td></tr>
      * </table>
      * @see #RecycleListView_paddingBottomNoButtons
      * @see #RecycleListView_paddingTopNoTitle
      */
     public static final int[] RecycleListView={
-      0x7f040218, 0x7f04021b
+      0x7f040219, 0x7f04021c
     };
     /**
-     * <p>
-     * @attr description
-     * Bottom padding to use when no buttons are present.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#paddingBottomNoButtons}
+     * attribute's value can be found in the {@link #RecycleListView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -27356,9 +26475,8 @@ public final class R {
      */
     public static final int RecycleListView_paddingBottomNoButtons=0;
     /**
-     * <p>
-     * @attr description
-     * Top padding to use when no title is present.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#paddingTopNoTitle}
+     * attribute's value can be found in the {@link #RecycleListView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -27383,7 +26501,7 @@ public final class R {
      * <tr><td><code>{@link #RecyclerView_fastScrollHorizontalTrackDrawable com.borisruzanov.russianwives:fastScrollHorizontalTrackDrawable}</code></td><td></td></tr>
      * <tr><td><code>{@link #RecyclerView_fastScrollVerticalThumbDrawable com.borisruzanov.russianwives:fastScrollVerticalThumbDrawable}</code></td><td></td></tr>
      * <tr><td><code>{@link #RecyclerView_fastScrollVerticalTrackDrawable com.borisruzanov.russianwives:fastScrollVerticalTrackDrawable}</code></td><td></td></tr>
-     * <tr><td><code>{@link #RecyclerView_layoutManager com.borisruzanov.russianwives:layoutManager}</code></td><td>Class name of the Layout Manager to be used.</td></tr>
+     * <tr><td><code>{@link #RecyclerView_layoutManager com.borisruzanov.russianwives:layoutManager}</code></td><td></td></tr>
      * <tr><td><code>{@link #RecyclerView_reverseLayout com.borisruzanov.russianwives:reverseLayout}</code></td><td></td></tr>
      * <tr><td><code>{@link #RecyclerView_spanCount com.borisruzanov.russianwives:spanCount}</code></td><td></td></tr>
      * <tr><td><code>{@link #RecyclerView_stackFromEnd com.borisruzanov.russianwives:stackFromEnd}</code></td><td></td></tr>
@@ -27403,7 +26521,7 @@ public final class R {
     public static final int[] RecyclerView={
       0x010100c4, 0x010100f1, 0x7f04012c, 0x7f04012d, 
       0x7f04012e, 0x7f04012f, 0x7f040130, 0x7f040186, 
-      0x7f040241, 0x7f04025d, 0x7f040263
+      0x7f040242, 0x7f04025e, 0x7f040264
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#orientation}
@@ -27499,17 +26617,8 @@ public final class R {
      */
     public static final int RecyclerView_fastScrollVerticalTrackDrawable=6;
     /**
-     * <p>
-     * @attr description
-     * Class name of the Layout Manager to be used.
-     * <p/>
-     * The class must extandroidx.recyclerview.widget.RecyclerViewView$LayoutManager
-     * and have either a default constructor or constructor with the signature
-     * (android.content.Context, android.util.AttributeSet, int, int).
-     * <p/>
-     * If the name starts with a '.', application package is prefixed.
-     * Else, if the name contains a '.', the classname is assumed to be a full class name.
-     * Else, the recycler view package naandroidx.appcompat.widgetdget) is prefixed.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layoutManager}
+     * attribute's value can be found in the {@link #RecyclerView} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -27613,20 +26722,19 @@ public final class R {
      * <tr><td><code>{@link #SearchView_android_maxWidth android:maxWidth}</code></td><td></td></tr>
      * <tr><td><code>{@link #SearchView_android_inputType android:inputType}</code></td><td></td></tr>
      * <tr><td><code>{@link #SearchView_android_imeOptions android:imeOptions}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SearchView_closeIcon com.borisruzanov.russianwives:closeIcon}</code></td><td>Close button icon</td></tr>
-     * <tr><td><code>{@link #SearchView_commitIcon com.borisruzanov.russianwives:commitIcon}</code></td><td>Commit icon shown in the query suggestion row</td></tr>
-     * <tr><td><code>{@link #SearchView_defaultQueryHint com.borisruzanov.russianwives:defaultQueryHint}</code></td><td>Default query hint used when {@code queryHint} is undefined and
-     * the search view's {@code SearchableInfo} does not provide a hint.</td></tr>
-     * <tr><td><code>{@link #SearchView_goIcon com.borisruzanov.russianwives:goIcon}</code></td><td>Go button icon</td></tr>
-     * <tr><td><code>{@link #SearchView_iconifiedByDefault com.borisruzanov.russianwives:iconifiedByDefault}</code></td><td>The default state of the SearchView.</td></tr>
-     * <tr><td><code>{@link #SearchView_layout com.borisruzanov.russianwives:layout}</code></td><td>The layout to use for the search view.</td></tr>
-     * <tr><td><code>{@link #SearchView_queryBackground com.borisruzanov.russianwives:queryBackground}</code></td><td>Background for the section containing the search query</td></tr>
-     * <tr><td><code>{@link #SearchView_queryHint com.borisruzanov.russianwives:queryHint}</code></td><td>An optional user-defined query hint string to be displayed in the empty query field.</td></tr>
-     * <tr><td><code>{@link #SearchView_searchHintIcon com.borisruzanov.russianwives:searchHintIcon}</code></td><td>Search icon displayed as a text field hint</td></tr>
-     * <tr><td><code>{@link #SearchView_searchIcon com.borisruzanov.russianwives:searchIcon}</code></td><td>Search icon</td></tr>
-     * <tr><td><code>{@link #SearchView_submitBackground com.borisruzanov.russianwives:submitBackground}</code></td><td>Background for the section containing the action (e.g.</td></tr>
-     * <tr><td><code>{@link #SearchView_suggestionRowLayout com.borisruzanov.russianwives:suggestionRowLayout}</code></td><td>Layout for query suggestion rows</td></tr>
-     * <tr><td><code>{@link #SearchView_voiceIcon com.borisruzanov.russianwives:voiceIcon}</code></td><td>Voice button icon</td></tr>
+     * <tr><td><code>{@link #SearchView_closeIcon com.borisruzanov.russianwives:closeIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_commitIcon com.borisruzanov.russianwives:commitIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_defaultQueryHint com.borisruzanov.russianwives:defaultQueryHint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_goIcon com.borisruzanov.russianwives:goIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_iconifiedByDefault com.borisruzanov.russianwives:iconifiedByDefault}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_layout com.borisruzanov.russianwives:layout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_queryBackground com.borisruzanov.russianwives:queryBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_queryHint com.borisruzanov.russianwives:queryHint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_searchHintIcon com.borisruzanov.russianwives:searchHintIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_searchIcon com.borisruzanov.russianwives:searchIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_submitBackground com.borisruzanov.russianwives:submitBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_suggestionRowLayout com.borisruzanov.russianwives:suggestionRowLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_voiceIcon com.borisruzanov.russianwives:voiceIcon}</code></td><td></td></tr>
      * </table>
      * @see #SearchView_android_focusable
      * @see #SearchView_android_maxWidth
@@ -27649,9 +26757,9 @@ public final class R {
     public static final int[] SearchView={
       0x010100da, 0x0101011f, 0x01010220, 0x01010264, 
       0x7f04008e, 0x7f0400b3, 0x7f0400fc, 0x7f040154, 
-      0x7f04016b, 0x7f040183, 0x7f040237, 0x7f040238, 
-      0x7f04024a, 0x7f04024b, 0x7f04026f, 0x7f040274, 
-      0x7f0402dd
+      0x7f04016b, 0x7f040183, 0x7f040238, 0x7f040239, 
+      0x7f04024b, 0x7f04024c, 0x7f040270, 0x7f040275, 
+      0x7f0402de
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#focusable}
@@ -27672,9 +26780,8 @@ public final class R {
      */
     public static final int SearchView_android_focusable=0;
     /**
-     * <p>
-     * @attr description
-     * An optional maximum width of the SearchView.
+     * <p>This symbol is the offset where the {@link android.R.attr#maxWidth}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -27686,9 +26793,8 @@ public final class R {
      */
     public static final int SearchView_android_maxWidth=1;
     /**
-     * <p>
-     * @attr description
-     * The input type to set on the query text field.
+     * <p>This symbol is the offset where the {@link android.R.attr#inputType}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -27734,9 +26840,8 @@ public final class R {
      */
     public static final int SearchView_android_inputType=2;
     /**
-     * <p>
-     * @attr description
-     * The IME options to set on the query text field.
+     * <p>This symbol is the offset where the {@link android.R.attr#imeOptions}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -27767,9 +26872,8 @@ public final class R {
      */
     public static final int SearchView_android_imeOptions=3;
     /**
-     * <p>
-     * @attr description
-     * Close button icon
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#closeIcon}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -27780,9 +26884,8 @@ public final class R {
      */
     public static final int SearchView_closeIcon=4;
     /**
-     * <p>
-     * @attr description
-     * Commit icon shown in the query suggestion row
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#commitIcon}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -27793,10 +26896,8 @@ public final class R {
      */
     public static final int SearchView_commitIcon=5;
     /**
-     * <p>
-     * @attr description
-     * Default query hint used when {@code queryHint} is undefined and
-     * the search view's {@code SearchableInfo} does not provide a hint.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#defaultQueryHint}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -27805,9 +26906,8 @@ public final class R {
      */
     public static final int SearchView_defaultQueryHint=6;
     /**
-     * <p>
-     * @attr description
-     * Go button icon
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#goIcon}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -27818,10 +26918,8 @@ public final class R {
      */
     public static final int SearchView_goIcon=7;
     /**
-     * <p>
-     * @attr description
-     * The default state of the SearchView. If true, it will be iconified when not in
-     * use and expanded when clicked.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#iconifiedByDefault}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -27830,9 +26928,8 @@ public final class R {
      */
     public static final int SearchView_iconifiedByDefault=8;
     /**
-     * <p>
-     * @attr description
-     * The layout to use for the search view.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#layout}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -27843,9 +26940,8 @@ public final class R {
      */
     public static final int SearchView_layout=9;
     /**
-     * <p>
-     * @attr description
-     * Background for the section containing the search query
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#queryBackground}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -27856,9 +26952,8 @@ public final class R {
      */
     public static final int SearchView_queryBackground=10;
     /**
-     * <p>
-     * @attr description
-     * An optional user-defined query hint string to be displayed in the empty query field.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#queryHint}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -27867,9 +26962,8 @@ public final class R {
      */
     public static final int SearchView_queryHint=11;
     /**
-     * <p>
-     * @attr description
-     * Search icon displayed as a text field hint
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#searchHintIcon}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -27880,9 +26974,8 @@ public final class R {
      */
     public static final int SearchView_searchHintIcon=12;
     /**
-     * <p>
-     * @attr description
-     * Search icon
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#searchIcon}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -27893,9 +26986,8 @@ public final class R {
      */
     public static final int SearchView_searchIcon=13;
     /**
-     * <p>
-     * @attr description
-     * Background for the section containing the action (e.g. voice search)
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#submitBackground}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -27906,9 +26998,8 @@ public final class R {
      */
     public static final int SearchView_submitBackground=14;
     /**
-     * <p>
-     * @attr description
-     * Layout for query suggestion rows
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#suggestionRowLayout}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -27919,9 +27010,8 @@ public final class R {
      */
     public static final int SearchView_suggestionRowLayout=15;
     /**
-     * <p>
-     * @attr description
-     * Voice button icon
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#voiceIcon}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -27947,7 +27037,7 @@ public final class R {
      * @see #SignInButton_scopeUris
      */
     public static final int[] SignInButton={
-      0x7f040061, 0x7f0400a4, 0x7f040246
+      0x7f040061, 0x7f0400a4, 0x7f040247
     };
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#buttonSize}
@@ -28021,7 +27111,7 @@ public final class R {
      * @see #Snackbar_snackbarStyle
      */
     public static final int[] Snackbar={
-      0x7f04025a, 0x7f04025b
+      0x7f04025b, 0x7f04025c
     };
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#snackbarButtonStyle}
@@ -28055,7 +27145,7 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #SnackbarLayout_android_maxWidth android:maxWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SnackbarLayout_elevation com.borisruzanov.russianwives:elevation}</code></td><td>Elevation for the action bar itself</td></tr>
+     * <tr><td><code>{@link #SnackbarLayout_elevation com.borisruzanov.russianwives:elevation}</code></td><td></td></tr>
      * <tr><td><code>{@link #SnackbarLayout_maxActionInlineWidth com.borisruzanov.russianwives:maxActionInlineWidth}</code></td><td></td></tr>
      * </table>
      * @see #SnackbarLayout_android_maxWidth
@@ -28079,9 +27169,8 @@ public final class R {
      */
     public static final int SnackbarLayout_android_maxWidth=0;
     /**
-     * <p>
-     * @attr description
-     * Elevation for the action bar itself
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#elevation}
+     * attribute's value can be found in the {@link #SnackbarLayout} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -28117,7 +27206,7 @@ public final class R {
      * @see #SpacedEditText_spacingProportion
      */
     public static final int[] SpacedEditText={
-      0x7f04025c
+      0x7f04025d
     };
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#spacingProportion}
@@ -28139,8 +27228,7 @@ public final class R {
      * <tr><td><code>{@link #Spinner_android_popupBackground android:popupBackground}</code></td><td></td></tr>
      * <tr><td><code>{@link #Spinner_android_prompt android:prompt}</code></td><td></td></tr>
      * <tr><td><code>{@link #Spinner_android_dropDownWidth android:dropDownWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Spinner_popupTheme com.borisruzanov.russianwives:popupTheme}</code></td><td>Reference to a theme that should be used to inflate popups
-     * shown by widgets in the action bar.</td></tr>
+     * <tr><td><code>{@link #Spinner_popupTheme com.borisruzanov.russianwives:popupTheme}</code></td><td></td></tr>
      * </table>
      * @see #Spinner_android_entries
      * @see #Spinner_android_popupBackground
@@ -28150,12 +27238,11 @@ public final class R {
      */
     public static final int[] Spinner={
       0x010100b2, 0x01010176, 0x0101017b, 0x01010262, 
-      0x7f040230
+      0x7f040231
     };
     /**
-     * <p>
-     * @attr description
-     * Reference to an array resource that will populate the Spinner.
+     * <p>This symbol is the offset where the {@link android.R.attr#entries}
+     * attribute's value can be found in the {@link #Spinner} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -28166,9 +27253,8 @@ public final class R {
      */
     public static final int Spinner_android_entries=0;
     /**
-     * <p>
-     * @attr description
-     * Background drawable to use for the dropdown in spinnerMode="dropdown".
+     * <p>This symbol is the offset where the {@link android.R.attr#popupBackground}
+     * attribute's value can be found in the {@link #Spinner} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -28182,9 +27268,8 @@ public final class R {
      */
     public static final int Spinner_android_popupBackground=1;
     /**
-     * <p>
-     * @attr description
-     * The prompt to display when the spinner's dialog is shown.
+     * <p>This symbol is the offset where the {@link android.R.attr#prompt}
+     * attribute's value can be found in the {@link #Spinner} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -28195,9 +27280,8 @@ public final class R {
      */
     public static final int Spinner_android_prompt=2;
     /**
-     * <p>
-     * @attr description
-     * Width of the dropdown in spinnerMode="dropdown".
+     * <p>This symbol is the offset where the {@link android.R.attr#dropDownWidth}
+     * attribute's value can be found in the {@link #Spinner} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -28219,9 +27303,8 @@ public final class R {
      */
     public static final int Spinner_android_dropDownWidth=3;
     /**
-     * <p>
-     * @attr description
-     * Theme to use for the drop-down or dialog popup window.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#popupTheme}
+     * attribute's value can be found in the {@link #Spinner} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -28297,11 +27380,8 @@ public final class R {
       0x0101030c, 0x0101030d
     };
     /**
-     * <p>
-     * @attr description
-     * Enables or disables dithering of the bitmap if the bitmap does not have the
-     * same pixel configuration as the screen (for instance: a ARGB 8888 bitmap with
-     * an RGB 565 screen).
+     * <p>This symbol is the offset where the {@link android.R.attr#dither}
+     * attribute's value can be found in the {@link #StateListDrawable} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -28310,9 +27390,8 @@ public final class R {
      */
     public static final int StateListDrawable_android_dither=0;
     /**
-     * <p>
-     * @attr description
-     * Indicates whether the drawable should be initially visible.
+     * <p>This symbol is the offset where the {@link android.R.attr#visible}
+     * attribute's value can be found in the {@link #StateListDrawable} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -28321,14 +27400,8 @@ public final class R {
      */
     public static final int StateListDrawable_android_visible=1;
     /**
-     * <p>
-     * @attr description
-     * If true, allows the drawable's padding to change based on the
-     * current state that is selected.  If false, the padding will
-     * stay the same (based on the maximum padding of all the states).
-     * Enabling this feature requires that the owner of the drawable
-     * deal with performing layout when the state changes, which is
-     * often not supported.
+     * <p>This symbol is the offset where the {@link android.R.attr#variablePadding}
+     * attribute's value can be found in the {@link #StateListDrawable} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -28337,12 +27410,8 @@ public final class R {
      */
     public static final int StateListDrawable_android_variablePadding=2;
     /**
-     * <p>
-     * @attr description
-     * If true, the drawable's reported internal size will remain
-     * constant as the state changes; the size is the maximum of all
-     * of the states.  If false, the size will vary based on the
-     * current state.
+     * <p>This symbol is the offset where the {@link android.R.attr#constantSize}
+     * attribute's value can be found in the {@link #StateListDrawable} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -28351,9 +27420,8 @@ public final class R {
      */
     public static final int StateListDrawable_android_constantSize=3;
     /**
-     * <p>
-     * @attr description
-     * Amount of time (in milliseconds) to fade in a new state drawable.
+     * <p>This symbol is the offset where the {@link android.R.attr#enterFadeDuration}
+     * attribute's value can be found in the {@link #StateListDrawable} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
@@ -28361,9 +27429,8 @@ public final class R {
      */
     public static final int StateListDrawable_android_enterFadeDuration=4;
     /**
-     * <p>
-     * @attr description
-     * Amount of time (in milliseconds) to fade out an old state drawable.
+     * <p>This symbol is the offset where the {@link android.R.attr#exitFadeDuration}
+     * attribute's value can be found in the {@link #StateListDrawable} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
@@ -28385,10 +27452,8 @@ public final class R {
       0x01010199
     };
     /**
-     * <p>
-     * @attr description
-     * Reference to a drawable resource to use for the state. If not
-     * given, the drawable must be defined by the first child tag.
+     * <p>This symbol is the offset where the {@link android.R.attr#drawable}
+     * attribute's value can be found in the {@link #StateListDrawableItem} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -28502,17 +27567,17 @@ public final class R {
      * <tr><td><code>{@link #SwitchCompat_android_textOn android:textOn}</code></td><td></td></tr>
      * <tr><td><code>{@link #SwitchCompat_android_textOff android:textOff}</code></td><td></td></tr>
      * <tr><td><code>{@link #SwitchCompat_android_thumb android:thumb}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SwitchCompat_showText com.borisruzanov.russianwives:showText}</code></td><td>Whether to draw on/off text.</td></tr>
-     * <tr><td><code>{@link #SwitchCompat_splitTrack com.borisruzanov.russianwives:splitTrack}</code></td><td>Whether to split the track and leave a gap for the thumb drawable.</td></tr>
-     * <tr><td><code>{@link #SwitchCompat_switchMinWidth com.borisruzanov.russianwives:switchMinWidth}</code></td><td>Minimum width for the switch component</td></tr>
-     * <tr><td><code>{@link #SwitchCompat_switchPadding com.borisruzanov.russianwives:switchPadding}</code></td><td>Minimum space between the switch and caption text</td></tr>
-     * <tr><td><code>{@link #SwitchCompat_switchTextAppearance com.borisruzanov.russianwives:switchTextAppearance}</code></td><td>TextAppearance style for text displayed on the switch thumb.</td></tr>
-     * <tr><td><code>{@link #SwitchCompat_thumbTextPadding com.borisruzanov.russianwives:thumbTextPadding}</code></td><td>Amount of padding on either side of text within the switch thumb.</td></tr>
-     * <tr><td><code>{@link #SwitchCompat_thumbTint com.borisruzanov.russianwives:thumbTint}</code></td><td>Tint to apply to the thumb drawable.</td></tr>
-     * <tr><td><code>{@link #SwitchCompat_thumbTintMode com.borisruzanov.russianwives:thumbTintMode}</code></td><td>Blending mode used to apply the thumb tint.</td></tr>
-     * <tr><td><code>{@link #SwitchCompat_track com.borisruzanov.russianwives:track}</code></td><td>Drawable to use as the "track" that the switch thumb slides within.</td></tr>
-     * <tr><td><code>{@link #SwitchCompat_trackTint com.borisruzanov.russianwives:trackTint}</code></td><td>Tint to apply to the track.</td></tr>
-     * <tr><td><code>{@link #SwitchCompat_trackTintMode com.borisruzanov.russianwives:trackTintMode}</code></td><td>Blending mode used to apply the track tint.</td></tr>
+     * <tr><td><code>{@link #SwitchCompat_showText com.borisruzanov.russianwives:showText}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_splitTrack com.borisruzanov.russianwives:splitTrack}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_switchMinWidth com.borisruzanov.russianwives:switchMinWidth}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_switchPadding com.borisruzanov.russianwives:switchPadding}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_switchTextAppearance com.borisruzanov.russianwives:switchTextAppearance}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_thumbTextPadding com.borisruzanov.russianwives:thumbTextPadding}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_thumbTint com.borisruzanov.russianwives:thumbTint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_thumbTintMode com.borisruzanov.russianwives:thumbTintMode}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_track com.borisruzanov.russianwives:track}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_trackTint com.borisruzanov.russianwives:trackTint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_trackTintMode com.borisruzanov.russianwives:trackTintMode}</code></td><td></td></tr>
      * </table>
      * @see #SwitchCompat_android_textOn
      * @see #SwitchCompat_android_textOff
@@ -28530,15 +27595,14 @@ public final class R {
      * @see #SwitchCompat_trackTintMode
      */
     public static final int[] SwitchCompat={
-      0x01010124, 0x01010125, 0x01010142, 0x7f040254, 
-      0x7f040261, 0x7f040275, 0x7f040276, 0x7f040278, 
-      0x7f0402b4, 0x7f0402b5, 0x7f0402b6, 0x7f0402d0, 
-      0x7f0402d1, 0x7f0402d2
+      0x01010124, 0x01010125, 0x01010142, 0x7f040255, 
+      0x7f040262, 0x7f040276, 0x7f040277, 0x7f040279, 
+      0x7f0402b5, 0x7f0402b6, 0x7f0402b7, 0x7f0402d1, 
+      0x7f0402d2, 0x7f0402d3
     };
     /**
-     * <p>
-     * @attr description
-     * Text to use when the switch is in the checked/"on" state.
+     * <p>This symbol is the offset where the {@link android.R.attr#textOn}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -28547,9 +27611,8 @@ public final class R {
      */
     public static final int SwitchCompat_android_textOn=0;
     /**
-     * <p>
-     * @attr description
-     * Text to use when the switch is in the unchecked/"off" state.
+     * <p>This symbol is the offset where the {@link android.R.attr#textOff}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -28558,9 +27621,8 @@ public final class R {
      */
     public static final int SwitchCompat_android_textOff=1;
     /**
-     * <p>
-     * @attr description
-     * Drawable to use as the "thumb" that switches back and forth.
+     * <p>This symbol is the offset where the {@link android.R.attr#thumb}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -28571,9 +27633,8 @@ public final class R {
      */
     public static final int SwitchCompat_android_thumb=2;
     /**
-     * <p>
-     * @attr description
-     * Whether to draw on/off text.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#showText}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -28582,9 +27643,8 @@ public final class R {
      */
     public static final int SwitchCompat_showText=3;
     /**
-     * <p>
-     * @attr description
-     * Whether to split the track and leave a gap for the thumb drawable.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#splitTrack}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -28593,9 +27653,8 @@ public final class R {
      */
     public static final int SwitchCompat_splitTrack=4;
     /**
-     * <p>
-     * @attr description
-     * Minimum width for the switch component
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#switchMinWidth}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -28607,9 +27666,8 @@ public final class R {
      */
     public static final int SwitchCompat_switchMinWidth=5;
     /**
-     * <p>
-     * @attr description
-     * Minimum space between the switch and caption text
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#switchPadding}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -28621,9 +27679,8 @@ public final class R {
      */
     public static final int SwitchCompat_switchPadding=6;
     /**
-     * <p>
-     * @attr description
-     * TextAppearance style for text displayed on the switch thumb.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#switchTextAppearance}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -28634,9 +27691,8 @@ public final class R {
      */
     public static final int SwitchCompat_switchTextAppearance=7;
     /**
-     * <p>
-     * @attr description
-     * Amount of padding on either side of text within the switch thumb.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#thumbTextPadding}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -28648,9 +27704,8 @@ public final class R {
      */
     public static final int SwitchCompat_thumbTextPadding=8;
     /**
-     * <p>
-     * @attr description
-     * Tint to apply to the thumb drawable.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#thumbTint}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -28660,9 +27715,8 @@ public final class R {
      */
     public static final int SwitchCompat_thumbTint=9;
     /**
-     * <p>
-     * @attr description
-     * Blending mode used to apply the thumb tint.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#thumbTintMode}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -28670,26 +27724,20 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and drawable color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      *
      * @attr name com.borisruzanov.russianwives:thumbTintMode
      */
     public static final int SwitchCompat_thumbTintMode=10;
     /**
-     * <p>
-     * @attr description
-     * Drawable to use as the "track" that the switch thumb slides within.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#track}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -28700,9 +27748,8 @@ public final class R {
      */
     public static final int SwitchCompat_track=11;
     /**
-     * <p>
-     * @attr description
-     * Tint to apply to the track.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#trackTint}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -28712,9 +27759,8 @@ public final class R {
      */
     public static final int SwitchCompat_trackTint=12;
     /**
-     * <p>
-     * @attr description
-     * Blending mode used to apply the track tint.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#trackTintMode}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -28722,17 +27768,12 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and drawable color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      *
      * @attr name com.borisruzanov.russianwives:trackTintMode
@@ -28850,13 +27891,13 @@ public final class R {
      * @see #TabLayout_tabUnboundedRipple
      */
     public static final int[] TabLayout={
-      0x7f040279, 0x7f04027a, 0x7f04027b, 0x7f04027c, 
-      0x7f04027d, 0x7f04027e, 0x7f04027f, 0x7f040280, 
-      0x7f040281, 0x7f040282, 0x7f040283, 0x7f040284, 
-      0x7f040285, 0x7f040286, 0x7f040287, 0x7f040288, 
-      0x7f040289, 0x7f04028a, 0x7f04028b, 0x7f04028c, 
-      0x7f04028d, 0x7f04028e, 0x7f040290, 0x7f040291, 
-      0x7f040292
+      0x7f04027a, 0x7f04027b, 0x7f04027c, 0x7f04027d, 
+      0x7f04027e, 0x7f04027f, 0x7f040280, 0x7f040281, 
+      0x7f040282, 0x7f040283, 0x7f040284, 0x7f040285, 
+      0x7f040286, 0x7f040287, 0x7f040288, 0x7f040289, 
+      0x7f04028a, 0x7f04028b, 0x7f04028c, 0x7f04028d, 
+      0x7f04028e, 0x7f04028f, 0x7f040291, 0x7f040292, 
+      0x7f040293
     };
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#tabBackground}
@@ -29197,8 +28238,8 @@ public final class R {
      * <tr><td><code>{@link #TextAppearance_android_shadowDy android:shadowDy}</code></td><td></td></tr>
      * <tr><td><code>{@link #TextAppearance_android_shadowRadius android:shadowRadius}</code></td><td></td></tr>
      * <tr><td><code>{@link #TextAppearance_android_fontFamily android:fontFamily}</code></td><td></td></tr>
-     * <tr><td><code>{@link #TextAppearance_fontFamily com.borisruzanov.russianwives:fontFamily}</code></td><td>The attribute for the font family.</td></tr>
-     * <tr><td><code>{@link #TextAppearance_textAllCaps com.borisruzanov.russianwives:textAllCaps}</code></td><td>Present the text in ALL CAPS.</td></tr>
+     * <tr><td><code>{@link #TextAppearance_fontFamily com.borisruzanov.russianwives:fontFamily}</code></td><td></td></tr>
+     * <tr><td><code>{@link #TextAppearance_textAllCaps com.borisruzanov.russianwives:textAllCaps}</code></td><td></td></tr>
      * </table>
      * @see #TextAppearance_android_textSize
      * @see #TextAppearance_android_typeface
@@ -29218,7 +28259,7 @@ public final class R {
       0x01010095, 0x01010096, 0x01010097, 0x01010098, 
       0x0101009a, 0x0101009b, 0x01010161, 0x01010162, 
       0x01010163, 0x01010164, 0x010103ac, 0x7f040147, 
-      0x7f040297
+      0x7f040298
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#textSize}
@@ -29364,9 +28405,8 @@ public final class R {
      */
     public static final int TextAppearance_android_fontFamily=10;
     /**
-     * <p>
-     * @attr description
-     * The attribute for the font family.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#fontFamily}
+     * attribute's value can be found in the {@link #TextAppearance} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -29375,9 +28415,8 @@ public final class R {
      */
     public static final int TextAppearance_fontFamily=11;
     /**
-     * <p>
-     * @attr description
-     * Present the text in ALL CAPS. This may use a small-caps form when available.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#textAllCaps}
+     * attribute's value can be found in the {@link #TextAppearance} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -29460,8 +28499,8 @@ public final class R {
       0x7f040055, 0x7f040056, 0x7f040057, 0x7f0400cb, 
       0x7f0400cc, 0x7f0400cd, 0x7f0400ce, 0x7f04011b, 
       0x7f04011c, 0x7f040157, 0x7f040158, 0x7f040159, 
-      0x7f04015d, 0x7f04015e, 0x7f04015f, 0x7f04021f, 
-      0x7f040220, 0x7f040221, 0x7f040222, 0x7f040223
+      0x7f04015d, 0x7f04015e, 0x7f04015f, 0x7f040220, 
+      0x7f040221, 0x7f040222, 0x7f040223, 0x7f040224
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#textColorHint}
@@ -29858,39 +28897,32 @@ public final class R {
      * <tr><td><code>{@link #Toolbar_android_gravity android:gravity}</code></td><td></td></tr>
      * <tr><td><code>{@link #Toolbar_android_minHeight android:minHeight}</code></td><td></td></tr>
      * <tr><td><code>{@link #Toolbar_buttonGravity com.borisruzanov.russianwives:buttonGravity}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_collapseContentDescription com.borisruzanov.russianwives:collapseContentDescription}</code></td><td>Text to set as the content description for the collapse button.</td></tr>
-     * <tr><td><code>{@link #Toolbar_collapseIcon com.borisruzanov.russianwives:collapseIcon}</code></td><td>Icon drawable to use for the collapse button.</td></tr>
-     * <tr><td><code>{@link #Toolbar_contentInsetEnd com.borisruzanov.russianwives:contentInsetEnd}</code></td><td>Minimum inset for content views within a bar.</td></tr>
-     * <tr><td><code>{@link #Toolbar_contentInsetEndWithActions com.borisruzanov.russianwives:contentInsetEndWithActions}</code></td><td>Minimum inset for content views within a bar when actions from a menu
-     * are present.</td></tr>
-     * <tr><td><code>{@link #Toolbar_contentInsetLeft com.borisruzanov.russianwives:contentInsetLeft}</code></td><td>Minimum inset for content views within a bar.</td></tr>
-     * <tr><td><code>{@link #Toolbar_contentInsetRight com.borisruzanov.russianwives:contentInsetRight}</code></td><td>Minimum inset for content views within a bar.</td></tr>
-     * <tr><td><code>{@link #Toolbar_contentInsetStart com.borisruzanov.russianwives:contentInsetStart}</code></td><td>Minimum inset for content views within a bar.</td></tr>
-     * <tr><td><code>{@link #Toolbar_contentInsetStartWithNavigation com.borisruzanov.russianwives:contentInsetStartWithNavigation}</code></td><td>Minimum inset for content views within a bar when a navigation button
-     * is present, such as the Up button.</td></tr>
-     * <tr><td><code>{@link #Toolbar_logo com.borisruzanov.russianwives:logo}</code></td><td>Specifies the drawable used for the application logo.</td></tr>
-     * <tr><td><code>{@link #Toolbar_logoDescription com.borisruzanov.russianwives:logoDescription}</code></td><td>A content description string to describe the appearance of the
-     * associated logo image.</td></tr>
+     * <tr><td><code>{@link #Toolbar_collapseContentDescription com.borisruzanov.russianwives:collapseContentDescription}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_collapseIcon com.borisruzanov.russianwives:collapseIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_contentInsetEnd com.borisruzanov.russianwives:contentInsetEnd}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_contentInsetEndWithActions com.borisruzanov.russianwives:contentInsetEndWithActions}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_contentInsetLeft com.borisruzanov.russianwives:contentInsetLeft}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_contentInsetRight com.borisruzanov.russianwives:contentInsetRight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_contentInsetStart com.borisruzanov.russianwives:contentInsetStart}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_contentInsetStartWithNavigation com.borisruzanov.russianwives:contentInsetStartWithNavigation}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_logo com.borisruzanov.russianwives:logo}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_logoDescription com.borisruzanov.russianwives:logoDescription}</code></td><td></td></tr>
      * <tr><td><code>{@link #Toolbar_maxButtonHeight com.borisruzanov.russianwives:maxButtonHeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_navigationContentDescription com.borisruzanov.russianwives:navigationContentDescription}</code></td><td>Text to set as the content description for the navigation button
-     * located at the start of the toolbar.</td></tr>
-     * <tr><td><code>{@link #Toolbar_navigationIcon com.borisruzanov.russianwives:navigationIcon}</code></td><td>Icon drawable to use for the navigation button located at
-     * the start of the toolbar.</td></tr>
-     * <tr><td><code>{@link #Toolbar_popupTheme com.borisruzanov.russianwives:popupTheme}</code></td><td>Reference to a theme that should be used to inflate popups
-     * shown by widgets in the action bar.</td></tr>
-     * <tr><td><code>{@link #Toolbar_subtitle com.borisruzanov.russianwives:subtitle}</code></td><td>Specifies subtitle text used for navigationMode="normal"</td></tr>
+     * <tr><td><code>{@link #Toolbar_navigationContentDescription com.borisruzanov.russianwives:navigationContentDescription}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_navigationIcon com.borisruzanov.russianwives:navigationIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_popupTheme com.borisruzanov.russianwives:popupTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_subtitle com.borisruzanov.russianwives:subtitle}</code></td><td></td></tr>
      * <tr><td><code>{@link #Toolbar_subtitleTextAppearance com.borisruzanov.russianwives:subtitleTextAppearance}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_subtitleTextColor com.borisruzanov.russianwives:subtitleTextColor}</code></td><td>A color to apply to the subtitle string.</td></tr>
+     * <tr><td><code>{@link #Toolbar_subtitleTextColor com.borisruzanov.russianwives:subtitleTextColor}</code></td><td></td></tr>
      * <tr><td><code>{@link #Toolbar_title com.borisruzanov.russianwives:title}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_titleMargin com.borisruzanov.russianwives:titleMargin}</code></td><td>Specifies extra space on the left, start, right and end sides
-     * of the toolbar's title.</td></tr>
-     * <tr><td><code>{@link #Toolbar_titleMarginBottom com.borisruzanov.russianwives:titleMarginBottom}</code></td><td>Specifies extra space on the bottom side of the toolbar's title.</td></tr>
-     * <tr><td><code>{@link #Toolbar_titleMarginEnd com.borisruzanov.russianwives:titleMarginEnd}</code></td><td>Specifies extra space on the end side of the toolbar's title.</td></tr>
-     * <tr><td><code>{@link #Toolbar_titleMarginStart com.borisruzanov.russianwives:titleMarginStart}</code></td><td>Specifies extra space on the start side of the toolbar's title.</td></tr>
-     * <tr><td><code>{@link #Toolbar_titleMarginTop com.borisruzanov.russianwives:titleMarginTop}</code></td><td>Specifies extra space on the top side of the toolbar's title.</td></tr>
-     * <tr><td><code>{@link #Toolbar_titleMargins com.borisruzanov.russianwives:titleMargins}</code></td><td>{@deprecated Use titleMargin}</td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMargin com.borisruzanov.russianwives:titleMargin}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMarginBottom com.borisruzanov.russianwives:titleMarginBottom}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMarginEnd com.borisruzanov.russianwives:titleMarginEnd}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMarginStart com.borisruzanov.russianwives:titleMarginStart}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMarginTop com.borisruzanov.russianwives:titleMarginTop}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMargins com.borisruzanov.russianwives:titleMargins}</code></td><td></td></tr>
      * <tr><td><code>{@link #Toolbar_titleTextAppearance com.borisruzanov.russianwives:titleTextAppearance}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_titleTextColor com.borisruzanov.russianwives:titleTextColor}</code></td><td>A color to apply to the title string.</td></tr>
+     * <tr><td><code>{@link #Toolbar_titleTextColor com.borisruzanov.russianwives:titleTextColor}</code></td><td></td></tr>
      * </table>
      * @see #Toolbar_android_gravity
      * @see #Toolbar_android_minHeight
@@ -29922,16 +28954,15 @@ public final class R {
      * @see #Toolbar_titleTextAppearance
      * @see #Toolbar_titleTextColor
      */
-    @Deprecated
     public static final int[] Toolbar={
       0x010100af, 0x01010140, 0x7f04005e, 0x7f040096, 
       0x7f040097, 0x7f0400bb, 0x7f0400bc, 0x7f0400bd, 
       0x7f0400be, 0x7f0400bf, 0x7f0400c0, 0x7f0401d2, 
       0x7f0401d3, 0x7f0401e5, 0x7f04020b, 0x7f04020c, 
-      0x7f040230, 0x7f040270, 0x7f040271, 0x7f040272, 
-      0x7f0402bc, 0x7f0402be, 0x7f0402bf, 0x7f0402c0, 
-      0x7f0402c1, 0x7f0402c2, 0x7f0402c3, 0x7f0402c4, 
-      0x7f0402c5
+      0x7f040231, 0x7f040271, 0x7f040272, 0x7f040273, 
+      0x7f0402bd, 0x7f0402bf, 0x7f0402c0, 0x7f0402c1, 
+      0x7f0402c2, 0x7f0402c3, 0x7f0402c4, 0x7f0402c5, 
+      0x7f0402c6
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#gravity}
@@ -29985,17 +29016,16 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td>Push object to the bottom of its container, not changing its size.</td></tr>
-     * <tr><td>top</td><td>30</td><td>Push object to the top of its container, not changing its size.</td></tr>
+     * <tr><td>bottom</td><td>50</td><td></td></tr>
+     * <tr><td>top</td><td>30</td><td></td></tr>
      * </table>
      *
      * @attr name com.borisruzanov.russianwives:buttonGravity
      */
     public static final int Toolbar_buttonGravity=2;
     /**
-     * <p>
-     * @attr description
-     * Text to set as the content description for the collapse button.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#collapseContentDescription}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -30004,9 +29034,8 @@ public final class R {
      */
     public static final int Toolbar_collapseContentDescription=3;
     /**
-     * <p>
-     * @attr description
-     * Icon drawable to use for the collapse button.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#collapseIcon}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -30017,10 +29046,8 @@ public final class R {
      */
     public static final int Toolbar_collapseIcon=4;
     /**
-     * <p>
-     * @attr description
-     * Minimum inset for content views within a bar. Navigation buttons and
-     * menu views are excepted. Only valid for some themes and configurations.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#contentInsetEnd}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -30032,10 +29059,8 @@ public final class R {
      */
     public static final int Toolbar_contentInsetEnd=5;
     /**
-     * <p>
-     * @attr description
-     * Minimum inset for content views within a bar when actions from a menu
-     * are present. Only valid for some themes and configurations.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#contentInsetEndWithActions}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -30047,10 +29072,8 @@ public final class R {
      */
     public static final int Toolbar_contentInsetEndWithActions=6;
     /**
-     * <p>
-     * @attr description
-     * Minimum inset for content views within a bar. Navigation buttons and
-     * menu views are excepted. Only valid for some themes and configurations.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#contentInsetLeft}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -30062,10 +29085,8 @@ public final class R {
      */
     public static final int Toolbar_contentInsetLeft=7;
     /**
-     * <p>
-     * @attr description
-     * Minimum inset for content views within a bar. Navigation buttons and
-     * menu views are excepted. Only valid for some themes and configurations.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#contentInsetRight}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -30077,10 +29098,8 @@ public final class R {
      */
     public static final int Toolbar_contentInsetRight=8;
     /**
-     * <p>
-     * @attr description
-     * Minimum inset for content views within a bar. Navigation buttons and
-     * menu views are excepted. Only valid for some themes and configurations.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#contentInsetStart}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -30092,10 +29111,8 @@ public final class R {
      */
     public static final int Toolbar_contentInsetStart=9;
     /**
-     * <p>
-     * @attr description
-     * Minimum inset for content views within a bar when a navigation button
-     * is present, such as the Up button. Only valid for some themes and configurations.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#contentInsetStartWithNavigation}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -30107,10 +29124,8 @@ public final class R {
      */
     public static final int Toolbar_contentInsetStartWithNavigation=10;
     /**
-     * <p>
-     * @attr description
-     * Drawable to set as the logo that appears at the starting side of
-     * the Toolbar, just after the navigation button.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#logo}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -30121,10 +29136,8 @@ public final class R {
      */
     public static final int Toolbar_logo=11;
     /**
-     * <p>
-     * @attr description
-     * A content description string to describe the appearance of the
-     * associated logo image.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#logoDescription}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -30146,10 +29159,8 @@ public final class R {
      */
     public static final int Toolbar_maxButtonHeight=13;
     /**
-     * <p>
-     * @attr description
-     * Text to set as the content description for the navigation button
-     * located at the start of the toolbar.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#navigationContentDescription}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -30158,10 +29169,8 @@ public final class R {
      */
     public static final int Toolbar_navigationContentDescription=14;
     /**
-     * <p>
-     * @attr description
-     * Icon drawable to use for the navigation button located at
-     * the start of the toolbar.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#navigationIcon}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -30172,10 +29181,8 @@ public final class R {
      */
     public static final int Toolbar_navigationIcon=15;
     /**
-     * <p>
-     * @attr description
-     * Reference to a theme that should be used to inflate popups
-     * shown by widgets in the toolbar.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#popupTheme}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -30186,9 +29193,8 @@ public final class R {
      */
     public static final int Toolbar_popupTheme=16;
     /**
-     * <p>
-     * @attr description
-     * Specifies subtitle text used for navigationMode="normal"
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#subtitle}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -30209,9 +29215,8 @@ public final class R {
      */
     public static final int Toolbar_subtitleTextAppearance=18;
     /**
-     * <p>
-     * @attr description
-     * A color to apply to the subtitle string.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#subtitleTextColor}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -30231,10 +29236,8 @@ public final class R {
      */
     public static final int Toolbar_title=20;
     /**
-     * <p>
-     * @attr description
-     * Specifies extra space on the left, start, right and end sides
-     * of the toolbar's title. Margin values should be positive.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#titleMargin}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -30246,11 +29249,8 @@ public final class R {
      */
     public static final int Toolbar_titleMargin=21;
     /**
-     * <p>
-     * @attr description
-     * Specifies extra space on the bottom side of the toolbar's title.
-     * If both this attribute and titleMargin are specified, then this
-     * attribute takes precedence. Margin values should be positive.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#titleMarginBottom}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -30262,11 +29262,8 @@ public final class R {
      */
     public static final int Toolbar_titleMarginBottom=22;
     /**
-     * <p>
-     * @attr description
-     * Specifies extra space on the end side of the toolbar's title.
-     * If both this attribute and titleMargin are specified, then this
-     * attribute takes precedence. Margin values should be positive.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#titleMarginEnd}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -30278,11 +29275,8 @@ public final class R {
      */
     public static final int Toolbar_titleMarginEnd=23;
     /**
-     * <p>
-     * @attr description
-     * Specifies extra space on the start side of the toolbar's title.
-     * If both this attribute and titleMargin are specified, then this
-     * attribute takes precedence. Margin values should be positive.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#titleMarginStart}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -30294,11 +29288,8 @@ public final class R {
      */
     public static final int Toolbar_titleMarginStart=24;
     /**
-     * <p>
-     * @attr description
-     * Specifies extra space on the top side of the toolbar's title.
-     * If both this attribute and titleMargin are specified, then this
-     * attribute takes precedence. Margin values should be positive.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#titleMarginTop}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -30310,9 +29301,8 @@ public final class R {
      */
     public static final int Toolbar_titleMarginTop=25;
     /**
-     * <p>
-     * @attr description
-     * {@deprecated Use titleMargin}
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#titleMargins}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -30322,7 +29312,6 @@ public final class R {
      *
      * @attr name com.borisruzanov.russianwives:titleMargins
      */
-    @Deprecated
     public static final int Toolbar_titleMargins=26;
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#titleTextAppearance}
@@ -30337,9 +29326,8 @@ public final class R {
      */
     public static final int Toolbar_titleTextAppearance=27;
     /**
-     * <p>
-     * @attr description
-     * A color to apply to the title string.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#titleTextColor}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -30388,8 +29376,8 @@ public final class R {
     public static final int[] Transform={
       0x01010320, 0x01010321, 0x01010322, 0x01010323, 
       0x01010324, 0x01010325, 0x01010326, 0x01010327, 
-      0x01010328, 0x010103fa, 0x01010440, 0x7f04022b, 
-      0x7f04022c, 0x7f04022d
+      0x01010328, 0x010103fa, 0x01010440, 0x7f04022c, 
+      0x7f04022d, 0x7f04022e
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#transformPivotX}
@@ -30591,8 +29579,8 @@ public final class R {
      */
     public static final int[] Transition={
       0x010100d0, 0x7f040039, 0x7f0400b5, 0x7f0400b6, 
-      0x7f040114, 0x7f040185, 0x7f0401f5, 0x7f040224, 
-      0x7f040264, 0x7f0402d3
+      0x7f040114, 0x7f040185, 0x7f0401f5, 0x7f040225, 
+      0x7f040265, 0x7f0402d4
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#id}
@@ -30760,8 +29748,8 @@ public final class R {
      * @see #Variant_region_widthMoreThan
      */
     public static final int[] Variant={
-      0x7f0400b8, 0x7f04023d, 0x7f04023e, 0x7f04023f, 
-      0x7f040240
+      0x7f0400b8, 0x7f04023e, 0x7f04023f, 0x7f040240, 
+      0x7f040241
     };
     /**
      * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#constraints}
@@ -30836,9 +29824,9 @@ public final class R {
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #View_android_theme android:theme}</code></td><td></td></tr>
      * <tr><td><code>{@link #View_android_focusable android:focusable}</code></td><td></td></tr>
-     * <tr><td><code>{@link #View_paddingEnd com.borisruzanov.russianwives:paddingEnd}</code></td><td>Sets the padding, in pixels, of the end edge; see {@link android.R.attr#padding}.</td></tr>
-     * <tr><td><code>{@link #View_paddingStart com.borisruzanov.russianwives:paddingStart}</code></td><td>Sets the padding, in pixels, of the start edge; see {@link android.R.attr#padding}.</td></tr>
-     * <tr><td><code>{@link #View_theme com.borisruzanov.russianwives:theme}</code></td><td>Deprecated.</td></tr>
+     * <tr><td><code>{@link #View_paddingEnd com.borisruzanov.russianwives:paddingEnd}</code></td><td></td></tr>
+     * <tr><td><code>{@link #View_paddingStart com.borisruzanov.russianwives:paddingStart}</code></td><td></td></tr>
+     * <tr><td><code>{@link #View_theme com.borisruzanov.russianwives:theme}</code></td><td></td></tr>
      * </table>
      * @see #View_android_theme
      * @see #View_android_focusable
@@ -30847,15 +29835,12 @@ public final class R {
      * @see #View_theme
      */
     public static final int[] View={
-      0x01010000, 0x010100da, 0x7f040219, 0x7f04021a, 
-      0x7f0402b2
+      0x01010000, 0x010100da, 0x7f04021a, 0x7f04021b, 
+      0x7f0402b3
     };
     /**
-     * <p>
-     * @attr description
-     * Specifies a theme override for a view. When a theme override is set, the
-     * view will be inflated using a {@link android.content.Context} themed with
-     * the specified resource.
+     * <p>This symbol is the offset where the {@link android.R.attr#theme}
+     * attribute's value can be found in the {@link #View} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -30866,14 +29851,8 @@ public final class R {
      */
     public static final int View_android_theme=0;
     /**
-     * <p>
-     * @attr description
-     * Boolean that controls whether a view can take focus.  By default the user can not
-     * move focus to a view; by setting this attribute to true the view is
-     * allowed to take focus.  This value does not impact the behavior of
-     * directly calling {@link android.view.View#requestFocus}, which will
-     * always request focus regardless of this view.  It only impacts where
-     * focus navigation will try to move focus.
+     * <p>This symbol is the offset where the {@link android.R.attr#focusable}
+     * attribute's value can be found in the {@link #View} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -30890,9 +29869,8 @@ public final class R {
      */
     public static final int View_android_focusable=1;
     /**
-     * <p>
-     * @attr description
-     * Sets the padding, in pixels, of the end edge; see {@link android.R.attr#padding}.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#paddingEnd}
+     * attribute's value can be found in the {@link #View} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -30904,9 +29882,8 @@ public final class R {
      */
     public static final int View_paddingEnd=2;
     /**
-     * <p>
-     * @attr description
-     * Sets the padding, in pixels, of the start edge; see {@link android.R.attr#padding}.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#paddingStart}
+     * attribute's value can be found in the {@link #View} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -30918,9 +29895,8 @@ public final class R {
      */
     public static final int View_paddingStart=3;
     /**
-     * <p>
-     * @attr description
-     * Deprecated.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#theme}
+     * attribute's value can be found in the {@link #View} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -30938,8 +29914,8 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #ViewBackgroundHelper_android_background android:background}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ViewBackgroundHelper_backgroundTint com.borisruzanov.russianwives:backgroundTint}</code></td><td>Tint to apply to the background.</td></tr>
-     * <tr><td><code>{@link #ViewBackgroundHelper_backgroundTintMode com.borisruzanov.russianwives:backgroundTintMode}</code></td><td>Blending mode used to apply the background tint.</td></tr>
+     * <tr><td><code>{@link #ViewBackgroundHelper_backgroundTint com.borisruzanov.russianwives:backgroundTint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ViewBackgroundHelper_backgroundTintMode com.borisruzanov.russianwives:backgroundTintMode}</code></td><td></td></tr>
      * </table>
      * @see #ViewBackgroundHelper_android_background
      * @see #ViewBackgroundHelper_backgroundTint
@@ -30964,9 +29940,8 @@ public final class R {
      */
     public static final int ViewBackgroundHelper_android_background=0;
     /**
-     * <p>
-     * @attr description
-     * Tint to apply to the background.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#backgroundTint}
+     * attribute's value can be found in the {@link #ViewBackgroundHelper} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -30976,9 +29951,8 @@ public final class R {
      */
     public static final int ViewBackgroundHelper_backgroundTint=1;
     /**
-     * <p>
-     * @attr description
-     * Blending mode used to apply the background tint.
+     * <p>This symbol is the offset where the {@link com.borisruzanov.russianwives.R.attr#backgroundTintMode}
+     * attribute's value can be found in the {@link #ViewBackgroundHelper} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -30986,17 +29960,12 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      *
      * @attr name com.borisruzanov.russianwives:backgroundTintMode
@@ -31033,11 +30002,8 @@ public final class R {
      */
     public static final int ViewStubCompat_android_id=0;
     /**
-     * <p>
-     * @attr description
-     * Supply an identifier for the layout resource to inflate when the ViewStub
-     * becomes visible or when forced to do so. The layout resource must be a
-     * valid reference to a layout.
+     * <p>This symbol is the offset where the {@link android.R.attr#layout}
+     * attribute's value can be found in the {@link #ViewStubCompat} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -31048,9 +30014,8 @@ public final class R {
      */
     public static final int ViewStubCompat_android_layout=1;
     /**
-     * <p>
-     * @attr description
-     * Overrides the id of the inflated View with this value.
+     * <p>This symbol is the offset where the {@link android.R.attr#inflatedId}
+     * attribute's value can be found in the {@link #ViewStubCompat} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme

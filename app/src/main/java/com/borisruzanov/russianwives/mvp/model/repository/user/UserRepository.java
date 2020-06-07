@@ -27,6 +27,7 @@ import com.borisruzanov.russianwives.utils.FirebaseRequestManager;
 import com.borisruzanov.russianwives.utils.OnlineUsersCallback;
 import com.borisruzanov.russianwives.utils.StringsCallback;
 import com.borisruzanov.russianwives.utils.UserCallback;
+import com.borisruzanov.russianwives.utils.UserHideCallback;
 import com.borisruzanov.russianwives.utils.network.ApiClient;
 import com.borisruzanov.russianwives.utils.network.ApiService;
 import com.borisruzanov.russianwives.utils.network.EmailErrorResponse;
@@ -49,6 +50,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.firestore.SetOptions;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -525,6 +527,7 @@ public class UserRepository {
 
                         isLoading = false;
                         EventBus.getDefault().post(new RealUsersListEvent(newUser));
+
                     } else {
                         isLoading = false;
                         isMaxData = true;
@@ -980,6 +983,7 @@ public class UserRepository {
                         if (task.isSuccessful()) {
                             DocumentSnapshot snapshot = task.getResult();
                             if (snapshot.exists()) {
+//                                Log.d("cheking",snapshot.toString());
                                 callback.setUser(snapshot.toObject(FsUser.class));
                             }
                         }
@@ -1324,7 +1328,13 @@ public class UserRepository {
                             if (task.getResult().size() > 0) {
                                 for (QueryDocumentSnapshot document : task.getResult()) {
                                     FsUser fsUser = document.toObject(FsUser.class);
-                                    EventBus.getDefault().post(new SearchEvent(Consts.SEARCH_EVENT_OK, fsUser.getUid()));
+
+                                    //check status if is hidden or not
+                                    if (fsUser.isHide()){
+                                        EventBus.getDefault().post(new SearchEvent(Consts.SEARCH_EVENT_FAILURE, "User Doesn't Exist"));
+                                    }else{
+                                        EventBus.getDefault().post(new SearchEvent(Consts.SEARCH_EVENT_OK, fsUser.getUid()));
+                                    }
                                 }
                             } else {
                                 EventBus.getDefault().post(new SearchEvent(Consts.SEARCH_EVENT_FAILURE, "User Doesn't Exist"));
@@ -1335,4 +1345,33 @@ public class UserRepository {
                     }
                 });
     }
+
+
+    /**
+     * change hide status according the value of hideStatus
+     *
+     *
+     * @param uid it is id of user whose hideStatus will be changed
+     * @param hideStatus a boolean value of hide
+     * @param hideCallback a callback to return source with success or not
+     */
+    public void changeUserHideStatus(String uid, boolean hideStatus, UserHideCallback hideCallback){
+        Map<String, Object> map = new HashMap<>();
+        map.put("hide",hideStatus);
+        users.document(uid).set(map, SetOptions.merge())
+                .addOnSuccessListener(aVoid -> {
+                    Log.d("UserHideStatus","Change to hide-->"+hideStatus);
+                    hideCallback.hideStatusChangeCall(true);
+                })
+                .addOnFailureListener(e -> {
+                    e.printStackTrace();
+                    Log.e("UserHideStatus",e.getMessage());
+                    hideCallback.hideStatusChangeCall(false);
+                });
+
+    }
+
+
+
+
 }

@@ -1,6 +1,5 @@
 package com.borisruzanov.russianwives.mvp.ui.myprofile;
 
-import com.arellomobile.mvp.MvpPresenter;
 import com.arellomobile.mvp.MvpView;
 import com.borisruzanov.russianwives.models.UserDescriptionModel;
 

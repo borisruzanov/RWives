@@ -1,39 +1,21 @@
 package com.borisruzanov.russianwives.mvp.model.repository.chats;
 
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.util.Log;
 
-import com.borisruzanov.russianwives.models.Chat;
-import com.borisruzanov.russianwives.models.Contract;
 import com.borisruzanov.russianwives.models.Message;
-import com.borisruzanov.russianwives.models.RtUser;
 import com.borisruzanov.russianwives.models.UserChat;
-import com.borisruzanov.russianwives.models.UserRt;
-import com.borisruzanov.russianwives.utils.ChatAndUidCallback;
-import com.borisruzanov.russianwives.utils.Consts;
-import com.borisruzanov.russianwives.utils.RealtimeUsersCallback;
-import com.borisruzanov.russianwives.utils.RtUsersAndMessagesCallback;
 import com.borisruzanov.russianwives.utils.UserChatListCallback;
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
-import static com.borisruzanov.russianwives.utils.FirebaseUtils.getNeededUsers;
 import static com.borisruzanov.russianwives.utils.FirebaseUtils.getUid;
 import static com.borisruzanov.russianwives.utils.FirebaseUtils.getUsers;
 
