@@ -27,6 +27,10 @@ public class FsUser implements ViewType {
     private String full_profile;
     private String id_soc;
 
+    private boolean hide; //a boolean varaible to see user is hide or not
+
+
+
     public String getFull_profile() {
         return full_profile;
     }
@@ -260,5 +264,39 @@ public class FsUser implements ViewType {
 
     public void setId_soc(String id_soc) {
         this.id_soc = id_soc;
+    }
+
+    //a constructor with isHide varaible
+    public FsUser(String name, String age, String country, String image, String status, String thumb_image, String uid, String gender, String relationship_status, String body_type, String ethnicity, String faith, String smoking_status, String number_of_kids, String want_children_or_not, String hobby, String drink_status, int rating, String must_info, String full_profile, String id_soc, boolean hide) {
+        this.name = name;
+        this.age = age;
+        this.country = country;
+        this.image = image;
+        this.status = status;
+        this.thumb_image = thumb_image;
+        this.uid = uid;
+        this.gender = gender;
+        this.relationship_status = relationship_status;
+        this.body_type = body_type;
+        this.ethnicity = ethnicity;
+        this.faith = faith;
+        this.smoking_status = smoking_status;
+        this.number_of_kids = number_of_kids;
+        this.want_children_or_not = want_children_or_not;
+        this.hobby = hobby;
+        this.drink_status = drink_status;
+        this.rating = rating;
+        this.must_info = must_info;
+        this.full_profile = full_profile;
+        this.id_soc = id_soc;
+        this.hide = hide;
+    }
+
+    public boolean isHide() {
+        return hide;
+    }
+
+    public void setHide(boolean hide) {
+        this.hide = hide;
     }
 }

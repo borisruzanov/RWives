@@ -61,7 +61,7 @@
     <string name="ru_adventist">Адвентизм</string>
     <string name="ru_never">Никогда</string>
     <string name="ru_no_value">Не указанно</string>
-
+    <string name="ru_user_block">Пользователь заблокирован</string>
 
     <!-- Cleaned strings-->
     <string name="cancel">Cancel</string>
@@ -101,7 +101,7 @@
     <string name="visitors">Visitors</string>
     <string name="likes">Likes</string>
     <string name="order_gender">Order your gender</string>
-
+    <string name="user_block">User is Locked</string>
     <!-- 333 -->
 
 

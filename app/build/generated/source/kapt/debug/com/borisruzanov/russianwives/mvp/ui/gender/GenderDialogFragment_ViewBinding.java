@@ -16,7 +16,7 @@ import java.lang.Override;
 public class GenderDialogFragment_ViewBinding implements Unbinder {
   private GenderDialogFragment target;
 
-  private View view2131296388;
+  private View view2131296389;
 
   @UiThread
   public GenderDialogFragment_ViewBinding(final GenderDialogFragment target, View source) {
@@ -26,7 +26,7 @@ public class GenderDialogFragment_ViewBinding implements Unbinder {
     target.genderSpinner = Utils.findRequiredViewAsType(source, R.id.dialog_spinner_gender, "field 'genderSpinner'", Spinner.class);
     target.policyTv = Utils.findRequiredViewAsType(source, R.id.policy_tv, "field 'policyTv'", TextView.class);
     view = Utils.findRequiredView(source, R.id.confirm_button_gender, "method 'onConfirmClicked'");
-    view2131296388 = view;
+    view2131296389 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -45,7 +45,7 @@ public class GenderDialogFragment_ViewBinding implements Unbinder {
     target.genderSpinner = null;
     target.policyTv = null;
 
-    view2131296388.setOnClickListener(null);
-    view2131296388 = null;
+    view2131296389.setOnClickListener(null);
+    view2131296389 = null;
   }
 }

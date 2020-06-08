@@ -64,8 +64,8 @@ import com.borisruzanov.russianwives.mvp.ui.onlineUsers.OnlineUsersFragment;
 import com.borisruzanov.russianwives.mvp.ui.rewardvideo.RewardVideoActivity;
 import com.borisruzanov.russianwives.mvp.ui.search.SearchFragment;
 import com.borisruzanov.russianwives.mvp.ui.search.SearchPresenter;
-import com.borisruzanov.russianwives.mvp.ui.shop.ServicesActivity;
 import com.borisruzanov.russianwives.mvp.ui.slider.SliderActivity;
+import com.borisruzanov.russianwives.mvp.ui.unlockuser.UnlockUserActivity;
 import com.borisruzanov.russianwives.mvp.ui.usersearch.DialogUserSearch;
 import com.borisruzanov.russianwives.utils.Consts;
 import com.bumptech.glide.Glide;
@@ -205,7 +205,7 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
         action_notification_change();
 
         showReviewDialog();
-
+        //Can place logic of active account
 //        adsRequest();
     }
 
@@ -309,14 +309,19 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
                                         }
                                         mSocMedContainer.setVisibility(View.VISIBLE);
                                         firebaseAnalytics.logEvent("soc_med_shown", null);
-                                        Glide.with(MainScreenActivity.this).load(mFsUser.getImage()).thumbnail(0.5f).into(mSocMeImgPhoto);
+
+                                        //adding try/catch because it is running in thread & if activity getting destroy Glide not get context of mainScreenActivity
+                                        try{Glide.with(MainScreenActivity.this).load(mFsUser.getImage()).thumbnail(0.5f).into(mSocMeImgPhoto);}
+                                        catch(IllegalArgumentException exc){
+                                            exc.printStackTrace();
+                                            Log.d("Main","MainActivity image load exception & Message is:-"+exc.getMessage());
+                                        }
                                     }
                                 }
                             }
                         } else {
                             mSocMedCounter++;
                             mPrefs.setValue(Consts.SHOW_SOC_MED, String.valueOf(mSocMedCounter));
-
                         }
 
 
@@ -798,14 +803,24 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
             } else {
                 Glide.with(this).load(this.getResources().getDrawable(R.drawable.default_avatar)).into(mDrawerImage);
             }
-
-            mPresenter.changeUserOnlineStatus(user);
             mFsUser = user;
+          //  Log.d("cheking","on MainScreenActivity setUserData method"+user.getUid()+user.isHide());
+
+            //check if user account is hide or not and act according it.
+            if (user.isHide()){
+
+                callUnlockActivity();
+            }else{
+                mPresenter.changeUserOnlineStatus(user);
+            }
         }
     }
 
 
+
+
     private void reload() {
+        Log.d("cheking","on MainScreenActivity reload method");
         mPresenter.makeDialogOpenDateDefault();
         Intent mainScreenIntent = new Intent(this, MainScreenActivity.class);
         startActivity(mainScreenIntent);
@@ -892,5 +907,13 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
                 }
             });
         }
+    }
+
+    private void callUnlockActivity() {
+        Intent unlock=new Intent(MainScreenActivity.this, UnlockUserActivity.class);
+        unlock.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        unlock.putExtra("uid",mFsUser.getUid());
+        startActivity(unlock);
+        finishAffinity();
     }
 }

@@ -1,5 +1,6 @@
 package com.borisruzanov.russianwives.mvp.ui.friendprofile
 
+import android.util.Log
 import com.arellomobile.mvp.InjectViewState
 import com.arellomobile.mvp.MvpPresenter
 import com.borisruzanov.russianwives.UserProfileItemsList
@@ -14,6 +15,8 @@ import javax.inject.Inject
 @InjectViewState
 class FriendProfilePresenter @Inject constructor(private val interactor: FriendProfileInteractor) : MvpPresenter<FriendProfileView>() {
     private val userDescriptionList = ArrayList<UserDescriptionModel>()
+
+    private var isFriendBlocked :Boolean =false
 
     fun setAllInfo(friendUid: String) {
         setFriendData(friendUid)
@@ -67,10 +70,15 @@ class FriendProfilePresenter @Inject constructor(private val interactor: FriendP
 
     private fun setFriendData(friendUid: String) {
         interactor.getFriendData(friendUid, UserCallback { fsUser ->
+            isFriendBlocked=fsUser.isHide
+//            Log.d("cheking","uid is of friend:-${fsUser.uid}")
             viewState.setFriendData(fsUser.name, fsUser.age, fsUser.country, fsUser.image)
             userDescriptionList.addAll(UserProfileItemsList.initData(fsUser))
             viewState.setList(userDescriptionList)
         })
     }
+
+    fun isFriendBlock() : Boolean =isFriendBlocked
+
 
 }

@@ -150,7 +150,11 @@ public class UserDescriptionListAdapter extends RecyclerView.Adapter<UserDescrip
             holder.description.setText(mContext.getResources().getString(R.string.ru_never));
         } else if (answerDescription.equals(mContext.getResources().getString(R.string.default_lower_case))) {
             holder.description.setText(mContext.getResources().getString(R.string.ru_no_value));
-        } else {
+        }
+        else if (answerDescription.equals(mContext.getResources().getString(R.string.user_block))){
+            holder.description.setText(mContext.getResources().getString(R.string.ru_user_block));
+        }
+        else {
             holder.description.setText(answerDescription);
         }
     }

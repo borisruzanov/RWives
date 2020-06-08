@@ -60,7 +60,7 @@
     <string name="ru_adventist">Адвентизм</string>
     <string name="ru_never">Никогда</string>
     <string name="ru_no_value">Не указанно</string>
-
+    <string name="ru_user_block">Пользователь заблокирован</string>
 
 
     <!-- Titles-->
@@ -98,6 +98,7 @@
     <string name="emptyText_actions">Посетителей нет</string>
     <string name="enter_id">Введите ID</string>
     <string name="search">Поиск</string>
+    <string name="user_block">Пользователь заблокирован</string>
 
     <!-- System safe strings 333-->
     <string name="change_photo">Поменять Фото</string>

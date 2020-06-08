@@ -1,11 +1,13 @@
 *.iml
 .gradle
+.gradle/
 .DS_Store
 /build
 /captures
 /obj
 .externalNativeBuild
 .cxx
+/*/build
 
 #built application files
 *.apk
@@ -20,6 +22,7 @@
 # generated files
 bin/
 gen/
+out/
 
 # Local configuration file (sdk path, etc)
 local.properties
@@ -40,5 +43,31 @@ Thumbs.db
 output.json
 
 
-#hey Boris,you also want to ignore google-service.json
+
+# Log Files
+*.log
+
+# Android Studio
+/*/build/
+/*/local.properties
+/*/out
+/*/*/build
+/*/*/production
+captures/
+.navigation/
+*.ipr
+*~
+*.swp
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+### AndroidStudio Patch ###
+
+!/gradle/wrapper/gradle-wrapper.jar
+
 app/google-services.json
+vcs.xml

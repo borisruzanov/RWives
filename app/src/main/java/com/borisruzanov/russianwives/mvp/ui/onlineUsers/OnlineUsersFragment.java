@@ -232,8 +232,12 @@ public class OnlineUsersFragment extends Fragment implements OnlineUsersView, Co
                             //Getting random user from the recommended user list
                             int index = randomGenerator.nextInt(recommendedUsers.size());
                             mChosenUser = recommendedUsers.get(index);
-                            Glide.with(getContext()).load(mChosenUser.getImage()).into(mRecommendedImage);
-                            Consts.RECOMMENDED_SHOWN = true;
+                           if (getContext()==null){
+                               onDestroy();
+                           }else{
+                                Glide.with(getContext()).load(mChosenUser.getImage()).into(mRecommendedImage);
+                                Consts.RECOMMENDED_SHOWN = true;
+                           }
                         }
                     }
                 }
@@ -288,6 +292,7 @@ public class OnlineUsersFragment extends Fragment implements OnlineUsersView, Co
 
 
     private void getUsers() {
+
         if (!mPrefs.getGender().equals("") && !mPrefs.getGender().equals("default")) {
             if (mIsUserExist) {
                 if (!isMaxData) {
@@ -306,7 +311,6 @@ public class OnlineUsersFragment extends Fragment implements OnlineUsersView, Co
                                 .startAt(last_rating, last_node)
                                 .limitToFirst(ITEM_LOAD_COUNT);
                     }
-
                     query.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -377,6 +381,7 @@ public class OnlineUsersFragment extends Fragment implements OnlineUsersView, Co
                                     last_node = "end";
                                     isMaxData = true;
                                 }
+
                                 mUserList.addAll(newUser);
                                 mAdapter.addUsers(newUser);
                                 isLoading = false;
@@ -401,6 +406,7 @@ public class OnlineUsersFragment extends Fragment implements OnlineUsersView, Co
     @Override
     public void onDestroy() {
         super.onDestroy();
+        Log.d("cheking","OnlineUserFragment onDestroy");
     }
 
     @Override

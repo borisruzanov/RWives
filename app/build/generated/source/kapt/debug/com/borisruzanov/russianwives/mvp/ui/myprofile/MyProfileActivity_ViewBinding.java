@@ -21,7 +21,7 @@ public final class MyProfileActivity_ViewBinding implements Unbinder {
   public MyProfileActivity_ViewBinding(MyProfileActivity target, View source) {
     this.target = target;
 
-    target.recyclerView = Utils.findRequiredViewAsType(source, 2131296819, "field 'recyclerView'", RecyclerView.class);
+    target.recyclerView = Utils.findRequiredViewAsType(source, 2131296823, "field 'recyclerView'", RecyclerView.class);
   }
 
   @Override
