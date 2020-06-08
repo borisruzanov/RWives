@@ -158,4 +158,12 @@ public class MainScreenPresenter {
     public void saveInSocMed(FsUser mFsUser) {
         mInteractor.saveInSocMed(mFsUser);
     }
+
+    /**
+     *  remove user from OnlineUsers
+     * @param uid userId of user
+     */
+    public void removeFromOnlineStatus(String uid){
+        mInteractor.removeUserFromOnlineStatus(uid);
+    }
 }

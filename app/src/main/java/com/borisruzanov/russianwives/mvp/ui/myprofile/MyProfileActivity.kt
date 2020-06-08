@@ -182,6 +182,9 @@ class MyProfileActivity : MvpAppCompatActivity(), MyProfileView, UserHideCallbac
         presenter.unsubscribe()
     }
 
+    /**
+     * a callback after user hide status changed
+     */
     override fun hideStatusChangeCall(success: Boolean) {
         if(success)
         {

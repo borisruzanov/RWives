@@ -87,5 +87,8 @@ class MainInteractor @Inject constructor(private val userRepository: UserReposit
         userRepository.saveUserInSendpulse()
     }
 
+    fun removeUserFromOnlineStatus(uid:String){
+        userRepository.removeUserFromOnlineStatus(uid)
+    }
 
 }
