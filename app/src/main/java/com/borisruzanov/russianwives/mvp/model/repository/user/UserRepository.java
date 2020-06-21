@@ -396,8 +396,6 @@ public class UserRepository {
         FirebaseDatabase.getInstance().getReference().child("OnlineUsers/").child(mPrefs.getValue(Consts.GENDER)).child(user.getUid()).setValue(onlineUser);
 
         FirebaseDatabase.getInstance().getReference().child("OnlineUsers/").child(mPrefs.getValue(Consts.GENDER)).child(user.getUid()).onDisconnect().removeValue();
-
-
     }
 
     /**
@@ -1360,17 +1358,25 @@ public class UserRepository {
         map.put("hide",hideStatus);
         users.document(uid).set(map, SetOptions.merge())
                 .addOnSuccessListener(aVoid -> {
-                    Log.d("UserHideStatus","Change to hide-->"+hideStatus);
+                    Log.d("UserHideStatus","Want a Change to hide-->"+hideStatus);
                     hideCallback.hideStatusChangeCall(true);
                 })
                 .addOnFailureListener(e -> {
                     e.printStackTrace();
-                    Log.e("UserHideStatus",e.getMessage());
+                    Log.e("UserHideStatus","Want a change to hide ==>"+hideStatus+" getting error-->"+e.getMessage());
                     hideCallback.hideStatusChangeCall(false);
                 });
 
     }
 
+
+    /**
+     *  Remove User from OnlineUser Field if user is blocked
+     * @param uid  userId of user who will remove from OnlineUsers
+     */
+    public void removeUserFromOnlineStatus(@NonNull String uid){
+        FirebaseDatabase.getInstance().getReference().child("OnlineUsers/").child(mPrefs.getValue(Consts.GENDER)).child(uid).removeValue();
+    }
 
 
 

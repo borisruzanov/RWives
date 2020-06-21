@@ -111,8 +111,8 @@ public class FriendProfileActivity extends MvpAppCompatActivity implements Frien
 
     private AdView mAdView;
 
-    private boolean russianLang=false;
-    private AlertDialog blockPopUpDialog;
+    private boolean mIsRussianLang =false; //for language is Russian or other
+    private AlertDialog mBlockPopUpDialog; //a PopUpDialog for block user
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -131,7 +131,7 @@ public class FriendProfileActivity extends MvpAppCompatActivity implements Frien
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
         mIsUserExist = mPresenter.isUserExist();
-        russianLang= Locale.getDefault().getLanguage().equals("ru"); //new line added
+        mIsRussianLang = Locale.getDefault().getLanguage().equals("ru"); //new line added
         RatingManager.getInstance().setUserMsgPts();
         setupPhrasesBlock();
         increaseUserActivity();
@@ -176,7 +176,7 @@ public class FriendProfileActivity extends MvpAppCompatActivity implements Frien
             Log.d("ClickedImg", "Image Like was clicked");
 
             //check if user blocked then open dialog otherwise liked
-            if (mPresenter.isFriendBlock()) blockPopUpDialog.show();
+            if (mPresenter.isFriendBlock()) mBlockPopUpDialog.show();
             else mPresenter.setFriendLiked(friendUid);
         });
         messageIv.setOnClickListener(v -> {
@@ -203,7 +203,7 @@ public class FriendProfileActivity extends MvpAppCompatActivity implements Frien
 
         mFirebaseAnalytics.logEvent("friend_profile_viewed", null);
 
-        blockPopUpDialog= createBlockPopUpDialog(); //initialize the alertDialog
+        mBlockPopUpDialog = createBlockPopUpDialog(); //initialize the alertDialog
     }
 
     /**
@@ -427,8 +427,8 @@ public class FriendProfileActivity extends MvpAppCompatActivity implements Frien
         RequestBuilder<Bitmap> requestBuilder = Glide.with(this).asBitmap();
 
         if (image.equals(Consts.BLOCKED_FRIEND)) {
-            Log.d("cheking","image block");
-            requestBuilder=requestBuilder.load(russianLang?R.drawable.block_avatar_ru:R.drawable.block_avatar_eng);}
+            Log.d("UserHideStatus","FriendProfileActivity block image set");
+            requestBuilder=requestBuilder.load(mIsRussianLang ?R.drawable.block_avatar_ru:R.drawable.block_avatar_eng);}
         else if (!image.equals(Consts.DEFAULT)) requestBuilder = requestBuilder.load(image);
         else requestBuilder = requestBuilder.load(R.drawable.default_avatar);
 
@@ -499,8 +499,8 @@ public class FriendProfileActivity extends MvpAppCompatActivity implements Frien
     @Override
     public void openChatMessage(String name, String image) {
         if (mPresenter.isFriendBlock()){
-            Log.d("cheking","dialog call");
-            blockPopUpDialog.show();
+
+            mBlockPopUpDialog.show();
         }
         else{
             Intent chatMessageIntent = new Intent(this, ChatMessageActivity.class);
@@ -525,14 +525,17 @@ public class FriendProfileActivity extends MvpAppCompatActivity implements Frien
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if(blockPopUpDialog.isShowing()) blockPopUpDialog.dismiss();
+        if(mBlockPopUpDialog.isShowing()) mBlockPopUpDialog.dismiss();
     }
 
-    //to create alertdialog popup for blockedUser
+    /**
+     * Create AlertDialog which show for BlockUser
+     * @return AlertDialog
+     */
     private AlertDialog createBlockPopUpDialog(){
         Log.d("cheking","dilog crete");
         AlertDialog.Builder builder=new AlertDialog.Builder(this);
-        builder.setMessage(russianLang?getResources().getString(R.string.ru_user_block):getResources().getString(R.string.user_block));
+        builder.setMessage(mIsRussianLang ?getResources().getString(R.string.ru_user_block):getResources().getString(R.string.user_block));
         builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

@@ -804,11 +804,9 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
                 Glide.with(this).load(this.getResources().getDrawable(R.drawable.default_avatar)).into(mDrawerImage);
             }
             mFsUser = user;
-          //  Log.d("cheking","on MainScreenActivity setUserData method"+user.getUid()+user.isHide());
 
-            //check if user account is hide or not and act according it.
             if (user.isHide()){
-
+                mPresenter.removeFromOnlineStatus(mFsUser.getUid());
                 callUnlockActivity();
             }else{
                 mPresenter.changeUserOnlineStatus(user);
@@ -820,7 +818,6 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
 
 
     private void reload() {
-        Log.d("cheking","on MainScreenActivity reload method");
         mPresenter.makeDialogOpenDateDefault();
         Intent mainScreenIntent = new Intent(this, MainScreenActivity.class);
         startActivity(mainScreenIntent);
@@ -909,6 +906,9 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
         }
     }
 
+    /**
+     *  intent a UnlockActivity and finish MainScreenActivity
+     */
     private void callUnlockActivity() {
         Intent unlock=new Intent(MainScreenActivity.this, UnlockUserActivity.class);
         unlock.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);

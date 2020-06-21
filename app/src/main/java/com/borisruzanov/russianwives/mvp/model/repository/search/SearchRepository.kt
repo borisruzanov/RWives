@@ -82,12 +82,12 @@ class SearchRepository {
         }
         if (fsUserList.isNotEmpty()) {
 
-            //remove if user is hidden
+            //Remove if user is hidden
             val iterator = fsUserList.iterator();
             while (iterator.hasNext()){
                 val user = iterator.next();
                 if(user.isHide){
-                   // Log.d("cheking","user is removed")
+                    Log.d("HideUserDebug","user is removed from SearchList")
                     iterator.remove()
                 }
             }

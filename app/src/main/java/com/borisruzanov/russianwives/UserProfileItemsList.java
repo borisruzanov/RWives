@@ -14,6 +14,7 @@ public class UserProfileItemsList {
     public static List<UserDescriptionModel> initData(FsUser fsUser){
         Log.d(Contract.TAG,"Values are -> " + fsUser.getRelationship_status());
 
+        // check hide or not if hide then return if or else
         if (fsUser.isHide()){
             String lockUserText="User is Locked";
             return Arrays.asList(new UserDescriptionModel("Gender", lockUserText),

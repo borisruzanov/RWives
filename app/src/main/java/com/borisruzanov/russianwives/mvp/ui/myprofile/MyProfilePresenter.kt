@@ -1,6 +1,5 @@
 package com.borisruzanov.russianwives.mvp.ui.myprofile
 
-import android.util.Log
 import com.arellomobile.mvp.InjectViewState
 import com.arellomobile.mvp.MvpPresenter
 import com.borisruzanov.russianwives.UserProfileItemsList
@@ -20,7 +19,7 @@ import javax.inject.Inject
 @InjectViewState
 class MyProfilePresenter @Inject constructor(private val interactor: MyProfileInteractor) : MvpPresenter<MyProfileView>() {
     private val userDescriptionList = ArrayList<UserDescriptionModel>()
-    private var uid ="" //store the uid of current user
+    private var mUid ="" //store the uid of current user
 
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
@@ -35,7 +34,7 @@ class MyProfilePresenter @Inject constructor(private val interactor: MyProfileIn
             viewState.setList(userDescriptionList)
             EventBus.getDefault().post(UserEvent(fsUser))
 
-            uid=fsUser.uid //initialize the current user uid
+            mUid=fsUser.uid //initialize the current user uid
         })
     }
 
@@ -60,9 +59,12 @@ class MyProfilePresenter @Inject constructor(private val interactor: MyProfileIn
         EventBus.getDefault().unregister(this)
     }
 
-    //calling changeUserHideStatus method of MyProfileInteractor
 
+    /**
+     * calling a changeUserHideStatus method of MyProfileInteractor
+     * @param callback a callback after successfully change hideStatus
+     */
     fun setUserHideStatus(callback: UserHideCallback){
-        interactor.changeUserHideStatus(uid,true,callback)
+        interactor.changeUserHideStatus(mUid,true,callback)
     }
 }

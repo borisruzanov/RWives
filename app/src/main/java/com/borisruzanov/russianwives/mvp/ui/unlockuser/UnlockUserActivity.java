@@ -3,7 +3,6 @@ package com.borisruzanov.russianwives.mvp.ui.unlockuser;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -17,30 +16,33 @@ import com.borisruzanov.russianwives.utils.UserHideCallback;
 
 public class UnlockUserActivity extends AppCompatActivity implements UserHideCallback {
 
-    private Button unlockButton;
-    private TextView textView;
+    private Button mUnlockButton;
+    private TextView mTextView;
     private Prefs mPrefs;
-    private UserRepository repository;
-    private String uid;
+    private UserRepository mUserRepository;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_unlock_user);
         mPrefs=new Prefs(this);
-        repository=new UserRepository(mPrefs);
-        uid=getIntent().getStringExtra("uid");
-        textView=findViewById(R.id.textView_unlock_activity);
-        unlockButton=findViewById(R.id.button_unlock_activity);
-        unlockButton.setOnClickListener(new View.OnClickListener() {
+        mUserRepository =new UserRepository(mPrefs);
+        String uid = getIntent().getStringExtra("uid");//getting userId from Intent
+        mTextView =findViewById(R.id.textView_unlock_activity);
+        mUnlockButton =findViewById(R.id.button_unlock_activity);
+        mUnlockButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                repository.changeUserHideStatus(uid,false,UnlockUserActivity.this::hideStatusChangeCall);
+                mUserRepository.changeUserHideStatus(uid,false,UnlockUserActivity.this::hideStatusChangeCall);
             }
         });
 
     }
 
 
+    /**
+     * a callback after hideStatus change
+     * @param success show true or false depending operation
+     */
     @Override
     public void hideStatusChangeCall(boolean success) {
         if (success){
