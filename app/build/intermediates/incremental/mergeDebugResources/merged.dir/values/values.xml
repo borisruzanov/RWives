@@ -352,6 +352,7 @@
     <attr format="float" name="flow_horizontalAlign">
         <enum name="start" value="0"/>
         <enum name="end" value="1"/>
+        <enum name="center" value="2"/>
     </attr>
     <attr format="float" name="flow_horizontalBias"/>
     <attr format="dimension" name="flow_horizontalGap"/>
@@ -1188,7 +1189,7 @@
     <string name="christian">Christian</string>
     <string name="cigar_aficionado">Cigar aficionado</string>
     <string name="close">Close</string>
-    <string name="com.crashlytics.android.build_id" ns2:ignore="UnusedResources,TypographyDashes" translatable="false">4c014e67-5640-4204-92b1-4fa1e55cf4c0</string>
+    <string name="com.crashlytics.android.build_id" ns2:ignore="UnusedResources,TypographyDashes" translatable="false">d68a3c37-3c4b-44dc-86f9-1abe708905cd</string>
     <string name="com_facebook_device_auth_instructions">Visit &lt;b>facebook.com/device&lt;/b> and enter the code shown above.</string>
     <string name="com_facebook_image_download_unknown_error">Unexpected error while downloading an image.</string>
     <string name="com_facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
@@ -5692,9 +5693,10 @@
             <flag name="jumpToEnd" value="0x100"/>
             <flag name="jumpToStart" value="0x1000"/>
         </attr></declare-styleable>
-    <declare-styleable name="OnSwipe"><attr format="float" name="dragScale"/><attr format="float" name="maxVelocity"/><attr format="float" name="maxAcceleration"/><attr name="dragDirection"/><attr name="touchAnchorId"/><attr name="touchAnchorSide"/><attr format="reference" name="touchRegionId"/><attr format="flags" name="nestedScrollFlags">
+    <declare-styleable name="OnSwipe"><attr format="float" name="dragScale"/><attr format="float" name="maxVelocity"/><attr format="float" name="maxAcceleration"/><attr name="dragDirection"/><attr name="touchAnchorId"/><attr name="touchAnchorSide"/><attr format="reference" name="touchRegionId"/><attr format="reference" name="limitBoundsTo"/><attr format="flags" name="nestedScrollFlags">
             <flag name="none" value="0"/>
             <flag name="disablePostScroll" value="1"/>
+            <flag name="disableScroll" value="2"/>
         </attr><attr format="boolean" name="moveWhenScrollAtTop"/><attr format="enum" name="onTouchUp">
             <enum name="autoComplete" value="0"/>
             <enum name="autoCompleteToStart" value="1"/>

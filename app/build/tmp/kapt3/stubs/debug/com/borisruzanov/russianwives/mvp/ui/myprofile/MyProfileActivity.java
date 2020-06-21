@@ -7,7 +7,7 @@ public final class MyProfileActivity extends com.arellomobile.mvp.MvpAppCompatAc
     private final java.lang.String APP_ID = "ca-app-pub-5095813023957397~1146672660";
     private com.google.android.gms.ads.AdView mAdView;
     @org.jetbrains.annotations.NotNull()
-    @butterknife.BindView(value = 2131296823)
+    @butterknife.BindView(value = 2131296824)
     public android.support.v7.widget.RecyclerView recyclerView;
     @org.jetbrains.annotations.NotNull()
     public android.support.v7.widget.Toolbar toolbar;

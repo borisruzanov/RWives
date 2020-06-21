@@ -1,4 +1,4 @@
-# Referenced at D:\my_project\Boris\RWives\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:22
+# Referenced at D:\rwvs\RussianWivesSocNetwork\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:22
 -keep class android.support.v4.app.CoreComponentFactory { <init>(); }
-# Referenced at D:\my_project\Boris\RWives\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:22
+# Referenced at D:\rwvs\RussianWivesSocNetwork\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:22
 -keep class com.borisruzanov.russianwives.App { <init>(); }

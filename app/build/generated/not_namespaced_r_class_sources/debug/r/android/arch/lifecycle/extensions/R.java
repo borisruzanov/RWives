@@ -86,23 +86,23 @@ public final class R {
         public static final int async = 0x7f09003e;
         public static final int blocking = 0x7f090047;
         public static final int chronometer = 0x7f090070;
-        public static final int forever = 0x7f0900df;
-        public static final int icon = 0x7f090175;
-        public static final int icon_group = 0x7f090176;
-        public static final int info = 0x7f09017c;
-        public static final int italic = 0x7f090180;
-        public static final int line1 = 0x7f0901ac;
-        public static final int line3 = 0x7f0901ad;
-        public static final int normal = 0x7f0901e5;
-        public static final int notification_background = 0x7f0901e6;
-        public static final int notification_main_column = 0x7f0901e7;
-        public static final int notification_main_column_container = 0x7f0901e8;
-        public static final int right_icon = 0x7f090241;
-        public static final int right_side = 0x7f090242;
-        public static final int text = 0x7f0902a2;
-        public static final int text2 = 0x7f0902a3;
-        public static final int time = 0x7f0902ad;
-        public static final int title = 0x7f0902af;
+        public static final int forever = 0x7f0900e0;
+        public static final int icon = 0x7f090176;
+        public static final int icon_group = 0x7f090177;
+        public static final int info = 0x7f09017d;
+        public static final int italic = 0x7f090181;
+        public static final int line1 = 0x7f0901ad;
+        public static final int line3 = 0x7f0901ae;
+        public static final int normal = 0x7f0901e6;
+        public static final int notification_background = 0x7f0901e7;
+        public static final int notification_main_column = 0x7f0901e8;
+        public static final int notification_main_column_container = 0x7f0901e9;
+        public static final int right_icon = 0x7f090242;
+        public static final int right_side = 0x7f090243;
+        public static final int text = 0x7f0902a3;
+        public static final int text2 = 0x7f0902a4;
+        public static final int time = 0x7f0902ae;
+        public static final int title = 0x7f0902b0;
     }
     public static final class integer {
         private integer() {}
@@ -145,7 +145,7 @@ public final class R {
         public static final int FontFamily_fontProviderFetchTimeout = 3;
         public static final int FontFamily_fontProviderPackage = 4;
         public static final int FontFamily_fontProviderQuery = 5;
-        public static final int[] FontFamilyFont = { 0x1010532, 0x1010533, 0x101053f, 0x101056f, 0x1010570, 0x7f040146, 0x7f04014e, 0x7f04014f, 0x7f040150, 0x7f0402da };
+        public static final int[] FontFamilyFont = { 0x1010532, 0x1010533, 0x101053f, 0x101056f, 0x1010570, 0x7f040146, 0x7f04014e, 0x7f04014f, 0x7f040150, 0x7f0402db };
         public static final int FontFamilyFont_android_font = 0;
         public static final int FontFamilyFont_android_fontWeight = 1;
         public static final int FontFamilyFont_android_fontStyle = 2;

@@ -91,16 +91,18 @@ class MyProfileActivity : MvpAppCompatActivity(), MyProfileView, UserHideCallbac
 
         fab = findViewById(R.id.fab_id)
         fab.setOnClickListener {
-            val settingsProfile = Intent(this@MyProfileActivity, ProfileSettingsActivity::class.java)
-            startActivity(settingsProfile)
-            finish()
+            presenter.setUserHideStatus(this)
+
+//            val settingsProfile = Intent(this@MyProfileActivity, ProfileSettingsActivity::class.java)
+//            startActivity(settingsProfile)
+//            finish()
         }
 
         //to change hideStatus
-        fab.setOnLongClickListener {
-            presenter.setUserHideStatus(this)
-            return@setOnLongClickListener true
-        }
+//        fab.setOnLongClickListener {
+//            presenter.setUserHideStatus(this)
+//            return@setOnLongClickListener true
+//        }
         imageView = findViewById(R.id.my_profile_image)
         nameText = findViewById(R.id.my_profile_tv_name)
         ageText = findViewById(R.id.my_profile_tv_age)

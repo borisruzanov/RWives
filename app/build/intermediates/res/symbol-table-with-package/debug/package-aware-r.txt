@@ -491,6 +491,7 @@ attr layout_optimizationLevel
 attr layout_scrollFlags
 attr layout_scrollInterpolator
 attr liftOnScroll
+attr limitBoundsTo
 attr lineHeight
 attr lineSpacing
 attr listChoiceBackgroundIndicator
@@ -1697,6 +1698,7 @@ id dimensions
 id direct
 id disableHome
 id disablePostScroll
+id disableScroll
 id display_always
 id dragDown
 id dragEnd
@@ -3714,7 +3716,7 @@ styleable MotionScene defaultDuration layoutDuringTransition
 styleable MotionTelltales telltales_tailColor telltales_tailScale telltales_velocityMode
 styleable NavigationView android_background android_fitsSystemWindows android_maxWidth elevation headerLayout itemBackground itemHorizontalPadding itemIconPadding itemIconTint itemTextAppearance itemTextColor menu
 styleable OnClick clickAction targetId
-styleable OnSwipe dragDirection dragScale maxAcceleration maxVelocity moveWhenScrollAtTop nestedScrollFlags onTouchUp touchAnchorId touchAnchorSide touchRegionId
+styleable OnSwipe dragDirection dragScale limitBoundsTo maxAcceleration maxVelocity moveWhenScrollAtTop nestedScrollFlags onTouchUp touchAnchorId touchAnchorSide touchRegionId
 styleable PopupWindow android_popupBackground android_popupAnimationStyle overlapAnchor
 styleable PopupWindowBackgroundState state_above_anchor
 styleable PropertySet android_visibility android_alpha layout_constraintTag motionProgress visibilityMode
