@@ -17,7 +17,6 @@ import com.google.firebase.database.ServerValue
 import com.squareup.picasso.OkHttpDownloader
 import com.squareup.picasso.Picasso
 
-
 class App : Application() {
 
     private var mUserDatabase: DatabaseReference? = null
@@ -67,7 +66,6 @@ class App : Application() {
         built.isLoggingEnabled = true
         Picasso.setSingletonInstance(built)
 
-
     }
 
     /**
@@ -88,5 +86,6 @@ class App : Application() {
      */
     @Synchronized
     fun getTracker(): Tracker = GoogleAnalytics.getInstance(this).newTracker(R.xml.global_tracker)
+
 
 }

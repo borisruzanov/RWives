@@ -103,6 +103,8 @@
 
         <activity android:name=".mvp.ui.unlockuser.UnlockUserActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".mvp.ui.disclamer.NewUserDisclaimerActivity"
+            android:screenOrientation="portrait" />
 
     </application>
 

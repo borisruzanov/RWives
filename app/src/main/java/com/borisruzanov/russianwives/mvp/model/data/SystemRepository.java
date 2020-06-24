@@ -4,20 +4,14 @@ import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.borisruzanov.russianwives.BuildConfig;
-import com.borisruzanov.russianwives.eventbus.StringEvent;
 import com.borisruzanov.russianwives.eventbus.UpdateVersionEvent;
 import com.borisruzanov.russianwives.mvp.model.data.prefs.Prefs;
-import com.borisruzanov.russianwives.utils.Consts;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import org.greenrobot.eventbus.EventBus;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class SystemRepository {
     private final FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
@@ -76,4 +70,7 @@ public class SystemRepository {
             }
         });
     }
+
+
+
 }

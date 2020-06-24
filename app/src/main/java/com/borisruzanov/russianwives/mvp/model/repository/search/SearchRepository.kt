@@ -5,6 +5,7 @@ import com.borisruzanov.russianwives.eventbus.StringEvent
 import com.borisruzanov.russianwives.models.FsUser
 import com.borisruzanov.russianwives.models.SearchModel
 import com.borisruzanov.russianwives.utils.Consts
+import com.borisruzanov.russianwives.utils.FilterConfig
 import com.borisruzanov.russianwives.utils.FirebaseUtils.getUid
 import com.borisruzanov.russianwives.utils.FirebaseUtils.isUserExist
 import com.borisruzanov.russianwives.utils.UsersListCallback
@@ -69,7 +70,7 @@ class SearchRepository {
     private fun putCallbackData(usersListCallback: UsersListCallback, documentsSnapshot: QuerySnapshot) {
         val fsUserList = ArrayList<FsUser>()
 
-        //check hidden status here
+
         for (snapshot in documentsSnapshot.documents) {
             if (isUserExist()) {
                 //Remove user from the list
@@ -90,8 +91,16 @@ class SearchRepository {
                     Log.d("HideUserDebug","user is removed from SearchList")
                     iterator.remove()
                 }
-            }
 
+                //Removing user according online value of filter
+                if (FilterConfig.isOnline()){
+                    if(!user.isOnline) {
+                       // Log.d("OnlineFilterDebug","user is removed:+"+user.uid)
+                        iterator.remove()
+                    }
+                }
+
+            }
             for (user in fsUserList) {
                 Log.d("RatingDebug", "User uid is ${user.uid} with ${user.rating} points")
             }

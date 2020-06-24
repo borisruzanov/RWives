@@ -81,5 +81,4 @@ class MainPresenter @Inject constructor(private val mainInteractor: MainInteract
         }
         })
     }
-
 }

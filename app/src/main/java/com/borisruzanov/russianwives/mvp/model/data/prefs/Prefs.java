@@ -182,4 +182,6 @@ public class Prefs {
         return getValue(Consts.FULL_PROFILE);
     }
 
+    public String getCity(){ return getValue(Consts.CITY);}
+
 }

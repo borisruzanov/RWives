@@ -394,8 +394,10 @@ public class UserRepository {
         // -1 because in realtime we cant make desc order that just a trick to avoid that and sort the right way
         OnlineUser onlineUser = new OnlineUser(user.getUid(), user.getName(), user.getImage(), user.getGender(), user.getCountry(), user.getRating() * -1);
         FirebaseDatabase.getInstance().getReference().child("OnlineUsers/").child(mPrefs.getValue(Consts.GENDER)).child(user.getUid()).setValue(onlineUser);
-
         FirebaseDatabase.getInstance().getReference().child("OnlineUsers/").child(mPrefs.getValue(Consts.GENDER)).child(user.getUid()).onDisconnect().removeValue();
+        HashMap<String, Object> set=new HashMap<>();
+        set.put("online",true);
+        users.document(user.getUid()).set(set,SetOptions.merge());
     }
 
     /**
@@ -1372,10 +1374,23 @@ public class UserRepository {
 
     /**
      *  Remove User from OnlineUser Field if user is blocked
+     *  Change status of online field false in firestore db
      * @param uid  userId of user who will remove from OnlineUsers
      */
     public void removeUserFromOnlineStatus(@NonNull String uid){
         FirebaseDatabase.getInstance().getReference().child("OnlineUsers/").child(mPrefs.getValue(Consts.GENDER)).child(uid).removeValue();
+
+
+        HashMap<String, Object> sets=new HashMap<>();
+        sets.put("online",false);
+        users.document(uid).set(sets,SetOptions.merge()).addOnFailureListener(e ->{
+            e.printStackTrace();
+            Log.d("UserStatusDebug","Error see logcat:---"+e.getMessage());
+            removeUserFromOnlineStatus(uid);
+        })
+        .addOnSuccessListener(aVoid -> {
+            Log.d("UserStatusDebug","Status changed to false of uid:---"+uid);
+        });
     }
 
 

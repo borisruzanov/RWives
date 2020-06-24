@@ -394,6 +394,8 @@
     <string name="buy">Buy</string>
     <string name="services">Services</string>
     <string name="online_users_title">Online Users</string>
+    <string name="filter_switch_text">Online Users</string>
+    <string name="filter_switch_on">Yes</string>
 
     <!-- Genders -->
     <string-array name="genders">
@@ -695,5 +697,9 @@
         <item>No, but its OK if partner has kids</item>
         <item>No</item>
     </string-array>
+    <string name="filter_switch_off">No</string>
+    <string name="disclaimer_title_text">заглавие</string>
+    <string name="button_agree_text">согласна</string>
+    <string name="button_cancel_text">Отмена</string>
 
 </resources>

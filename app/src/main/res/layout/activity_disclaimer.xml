@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:scrollbars="vertical"
+    android:scrollbarSize="2dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/disclaimer_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/disclaimer_title_text"
+        android:textSize="@dimen/huge_text_size"
+        android:layout_gravity="center"
+        android:padding="@dimen/dp8"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/disclaimer_info_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp8"
+        android:padding="@dimen/dp8"
+        android:text="disclaimer"
+        android:textAlignment="textStart"
+        android:textSize="@dimen/regular_font" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/disclaimer_agree_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_agree_text"
+            android:textSize="@dimen/regular_font"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:padding="@dimen/dp6"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/dp16"
+            android:background="@color/colorAccent"
+            android:textColor="@color/darkColor"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/disclaimer_cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_cancel_text"
+            android:textSize="@dimen/regular_font"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:padding="@dimen/dp6"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/dp16"
+            android:background="@color/grey_600"
+            android:textColor="@color/darkColor"/>
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>

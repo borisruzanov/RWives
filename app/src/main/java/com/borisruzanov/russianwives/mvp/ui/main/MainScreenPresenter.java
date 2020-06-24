@@ -1,5 +1,7 @@
 package com.borisruzanov.russianwives.mvp.ui.main;
 
+import android.util.Log;
+
 import com.borisruzanov.russianwives.eventbus.ListStringEvent;
 import com.borisruzanov.russianwives.eventbus.SearchEvent;
 import com.borisruzanov.russianwives.eventbus.StringEvent;
@@ -164,6 +166,11 @@ public class MainScreenPresenter {
      * @param uid userId of user
      */
     public void removeFromOnlineStatus(String uid){
-        mInteractor.removeUserFromOnlineStatus(uid);
+        if(uid!=null && uid.length()!=0){
+            mInteractor.removeUserFromOnlineStatus(uid);
+            Log.d("OnlineStatusDebug","Complete for uid:---"+uid);
+        }
     }
+
+
 }

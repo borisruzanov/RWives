@@ -33,7 +33,7 @@ public class FilterRepository {
     public List<String> getPrefsValues() {
         return Arrays.asList(prefs.getGender(), prefs.getAge(), prefs.getCountry(), prefs.getRelationshipStatus(), prefs.getBodyType(),
                 prefs.getEthnicity(), prefs.getFaith(), prefs.getSmokingStatus(), prefs.getDrinkStatus(), prefs.getNumberOfKids(),
-                prefs.getWantChilderOrNot());
+                prefs.getWantChilderOrNot(),prefs.getCity());
     }
 
     public void setPrefsValues(List<SearchModel> searchModels) {
@@ -53,7 +53,8 @@ public class FilterRepository {
                 new SearchModel(Consts.SMOKING_STATUS, prefs.getSmokingStatus()),
                 new SearchModel(Consts.DRINK_STATUS, prefs.getDrinkStatus()),
                 new SearchModel(Consts.NUMBER_OF_KIDS, prefs.getNumberOfKids()),
-                new SearchModel(Consts.WANT_CHILDREN_OR_NOT, prefs.getWantChilderOrNot())));
+                new SearchModel(Consts.WANT_CHILDREN_OR_NOT, prefs.getWantChilderOrNot()),
+                new SearchModel(Consts.CITY,prefs.getCity()))); //add new search model with city
     }
 
     /**
@@ -76,5 +77,6 @@ public class FilterRepository {
     private boolean isNotDefault(String value) {
         return !value.equals(Consts.DEFAULT);
     }
+
 
 }

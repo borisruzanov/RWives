@@ -292,7 +292,6 @@ public class OnlineUsersFragment extends Fragment implements OnlineUsersView, Co
 
 
     private void getUsers() {
-
         if (!mPrefs.getGender().equals("") && !mPrefs.getGender().equals("default")) {
             if (mIsUserExist) {
                 if (!isMaxData) {

@@ -568,6 +568,7 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
         }
     }
 
+
     /**
      * Back button pressed in main screen listener
      */
@@ -575,6 +576,7 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
     public void onBackPressed() {
         super.onBackPressed();
         //Close application
+        mPresenter.removeFromOnlineStatus(mFsUser.getUid());
         finishAffinity();
         System.exit(0);
     }
@@ -583,6 +585,8 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
     protected void onStop() {
         super.onStop();
         mPresenter.unregisterSubscribers();
+        mPresenter.removeFromOnlineStatus(mFsUser.getUid());
+
     }
 
     private void getUserInfo() {
@@ -617,8 +621,9 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
         mFilterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mViewPager.setCurrentItem(1);
-                mTabLayout.getTabAt(1).select();
+                /*mViewPager.setCurrentItem(1);
+                mTabLayout.getTabAt(1).select();*/
+
                 FilterDialogFragment filterDialog = new FilterDialogFragment();
                 getSupportFragmentManager().beginTransaction().add(filterDialog, "Dialog Fragment").commit();
             }
@@ -711,7 +716,7 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
 
     private void hideMenuItems() {
         if (mIsUserExist) {
-            mViewPagerAdapter.addFragment(new OnlineUsersFragment(), getString(R.string.online_users_title));
+           // mViewPagerAdapter.addFragment(new OnlineUsersFragment(), getString(R.string.online_users_title));
             mViewPagerAdapter.addFragment(mSearchFragment, getString(R.string.search_title));
 
             mFilterButton.setVisibility(View.VISIBLE);
@@ -722,7 +727,6 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
             mRegisterButton.setVisibility(GONE);
         } else {
             mViewPagerAdapter.addFragment(new OnlineUsersFragment(), getString(R.string.online_users_title));
-
             mFilterButton.setVisibility(GONE);
             mUnregisteredTitle.setVisibility(View.VISIBLE);
 
@@ -804,7 +808,7 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
                 Glide.with(this).load(this.getResources().getDrawable(R.drawable.default_avatar)).into(mDrawerImage);
             }
             mFsUser = user;
-
+            Log.d(TAG_CLASS_NAME,"uid:-"+mFsUser.getUid());
             if (user.isHide()){
                 mPresenter.removeFromOnlineStatus(mFsUser.getUid());
                 callUnlockActivity();
@@ -813,9 +817,6 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
             }
         }
     }
-
-
-
 
     private void reload() {
         mPresenter.makeDialogOpenDateDefault();
@@ -915,5 +916,11 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
         unlock.putExtra("uid",mFsUser.getUid());
         startActivity(unlock);
         finishAffinity();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        if (mFsUser!=null) mPresenter.changeUserOnlineStatus(mFsUser);
     }
 }

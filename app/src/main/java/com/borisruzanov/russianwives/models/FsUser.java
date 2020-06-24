@@ -28,7 +28,7 @@ public class FsUser implements ViewType {
     private String id_soc;
 
     private boolean hide; //a boolean varaible to see user is hide or not
-
+    private boolean online;// a boolean varaible to indicate user is online or not
 
 
     public String getFull_profile() {
@@ -298,5 +298,13 @@ public class FsUser implements ViewType {
 
     public void setHide(boolean hide) {
         this.hide = hide;
+    }
+
+    public boolean isOnline() {
+        return online;
+    }
+
+    public void setOnline(boolean online) {
+        this.online = online;
     }
 }

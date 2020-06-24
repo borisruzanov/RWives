@@ -184,10 +184,12 @@ class SearchFragment : MvpAppCompatFragment(), SearchView, ConfirmDialogFragment
         searchPresenter.setProgressBar(true)
         searchPresenter.getUserList(0)
     }
+
     override fun userWereNotFoundMsg() {
         mEmptyListLayout.visibility = View.VISIBLE
         users_swipe_refresh.isRefreshing = false
     }
+
     override fun addUsers(userList: List<FsUser>) {
         mEmptyListLayout.visibility = View.GONE
 

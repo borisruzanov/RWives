@@ -3,10 +3,14 @@ package com.borisruzanov.russianwives.mvp.ui.filter
 import android.content.Context
 import android.os.Bundle
 import android.support.annotation.ArrayRes
+import android.support.v7.widget.SwitchCompat
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
+import android.widget.AdapterView
+import android.widget.AdapterView.OnItemSelectedListener
+import android.widget.ArrayAdapter
 import android.widget.Spinner
 import butterknife.ButterKnife
 import butterknife.OnClick
@@ -15,6 +19,7 @@ import com.arellomobile.mvp.presenter.InjectPresenter
 import com.arellomobile.mvp.presenter.ProvidePresenter
 import com.borisruzanov.russianwives.R
 import com.borisruzanov.russianwives.di.component
+import com.borisruzanov.russianwives.utils.FilterConfig
 import java.util.*
 import javax.inject.Inject
 import kotlin.collections.ArrayList
@@ -54,6 +59,8 @@ class FilterDialogFragment : MvpAppCompatDialogFragment(), FilterView {
 
     private lateinit var filterListener: FilterListener
 
+    lateinit var mCitySpinner: Spinner //a city spinner object
+    lateinit var mOnlineSwitch:SwitchCompat
     interface FilterListener {
         fun onUpdate()
     }
@@ -98,6 +105,9 @@ class FilterDialogFragment : MvpAppCompatDialogFragment(), FilterView {
         spinners.add(mHaveKidsSpinner)
         mWantKidsSpinner = view.findViewById(R.id.spinner_want_kids_statuses)
         spinners.add(mWantKidsSpinner)
+        mCitySpinner=view.findViewById(R.id.spinner_city)
+        spinners.add(mCitySpinner)
+        mOnlineSwitch=view.findViewById(R.id.online_switch)
         ButterKnife.bind(this, view)
         return view
     }
@@ -105,6 +115,7 @@ class FilterDialogFragment : MvpAppCompatDialogFragment(), FilterView {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         presenter.getSavedValues()
+        mOnlineSwitch.isChecked = FilterConfig.isOnline()
     }
 
     override fun onResume() {
@@ -112,13 +123,13 @@ class FilterDialogFragment : MvpAppCompatDialogFragment(), FilterView {
         dialog.window!!.setLayout(
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT)
+        addListner()
     }
 
     @OnClick(R.id.button_search)
     fun onSearchClicked() {
-        presenter.saveValues(spinners)
+        presenter.saveValues(spinners,mOnlineSwitch.isChecked)
         filterListener.onUpdate()
-
         dismiss()
     }
 
@@ -141,9 +152,34 @@ class FilterDialogFragment : MvpAppCompatDialogFragment(), FilterView {
     }
 
     companion object {
-
         var TAG = "Dialog Fragment"
-
     }
 
+    /***
+     * to add listener on a country spinner
+     * This method set city spinner value as soon as country is selected
+     */
+    private fun addListner(){
+        mCountrySpinner.onItemSelectedListener= object:OnItemSelectedListener{
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                TODO("Not yet implemented")
+            }
+
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                val array:ArrayAdapter<CharSequence>
+                array = when(position){
+                    91-> ArrayAdapter.createFromResource(activity,R.array.kazakhstan_city,android.R.layout.simple_spinner_item)
+                    147-> ArrayAdapter.createFromResource(activity,R.array.russia_city,android.R.layout.simple_spinner_item)
+                    186-> ArrayAdapter.createFromResource(activity,R.array.ukraine_city,android.R.layout.simple_spinner_item)
+                    188-> ArrayAdapter.createFromResource(activity,R.array.us_city,android.R.layout.simple_spinner_item)
+                    else-> ArrayAdapter.createFromResource(activity,R.array.default_city,android.R.layout.simple_spinner_item)
+                }
+                array.also {
+                    adapter ->adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+                    mCitySpinner.adapter=adapter
+                }
+            }
+
+        }
+    }
 }
