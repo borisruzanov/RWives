@@ -106,6 +106,7 @@ public class FriendProfileActivity extends MvpAppCompatActivity implements Frien
     //Need that to check if user got chats with that friend already
 
 
+    // Object for video features
     private VideoView mVideoView;
     private AppCompatImageButton mPhotoicon,mVidoeicon;
     private AppCompatImageView mPlayimage;

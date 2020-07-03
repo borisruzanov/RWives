@@ -54,6 +54,7 @@ class MyProfileActivity : MvpAppCompatActivity(), MyProfileView, UserHideCallbac
 
     lateinit var userDescriptionListAdapter: UserDescriptionListAdapter
 
+    //Objects for video features
     private lateinit var mVideoView:VideoView
     private lateinit var mPhotoicon:AppCompatImageButton
     private lateinit var mVideoicon:AppCompatImageButton
@@ -229,6 +230,9 @@ class MyProfileActivity : MvpAppCompatActivity(), MyProfileView, UserHideCallbac
         }
     }
 
+    /***
+     * set listner on mPlayimage,mPhotoicon,mVideoicon,mVideoupload button
+     */
      private fun setListener(){
          mPlayimage.setOnClickListener {
                 if (mVideoView.isPlaying) {
@@ -289,7 +293,6 @@ class MyProfileActivity : MvpAppCompatActivity(), MyProfileView, UserHideCallbac
              startActivity(Intent(this,VideoRecordingActivity::class.java))
              finish()
          }
-
 
      }
 

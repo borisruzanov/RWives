@@ -136,7 +136,11 @@ public class SliderActivity extends MvpAppCompatActivity {
             slideToNext(fragmentList, viewPager.getCurrentItem());
         });
 
-        if(fragmentList.size()==0) finish();
+        //if there is no fragment call VideoDisclaimerActivity
+        if(fragmentList.size()==0) {
+            startActivity(new Intent(SliderActivity.this,VideoDisclaimerActivity.class));
+            finish();
+        }
         viewPager.addOnPageChangeListener(onPageChangeListener);
 
         if (getIntent().getExtras().getString("intent") != null && getIntent().getExtras().getString("intent").equals("list")) {
@@ -156,18 +160,20 @@ public class SliderActivity extends MvpAppCompatActivity {
         mBackButton.setOnClickListener(v -> {
             slideToBack(fragmentList,viewPager.getCurrentItem());
         });
+        //set a base progress for every steps
         baseProgress=100/fragmentList.size();
     }
 
     @Subscribe
     public void changeValues(StringEvent event) {
+        //change next button
         if (event.getField().equals("button_next")){
             if (event.getStringParameter().equals("enable")){
                 buttonNext.setClickable(true);
                 buttonNext.setBackgroundResource(R.color.colorAccent);
             }
         }
-        else if (event.getField().equals("progressbar")){
+        else if (event.getField().equals("progressbar")){ //to set a progressbar
             if (progressValue==0)
             {
                 if(viewPager.getCurrentItem()==fragmentList.size()-1) progressValue=100-progressValue;
@@ -179,7 +185,7 @@ public class SliderActivity extends MvpAppCompatActivity {
             mProgressBar.setProgress(progressValue);
             Log.d("SliderDebug","progress:-"+progressValue);
         }
-        else if (event.getField().equals("steps_left")){
+        else if (event.getField().equals("steps_left")){ //to set step left TextView
             mProgressLeftText.setText(String.valueOf(fragmentList.size()-(pvPosition+1)));
         }
         /*if (fragmentList.size() > 1) {
@@ -328,6 +334,9 @@ public class SliderActivity extends MvpAppCompatActivity {
         });
     }
 
+    /***
+     * to set Previous and Next Button
+     */
     private void setButton() {
         if (viewPager.getCurrentItem()==0){
             mBackButton.setVisibility(View.GONE);
@@ -363,6 +372,11 @@ public class SliderActivity extends MvpAppCompatActivity {
         Log.d("sliderDebug","fragment size:-"+fragmentList.size()+" current:-");
     }
 
+    /***
+     * to go back previous fragment
+     * @param fragmentList a fragment list
+     * @param position a current position
+     */
     public void slideToBack(List<Fragment> fragmentList,int position){
         if (!fragmentList.isEmpty() && position!=0){
             viewPager.setCurrentItem(position-1);

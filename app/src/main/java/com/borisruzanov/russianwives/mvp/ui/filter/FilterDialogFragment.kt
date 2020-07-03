@@ -60,7 +60,8 @@ class FilterDialogFragment : MvpAppCompatDialogFragment(), FilterView {
     private lateinit var filterListener: FilterListener
 
     lateinit var mCitySpinner: Spinner //a city spinner object
-    lateinit var mOnlineSwitch:SwitchCompat
+    lateinit var mOnlineSwitch:SwitchCompat //a switch to set online users
+
     interface FilterListener {
         fun onUpdate()
     }
