@@ -97,7 +97,9 @@ public class SliderImageFragment extends Fragment {
                     });
 
                     Toast.makeText(getActivity(), getString(R.string.image_updated), Toast.LENGTH_LONG).show();
-                    EventBus.getDefault().post(new StringEvent("next_page"));
+                    EventBus.getDefault().post(new StringEvent("button_next","enable"));
+                    EventBus.getDefault().post(new StringEvent("progressbar",null));
+                    EventBus.getDefault().post(new StringEvent("steps_left",null));
                 } else {
                     Toast.makeText(getActivity(), R.string.there_is_an_error, Toast.LENGTH_LONG).show();
                 }

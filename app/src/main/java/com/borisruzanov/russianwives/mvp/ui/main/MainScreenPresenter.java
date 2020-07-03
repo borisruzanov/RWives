@@ -29,7 +29,7 @@ public class MainScreenPresenter {
      * Checking user has must info
      */
     public void userHasMustInfo() {
-        mInteractor.userHasMustInfo();
+        mInteractor.userFullProfile();
     }
 
     /**
@@ -41,7 +41,7 @@ public class MainScreenPresenter {
     public void showMustInfoDialog(StringEvent result) {
         if (result.getStringParameter().equals(Consts.MUST_INFO)) {
             //1 step fill first needed info
-            mView.showMustInfoDialog();
+            mView.showFullInfoDialog();
         } else if (result.getStringParameter().equals(Consts.FULL_PROFILE)) {
             //2 step - if we have first needed info - fill full profile info
             mView.showFullInfoDialog();

@@ -13,18 +13,14 @@ import android.widget.Toast;
 
 import com.borisruzanov.russianwives.R;
 import com.borisruzanov.russianwives.eventbus.StringEvent;
-import com.borisruzanov.russianwives.mvp.model.repository.rating.RatingRepository;
 import com.borisruzanov.russianwives.mvp.model.repository.slider.SliderRepository;
 import com.borisruzanov.russianwives.utils.Consts;
-import com.borisruzanov.russianwives.utils.UpdateCallback;
 
 import org.greenrobot.eventbus.EventBus;
 
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
-
-import static com.borisruzanov.russianwives.mvp.model.repository.rating.Rating.ADD_DRINK_STATUS_RATING;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -86,7 +82,10 @@ public class SliderDrinkStatusFragment extends Fragment {
                             if (getActivity() != null) getActivity().onBackPressed();
                         }
                         Toast.makeText(getActivity(), getString(R.string.drink_updated), Toast.LENGTH_LONG).show();
-                        EventBus.getDefault().post(new StringEvent("next_page"));
+                        EventBus.getDefault().post(new StringEvent("button_next","enable"));
+                        EventBus.getDefault().post(new StringEvent("progressbar","7"));
+                        EventBus.getDefault().post(new StringEvent("steps_left",null));
+
                     });
                 } else {
                     Toast.makeText(getActivity(), getString(R.string.empty_field), Toast.LENGTH_SHORT).show();

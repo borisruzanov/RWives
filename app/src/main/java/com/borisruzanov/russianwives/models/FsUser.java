@@ -30,6 +30,7 @@ public class FsUser implements ViewType {
     private boolean hide; //a boolean varaible to see user is hide or not
     private boolean online;// a boolean varaible to indicate user is online or not
 
+    private String video;//a String variable to store video url
 
     public String getFull_profile() {
         return full_profile;
@@ -306,5 +307,13 @@ public class FsUser implements ViewType {
 
     public void setOnline(boolean online) {
         this.online = online;
+    }
+
+    public String getVideo() {
+        return video;
+    }
+
+    public void setVideo(String video) {
+        this.video = video;
     }
 }

@@ -72,7 +72,7 @@ class FriendProfilePresenter @Inject constructor(private val interactor: FriendP
         interactor.getFriendData(friendUid, UserCallback { fsUser ->
             isFriendBlocked=fsUser.isHide
 //            Log.d("cheking","uid is of friend:-${fsUser.uid}")
-            viewState.setFriendData(fsUser.name, fsUser.age, fsUser.country, fsUser.image)
+            viewState.setFriendData(fsUser.name, fsUser.age, fsUser.country, fsUser.image,fsUser.video)
             userDescriptionList.addAll(UserProfileItemsList.initData(fsUser))
             viewState.setList(userDescriptionList)
         })

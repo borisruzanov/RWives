@@ -3,7 +3,6 @@ package com.borisruzanov.russianwives.mvp.ui.slider;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,18 +14,14 @@ import android.widget.Toast;
 import com.arellomobile.mvp.MvpAppCompatFragment;
 import com.borisruzanov.russianwives.R;
 import com.borisruzanov.russianwives.eventbus.StringEvent;
-import com.borisruzanov.russianwives.mvp.model.repository.rating.RatingRepository;
 import com.borisruzanov.russianwives.mvp.model.repository.slider.SliderRepository;
 import com.borisruzanov.russianwives.utils.Consts;
-import com.borisruzanov.russianwives.utils.UpdateCallback;
 
 import org.greenrobot.eventbus.EventBus;
 
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
-
-import static com.borisruzanov.russianwives.mvp.model.repository.rating.Rating.ADD_BODY_TYPE_RATING;
 
 public class SliderBodytypeFragment extends MvpAppCompatFragment {
 
@@ -88,7 +83,9 @@ public class SliderBodytypeFragment extends MvpAppCompatFragment {
                             if (getActivity() != null) getActivity().onBackPressed();
                         }
                         Toast.makeText(getActivity(), getString(R.string.bkodytype_updated), Toast.LENGTH_LONG).show();
-                        EventBus.getDefault().post(new StringEvent("next_page"));
+                        EventBus.getDefault().post(new StringEvent("button_next","enable"));
+                        EventBus.getDefault().post(new StringEvent("progressbar",null));
+                        EventBus.getDefault().post(new StringEvent("steps_left",null));
                     });
                 }
             } else {
@@ -170,5 +167,6 @@ public class SliderBodytypeFragment extends MvpAppCompatFragment {
         }
         return result;
     }
+
 
 }

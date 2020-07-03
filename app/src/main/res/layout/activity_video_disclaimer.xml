@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".mvp.ui.disclamer.VideoDisclaimerActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/video_disclaimer_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/video_disclaimer_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:scrollbars="vertical"
+        android:scrollbarSize="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dp6">
+
+            <TextView
+                android:id="@+id/video_disclaimer_title_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/video_disclaimer_title_text"
+                android:textSize="@dimen/huge_text_size"
+                android:layout_gravity="center"
+                android:padding="@dimen/dp8"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/video_disclaimer_info_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8"
+                android:padding="@dimen/dp8"
+                android:text="disclaimer"
+                android:textAlignment="textStart"
+                android:layout_below="@+id/video_disclaimer_title_text"
+                android:textSize="@dimen/regular_font" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_below="@id/video_disclaimer_info_text">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/video_disclaimer_back_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button_back_text"
+                    android:textSize="@dimen/regular_font"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:padding="@dimen/dp6"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/dp16"
+                    android:background="@color/grey_600"
+                    android:textColor="@color/darkColor"/>
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/video_disclaimer_start_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/start_text"
+                    android:textSize="@dimen/regular_font"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:padding="@dimen/dp6"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/dp16"
+                    android:background="@color/colorAccent"
+                    android:textColor="@color/darkColor"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

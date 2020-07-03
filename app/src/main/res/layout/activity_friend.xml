@@ -23,15 +23,83 @@
             app:expandedTitleMarginStart="@dimen/dp48"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-            <com.borisruzanov.russianwives.mvp.ui.global.SquareImageView
-                android:id="@+id/friend_activity_image"
+            <!--The layout hold image and videoView-->
+            <FrameLayout
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:contentDescription="@string/friend_image_desc"
-                android:fitsSystemWindows="true"
-                android:scaleType="centerCrop"
-                android:src="@drawable/avatar"
-                app:layout_collapseMode="parallax" />
+                app:layout_collapseMode="parallax">
+
+                <com.borisruzanov.russianwives.mvp.ui.global.SquareImageView
+                    android:id="@+id/friend_activity_image"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:contentDescription="@string/user_avatar"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/avatar"
+                    android:visibility="invisible"/>
+
+                <FrameLayout
+                    android:id="@+id/friend_activity_video_frameLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:visibility="gone">
+
+                    <VideoView
+                        android:id="@+id/friend_activity_videoview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:visibility="visible"/>
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/friend_activity_videoplay_button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="fitXY"
+                        android:padding="2dp"
+                        android:visibility="invisible"
+                        android:src="@drawable/ic_baseline_playicon_24"
+                        android:layout_gravity="center"/>
+                    <ProgressBar
+                        android:id="@+id/friend_activity_video_pgbar"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="3dp"
+                        android:visibility="gone"
+                        android:layout_gravity="center"/>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/friend_activity_selection_linear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="60dp"
+                    android:padding="@dimen/dp20"
+                    android:orientation="vertical">
+                    <android.support.v7.widget.AppCompatImageButton
+                        android:id="@+id/friend_activity_photobutton"
+                        android:layout_width="30dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/ic_baseline_imageicon_24"
+                        android:scaleType="fitCenter"
+                        android:padding="2dp"
+                        android:clickable="true"
+                        android:tooltipText="Show Photo"
+                        android:background="@color/fui_transparent"/>
+
+                    <android.support.v7.widget.AppCompatImageButton
+                        android:id="@+id/friend_activity_videobutton"
+                        android:layout_width="30dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/ic_baseline_videoicon_24"
+                        android:scaleType="fitCenter"
+                        android:padding="2dp"
+                        android:clickable="true"
+                        android:tooltipText="Show Video"
+                        android:background="@color/fui_transparent"/>
+                </LinearLayout>
+
+            </FrameLayout>
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"

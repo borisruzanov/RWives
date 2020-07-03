@@ -20,6 +20,7 @@ import javax.inject.Inject
 class MyProfilePresenter @Inject constructor(private val interactor: MyProfileInteractor) : MvpPresenter<MyProfileView>() {
     private val userDescriptionList = ArrayList<UserDescriptionModel>()
     private var mUid ="" //store the uid of current user
+    private  var mVideoURI:String?=null
 
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
@@ -29,11 +30,11 @@ class MyProfilePresenter @Inject constructor(private val interactor: MyProfileIn
 
     fun setAllCurrentUserInfo() {
         interactor.getAllCurrentUserInfo(UserCallback{ fsUser ->
-            viewState.setUserData(fsUser.name, fsUser.age, fsUser.country, fsUser.image)
+            viewState.setUserData(fsUser.name, fsUser.age, fsUser.country, fsUser.image,fsUser.video)
             userDescriptionList.addAll(UserProfileItemsList.initData(fsUser))
             viewState.setList(userDescriptionList)
             EventBus.getDefault().post(UserEvent(fsUser))
-
+            mVideoURI=fsUser.video //set videoUrl
             mUid=fsUser.uid //initialize the current user uid
         })
     }
@@ -66,5 +67,9 @@ class MyProfilePresenter @Inject constructor(private val interactor: MyProfileIn
      */
     fun setUserHideStatus(callback: UserHideCallback){
         interactor.changeUserHideStatus(mUid,true,callback)
+    }
+
+    fun getVideoUri(): String? {
+        return mVideoURI
     }
 }

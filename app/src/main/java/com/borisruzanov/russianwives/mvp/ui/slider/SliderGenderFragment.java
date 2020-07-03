@@ -16,7 +16,6 @@ import com.borisruzanov.russianwives.R;
 import com.borisruzanov.russianwives.eventbus.StringEvent;
 import com.borisruzanov.russianwives.mvp.model.repository.slider.SliderRepository;
 import com.borisruzanov.russianwives.utils.Consts;
-import com.borisruzanov.russianwives.utils.UpdateCallback;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -80,7 +79,9 @@ public class SliderGenderFragment extends MvpAppCompatFragment {
                             if (getActivity() != null) getActivity().onBackPressed();
                         }
                         Toast.makeText(getActivity(), getString(R.string.gender_updated), Toast.LENGTH_LONG).show();
-                        EventBus.getDefault().post(new StringEvent("next_page"));
+                        EventBus.getDefault().post(new StringEvent("button_next","enable"));
+                        EventBus.getDefault().post(new StringEvent("progressbar",null));
+                        EventBus.getDefault().post(new StringEvent("steps_left",null));
                     });
                 }
             } else {

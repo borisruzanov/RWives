@@ -1,18 +1,16 @@
 package com.borisruzanov.russianwives.mvp.ui.myprofile
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.support.design.widget.CollapsingToolbarLayout
 import android.support.design.widget.FloatingActionButton
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
+import android.support.v7.widget.*
 import android.support.v7.widget.Toolbar
 import android.util.Log
 import android.view.MenuItem
 import android.view.View
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import butterknife.BindView
 import com.arellomobile.mvp.MvpAppCompatActivity
 import com.arellomobile.mvp.presenter.InjectPresenter
@@ -26,7 +24,7 @@ import com.borisruzanov.russianwives.mvp.ui.global.adapter.UserDescriptionListAd
 import com.borisruzanov.russianwives.mvp.ui.main.MainScreenActivity
 import com.borisruzanov.russianwives.mvp.ui.profilesettings.ProfileSettingsActivity
 import com.borisruzanov.russianwives.mvp.ui.search.SearchFragment
-import com.borisruzanov.russianwives.mvp.ui.unlockuser.UnlockUserActivity
+import com.borisruzanov.russianwives.mvp.ui.video.VideoRecordingActivity
 import com.borisruzanov.russianwives.utils.Consts
 import com.borisruzanov.russianwives.utils.UserHideCallback
 import com.bumptech.glide.Glide
@@ -55,6 +53,15 @@ class MyProfileActivity : MvpAppCompatActivity(), MyProfileView, UserHideCallbac
     private var mPrefs: Prefs? = null
 
     lateinit var userDescriptionListAdapter: UserDescriptionListAdapter
+
+    private lateinit var mVideoView:VideoView
+    private lateinit var mPhotoicon:AppCompatImageButton
+    private lateinit var mVideoicon:AppCompatImageButton
+    private lateinit var mVideoFrameLayout: FrameLayout
+    private lateinit var mPlayimage :AppCompatImageView
+    private lateinit var mVideoErrorLinearLayout: LinearLayout
+    private lateinit var mVideoUpload:AppCompatButton
+    private lateinit var mVideoProgress:ProgressBar
 
     @Inject
     @InjectPresenter
@@ -107,9 +114,16 @@ class MyProfileActivity : MvpAppCompatActivity(), MyProfileView, UserHideCallbac
         countryText = findViewById(R.id.my_profile_tv_country)
         numberOfLikes = findViewById(R.id.number_of_likes)
         numberOfVisits = findViewById(R.id.number_of_visits)
-
+        mVideoFrameLayout=findViewById(R.id.my_profile_video_frameLayout)
+        mVideoView=findViewById(R.id.my_profile_videoview)
+        mPlayimage=findViewById(R.id.my_profile_videoplay_button)
+        mPhotoicon=findViewById(R.id.my_profile_photobutton)
+        mVideoicon=findViewById(R.id.my_profile_videobutton)
+        mVideoErrorLinearLayout=findViewById(R.id.my_profile_videonot_found_linear)
+        mVideoUpload=findViewById(R.id.my_profile_video_upload_button)
+        mVideoProgress=findViewById(R.id.my_profile_video_pgbar)
         supportFragmentManager.beginTransaction().add(R.id.my_profile_list_container, SearchFragment()).commit()
-
+        setListener()
         increaseUserActivity()
         adInit()
     }
@@ -136,7 +150,7 @@ class MyProfileActivity : MvpAppCompatActivity(), MyProfileView, UserHideCallbac
         }
     }
 
-    override fun setUserData(name: String, age: String, country: String, image: String) {
+    override fun setUserData(name: String?, age: String?, country: String?, image: String?, videoURL: String?) {
         nameText.text = name
         ageText.text = age
         countryText.text = country
@@ -144,6 +158,22 @@ class MyProfileActivity : MvpAppCompatActivity(), MyProfileView, UserHideCallbac
             Glide.with(this)
                     .load(image)
                     .into(imageView)
+        }
+        if(!videoURL.isNullOrEmpty()){
+            mVideoFrameLayout.visibility=View.VISIBLE
+            mVideoView.visibility=View.VISIBLE
+            mVideoView.setVideoURI(Uri.parse(videoURL))
+            mVideoProgress.visibility=View.VISIBLE
+            mVideoView.setOnPreparedListener{
+                it.isLooping=true
+                mVideoProgress.visibility=View.GONE
+                mPlayimage.visibility=View.VISIBLE
+            }
+            Log.d("MyProfileDebug", "Video url is:-$videoURL")
+            imageView.visibility=View.INVISIBLE
+        }else{
+            imageView.visibility=View.VISIBLE
+            Toast.makeText(applicationContext,"No video found",Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -180,6 +210,7 @@ class MyProfileActivity : MvpAppCompatActivity(), MyProfileView, UserHideCallbac
     override fun onStop() {
         super.onStop()
         presenter.unsubscribe()
+        if (mVideoView.isPlaying) mVideoView.stopPlayback()
     }
 
     /**
@@ -197,6 +228,70 @@ class MyProfileActivity : MvpAppCompatActivity(), MyProfileView, UserHideCallbac
             finish()
         }
     }
+
+     private fun setListener(){
+         mPlayimage.setOnClickListener {
+                if (mVideoView.isPlaying) {
+                    mVideoView.pause()
+                    mPlayimage.visibility = View.VISIBLE
+                    Log.d("MyProfileDbug","Video Pause")
+                } else {
+                    mVideoView.start()
+                    mPlayimage.visibility=View.INVISIBLE
+                    Log.d("MyProfileDebug","Video Play")
+                    /*if (!presenter.getVideoUri().isNullOrEmpty()) {
+                        mVideoView.setVideoURI(Uri.parse(presenter.getVideoUri()))
+                        mVideoView.setOnPreparedListener(MediaPlayer.OnPreparedListener { mp -> mp.isLooping = true })
+                        mVideoView.start()
+                        mPlayimage.visibility = View.INVISIBLE
+                        Log.d("MyProfileDebug", "Video uri is:-" + presenter.getVideoUri())
+                    } else {
+                        Log.d("MyProfileDebug", "Video uri is:-Empty")
+                        Toast.makeText(applicationContext, "Video is not Available", Toast.LENGTH_LONG).show()
+                    }*/
+                }
+        }
+
+         mPhotoicon.setOnClickListener {
+            if (mVideoView.isPlaying) mVideoView.stopPlayback()
+             mVideoFrameLayout.visibility=View.GONE
+             mVideoView.visibility=View.GONE
+             mPlayimage.visibility=View.GONE
+             mVideoErrorLinearLayout.visibility=View.GONE
+             imageView.visibility=View.VISIBLE
+             //Toast.makeText(applicationContext,"photo icon click",Toast.LENGTH_LONG).show()
+         }
+
+         mVideoicon.setOnClickListener {
+             if (!presenter.getVideoUri().isNullOrEmpty()){
+                 mVideoFrameLayout.visibility=View.VISIBLE
+                 mVideoView.visibility=View.VISIBLE
+                 mVideoView.setVideoURI(Uri.parse(presenter.getVideoUri()))
+                 mVideoProgress.visibility=View.VISIBLE
+                 mVideoView.setOnPreparedListener{
+                     it.isLooping=true
+                     mPlayimage.visibility=View.VISIBLE
+                     mVideoProgress.visibility=View.GONE
+                 }
+                 imageView.visibility=View.INVISIBLE
+                 Log.d("MyProfileDebug","Video url is:-"+presenter.getVideoUri()+" ready to play")
+             }else{
+                 mVideoFrameLayout.visibility=View.VISIBLE
+                 mVideoView.visibility=View.GONE
+                 mPlayimage.visibility=View.GONE
+                 mVideoErrorLinearLayout.visibility=View.VISIBLE
+                 imageView.visibility=View.INVISIBLE
+                 Log.d("MyProfileDebug","Video url is Empty")
+             }
+         }
+
+         mVideoUpload.setOnClickListener {
+             startActivity(Intent(this,VideoRecordingActivity::class.java))
+             finish()
+         }
+
+
+     }
 
 
 }

@@ -53,8 +53,6 @@ class MainInteractor @Inject constructor(private val userRepository: UserReposit
 
     fun getDefaultList(callback: StringsCallback) = userRepository.getDefaultList(callback)
 
-
-
     fun getSecondaryInfo() {
         userRepository.getSecondaryInfoDialog()
     }
@@ -90,5 +88,7 @@ class MainInteractor @Inject constructor(private val userRepository: UserReposit
     fun removeUserFromOnlineStatus(uid:String){
         userRepository.removeUserFromOnlineStatus(uid)
     }
+
+    fun userFullProfile()=userRepository.checkForFullProfile()
 
 }

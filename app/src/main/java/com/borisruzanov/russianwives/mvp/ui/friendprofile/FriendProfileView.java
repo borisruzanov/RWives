@@ -6,9 +6,11 @@ import com.borisruzanov.russianwives.models.UserDescriptionModel;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.annotation.Nullable;
+
 public interface FriendProfileView  extends MvpView{
 
-    void setFriendData(String name, String age, String country, String image);
+    void setFriendData(String name, String age, String country, String image, @Nullable String friendVideoUrl);
     void setList(List<UserDescriptionModel> userDescriptionList);
     void openRegDialog();
     void setLikeHighlighted();

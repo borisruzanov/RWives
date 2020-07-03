@@ -696,6 +696,9 @@
     <string name="button_agree_text">Agree</string>
     <string name="button_cancel_text">Cancel</string>
     <string name="disclaimer_title_text">Title</string>
+    <string name="button_back_text">Back</string>
+    <string name="video_disclaimer_title_text">Video Title</string>
+    <string name="previous_text">Previous</string>
 
     <!--USA Cities-->
     <string-array name="us_city">
@@ -2281,4 +2284,22 @@
         <item>All Cities</item>
     </string-array>
 
+    <string name="record_video">record video</string>
+    <string name="play_video">play video</string>
+    <string name="upload">Upload video</string>
+    <string name="video_result_toolbar_title_eng">VideoRcording Activity</string>
+    <string name="slider_toolbar_title_eng">Please complete Registration</string>
+    <string name="start_text">Start</string>
+    <string name="video_disclaimer_toolbar_title_eng" translatable="false">Video Info</string>
+    <string name="video_disclaimer_title_eng" translatable="false">Vidoe Title</string>
+    <string name="video_disclaimer_description_eng" translatable="false">Video Disclaimer</string>
+    <string name="video_result_toolbar_title_rus">Название панели инструментов видео</string>
+    <string name="slider_toolbar_title_rus">Название панели инструментов видео</string>
+    <string name="video_disclaimer_title_rus">Название панели инструментов видео</string>
+    <string name="video_disclaimer_description_rus">Название панели инструментов видео</string>
+    <string name="video_disclaimer_toolbar_title_rus">Название панели инструментов видео</string>
+    <string name="video_error_message_text">Video Not Uploaded</string>
+    <string name="video_upload_text">Upload video</string>
+    <string name="choose_your_city">Choose Your City</string>
+    <string name="city_updated">City Updated</string>
 </resources>

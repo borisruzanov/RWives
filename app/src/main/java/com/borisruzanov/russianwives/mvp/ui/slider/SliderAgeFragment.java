@@ -4,7 +4,6 @@ package com.borisruzanov.russianwives.mvp.ui.slider;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,17 +15,13 @@ import android.widget.Toast;
 import com.arellomobile.mvp.MvpAppCompatFragment;
 import com.borisruzanov.russianwives.R;
 import com.borisruzanov.russianwives.eventbus.StringEvent;
-import com.borisruzanov.russianwives.mvp.model.repository.rating.RatingRepository;
 import com.borisruzanov.russianwives.mvp.model.repository.slider.SliderRepository;
 import com.borisruzanov.russianwives.utils.Consts;
-import com.borisruzanov.russianwives.utils.ValueCallback;
 
 import org.greenrobot.eventbus.EventBus;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import static com.borisruzanov.russianwives.mvp.model.repository.rating.Rating.ADD_AGE_RATING;
 
 
 public class SliderAgeFragment extends MvpAppCompatFragment {
@@ -84,20 +79,20 @@ public class SliderAgeFragment extends MvpAppCompatFragment {
                             if (getActivity() != null) getActivity().onBackPressed();
                         }
                         Toast.makeText(getActivity(), getString(R.string.age_updated), Toast.LENGTH_LONG).show();
-                        EventBus.getDefault().post(new StringEvent("next_page"));
+                        EventBus.getDefault().post(new StringEvent("progressbar","7"));
+                        EventBus.getDefault().post(new StringEvent("button_next","enable"));
+                        EventBus.getDefault().post(new StringEvent("steps_left","13"));
                     });
                 }
             } else {
                 Toast.makeText(getActivity(), getString(R.string.empty_field), Toast.LENGTH_SHORT).show();
             }
         });
-
         return view;
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
     }
 }

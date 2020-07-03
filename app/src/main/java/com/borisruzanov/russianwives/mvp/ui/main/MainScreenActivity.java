@@ -52,6 +52,7 @@ import com.borisruzanov.russianwives.mvp.ui.chats.ChatsActivity;
 import com.borisruzanov.russianwives.mvp.ui.chats.ChatsPresenter;
 import com.borisruzanov.russianwives.mvp.ui.complain.ComplainFragment;
 import com.borisruzanov.russianwives.mvp.ui.confirm.ConfirmDialogFragment;
+import com.borisruzanov.russianwives.mvp.ui.disclamer.NewUserDisclaimerActivity;
 import com.borisruzanov.russianwives.mvp.ui.filter.FilterDialogFragment;
 import com.borisruzanov.russianwives.mvp.ui.friendprofile.FriendProfileActivity;
 import com.borisruzanov.russianwives.mvp.ui.gender.GenderDialogFragment;
@@ -373,7 +374,7 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
             @Override
             public void run() {
                 if (mIsUserExist && mPrefs.getValue(Consts.MUST_INFO).equals(Consts.DEFAULT)) {
-                    mPresenter.userHasMustInfo();
+                    //mPresenter.userHasMustInfo();
                 } else if (mIsUserExist && !mPrefs.getValue(Consts.MUST_INFO).equals(Consts.DEFAULT)) {
                     if (mPrefs.getValue(Consts.SHOW_FULL_DIALOG).equals(Consts.DEFAULT)) {
                         mUserInfoCounter = 0;
@@ -386,7 +387,6 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
                     } else {
                         mUserInfoCounter++;
                         mPrefs.setValue(Consts.SHOW_FULL_DIALOG, String.valueOf(mUserInfoCounter));
-
                     }
                 }
             }
@@ -555,7 +555,8 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
                     if (response.isNewUser()) {
                         firebaseAnalytics.logEvent("registration_completed", null);
                         mPresenter.saveUser();
-                        reload();
+//                        reload();
+                        startActivity(new Intent(this, NewUserDisclaimerActivity.class));
                     } else {
                         reload();
                     }
@@ -586,7 +587,6 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
         super.onStop();
         mPresenter.unregisterSubscribers();
         mPresenter.removeFromOnlineStatus(mFsUser.getUid());
-
     }
 
     private void getUserInfo() {
@@ -684,6 +684,7 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
                         AuthUI.getInstance().signOut(getApplicationContext()).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
+                                mPresenter.removeFromOnlineStatus(mFsUser.getUid());
                                 reload();
                             }
                         });
@@ -923,4 +924,6 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
         super.onRestart();
         if (mFsUser!=null) mPresenter.changeUserOnlineStatus(mFsUser);
     }
+
+
 }

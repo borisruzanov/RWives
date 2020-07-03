@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
@@ -11,6 +12,8 @@ import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.widget.AppCompatImageButton;
+import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -19,8 +22,13 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.VideoView;
 
 import com.arellomobile.mvp.MvpAppCompatActivity;
 import com.arellomobile.mvp.presenter.InjectPresenter;
@@ -95,8 +103,16 @@ public class FriendProfileActivity extends MvpAppCompatActivity implements Frien
 
     private String mFriendName;
     private String mFriendImage;
-
     //Need that to check if user got chats with that friend already
+
+
+    private VideoView mVideoView;
+    private AppCompatImageButton mPhotoicon,mVidoeicon;
+    private AppCompatImageView mPlayimage;
+    private FrameLayout mVideoFrame;
+    private LinearLayout mSelectionLinear;
+    private String mFriendVideoUrl;
+    private ProgressBar mProgressbar;
 
     @Inject
     @InjectPresenter
@@ -199,12 +215,23 @@ public class FriendProfileActivity extends MvpAppCompatActivity implements Frien
         ageText = findViewById(R.id.friend_activity_tv_age);
         countryText = findViewById(R.id.friend_activity_tv_country);
 
+        mVideoView=findViewById(R.id.friend_activity_videoview);
+        mVideoFrame=findViewById(R.id.friend_activity_video_frameLayout);
+        mPlayimage=findViewById(R.id.friend_activity_videoplay_button);
+        mPhotoicon=findViewById(R.id.friend_activity_photobutton);
+        mVidoeicon=findViewById(R.id.friend_activity_videobutton);
+        mSelectionLinear=findViewById(R.id.friend_activity_selection_linear);
+        mProgressbar=findViewById(R.id.friend_activity_video_pgbar);
+        setListener();
+
         mPresenter.setAllInfo(friendUid);
 
         mFirebaseAnalytics.logEvent("friend_profile_viewed", null);
 
         mBlockPopUpDialog = createBlockPopUpDialog(); //initialize the alertDialog
     }
+
+
 
     /**
      * Phrases block logic
@@ -341,7 +368,7 @@ public class FriendProfileActivity extends MvpAppCompatActivity implements Frien
     }
 
     @Override
-    public void setFriendData(String name, String age, String country, String image) {
+    public void setFriendData(String name, String age, String country, String image,String friendVideoUrl) {
         mFriendImage = image;
         mFriendName = name;
         collapsingToolbarLayout.setTitle(name);
@@ -352,8 +379,28 @@ public class FriendProfileActivity extends MvpAppCompatActivity implements Frien
          ageText.setVisibility(View.INVISIBLE);
          countryText.setVisibility(View.INVISIBLE);
          loadImage(Consts.BLOCKED_FRIEND);
+         mVideoFrame.setVisibility(View.GONE);
+         mSelectionLinear.setVisibility(View.GONE);
         }else{
             loadImage(image);
+            if (friendVideoUrl!=null && friendVideoUrl.length()>0){
+                mFriendVideoUrl=friendVideoUrl;
+                mVideoFrame.setVisibility(View.VISIBLE);
+                mVideoView.setVisibility(View.VISIBLE);
+                mVideoView.setVideoURI(Uri.parse(mFriendVideoUrl));
+                mProgressbar.setVisibility(View.VISIBLE);
+                mVideoView.setOnPreparedListener(mp -> {
+                    mp.setLooping(true);
+                    mProgressbar.setVisibility(View.GONE);
+                    mPlayimage.setVisibility(View.VISIBLE);
+                });
+                imageView.setVisibility(View.INVISIBLE);
+                mSelectionLinear.setVisibility(View.VISIBLE);
+            }else{
+                mVideoFrame.setVisibility(View.GONE);
+                mSelectionLinear.setVisibility(View.GONE);
+                imageView.setVisibility(View.VISIBLE);
+            }
         }
     }
 
@@ -526,6 +573,7 @@ public class FriendProfileActivity extends MvpAppCompatActivity implements Frien
     protected void onDestroy() {
         super.onDestroy();
         if(mBlockPopUpDialog.isShowing()) mBlockPopUpDialog.dismiss();
+        if(mVideoView.isPlaying())mVideoView.stopPlayback();
     }
 
     /**
@@ -544,4 +592,48 @@ public class FriendProfileActivity extends MvpAppCompatActivity implements Frien
         });
          return builder.create();
     }
+
+    /**
+     * set Listener for mPhotoicon,mVideoicon,mPlayimage
+     */
+    private void setListener() {
+
+        mVidoeicon.setOnClickListener( v -> {
+            if (mFriendVideoUrl!=null && mFriendVideoUrl.length()>0){
+                mVideoFrame.setVisibility(View.VISIBLE);
+                mVideoView.setVisibility(View.VISIBLE);
+                mVideoView.setVideoURI(Uri.parse(mFriendVideoUrl));
+                mProgressbar.setVisibility(View.VISIBLE);
+                mVideoView.setOnPreparedListener(mp -> {
+                    mp.setLooping(true);
+                    mProgressbar.setVisibility(View.GONE);
+                    mPlayimage.setVisibility(View.VISIBLE);
+                });
+                imageView.setVisibility(View.INVISIBLE);
+            }
+            else{
+                mVideoFrame.setVisibility(View.GONE);
+                imageView.setVisibility(View.VISIBLE);
+                Toast.makeText(getApplicationContext(),"Video Not Available",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        mPhotoicon.setOnClickListener(v -> {
+            if (mVideoView.isPlaying()) mVideoView.stopPlayback();
+            mVideoFrame.setVisibility(View.GONE);
+            imageView.setVisibility(View.VISIBLE);
+            mPlayimage.setVisibility(View.GONE);
+        });
+
+        mPlayimage.setOnClickListener(v -> {
+            if (mVideoView.isPlaying()){
+                mVideoView.pause();
+                return;
+            }
+            mVideoView.start();
+            mPlayimage.setVisibility(View.INVISIBLE);
+        });
+    }
+
+
 }

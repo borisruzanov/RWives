@@ -9,17 +9,21 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.arellomobile.mvp.MvpAppCompatActivity;
 import com.borisruzanov.russianwives.R;
 import com.borisruzanov.russianwives.eventbus.StringEvent;
+import com.borisruzanov.russianwives.models.Contract;
 import com.borisruzanov.russianwives.mvp.model.data.prefs.Prefs;
 import com.borisruzanov.russianwives.mvp.model.repository.rating.RatingRepository;
 import com.borisruzanov.russianwives.mvp.model.repository.user.UserRepository;
+import com.borisruzanov.russianwives.mvp.ui.disclamer.VideoDisclaimerActivity;
 import com.borisruzanov.russianwives.mvp.ui.main.MainScreenActivity;
 import com.borisruzanov.russianwives.mvp.ui.slider.adapter.UserInfoPagerAdapter;
-import com.borisruzanov.russianwives.models.Contract;
 import com.borisruzanov.russianwives.utils.Consts;
+import com.borisruzanov.russianwives.utils.LanguageConfig;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
 import org.greenrobot.eventbus.EventBus;
@@ -39,8 +43,15 @@ public class SliderActivity extends MvpAppCompatActivity {
     Toolbar toolbar;
     Button buttonNext;
     FirebaseAnalytics firebaseAnalytics;
-
+    Button mBackButton;
     final List<Fragment> fragmentList = new ArrayList<>();
+
+    ProgressBar mProgressBar;
+    TextView mProgressLeftText,mSliderTitle;
+
+    private int progressValue=0;
+    private int pvPosition=0;
+    private int baseProgress=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +62,6 @@ public class SliderActivity extends MvpAppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_keyboard_backspace_black_24dp);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
-        getSupportActionBar().setTitle("My title");
 
         firebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
@@ -60,8 +70,13 @@ public class SliderActivity extends MvpAppCompatActivity {
         }
 
         viewPager = findViewById(R.id.view_pager_add_info);
-        buttonNext = findViewById(R.id.slider_button);
-
+        buttonNext = findViewById(R.id.slider_next_button);
+        mBackButton=findViewById(R.id.slider_back_button);
+        mProgressBar=findViewById(R.id.slider_progressbar);
+        mProgressLeftText=findViewById(R.id.slider_progressleft_text);
+        mProgressBar.setMax(100);
+        mSliderTitle=findViewById(R.id.slider_title);
+        mSliderTitle.setText(LanguageConfig.isRussian()?R.string.slider_toolbar_title_rus:R.string.slider_toolbar_title_eng);
         Log.d("SliderDebug", "In onCreate");
 
         if (getIntent().getStringArrayListExtra(Consts.DEFAULT_LIST) != null) {
@@ -121,13 +136,15 @@ public class SliderActivity extends MvpAppCompatActivity {
             slideToNext(fragmentList, viewPager.getCurrentItem());
         });
 
+        if(fragmentList.size()==0) finish();
         viewPager.addOnPageChangeListener(onPageChangeListener);
 
         if (getIntent().getExtras().getString("intent") != null && getIntent().getExtras().getString("intent").equals("list")) {
-            buttonNext.setVisibility(View.GONE);
+        //    buttonNext.setVisibility(View.GONE);
         } else {
             //Show finish button
             if (fragmentList.size() == 1) {
+                mBackButton.setVisibility(View.GONE);
                 buttonNext.setVisibility(View.GONE);
                 buttonNext.setText(R.string.finish);
             }
@@ -135,13 +152,39 @@ public class SliderActivity extends MvpAppCompatActivity {
         }
         Log.d(Contract.SLIDER, "Inside extras " + getIntent().getExtras().getString("field_id"));
 
+
+        mBackButton.setOnClickListener(v -> {
+            slideToBack(fragmentList,viewPager.getCurrentItem());
+        });
+        baseProgress=100/fragmentList.size();
     }
 
     @Subscribe
-    public void nextSlide(StringEvent event) {
-        if (fragmentList.size() > 1) {
-            slideToNext(fragmentList, viewPager.getCurrentItem());
+    public void changeValues(StringEvent event) {
+        if (event.getField().equals("button_next")){
+            if (event.getStringParameter().equals("enable")){
+                buttonNext.setClickable(true);
+                buttonNext.setBackgroundResource(R.color.colorAccent);
+            }
         }
+        else if (event.getField().equals("progressbar")){
+            if (progressValue==0)
+            {
+                if(viewPager.getCurrentItem()==fragmentList.size()-1) progressValue=100-progressValue;
+                else if (viewPager.getCurrentItem()>=pvPosition){
+                    progressValue=progressValue+baseProgress;
+                    pvPosition=viewPager.getCurrentItem();
+                }
+            }
+            mProgressBar.setProgress(progressValue);
+            Log.d("SliderDebug","progress:-"+progressValue);
+        }
+        else if (event.getField().equals("steps_left")){
+            mProgressLeftText.setText(String.valueOf(fragmentList.size()-(pvPosition+1)));
+        }
+        /*if (fragmentList.size() > 1) {
+            slideToNext(fragmentList, viewPager.getCurrentItem());
+        }*/
     }
 
     @Override
@@ -163,13 +206,21 @@ public class SliderActivity extends MvpAppCompatActivity {
 
         @Override
         public void onPageSelected(int position) {
-            if (fragmentList.size() == position + 1) {
+            /*if (fragmentList.size() == position + 1) {
                 buttonNext.setVisibility(View.VISIBLE);
                 buttonNext.setText(R.string.finish);
             } else {
                 buttonNext.setVisibility(View.GONE);
                 buttonNext.setText(R.string.next_text);
+            }*/
+
+            setButton();
+            if(position==fragmentList.size()-1) progressValue=100-progressValue;
+            else if (position>=pvPosition){
+                progressValue=progressValue+baseProgress;
+                pvPosition=position;
             }
+            Log.d("SliderDebug","current:-"+position);
         }
 
         @Override
@@ -235,7 +286,13 @@ public class SliderActivity extends MvpAppCompatActivity {
         }
         if (position + 1 == fragmentList.size()) {
             //close the survey
-            onBackPressed();
+            //onBackPressed();
+
+            //calling VideoDisclaimerActivity
+            Intent intent = new Intent(SliderActivity.this, VideoDisclaimerActivity.class);
+            startActivity(intent);
+            addFPAchieveIfNeeded();
+            finish();
 //            addFullProfileAchieve();
         }
     }
@@ -270,5 +327,47 @@ public class SliderActivity extends MvpAppCompatActivity {
             }
         });
     }
+
+    private void setButton() {
+        if (viewPager.getCurrentItem()==0){
+            mBackButton.setVisibility(View.GONE);
+        }
+        else
+        {
+            mBackButton.setVisibility(View.VISIBLE);
+        }
+        if (viewPager.getCurrentItem()==fragmentList.size()-1){
+            buttonNext.setText(R.string.finish);
+            buttonNext.setClickable(false);
+        }
+        else{
+            buttonNext.setText(R.string.next_text);
+            buttonNext.setBackgroundResource(R.color.darkColor);
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        EventBus.getDefault().unregister(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (!EventBus.getDefault().isRegistered(this))
+            EventBus.getDefault().register(this);
+        mProgressBar.setProgress(0);
+        mProgressLeftText.setText(String.valueOf(fragmentList.size()));
+        setButton();
+        Log.d("sliderDebug","fragment size:-"+fragmentList.size()+" current:-");
+    }
+
+    public void slideToBack(List<Fragment> fragmentList,int position){
+        if (!fragmentList.isEmpty() && position!=0){
+            viewPager.setCurrentItem(position-1);
+        }
+    }
+
 
 }

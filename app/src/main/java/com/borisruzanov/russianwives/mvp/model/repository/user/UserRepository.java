@@ -322,7 +322,7 @@ public class UserRepository {
     /**
      * Dialog scenario - checking if user has full profile - show dialog
      */
-    private void checkForFullProfile() {
+    public void checkForFullProfile() {
         if (mPrefs.getFullProfile().isEmpty() || mPrefs.getFullProfile().equals(Consts.DEFAULT)) {
             users.document(getUid()).get().addOnCompleteListener(task -> {
                 if (task.isSuccessful()) {
@@ -1379,8 +1379,6 @@ public class UserRepository {
      */
     public void removeUserFromOnlineStatus(@NonNull String uid){
         FirebaseDatabase.getInstance().getReference().child("OnlineUsers/").child(mPrefs.getValue(Consts.GENDER)).child(uid).removeValue();
-
-
         HashMap<String, Object> sets=new HashMap<>();
         sets.put("online",false);
         users.document(uid).set(sets,SetOptions.merge()).addOnFailureListener(e ->{

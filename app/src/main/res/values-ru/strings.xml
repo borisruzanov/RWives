@@ -701,5 +701,10 @@
     <string name="disclaimer_title_text">заглавие</string>
     <string name="button_agree_text">согласна</string>
     <string name="button_cancel_text">Отмена</string>
+    <string name="video_result_toolbar_title_rus">Видеозапись</string>
+    <string name="slider_toolbar_title_rus">Пожалуйста, завершите регистрацию</string>
+    <string name="video_disclaimer_title_rus">Название видео</string>
+    <string name="video_disclaimer_description_rus">Отказ от ответственности за видео</string>
+    <string name="video_disclaimer_toolbar_title_rus">Название панели инструментов видео</string>
 
 </resources>
