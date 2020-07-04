@@ -1,7 +1,6 @@
 package com.borisruzanov.russianwives.mvp.model.repository.slider;
 
 import android.net.Uri;
-import android.util.Log;
 
 import com.borisruzanov.russianwives.utils.Consts;
 import com.borisruzanov.russianwives.utils.UpdateCallback;
@@ -9,7 +8,6 @@ import com.borisruzanov.russianwives.utils.ValueCallback;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
@@ -68,7 +66,7 @@ public class SliderRepository {
                 usersRt.child(getUid()).child(Consts.IMAGE).setValue(download_url);
                 updateFieldFromCurrentUser(hashMap, endCallback);
             }
-        });
+        }).addOnFailureListener(Throwable::printStackTrace);
     }
 
 

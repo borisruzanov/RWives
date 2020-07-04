@@ -25,6 +25,7 @@ public final class Consts {
     public static final String COINS  = "coins";
     public static final String UID  = "uid";
     public static final String CITY ="city";
+    public static final String VIDEO="video";
 
     public static final String FIRST_OPEN_DATE  = "first open date";
     public static final String DIALOG_OPEN_DATE  = "dialog open date";
@@ -103,7 +104,7 @@ public final class Consts {
             BODY_TYPE, ETHNICITY, FAITH, SMOKING_STATUS, DRINK_STATUS, NUMBER_OF_KIDS, WANT_CHILDREN_OR_NOT,CITY);
 
     public static List<String> fieldKeyList = Arrays.asList(GENDER, IMAGE, AGE, COUNTRY, RELATIONSHIP_STATUS,
-            BODY_TYPE, ETHNICITY, FAITH, SMOKING_STATUS, DRINK_STATUS, NUMBER_OF_KIDS, WANT_CHILDREN_OR_NOT, HOBBY);
+            BODY_TYPE, ETHNICITY, FAITH, SMOKING_STATUS, DRINK_STATUS, NUMBER_OF_KIDS, WANT_CHILDREN_OR_NOT, HOBBY,VIDEO);
 
 
     public static final String DEFAULT  = "default";
@@ -146,5 +147,11 @@ public final class Consts {
 
     public static final String BLOCKED_FRIEND ="block_user";
 
-    public static final String ONLINE_USER="ONLINE";
+    public static final String VIDEO_DATE_FORMAT="yyyyMMddHHmmss";
+
+    public static String RussianLang ="ru";
+
+    public static final String BUTTON_NEXT ="button_next" ;
+    public static final String PROGRESSBAR="progressbar";
+    public static final String LEFT_STEP="steps_left";
 }

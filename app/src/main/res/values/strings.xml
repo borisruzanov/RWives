@@ -693,9 +693,9 @@
     <string name="filter_switch_on">Yes</string>
     <string name="filter_switch_off">No</string>
     <string name="which_city_looking_for">Which City looking for</string>
-    <string name="button_agree_text">Agree</string>
-    <string name="button_cancel_text">Cancel</string>
-    <string name="disclaimer_title_text">Title</string>
+    <string name="agree_text_eng">Agree</string>
+    <string name="cancel_text_eng">Cancel</string>
+    <string name="disclaimer_title_eng">Title</string>
     <string name="button_back_text">Back</string>
     <string name="video_disclaimer_title_text">Video Title</string>
     <string name="previous_text">Previous</string>
@@ -2302,4 +2302,16 @@
     <string name="video_upload_text">Upload video</string>
     <string name="choose_your_city">Choose Your City</string>
     <string name="city_updated">City Updated</string>
+    <string name="disclaimer_description_eng">disclaimer_info</string>
+    <string name="disclaimer_dialog_question">Do you really want to cancel?</string>
+    <string name="disclaimer_title_rus">заглавие</string>
+    <string name="disclaimer_description_rus">Текст описания</string>
+    <string name="agree_text_rus">Согласен</string>
+    <string name="cancel_text_rus">Отмена</string>
+    <string name="record_video_first_text">Please Record video first</string>
+    <string name="uploading_text">Uploading …</string>
+    <string name="video_not_available">Video Not Available</string>
+    <string name="video_upload_sucess_text">VIDEO UPLOADED SUCCESSFULLY</string>
+    <string name="video_upload_error_text">ERROR,PLEASE UPLOAD AGAIN</string>
+    <string name="video_record_error_text">An error occurred, please try again later.</string>
 </resources>

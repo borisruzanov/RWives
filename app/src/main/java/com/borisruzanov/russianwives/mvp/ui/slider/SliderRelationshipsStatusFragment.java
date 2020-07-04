@@ -75,9 +75,9 @@ public class SliderRelationshipsStatusFragment extends Fragment {
                         if (getArguments() != null && getArguments().getString(Consts.NEED_BACK) != null) {
                             if (getActivity() != null) getActivity().onBackPressed();
                         }
-                        EventBus.getDefault().post(new StringEvent("button_next","enable"));
-                        EventBus.getDefault().post(new StringEvent("progressbar",null));
-                        EventBus.getDefault().post(new StringEvent("steps_left",null));
+                        EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
+                        EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
+                        EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));
                         Toast.makeText(getActivity(), getString(R.string.relationship_was_updated), Toast.LENGTH_LONG).show();
                     });
                 }

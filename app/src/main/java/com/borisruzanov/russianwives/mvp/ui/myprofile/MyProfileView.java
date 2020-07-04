@@ -9,8 +9,10 @@ import javax.annotation.Nullable;
 
 public interface MyProfileView extends MvpView{
 
+    //Nullable annotation is used on last parameter videoUrl to indicate that value can be null.
     void setUserData(String name, String age, String country, String image,@Nullable String videoURL);
     void setActionsCount(long visits, long likes);
     void setList(List<UserDescriptionModel> userDescriptionList);
 
+    
 }

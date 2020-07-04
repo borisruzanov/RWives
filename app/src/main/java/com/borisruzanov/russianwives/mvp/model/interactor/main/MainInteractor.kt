@@ -89,6 +89,6 @@ class MainInteractor @Inject constructor(private val userRepository: UserReposit
         userRepository.removeUserFromOnlineStatus(uid)
     }
 
-    fun userFullProfile()=userRepository.checkForFullProfile()
+    fun userFullProfile()=userRepository.checkForFullProfile() //check all fields of user
 
 }

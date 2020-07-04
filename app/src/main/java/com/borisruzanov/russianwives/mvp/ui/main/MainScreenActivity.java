@@ -53,6 +53,7 @@ import com.borisruzanov.russianwives.mvp.ui.chats.ChatsPresenter;
 import com.borisruzanov.russianwives.mvp.ui.complain.ComplainFragment;
 import com.borisruzanov.russianwives.mvp.ui.confirm.ConfirmDialogFragment;
 import com.borisruzanov.russianwives.mvp.ui.disclamer.NewUserDisclaimerActivity;
+import com.borisruzanov.russianwives.mvp.ui.disclamer.VideoDisclaimerActivity;
 import com.borisruzanov.russianwives.mvp.ui.filter.FilterDialogFragment;
 import com.borisruzanov.russianwives.mvp.ui.friendprofile.FriendProfileActivity;
 import com.borisruzanov.russianwives.mvp.ui.gender.GenderDialogFragment;
@@ -369,7 +370,7 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
      * Chain of logic checks must and secondary info to show needed dialog to  registered user
      */
     private void callUserInfoDialogs() {
-        final Handler handler = new Handler();
+       /* final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -390,7 +391,12 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
                     }
                 }
             }
-        }, 5000);
+        }, 5000);*/
+
+       //check user is logged or not
+       if (FirebaseAuth.getInstance().getCurrentUser()!=null){
+           mPresenter.userHasMustInfo(); //check for user info
+       }
     }
 
     /**
@@ -486,9 +492,17 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
      */
     @Override
     public void showDefaultDialogScreen(ArrayList<String> list) {
-        Intent intent = new Intent(MainScreenActivity.this, SliderActivity.class);
-        intent.putStringArrayListExtra(Consts.DEFAULT_LIST, list);
-        startActivity(intent);
+        //check if only video reaming or not
+        if (list.size()==1 && list.get(0).equals(Consts.VIDEO)){
+            //go to videoDeclaimer if only video Remaining
+            Intent videoRecord=new Intent(MainScreenActivity.this, VideoDisclaimerActivity.class);
+            startActivity(videoRecord);
+        }else{
+            //go to sliderActivity
+            Intent intent = new Intent(MainScreenActivity.this, SliderActivity.class);
+            intent.putStringArrayListExtra(Consts.DEFAULT_LIST, list);
+            startActivity(intent);
+        }
     }
 
     /**
@@ -555,10 +569,13 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
                     if (response.isNewUser()) {
                         firebaseAnalytics.logEvent("registration_completed", null);
                         mPresenter.saveUser();
-//                        reload();
+                        Log.d(TAG_CLASS_NAME,"registartion complete:-"+FirebaseAuth.getInstance().getUid());
+
+                        //calling a Disclaimer Activity for the new user
                         startActivity(new Intent(this, NewUserDisclaimerActivity.class));
                     } else {
                         reload();
+                        Log.d(TAG_CLASS_NAME,"registartion complete:-"+FirebaseAuth.getInstance().getUid());
                     }
                 } else {
                     Bundle bundle = new Bundle();
@@ -577,7 +594,7 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
     public void onBackPressed() {
         super.onBackPressed();
         //Close application
-        mPresenter.removeFromOnlineStatus(mFsUser.getUid());
+        mPresenter.removeFromOnlineStatus(mFsUser.getUid()); //remove user from online after it click back
         finishAffinity();
         System.exit(0);
     }
@@ -684,6 +701,8 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
                         AuthUI.getInstance().signOut(getApplicationContext()).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
+                                //remove user  from online Status after logged out.
+                                //set online field false in user db
                                 mPresenter.removeFromOnlineStatus(mFsUser.getUid());
                                 reload();
                             }
@@ -922,8 +941,14 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
     @Override
     protected void onRestart() {
         super.onRestart();
-        if (mFsUser!=null) mPresenter.changeUserOnlineStatus(mFsUser);
+        //if (mFsUser!=null) mPresenter.changeUserOnlineStatus(mFsUser);
     }
 
-
+    /***
+     * to get remaining fields of user
+     */
+    @Override
+    public void completeRegistration(){
+        mPresenter.getDefaultList();
+    }
 }

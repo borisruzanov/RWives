@@ -10,6 +10,7 @@ import javax.annotation.Nullable;
 
 public interface FriendProfileView  extends MvpView{
 
+    //Nullable annotation is used on last parameter friendVideoUrl to indicate that value can be null.
     void setFriendData(String name, String age, String country, String image, @Nullable String friendVideoUrl);
     void setList(List<UserDescriptionModel> userDescriptionList);
     void openRegDialog();

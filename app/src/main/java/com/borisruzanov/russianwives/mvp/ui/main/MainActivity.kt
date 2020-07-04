@@ -59,6 +59,10 @@ class MainActivity : AppCompatActivity(), MainView, FilterDialogFragment.FilterL
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
+    override fun completeRegistration() {
+        TODO("Not yet implemented")
+    }
+
     override fun openSearchedUser(getmMessage: String?) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }

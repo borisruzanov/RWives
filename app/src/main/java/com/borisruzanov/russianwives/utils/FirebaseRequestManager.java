@@ -33,6 +33,7 @@ public class FirebaseRequestManager {
         userMap.put("must_info", "false");
         userMap.put("rating", 1);
         userMap.put("coins", 0);
+        userMap.put("video","default");
         userMap.put(Consts.ID_SOC, timeStamp);
         return userMap;
     }

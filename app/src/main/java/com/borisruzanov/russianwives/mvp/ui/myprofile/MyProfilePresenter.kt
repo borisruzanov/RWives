@@ -20,7 +20,7 @@ import javax.inject.Inject
 class MyProfilePresenter @Inject constructor(private val interactor: MyProfileInteractor) : MvpPresenter<MyProfileView>() {
     private val userDescriptionList = ArrayList<UserDescriptionModel>()
     private var mUid ="" //store the uid of current user
-    private  var mVideoURI:String?=null
+    private  var mVideoURI:String?=null //a varaible to save Video URL
 
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
@@ -69,6 +69,9 @@ class MyProfilePresenter @Inject constructor(private val interactor: MyProfileIn
         interactor.changeUserHideStatus(mUid,true,callback)
     }
 
+    /***
+     * get Video URL of user Video
+     */
     fun getVideoUri(): String? {
         return mVideoURI
     }

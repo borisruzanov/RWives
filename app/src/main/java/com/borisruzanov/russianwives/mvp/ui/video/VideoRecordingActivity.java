@@ -14,17 +14,23 @@ import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.borisruzanov.russianwives.R;
+import com.borisruzanov.russianwives.mvp.model.data.prefs.Prefs;
+import com.borisruzanov.russianwives.mvp.model.repository.rating.RatingRepository;
+import com.borisruzanov.russianwives.mvp.model.repository.user.UserRepository;
 import com.borisruzanov.russianwives.mvp.ui.main.MainScreenActivity;
+import com.borisruzanov.russianwives.utils.Consts;
 import com.borisruzanov.russianwives.utils.FirebaseUtils;
 import com.borisruzanov.russianwives.utils.LanguageConfig;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.UploadTask;
@@ -36,6 +42,8 @@ import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
+import static com.borisruzanov.russianwives.mvp.model.repository.rating.Achievements.FULL_PROFILE_ACH;
 
 public class VideoRecordingActivity extends AppCompatActivity  {
 
@@ -50,6 +58,8 @@ public class VideoRecordingActivity extends AppCompatActivity  {
     @BindView(R.id.toolbar_videoActivity)
     Toolbar mToolbar;
     Uri mVideoUri;
+    private FirebaseAnalytics firebaseAnalytics;
+
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,12 +70,16 @@ public class VideoRecordingActivity extends AppCompatActivity  {
         setSupportActionBar(mToolbar);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_keyboard_backspace_black_24dp);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        firebaseAnalytics=FirebaseAnalytics.getInstance(this);
+
+        //set Listener on record button
         mRecordVideo.setOnClickListener(v -> {
             dispatchTakeVideoIntent();
         });
+        //set Listener in upload button
         mUploadVideo.setOnClickListener(v -> {
             if(mVideoUri==null){
-                Toast.makeText(VideoRecordingActivity.this, "Please Record video first", Toast.LENGTH_SHORT).show();
+                Toast.makeText(VideoRecordingActivity.this, getResources().getString(R.string.record_video_first_text), Toast.LENGTH_SHORT).show();
                 return;
             }
             uploadVideo();
@@ -83,6 +97,9 @@ public class VideoRecordingActivity extends AppCompatActivity  {
         }
     }
 
+    /***
+     * calling a camera intent to record video
+     */
     private void dispatchTakeVideoIntent() {
         Intent takeVideoIntent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE); // Prepare intent to open the camera in video mode.
         takeVideoIntent.putExtra(MediaStore.EXTRA_DURATION_LIMIT, 30); // Controls the camera record maximum time. The number reference to seconds.
@@ -108,8 +125,10 @@ public class VideoRecordingActivity extends AppCompatActivity  {
                 }
             });
             mVideoView.start();
+            mRecordVideo.setBackgroundResource(R.color.darkGrey);
+            mUploadVideo.setBackgroundResource(R.color.colorAccent);
         } else if (requestCode == REQUEST_VIDEO_CAPTURE && resultCode == RESULT_CANCELED) {
-            Toast.makeText(getApplicationContext(), "An error occurred, please try again later.", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), getResources().getString(R.string.video_record_error_text), Toast.LENGTH_LONG).show();
         }
     }
 
@@ -120,10 +139,10 @@ public class VideoRecordingActivity extends AppCompatActivity  {
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setIcon(R.mipmap.ic_launcher_round);
         progressDialog.setCancelable(false);
-        progressDialog.setTitle("Uploading ...");
+        progressDialog.setTitle(getResources().getString(R.string.uploading_text));
         progressDialog.show();
         if (mVideoUri != null) {
-            final String videoID = new SimpleDateFormat("yyyyMMddHHmmss", Locale.getDefault()).format(new Date());
+            final String videoID = new SimpleDateFormat(Consts.VIDEO_DATE_FORMAT, Locale.getDefault()).format(new Date());
 
             UploadTask uploadTask = FirebaseStorage.getInstance().getReference().child("/videos/" + videoID).putFile(mVideoUri);
             uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -140,19 +159,17 @@ public class VideoRecordingActivity extends AppCompatActivity  {
                                 @Override
                                 public void onSuccess(Void aVoid) {
                                     progressDialog.dismiss();
-                                    Toast.makeText(getApplicationContext(), "VIDEO UPLOADED SUCCESSFULLY", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getApplicationContext(), getResources().getString(R.string.video_upload_sucess_text), Toast.LENGTH_LONG).show();
                                     mVideoUri = null;
                                     mVideoView.setVideoURI(null);
-                                    Intent main=new Intent(VideoRecordingActivity.this, MainScreenActivity.class);
-                                    main.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-                                    startActivity(main);
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
                                 public void onFailure(@NonNull Exception e) {
                                     progressDialog.dismiss();
                                     FirebaseStorage.getInstance().getReference().child("/videos/" + videoID).delete();
-                                    Toast.makeText(getApplicationContext(), "ERROR,PLEASE UPLOAD AGAIN", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getApplicationContext(), getResources().getString(R.string.video_upload_error_text), Toast.LENGTH_LONG).show();
+                                    AfterVideoUpload();
                                 }
                             });
                         }
@@ -162,7 +179,6 @@ public class VideoRecordingActivity extends AppCompatActivity  {
                             progressDialog.dismiss();
                             FirebaseStorage.getInstance().getReference().child("/videos/" + videoID).delete();
                             Toast.makeText(getApplicationContext(), e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
-
                         }
                     });
                 }
@@ -170,12 +186,15 @@ public class VideoRecordingActivity extends AppCompatActivity  {
                 @Override
                 public void onFailure(@NonNull Exception e) {
                     progressDialog.dismiss();
-                    Toast.makeText(getApplicationContext(), "ERROR,PLEASE UPLOAD AGAIN", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), getResources().getString(R.string.video_upload_error_text), Toast.LENGTH_LONG).show();
                 }
             });
         }
     }
 
+    /***
+     * check permission for camera
+     */
     private void checkPermission() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, 0);
@@ -205,5 +224,50 @@ public class VideoRecordingActivity extends AppCompatActivity  {
         }
         return super.onOptionsItemSelected(item);
 
+
     }
+
+    /***
+     * this function call after video upload successfully
+     * it add achievement and call next activity
+     */
+    private void AfterVideoUpload(){
+        addFPAchieveIfNeeded();
+        Intent main=new Intent(VideoRecordingActivity.this, MainScreenActivity.class);
+        main.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(main);
+    }
+
+    /***
+     *
+     * check if full_profile achievement is received or not
+     * if not received then add full_profile achievement
+     */
+    private void addFPAchieveIfNeeded() {
+        new RatingRepository().isAchievementExist(FULL_PROFILE_ACH, flag -> {
+            if (!flag) {
+                Log.d("SliderDebug", "Add achievement");
+                addFullProfileAchieve();
+            } else Log.d("SliderDebug", "Already exist");
+        });
+    }
+
+    /***
+     * add full_profile achievement in firestore and also preferences
+     */
+    private void addFullProfileAchieve() {
+        UserRepository userRepository = new UserRepository(new Prefs(getApplicationContext()));
+        userRepository.getDefaultList(stringList -> {
+            Log.d("TimerDebug", "String list emptiness is " + stringList.isEmpty());
+            if (stringList.isEmpty()) {
+                userRepository.clearDialogOpenDate();
+                userRepository.setFullProfile();
+                new RatingRepository().addAchievement(FULL_PROFILE_ACH);
+                userRepository.addRating(8);
+                firebaseAnalytics.logEvent("achieve_full_profile", null);
+            }
+        });
+    }
+
+
 }

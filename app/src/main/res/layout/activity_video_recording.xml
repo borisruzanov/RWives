@@ -17,18 +17,21 @@
         android:layout_height="wrap_content"
         android:text="@string/record_video"
         android:layout_marginTop="@dimen/dp6"
-        android:background="@color/colorAccent"/>
+        android:background="@color/colorAccent"
+        android:layout_margin="@dimen/dp12"/>
 
     <Button
         android:id="@+id/uploadVideoButton_videoActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/upload" />
+        android:text="@string/upload"
+        android:layout_margin="@dimen/dp12"/>
 
     <VideoView
         android:id="@+id/videoView_videoActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:padding="@dimen/dp4"/>
 
 </LinearLayout>

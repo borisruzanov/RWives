@@ -15,14 +15,14 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_slider"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="@dimen/dp55"
         android:background="@color/colorPrimary"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
        <RelativeLayout
            android:layout_width="match_parent"
            android:layout_height="match_parent"
-           android:layout_margin="3dp">
+           android:layout_margin="2dp">
 
            <TextView
                android:id="@+id/slider_title"
@@ -34,7 +34,7 @@
                android:textAlignment="viewStart"
                android:textColor="@color/darkColor"
                android:layout_centerVertical="true"
-               android:padding="3dp" />
+               android:padding="1dp" />
            <LinearLayout
                android:layout_width="wrap_content"
                android:layout_height="match_parent"
@@ -44,7 +44,7 @@
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:text="Step Left"
-                   android:textSize="@dimen/sp14"
+                   android:textSize="@dimen/sp12"
                    android:padding="@dimen/dp4"
                    android:textColor="@color/darkColor"
                    android:layout_gravity="center_vertical"/>
@@ -63,7 +63,7 @@
                     android:id="@+id/slider_progressleft_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/sp14"
+                    android:textSize="@dimen/sp12"
                     android:text="12"
                     android:layout_marginBottom="1dp"
                     android:layout_marginEnd="1dp"

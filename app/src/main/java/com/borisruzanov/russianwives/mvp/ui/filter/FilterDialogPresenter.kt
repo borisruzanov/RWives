@@ -26,12 +26,16 @@ class FilterDialogPresenter @Inject constructor(private val interactor: FilterIn
         viewState.getSavedValues(interactor.prefsValues, resIdList)
     }
 
+    /***
+     * a method to save value in searchModel
+     * @param spinners a list of  spinners of filter
+     * @param checked a boolean value to online Switch of filter
+     */
     fun saveValues(spinners: List<Spinner>, checked: Boolean) {
         val models = ArrayList<SearchModel>()
         val keyList = Consts.keyList
         for (i in spinners.indices) {
             val item = spinners[i].selectedItem as String
-            Log.d("itemName",item + keyList[i])
             models.add(SearchModel(keyList[i], item))
         }
         interactor.setPrefsValues(models)

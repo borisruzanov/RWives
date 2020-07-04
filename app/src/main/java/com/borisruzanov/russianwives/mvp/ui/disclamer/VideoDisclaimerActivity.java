@@ -34,6 +34,8 @@ public class VideoDisclaimerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_disclaimer);
         ButterKnife.bind(this);
+
+        //check Language & set value according it.
         if (LanguageConfig.isRussian()){
            mToolbar.setTitle(getResources().getString(R.string.video_disclaimer_toolbar_title_rus));
            mTitle.setText(getResources().getString(R.string.video_disclaimer_title_rus));
@@ -44,16 +46,20 @@ public class VideoDisclaimerActivity extends AppCompatActivity {
             mTitle.setText(getResources().getString(R.string.video_disclaimer_title_eng));
             mDisclaimerInfo.setText(getResources().getString(R.string.video_disclaimer_description_eng));
         }
+
+
         setSupportActionBar(mToolbar);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_keyboard_backspace_black_24dp);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
+    //on back button click
     @OnClick(R.id.video_disclaimer_back_button)
     public void onBack(View view){
         onBackPressed();
     }
 
+    //on start button click
     @OnClick(R.id.video_disclaimer_start_button)
     public void onStart(View view){
         startActivity(new Intent(VideoDisclaimerActivity.this, VideoRecordingActivity.class));

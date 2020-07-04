@@ -168,6 +168,7 @@ class FilterDialogFragment : MvpAppCompatDialogFragment(), FilterView {
 
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 val array:ArrayAdapter<CharSequence>
+                //set city according the selected country position
                 array = when(position){
                     91-> ArrayAdapter.createFromResource(activity,R.array.kazakhstan_city,android.R.layout.simple_spinner_item)
                     147-> ArrayAdapter.createFromResource(activity,R.array.russia_city,android.R.layout.simple_spinner_item)
@@ -175,6 +176,7 @@ class FilterDialogFragment : MvpAppCompatDialogFragment(), FilterView {
                     188-> ArrayAdapter.createFromResource(activity,R.array.us_city,android.R.layout.simple_spinner_item)
                     else-> ArrayAdapter.createFromResource(activity,R.array.default_city,android.R.layout.simple_spinner_item)
                 }
+                //set adapter on city spinner
                 array.also {
                     adapter ->adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
                     mCitySpinner.adapter=adapter

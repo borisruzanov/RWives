@@ -29,7 +29,7 @@ public class MainScreenPresenter {
      * Checking user has must info
      */
     public void userHasMustInfo() {
-        mInteractor.userFullProfile();
+        mInteractor.userFullProfile(); //to check user Full profile
     }
 
     /**
@@ -39,14 +39,11 @@ public class MainScreenPresenter {
      */
     @Subscribe
     public void showMustInfoDialog(StringEvent result) {
-        if (result.getStringParameter().equals(Consts.MUST_INFO)) {
-            //1 step fill first needed info
-            mView.showFullInfoDialog();
-        } else if (result.getStringParameter().equals(Consts.FULL_PROFILE)) {
-            //2 step - if we have first needed info - fill full profile info
-            mView.showFullInfoDialog();
-        } else if (result.getStringParameter().equals(Consts.UPDATE_MODULE)){
-            //3 step if profile is full - check for updates
+        if (result.getStringParameter().equals(Consts.MUST_INFO) || result.getStringParameter().equals(Consts.FULL_PROFILE)) {
+            //1 step fill first  info
+            mView.completeRegistration();
+        }  else if (result.getStringParameter().equals(Consts.UPDATE_MODULE)){
+            //2 step if profile is full - check for updates
             mInteractor.checkForUpdateVersion();
         }
     }

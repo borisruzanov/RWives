@@ -20,6 +20,7 @@ import com.borisruzanov.russianwives.R
 import com.borisruzanov.russianwives.di.component
 import com.borisruzanov.russianwives.models.UserDescriptionModel
 import com.borisruzanov.russianwives.mvp.model.data.prefs.Prefs
+import com.borisruzanov.russianwives.mvp.ui.disclamer.VideoDisclaimerActivity
 import com.borisruzanov.russianwives.mvp.ui.global.adapter.UserDescriptionListAdapter
 import com.borisruzanov.russianwives.mvp.ui.main.MainScreenActivity
 import com.borisruzanov.russianwives.mvp.ui.profilesettings.ProfileSettingsActivity
@@ -160,7 +161,9 @@ class MyProfileActivity : MvpAppCompatActivity(), MyProfileView, UserHideCallbac
                     .load(image)
                     .into(imageView)
         }
-        if(!videoURL.isNullOrEmpty()){
+        //check for Video URL available or not
+        if(!videoURL.isNullOrEmpty() && videoURL != Consts.DEFAULT){
+            //if available then show VideoView and hide PhotoView
             mVideoFrameLayout.visibility=View.VISIBLE
             mVideoView.visibility=View.VISIBLE
             mVideoView.setVideoURI(Uri.parse(videoURL))
@@ -173,8 +176,9 @@ class MyProfileActivity : MvpAppCompatActivity(), MyProfileView, UserHideCallbac
             Log.d("MyProfileDebug", "Video url is:-$videoURL")
             imageView.visibility=View.INVISIBLE
         }else{
+            //otherWise show only PhotoView
             imageView.visibility=View.VISIBLE
-            Toast.makeText(applicationContext,"No video found",Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext,resources.getString(R.string.video_not_available),Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -234,40 +238,36 @@ class MyProfileActivity : MvpAppCompatActivity(), MyProfileView, UserHideCallbac
      * set listner on mPlayimage,mPhotoicon,mVideoicon,mVideoupload button
      */
      private fun setListener(){
+        //set Listener on play imageView
          mPlayimage.setOnClickListener {
+                //if playing then Pause Otherwise start
                 if (mVideoView.isPlaying) {
                     mVideoView.pause()
                     mPlayimage.visibility = View.VISIBLE
-                    Log.d("MyProfileDbug","Video Pause")
+                    Log.d("MyProfileDebug","Video Pause")
                 } else {
                     mVideoView.start()
                     mPlayimage.visibility=View.INVISIBLE
                     Log.d("MyProfileDebug","Video Play")
-                    /*if (!presenter.getVideoUri().isNullOrEmpty()) {
-                        mVideoView.setVideoURI(Uri.parse(presenter.getVideoUri()))
-                        mVideoView.setOnPreparedListener(MediaPlayer.OnPreparedListener { mp -> mp.isLooping = true })
-                        mVideoView.start()
-                        mPlayimage.visibility = View.INVISIBLE
-                        Log.d("MyProfileDebug", "Video uri is:-" + presenter.getVideoUri())
-                    } else {
-                        Log.d("MyProfileDebug", "Video uri is:-Empty")
-                        Toast.makeText(applicationContext, "Video is not Available", Toast.LENGTH_LONG).show()
-                    }*/
                 }
         }
 
+        //set Listener on Photo ImageButton
          mPhotoicon.setOnClickListener {
-            if (mVideoView.isPlaying) mVideoView.stopPlayback()
-             mVideoFrameLayout.visibility=View.GONE
-             mVideoView.visibility=View.GONE
-             mPlayimage.visibility=View.GONE
-             mVideoErrorLinearLayout.visibility=View.GONE
-             imageView.visibility=View.VISIBLE
-             //Toast.makeText(applicationContext,"photo icon click",Toast.LENGTH_LONG).show()
+             if (mVideoView.isPlaying) mVideoView.stopPlayback() //stop if video is playing
+             //hide videoView and show PhotoView
+             mVideoFrameLayout.visibility = View.GONE
+             mVideoView.visibility = View.GONE
+             mPlayimage.visibility = View.GONE
+             mVideoErrorLinearLayout.visibility = View.GONE
+             imageView.visibility = View.VISIBLE
          }
 
+        //set Listener on video ImageButton
          mVideoicon.setOnClickListener {
-             if (!presenter.getVideoUri().isNullOrEmpty()){
+             //check gor video URL
+             if (!presenter.getVideoUri().isNullOrEmpty() && !presenter.getVideoUri().equals(Consts.DEFAULT)){
+                 //if available then show VideoView and hide PhotoView
                  mVideoFrameLayout.visibility=View.VISIBLE
                  mVideoView.visibility=View.VISIBLE
                  mVideoView.setVideoURI(Uri.parse(presenter.getVideoUri()))
@@ -280,18 +280,23 @@ class MyProfileActivity : MvpAppCompatActivity(), MyProfileView, UserHideCallbac
                  imageView.visibility=View.INVISIBLE
                  Log.d("MyProfileDebug","Video url is:-"+presenter.getVideoUri()+" ready to play")
              }else{
+                 //otherwise hide VideoView
                  mVideoFrameLayout.visibility=View.VISIBLE
                  mVideoView.visibility=View.GONE
                  mPlayimage.visibility=View.GONE
+                 //show Video Upload View
                  mVideoErrorLinearLayout.visibility=View.VISIBLE
+                 //also hide PhotoView
                  imageView.visibility=View.INVISIBLE
                  Log.d("MyProfileDebug","Video url is Empty")
              }
          }
 
+
+        //set Listener on upload button
          mVideoUpload.setOnClickListener {
-             startActivity(Intent(this,VideoRecordingActivity::class.java))
-             finish()
+             //call a videoDisclaimer to record video
+             startActivity(Intent(this,VideoDisclaimerActivity::class.java))
          }
 
      }

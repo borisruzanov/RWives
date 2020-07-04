@@ -79,9 +79,9 @@ public class SliderAgeFragment extends MvpAppCompatFragment {
                             if (getActivity() != null) getActivity().onBackPressed();
                         }
                         Toast.makeText(getActivity(), getString(R.string.age_updated), Toast.LENGTH_LONG).show();
-                        EventBus.getDefault().post(new StringEvent("progressbar","7"));
-                        EventBus.getDefault().post(new StringEvent("button_next","enable"));
-                        EventBus.getDefault().post(new StringEvent("steps_left","13"));
+                        EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
+                        EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
+                        EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));
                     });
                 }
             } else {

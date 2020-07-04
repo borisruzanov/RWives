@@ -698,9 +698,9 @@
         <item>No</item>
     </string-array>
     <string name="filter_switch_off">No</string>
-    <string name="disclaimer_title_text">заглавие</string>
-    <string name="button_agree_text">согласна</string>
-    <string name="button_cancel_text">Отмена</string>
+    <string name="disclaimer_title_eng">заглавие</string>
+    <string name="agree_text_eng">согласна</string>
+    <string name="cancel_text_eng">Отмена</string>
     <string name="video_result_toolbar_title_rus">Видеозапись</string>
     <string name="slider_toolbar_title_rus">Пожалуйста, завершите регистрацию</string>
     <string name="video_disclaimer_title_rus">Название видео</string>

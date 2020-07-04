@@ -328,6 +328,14 @@ public class UserRepository {
                 if (task.isSuccessful()) {
                     DocumentSnapshot snapshot = task.getResult();
                     if (snapshot != null) {
+
+                        //check full_profile field is null
+                        if(snapshot.getString(Consts.FULL_PROFILE)==null){
+                            //trigger when full_profile field not found in snapshot
+                            EventBus.getDefault().post(new StringEvent(Consts.FULL_PROFILE));
+                            return;
+                        }
+
                         if (snapshot.getString(Consts.FULL_PROFILE).equals(Consts.FALSE) && snapshot.getString(Consts.MUST_INFO).equals(Consts.TRUE)) {
                             //Triggers only in case must info is filled
                             EventBus.getDefault().post(new StringEvent(Consts.FULL_PROFILE));
@@ -393,10 +401,13 @@ public class UserRepository {
     public void changeUserOnlineStatus(@NotNull FsUser user) {
         // -1 because in realtime we cant make desc order that just a trick to avoid that and sort the right way
         OnlineUser onlineUser = new OnlineUser(user.getUid(), user.getName(), user.getImage(), user.getGender(), user.getCountry(), user.getRating() * -1);
+
         FirebaseDatabase.getInstance().getReference().child("OnlineUsers/").child(mPrefs.getValue(Consts.GENDER)).child(user.getUid()).setValue(onlineUser);
         FirebaseDatabase.getInstance().getReference().child("OnlineUsers/").child(mPrefs.getValue(Consts.GENDER)).child(user.getUid()).onDisconnect().removeValue();
+
+        //set online field true in firestore user db
         HashMap<String, Object> set=new HashMap<>();
-        set.put("online",true);
+        set.put(Consts.ONLINE,true);
         users.document(user.getUid()).set(set,SetOptions.merge());
     }
 
@@ -1378,13 +1389,16 @@ public class UserRepository {
      * @param uid  userId of user who will remove from OnlineUsers
      */
     public void removeUserFromOnlineStatus(@NonNull String uid){
+        //remove user from realtime db
         FirebaseDatabase.getInstance().getReference().child("OnlineUsers/").child(mPrefs.getValue(Consts.GENDER)).child(uid).removeValue();
+
+        //set online field to false in firestore user db
         HashMap<String, Object> sets=new HashMap<>();
-        sets.put("online",false);
+        sets.put(Consts.ONLINE,false);
         users.document(uid).set(sets,SetOptions.merge()).addOnFailureListener(e ->{
             e.printStackTrace();
             Log.d("UserStatusDebug","Error see logcat:---"+e.getMessage());
-            removeUserFromOnlineStatus(uid);
+            removeUserFromOnlineStatus(uid);//if error generate again call
         })
         .addOnSuccessListener(aVoid -> {
             Log.d("UserStatusDebug","Status changed to false of uid:---"+uid);

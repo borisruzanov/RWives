@@ -16,9 +16,6 @@ import com.arellomobile.mvp.MvpAppCompatActivity;
 import com.borisruzanov.russianwives.R;
 import com.borisruzanov.russianwives.eventbus.StringEvent;
 import com.borisruzanov.russianwives.models.Contract;
-import com.borisruzanov.russianwives.mvp.model.data.prefs.Prefs;
-import com.borisruzanov.russianwives.mvp.model.repository.rating.RatingRepository;
-import com.borisruzanov.russianwives.mvp.model.repository.user.UserRepository;
 import com.borisruzanov.russianwives.mvp.ui.disclamer.VideoDisclaimerActivity;
 import com.borisruzanov.russianwives.mvp.ui.main.MainScreenActivity;
 import com.borisruzanov.russianwives.mvp.ui.slider.adapter.UserInfoPagerAdapter;
@@ -31,8 +28,6 @@ import org.greenrobot.eventbus.Subscribe;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.borisruzanov.russianwives.mvp.model.repository.rating.Achievements.FULL_PROFILE_ACH;
 
 public class SliderActivity extends MvpAppCompatActivity {
     //TODO Implement MVP
@@ -49,9 +44,10 @@ public class SliderActivity extends MvpAppCompatActivity {
     ProgressBar mProgressBar;
     TextView mProgressLeftText,mSliderTitle;
 
-    private int progressValue=0;
-    private int pvPosition=0;
-    private int baseProgress=0;
+    private int progressValue=0; //a value which set in progressbar
+    private int pvPosition=0;// hold previous fragment position
+    private int baseProgress=0; //hold baseProgress
+    private boolean isVideoAvailable=true; //indicate that video is uploaded or not
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -135,11 +131,14 @@ public class SliderActivity extends MvpAppCompatActivity {
             Log.d(Contract.SLIDER, "Inside extras " + getIntent().getExtras().getString("field_id"));
             slideToNext(fragmentList, viewPager.getCurrentItem());
         });
-
+        Log.d("SliderDebug","size of fragment list:-"+fragmentList.size()+"value of isVideoAvailable "+String.valueOf(isVideoAvailable));
         //if there is no fragment call VideoDisclaimerActivity
         if(fragmentList.size()==0) {
-            startActivity(new Intent(SliderActivity.this,VideoDisclaimerActivity.class));
-            finish();
+            //calling videoDisclaimerActivity if video not uploaded
+            if (!isVideoAvailable) {
+                startActivity(new Intent(SliderActivity.this, VideoDisclaimerActivity.class));
+                finish();
+            }
         }
         viewPager.addOnPageChangeListener(onPageChangeListener);
 
@@ -149,8 +148,9 @@ public class SliderActivity extends MvpAppCompatActivity {
             //Show finish button
             if (fragmentList.size() == 1) {
                 mBackButton.setVisibility(View.GONE);
-                buttonNext.setVisibility(View.GONE);
+                buttonNext.setVisibility(View.VISIBLE);
                 buttonNext.setText(R.string.finish);
+                buttonNext.setClickable(false);
             }
             Log.d("tag", "Inside extras " + getIntent().getExtras().getString("field_id"));
         }
@@ -160,34 +160,41 @@ public class SliderActivity extends MvpAppCompatActivity {
         mBackButton.setOnClickListener(v -> {
             slideToBack(fragmentList,viewPager.getCurrentItem());
         });
-        //set a base progress for every steps
+        //set a base progress for every steps which set by dividing 100 with total fragment
         baseProgress=100/fragmentList.size();
     }
 
     @Subscribe
     public void changeValues(StringEvent event) {
-        //change next button
-        if (event.getField().equals("button_next")){
-            if (event.getStringParameter().equals("enable")){
+        //check value for which event is triggered
+        if (event.getStringParameter().equals(Consts.BUTTON_NEXT)){
+            //if for next button
                 buttonNext.setClickable(true);
                 buttonNext.setBackgroundResource(R.color.colorAccent);
-            }
         }
-        else if (event.getField().equals("progressbar")){ //to set a progressbar
-            if (progressValue==0)
+        else if (event.getStringParameter().equals(Consts.PROGRESSBAR)){
+            //if  a progressbar
+            //to set a progressbar
+            if (progressValue==0) //check progressValue
             {
-                if(viewPager.getCurrentItem()==fragmentList.size()-1) progressValue=100-progressValue;
+                //if fragment is last
+                if(viewPager.getCurrentItem()==fragmentList.size()-1) baseProgress=100-progressValue;
                 else if (viewPager.getCurrentItem()>=pvPosition){
+                    //if other fragment
+                    //add baseProgress in ProgressValue
                     progressValue=progressValue+baseProgress;
-                    pvPosition=viewPager.getCurrentItem();
+                    pvPosition=viewPager.getCurrentItem(); //change pvPosition
                 }
             }
-            mProgressBar.setProgress(progressValue);
+            mProgressBar.setProgress(progressValue); //set a Progressbar progress Value
             Log.d("SliderDebug","progress:-"+progressValue);
         }
-        else if (event.getField().equals("steps_left")){ //to set step left TextView
-            mProgressLeftText.setText(String.valueOf(fragmentList.size()-(pvPosition+1)));
+        else if (event.getStringParameter().equals(Consts.LEFT_STEP)){
+            //if step left
+            //to set step left TextView
+            mProgressLeftText.setText(String.valueOf(fragmentList.size()-(pvPosition+1))); //Subtract from total fragment to complete fragment
         }
+
         /*if (fragmentList.size() > 1) {
             slideToNext(fragmentList, viewPager.getCurrentItem());
         }*/
@@ -221,12 +228,12 @@ public class SliderActivity extends MvpAppCompatActivity {
             }*/
 
             setButton();
-            if(position==fragmentList.size()-1) progressValue=100-progressValue;
+            if(position==fragmentList.size()-1) baseProgress=100-progressValue;
             else if (position>=pvPosition){
                 progressValue=progressValue+baseProgress;
                 pvPosition=position;
             }
-            Log.d("SliderDebug","current:-"+position);
+            Log.d("SliderDebug","current:-"+position+"ProgressValue:-"+progressValue);
         }
 
         @Override
@@ -282,6 +289,9 @@ public class SliderActivity extends MvpAppCompatActivity {
                 case Consts.NUMBER_OF_KIDS:
                     fragmentList.add(new SliderHaveKidsFragment());
                     break;
+                case Consts.VIDEO:
+                    isVideoAvailable=false;
+                    break;
             }
         }
     }
@@ -295,9 +305,10 @@ public class SliderActivity extends MvpAppCompatActivity {
             //onBackPressed();
 
             //calling VideoDisclaimerActivity
-            Intent intent = new Intent(SliderActivity.this, VideoDisclaimerActivity.class);
-            startActivity(intent);
-            addFPAchieveIfNeeded();
+            if (!isVideoAvailable){
+                Intent intent = new Intent(SliderActivity.this, VideoDisclaimerActivity.class);
+                startActivity(intent);
+            }
             finish();
 //            addFullProfileAchieve();
         }
@@ -308,10 +319,9 @@ public class SliderActivity extends MvpAppCompatActivity {
         super.onBackPressed();
         Intent intent = new Intent(SliderActivity.this, MainScreenActivity.class);
         startActivity(intent);
-        addFPAchieveIfNeeded();
     }
 
-    private void addFPAchieveIfNeeded() {
+    /*private void addFPAchieveIfNeeded() {
         new RatingRepository().isAchievementExist(FULL_PROFILE_ACH, flag -> {
             if (!flag) {
                 Log.d("SliderDebug", "Add achievement");
@@ -332,10 +342,14 @@ public class SliderActivity extends MvpAppCompatActivity {
                 firebaseAnalytics.logEvent("achieve_full_profile", null);
             }
         });
-    }
+    }*/
 
     /***
      * to set Previous and Next Button
+     */
+
+    /***
+     * set Next and previous value according a current ViewPager
      */
     private void setButton() {
         if (viewPager.getCurrentItem()==0){
@@ -352,6 +366,7 @@ public class SliderActivity extends MvpAppCompatActivity {
         else{
             buttonNext.setText(R.string.next_text);
             buttonNext.setBackgroundResource(R.color.darkColor);
+            buttonNext.setClickable(false);
         }
     }
 
@@ -375,7 +390,7 @@ public class SliderActivity extends MvpAppCompatActivity {
     /***
      * to go back previous fragment
      * @param fragmentList a fragment list
-     * @param position a current position
+     * @param position a current fragment position
      */
     public void slideToBack(List<Fragment> fragmentList,int position){
         if (!fragmentList.isEmpty() && position!=0){

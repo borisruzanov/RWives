@@ -33,7 +33,7 @@ public class FilterRepository {
     public List<String> getPrefsValues() {
         return Arrays.asList(prefs.getGender(), prefs.getAge(), prefs.getCountry(), prefs.getRelationshipStatus(), prefs.getBodyType(),
                 prefs.getEthnicity(), prefs.getFaith(), prefs.getSmokingStatus(), prefs.getDrinkStatus(), prefs.getNumberOfKids(),
-                prefs.getWantChilderOrNot(),prefs.getCity());
+                prefs.getWantChilderOrNot(),prefs.getCity()); //add a one more field city
     }
 
     public void setPrefsValues(List<SearchModel> searchModels) {

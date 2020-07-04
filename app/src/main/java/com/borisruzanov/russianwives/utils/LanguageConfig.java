@@ -7,7 +7,11 @@ import java.util.Locale;
  */
 public class LanguageConfig {
 
+    /***
+     * check Language is Russian Or not
+     * @return true if Local Language is russian or false for other Languages
+     */
     public static boolean isRussian(){
-        return Locale.getDefault().getLanguage().equals("ru");
+        return Locale.getDefault().getLanguage().equals(Consts.RussianLang);
     }
 }

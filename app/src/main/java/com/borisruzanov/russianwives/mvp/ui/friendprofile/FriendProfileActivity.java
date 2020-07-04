@@ -384,7 +384,9 @@ public class FriendProfileActivity extends MvpAppCompatActivity implements Frien
          mSelectionLinear.setVisibility(View.GONE);
         }else{
             loadImage(image);
-            if (friendVideoUrl!=null && friendVideoUrl.length()>0){
+            //check if video url available or not
+            if (friendVideoUrl!=null && friendVideoUrl.length()>0 && !friendVideoUrl.equals(Consts.DEFAULT)){
+                //if available show VideoView and hide PhotoView
                 mFriendVideoUrl=friendVideoUrl;
                 mVideoFrame.setVisibility(View.VISIBLE);
                 mVideoView.setVisibility(View.VISIBLE);
@@ -398,6 +400,7 @@ public class FriendProfileActivity extends MvpAppCompatActivity implements Frien
                 imageView.setVisibility(View.INVISIBLE);
                 mSelectionLinear.setVisibility(View.VISIBLE);
             }else{
+                //not available then hideVideoView and SelectionView and show only Photo
                 mVideoFrame.setVisibility(View.GONE);
                 mSelectionLinear.setVisibility(View.GONE);
                 imageView.setVisibility(View.VISIBLE);
@@ -599,8 +602,11 @@ public class FriendProfileActivity extends MvpAppCompatActivity implements Frien
      */
     private void setListener() {
 
+        //set Listener on Video ImageButton
         mVidoeicon.setOnClickListener( v -> {
-            if (mFriendVideoUrl!=null && mFriendVideoUrl.length()>0){
+            //check for videoUrl available or not
+            if (mFriendVideoUrl!=null && mFriendVideoUrl.length()>0 && !mFriendVideoUrl.equals(Consts.DEFAULT)){
+                //show VideoView show and hide PhotoView
                 mVideoFrame.setVisibility(View.VISIBLE);
                 mVideoView.setVisibility(View.VISIBLE);
                 mVideoView.setVideoURI(Uri.parse(mFriendVideoUrl));
@@ -613,19 +619,23 @@ public class FriendProfileActivity extends MvpAppCompatActivity implements Frien
                 imageView.setVisibility(View.INVISIBLE);
             }
             else{
+                // video not available then hide VideoView and toast a message
                 mVideoFrame.setVisibility(View.GONE);
                 imageView.setVisibility(View.VISIBLE);
-                Toast.makeText(getApplicationContext(),"Video Not Available",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), getResources().getString(R.string.video_not_available),Toast.LENGTH_SHORT).show();
             }
         });
 
+        //set listener on photo ImageButton
         mPhotoicon.setOnClickListener(v -> {
-            if (mVideoView.isPlaying()) mVideoView.stopPlayback();
+            if (mVideoView.isPlaying()) mVideoView.stopPlayback(); //if video play then stop
+            //hide videoView and show ImageView
             mVideoFrame.setVisibility(View.GONE);
             imageView.setVisibility(View.VISIBLE);
             mPlayimage.setVisibility(View.GONE);
         });
 
+        //set listener on play button
         mPlayimage.setOnClickListener(v -> {
             if (mVideoView.isPlaying()){
                 mVideoView.pause();
