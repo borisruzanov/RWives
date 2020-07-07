@@ -233,7 +233,6 @@ public class FriendProfileActivity extends MvpAppCompatActivity implements Frien
     }
 
 
-
     /**
      * Phrases block logic
      */
@@ -385,7 +384,7 @@ public class FriendProfileActivity extends MvpAppCompatActivity implements Frien
         }else{
             loadImage(image);
             //check if video url available or not
-            if (friendVideoUrl!=null && friendVideoUrl.length()>0 && !friendVideoUrl.equals(Consts.DEFAULT)){
+            if (friendVideoUrl!=null && friendVideoUrl.length()>0 && !friendVideoUrl.equals(Consts.DEFAULT) && !friendVideoUrl.equals(Consts.WAIT_APPROVAL)){
                 //if available show VideoView and hide PhotoView
                 mFriendVideoUrl=friendVideoUrl;
                 mVideoFrame.setVisibility(View.VISIBLE);
@@ -605,7 +604,7 @@ public class FriendProfileActivity extends MvpAppCompatActivity implements Frien
         //set Listener on Video ImageButton
         mVidoeicon.setOnClickListener( v -> {
             //check for videoUrl available or not
-            if (mFriendVideoUrl!=null && mFriendVideoUrl.length()>0 && !mFriendVideoUrl.equals(Consts.DEFAULT)){
+            if (mFriendVideoUrl!=null && mFriendVideoUrl.length()>0 && !mFriendVideoUrl.equals(Consts.DEFAULT) && !mFriendVideoUrl.equals(Consts.WAIT_APPROVAL)){
                 //show VideoView show and hide PhotoView
                 mVideoFrame.setVisibility(View.VISIBLE);
                 mVideoView.setVisibility(View.VISIBLE);

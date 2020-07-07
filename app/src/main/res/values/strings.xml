@@ -2314,4 +2314,7 @@
     <string name="video_upload_sucess_text">VIDEO UPLOADED SUCCESSFULLY</string>
     <string name="video_upload_error_text">ERROR,PLEASE UPLOAD AGAIN</string>
     <string name="video_record_error_text">An error occurred, please try again later.</string>
+    <string name="some_wrong">Something went wrong..!Try again</string>
+    <string name="country_city_updated">Country and city updated</string>
+    <string name="wait_for_approval">Please Wait untill your video approved from Admin</string>
 </resources>

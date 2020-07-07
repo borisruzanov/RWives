@@ -28,6 +28,7 @@ public class SliderLanguagesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        EventBus.getDefault().post(new StringEvent(Consts.COMPLETE));
         EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
         EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
         EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));

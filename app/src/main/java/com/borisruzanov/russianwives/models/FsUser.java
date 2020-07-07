@@ -316,4 +316,5 @@ public class FsUser implements ViewType {
     public void setVideo(String video) {
         this.video = video;
     }
+
 }

@@ -75,6 +75,7 @@
                     android:layout_gravity="end"
                     android:layout_marginTop="60dp"
                     android:padding="@dimen/dp20"
+                    android:visibility="gone"
                     android:orientation="vertical">
                     <android.support.v7.widget.AppCompatImageButton
                         android:id="@+id/friend_activity_photobutton"

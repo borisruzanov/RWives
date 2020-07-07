@@ -78,6 +78,7 @@
                     android:visibility="gone">
 
                      <TextView
+                         android:id="@+id/my_profile_videonot_found_text"
                          android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
                          android:textColor="@color/darkColor"

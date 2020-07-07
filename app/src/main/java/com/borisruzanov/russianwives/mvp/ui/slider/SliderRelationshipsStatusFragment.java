@@ -75,6 +75,7 @@ public class SliderRelationshipsStatusFragment extends Fragment {
                         if (getArguments() != null && getArguments().getString(Consts.NEED_BACK) != null) {
                             if (getActivity() != null) getActivity().onBackPressed();
                         }
+                        EventBus.getDefault().post(new StringEvent(Consts.COMPLETE));
                         EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
                         EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
                         EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));

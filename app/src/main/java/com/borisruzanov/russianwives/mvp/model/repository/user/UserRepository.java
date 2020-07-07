@@ -328,7 +328,6 @@ public class UserRepository {
                 if (task.isSuccessful()) {
                     DocumentSnapshot snapshot = task.getResult();
                     if (snapshot != null) {
-
                         //check full_profile field is null
                         if(snapshot.getString(Consts.FULL_PROFILE)==null){
                             //trigger when full_profile field not found in snapshot
@@ -375,9 +374,17 @@ public class UserRepository {
     private ArrayList<String> getListOfDefaults(DocumentSnapshot document) {
         ArrayList<String> valuesList = new ArrayList<>();
         for (String field : Consts.fieldKeyList) {
-            String value = document.getString(field);
-            if (value != null && value.toLowerCase().trim().equals(Consts.DEFAULT)) {
-                valuesList.add(field);
+            String value=document.getString(field);
+            if (field.equals(Consts.VIDEO)){ //check for video field
+                if (value==null) //if null then add
+                    valuesList.add(field);
+                else if (value.toLowerCase().trim().equals(Consts.DEFAULT)){ //if value is default then add
+                    valuesList.add(field);
+                }
+            }else {
+                if (value != null && value.toLowerCase().trim().equals(Consts.DEFAULT)) {
+                    valuesList.add(field);
+                }
             }
         }
         return valuesList;
@@ -1405,6 +1412,17 @@ public class UserRepository {
         });
     }
 
-
+    /***
+     * set video upload status field of firestore
+     * @param uid current user id
+     */
+    public void setVideoUploadStatus(String uid){
+        Map<String, Object> map=new HashMap<>();
+        map.put(Consts.VIDEO,Consts.WAIT_APPROVAL); //set video to wait for approval
+        users.document(uid).set(map,SetOptions.merge()).addOnFailureListener(e -> {
+            //if fail try again
+           setVideoUploadStatus(uid);
+        });
+    }
 
 }

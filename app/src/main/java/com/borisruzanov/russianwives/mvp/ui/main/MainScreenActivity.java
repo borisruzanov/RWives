@@ -492,7 +492,12 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
      */
     @Override
     public void showDefaultDialogScreen(ArrayList<String> list) {
+        //check if empty then return
+        if (list.size() == 0){
+            return;
+        }
         //check if only video reaming or not
+
         if (list.size()==1 && list.get(0).equals(Consts.VIDEO)){
             //go to videoDeclaimer if only video Remaining
             Intent videoRecord=new Intent(MainScreenActivity.this, VideoDisclaimerActivity.class);

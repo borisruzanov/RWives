@@ -85,6 +85,7 @@ public class SliderEthnicityFragment extends Fragment {
                             if (getActivity() != null) getActivity().onBackPressed();
                         }
                         Toast.makeText(getActivity(), getString(R.string.ethnicity_updated), Toast.LENGTH_LONG).show();
+                        EventBus.getDefault().post(new StringEvent(Consts.COMPLETE));
                         EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
                         EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
                         EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));

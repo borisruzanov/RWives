@@ -154,4 +154,8 @@ public final class Consts {
     public static final String BUTTON_NEXT ="button_next" ;
     public static final String PROGRESSBAR="progressbar";
     public static final String LEFT_STEP="steps_left";
+    public static final String COMPLETE = "complete";
+
+    public static final String WAIT_APPROVAL="wait_for_approval";
+
 }

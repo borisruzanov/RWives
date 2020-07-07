@@ -162,7 +162,7 @@ class MyProfileActivity : MvpAppCompatActivity(), MyProfileView, UserHideCallbac
                     .into(imageView)
         }
         //check for Video URL available or not
-        if(!videoURL.isNullOrEmpty() && videoURL != Consts.DEFAULT){
+        if(!videoURL.isNullOrEmpty() && videoURL != Consts.DEFAULT && videoURL!= Consts.WAIT_APPROVAL){
             //if available then show VideoView and hide PhotoView
             mVideoFrameLayout.visibility=View.VISIBLE
             mVideoView.visibility=View.VISIBLE
@@ -266,7 +266,7 @@ class MyProfileActivity : MvpAppCompatActivity(), MyProfileView, UserHideCallbac
         //set Listener on video ImageButton
          mVideoicon.setOnClickListener {
              //check gor video URL
-             if (!presenter.getVideoUri().isNullOrEmpty() && !presenter.getVideoUri().equals(Consts.DEFAULT)){
+             if (!presenter.getVideoUri().isNullOrEmpty() && !presenter.getVideoUri().equals(Consts.DEFAULT) && !presenter.getVideoUri().equals(Consts.WAIT_APPROVAL)){
                  //if available then show VideoView and hide PhotoView
                  mVideoFrameLayout.visibility=View.VISIBLE
                  mVideoView.visibility=View.VISIBLE
@@ -288,6 +288,12 @@ class MyProfileActivity : MvpAppCompatActivity(), MyProfileView, UserHideCallbac
                  mVideoErrorLinearLayout.visibility=View.VISIBLE
                  //also hide PhotoView
                  imageView.visibility=View.INVISIBLE
+                 if(!presenter.getVideoUri().isNullOrEmpty() && presenter.getVideoUri().equals(Consts.WAIT_APPROVAL)){
+                     mVideoUpload.visibility=View.GONE
+                     var textView:TextView
+                     textView=findViewById(R.id.my_profile_videonot_found_text)
+                     textView.text=getString(R.string.wait_for_approval)
+                 }
                  Log.d("MyProfileDebug","Video url is Empty")
              }
          }

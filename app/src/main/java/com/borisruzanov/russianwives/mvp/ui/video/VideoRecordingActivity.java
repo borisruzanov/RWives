@@ -31,6 +31,7 @@ import com.borisruzanov.russianwives.utils.LanguageConfig;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.UploadTask;
@@ -162,6 +163,8 @@ public class VideoRecordingActivity extends AppCompatActivity  {
                                     Toast.makeText(getApplicationContext(), getResources().getString(R.string.video_upload_sucess_text), Toast.LENGTH_LONG).show();
                                     mVideoUri = null;
                                     mVideoView.setVideoURI(null);
+                                    setVideoStatus();
+                                    AfterVideoUpload();
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
@@ -169,7 +172,6 @@ public class VideoRecordingActivity extends AppCompatActivity  {
                                     progressDialog.dismiss();
                                     FirebaseStorage.getInstance().getReference().child("/videos/" + videoID).delete();
                                     Toast.makeText(getApplicationContext(), getResources().getString(R.string.video_upload_error_text), Toast.LENGTH_LONG).show();
-                                    AfterVideoUpload();
                                 }
                             });
                         }
@@ -191,6 +193,8 @@ public class VideoRecordingActivity extends AppCompatActivity  {
             });
         }
     }
+
+
 
     /***
      * check permission for camera
@@ -265,8 +269,16 @@ public class VideoRecordingActivity extends AppCompatActivity  {
                 new RatingRepository().addAchievement(FULL_PROFILE_ACH);
                 userRepository.addRating(8);
                 firebaseAnalytics.logEvent("achieve_full_profile", null);
+                finish();
             }
         });
+    }
+
+    /***
+     *call videoStatus method of userRepository
+     */
+    private void setVideoStatus() {
+        new UserRepository(new Prefs(VideoRecordingActivity.this)).setVideoUploadStatus(FirebaseAuth.getInstance().getUid());
     }
 
 

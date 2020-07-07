@@ -188,5 +188,4 @@ public class Prefs {
      */
     public String getCity(){ return getValue(Consts.CITY);}
 
-
 }

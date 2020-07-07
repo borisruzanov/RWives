@@ -46,8 +46,9 @@ public class SliderActivity extends MvpAppCompatActivity {
 
     private int progressValue=0; //a value which set in progressbar
     private int pvPosition=0;// hold previous fragment position
-    private int baseProgress=0; //hold baseProgress
+    private static int baseProgress=7; //hold baseProgress
     private boolean isVideoAvailable=true; //indicate that video is uploaded or not
+    private int completed=0;//indicate how much info completed
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,9 +56,6 @@ public class SliderActivity extends MvpAppCompatActivity {
         setContentView(R.layout.activity_slider);
         toolbar = findViewById(R.id.toolbar_slider);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_keyboard_backspace_black_24dp);
-        getSupportActionBar().setDisplayShowTitleEnabled(true);
 
         firebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
@@ -77,7 +75,8 @@ public class SliderActivity extends MvpAppCompatActivity {
 
         if (getIntent().getStringArrayListExtra(Consts.DEFAULT_LIST) != null) {
             addFragments();
-        } else if (getIntent().getExtras().getString("field_id") != null) {
+        }
+        else if (getIntent().getExtras().getString("field_id") != null) {
             switch (getIntent().getExtras().getString("field_id")) {
                 case "Image":
                     fragmentList.add(SliderImageFragment.newInstance());
@@ -122,6 +121,11 @@ public class SliderActivity extends MvpAppCompatActivity {
                     fragmentList.add(SliderHobbyFragment.newInstance());
                     break;
             }
+
+            //hide progressbar,steps left if only edit fragment called
+            mProgressBar.setVisibility(View.GONE);
+            mProgressLeftText.setVisibility(View.GONE);
+            findViewById(R.id.slider_step_left_text).setVisibility(View.GONE);
         }
 
         adapter = new UserInfoPagerAdapter(getSupportFragmentManager(), fragmentList);
@@ -137,6 +141,10 @@ public class SliderActivity extends MvpAppCompatActivity {
             //calling videoDisclaimerActivity if video not uploaded
             if (!isVideoAvailable) {
                 startActivity(new Intent(SliderActivity.this, VideoDisclaimerActivity.class));
+                finish();
+            }
+            else{
+                //if all done then finish
                 finish();
             }
         }
@@ -156,12 +164,11 @@ public class SliderActivity extends MvpAppCompatActivity {
         }
         Log.d(Contract.SLIDER, "Inside extras " + getIntent().getExtras().getString("field_id"));
 
-
         mBackButton.setOnClickListener(v -> {
             slideToBack(fragmentList,viewPager.getCurrentItem());
         });
-        //set a base progress for every steps which set by dividing 100 with total fragment
-        baseProgress=100/fragmentList.size();
+        progressValue=baseProgress*completed;
+        mProgressBar.setProgress(progressValue);
     }
 
     @Subscribe
@@ -175,16 +182,9 @@ public class SliderActivity extends MvpAppCompatActivity {
         else if (event.getStringParameter().equals(Consts.PROGRESSBAR)){
             //if  a progressbar
             //to set a progressbar
-            if (progressValue==0) //check progressValue
-            {
-                //if fragment is last
-                if(viewPager.getCurrentItem()==fragmentList.size()-1) baseProgress=100-progressValue;
-                else if (viewPager.getCurrentItem()>=pvPosition){
-                    //if other fragment
-                    //add baseProgress in ProgressValue
-                    progressValue=progressValue+baseProgress;
-                    pvPosition=viewPager.getCurrentItem(); //change pvPosition
-                }
+            if (viewPager.getCurrentItem()==fragmentList.size()-1) progressValue=100;
+            else{
+                progressValue=baseProgress*completed;
             }
             mProgressBar.setProgress(progressValue); //set a Progressbar progress Value
             Log.d("SliderDebug","progress:-"+progressValue);
@@ -192,22 +192,16 @@ public class SliderActivity extends MvpAppCompatActivity {
         else if (event.getStringParameter().equals(Consts.LEFT_STEP)){
             //if step left
             //to set step left TextView
-            mProgressLeftText.setText(String.valueOf(fragmentList.size()-(pvPosition+1))); //Subtract from total fragment to complete fragment
+            mProgressLeftText.setText(String.valueOf(15-completed)); //Subtract from total fragment to complete fragment
         }
-
-        /*if (fragmentList.size() > 1) {
-            slideToNext(fragmentList, viewPager.getCurrentItem());
-        }*/
+        else if (event.getStringParameter().equals(Consts.COMPLETE)){
+            //to increase value of completed info
+            completed++;
+        }
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                Log.d("tag", "Back clicked");
-                onBackPressed();
-                return true;
-        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -219,20 +213,7 @@ public class SliderActivity extends MvpAppCompatActivity {
 
         @Override
         public void onPageSelected(int position) {
-            /*if (fragmentList.size() == position + 1) {
-                buttonNext.setVisibility(View.VISIBLE);
-                buttonNext.setText(R.string.finish);
-            } else {
-                buttonNext.setVisibility(View.GONE);
-                buttonNext.setText(R.string.next_text);
-            }*/
-
             setButton();
-            if(position==fragmentList.size()-1) baseProgress=100-progressValue;
-            else if (position>=pvPosition){
-                progressValue=progressValue+baseProgress;
-                pvPosition=position;
-            }
             Log.d("SliderDebug","current:-"+position+"ProgressValue:-"+progressValue);
         }
 
@@ -242,57 +223,105 @@ public class SliderActivity extends MvpAppCompatActivity {
     };
 
     private void addFragments() {
-        for (String key : getIntent().getStringArrayListExtra(Consts.DEFAULT_LIST)) {
-            switch (key) {
-                case Consts.BODY_TYPE:
-                    fragmentList.add(new SliderBodytypeFragment());
+        ArrayList<String> list=getIntent().getStringArrayListExtra(Consts.DEFAULT_LIST);
+        Log.d("sliderDebug","list size:-"+list.size());
+        for (int i=0;i<15;i++){
+            switch (i){
+                case 0:
+                    if (list.contains(Consts.NAME))
+                        fragmentList.add(new SliderNameFragment());
+                    else
+                        completed++;
                     break;
-                case Consts.AGE:
-                    fragmentList.add(new SliderAgeFragment());
+                case 1:
+                    if (list.contains(Consts.GENDER))
+                        fragmentList.add(new SliderGenderFragment());
+                    else
+                        completed++;
                     break;
-                case Consts.DRINK_STATUS:
-                    fragmentList.add(new SliderDrinkStatusFragment());
+                case 2:
+                    if (list.contains(Consts.IMAGE))
+                        fragmentList.add(new SliderImageFragment());
+                    else
+                        completed++;
                     break;
-                case Consts.COUNTRY:
-                    fragmentList.add(new SliderCountriesFragment());
+                case 3:
+                    if (list.contains(Consts.AGE))
+                        fragmentList.add(new SliderAgeFragment());
+                    else
+                        completed++;
                     break;
-                case Consts.ETHNICITY:
-                    fragmentList.add(new SliderEthnicityFragment());
+                case 4:
+                    if (list.contains(Consts.COUNTRY))
+                        fragmentList.add(new SliderCountriesFragment());
+                    else
+                        completed++;
                     break;
-                case Consts.GENDER:
-                    fragmentList.add(new SliderGenderFragment());
+                case 5:
+                    if (list.contains(Consts.LANGUAGES))
+                        fragmentList.add(new SliderLanguagesFragment());
+                    else
+                        completed++;
                     break;
-                case Consts.HOBBY:
-                    fragmentList.add(new SliderHobbyFragment());
+                case 6:
+                    if (list.contains(Consts.BODY_TYPE))
+                        fragmentList.add(new SliderBodytypeFragment());
+                    else
+                        completed++;
                     break;
-                case Consts.FAITH:
-                    fragmentList.add(new SliderFaithFragment());
+                case 7:
+                    if (list.contains(Consts.ETHNICITY))
+                        fragmentList.add(new SliderEthnicityFragment());
+                    else
+                        completed++;
                     break;
-                case Consts.HOW_TALL:
-                    // maybe soon implemented
+                case 8:
+                    if (list.contains(Consts.FAITH))
+                        fragmentList.add(new SliderFaithFragment());
+                    else
+                        completed++;
                     break;
-                case Consts.IMAGE:
-                    fragmentList.add(new SliderImageFragment());
+                case 9:
+                    if (list.contains(Consts.DRINK_STATUS))
+                        fragmentList.add(new SliderDrinkStatusFragment());
+                    else
+                        completed++;
                     break;
-                case Consts.LANGUAGES:
-                    fragmentList.add(new SliderLanguagesFragment());
+                case 10:
+                    if (list.contains(Consts.SMOKING_STATUS))
+                        fragmentList.add(new SliderSmokingStatusFragment());
+                    else
+                        completed++;
                     break;
-                case Consts.SMOKING_STATUS:
-                    fragmentList.add(new SliderSmokingStatusFragment());
+                case 11:
+                    if (list.contains(Consts.RELATIONSHIP_STATUS))
+                        fragmentList.add(new SliderRelationshipsStatusFragment());
+                    else
+                        completed++;
                     break;
-                case Consts.RELATIONSHIP_STATUS:
-                    fragmentList.add(new SliderRelationshipsStatusFragment());
+                case 12:
+                    if (list.contains(Consts.NUMBER_OF_KIDS))
+                        fragmentList.add(new SliderHaveKidsFragment());
+                    else
+                        completed++;
                     break;
-                case Consts.WANT_CHILDREN_OR_NOT:
-                    fragmentList.add(new SliderWillingKidsFragment());
+                case 13:
+                    if (list.contains(Consts.WANT_CHILDREN_OR_NOT))
+                        fragmentList.add(new SliderWillingKidsFragment());
+                    else
+                        completed++;
                     break;
-                case Consts.NUMBER_OF_KIDS:
-                    fragmentList.add(new SliderHaveKidsFragment());
-                    break;
-                case Consts.VIDEO:
-                    isVideoAvailable=false;
+                case 14:
+                    if (list.contains(Consts.HOBBY))
+                        fragmentList.add(new SliderHobbyFragment());
+                    else
+                        completed++;
                     break;
             }
+        }
+
+        if (list.contains(Consts.VIDEO)){
+            isVideoAvailable=false;
         }
     }
 
@@ -321,28 +350,6 @@ public class SliderActivity extends MvpAppCompatActivity {
         startActivity(intent);
     }
 
-    /*private void addFPAchieveIfNeeded() {
-        new RatingRepository().isAchievementExist(FULL_PROFILE_ACH, flag -> {
-            if (!flag) {
-                Log.d("SliderDebug", "Add achievement");
-                addFullProfileAchieve();
-            } else Log.d("SliderDebug", "Already exist");
-        });
-    }
-
-    private void addFullProfileAchieve() {
-        UserRepository userRepository = new UserRepository(new Prefs(getApplicationContext()));
-        userRepository.getDefaultList(stringList -> {
-            Log.d("TimerDebug", "String list emptiness is " + stringList.isEmpty());
-            if (stringList.isEmpty()) {
-                userRepository.clearDialogOpenDate();
-                userRepository.setFullProfile();
-                new RatingRepository().addAchievement(FULL_PROFILE_ACH);
-                userRepository.addRating(8);
-                firebaseAnalytics.logEvent("achieve_full_profile", null);
-            }
-        });
-    }*/
 
     /***
      * to set Previous and Next Button
@@ -361,6 +368,7 @@ public class SliderActivity extends MvpAppCompatActivity {
         }
         if (viewPager.getCurrentItem()==fragmentList.size()-1){
             buttonNext.setText(R.string.finish);
+            buttonNext.setBackgroundResource(R.color.darkColor);
             buttonNext.setClickable(false);
         }
         else{
@@ -381,10 +389,11 @@ public class SliderActivity extends MvpAppCompatActivity {
         super.onResume();
         if (!EventBus.getDefault().isRegistered(this))
             EventBus.getDefault().register(this);
-        mProgressBar.setProgress(0);
-        mProgressLeftText.setText(String.valueOf(fragmentList.size()));
+        mProgressLeftText.setText(String.valueOf(15-completed));
         setButton();
-        Log.d("sliderDebug","fragment size:-"+fragmentList.size()+" current:-");
+        Log.d("sliderDebug","fragment size:-"+fragmentList.size()+" current:-"+viewPager.getCurrentItem()+
+                "\nProgressValue:-"+progressValue
+                +"\ncompleted:-"+completed);
     }
 
     /***
@@ -397,6 +406,5 @@ public class SliderActivity extends MvpAppCompatActivity {
             viewPager.setCurrentItem(position-1);
         }
     }
-
 
 }

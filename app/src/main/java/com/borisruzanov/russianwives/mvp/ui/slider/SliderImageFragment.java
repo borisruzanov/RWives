@@ -93,22 +93,26 @@ public class SliderImageFragment extends Fragment {
                     new SliderRepository().uploadUserPhoto(resultUri, () -> {
                         if (getArguments() != null && getArguments().getString(Consts.NEED_BACK) != null) {
                             if (getActivity() != null) getActivity().onBackPressed();
+                            return;
                         }
+                        Toast.makeText(getActivity(), getString(R.string.image_updated), Toast.LENGTH_LONG).show();
+                        EventBus.getDefault().post(new StringEvent(Consts.COMPLETE));
+                        EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
+                        EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
+                        EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));
                     });
 
-                    Toast.makeText(getActivity(), getString(R.string.image_updated), Toast.LENGTH_LONG).show();
+                    /*Toast.makeText(getActivity(), getString(R.string.image_updated), Toast.LENGTH_LONG).show();
                     EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
                     EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
-                    EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));
+                    EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));*/
                 } else {
                     Toast.makeText(getActivity(), R.string.there_is_an_error, Toast.LENGTH_LONG).show();
                 }
                 progressDialog.dismiss();
-
             } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
                 Exception error = CropImage.getActivityResult(data).getError();
                 Log.d(Contract.TAG, "resultCode == CropImage.ERROR");
-
             }
         }
 

@@ -31,6 +31,7 @@ public class SliderCountriesFragment extends Fragment {
 
     private boolean isCountry;
     private ListView countryCityList;
+    private String mCountry =null;
 
     public SliderCountriesFragment() {
         // Required empty public constructor
@@ -58,26 +59,39 @@ public class SliderCountriesFragment extends Fragment {
                 String country = CountriesList.initData().get(position).getCountryName();
                 Log.d("SliderDebug","Country:-"+country);
                 if (!country.equals("           ")) {
-                    Map<String, Object> map = new HashMap<>();
+                    //country value is saved in member varaible country
+                    this.mCountry =country;
+                    textView.setText(R.string.choose_your_city);
+                    isCountry=false;
+                    setCity(country);
+                    /*Map<String, Object> map = new HashMap<>();
                     map.put(Consts.COUNTRY, country);
                     new SliderRepository().updateFieldFromCurrentUser(map, () -> {
                         Toast.makeText(getActivity(), getString(R.string.country_updated), Toast.LENGTH_LONG).show();
                         textView.setText(R.string.choose_your_city);
                         isCountry=false;
                         setCity(country);
-                    });
+                    });*/
                 }
             }
             else{
                 String city= (String) countryCityList.getItemAtPosition(position);
                 Log.d("SliderDebug","City:-"+city);
+                if (this.mCountry ==null){
+                    //if country is not selected then go back
+                    Toast.makeText(getActivity(),getResources().getString(R.string.some_wrong),Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 Map<String, Object> map = new HashMap<>();
+                map.put(Consts.COUNTRY,this.mCountry);
                 map.put(Consts.CITY, city);
+                //country and city add in firestore
                 new SliderRepository().updateFieldFromCurrentUser(map, () -> {
                     if (getArguments() != null && getArguments().getString(Consts.NEED_BACK) != null) {
                         if (getActivity() != null) getActivity().onBackPressed();
                     }
-                    Toast.makeText(getActivity(), getString(R.string.city_updated), Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(), getString(R.string.country_city_updated), Toast.LENGTH_LONG).show();
+                    EventBus.getDefault().post(new StringEvent(Consts.COMPLETE));
                     EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
                     EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
                     EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));
