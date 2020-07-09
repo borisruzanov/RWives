@@ -29,7 +29,7 @@ public class SliderSmokingStatusFragment extends Fragment {
     Button btnSave;
     RadioGroup radioGroup;
     RadioButton radioButton;
-
+    private boolean isComplete =false;
     public SliderSmokingStatusFragment() {
         // Required empty public constructor
     }
@@ -53,14 +53,19 @@ public class SliderSmokingStatusFragment extends Fragment {
         new SliderRepository().getFieldFromCurrentUser(Consts.SMOKING_STATUS, value -> {
             if (value != null && value.equals(getString(R.string.no_way))){
                 radioGroup.check(R.id.fragment_slider_smoking_status_rbtn_no_way);
+                isComplete=true;
             } else if (value != null && value.equals(getString(R.string.occasionally))){
                 radioGroup.check(R.id.fragment_slider_smoking_status_rbtn_occasioally);
+                isComplete=true;
             } else if (value != null && value.equals(getString(R.string.daily))){
                 radioGroup.check(R.id.fragment_slider_smoking_status_rbtn_daily);
+                isComplete=true;
             }else if (value != null && value.equals(getString(R.string.cigar_aficionado))){
                 radioGroup.check(R.id.fragment_slider_smokine_status_rbtn_cigar_aficionado);
+                isComplete=true;
             }else if (value != null && value.equals(getString(R.string.yes_but_trying_to_quit))){
                 radioGroup.check(R.id.fragment_slider_smokine_status_rbtn_quit);
+                isComplete=true;
             }
         });
 
@@ -82,10 +87,13 @@ public class SliderSmokingStatusFragment extends Fragment {
                             if (getActivity() != null) getActivity().onBackPressed();
                         }
                         Toast.makeText(getActivity(), getString(R.string.smoking_updated), Toast.LENGTH_LONG).show();
-                        EventBus.getDefault().post(new StringEvent(Consts.COMPLETE));
-                        EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
-                        EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
-                        EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));
+                        if(!isComplete) {
+                            EventBus.getDefault().post(new StringEvent(Consts.COMPLETE));
+                            EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
+                            EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
+                            EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));
+                            isComplete=true;
+                        }
                     });
                 }
             } else {

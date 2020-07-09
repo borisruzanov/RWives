@@ -28,7 +28,7 @@ public class SliderHobbyFragment extends MvpAppCompatFragment{
     EditText answer;
     Button btnSave;
     String result;
-
+    private boolean isComplete=false;
     public SliderHobbyFragment() {
         // Required empty public constructor
     }
@@ -57,6 +57,7 @@ public class SliderHobbyFragment extends MvpAppCompatFragment{
             if (value != null && !value.equals(Consts.DEFAULT)) {
                 answer.setText(value);
                 answer.setSelection(answer.getText().length());
+                isComplete=true;
             }
         });
 
@@ -71,10 +72,13 @@ public class SliderHobbyFragment extends MvpAppCompatFragment{
                         if (getActivity() != null) getActivity().onBackPressed();
                     }
                     Toast.makeText(getActivity(), getString(R.string.hobby_updated), Toast.LENGTH_LONG).show();
-                    EventBus.getDefault().post(new StringEvent(Consts.COMPLETE));
-                    EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
-                    EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
-                    EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));
+                    if (!isComplete){
+                        EventBus.getDefault().post(new StringEvent(Consts.COMPLETE));
+                        EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
+                        EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
+                        EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));
+                        isComplete=true;
+                    }
                 });
             }
         });

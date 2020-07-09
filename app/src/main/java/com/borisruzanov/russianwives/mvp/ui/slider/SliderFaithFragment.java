@@ -29,7 +29,7 @@ public class SliderFaithFragment extends Fragment {
     Button btnSave;
     RadioGroup radioGroup;
     RadioButton radioButton;
-
+    private boolean isComplete=false;
     public SliderFaithFragment() {
         // Required empty public constructor
     }
@@ -52,18 +52,25 @@ public class SliderFaithFragment extends Fragment {
         new SliderRepository().getFieldFromCurrentUser(Consts.FAITH, value -> {
             if (value != null && value.equals(getString(R.string.christian))){
                 radioGroup.check(R.id.fragment_slider_faith_rbtn_christian);
+                isComplete=true;
             } else if (value != null && value.equals(getString(R.string.black_african_descent))){
                 radioGroup.check(R.id.fragment_slider_faith_rbtn_black);
+                isComplete=true;
             } else if (value != null && value.equals(getString(R.string.muslim))){
                 radioGroup.check(R.id.fragment_slider_faith_rbtn_muslim);
+                isComplete=true;
             }else if (value != null && value.equals(getString(R.string.atheist))){
                 radioGroup.check(R.id.fragment_slider_faith_rbtn_atheist);
+                isComplete=true;
             }else if (value != null && value.equals(getString(R.string.buddhist))){
                 radioGroup.check(R.id.fragment_slider_faith_rbtn_buddist);
+                isComplete=true;
             }else if (value != null && value.equals(getString(R.string.adventist))){
                 radioGroup.check(R.id.fragment_slider_faith_rbtn_adventist);
+                isComplete=true;
             } else if (value != null && value.equals(getString(R.string.other))){
                 radioGroup.check(R.id.fragment_slider_faith_rbtn_other);
+                isComplete=true;
             }
         });
 
@@ -85,11 +92,13 @@ public class SliderFaithFragment extends Fragment {
                             if (getActivity() != null) getActivity().onBackPressed();
                         }
                         Toast.makeText(getActivity(), getString(R.string.faith_updated), Toast.LENGTH_LONG).show();
-                        EventBus.getDefault().post(new StringEvent(Consts.COMPLETE));
-                        EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
-                        EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
-                        EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));
-
+                        if (!isComplete) {
+                            EventBus.getDefault().post(new StringEvent(Consts.COMPLETE));
+                            EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
+                            EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
+                            EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));
+                            isComplete=true;
+                        }
                     });
                 }
             } else {

@@ -29,7 +29,7 @@ public class SliderHaveKidsFragment extends Fragment {
     Button btnSave;
     RadioGroup radioGroup;
     RadioButton radioButton;
-
+    private boolean isComplete=false;
     public SliderHaveKidsFragment() {
         // Required empty public constructor
     }
@@ -53,12 +53,16 @@ public class SliderHaveKidsFragment extends Fragment {
         new SliderRepository().getFieldFromCurrentUser(Consts.NUMBER_OF_KIDS, value -> {
             if (value != null && value.equals(getString(R.string.no))){
                 radioGroup.check(R.id.fragment_slider_number_of_kids_rbtn_no);
+                isComplete=true;
             } else if (value != null && value.equals(getString(R.string.yes_they_sometimes_live_at_home))){
                 radioGroup.check(R.id.fragment_slider_number_of_kids_rbtn_sometimes_at_home);
+                isComplete=true;
             } else if (value != null && value.equals(getString(R.string.yes_they_live_away_from_home))){
                 radioGroup.check(R.id.fragment_slider_number_of_kids_rbtn_away);
+                isComplete=true;
             }else if (value != null && value.equals(getString(R.string.yes_they_live_at_home))){
                 radioGroup.check(R.id.fragment_slider_number_of_kids_rbtn_at_home);
+                isComplete=true;
             }
         });
 
@@ -80,10 +84,13 @@ public class SliderHaveKidsFragment extends Fragment {
                             if (getActivity() != null) getActivity().onBackPressed();
                         }
                         Toast.makeText(getActivity(), getString(R.string.number_of_kids_updated), Toast.LENGTH_LONG).show();
-                        EventBus.getDefault().post(new StringEvent(Consts.COMPLETE));
-                        EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
-                        EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
-                        EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));
+                        if(!isComplete) {
+                            EventBus.getDefault().post(new StringEvent(Consts.COMPLETE));
+                            EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
+                            EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
+                            EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));
+                            isComplete=true;
+                        }
                     });
                 }
             } else {

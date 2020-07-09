@@ -30,7 +30,7 @@ public class SliderDrinkStatusFragment extends Fragment {
     Button btnSave;
     RadioGroup radioGroup;
     RadioButton radioButton;
-
+    private boolean isComplete=false;
 
     public SliderDrinkStatusFragment() {
         // Required empty public constructor
@@ -55,12 +55,16 @@ public class SliderDrinkStatusFragment extends Fragment {
         new SliderRepository().getFieldFromCurrentUser(Consts.DRINK_STATUS, value -> {
             if (value != null && value.equals(getString(R.string.never))) {
                 radioGroup.check(R.id.fragment_slider_drink_status_rbtn_never);
+                isComplete=true;
             } else if (value != null && value.equals(getString(R.string.only_with_friends))) {
                 radioGroup.check(R.id.fragment_slider_drink_status_rbtn_friends);
+                isComplete=true;
             } else if (value != null && value.equals(getString(R.string.moderately))) {
                 radioGroup.check(R.id.fragment_slider_drink_status_rbtn_moderaely);
+                isComplete=true;
             } else if (value != null && value.equals(getString(R.string.regularly))) {
                 radioGroup.check(R.id.fragment_slider_drink_status_rbtn_regularly);
+                isComplete=true;
             }
         });
 
@@ -82,11 +86,13 @@ public class SliderDrinkStatusFragment extends Fragment {
                             if (getActivity() != null) getActivity().onBackPressed();
                         }
                         Toast.makeText(getActivity(), getString(R.string.drink_updated), Toast.LENGTH_LONG).show();
-                        EventBus.getDefault().post(new StringEvent(Consts.COMPLETE));
-                        EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
-                        EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
-                        EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));
-
+                        if (!isComplete) {
+                            EventBus.getDefault().post(new StringEvent(Consts.COMPLETE));
+                            EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
+                            EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
+                            EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));
+                            isComplete=true;
+                        }
                     });
                 } else {
                     Toast.makeText(getActivity(), getString(R.string.empty_field), Toast.LENGTH_SHORT).show();

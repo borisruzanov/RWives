@@ -26,7 +26,7 @@ public class SliderRelationshipsStatusFragment extends Fragment {
     Button btnSave;
     RadioGroup radioGroup;
     RadioButton radioButton;
-
+    private boolean isComplete=false;
     public SliderRelationshipsStatusFragment() {
         // Required empty public constructor
     }
@@ -49,12 +49,16 @@ public class SliderRelationshipsStatusFragment extends Fragment {
         new SliderRepository().getFieldFromCurrentUser(Consts.RELATIONSHIP_STATUS, value -> {
             if (value != null && value.equals(getString(R.string.never_married))){
                 radioGroup.check(R.id.fragment_slider_rbtn_never_married);
+                isComplete=true;
             } else if (value != null && value.equals(getString(R.string.currently_separated))){
                 radioGroup.check(R.id.fragment_slider_rbtn_separated);
+                isComplete=true;
             } else if (value != null && value.equals(getString(R.string.divorced))){
                 radioGroup.check(R.id.fragment_slider_rbtn_divorced);
+                isComplete=true;
             }else if (value != null && value.equals(getString(R.string.widow_widower))){
                 radioGroup.check(R.id.fragment_slider_rbtn_widow);
+                isComplete=true;
             }
         });
 
@@ -75,10 +79,13 @@ public class SliderRelationshipsStatusFragment extends Fragment {
                         if (getArguments() != null && getArguments().getString(Consts.NEED_BACK) != null) {
                             if (getActivity() != null) getActivity().onBackPressed();
                         }
-                        EventBus.getDefault().post(new StringEvent(Consts.COMPLETE));
-                        EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
-                        EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
-                        EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));
+                        if (!isComplete) {
+                            EventBus.getDefault().post(new StringEvent(Consts.COMPLETE));
+                            EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
+                            EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
+                            EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));
+                            isComplete=true;
+                        }
                         Toast.makeText(getActivity(), getString(R.string.relationship_was_updated), Toast.LENGTH_LONG).show();
                     });
                 }

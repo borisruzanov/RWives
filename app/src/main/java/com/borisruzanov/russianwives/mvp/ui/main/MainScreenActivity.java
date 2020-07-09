@@ -12,7 +12,6 @@ import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -107,7 +106,7 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
 
     private Toolbar mToolbar;
     private DrawerLayout mDrawerLayout;
-    private TabLayout mTabLayout;
+
     private CustomViewPager mViewPager;
     private MainPagerAdapter mViewPagerAdapter;
 
@@ -169,7 +168,7 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
         mDrawerLayout.setDrawerListener(toggle);
         toggle.syncState();
 
-        mTabLayout = findViewById(R.id.main_tabs);
+
         mViewPager = findViewById(R.id.main_view_pager);
         mViewPagerAdapter = new MainPagerAdapter(getSupportFragmentManager());
 
@@ -180,7 +179,7 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
 
 
         mUnregisteredTitle = findViewById(R.id.please_register_to_start_title);
-        mTabLayout.setupWithViewPager(mViewPager);
+
         mViewPager.setSaveEnabled(false);
         mDialogFragment = new FilterDialogFragment();
         mSearchFragment = new SearchFragment();
@@ -755,7 +754,7 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
             mFilterButton.setVisibility(GONE);
             mUnregisteredTitle.setVisibility(View.VISIBLE);
 
-            mTabLayout.setVisibility(GONE);
+
             //Hide drawer
             mToolbar.setNavigationIcon(null);
             mChatsButton.setVisibility(GONE);
@@ -764,24 +763,6 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
 
         }
 
-        mTabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
-        mTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                mViewPager.setCurrentItem(tab.getPosition());
-                mTabLayout.getTabAt(tab.getPosition()).select();
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-            }
-        });
         mViewPager.setAdapter(mViewPagerAdapter);
 
         mViewPager.setOnPageChangeListener(new CustomViewPager.OnPageChangeListener() {
@@ -792,7 +773,7 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
 
             @Override
             public void onPageSelected(int position) {
-                mTabLayout.getTabAt(position).select();
+//                mTabLayout.getTabAt(position).select();
 
             }
 

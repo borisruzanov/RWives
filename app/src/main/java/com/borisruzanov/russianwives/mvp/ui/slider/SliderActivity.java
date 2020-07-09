@@ -46,9 +46,11 @@ public class SliderActivity extends MvpAppCompatActivity {
 
     private int progressValue=0; //a value which set in progressbar
     private int pvPosition=0;// hold previous fragment position
-    private static int baseProgress=7; //hold baseProgress
+    private static int baseProgress=8; //hold baseProgress
     private boolean isVideoAvailable=true; //indicate that video is uploaded or not
     private int completed=0;//indicate how much info completed
+
+    private boolean[] arrCompleted;//array to hold value for each fragment info completed or not
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -168,7 +170,9 @@ public class SliderActivity extends MvpAppCompatActivity {
             slideToBack(fragmentList,viewPager.getCurrentItem());
         });
         progressValue=baseProgress*completed;
+        Log.d("SliderDebug","progress:-"+progressValue);
         mProgressBar.setProgress(progressValue);
+        arrCompleted=new boolean[fragmentList.size()]; //initialize array with fragment size
     }
 
     @Subscribe
@@ -192,11 +196,13 @@ public class SliderActivity extends MvpAppCompatActivity {
         else if (event.getStringParameter().equals(Consts.LEFT_STEP)){
             //if step left
             //to set step left TextView
-            mProgressLeftText.setText(String.valueOf(15-completed)); //Subtract from total fragment to complete fragment
+            mProgressLeftText.setText(String.valueOf(12-completed)); //Subtract from total fragment to complete fragment
         }
         else if (event.getStringParameter().equals(Consts.COMPLETE)){
             //to increase value of completed info
             completed++;
+            arrCompleted[viewPager.getCurrentItem()]=true; //set value true for each fragment info completed
+
         }
     }
 
@@ -225,9 +231,9 @@ public class SliderActivity extends MvpAppCompatActivity {
     private void addFragments() {
         ArrayList<String> list=getIntent().getStringArrayListExtra(Consts.DEFAULT_LIST);
         Log.d("sliderDebug","list size:-"+list.size());
-        for (int i=0;i<15;i++){
+        for (int i=0;i<12;i++){
             switch (i){
-                case 0:
+                /*case 0:
                     if (list.contains(Consts.NAME))
                         fragmentList.add(new SliderNameFragment());
                     else
@@ -238,80 +244,74 @@ public class SliderActivity extends MvpAppCompatActivity {
                         fragmentList.add(new SliderGenderFragment());
                     else
                         completed++;
-                    break;
-                case 2:
+                    break;*/
+                case 0:
                     if (list.contains(Consts.IMAGE))
                         fragmentList.add(new SliderImageFragment());
                     else
                         completed++;
                     break;
-                case 3:
+                case 1:
                     if (list.contains(Consts.AGE))
                         fragmentList.add(new SliderAgeFragment());
                     else
                         completed++;
                     break;
-                case 4:
+                case 2:
                     if (list.contains(Consts.COUNTRY))
                         fragmentList.add(new SliderCountriesFragment());
                     else
                         completed++;
                     break;
-                case 5:
-                    if (list.contains(Consts.LANGUAGES))
-                        fragmentList.add(new SliderLanguagesFragment());
-                    else
-                        completed++;
-                    break;
-                case 6:
+                case 3:
                     if (list.contains(Consts.BODY_TYPE))
                         fragmentList.add(new SliderBodytypeFragment());
                     else
                         completed++;
                     break;
-                case 7:
+                case 4:
                     if (list.contains(Consts.ETHNICITY))
                         fragmentList.add(new SliderEthnicityFragment());
                     else
                         completed++;
                     break;
-                case 8:
+                case 5:
                     if (list.contains(Consts.FAITH))
                         fragmentList.add(new SliderFaithFragment());
                     else
                         completed++;
                     break;
-                case 9:
+                case 6:
                     if (list.contains(Consts.DRINK_STATUS))
                         fragmentList.add(new SliderDrinkStatusFragment());
                     else
                         completed++;
                     break;
-                case 10:
+                case 7:
                     if (list.contains(Consts.SMOKING_STATUS))
                         fragmentList.add(new SliderSmokingStatusFragment());
                     else
                         completed++;
                     break;
-                case 11:
+                case 8:
                     if (list.contains(Consts.RELATIONSHIP_STATUS))
                         fragmentList.add(new SliderRelationshipsStatusFragment());
                     else
                         completed++;
                     break;
-                case 12:
+                case 9:
                     if (list.contains(Consts.NUMBER_OF_KIDS))
                         fragmentList.add(new SliderHaveKidsFragment());
                     else
                         completed++;
                     break;
-                case 13:
+                case 10:
                     if (list.contains(Consts.WANT_CHILDREN_OR_NOT))
                         fragmentList.add(new SliderWillingKidsFragment());
                     else
                         completed++;
                     break;
-                case 14:
+                case 11:
                     if (list.contains(Consts.HOBBY))
                         fragmentList.add(new SliderHobbyFragment());
                     else
@@ -350,7 +350,6 @@ public class SliderActivity extends MvpAppCompatActivity {
         startActivity(intent);
     }
 
-
     /***
      * to set Previous and Next Button
      */
@@ -376,6 +375,13 @@ public class SliderActivity extends MvpAppCompatActivity {
             buttonNext.setBackgroundResource(R.color.darkColor);
             buttonNext.setClickable(false);
         }
+
+        if (arrCompleted[viewPager.getCurrentItem()]){
+            //if fragment info completed then next button set to clickable
+            buttonNext.setClickable(true);
+            buttonNext.setBackgroundResource(R.color.colorAccent);
+        }
+
     }
 
     @Override
@@ -389,7 +395,7 @@ public class SliderActivity extends MvpAppCompatActivity {
         super.onResume();
         if (!EventBus.getDefault().isRegistered(this))
             EventBus.getDefault().register(this);
-        mProgressLeftText.setText(String.valueOf(15-completed));
+        mProgressLeftText.setText(String.valueOf(12-completed));
         setButton();
         Log.d("sliderDebug","fragment size:-"+fragmentList.size()+" current:-"+viewPager.getCurrentItem()+
                 "\nProgressValue:-"+progressValue
@@ -406,5 +412,6 @@ public class SliderActivity extends MvpAppCompatActivity {
             viewPager.setCurrentItem(position-1);
         }
     }
+
 
 }

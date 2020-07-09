@@ -32,7 +32,7 @@ public class SliderImageFragment extends Fragment {
     SliderFragmentsPresenter sliderFragmentsPresenter;
     private static final int GALLERY_PICK = 1;
     private ProgressDialog progressDialog;
-
+    private boolean isComplete=false;
     public SliderImageFragment() {
         // Required empty public constructor
     }
@@ -96,10 +96,13 @@ public class SliderImageFragment extends Fragment {
                             return;
                         }
                         Toast.makeText(getActivity(), getString(R.string.image_updated), Toast.LENGTH_LONG).show();
-                        EventBus.getDefault().post(new StringEvent(Consts.COMPLETE));
-                        EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
-                        EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
-                        EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));
+                        if(!isComplete) {
+                            EventBus.getDefault().post(new StringEvent(Consts.COMPLETE));
+                            EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
+                            EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
+                            EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));
+                            isComplete=true;
+                        }
                     });
 
                     /*Toast.makeText(getActivity(), getString(R.string.image_updated), Toast.LENGTH_LONG).show();

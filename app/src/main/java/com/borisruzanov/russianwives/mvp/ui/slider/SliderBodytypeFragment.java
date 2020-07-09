@@ -28,7 +28,7 @@ public class SliderBodytypeFragment extends MvpAppCompatFragment {
     Button btnSave;
     RadioGroup radioGroup;
     RadioButton radioButton;
-
+    private boolean isComplete =false;
 
     public SliderBodytypeFragment() {
         // Required empty public constructor
@@ -52,16 +52,22 @@ public class SliderBodytypeFragment extends MvpAppCompatFragment {
         new SliderRepository().getFieldFromCurrentUser(Consts.BODY_TYPE, value -> {
             if (value != null && value.equals(getString(R.string.slender))) {
                 radioGroup.check(R.id.fragment_slider_bodytype_rbtn_slender);
+                isComplete =true;
             } else if (value != null && value.equals(getString(R.string.about_average))) {
                 radioGroup.check(R.id.fragment_slider_bodytype_rbtn_average);
+                isComplete =true;
             } else if (value != null && value.equals(getString(R.string.athletic))) {
                 radioGroup.check(R.id.fragment_slider_bodytype_rbtn_athletic);
+                isComplete =true;
             } else if (value != null && value.equals(getString(R.string.heavyset))) {
                 radioGroup.check(R.id.fragment_slider_bodytype_rbtn_heavyset);
+                isComplete =true;
             } else if (value != null && value.equals(getString(R.string.a_few_extra_pounds))) {
                 radioGroup.check(R.id.fragment_slider_bodytype_rbtn_fewextra);
+                isComplete =true;
             } else if (value != null && value.equals(getString(R.string.stocky))) {
                 radioGroup.check(R.id.fragment_slider_bodytype_rbtn_stocky);
+                isComplete =true;
             }
         });
 
@@ -83,10 +89,13 @@ public class SliderBodytypeFragment extends MvpAppCompatFragment {
                             if (getActivity() != null) getActivity().onBackPressed();
                         }
                         Toast.makeText(getActivity(), getString(R.string.bkodytype_updated), Toast.LENGTH_LONG).show();
-                        EventBus.getDefault().post(new StringEvent(Consts.COMPLETE));
-                        EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
-                        EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
-                        EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));
+                        if (!isComplete){
+                            EventBus.getDefault().post(new StringEvent(Consts.COMPLETE));
+                            EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
+                            EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
+                            EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));
+                            isComplete =true;
+                        }
                     });
                 }
             } else {

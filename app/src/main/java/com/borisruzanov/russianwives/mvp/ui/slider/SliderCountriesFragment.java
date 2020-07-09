@@ -32,7 +32,8 @@ public class SliderCountriesFragment extends Fragment {
     private boolean isCountry;
     private ListView countryCityList;
     private String mCountry =null;
-
+    private CountriesAdapter countriesAdapter;
+    private boolean isComplete=false;
     public SliderCountriesFragment() {
         // Required empty public constructor
     }
@@ -52,8 +53,7 @@ public class SliderCountriesFragment extends Fragment {
         isCountry=true;
         countryCityList = view.findViewById(R.id.country_list);
         TextView textView=view.findViewById(R.id.slider_countries_tv_question);
-        CountriesAdapter countriesAdapter = new CountriesAdapter(getActivity(), CountriesList.initData());
-        countryCityList.setAdapter(countriesAdapter);
+        setCountry();
         countryCityList.setOnItemClickListener((parent, view1, position, id) -> {
             if (isCountry) {
                 String country = CountriesList.initData().get(position).getCountryName();
@@ -91,12 +91,15 @@ public class SliderCountriesFragment extends Fragment {
                         if (getActivity() != null) getActivity().onBackPressed();
                     }
                     Toast.makeText(getActivity(), getString(R.string.country_city_updated), Toast.LENGTH_LONG).show();
-                    EventBus.getDefault().post(new StringEvent(Consts.COMPLETE));
-                    EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
-                    EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
-                    EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));
+                    if(!isComplete) {
+                        EventBus.getDefault().post(new StringEvent(Consts.COMPLETE));
+                        EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
+                        EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
+                        EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));
+                        isComplete=true;
+                    }
+                    setCountry();
                 });
-
             }
         });
         return view;
@@ -126,4 +129,11 @@ public class SliderCountriesFragment extends Fragment {
         }
     }
 
+    /***
+     * set countries to list
+     */
+    private void setCountry(){
+        countriesAdapter = new CountriesAdapter(getActivity(), CountriesList.initData());
+        countryCityList.setAdapter(countriesAdapter);
+    }
 }

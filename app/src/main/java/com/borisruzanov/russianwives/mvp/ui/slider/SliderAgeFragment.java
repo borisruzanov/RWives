@@ -30,7 +30,7 @@ public class SliderAgeFragment extends MvpAppCompatFragment {
     RadioGroup radioGroup;
     Button btnSave;
     RadioButton radioButton;
-
+    private boolean isComplete=false; //a bool value for info completed or not
     public static SliderAgeFragment newInstance() {
         SliderAgeFragment fragment = new SliderAgeFragment();
         Bundle args = new Bundle();
@@ -56,14 +56,19 @@ public class SliderAgeFragment extends MvpAppCompatFragment {
         new SliderRepository().getFieldFromCurrentUser(Consts.AGE, value -> {
             if (value != null && value.equals(getString(R.string.age_18_21))){
                 radioGroup.check(R.id.fragment_slider_age_18_21);
+                isComplete=true; //set true if information already saved
             } else if (value != null && value.equals(getString(R.string.age_22_26))){
                 radioGroup.check(R.id.fragment_slider_age_22_26);
+                isComplete=true;
             } else if (value != null && value.equals(getString(R.string.age_26_35))){
                 radioGroup.check(R.id.fragment_slider_age_26_35);
+                isComplete=true;
             }else if (value != null && value.equals(getString(R.string.age_36_45))){
                 radioGroup.check(R.id.fragment_slider_age_36_45);
+                isComplete=true;
             }else if (value != null && value.equals(getString(R.string.age_45_plus))){
                 radioGroup.check(R.id.fragment_slider_age_45_plus);
+                isComplete=true;
             }
         });
 
@@ -79,10 +84,15 @@ public class SliderAgeFragment extends MvpAppCompatFragment {
                             if (getActivity() != null) getActivity().onBackPressed();
                         }
                         Toast.makeText(getActivity(), getString(R.string.age_updated), Toast.LENGTH_LONG).show();
-                        EventBus.getDefault().post(new StringEvent(Consts.COMPLETE));
-                        EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
-                        EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
-                        EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));
+
+                        //if info is not completed beFore then goes in if
+                        if (!isComplete){//checking isComplete value
+                            EventBus.getDefault().post(new StringEvent(Consts.COMPLETE));
+                            EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
+                            EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
+                            EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));
+                            isComplete=true; //set true to indicate info is completed
+                        }
                     });
                 }
             } else {
@@ -96,4 +106,5 @@ public class SliderAgeFragment extends MvpAppCompatFragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
     }
+
 }

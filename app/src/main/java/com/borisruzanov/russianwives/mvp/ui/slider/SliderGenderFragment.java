@@ -30,7 +30,7 @@ public class SliderGenderFragment extends MvpAppCompatFragment {
     Button btnSave;
     RadioGroup radioGroup;
     RadioButton radioButton;
-
+    private boolean isComplete=false;
 
     public SliderGenderFragment() {
         // Required empty public constructor
@@ -56,8 +56,10 @@ public class SliderGenderFragment extends MvpAppCompatFragment {
         new SliderRepository().getFieldFromCurrentUser(Consts.GENDER, value -> {
             if (value != null && value.equals(getString(R.string.female_option))) {
                 radioGroup.check(R.id.fragment_slider_gender_radiobutton_female);
+                isComplete=true;
             } else if (value != null && value.equals(getString(R.string.male_option))) {
                 radioGroup.check(R.id.fragment_slider_gender_radiobutton_male);
+                isComplete=true;
             }
         });
 
@@ -79,10 +81,13 @@ public class SliderGenderFragment extends MvpAppCompatFragment {
                             if (getActivity() != null) getActivity().onBackPressed();
                         }
                         Toast.makeText(getActivity(), getString(R.string.gender_updated), Toast.LENGTH_LONG).show();
-                        EventBus.getDefault().post(new StringEvent(Consts.COMPLETE));
-                        EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
-                        EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
-                        EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));
+                        if(!isComplete) {
+                            EventBus.getDefault().post(new StringEvent(Consts.COMPLETE));
+                            EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
+                            EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
+                            EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));
+                            isComplete=true;
+                        }
                     });
                 }
             } else {

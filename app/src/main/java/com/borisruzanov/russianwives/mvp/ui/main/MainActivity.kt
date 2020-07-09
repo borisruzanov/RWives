@@ -180,7 +180,7 @@ class MainActivity : AppCompatActivity(), MainView, FilterDialogFragment.FilterL
     private fun tabsInit() {
         //init views
         mViewPager = findViewById(R.id.main_view_pager)
-        mTabLayout = findViewById(R.id.main_tabs)
+       // mTabLayout = findViewById(R.id.main_tabs)
 
         //setStatePagerAdapter
         mViewPagerAdapter = MainPagerAdapter(supportFragmentManager)
