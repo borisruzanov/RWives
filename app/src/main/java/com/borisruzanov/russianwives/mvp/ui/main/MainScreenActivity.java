@@ -195,7 +195,7 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
         getUserInfo();
         mPresenter.registerSubscribers();
 
-        callUserInfoDialogs();
+        //callUserInfoDialogs();
         makeGenderCheck();
 
         showSocMedDialog();
@@ -337,7 +337,19 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
     @Override
     protected void onResume() {
         super.onResume();
+        if (FirebaseAuth.getInstance().getCurrentUser()!=null) {
+            String accept = mPrefs.getValue(Consts.NEWUSER_DISCLAIMER_ACCEPT); //get Disclaimer accepted value
+            if (accept != null && accept.equals(Consts.FALSE)) { //check disclaimer accepted or not
+                //if not accepted so here and go to disclaimerActivity
+                startActivity(new Intent(this, NewUserDisclaimerActivity.class));
+                return;
+            } else {
+                //check for userInfo
+                callUserInfoDialogs();
+            }
+        }
         hideMenuItems();
+        Log.d(TAG_CLASS_NAME,"OnREsume");
     }
 
     @Override
@@ -927,6 +939,7 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
     @Override
     protected void onRestart() {
         super.onRestart();
+        mPresenter.registerSubscribers();
         //if (mFsUser!=null) mPresenter.changeUserOnlineStatus(mFsUser);
     }
 

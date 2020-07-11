@@ -53,6 +53,16 @@ public class SliderCountriesFragment extends Fragment {
         isCountry=true;
         countryCityList = view.findViewById(R.id.country_list);
         TextView textView=view.findViewById(R.id.slider_countries_tv_question);
+        new SliderRepository().getFieldFromCurrentUser(Consts.CITY,value -> {
+            try {
+                if (value != null && !value.equals(Consts.DEFAULT)) {
+                    isComplete = true;
+                }
+            }catch (IllegalStateException e){
+                e.printStackTrace();
+                Log.e("SliderCountry","Got a Exception---->>>>"+e.getMessage());
+            }
+        });
         setCountry();
         countryCityList.setOnItemClickListener((parent, view1, position, id) -> {
             if (isCountry) {
@@ -61,29 +71,23 @@ public class SliderCountriesFragment extends Fragment {
                 if (!country.equals("           ")) {
                     //country value is saved in member varaible country
                     this.mCountry =country;
-                    textView.setText(R.string.choose_your_city);
+                    /*textView.setText(R.string.choose_your_city);
                     isCountry=false;
-                    setCity(country);
-                    /*Map<String, Object> map = new HashMap<>();
+                    setCity(country);*/
+                    Map<String, Object> map = new HashMap<>();
                     map.put(Consts.COUNTRY, country);
                     new SliderRepository().updateFieldFromCurrentUser(map, () -> {
                         Toast.makeText(getActivity(), getString(R.string.country_updated), Toast.LENGTH_LONG).show();
                         textView.setText(R.string.choose_your_city);
                         isCountry=false;
                         setCity(country);
-                    });*/
+                    });
                 }
             }
             else{
                 String city= (String) countryCityList.getItemAtPosition(position);
                 Log.d("SliderDebug","City:-"+city);
-                if (this.mCountry ==null){
-                    //if country is not selected then go back
-                    Toast.makeText(getActivity(),getResources().getString(R.string.some_wrong),Toast.LENGTH_SHORT).show();
-                    return;
-                }
                 Map<String, Object> map = new HashMap<>();
-                map.put(Consts.COUNTRY,this.mCountry);
                 map.put(Consts.CITY, city);
                 //country and city add in firestore
                 new SliderRepository().updateFieldFromCurrentUser(map, () -> {
@@ -99,6 +103,7 @@ public class SliderCountriesFragment extends Fragment {
                         isComplete=true;
                     }
                     setCountry();
+                    isCountry=true;
                 });
             }
         });
@@ -136,4 +141,6 @@ public class SliderCountriesFragment extends Fragment {
         countriesAdapter = new CountriesAdapter(getActivity(), CountriesList.initData());
         countryCityList.setAdapter(countriesAdapter);
     }
+
+
 }

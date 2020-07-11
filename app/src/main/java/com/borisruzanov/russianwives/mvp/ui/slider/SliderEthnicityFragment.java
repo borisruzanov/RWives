@@ -3,6 +3,7 @@ package com.borisruzanov.russianwives.mvp.ui.slider;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,27 +51,32 @@ public class SliderEthnicityFragment extends Fragment {
         btnSave = view.findViewById(R.id.fragment_slider_ethnicity_btn_save);
 
         new SliderRepository().getFieldFromCurrentUser(Consts.ETHNICITY, value -> {
-            if (value != null && value.equals(getString(R.string.asian))) {
-                radioGroup.check(R.id.fragment_slider_ethnicity_radiobtn_asian);
-                isComplete=true;
-            } else if (value != null && value.equals(getString(R.string.black_african_descent))) {
-                radioGroup.check(R.id.fragment_slider_ethnicity_radiobtn_black);
-                isComplete=true;
-            } else if (value != null && value.equals(getString(R.string.east_indian))) {
-                radioGroup.check(R.id.fragment_slider_ethnicity_radiobtn_indian);
-                isComplete=true;
-            } else if (value != null && value.equals(getString(R.string.latino_hispanic))) {
-                radioGroup.check(R.id.fragment_slider_ethnicity_radiobtn_latino);
-                isComplete=true;
-            } else if (value != null && value.equals(getString(R.string.native_american))) {
-                radioGroup.check(R.id.fragment_slider_ethnicity_radiobtn_native);
-                isComplete=true;
-            } else if (value != null && value.equals(getString(R.string.white_caucasian))) {
-                radioGroup.check(R.id.fragment_slider_ethnicity_radiobtn_white);
-                isComplete=true;
-            } else if (value != null && value.equals(getString(R.string.other))) {
-                radioGroup.check(R.id.fragment_slider_ethnicity_radiobtn_other);
-                isComplete=true;
+            try {
+                if (value != null && value.equals(getString(R.string.asian))) {
+                    radioGroup.check(R.id.fragment_slider_ethnicity_radiobtn_asian);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.black_african_descent))) {
+                    radioGroup.check(R.id.fragment_slider_ethnicity_radiobtn_black);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.east_indian))) {
+                    radioGroup.check(R.id.fragment_slider_ethnicity_radiobtn_indian);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.latino_hispanic))) {
+                    radioGroup.check(R.id.fragment_slider_ethnicity_radiobtn_latino);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.native_american))) {
+                    radioGroup.check(R.id.fragment_slider_ethnicity_radiobtn_native);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.white_caucasian))) {
+                    radioGroup.check(R.id.fragment_slider_ethnicity_radiobtn_white);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.other))) {
+                    radioGroup.check(R.id.fragment_slider_ethnicity_radiobtn_other);
+                    isComplete = true;
+                }
+            }catch (IllegalStateException e){
+                e.printStackTrace();
+                Log.e("SliderEthnicity","Got a Exception---->>>>"+e.getMessage());
             }
         });
 

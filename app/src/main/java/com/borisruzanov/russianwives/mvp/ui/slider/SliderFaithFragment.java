@@ -3,6 +3,7 @@ package com.borisruzanov.russianwives.mvp.ui.slider;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,27 +51,32 @@ public class SliderFaithFragment extends Fragment {
         btnSave = view.findViewById(R.id.fragment_slider_faith_btn_save);
 
         new SliderRepository().getFieldFromCurrentUser(Consts.FAITH, value -> {
-            if (value != null && value.equals(getString(R.string.christian))){
-                radioGroup.check(R.id.fragment_slider_faith_rbtn_christian);
-                isComplete=true;
-            } else if (value != null && value.equals(getString(R.string.black_african_descent))){
-                radioGroup.check(R.id.fragment_slider_faith_rbtn_black);
-                isComplete=true;
-            } else if (value != null && value.equals(getString(R.string.muslim))){
-                radioGroup.check(R.id.fragment_slider_faith_rbtn_muslim);
-                isComplete=true;
-            }else if (value != null && value.equals(getString(R.string.atheist))){
-                radioGroup.check(R.id.fragment_slider_faith_rbtn_atheist);
-                isComplete=true;
-            }else if (value != null && value.equals(getString(R.string.buddhist))){
-                radioGroup.check(R.id.fragment_slider_faith_rbtn_buddist);
-                isComplete=true;
-            }else if (value != null && value.equals(getString(R.string.adventist))){
-                radioGroup.check(R.id.fragment_slider_faith_rbtn_adventist);
-                isComplete=true;
-            } else if (value != null && value.equals(getString(R.string.other))){
-                radioGroup.check(R.id.fragment_slider_faith_rbtn_other);
-                isComplete=true;
+            try {
+                if (value != null && value.equals(getString(R.string.christian))) {
+                    radioGroup.check(R.id.fragment_slider_faith_rbtn_christian);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.black_african_descent))) {
+                    radioGroup.check(R.id.fragment_slider_faith_rbtn_black);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.muslim))) {
+                    radioGroup.check(R.id.fragment_slider_faith_rbtn_muslim);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.atheist))) {
+                    radioGroup.check(R.id.fragment_slider_faith_rbtn_atheist);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.buddhist))) {
+                    radioGroup.check(R.id.fragment_slider_faith_rbtn_buddist);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.adventist))) {
+                    radioGroup.check(R.id.fragment_slider_faith_rbtn_adventist);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.other))) {
+                    radioGroup.check(R.id.fragment_slider_faith_rbtn_other);
+                    isComplete = true;
+                }
+            }catch (IllegalStateException stateException){
+                stateException.printStackTrace();
+                Log.e("SliderFaith","Got a IllegalState Exception---->>>"+stateException.getMessage());
             }
         });
 

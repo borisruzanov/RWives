@@ -3,6 +3,7 @@ package com.borisruzanov.russianwives.mvp.ui.slider;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,12 +55,17 @@ public class SliderGenderFragment extends MvpAppCompatFragment {
         btnSave = view.findViewById(R.id.fragment_slider_gender_btn_save);
 
         new SliderRepository().getFieldFromCurrentUser(Consts.GENDER, value -> {
-            if (value != null && value.equals(getString(R.string.female_option))) {
-                radioGroup.check(R.id.fragment_slider_gender_radiobutton_female);
-                isComplete=true;
-            } else if (value != null && value.equals(getString(R.string.male_option))) {
-                radioGroup.check(R.id.fragment_slider_gender_radiobutton_male);
-                isComplete=true;
+            try {
+                if (value != null && value.equals(getString(R.string.female_option))) {
+                    radioGroup.check(R.id.fragment_slider_gender_radiobutton_female);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.male_option))) {
+                    radioGroup.check(R.id.fragment_slider_gender_radiobutton_male);
+                    isComplete = true;
+                }
+            }catch (IllegalStateException e){
+                e.printStackTrace();
+                Log.e("SliderGender","Got a Exception---->>>>"+e.getMessage());
             }
         });
 

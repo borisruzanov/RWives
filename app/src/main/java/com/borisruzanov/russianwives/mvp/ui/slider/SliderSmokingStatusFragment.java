@@ -3,6 +3,7 @@ package com.borisruzanov.russianwives.mvp.ui.slider;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,21 +52,26 @@ public class SliderSmokingStatusFragment extends Fragment {
         btnSave = view.findViewById(R.id.fragment_slider_smokestatus_btn_save);
 
         new SliderRepository().getFieldFromCurrentUser(Consts.SMOKING_STATUS, value -> {
-            if (value != null && value.equals(getString(R.string.no_way))){
-                radioGroup.check(R.id.fragment_slider_smoking_status_rbtn_no_way);
-                isComplete=true;
-            } else if (value != null && value.equals(getString(R.string.occasionally))){
-                radioGroup.check(R.id.fragment_slider_smoking_status_rbtn_occasioally);
-                isComplete=true;
-            } else if (value != null && value.equals(getString(R.string.daily))){
-                radioGroup.check(R.id.fragment_slider_smoking_status_rbtn_daily);
-                isComplete=true;
-            }else if (value != null && value.equals(getString(R.string.cigar_aficionado))){
-                radioGroup.check(R.id.fragment_slider_smokine_status_rbtn_cigar_aficionado);
-                isComplete=true;
-            }else if (value != null && value.equals(getString(R.string.yes_but_trying_to_quit))){
-                radioGroup.check(R.id.fragment_slider_smokine_status_rbtn_quit);
-                isComplete=true;
+            try {
+                if (value != null && value.equals(getString(R.string.no_way))) {
+                    radioGroup.check(R.id.fragment_slider_smoking_status_rbtn_no_way);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.occasionally))) {
+                    radioGroup.check(R.id.fragment_slider_smoking_status_rbtn_occasioally);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.daily))) {
+                    radioGroup.check(R.id.fragment_slider_smoking_status_rbtn_daily);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.cigar_aficionado))) {
+                    radioGroup.check(R.id.fragment_slider_smokine_status_rbtn_cigar_aficionado);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.yes_but_trying_to_quit))) {
+                    radioGroup.check(R.id.fragment_slider_smokine_status_rbtn_quit);
+                    isComplete = true;
+                }
+            }catch (IllegalStateException e){
+                e.printStackTrace();
+                Log.e("SliderSmoking","Got a Exception---->>>>"+e.getMessage());
             }
         });
 

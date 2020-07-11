@@ -3,6 +3,7 @@ package com.borisruzanov.russianwives.mvp.ui.slider;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,10 +55,15 @@ public class SliderHobbyFragment extends MvpAppCompatFragment{
         answer = view.findViewById(R.id.fragment_slider_hobby_et_answer);
 
         new SliderRepository().getFieldFromCurrentUser(Consts.HOBBY, value -> {
+            try{
             if (value != null && !value.equals(Consts.DEFAULT)) {
                 answer.setText(value);
                 answer.setSelection(answer.getText().length());
                 isComplete=true;
+            }
+            }catch (IllegalStateException e){
+                e.printStackTrace();
+                Log.e("SliderHobby","Got a Exception---->>>>"+e.getMessage());
             }
         });
 

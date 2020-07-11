@@ -3,6 +3,7 @@ package com.borisruzanov.russianwives.mvp.ui.slider;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,18 +54,23 @@ public class SliderDrinkStatusFragment extends Fragment {
         btnSave = view.findViewById(R.id.fragment_slider_drinkstatus_btn_save);
 
         new SliderRepository().getFieldFromCurrentUser(Consts.DRINK_STATUS, value -> {
-            if (value != null && value.equals(getString(R.string.never))) {
-                radioGroup.check(R.id.fragment_slider_drink_status_rbtn_never);
-                isComplete=true;
-            } else if (value != null && value.equals(getString(R.string.only_with_friends))) {
-                radioGroup.check(R.id.fragment_slider_drink_status_rbtn_friends);
-                isComplete=true;
-            } else if (value != null && value.equals(getString(R.string.moderately))) {
-                radioGroup.check(R.id.fragment_slider_drink_status_rbtn_moderaely);
-                isComplete=true;
-            } else if (value != null && value.equals(getString(R.string.regularly))) {
-                radioGroup.check(R.id.fragment_slider_drink_status_rbtn_regularly);
-                isComplete=true;
+            try {
+                if (value != null && value.equals(getString(R.string.never))) {
+                    radioGroup.check(R.id.fragment_slider_drink_status_rbtn_never);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.only_with_friends))) {
+                    radioGroup.check(R.id.fragment_slider_drink_status_rbtn_friends);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.moderately))) {
+                    radioGroup.check(R.id.fragment_slider_drink_status_rbtn_moderaely);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.regularly))) {
+                    radioGroup.check(R.id.fragment_slider_drink_status_rbtn_regularly);
+                    isComplete = true;
+                }
+            }catch (IllegalStateException e){
+                e.printStackTrace();
+                Log.e("SliderDrink","Got a Exception---->>>>"+e.getMessage());
             }
         });
 

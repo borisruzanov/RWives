@@ -3,6 +3,7 @@ package com.borisruzanov.russianwives.mvp.ui.slider;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,24 +51,30 @@ public class SliderBodytypeFragment extends MvpAppCompatFragment {
         radioGroup = view.findViewById(R.id.fragment_slider_bodytype_radiogroup);
         btnSave = view.findViewById(R.id.fragment_slider_bodytype_btn_save);
         new SliderRepository().getFieldFromCurrentUser(Consts.BODY_TYPE, value -> {
-            if (value != null && value.equals(getString(R.string.slender))) {
-                radioGroup.check(R.id.fragment_slider_bodytype_rbtn_slender);
-                isComplete =true;
-            } else if (value != null && value.equals(getString(R.string.about_average))) {
-                radioGroup.check(R.id.fragment_slider_bodytype_rbtn_average);
-                isComplete =true;
-            } else if (value != null && value.equals(getString(R.string.athletic))) {
-                radioGroup.check(R.id.fragment_slider_bodytype_rbtn_athletic);
-                isComplete =true;
-            } else if (value != null && value.equals(getString(R.string.heavyset))) {
-                radioGroup.check(R.id.fragment_slider_bodytype_rbtn_heavyset);
-                isComplete =true;
-            } else if (value != null && value.equals(getString(R.string.a_few_extra_pounds))) {
-                radioGroup.check(R.id.fragment_slider_bodytype_rbtn_fewextra);
-                isComplete =true;
-            } else if (value != null && value.equals(getString(R.string.stocky))) {
-                radioGroup.check(R.id.fragment_slider_bodytype_rbtn_stocky);
-                isComplete =true;
+            try {
+                if (value != null && value.equals(getString(R.string.slender))) {
+                    radioGroup.check(R.id.fragment_slider_bodytype_rbtn_slender);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.about_average))) {
+                    radioGroup.check(R.id.fragment_slider_bodytype_rbtn_average);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.athletic))) {
+                    radioGroup.check(R.id.fragment_slider_bodytype_rbtn_athletic);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.heavyset))) {
+                    radioGroup.check(R.id.fragment_slider_bodytype_rbtn_heavyset);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.a_few_extra_pounds))) {
+                    radioGroup.check(R.id.fragment_slider_bodytype_rbtn_fewextra);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.stocky))) {
+                    radioGroup.check(R.id.fragment_slider_bodytype_rbtn_stocky);
+                    isComplete = true;
+                }
+            }catch(IllegalStateException e){
+                e.printStackTrace();
+                Log.e("SliderBodyType","Got a Exception---->>>>"+e.getMessage());
+
             }
         });
 

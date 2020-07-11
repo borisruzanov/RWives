@@ -3,6 +3,7 @@ package com.borisruzanov.russianwives.mvp.ui.slider;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,18 +52,23 @@ public class SliderHaveKidsFragment extends Fragment {
         btnSave = view.findViewById(R.id.fragment_slider_numberofkids_btn_save);
 
         new SliderRepository().getFieldFromCurrentUser(Consts.NUMBER_OF_KIDS, value -> {
-            if (value != null && value.equals(getString(R.string.no))){
-                radioGroup.check(R.id.fragment_slider_number_of_kids_rbtn_no);
-                isComplete=true;
-            } else if (value != null && value.equals(getString(R.string.yes_they_sometimes_live_at_home))){
-                radioGroup.check(R.id.fragment_slider_number_of_kids_rbtn_sometimes_at_home);
-                isComplete=true;
-            } else if (value != null && value.equals(getString(R.string.yes_they_live_away_from_home))){
-                radioGroup.check(R.id.fragment_slider_number_of_kids_rbtn_away);
-                isComplete=true;
-            }else if (value != null && value.equals(getString(R.string.yes_they_live_at_home))){
-                radioGroup.check(R.id.fragment_slider_number_of_kids_rbtn_at_home);
-                isComplete=true;
+            try {
+                if (value != null && value.equals(getString(R.string.no))) {
+                    radioGroup.check(R.id.fragment_slider_number_of_kids_rbtn_no);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.yes_they_sometimes_live_at_home))) {
+                    radioGroup.check(R.id.fragment_slider_number_of_kids_rbtn_sometimes_at_home);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.yes_they_live_away_from_home))) {
+                    radioGroup.check(R.id.fragment_slider_number_of_kids_rbtn_away);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.yes_they_live_at_home))) {
+                    radioGroup.check(R.id.fragment_slider_number_of_kids_rbtn_at_home);
+                    isComplete = true;
+                }
+            }catch (IllegalStateException e){
+                e.printStackTrace();
+                Log.e("SliderHaveKids","Got a Exception---->>>>"+e.getMessage());
             }
         });
 

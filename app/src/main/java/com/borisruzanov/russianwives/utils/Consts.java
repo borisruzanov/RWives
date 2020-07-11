@@ -158,4 +158,28 @@ public final class Consts {
 
     public static final String WAIT_APPROVAL="wait_for_approval";
 
+
+    //a NewUSerDisclaimerActivity string config
+    public static final String DISCLAIMER_TITLE_ENG="disclaimer_title_eng";
+    public static final String DISCLAIMER_TITLE_RUS="disclaimer_title_rus";
+    public static final String DISCLAIMER_DESCRIPTION_ENG ="disclaimer_description_eng";
+    public static final String DISCLAIMER_DESCRIPTION_RUS="disclaimer_description_rus";
+    public static final String DISCLAIMER_DESCRIPTION_DIALOG_TITLE_ENG="disclaimer_description_dialog_title_eng";
+    public static final String DISCLAIMER_DESCRIPTION_DIALOG_TITLE_RUS="disclaimer_description_dialog_title_rus";
+
+    //slider string config
+    public static final String SLIDER_TOOLBAR_TITLE_ENG="slider_toolbar_title_eng";
+    public static final String SLIDER_TOOLBAR_TITLE_RUS="slider_toolbar_title_rus";
+
+    //videoDisclaimer string config
+    public static final String VIDEO_DISCLAIMER_TITLE_ENG="video_disclaimer_title_eng";
+    public static final String VIDEO_DISCLAIMER_TITLE_RUS="video_disclaimer_title_rus";
+    public static final String VIDEO_DISCLAIMER_TOOlBAR_TITLE_ENG="video_disclaimer_toolbar_title_eng";
+    public static final String VIDEO_DISCLAIMER_TOOLBAR_TITLE_RUS="video_disclaimer_toolbar_title_rus";
+    public static final String VIDEO_DISCLAIMER_DESCRIPTION_ENG ="video_disclaimer_description_eng";
+    public static final String VIDEO_DISCLAIMER_DESCRIPTION_RUS="video_disclaimer_description_rus";
+    public static final String VIDEO_RESULT_TOOLBAR_TITLE_ENG="video_result_toolbar_title_eng";
+    public static final String VIDEO_RESULT_TOOLBAR_TITLE_RUS="video_result_toolbar_title_rus";
+
+    public static final String NEWUSER_DISCLAIMER_ACCEPT ="newUser_Disclaimer_accept";//
 }

@@ -91,11 +91,7 @@ public class VideoRecordingActivity extends AppCompatActivity  {
     @Override
     protected void onResume() {
         super.onResume();
-        if (LanguageConfig.isRussian()){
-            mToolbar.setTitle(R.string.video_result_toolbar_title_rus);
-        }else{
-            mToolbar.setTitle(R.string.video_result_toolbar_title_eng);
-        }
+        mToolbar.setTitle(new Prefs(this).getValue(LanguageConfig.isRussian()?Consts.VIDEO_RESULT_TOOLBAR_TITLE_RUS:Consts.VIDEO_RESULT_TOOLBAR_TITLE_ENG));
     }
 
     /***
@@ -155,7 +151,7 @@ public class VideoRecordingActivity extends AppCompatActivity  {
                             HashMap<String, String> videoInfo = new HashMap<>();
                             videoInfo.put("videoID", videoID);
                             videoInfo.put("videoURL", String.valueOf(uri));
-                            videoInfo.put("uid", FirebaseUtils.getUid()); //adding user id
+                            videoInfo.put("userID", FirebaseUtils.getUid()); //adding user id
                             FirebaseDatabase.getInstance().getReference().child("videos").child(videoID).setValue(videoInfo).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {

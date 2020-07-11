@@ -12,7 +12,9 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.borisruzanov.russianwives.R;
+import com.borisruzanov.russianwives.mvp.model.data.prefs.Prefs;
 import com.borisruzanov.russianwives.mvp.ui.video.VideoRecordingActivity;
+import com.borisruzanov.russianwives.utils.Consts;
 import com.borisruzanov.russianwives.utils.LanguageConfig;
 
 import butterknife.BindView;
@@ -27,24 +29,26 @@ public class VideoDisclaimerActivity extends AppCompatActivity {
     @BindView(R.id.video_disclaimer_start_button) AppCompatButton mStart;
     @BindView(R.id.video_disclaimer_toolbar) Toolbar mToolbar;
 
-
+    Prefs mPrefs;
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_disclaimer);
         ButterKnife.bind(this);
+        mPrefs=new Prefs(this);
 
         //check Language & set value according it.
         if (LanguageConfig.isRussian()){
-           mToolbar.setTitle(getResources().getString(R.string.video_disclaimer_toolbar_title_rus));
-           mTitle.setText(getResources().getString(R.string.video_disclaimer_title_rus));
-           mDisclaimerInfo.setText(getResources().getString(R.string.video_disclaimer_description_rus));
+           mToolbar.setTitle(mPrefs.getValue(Consts.VIDEO_DISCLAIMER_TOOLBAR_TITLE_RUS));
+           mTitle.setText(mPrefs.getValue(Consts.VIDEO_DISCLAIMER_TITLE_RUS));
+           mDisclaimerInfo.setText(mPrefs.getValue(Consts.VIDEO_DISCLAIMER_DESCRIPTION_RUS));
         }
         else{
-            mToolbar.setTitle(getResources().getString(R.string.video_disclaimer_toolbar_title_eng));
-            mTitle.setText(getResources().getString(R.string.video_disclaimer_title_eng));
-            mDisclaimerInfo.setText(getResources().getString(R.string.video_disclaimer_description_eng));
+
+            mToolbar.setTitle(mPrefs.getValue(Consts.VIDEO_DISCLAIMER_TOOlBAR_TITLE_ENG));
+            mTitle.setText(mPrefs.getValue(Consts.VIDEO_DISCLAIMER_TITLE_ENG));
+            mDisclaimerInfo.setText(mPrefs.getValue(Consts.VIDEO_DISCLAIMER_DESCRIPTION_ENG));
         }
 
 

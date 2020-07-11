@@ -3,6 +3,7 @@ package com.borisruzanov.russianwives.mvp.ui.slider;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,18 +48,23 @@ public class SliderRelationshipsStatusFragment extends Fragment {
         btnSave = view.findViewById(R.id.fragment_slider_relationships_btn_save);
 
         new SliderRepository().getFieldFromCurrentUser(Consts.RELATIONSHIP_STATUS, value -> {
-            if (value != null && value.equals(getString(R.string.never_married))){
-                radioGroup.check(R.id.fragment_slider_rbtn_never_married);
-                isComplete=true;
-            } else if (value != null && value.equals(getString(R.string.currently_separated))){
-                radioGroup.check(R.id.fragment_slider_rbtn_separated);
-                isComplete=true;
-            } else if (value != null && value.equals(getString(R.string.divorced))){
-                radioGroup.check(R.id.fragment_slider_rbtn_divorced);
-                isComplete=true;
-            }else if (value != null && value.equals(getString(R.string.widow_widower))){
-                radioGroup.check(R.id.fragment_slider_rbtn_widow);
-                isComplete=true;
+            try {
+                if (value != null && value.equals(getString(R.string.never_married))) {
+                    radioGroup.check(R.id.fragment_slider_rbtn_never_married);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.currently_separated))) {
+                    radioGroup.check(R.id.fragment_slider_rbtn_separated);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.divorced))) {
+                    radioGroup.check(R.id.fragment_slider_rbtn_divorced);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.widow_widower))) {
+                    radioGroup.check(R.id.fragment_slider_rbtn_widow);
+                    isComplete = true;
+                }
+            }catch (IllegalStateException e){
+                e.printStackTrace();
+                Log.e("SliderRElationShip","Got a Exception:------>>>>"+e.getMessage());
             }
         });
 

@@ -34,31 +34,33 @@ public class NewUserDisclaimerActivity extends AppCompatActivity {
     @BindView(R.id.disclaimer_agree_button) AppCompatButton mAgree;
     @BindView(R.id.disclaimer_cancel_button) AppCompatButton mCancel;
     AlertDialog mDialog;
+    Prefs mPrefs;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_disclaimer);
         ButterKnife.bind(this);
-
+        mPrefs=new Prefs(this);
         if(LanguageConfig.isRussian()){
-            mTitle.setText(getResources().getString(R.string.disclaimer_title_rus));
-            mDisclaimerInfo.setText(getResources().getString(R.string.disclaimer_description_rus));
+
+            mTitle.setText(mPrefs.getValue(Consts.DISCLAIMER_TITLE_RUS));
+            mDisclaimerInfo.setText(mPrefs.getValue(Consts.DISCLAIMER_DESCRIPTION_RUS));
             mAgree.setText(getResources().getString(R.string.agree_text_rus));
             mCancel.setText(getResources().getString(R.string.cancel_text_rus));
         }else{
-            mTitle.setText(getResources().getString(R.string.disclaimer_title_eng));
-            mDisclaimerInfo.setText(getResources().getString(R.string.disclaimer_description_eng));
+            mTitle.setText(mPrefs.getValue(Consts.DISCLAIMER_TITLE_ENG));
+            mDisclaimerInfo.setText(mPrefs.getValue(Consts.DISCLAIMER_DESCRIPTION_ENG));
             mAgree.setText(getResources().getString(R.string.agree_text_eng));
             mCancel.setText(getResources().getString(R.string.cancel_text_eng));
         }
         //create dialog on the start
         mDialog= (AlertDialog) createDialog();
-
     }
 
     @OnClick(R.id.disclaimer_agree_button)
     public void onAgree(View view){
+        new Prefs(this).setValue(Consts.NEWUSER_DISCLAIMER_ACCEPT,Consts.TRUE);
         onNext();
     }
 
@@ -71,16 +73,19 @@ public class NewUserDisclaimerActivity extends AppCompatActivity {
      * it create a dialog which show when user click cancel button
      * @return Dialog
      */
-    private Dialog createDialog(){
+    private Dialog createDialog()
+    {
         AlertDialog.Builder build =new AlertDialog.Builder(this);
-        build.setMessage(getResources().getString(R.string.disclaimer_dialog_question));
+        build.setMessage(mPrefs.getValue(LanguageConfig.isRussian()?Consts.DISCLAIMER_DESCRIPTION_DIALOG_TITLE_RUS:Consts.DISCLAIMER_DESCRIPTION_DIALOG_TITLE_ENG));
         build.setPositiveButton(getResources().getString(R.string.yes),(dialog1, which) -> {
+            new Prefs(NewUserDisclaimerActivity.this).setValue(Consts.NEWUSER_DISCLAIMER_ACCEPT,Consts.FALSE);
             AuthUI.getInstance().signOut(getApplicationContext()).addOnCompleteListener(
                     task -> {
                         Intent mainScreen=new Intent(NewUserDisclaimerActivity.this, MainScreenActivity.class);
                         mainScreen.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         mainScreen.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         startActivity(mainScreen);
+                        finish();
                     }
             );
         });

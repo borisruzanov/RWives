@@ -13,6 +13,7 @@ public class UserProfileItemsListForEdit {
 
         return Arrays.asList(
                 new UserDescriptionModel("Image", "Male"),
+                new UserDescriptionModel("Video","video"),
                 new UserDescriptionModel("Name", "Male"),
                 new UserDescriptionModel("Age", "Male"),
                 new UserDescriptionModel("Country", "Male"),

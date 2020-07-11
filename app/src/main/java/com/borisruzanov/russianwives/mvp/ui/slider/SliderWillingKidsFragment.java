@@ -3,6 +3,7 @@ package com.borisruzanov.russianwives.mvp.ui.slider;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,24 +50,29 @@ public class SliderWillingKidsFragment extends Fragment {
         btnSave = view.findViewById(R.id.fragment_slider_willingkids_btn_save);
 
         new SliderRepository().getFieldFromCurrentUser(Consts.WANT_CHILDREN_OR_NOT, value -> {
-            if (value != null && value.equals(getString(R.string.definitely))) {
-                radioGroup.check(R.id.fragment_slider_willingkids_rbtn_definitely);
-                isComplete=true;
-            } else if (value != null && value.equals(getString(R.string.someday))) {
-                radioGroup.check(R.id.fragment_slider_willingkids_rbtn_someday);
-                isComplete=true;
-            } else if (value != null && value.equals(getString(R.string.not_sure))) {
-                radioGroup.check(R.id.fragment_slider_willingkids_rbtn_not_sure);
-                isComplete=true;
-            } else if (value != null && value.equals(getString(R.string.probably_not))) {
-                radioGroup.check(R.id.fragment_slider_willingkids_rbtn_probably);
-                isComplete=true;
-            } else if (value != null && value.equals(getString(R.string.no_but_its_ok_if_partner_has_kids))) {
-                radioGroup.check(R.id.fragment_slider_willingkids_rbtn_no_but_ok);
-                isComplete=true;
-            } else if (value != null && value.equals(getString(R.string.no))) {
-                radioGroup.check(R.id.fragment_slider_willingkids_rbtn_no);
-                isComplete=true;
+            try {
+                if (value != null && value.equals(getString(R.string.definitely))) {
+                    radioGroup.check(R.id.fragment_slider_willingkids_rbtn_definitely);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.someday))) {
+                    radioGroup.check(R.id.fragment_slider_willingkids_rbtn_someday);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.not_sure))) {
+                    radioGroup.check(R.id.fragment_slider_willingkids_rbtn_not_sure);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.probably_not))) {
+                    radioGroup.check(R.id.fragment_slider_willingkids_rbtn_probably);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.no_but_its_ok_if_partner_has_kids))) {
+                    radioGroup.check(R.id.fragment_slider_willingkids_rbtn_no_but_ok);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.no))) {
+                    radioGroup.check(R.id.fragment_slider_willingkids_rbtn_no);
+                    isComplete = true;
+                }
+            }catch (IllegalStateException e){
+                e.printStackTrace();
+                Log.e("SliderWillingKids","Got a Exception---->>>>"+e.getMessage());
             }
         });
 

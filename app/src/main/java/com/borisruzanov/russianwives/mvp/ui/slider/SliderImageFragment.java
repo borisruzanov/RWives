@@ -32,7 +32,7 @@ public class SliderImageFragment extends Fragment {
     SliderFragmentsPresenter sliderFragmentsPresenter;
     private static final int GALLERY_PICK = 1;
     private ProgressDialog progressDialog;
-    private boolean isComplete=false;
+    private static boolean  isComplete=false;
     public SliderImageFragment() {
         // Required empty public constructor
     }
@@ -54,6 +54,16 @@ public class SliderImageFragment extends Fragment {
         sliderFragmentsPresenter = new SliderFragmentsPresenter(new SliderInteractor(new SliderRepository()));
         progressDialog = new ProgressDialog(getActivity());
 
+        new SliderRepository().getFieldFromCurrentUser(Consts.IMAGE,value -> {
+            try {
+                if (value != null && value.length() > 0 && value.contains("https")) {
+                    isComplete = true;
+                }
+            }catch (IllegalStateException e){
+                e.printStackTrace();
+                Log.e("SliderImage","Got a Exception---->>>>"+e.getMessage());
+            }
+        });
         btnChangeImage = view.findViewById(R.id.fragment_slider_image_btn_save);
         btnChangeImage.setOnClickListener(view1 -> {
             Intent galleryIntent = new Intent();

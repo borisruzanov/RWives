@@ -16,6 +16,7 @@ import com.borisruzanov.russianwives.R;
 import com.borisruzanov.russianwives.UserProfileItemsListForEdit;
 import com.borisruzanov.russianwives.models.Contract;
 import com.borisruzanov.russianwives.models.UserDescriptionModel;
+import com.borisruzanov.russianwives.mvp.ui.disclamer.VideoDisclaimerActivity;
 import com.borisruzanov.russianwives.mvp.ui.myprofile.MyProfileActivity;
 import com.borisruzanov.russianwives.mvp.ui.profilesettings.adapter.UserDescriptionEditListAdapter;
 import com.borisruzanov.russianwives.mvp.ui.slider.SliderActivity;
@@ -77,6 +78,10 @@ public class ProfileSettingsActivity extends AppCompatActivity {
     private OnItemClickListener.OnItemClickCallback setOnItemClickCallback() {
         return (view, position) -> {
             UserDescriptionModel itemClicked = userDescriptionEditList.get(position);
+            if (itemClicked.getTitle().equals("Video")){
+                startActivity(new Intent(ProfileSettingsActivity.this, VideoDisclaimerActivity.class));
+                return;
+            }
             Bundle bundle = new Bundle();
             bundle.putString("field_id", itemClicked.getTitle());
             Log.d(Contract.SLIDER, "Id from list clicked is - " + itemClicked.getTitle());

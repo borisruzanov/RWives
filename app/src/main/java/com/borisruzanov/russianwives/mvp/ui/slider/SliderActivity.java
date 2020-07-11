@@ -16,6 +16,7 @@ import com.arellomobile.mvp.MvpAppCompatActivity;
 import com.borisruzanov.russianwives.R;
 import com.borisruzanov.russianwives.eventbus.StringEvent;
 import com.borisruzanov.russianwives.models.Contract;
+import com.borisruzanov.russianwives.mvp.model.data.prefs.Prefs;
 import com.borisruzanov.russianwives.mvp.ui.disclamer.VideoDisclaimerActivity;
 import com.borisruzanov.russianwives.mvp.ui.main.MainScreenActivity;
 import com.borisruzanov.russianwives.mvp.ui.slider.adapter.UserInfoPagerAdapter;
@@ -50,7 +51,7 @@ public class SliderActivity extends MvpAppCompatActivity {
     private boolean isVideoAvailable=true; //indicate that video is uploaded or not
     private int completed=0;//indicate how much info completed
 
-    private boolean[] arrCompleted;//array to hold value for each fragment info completed or not
+    private boolean[] arrCompleted=new boolean[12];//array to hold value for each fragment info completed or not
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +73,7 @@ public class SliderActivity extends MvpAppCompatActivity {
         mProgressLeftText=findViewById(R.id.slider_progressleft_text);
         mProgressBar.setMax(100);
         mSliderTitle=findViewById(R.id.slider_title);
-        mSliderTitle.setText(LanguageConfig.isRussian()?R.string.slider_toolbar_title_rus:R.string.slider_toolbar_title_eng);
+        mSliderTitle.setText(new Prefs(SliderActivity.this).getValue(LanguageConfig.isRussian()? Consts.SLIDER_TOOLBAR_TITLE_RUS:Consts.SLIDER_TOOLBAR_TITLE_ENG));
         Log.d("SliderDebug", "In onCreate");
 
         if (getIntent().getStringArrayListExtra(Consts.DEFAULT_LIST) != null) {
@@ -172,7 +173,16 @@ public class SliderActivity extends MvpAppCompatActivity {
         progressValue=baseProgress*completed;
         Log.d("SliderDebug","progress:-"+progressValue);
         mProgressBar.setProgress(progressValue);
-        arrCompleted=new boolean[fragmentList.size()]; //initialize array with fragment size
+
+        //set a last added info fragment
+        //start with a previous left fragment
+        for (int i=0;i<12;i++){
+            if (!arrCompleted[i]){ //check a sequence of fragment where it is completed or not
+                //if not completed here set a fragment as a current item and left the loop
+                viewPager.setCurrentItem(i);
+                break;
+            }
+        }
     }
 
     @Subscribe
@@ -201,8 +211,8 @@ public class SliderActivity extends MvpAppCompatActivity {
         else if (event.getStringParameter().equals(Consts.COMPLETE)){
             //to increase value of completed info
             completed++;
+            //new Prefs(SliderActivity.this).setValue(Consts.LAST_SLIDER_NO, String.valueOf(viewPager.getCurrentItem()));
             arrCompleted[viewPager.getCurrentItem()]=true; //set value true for each fragment info completed
-
         }
     }
 
@@ -246,76 +256,88 @@ public class SliderActivity extends MvpAppCompatActivity {
                         completed++;
                     break;*/
                 case 0:
-                    if (list.contains(Consts.IMAGE))
-                        fragmentList.add(new SliderImageFragment());
-                    else
+                    fragmentList.add(new SliderImageFragment());
+                    if (!list.contains(Consts.IMAGE)) {
                         completed++;
+                        arrCompleted[0] = true;
+                    }
                     break;
                 case 1:
-                    if (list.contains(Consts.AGE))
-                        fragmentList.add(new SliderAgeFragment());
-                    else
+                    fragmentList.add(new SliderAgeFragment());
+                    if (!list.contains(Consts.AGE)) {
                         completed++;
+                        arrCompleted[1]=true;
+                    }
                     break;
                 case 2:
-                    if (list.contains(Consts.COUNTRY))
-                        fragmentList.add(new SliderCountriesFragment());
-                    else
+                    fragmentList.add(new SliderCountriesFragment());
+                    if (!list.contains(Consts.COUNTRY)) {
                         completed++;
+                        arrCompleted[2]=true;
+                    }
                     break;
                 case 3:
-                    if (list.contains(Consts.BODY_TYPE))
-                        fragmentList.add(new SliderBodytypeFragment());
-                    else
+                    fragmentList.add(new SliderBodytypeFragment());
+                    if (!list.contains(Consts.BODY_TYPE)) {
                         completed++;
+                        arrCompleted[3]=true;
+                    }
                     break;
                 case 4:
-                    if (list.contains(Consts.ETHNICITY))
-                        fragmentList.add(new SliderEthnicityFragment());
-                    else
+                    fragmentList.add(new SliderEthnicityFragment());
+                    if (!list.contains(Consts.ETHNICITY)) {
                         completed++;
+                        arrCompleted[4]=true;
+                    }
                     break;
                 case 5:
-                    if (list.contains(Consts.FAITH))
-                        fragmentList.add(new SliderFaithFragment());
-                    else
+                    fragmentList.add(new SliderFaithFragment());
+                    if (!list.contains(Consts.FAITH)) {
                         completed++;
+                        arrCompleted[5]=true;
+                    }
                     break;
                 case 6:
-                    if (list.contains(Consts.DRINK_STATUS))
-                        fragmentList.add(new SliderDrinkStatusFragment());
-                    else
+                    fragmentList.add(new SliderDrinkStatusFragment());
+                    if (!list.contains(Consts.DRINK_STATUS)) {
                         completed++;
+                        arrCompleted[6]=true;
+                    }
                     break;
                 case 7:
-                    if (list.contains(Consts.SMOKING_STATUS))
-                        fragmentList.add(new SliderSmokingStatusFragment());
-                    else
+                    fragmentList.add(new SliderSmokingStatusFragment());
+                    if (!list.contains(Consts.SMOKING_STATUS)) {
                         completed++;
+                        arrCompleted[7]=true;
+                    }
                     break;
                 case 8:
-                    if (list.contains(Consts.RELATIONSHIP_STATUS))
-                        fragmentList.add(new SliderRelationshipsStatusFragment());
-                    else
+                    fragmentList.add(new SliderRelationshipsStatusFragment());
+                    if (!list.contains(Consts.RELATIONSHIP_STATUS)) {
                         completed++;
+                        arrCompleted[8]=true;
+                    }
                     break;
                 case 9:
-                    if (list.contains(Consts.NUMBER_OF_KIDS))
-                        fragmentList.add(new SliderHaveKidsFragment());
-                    else
+                    fragmentList.add(new SliderHaveKidsFragment());
+                    if (!list.contains(Consts.NUMBER_OF_KIDS)) {
                         completed++;
+                        arrCompleted[9]=true;
+                    }
                     break;
                 case 10:
-                    if (list.contains(Consts.WANT_CHILDREN_OR_NOT))
-                        fragmentList.add(new SliderWillingKidsFragment());
-                    else
+                    fragmentList.add(new SliderWillingKidsFragment());
+                    if (!list.contains(Consts.WANT_CHILDREN_OR_NOT)) {
                         completed++;
+                        arrCompleted[10]=true;
+                    }
                     break;
                 case 11:
-                    if (list.contains(Consts.HOBBY))
-                        fragmentList.add(new SliderHobbyFragment());
-                    else
+                    fragmentList.add(new SliderHobbyFragment());
+                    if (!list.contains(Consts.HOBBY)) {
                         completed++;
+                        arrCompleted[11]=true;
+                    }
                     break;
             }
         }
@@ -337,8 +359,8 @@ public class SliderActivity extends MvpAppCompatActivity {
             if (!isVideoAvailable){
                 Intent intent = new Intent(SliderActivity.this, VideoDisclaimerActivity.class);
                 startActivity(intent);
+                finish();
             }
-            finish();
 //            addFullProfileAchieve();
         }
     }
@@ -367,14 +389,12 @@ public class SliderActivity extends MvpAppCompatActivity {
         }
         if (viewPager.getCurrentItem()==fragmentList.size()-1){
             buttonNext.setText(R.string.finish);
-            buttonNext.setBackgroundResource(R.color.darkColor);
-            buttonNext.setClickable(false);
         }
         else{
             buttonNext.setText(R.string.next_text);
-            buttonNext.setBackgroundResource(R.color.darkColor);
-            buttonNext.setClickable(false);
         }
+        buttonNext.setBackgroundResource(R.color.darkColor);
+        buttonNext.setClickable(false);
 
         if (arrCompleted[viewPager.getCurrentItem()]){
             //if fragment info completed then next button set to clickable
@@ -395,6 +415,9 @@ public class SliderActivity extends MvpAppCompatActivity {
         super.onResume();
         if (!EventBus.getDefault().isRegistered(this))
             EventBus.getDefault().register(this);
+        /*String slider_no=new Prefs(SliderActivity.this).getLastInfoSliderNo();
+        if(slider_no!=null && !slider_no.equals("11"))
+            viewPager.setCurrentItem(Integer.parseInt(slider_no)+1);*/
         mProgressLeftText.setText(String.valueOf(12-completed));
         setButton();
         Log.d("sliderDebug","fragment size:-"+fragmentList.size()+" current:-"+viewPager.getCurrentItem()+

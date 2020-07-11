@@ -4,6 +4,7 @@ package com.borisruzanov.russianwives.mvp.ui.slider;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,21 +55,27 @@ public class SliderAgeFragment extends MvpAppCompatFragment {
         radioGroup = view.findViewById(R.id.fragment_slider_age_radiogroup);
 
         new SliderRepository().getFieldFromCurrentUser(Consts.AGE, value -> {
-            if (value != null && value.equals(getString(R.string.age_18_21))){
-                radioGroup.check(R.id.fragment_slider_age_18_21);
-                isComplete=true; //set true if information already saved
-            } else if (value != null && value.equals(getString(R.string.age_22_26))){
-                radioGroup.check(R.id.fragment_slider_age_22_26);
-                isComplete=true;
-            } else if (value != null && value.equals(getString(R.string.age_26_35))){
-                radioGroup.check(R.id.fragment_slider_age_26_35);
-                isComplete=true;
-            }else if (value != null && value.equals(getString(R.string.age_36_45))){
-                radioGroup.check(R.id.fragment_slider_age_36_45);
-                isComplete=true;
-            }else if (value != null && value.equals(getString(R.string.age_45_plus))){
-                radioGroup.check(R.id.fragment_slider_age_45_plus);
-                isComplete=true;
+            //put a try-catch for a IllegalStateException
+            try {
+                if (value != null && value.equals(getString(R.string.age_18_21))) {
+                    radioGroup.check(R.id.fragment_slider_age_18_21);
+                    isComplete = true; //set true if information already saved
+                } else if (value != null && value.equals(getString(R.string.age_22_26))) {
+                    radioGroup.check(R.id.fragment_slider_age_22_26);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.age_26_35))) {
+                    radioGroup.check(R.id.fragment_slider_age_26_35);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.age_36_45))) {
+                    radioGroup.check(R.id.fragment_slider_age_36_45);
+                    isComplete = true;
+                } else if (value != null && value.equals(getString(R.string.age_45_plus))) {
+                    radioGroup.check(R.id.fragment_slider_age_45_plus);
+                    isComplete = true;
+                }
+            }catch (IllegalStateException e){
+                e.printStackTrace(); //print a exception on logcat
+                Log.e("SliderAge","Got a Exception---->>>>"+e.getMessage());
             }
         });
 
