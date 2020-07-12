@@ -7,7 +7,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,9 +33,10 @@ public class SliderCountriesFragment extends Fragment {
 
     private boolean isCountry;
     private ListView countryCityList;
-    private String mCountry =null;
     private CountriesAdapter countriesAdapter;
     private boolean isComplete=false;
+    private Button saveButton;
+    private static int mSelectedPosition =-1;//a varaible to hold position of selected item from listView,-1 indicate that no item is selected
     public SliderCountriesFragment() {
         // Required empty public constructor
     }
@@ -53,6 +56,7 @@ public class SliderCountriesFragment extends Fragment {
         isCountry=true;
         countryCityList = view.findViewById(R.id.country_list);
         TextView textView=view.findViewById(R.id.slider_countries_tv_question);
+        saveButton=view.findViewById(R.id.fragment_slider_countries_btn_save);
         new SliderRepository().getFieldFromCurrentUser(Consts.CITY,value -> {
             try {
                 if (value != null && !value.equals(Consts.DEFAULT)) {
@@ -64,16 +68,67 @@ public class SliderCountriesFragment extends Fragment {
             }
         });
         setCountry();
-        countryCityList.setOnItemClickListener((parent, view1, position, id) -> {
+        saveButton.setOnClickListener(v -> {
+            //check for item selected or not
+            if(mSelectedPosition == AdapterView.INVALID_POSITION){ //check for nothing selected
+                //if not selected then Toast a message & return
+                Toast.makeText(getActivity(),"Please select a "+(isCountry?Consts.COUNTRY:Consts.CITY),Toast.LENGTH_LONG).show();
+                return;
+            }
             if (isCountry) {
+                //if it is for country
+                    String country = CountriesList.initData().get(mSelectedPosition).getCountryName();
+                    Log.d("SliderDebug","Country:-"+country);
+                    if (!country.equals("           ")) {
+                        //country value is saved in member varaible country
+                        Map<String, Object> map = new HashMap<>();
+                        map.put(Consts.COUNTRY, country);
+                        new SliderRepository().updateFieldFromCurrentUser(map, () -> {
+                            Toast.makeText(getActivity(), getString(R.string.country_updated), Toast.LENGTH_LONG).show();
+                            textView.setText(R.string.choose_your_city);
+                            isCountry=false;
+                            setCity(country);
+                            mSelectedPosition=-1;//reset to value
+                        });
+                    }
+                }
+            else{
+                //else for a city
+                    String city= (String) countryCityList.getItemAtPosition(mSelectedPosition);
+                    Log.d("SliderDebug","City:-"+city);
+                    Map<String, Object> map = new HashMap<>();
+                    map.put(Consts.CITY, city);
+                    //country and city add in fireStore
+                    new SliderRepository().updateFieldFromCurrentUser(map, () -> {
+                        if (getArguments() != null && getArguments().getString(Consts.NEED_BACK) != null) {
+                            if (getActivity() != null) getActivity().onBackPressed();
+                        }
+                        Toast.makeText(getActivity(), getString(R.string.city_updated), Toast.LENGTH_LONG).show();
+                        if(!isComplete) {
+                            EventBus.getDefault().post(new StringEvent(Consts.COMPLETE));
+                            EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
+                            EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
+                            EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));
+                            isComplete=true;
+                        }
+                        setCountry();
+                        isCountry=true;
+                        mSelectedPosition=-1;//reset to value
+                    });
+            }
+        });
+        countryCityList.setOnItemClickListener((parent, view1, position, id) -> {
+            mSelectedPosition =position; //save a selected item position
+
+            /*if (isCountry) {
                 String country = CountriesList.initData().get(position).getCountryName();
                 Log.d("SliderDebug","Country:-"+country);
                 if (!country.equals("           ")) {
                     //country value is saved in member varaible country
                     this.mCountry =country;
-                    /*textView.setText(R.string.choose_your_city);
+                    textView.setText(R.string.choose_your_city);
                     isCountry=false;
-                    setCity(country);*/
+                    setCity(country);
                     Map<String, Object> map = new HashMap<>();
                     map.put(Consts.COUNTRY, country);
                     new SliderRepository().updateFieldFromCurrentUser(map, () -> {
@@ -105,7 +160,7 @@ public class SliderCountriesFragment extends Fragment {
                     setCountry();
                     isCountry=true;
                 });
-            }
+            }*/
         });
         return view;
     }

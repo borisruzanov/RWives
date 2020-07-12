@@ -17,10 +17,21 @@
         android:textSize="@dimen/large_text_size" />
 
     <ListView
-        android:layout_below="@+id/slider_countries_tv_question"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
-        android:id="@+id/country_list"/>
+        android:id="@+id/country_list"
+        android:layout_below="@id/slider_countries_tv_question"
+        android:layout_above="@id/fragment_slider_countries_btn_save"/>
 
+    <Button
+        android:id="@+id/fragment_slider_countries_btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp6"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/colorAccent"
+        android:text="@string/save"
+        android:textColor="@android:color/white" />
 </RelativeLayout>
