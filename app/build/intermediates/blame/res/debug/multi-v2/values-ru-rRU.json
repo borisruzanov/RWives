@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\my_project\\Boris\\RWives\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ru-rRU\\values-ru-rRU.xml",
+            "outputFile": "D:\\rwvs\\RussianWivesSocNetwork\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ru-rRU\\values-ru-rRU.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Abhay patel\\.gradle\\caches\\transforms-2\\files-2.1\\43fca39eb3ba4fd1cbabf15eae1572cc\\android-image-cropper-2.6.0\\res\\values-ru-rRU\\values-ru-rRU.xml",
+                    "source": "C:\\Users\\Public\\.gradle\\caches\\transforms-2\\files-2.1\\43fca39eb3ba4fd1cbabf15eae1572cc\\android-image-cropper-2.6.0\\res\\values-ru-rRU\\values-ru-rRU.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",

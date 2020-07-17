@@ -187,6 +187,22 @@ public class MainView$$State extends MvpViewState<com.borisruzanov.russianwives.
 		mViewCommands.afterApply(showErrorPopupCommand);
 	}
 
+	@Override
+	public  void completeRegistration() {
+		CompleteRegistrationCommand completeRegistrationCommand = new CompleteRegistrationCommand();
+		mViewCommands.beforeApply(completeRegistrationCommand);
+
+		if (mViews == null || mViews.isEmpty()) {
+			return;
+		}
+
+		for(com.borisruzanov.russianwives.mvp.ui.main.MainView view : mViews) {
+			view.completeRegistration();
+		}
+
+		mViewCommands.afterApply(completeRegistrationCommand);
+	}
+
 
 	public class CallAuthWindowCommand extends ViewCommand<com.borisruzanov.russianwives.mvp.ui.main.MainView> {
 		CallAuthWindowCommand() {
@@ -324,6 +340,17 @@ public class MainView$$State extends MvpViewState<com.borisruzanov.russianwives.
 		@Override
 		public void apply(com.borisruzanov.russianwives.mvp.ui.main.MainView mvpView) {
 			mvpView.showErrorPopup(getmMessage);
+		}
+	}
+
+	public class CompleteRegistrationCommand extends ViewCommand<com.borisruzanov.russianwives.mvp.ui.main.MainView> {
+		CompleteRegistrationCommand() {
+			super("completeRegistration", com.arellomobile.mvp.viewstate.strategy.AddToEndStrategy.class);
+		}
+
+		@Override
+		public void apply(com.borisruzanov.russianwives.mvp.ui.main.MainView mvpView) {
+			mvpView.completeRegistration();
 		}
 	}
 }

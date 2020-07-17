@@ -12,8 +12,8 @@ import com.arellomobile.mvp.viewstate.strategy.StateStrategy;
 public class FriendProfileView$$State extends MvpViewState<com.borisruzanov.russianwives.mvp.ui.friendprofile.FriendProfileView> implements com.borisruzanov.russianwives.mvp.ui.friendprofile.FriendProfileView {
 
 	@Override
-	public  void setFriendData( java.lang.String name,  java.lang.String age,  java.lang.String country,  java.lang.String image) {
-		SetFriendDataCommand setFriendDataCommand = new SetFriendDataCommand(name, age, country, image);
+	public  void setFriendData( java.lang.String name,  java.lang.String age,  java.lang.String country,  java.lang.String image, @javax.annotation.Nullable java.lang.String friendVideoUrl) {
+		SetFriendDataCommand setFriendDataCommand = new SetFriendDataCommand(name, age, country, image, friendVideoUrl);
 		mViewCommands.beforeApply(setFriendDataCommand);
 
 		if (mViews == null || mViews.isEmpty()) {
@@ -21,7 +21,7 @@ public class FriendProfileView$$State extends MvpViewState<com.borisruzanov.russ
 		}
 
 		for(com.borisruzanov.russianwives.mvp.ui.friendprofile.FriendProfileView view : mViews) {
-			view.setFriendData(name, age, country, image);
+			view.setFriendData(name, age, country, image, friendVideoUrl);
 		}
 
 		mViewCommands.afterApply(setFriendDataCommand);
@@ -129,18 +129,20 @@ public class FriendProfileView$$State extends MvpViewState<com.borisruzanov.russ
 		public final java.lang.String age;
 		public final java.lang.String country;
 		public final java.lang.String image;
+		public final java.lang.String friendVideoUrl;
 
-		SetFriendDataCommand( java.lang.String name,  java.lang.String age,  java.lang.String country,  java.lang.String image) {
+		SetFriendDataCommand( java.lang.String name,  java.lang.String age,  java.lang.String country,  java.lang.String image, @javax.annotation.Nullable java.lang.String friendVideoUrl) {
 			super("setFriendData", com.arellomobile.mvp.viewstate.strategy.AddToEndStrategy.class);
 			this.name = name;
 			this.age = age;
 			this.country = country;
 			this.image = image;
+			this.friendVideoUrl = friendVideoUrl;
 		}
 
 		@Override
 		public void apply(com.borisruzanov.russianwives.mvp.ui.friendprofile.FriendProfileView mvpView) {
-			mvpView.setFriendData(name, age, country, image);
+			mvpView.setFriendData(name, age, country, image, friendVideoUrl);
 		}
 	}
 

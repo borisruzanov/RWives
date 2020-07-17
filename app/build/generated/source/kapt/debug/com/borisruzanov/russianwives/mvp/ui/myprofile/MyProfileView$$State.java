@@ -12,8 +12,8 @@ import com.arellomobile.mvp.viewstate.strategy.StateStrategy;
 public class MyProfileView$$State extends MvpViewState<com.borisruzanov.russianwives.mvp.ui.myprofile.MyProfileView> implements com.borisruzanov.russianwives.mvp.ui.myprofile.MyProfileView {
 
 	@Override
-	public  void setUserData( java.lang.String name,  java.lang.String age,  java.lang.String country,  java.lang.String image) {
-		SetUserDataCommand setUserDataCommand = new SetUserDataCommand(name, age, country, image);
+	public  void setUserData( java.lang.String name,  java.lang.String age,  java.lang.String country,  java.lang.String image, @javax.annotation.Nullable java.lang.String videoURL) {
+		SetUserDataCommand setUserDataCommand = new SetUserDataCommand(name, age, country, image, videoURL);
 		mViewCommands.beforeApply(setUserDataCommand);
 
 		if (mViews == null || mViews.isEmpty()) {
@@ -21,7 +21,7 @@ public class MyProfileView$$State extends MvpViewState<com.borisruzanov.russianw
 		}
 
 		for(com.borisruzanov.russianwives.mvp.ui.myprofile.MyProfileView view : mViews) {
-			view.setUserData(name, age, country, image);
+			view.setUserData(name, age, country, image, videoURL);
 		}
 
 		mViewCommands.afterApply(setUserDataCommand);
@@ -65,18 +65,20 @@ public class MyProfileView$$State extends MvpViewState<com.borisruzanov.russianw
 		public final java.lang.String age;
 		public final java.lang.String country;
 		public final java.lang.String image;
+		public final java.lang.String videoURL;
 
-		SetUserDataCommand( java.lang.String name,  java.lang.String age,  java.lang.String country,  java.lang.String image) {
+		SetUserDataCommand( java.lang.String name,  java.lang.String age,  java.lang.String country,  java.lang.String image, @javax.annotation.Nullable java.lang.String videoURL) {
 			super("setUserData", com.arellomobile.mvp.viewstate.strategy.AddToEndStrategy.class);
 			this.name = name;
 			this.age = age;
 			this.country = country;
 			this.image = image;
+			this.videoURL = videoURL;
 		}
 
 		@Override
 		public void apply(com.borisruzanov.russianwives.mvp.ui.myprofile.MyProfileView mvpView) {
-			mvpView.setUserData(name, age, country, image);
+			mvpView.setUserData(name, age, country, image, videoURL);
 		}
 	}
 

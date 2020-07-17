@@ -10,10 +10,14 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.android.billingclient.api.AcknowledgePurchaseParams;
+import com.android.billingclient.api.AcknowledgePurchaseResponseListener;
 import com.android.billingclient.api.BillingClient;
 import com.android.billingclient.api.BillingClientStateListener;
 import com.android.billingclient.api.BillingFlowParams;
 import com.android.billingclient.api.BillingResult;
+import com.android.billingclient.api.ConsumeParams;
+import com.android.billingclient.api.ConsumeResponseListener;
 import com.android.billingclient.api.Purchase;
 import com.android.billingclient.api.PurchasesUpdatedListener;
 import com.android.billingclient.api.SkuDetails;
@@ -27,7 +31,7 @@ import com.borisruzanov.russianwives.utils.Consts;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RewardVideoActivity extends AppCompatActivity implements PurchasesUpdatedListener {
+public class RewardVideoActivity extends AppCompatActivity implements PurchasesUpdatedListener, AcknowledgePurchaseResponseListener {
 
     RewardVideoPresenter presenter;
 
@@ -177,63 +181,65 @@ public class RewardVideoActivity extends AppCompatActivity implements PurchasesU
         });
     }
 
-    private void startConnection(String type) {
+        private void startConnection(String type) {
 
-        //Call newBuilder() to create an instance of BillingClient You must also call setListener()
-        //passing a reference to a PurchasesUpdatedListener to receive updates on purchases initiated
-        // by your app, as well as those initiated by the Google Play Store.
-        BillingClient billingClient = BillingClient.newBuilder(this).enablePendingPurchases().setListener(this).build();
+            //Call newBuilder() to create an instance of BillingClient You must also call setListener()
+            //passing a reference to a PurchasesUpdatedListener to receive updates on purchases initiated
+            // by your app, as well as those initiated by the Google Play Store.
+            billingClient = BillingClient.newBuilder(this).enablePendingPurchases().setListener(this).build();
 
-        billingClient.isFeatureSupported(BillingClient.FeatureType.SUBSCRIPTIONS);
-        billingClient.isFeatureSupported(BillingClient.FeatureType.SUBSCRIPTIONS_UPDATE);
-        //Establish a connection to Google Play. The setup process is asynchronous, and you must
-        //implement a BillingClientStateListener to receive a callback once the setup of the client
-        //is complete and it’s ready to make further requests.
+            billingClient.isFeatureSupported(BillingClient.FeatureType.SUBSCRIPTIONS);
+            billingClient.isFeatureSupported(BillingClient.FeatureType.SUBSCRIPTIONS_UPDATE);
+            //Establish a connection to Google Play. The setup process is asynchronous, and you must
+            //implement a BillingClientStateListener to receive a callback once the setup of the client
+            //is complete and it’s ready to make further requests.
 
-        billingClient.startConnection(new BillingClientStateListener() {
-            @Override
-            public void onBillingSetupFinished(BillingResult billingResult) {
-                if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
-                    //specifies a list of product ID strings and a SkuType
-                    List<String> skuList = new ArrayList<>();
-                    skuList.add(type);
-//                    skuList.add("vip");
-                    SkuDetailsParams.Builder params = SkuDetailsParams.newBuilder();
-                    //IMPORTANT The SkuType can be either SkuType.INAPP for one-time products or SkuType.SUBS for subscriptions
-                    params.setSkusList(skuList).setType(BillingClient.SkuType.SUBS);
-                    billingClient.querySkuDetailsAsync(params.build(),
-                            new SkuDetailsResponseListener() {
-                                @Override
-                                public void onSkuDetailsResponse(BillingResult billingResult,
-                                                                 List<SkuDetails> skuDetailsList) {
-                                    // Process the result.
-                                    //Retrieving a product’s price is an important step before a user can purchase a product because
-                                    // the price is different for each user based on their country of origin.
-                                    if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK && skuDetailsList != null) {
-                                        for (SkuDetails skuDetails : skuDetailsList) {
-                                            String sku = skuDetails.getSku();
-                                            String price = skuDetails.getPrice();
-                                            BillingFlowParams flowParams = BillingFlowParams.newBuilder()
-                                                    .setSkuDetails(skuDetailsList.get(0))
-                                                    .build();
-                                            billingClient.launchBillingFlow(RewardVideoActivity.this, flowParams);
+            billingClient.startConnection(new BillingClientStateListener() {
+                @Override
+                public void onBillingSetupFinished(BillingResult billingResult) {
+                    String s = billingResult.getDebugMessage();
+                    String ss = String.valueOf(billingResult.getResponseCode());
+                    if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
+                        //specifies a list of product ID strings and a SkuType
+                        List<String> skuList = new ArrayList<>();
+                        skuList.add(type);
+    //                    skuList.add("vip");
+                        SkuDetailsParams.Builder params = SkuDetailsParams.newBuilder();
+                        //IMPORTANT The SkuType can be either SkuType.INAPP for one-time products or SkuType.SUBS for subscriptions
+                        params.setSkusList(skuList).setType(BillingClient.SkuType.SUBS);
+                        billingClient.querySkuDetailsAsync(params.build(),
+                                new SkuDetailsResponseListener() {
+                                    @Override
+                                    public void onSkuDetailsResponse(BillingResult billingResult,
+                                                                     List<SkuDetails> skuDetailsList) {
+                                        // Process the result.
+                                        //Retrieving a product’s price is an important step before a user can purchase a product because
+                                        // the price is different for each user based on their country of origin.
+                                        if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK && skuDetailsList != null) {
+                                            for (SkuDetails skuDetails : skuDetailsList) {
+                                                String sku = skuDetails.getSku();
+                                                String price = skuDetails.getPrice();
+                                                BillingFlowParams flowParams = BillingFlowParams.newBuilder()
+                                                        .setSkuDetails(skuDetailsList.get(0))
+                                                        .build();
+                                                billingClient.launchBillingFlow(RewardVideoActivity.this, flowParams);
+                                            }
                                         }
+
+
                                     }
-
-
-                                }
-                            });
+                                });
+                    }
                 }
-            }
 
-            @Override
-            public void onBillingServiceDisconnected() {
-                String s = "error";
-                // Try to restart the connection on the next request to
-                // Google Play by calling the startConnection() method.
-            }
-        });
-    }
+                @Override
+                public void onBillingServiceDisconnected() {
+                    String s = "error";
+                    // Try to restart the connection on the next request to
+                    // Google Play by calling the startConnection() method.
+                }
+            });
+        }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -247,10 +253,70 @@ public class RewardVideoActivity extends AppCompatActivity implements PurchasesU
 
     @Override
     public void onPurchasesUpdated(BillingResult billingResult, List<Purchase> list) {
+
+        if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK
+                && list != null) {
+            for (Purchase purchase : list) {
+                handlePurchase(purchase);
+            }
+        } else if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.USER_CANCELED) {
+            // Handle an error caused by a user cancelling the purchase flow.
+        } else {
+            // Handle any other error codes.
+        }
+
+
         String result = billingResult.getDebugMessage();
         int message = billingResult.getResponseCode();
         String object = billingResult.toString();
         String s = "";
+        for (Purchase purchase : list){
+            purchase.getAccountIdentifiers();
+            purchase.getDeveloperPayload();
+            purchase.getOrderId();
+            purchase.getOriginalJson();
+            purchase.getPackageName();
+            purchase.getPurchaseState();
+            purchase.getPurchaseTime();
+            purchase.getPurchaseToken();
+            purchase.getSignature();
+            purchase.getSku();
+            purchase.hashCode();
+            purchase.isAcknowledged();
+            purchase.isAutoRenewing();
+            String ds = "";
+        }
+
+        String packageID = list.get(0).getPackageName();
+        String productID = list.get(0).getSku();
+        String orderID = list.get(0).getOrderId();
+
+        String sddd= "";
+    }
+
+    private void handlePurchase(Purchase purchase) {
+        if (purchase.getPurchaseState() == Purchase.PurchaseState.PURCHASED) {
+            if (!purchase.isAcknowledged()) {
+                AcknowledgePurchaseParams acknowledgePurchaseParams =
+                        AcknowledgePurchaseParams.newBuilder()
+                                .setPurchaseToken(purchase.getPurchaseToken())
+                                .build();
+                billingClient.acknowledgePurchase(acknowledgePurchaseParams, this);
+            }
+        }
+    }
+
+    @Override
+    public void onAcknowledgePurchaseResponse(BillingResult billingResult) {
+        int s = billingResult.getResponseCode();
+        String m = billingResult.getDebugMessage();
+            String sm = billingResult.getDebugMessage();
+    }
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+        String x = "we";
     }
 }
+
 

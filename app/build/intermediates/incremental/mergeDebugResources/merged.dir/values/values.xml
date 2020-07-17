@@ -217,6 +217,10 @@
         <item>Zambia</item>
         <item>Zimbabwe</item>
     </string-array>
+    <string-array name="default_city">
+        <item>default</item>
+        <item>All Cities</item>
+    </string-array>
     <string-array name="drink_statuses">
         <item>default</item>
         <item>Never</item>
@@ -256,12 +260,782 @@
         <item>Yes, they sometimes live at home</item>
         <item>Yes, they live away from home</item>
     </string-array>
+    <string-array name="kazakhstan_city">
+        <item>Shymkent</item>
+        <item>Qaraghandy</item>
+        <item>Taraz</item>
+        <item>Astana</item>
+        <item>Pavlodar</item>
+        <item>Öskemen</item>
+        <item>Semey</item>
+        <item>Qyzylorda</item>
+        <item>Aqtöbe</item>
+        <item>Qostanay</item>
+        <item>Petropavl</item>
+        <item>Oral</item>
+        <item>Atyraū</item>
+        <item>Temirtaū</item>
+        <item>Kökshetaū</item>
+        <item>Ekibastuz</item>
+        <item>Rudnyy</item>
+        <item>Zhezqazghan</item>
+        <item>Türkistan</item>
+        <item>Taldyqorghan</item>
+        <item>Balkhash</item>
+        <item>Sarqan</item>
+        <item>Kentaū</item>
+        <item>Ridder</item>
+        <item>Arqalyq</item>
+        <item>Zyryanovsk</item>
+        <item>Zhitiqara</item>
+        <item>Ayagöz</item>
+        <item>Arys</item>
+        <item>Shū</item>
+        <item>Qapshaghay</item>
+        <item>Qarataū</item>
+        <item>Qulsary</item>
+        <item>Zharkent</item>
+        <item>Atbasar</item>
+        <item>Esik</item>
+        <item>Aksay</item>
+        <item>Aral</item>
+        <item>Beyneu</item>
+        <item>Balyqshy</item>
+        <item>Shīeli</item>
+        <item>Alga</item>
+        <item>Oktyabr’sk</item>
+        <item>Shalqar</item>
+        <item>Shemonaīkha</item>
+        <item>Ereymentaū</item>
+        <item>Khromtaū</item>
+        <item>Lengir</item>
+        <item>Makīnsk</item>
+        <item>Oytal</item>
+        <item>Qarazhal</item>
+        <item>Boralday</item>
+        <item>Üshtöbe</item>
+        <item>Zhosaly</item>
+        <item>Atasū</item>
+        <item>Emba</item>
+        <item>Zaysan</item>
+        <item>Derzhavīnsk</item>
+        <item>Uryzhar</item>
+        <item>Maqat</item>
+        <item>Esil</item>
+        <item>Taiynsha</item>
+        <item>Qulan</item>
+        <item>Otar</item>
+        <item>Būlaevo</item>
+        <item>Aqadyr</item>
+        <item>Ertis</item>
+        <item>Shar</item>
+        <item>Makhambet</item>
+        <item>Zhangaözen</item>
+        <item>Aqsū</item>
+        <item>Zhänibek</item>
+        <item>Qarqaraly</item>
+        <item>Qusmuryn</item>
+        <item>Bayghanīn</item>
+        <item>Osakarovka</item>
+        <item>Bestöbe</item>
+        <item>Tobyl</item>
+        <item>Zholymbet</item>
+        <item>Kishkeneköl</item>
+        <item>Qazaly</item>
+        <item>Chapaev</item>
+        <item>Torghay</item>
+        <item>Fort-Shevchenko</item>
+        <item>Aqtaū</item>
+        <item>Saryshagan</item>
+        <item>Shongzhy</item>
+        <item>Serebryansk</item>
+        <item>Zhaltyr</item>
+        <item>Sharbaqty</item>
+        <item>Būrylbaytal</item>
+    </string-array>
     <string-array name="relationships_statuses">
         <item>default</item>
         <item>Never married</item>
         <item>Currently separated</item>
         <item>Divorced</item>
         <item>Widow/Widower</item>
+    </string-array>
+    <string-array name="russia_city">
+        <item>Saint Petersburg</item>
+        <item>Novosibirsk</item>
+        <item>Yekaterinburg</item>
+        <item>Nizhniy Novgorod</item>
+        <item>Samara</item>
+        <item>Omsk</item>
+        <item>Kazan’</item>
+        <item>Chelyabinsk</item>
+        <item>Rostov-na-Donu</item>
+        <item>Ufa</item>
+        <item>Perm’</item>
+        <item>Volgograd</item>
+        <item>Krasnoyarsk</item>
+        <item>Voronezh</item>
+        <item>Saratov</item>
+        <item>Krasnodar</item>
+        <item>Ul’yanovsk</item>
+        <item>Izhevsk</item>
+        <item>Yaroslavl’</item>
+        <item>Barnaul</item>
+        <item>Vladivostok</item>
+        <item>Irkutsk</item>
+        <item>Khabarovsk</item>
+        <item>Makhachkala</item>
+        <item>Orenburg</item>
+        <item>Novokuznetsk</item>
+        <item>Tomsk</item>
+        <item>Ryazan’</item>
+        <item>Tyumen’</item>
+        <item>Lipetsk</item>
+        <item>Penza</item>
+        <item>Astrakhan’</item>
+        <item>Tula</item>
+        <item>Kemerovo</item>
+        <item>Krasnyye Chelny</item>
+        <item>Kirov</item>
+        <item>Cheboksary</item>
+        <item>Kaliningrad</item>
+        <item>Bryansk</item>
+        <item>Afanasovo</item>
+        <item>Magnitogorsk</item>
+        <item>Kursk</item>
+        <item>Tver’</item>
+        <item>Surgut</item>
+        <item>Nizhniy Tagil</item>
+        <item>Vladikavkaz</item>
+        <item>Stavropol’</item>
+        <item>Ulan-Ude</item>
+        <item>Arkhangel’sk</item>
+        <item>Belgorod</item>
+        <item>Kurgan</item>
+        <item>Kaluga</item>
+        <item>Orël</item>
+        <item>Novyy Sochi</item>
+        <item>Yoshkar-Ola</item>
+        <item>Volzhskiy</item>
+        <item>Smolensk</item>
+        <item>Podol’sk</item>
+        <item>Murmansk</item>
+        <item>Vladimir</item>
+        <item>Cherepovets</item>
+        <item>Chita</item>
+        <item>Nal’chik</item>
+        <item>Saransk</item>
+        <item>Tambov</item>
+        <item>Vologda</item>
+        <item>Taganrog</item>
+        <item>Kostroma</item>
+        <item>Komsomol’sk-na-Amure</item>
+        <item>Prokop’yevsk</item>
+        <item>Sterlitamak</item>
+        <item>Petrozavodsk</item>
+        <item>Dzerzhinsk</item>
+        <item>Orsk</item>
+        <item>Bratsk</item>
+        <item>Nizhnevartovsk</item>
+        <item>Angarsk</item>
+        <item>Novorossiysk</item>
+        <item>Yakutsk</item>
+        <item>Nizhnekamsk</item>
+        <item>Syktyvkar</item>
+        <item>Noginsk</item>
+        <item>Noginsk</item>
+        <item>Staryy Oskol</item>
+        <item>Groznyy</item>
+        <item>Kolpino</item>
+        <item>Shakhty</item>
+        <item>Blagoveshchensk</item>
+        <item>Velikiy Novgorod</item>
+        <item>Rybinsk</item>
+        <item>Biysk</item>
+        <item>Pskov</item>
+        <item>Balakovo</item>
+        <item>Armavir</item>
+        <item>Engel’s</item>
+        <item>Severodvinsk</item>
+        <item>Zlatoust</item>
+        <item>Syzran’</item>
+        <item>Petropavlovsk-Kamchatskiy</item>
+        <item>Kamensk-Ural’skiy</item>
+        <item>Yuzhno-Sakhalinsk</item>
+        <item>Berezniki</item>
+        <item>Volgodonsk</item>
+        <item>Miass</item>
+        <item>Abakan</item>
+        <item>Novocherkassk</item>
+        <item>Noril’sk</item>
+        <item>Rubtsovsk</item>
+        <item>Salavat</item>
+        <item>Nakhodka</item>
+        <item>Nakhodka</item>
+        <item>Maykop</item>
+        <item>Ussuriysk</item>
+        <item>Kovrov</item>
+        <item>Novokuybyshevsk</item>
+        <item>Kolomna</item>
+        <item>Pyatigorsk</item>
+        <item>Arzamas</item>
+        <item>Al’met’yevsk</item>
+        <item>Orekhovo-Zuyevo</item>
+        <item>Serpukhov</item>
+        <item>Nevinnomyssk</item>
+        <item>Pervoural’sk</item>
+        <item>Kislovodsk</item>
+        <item>Dimitrovgrad</item>
+        <item>Muromskiy</item>
+        <item>Novomoskovsk</item>
+        <item>Kamyshin</item>
+        <item>Neftekamsk</item>
+        <item>Achinsk</item>
+        <item>Vyborg</item>
+        <item>Cherkessk</item>
+        <item>Yelets</item>
+        <item>Tobol’sk</item>
+        <item>Nefteyugansk</item>
+        <item>Noyabr’sk</item>
+        <item>Bataysk</item>
+        <item>Sergiyev Posad</item>
+        <item>Leninsk-Kuznetskiy</item>
+        <item>Kyzyl</item>
+        <item>Oktyabr’skiy</item>
+        <item>Obninsk</item>
+        <item>Chapayevsk</item>
+        <item>Elista</item>
+        <item>Kandalaksha</item>
+        <item>Novotroitsk</item>
+        <item>Derbent</item>
+        <item>Kiselëvsk</item>
+        <item>Velikiye Luki</item>
+        <item>Ukhta</item>
+        <item>Kansk</item>
+        <item>Sarapul</item>
+        <item>Solikamsk</item>
+        <item>Glazov</item>
+        <item>Ust’-Ilimsk</item>
+        <item>Novoshakhtinsk</item>
+        <item>Tuapse</item>
+        <item>Votkinsk</item>
+        <item>Serov</item>
+        <item>Balashov</item>
+        <item>Zheleznogorsk</item>
+        <item>Kuznetsk</item>
+        <item>Magadan</item>
+        <item>Novyy Urengoy</item>
+        <item>Imeni Michurina</item>
+        <item>Nazran’</item>
+        <item>Kineshma</item>
+        <item>Bugul’ma</item>
+        <item>Novoaltaysk</item>
+        <item>Gatchina</item>
+        <item>Kirovo-Chepetsk</item>
+        <item>Yegor’yevsk</item>
+        <item>Yeysk</item>
+        <item>Buzuluk</item>
+        <item>Shchëkino</item>
+        <item>Usol’ye-Sibirskoye</item>
+        <item>Yurga</item>
+        <item>Anzhero-Sudzhensk</item>
+        <item>Troitsk</item>
+        <item>Kaspiysk</item>
+        <item>Asbest</item>
+        <item>Klin</item>
+        <item>Vorkuta</item>
+        <item>Kropotkin</item>
+        <item>Shadrinsk</item>
+        <item>Birobidzhan</item>
+        <item>Kamensk-Shakhtinskiy</item>
+        <item>Buynaksk</item>
+        <item>Georgiyevsk</item>
+        <item>Chusovoy</item>
+        <item>Chernogorsk</item>
+        <item>Vol’sk</item>
+        <item>Belogorsk</item>
+        <item>Tuymazy</item>
+        <item>Borisoglebsk</item>
+        <item>Khanty-Mansiysk</item>
+        <item>Ishim</item>
+        <item>Oktyabr’skiy</item>
+        <item>Apatity</item>
+        <item>Aleksin</item>
+        <item>Kungur</item>
+        <item>Klintsy</item>
+        <item>Neryungri</item>
+        <item>Leninogorsk</item>
+        <item>Lesosibirsk</item>
+        <item>Polevskoy</item>
+        <item>Kumertau</item>
+        <item>Tikhoretsk</item>
+        <item>Svobodnyy</item>
+        <item>Rzhev</item>
+        <item>Novaya Balakhna</item>
+        <item>Belebey</item>
+        <item>Chistopol’</item>
+        <item>Tikhvin</item>
+        <item>Labinsk</item>
+        <item>Iskitim</item>
+        <item>Vyksa</item>
+        <item>Sibay</item>
+        <item>Sal’sk</item>
+        <item>Shuya</item>
+        <item>Zima</item>
+        <item>Kotlas</item>
+        <item>Gorno-Altaysk</item>
+        <item>Mikhaylovka</item>
+        <item>Solnechnogorsk</item>
+        <item>Arsen’yev</item>
+        <item>Borovichi</item>
+        <item>Cheremkhovo</item>
+        <item>Roslavl’</item>
+        <item>Nizhnyaya Tura</item>
+        <item>Sayanogorsk</item>
+        <item>Gelendzhik</item>
+        <item>Vyaz’ma</item>
+        <item>Krasnokamensk</item>
+        <item>Severomorsk</item>
+        <item>Vyshniy Volochëk</item>
+        <item>Buguruslan</item>
+        <item>Livny</item>
+        <item>Krasnokamsk</item>
+        <item>Tayshetka</item>
+        <item>Nyagan’</item>
+        <item>Kimry</item>
+        <item>Tulun</item>
+        <item>Kyshtym</item>
+        <item>Otradnyy</item>
+        <item>Kanash</item>
+        <item>Monchegorsk</item>
+        <item>Korshunovka</item>
+        <item>Ruzayevka</item>
+        <item>Verkhnyaya Salda</item>
+        <item>Slobodskoy</item>
+        <item>Megion</item>
+        <item>Torzhok</item>
+        <item>Belaya Kalitva</item>
+        <item>Mtsensk</item>
+        <item>Gryazi</item>
+        <item>Mozhga</item>
+        <item>Amursk</item>
+        <item>Safonovo</item>
+        <item>Alatyr’</item>
+        <item>Nadym</item>
+        <item>Pechora</item>
+        <item>Spasskoye</item>
+        <item>Apsheronsk</item>
+        <item>Mozdok</item>
+        <item>Volkhov</item>
+        <item>Yefremov</item>
+        <item>Gorod Shebekino</item>
+        <item>Chernyakhovsk</item>
+        <item>Usinsk</item>
+        <item>Strezhevoy</item>
+        <item>Yelkhovskiy</item>
+        <item>Kamen’-na-Obi</item>
+        <item>Akhtubinsk</item>
+        <item>Timashevsk</item>
+        <item>Alapayevsk</item>
+        <item>Novozybkov</item>
+        <item>Nizhneudinsk</item>
+        <item>Sovetsk</item>
+        <item>Mariinsk</item>
+        <item>Krasnoufimsk</item>
+        <item>Partizansk</item>
+        <item>Sokol</item>
+        <item>Yemanzhelinsk</item>
+        <item>Lesozavodsk</item>
+        <item>Uryupinsk</item>
+        <item>Gay</item>
+        <item>Zelenokumsk</item>
+        <item>Birsk</item>
+        <item>Frolovo</item>
+        <item>Mirnyy</item>
+        <item>Luga</item>
+        <item>Ob’</item>
+        <item>Uray</item>
+        <item>Alekseyevka</item>
+        <item>Bogoroditsk</item>
+        <item>Tavda</item>
+        <item>Kirov</item>
+        <item>Vichuga</item>
+        <item>Asha</item>
+        <item>Gur’yevsk</item>
+        <item>Millerovo</item>
+        <item>Salekhard</item>
+        <item>Uglich</item>
+        <item>Tynda</item>
+        <item>Kasimov</item>
+        <item>Serdobsk</item>
+        <item>Slantsy</item>
+        <item>Severoural’sk</item>
+        <item>Blagodarnyy</item>
+        <item>Boyarka</item>
+        <item>Yalutorovsk</item>
+        <item>Valuyki</item>
+        <item>Shar’ya</item>
+        <item>Shumerlya</item>
+        <item>Korsakov</item>
+        <item>Bezhetsk</item>
+        <item>Kondopoga</item>
+        <item>Staraya Russa</item>
+        <item>Slavgorod</item>
+        <item>Verkhniy Ufaley</item>
+        <item>Zaozërnyy</item>
+        <item>Rostov</item>
+        <item>Dyat’kovo</item>
+        <item>Segezha</item>
+        <item>Velikiy Ustyug</item>
+        <item>Kotovsk</item>
+        <item>Kholmsk</item>
+        <item>Omutninsk</item>
+        <item>Kudymkar</item>
+        <item>Barabinsk</item>
+        <item>Novaya Gubakha</item>
+        <item>Sasovo</item>
+        <item>Karpinsk</item>
+        <item>Mednogorsk</item>
+        <item>Borzya</item>
+        <item>Svetogorsk</item>
+        <item>Sovetskaya Gavan’</item>
+        <item>Kirovsk</item>
+        <item>Sosnogorsk</item>
+        <item>Karasuk</item>
+        <item>Kartaly</item>
+        <item>Zheleznogorsk-Ilimskiy</item>
+        <item>Kotel’nich</item>
+        <item>Dal’nerechensk</item>
+        <item>Nev’yansk</item>
+        <item>Aleysk</item>
+        <item>Kolpashevo</item>
+        <item>Atkarsk</item>
+        <item>Sol’-Iletsk</item>
+        <item>Nikolayevsk-na-Amure</item>
+        <item>Asino</item>
+        <item>Zeya</item>
+        <item>Tara</item>
+        <item>Pugachev</item>
+        <item>Okha</item>
+        <item>Bakal</item>
+        <item>Buy</item>
+        <item>Vel’sk</item>
+        <item>Krasnoarmeysk</item>
+        <item>Severobaykal’sk</item>
+        <item>Lensk</item>
+        <item>Ust’-Kut</item>
+        <item>Nelidovka</item>
+        <item>Tatarsk</item>
+        <item>Bologoye</item>
+        <item>Topki</item>
+        <item>Aldan</item>
+        <item>Gusinoozërsk</item>
+        <item>Kalachinsk</item>
+        <item>Bogotol</item>
+        <item>Dudinka</item>
+        <item>L’gov</item>
+        <item>Inta</item>
+        <item>Tashtagol</item>
+        <item>Onega</item>
+        <item>Kizel</item>
+        <item>Toguchin</item>
+        <item>Nar’yan-Mar</item>
+        <item>Shimanovsk</item>
+        <item>Palatka</item>
+        <item>Isil’kul’</item>
+        <item>Petrovsk-Zabaykal’skiy</item>
+        <item>Krasnoural’sk</item>
+        <item>Cherepanovo</item>
+        <item>Rayevskiy</item>
+        <item>Yeniseysk</item>
+        <item>Bikin</item>
+        <item>Ivdel’</item>
+        <item>Uzhur</item>
+        <item>Polyarnyy</item>
+        <item>Slyudyanka</item>
+        <item>Kavalerovo</item>
+        <item>Vanino</item>
+        <item>Kyakhta</item>
+        <item>Abaza</item>
+        <item>Kirsanov</item>
+        <item>Kurtamysh</item>
+        <item>Sovetsk</item>
+        <item>Pallasovka</item>
+        <item>Plast</item>
+        <item>Severo-Nevel’sk</item>
+        <item>Poronaysk</item>
+        <item>Kamenka</item>
+        <item>Kupino</item>
+        <item>Nikolayevsk</item>
+        <item>Bodaybo</item>
+        <item>Nikel’</item>
+        <item>Kodinsk</item>
+        <item>Gornyak</item>
+        <item>Nerchinsk</item>
+        <item>Kulunda</item>
+        <item>Udachnyy</item>
+        <item>Vyazemskiy</item>
+        <item>Chegdomyn</item>
+        <item>Ust’-Ordynskiy</item>
+        <item>Shilka</item>
+        <item>Kem’</item>
+        <item>Golyshmanovo</item>
+        <item>Kirensk</item>
+        <item>Uyar</item>
+        <item>Uglegorsk</item>
+        <item>Mogocha</item>
+        <item>Nazyvayevsk</item>
+        <item>Belomorsk</item>
+        <item>Cherlak</item>
+        <item>Aleksandrovsk-Sakhalinskiy</item>
+        <item>Dolinsk</item>
+        <item>Magdagachi</item>
+        <item>Severnyy</item>
+        <item>Zmeinogorsk</item>
+        <item>Aginskoye</item>
+        <item>Kirs</item>
+        <item>Kargat</item>
+        <item>Khilok</item>
+        <item>Taksimo</item>
+        <item>Anadyr’</item>
+        <item>Nogliki</item>
+        <item>Skovorodino</item>
+        <item>Obluch’ye</item>
+        <item>Vilyuysk</item>
+        <item>Pokrovsk</item>
+        <item>Biryusinsk</item>
+        <item>Dombarovskiy</item>
+        <item>Igrim</item>
+        <item>Shira</item>
+        <item>Ust’-Nera</item>
+        <item>Suntar</item>
+        <item>Olovyannaya</item>
+        <item>Dal’negorsk</item>
+        <item>Igarka</item>
+        <item>Susuman</item>
+        <item>Khandyga</item>
+        <item>Makarov</item>
+        <item>Verkhnevilyuysk</item>
+        <item>Umba</item>
+        <item>Tazovskiy</item>
+        <item>Mundybash</item>
+        <item>Bilibino</item>
+        <item>Tiksi</item>
+        <item>Okhotsk</item>
+        <item>Tura</item>
+        <item>Chernyshevskiy</item>
+        <item>Artëmovsk</item>
+        <item>Ust’-Kamchatsk</item>
+        <item>Pevek</item>
+        <item>Turukhansk</item>
+        <item>Bagdarin</item>
+        <item>Sangar</item>
+        <item>Batagay</item>
+        <item>Omsukchan</item>
+        <item>Novyy Uoyan</item>
+        <item>Vitim</item>
+        <item>Teeli</item>
+        <item>Cherskiy</item>
+        <item>Mezen’</item>
+        <item>Palana</item>
+        <item>Zyryanka</item>
+        <item>De-Kastri</item>
+        <item>Srednekolymsk</item>
+        <item>Bukachacha</item>
+        <item>Ugol’nyye Kopi</item>
+        <item>Krasnogorsk</item>
+        <item>Zhigansk</item>
+        <item>Khatanga</item>
+        <item>Ust’-Maya</item>
+        <item>Saranpaul’</item>
+        <item>Provideniya</item>
+        <item>Chokurdakh</item>
+        <item>Severo-Kuril’sk</item>
+        <item>Egvekinot</item>
+        <item>Evensk</item>
+        <item>Saskylakh</item>
+        <item>Beringovskiy</item>
+        <item>Novyy Port</item>
+        <item>Ust’-Kuyga</item>
+        <item>El’dikan</item>
+        <item>Verkhoyansk</item>
+        <item>Chumikan</item>
+        <item>Ayan</item>
+        <item>Lavrentiya</item>
+        <item>Dikson</item>
+        <item>Klyuchi</item>
+        <item>Omolon</item>
+        <item>Uelen</item>
+        <item>Yerëma</item>
+        <item>Mikhalkino</item>
+        <item>Sherlovaya Gora</item>
+        <item>Nizhneyansk</item>
+        <item>Korf</item>
+        <item>Bugrino</item>
+        <item>Shoyna</item>
+        <item>Put’ Lenina</item>
+        <item>Enurmino</item>
+        <item>Amderma</item>
+        <item>Gubkin</item>
+        <item>Kuznetsova-Vikhoreva</item>
+        <item>Progress</item>
+        <item>Mukhomornoye</item>
+        <item>Vorontsovo</item>
+        <item>Kovda</item>
+        <item>Bol’sheretsk</item>
+        <item>Yessey</item>
+        <item>Khorgo</item>
+        <item>Tunguskhaya</item>
+        <item>Chagda</item>
+        <item>Siglan</item>
+        <item>Gyda</item>
+        <item>Khakhar’</item>
+        <item>Menkerya</item>
+        <item>Lar’yak</item>
+        <item>Starorybnoye</item>
+        <item>Il’pyrskiy</item>
+        <item>Zhilinda</item>
+        <item>Olenëk</item>
+        <item>Manily</item>
+        <item>Karamken</item>
+        <item>Ust’-Olenëk</item>
+        <item>Varnek</item>
+        <item>Shalaurova</item>
+        <item>Agapa</item>
+        <item>Numto</item>
+        <item>Omchak</item>
+        <item>Podkamennaya Tunguska</item>
+        <item>Zemlya Bunge</item>
+        <item>Indiga</item>
+        <item>Strelka</item>
+        <item>Pakhachi</item>
+        <item>Tiyerbes</item>
+        <item>Zvëzdnyy</item>
+        <item>Ul’kan</item>
+        <item>Sagastyr</item>
+        <item>Matochkin Shar</item>
+        <item>Utkholok</item>
+        <item>Peregrebnoye</item>
+        <item>Tukchi</item>
+        <item>Nyukzha</item>
+        <item>Trofimovsk</item>
+        <item>Komsa</item>
+        <item>Magas</item>
+        <item>Temryuk</item>
+        <item>Kamenolomni</item>
+        <item>Severskaya</item>
+        <item>Baltiysk</item>
+        <item>Yegorlykskaya</item>
+        <item>Ozërsk</item>
+        <item>Vesëlyy</item>
+        <item>Kantemirovka</item>
+        <item>Adygeysk</item>
+        <item>Gur’yevsk</item>
+        <item>Slavsk</item>
+        <item>Pionerskiy</item>
+        <item>Mayskiy</item>
+        <item>Svetlyy</item>
+        <item>Kalininskaya</item>
+        <item>Oblivskaya</item>
+        <item>Abinsk</item>
+        <item>Kurganinsk</item>
+        <item>Gorod Maykop</item>
+        <item>Gul’kevichi</item>
+        <item>Shovgenovskiy</item>
+        <item>Takhtamukay</item>
+        <item>Kagal’nitskaya</item>
+        <item>Belorechensk</item>
+        <item>Tul’skiy</item>
+        <item>Tarasovskiy</item>
+        <item>Krasnoarmeyskaya</item>
+        <item>Otradnaya</item>
+        <item>Bryukhovetskaya</item>
+        <item>Staroshcherbinovskaya</item>
+        <item>Kazanskaya</item>
+        <item>Krasnoznamensk</item>
+        <item>Okhansk</item>
+        <item>Zimovniki</item>
+        <item>Ivanovo</item>
+        <item>Krasnogvardeyskoye</item>
+        <item>Chertkovo</item>
+        <item>Kizlyar</item>
+        <item>Tselina</item>
+        <item>Perm’</item>
+        <item>Pokrovskoye</item>
+        <item>Alagir</item>
+        <item>Konstantinovsk</item>
+        <item>Rodionovo-Nesvetayskaya</item>
+        <item>Slavyansk-na-Kubani</item>
+        <item>Krasnyy Sulin</item>
+        <item>Dinskaya</item>
+        <item>Igra</item>
+        <item>Svetlogorsk</item>
+        <item>Mostovskoy</item>
+        <item>Gvardeysk</item>
+        <item>Vyselki</item>
+        <item>Chaltyr’</item>
+        <item>Ust’-Labinsk</item>
+        <item>Milyutinskaya</item>
+        <item>Belaya Glina</item>
+        <item>Uni</item>
+        <item>Proletarsk</item>
+        <item>Ust’-Donetskiy</item>
+        <item>Bol’shaya Martynovka</item>
+        <item>Veshenskaya</item>
+        <item>Aksay</item>
+        <item>Krylovskaya</item>
+        <item>Azov</item>
+        <item>Polessk</item>
+        <item>Koshekhabl’</item>
+        <item>Tbilisskaya</item>
+        <item>Grayvoron</item>
+        <item>Bagrationovsk</item>
+        <item>Anapa</item>
+        <item>Gusev</item>
+        <item>Kashary</item>
+        <item>Matveyev Kurgan</item>
+        <item>Zelenogradsk</item>
+        <item>Khasavyurt</item>
+        <item>Neman</item>
+        <item>Krymsk</item>
+        <item>Debesy</item>
+        <item>Bagayevskaya</item>
+        <item>Semikarakorsk</item>
+        <item>Oktyabr’skiy</item>
+        <item>Kez</item>
+        <item>Logashkino</item>
+        <item>Uspenskoye</item>
+        <item>Zavetnoye</item>
+        <item>Kanevskaya</item>
+        <item>Nytva</item>
+        <item>Primorsko-Akhtarsk</item>
+        <item>Kizilyurt</item>
+        <item>Bokovskaya</item>
+        <item>Kavkazskaya</item>
+        <item>Tsimlyansk</item>
+        <item>Novokubansk</item>
+        <item>Morozovsk</item>
+        <item>Nordvik</item>
+        <item>Peschanokopskoye</item>
+        <item>Zernograd</item>
+        <item>Remontnoye</item>
+        <item>Dubovskoye</item>
+        <item>Novopokrovskaya</item>
+        <item>Giaginskaya</item>
+        <item>Kushchëvskaya</item>
+        <item>Nesterov</item>
+        <item>Starominskaya</item>
+        <item>Sovetskoye</item>
+        <item>Kuybyshevo</item>
+        <item>Leningradskaya</item>
+        <item>Ambarchik</item>
+        <item>Korenovsk</item>
+        <item>Balezino</item>
+        <item>Pavlovskaya</item>
+        <item>Pravdinsk</item>
+        <item>Prokhladnyy</item>
+        <item>Romanovskaya</item>
+        <item>Kazach’ye</item>
     </string-array>
     <string-array name="smoke_statuses">
         <item>default</item>
@@ -270,6 +1044,806 @@
         <item>Daily</item>
         <item>Cigar aficionado</item>
         <item>Yes, but trying to quit</item>
+    </string-array>
+    <string-array name="ukraine_city">
+        <item>Kharkiv</item>
+        <item>Dnipro</item>
+        <item>Odesa</item>
+        <item>Donetsk</item>
+        <item>Lviv</item>
+        <item>Zaporizhzhya</item>
+        <item>Kryvyy Rih</item>
+        <item>Mykolayiv</item>
+        <item>Mariupol</item>
+        <item>Luhansk</item>
+        <item>Khmelkyy</item>
+        <item>Horlivka</item>
+        <item>Sevastopol</item>
+        <item>Makiyivka</item>
+        <item>Simferopol</item>
+        <item>Vinnytsya</item>
+        <item>Kherson</item>
+        <item>Poltava</item>
+        <item>Chernihiv</item>
+        <item>Chernivtsi</item>
+        <item>Cherkasy</item>
+        <item>Sumy</item>
+        <item>Zhytomyr</item>
+        <item>Rivne</item>
+        <item>Ternopilâ€™</item>
+        <item>Ivano-Frankivsâ€™k</item>
+        <item>Kremenchuk</item>
+        <item>Lutsâ€™k</item>
+        <item>Bila Tserkva</item>
+        <item>Krasnotorka</item>
+        <item>Melitopolâ€™</item>
+        <item>Kerch</item>
+        <item>Uzhhorod</item>
+        <item>Nikopolâ€™</item>
+        <item>Lysychansâ€™k</item>
+        <item>Drohobych</item>
+        <item>Berdyansâ€™k</item>
+        <item>Nizhyn</item>
+        <item>Kamâ€yanetsâ€™-Podilâ€™sâ€™kyy</item>
+        <item>Yevpatoriya</item>
+        <item>Konotop</item>
+        <item>Shostka</item>
+        <item>Brovary</item>
+        <item>Umanâ€™</item>
+        <item>Izmayil</item>
+        <item>Yalta</item>
+        <item>Kupâ€yansâ€™k</item>
+        <item>Korostenâ€™</item>
+        <item>Kovelâ€™</item>
+        <item>Illichivsâ€™k</item>
+        <item>Voznesensâ€™k</item>
+        <item>Dzhankoy</item>
+        <item>Artemivsâ€™k</item>
+        <item>Tulâ€™chyn</item>
+        <item>Orativ</item>
+        <item>Sofiyivka</item>
+        <item>Petropavlivka</item>
+        <item>Chornukhy</item>
+        <item>Verkhniy Rohachyk</item>
+        <item>ZÂ·hurivka</item>
+        <item>Horodnya</item>
+        <item>Kelâ€™mentsi</item>
+        <item>Valky</item>
+        <item>Borodyanka</item>
+        <item>Lokachi</item>
+        <item>Chechelâ€™nyk</item>
+        <item>Korop</item>
+        <item>Lysyanka</item>
+        <item>Berdychiv</item>
+        <item>Volodymyr-Volynsâ€™kyy</item>
+        <item>Pechenihy</item>
+        <item>Pereyaslav-Khmelâ€™nytsâ€™kyy</item>
+        <item>Okhtyrka</item>
+        <item>Nyzhni Sirohozy</item>
+        <item>Vasylâ€™kiv</item>
+        <item>Vasylâ€™kivka</item>
+        <item>Velyka Novosilka</item>
+        <item>Drabiv</item>
+        <item>Kobelyaky</item>
+        <item>Lityn</item>
+        <item>Tomakivka</item>
+        <item>Frunzivka</item>
+        <item>Kostopilâ€™</item>
+        <item>Krasnoarmiysâ€™k</item>
+        <item>Kryve Ozero</item>
+        <item>Vysokopillya</item>
+        <item>Mizhhirâ€ya</item>
+        <item>Troyitsâ€™ke</item>
+        <item>Veselynove</item>
+        <item>Zolotonosha</item>
+        <item>Baranivka</item>
+        <item>Karlivka</item>
+        <item>Tomashpilâ€™</item>
+        <item>Domanivka</item>
+        <item>Bohuslav</item>
+        <item>Krasyliv</item>
+        <item>Ostroh</item>
+        <item>Mukacheve</item>
+        <item>Tarutyne</item>
+        <item>Kulykivka</item>
+        <item>Oleksandriya</item>
+        <item>Ulâ€™yanovka</item>
+        <item>Svatove</item>
+        <item>Chernyakhiv</item>
+        <item>Kehychivka</item>
+        <item>Marhanetsâ€™</item>
+        <item>Khust</item>
+        <item>Ratne</item>
+        <item>Mena</item>
+        <item>Kompaniyivka</item>
+        <item>Putyla</item>
+        <item>Yampilâ€™</item>
+        <item>Novoazovsâ€™k</item>
+        <item>Novoaydar</item>
+        <item>Saky</item>
+        <item>Ivankiv</item>
+        <item>Kolomyya</item>
+        <item>Krasnokutsâ€™k</item>
+        <item>Horodok</item>
+        <item>Kryvyy Rih</item>
+        <item>Kalanchak</item>
+        <item>Chudniv</item>
+        <item>Chuhuyiv</item>
+        <item>Velyka Pysarivka</item>
+        <item>Pryazovsâ€™ke</item>
+        <item>Kirovsâ€™ke</item>
+        <item>Milove</item>
+        <item>Beryslav</item>
+        <item>Onufriyivka</item>
+        <item>Bratsâ€™ke</item>
+        <item>Pervomaysâ€™ke</item>
+        <item>Radekhiv</item>
+        <item>Bar</item>
+        <item>Bohodukhiv</item>
+        <item>Stryy</item>
+        <item>Krasyatychi</item>
+        <item>Nosivka</item>
+        <item>Volodarka</item>
+        <item>Volochysâ€™k</item>
+        <item>Chaplynka</item>
+        <item>Turiysâ€™k</item>
+        <item>Turka</item>
+        <item>Dobropillya</item>
+        <item>Lypova Dolyna</item>
+        <item>Haysyn</item>
+        <item>Fastiv</item>
+        <item>Rakhiv</item>
+        <item>Shyshaky</item>
+        <item>Sverdlovsâ€™k</item>
+        <item>Dunayivtsi</item>
+        <item>Bilohirâ€ya</item>
+        <item>Krasnoperekopsâ€™k</item>
+        <item>Monastyrysâ€™ka</item>
+        <item>Bereznehuvate</item>
+        <item>Slovâ€yansâ€™k</item>
+        <item>Slovâ€yanoserbsâ€™k</item>
+        <item>Bobrynetsâ€™</item>
+        <item>Bilokurakyne</item>
+        <item>Vyzhnytsya</item>
+        <item>Perevalâ€™sâ€™k</item>
+        <item>Tsyurupynsâ€™k</item>
+        <item>Brody</item>
+        <item>Mlyniv</item>
+        <item>Krynychky</item>
+        <item>Trostyanetsâ€™</item>
+        <item>Trostyanetsâ€™</item>
+        <item>Pishchanka</item>
+        <item>Yavoriv</item>
+        <item>Zmiyiv</item>
+        <item>Lebedyn</item>
+        <item>Kakhovka</item>
+        <item>Shumsâ€™k</item>
+        <item>Kozova</item>
+        <item>Boryspilâ€™</item>
+        <item>Starobesheve</item>
+        <item>Novovorontsovka</item>
+        <item>Burynâ€™</item>
+        <item>Myrhorod</item>
+        <item>Pâ€yatykhatky</item>
+        <item>Nova Vodolaha</item>
+        <item>Rokytne</item>
+        <item>Brusyliv</item>
+        <item>Dykanâ€™ka</item>
+        <item>Henichesâ€™k</item>
+        <item>Kreminna</item>
+        <item>Shakhtarsâ€™k</item>
+        <item>Stanytsya Luhansâ€™ka</item>
+        <item>Lubny</item>
+        <item>Bolhrad</item>
+        <item>Solone</item>
+        <item>Khorol</item>
+        <item>Myronivka</item>
+        <item>Zhydachiv</item>
+        <item>Sarny</item>
+        <item>Volovetsâ€™</item>
+        <item>Apostolove</item>
+        <item>Lyubomlâ€™</item>
+        <item>Kropyvnytsâ€™kyy</item>
+        <item>Polohy</item>
+        <item>Tokmak</item>
+        <item>Vesele</item>
+        <item>Snihurivka</item>
+        <item>Oleksandrivka</item>
+        <item>Reni</item>
+        <item>Popilâ€™nya</item>
+        <item>Nemyriv</item>
+        <item>Yelanetsâ€™</item>
+        <item>Mala Vyska</item>
+        <item>Tarashcha</item>
+        <item>Zarichne</item>
+        <item>Zolochiv</item>
+        <item>Zolochiv</item>
+        <item>Kalush</item>
+        <item>Kalynivka</item>
+        <item>Skole</item>
+        <item>Kotovsâ€™k</item>
+        <item>Telâ€™manove</item>
+        <item>Berezhany</item>
+        <item>Hayvoron</item>
+        <item>Zastavna</item>
+        <item>Shchors</item>
+        <item>Slavuta</item>
+        <item>Bilhorod-Dnistrovsâ€™kyy</item>
+        <item>Derazhnya</item>
+        <item>Romny</item>
+        <item>Husyatyn</item>
+        <item>Novomyrhorod</item>
+        <item>Mohyliv-Podilâ€™sâ€™kyy</item>
+        <item>Shpola</item>
+        <item>Verkhovyna</item>
+        <item>Chervonoarmiysâ€™k</item>
+        <item>Rozhnyativ</item>
+        <item>Horokhiv</item>
+        <item>Tyvriv</item>
+        <item>Kosiv</item>
+        <item>Krolevetsâ€™</item>
+        <item>Pidvolochysâ€™k</item>
+        <item>Yakymivka</item>
+        <item>Pervomaysâ€™k</item>
+        <item>Zdolbuniv</item>
+        <item>Rozivka</item>
+        <item>Kozeletsâ€™</item>
+        <item>Kozelâ€™shchyna</item>
+        <item>Semenivka</item>
+        <item>Varva</item>
+        <item>Kaharlyk</item>
+        <item>Ichnya</item>
+        <item>Smila</item>
+        <item>Khotyn</item>
+        <item>Bilohirsâ€™k</item>
+        <item>Korostyshiv</item>
+        <item>Bashtanka</item>
+        <item>Sokyryany</item>
+        <item>Holovanivsâ€™k</item>
+        <item>Chyhyryn</item>
+        <item>Borzna</item>
+        <item>Svitlovodsâ€™k</item>
+        <item>Teplyk</item>
+        <item>Horodyshche</item>
+        <item>Bilopillya</item>
+        <item>Krasnopillya</item>
+        <item>Terebovlya</item>
+        <item>Balakliya</item>
+        <item>Amvrosiyivka</item>
+        <item>Ananâ€™yiv</item>
+        <item>Ivanychi</item>
+        <item>Synelâ€™nykove</item>
+        <item>Khmilâ€™nyk</item>
+        <item>Nedryhayliv</item>
+        <item>Zhovkva</item>
+        <item>Yemilâ€™chyne</item>
+        <item>Pryluky</item>
+        <item>Sakhnovshchyna</item>
+        <item>Ovidiopolâ€™</item>
+        <item>Tlumach</item>
+        <item>Kolomak</item>
+        <item>Barvinkove</item>
+        <item>Kozyatyn</item>
+        <item>Kazanka</item>
+        <item>Romaniv</item>
+        <item>Snyatyn</item>
+        <item>Velyka Lepetykha</item>
+        <item>Popasna</item>
+        <item>Tysmenytsya</item>
+        <item>Novi Sanzhary</item>
+        <item>Bilyayivka</item>
+        <item>Pohrebyshche</item>
+        <item>Halych</item>
+        <item>Storozhynetsâ€™</item>
+        <item>Kitsmanâ€™</item>
+        <item>Kivertsi</item>
+        <item>Sarata</item>
+        <item>Hola Prystanâ€™</item>
+        <item>Luhyny</item>
+        <item>Bershadâ€™</item>
+        <item>Zinâ€™kiv</item>
+        <item>Zhashkiv</item>
+        <item>Hornostayivka</item>
+        <item>Izyum</item>
+        <item>Izyaslav</item>
+        <item>Vilâ€™nyansâ€™k</item>
+        <item>Hoshcha</item>
+        <item>Lypovetsâ€™</item>
+        <item>Obukhiv</item>
+        <item>Petrykivka</item>
+        <item>Arbuzynka</item>
+        <item>Korsunâ€™-Shevchenkivsâ€™kyy</item>
+        <item>Chernihivka</item>
+        <item>Chernivtsi</item>
+        <item>Rokytne</item>
+        <item>Shyroke</item>
+        <item>Yahotyn</item>
+        <item>Stavyshche</item>
+        <item>Borshchiv</item>
+        <item>Orzhytsya</item>
+        <item>Reshetylivka</item>
+        <item>Sribne</item>
+        <item>Manâ€™kivka</item>
+        <item>Zboriv</item>
+        <item>Mostysâ€™ka</item>
+        <item>Bakhchysaray</item>
+        <item>Vradiyivka</item>
+        <item>Dolynsâ€™ka</item>
+        <item>Berezivka</item>
+        <item>Khrystynivka</item>
+        <item>Yarmolyntsi</item>
+        <item>Vasylivka</item>
+        <item>Ordzhonikidze</item>
+        <item>Shatsâ€™k</item>
+        <item>Volodymyretsâ€™</item>
+        <item>Novyy Buh</item>
+        <item>Stara Vyzhivka</item>
+        <item>Chortkiv</item>
+        <item>Stara Synyava</item>
+        <item>Znamâ€yanka</item>
+        <item>Zalishchyky</item>
+        <item>Orikhiv</item>
+        <item>Illintsi</item>
+        <item>Kotelâ€™va</item>
+        <item>Shyryayeve</item>
+        <item>Chutove</item>
+        <item>Velykyy Burluk</item>
+        <item>Velykyy Bereznyy</item>
+        <item>Kryzhopilâ€™</item>
+        <item>Prymorsâ€™k</item>
+        <item>Starobilâ€™sâ€™k</item>
+        <item>Lyubar</item>
+        <item>Katerynopilâ€™</item>
+        <item>Vilâ€™shanka</item>
+        <item>Sambir</item>
+        <item>Ivanivka</item>
+        <item>Ivanivka</item>
+        <item>Makariv</item>
+        <item>Manhush</item>
+        <item>Zvenyhorodka</item>
+        <item>Vynohradiv</item>
+        <item>Semenivka</item>
+        <item>Perechyn</item>
+        <item>Sovyetsâ€™kyy</item>
+        <item>Narodychi</item>
+        <item>Markivka</item>
+        <item>Krasnyy Lyman</item>
+        <item>Sharhorod</item>
+        <item>Nyzhnâ€™ohirsâ€™kyy</item>
+        <item>Bilozerka</item>
+        <item>Tyachiv</item>
+        <item>Murovani Kurylivtsi</item>
+        <item>Vinâ€™kivtsi</item>
+        <item>Mezhova</item>
+        <item>Polonne</item>
+        <item>Yampilâ€™</item>
+        <item>Hrebinka</item>
+        <item>Peremyshlyany</item>
+        <item>Skadovsâ€™k</item>
+        <item>Krasnodon</item>
+        <item>Novoarkhanhelâ€™sâ€™k</item>
+        <item>Seredyna-Buda</item>
+        <item>Pavlohrad</item>
+        <item>Nova Odesa</item>
+        <item>Dolyna</item>
+        <item>Busâ€™k</item>
+        <item>Novoukrayinka</item>
+        <item>Irshava</item>
+        <item>Shepetivka</item>
+        <item>Pokrovsâ€™ke</item>
+        <item>Ovruch</item>
+        <item>Derhachi</item>
+        <item>Sokalâ€™</item>
+        <item>Lanivtsi</item>
+        <item>Volnovakha</item>
+        <item>Chornomorsâ€™ke</item>
+        <item>Novomoskovsâ€™k</item>
+        <item>Horodenka</item>
+        <item>Marâ€yinka</item>
+        <item>Hlukhiv</item>
+        <item>Ochakiv</item>
+        <item>Oleksandrivka</item>
+        <item>Berezanka</item>
+        <item>Lyubashivka</item>
+        <item>Chemerivtsi</item>
+        <item>Lyubeshiv</item>
+        <item>Berehove</item>
+        <item>Savranâ€™</item>
+        <item>Putyvlâ€™</item>
+        <item>Kuybysheve</item>
+        <item>Demydivka</item>
+        <item>Mykolayivka</item>
+        <item>Shevchenkove</item>
+        <item>Buchach</item>
+        <item>Bobrovytsya</item>
+        <item>Hertsa</item>
+        <item>Rozhyshche</item>
+        <item>Hadyach</item>
+        <item>Pidhaytsi</item>
+        <item>Tetiyiv</item>
+        <item>Staryy Sambir</item>
+        <item>Novomykolayivka</item>
+        <item>Rozdilâ€™na</item>
+        <item>Pervomaysâ€™kyy</item>
+        <item>Skvyra</item>
+        <item>Kominternivsâ€™ke</item>
+        <item>Monastyryshche</item>
+        <item>Rohatyn</item>
+        <item>Kodyma</item>
+        <item>Mykhaylivka</item>
+        <item>Vovchansâ€™k</item>
+        <item>Ustynivka</item>
+        <item>Koryukivka</item>
+        <item>Bohorodchany</item>
+        <item>Mykolayiv</item>
+        <item>Antratsyt</item>
+        <item>Volodarsâ€™k-Volynsâ€™kyy</item>
+        <item>Volodarsâ€™ke</item>
+        <item>Krasni Okny</item>
+        <item>Chornobay</item>
+        <item>Radyvyliv</item>
+        <item>Baryshivka</item>
+        <item>Velyka Mykhaylivka</item>
+        <item>Mahdalynivka</item>
+        <item>Tsarychanka</item>
+        <item>Borova</item>
+        <item>Kamâ€yanka</item>
+        <item>Novopskov</item>
+        <item>Lozova</item>
+        <item>Dobrovelychkivka</item>
+        <item>Kostyantynivka</item>
+        <item>Pyryatyn</item>
+        <item>Zachepylivka</item>
+        <item>Mashivka</item>
+        <item>Dubno</item>
+        <item>Berezne</item>
+        <item>Lokhvytsya</item>
+        <item>Talâ€™ne</item>
+        <item>Talalayivka</item>
+        <item>Pustomyty</item>
+        <item>Novohrad-Volynsâ€™kyy</item>
+        <item>Artsyz</item>
+        <item>Blyznyuky</item>
+        <item>Andrushivka</item>
+        <item>Dvorichna</item>
+        <item>Kamâ€yanka-Buzâ€™ka</item>
+        <item>Ruzhyn</item>
+        <item>Letychiv</item>
+        <item>Nadvirna</item>
+        <item>Lutuhyne</item>
+        <item>Lenine</item>
+        <item>Dubrovytsya</item>
+        <item>Starokostyantyniv</item>
+        <item>Koretsâ€™</item>
+        <item>Tatarbunary</item>
+        <item>Bilovodsâ€™k</item>
+        <item>Kiliya</item>
+        <item>Radomyshlâ€™</item>
+        <item>Teofipolâ€™</item>
+        <item>Krasnohvardiysâ€™ke</item>
+        <item>Balta</item>
+        <item>Kaniv</item>
+        <item>Verkhnâ€™odniprovsâ€™k</item>
+        <item>Horodok</item>
+        <item>Hlyboka</item>
+        <item>Malyn</item>
+        <item>Kremenetsâ€™</item>
+        <item>Rozdolâ€™ne</item>
+        <item>Velyka Bahachka</item>
+        <item>Velyka Oleksandrivka</item>
+        <item>Velyka Bilozerka</item>
+        <item>Novhorodka</item>
+        <item>Novhorod-Siversâ€™kyy</item>
+        <item>Hulyaypole</item>
+        <item>Nova Ushytsya</item>
+        <item>Hlobyne</item>
+        <item>Sosnytsya</item>
+        <item>Bakhmach</item>
+        <item>Petrove</item>
+        <item>Yasynuvata</item>
+        <item>Vyshhorod</item>
+        <item>Enerhodar</item>
+        <item>Yurâ€yivka</item>
+        <item>Olevsâ€™k</item>
+        <item>Kamâ€yanka-Dniprovsâ€™ka</item>
+        <item>Kaminâ€™-Kashyrsâ€™kyy</item>
+        <item>Novoselytsya</item>
+        <item>Ripky</item>
+        <item>Manevychi</item>
+        <item>Zbarazh</item>
+        <item>Krasnohrad</item>
+        <item>Zhmerynka</item>
+        <item>Novotroyitsâ€™ke</item>
+    </string-array>
+    <string-array name="us_city">
+        <item>Akron</item>
+        <item>Albuquerque</item>
+        <item>Alexandria</item>
+        <item>Allentown</item>
+        <item>Amarillo</item>
+        <item>Anaheim</item>
+        <item>Anchorage</item>
+        <item>Ann Arbor</item>
+        <item>Antioch</item>
+        <item>Arlington</item>
+        <item>Arvada</item>
+        <item>Athens</item>
+        <item>Atlanta</item>
+        <item>Augusta</item>
+        <item>Aurora</item>
+        <item>Aurora</item>
+        <item>Austin</item>
+        <item>Bakersfield</item>
+        <item>Baltimore</item>
+        <item>Baton Rouge</item>
+        <item>Beaumont</item>
+        <item>Bellevue</item>
+        <item>Berkeley</item>
+        <item>Billings</item>
+        <item>Birmingham</item>
+        <item>Boise</item>
+        <item>Boston</item>
+        <item>Boulder</item>
+        <item>Bridgeport</item>
+        <item>Broken Arrow</item>
+        <item>Brownsville</item>
+        <item>Buffalo</item>
+        <item>Burbank</item>
+        <item>Cambridge</item>
+        <item>Cape Coral</item>
+        <item>Carlsbad</item>
+        <item>Carrollton</item>
+        <item>Cary</item>
+        <item>Cedar Rapids</item>
+        <item>Centennial</item>
+        <item>Chandler</item>
+        <item>Charleston</item>
+        <item>Charlotte</item>
+        <item>Chattanooga</item>
+        <item>Chesapeake</item>
+        <item>Chicago</item>
+        <item>Chula Vista</item>
+        <item>Cincinnati</item>
+        <item>Clarksville</item>
+        <item>Clearwater</item>
+        <item>Cleveland</item>
+        <item>Colorado Springs</item>
+        <item>Columbia</item>
+        <item>Columbia</item>
+        <item>Columbus</item>
+        <item>Columbus</item>
+        <item>Concord</item>
+        <item>Coral Springs</item>
+        <item>Corona</item>
+        <item>Corpus Christi</item>
+        <item>Costa Mesa</item>
+        <item>Dallas</item>
+        <item>Daly City</item>
+        <item>Davenport</item>
+        <item>Dayton</item>
+        <item>Denton</item>
+        <item>Denver</item>
+        <item>Des Moines</item>
+        <item>Detroit</item>
+        <item>Downey</item>
+        <item>Durham</item>
+        <item>El Cajon</item>
+        <item>El Monte</item>
+        <item>El Paso</item>
+        <item>Elgin</item>
+        <item>Elizabeth</item>
+        <item>Elk Grove</item>
+        <item>Erie</item>
+        <item>Escondido</item>
+        <item>Eugene</item>
+        <item>Evansville</item>
+        <item>Everett</item>
+        <item>Fairfield</item>
+        <item>Fargo</item>
+        <item>Fayetteville</item>
+        <item>Flint</item>
+        <item>Fontana</item>
+        <item>Fort Collins</item>
+        <item>Fort Lauderdale</item>
+        <item>Fort Wayne</item>
+        <item>Fort Worth</item>
+        <item>Fremont</item>
+        <item>Fresno</item>
+        <item>Frisco</item>
+        <item>Fullerton</item>
+        <item>Gainesville</item>
+        <item>Garden Grove</item>
+        <item>Garland</item>
+        <item>Gilbert</item>
+        <item>Glendale</item>
+        <item>Glendale</item>
+        <item>Grand Prairie</item>
+        <item>Grand Rapids</item>
+        <item>Green Bay</item>
+        <item>Greensboro</item>
+        <item>Gresham</item>
+        <item>Hampton</item>
+        <item>Hartford</item>
+        <item>Hayward</item>
+        <item>Henderson</item>
+        <item>Hialeah</item>
+        <item>High Point</item>
+        <item>Hollywood</item>
+        <item>Honolulu</item>
+        <item>Houston</item>
+        <item>Huntington Beach</item>
+        <item>Huntsville</item>
+        <item>Independence</item>
+        <item>Indianapolis</item>
+        <item>Inglewood</item>
+        <item>Irvine</item>
+        <item>Irving</item>
+        <item>Jackson</item>
+        <item>Jacksonville</item>
+        <item>Jersey City</item>
+        <item>Joliet</item>
+        <item>Kansas City</item>
+        <item>Kansas City</item>
+        <item>Kenosha</item>
+        <item>Kent</item>
+        <item>Killeen</item>
+        <item>Knoxville</item>
+        <item>Lafayette</item>
+        <item>Lakewood</item>
+        <item>Lancaster</item>
+        <item>Lansing</item>
+        <item>Laredo</item>
+        <item>Las Cruces</item>
+        <item>Las Vegas</item>
+        <item>Lexington</item>
+        <item>Lincoln</item>
+        <item>Little Rock</item>
+        <item>Long Beach</item>
+        <item>Los Angeles</item>
+        <item>Louisville</item>
+        <item>Lowell</item>
+        <item>Lubbock</item>
+        <item>Madison</item>
+        <item>Manchester</item>
+        <item>McAllen</item>
+        <item>McKinney</item>
+        <item>Memphis</item>
+        <item>Mesa</item>
+        <item>Mesquite</item>
+        <item>Miami</item>
+        <item>Miami Gardens</item>
+        <item>Midland</item>
+        <item>Milwaukee</item>
+        <item>Minneapolis</item>
+        <item>Miramar</item>
+        <item>Mobile</item>
+        <item>Modesto</item>
+        <item>Montgomery</item>
+        <item>Moreno Valley</item>
+        <item>Murfreesboro</item>
+        <item>Murrieta</item>
+        <item>Naperville</item>
+        <item>Nashville</item>
+        <item>New Haven</item>
+        <item>New Orleans</item>
+        <item>New York</item>
+        <item>Newark</item>
+        <item>Newport News</item>
+        <item>Norfolk</item>
+        <item>Norman</item>
+        <item>North Charleston</item>
+        <item>North Las Vegas</item>
+        <item>Norwalk</item>
+        <item>Oakland</item>
+        <item>Oceanside</item>
+        <item>Odessa</item>
+        <item>Oklahoma City</item>
+        <item>Olathe</item>
+        <item>Omaha</item>
+        <item>Ontario</item>
+        <item>Orange</item>
+        <item>Orlando</item>
+        <item>Overland Park</item>
+        <item>Oxnard</item>
+        <item>Palm Bay</item>
+        <item>Palmdale</item>
+        <item>Pasadena</item>
+        <item>Pasadena</item>
+        <item>Paterson</item>
+        <item>Pembroke Pines</item>
+        <item>Peoria</item>
+        <item>Peoria</item>
+        <item>Philadelphia</item>
+        <item>Phoenix</item>
+        <item>Pittsburgh</item>
+        <item>Plano</item>
+        <item>Pomona</item>
+        <item>Pompano Beach</item>
+        <item>Port St. Lucie</item>
+        <item>Portland</item>
+        <item>Providence</item>
+        <item>Provo</item>
+        <item>Pueblo</item>
+        <item>Raleigh</item>
+        <item>Rancho Cucamonga</item>
+        <item>Reno</item>
+        <item>Rialto</item>
+        <item>Richardson</item>
+        <item>Richmond</item>
+        <item>Richmond</item>
+        <item>Riverside</item>
+        <item>Rochester</item>
+        <item>Rochester</item>
+        <item>Rockford</item>
+        <item>Roseville</item>
+        <item>Round Rock</item>
+        <item>Sacramento</item>
+        <item>Saint Paul</item>
+        <item>Salem</item>
+        <item>Salinas</item>
+        <item>Salt Lake City</item>
+        <item>San Antonio</item>
+        <item>San Bernardino</item>
+        <item>San Buenaventura (Ventura)</item>
+        <item>San Diego</item>
+        <item>San Francisco</item>
+        <item>San Jose</item>
+        <item>Santa Ana</item>
+        <item>Santa Clara</item>
+        <item>Santa Clarita</item>
+        <item>Santa Maria</item>
+        <item>Santa Rosa</item>
+        <item>Savannah</item>
+        <item>Scottsdale</item>
+        <item>Seattle</item>
+        <item>Shreveport</item>
+        <item>Simi Valley</item>
+        <item>Sioux Falls</item>
+        <item>South Bend</item>
+        <item>Spokane</item>
+        <item>Springfield</item>
+        <item>Springfield</item>
+        <item>Springfield</item>
+        <item>St. Louis</item>
+        <item>St. Petersburg</item>
+        <item>Stamford</item>
+        <item>Sterling Heights</item>
+        <item>Stockton</item>
+        <item>Sunnyvale</item>
+        <item>Surprise</item>
+        <item>Syracuse</item>
+        <item>Tacoma</item>
+        <item>Tallahassee</item>
+        <item>Tampa</item>
+        <item>Temecula</item>
+        <item>Tempe</item>
+        <item>Thornton</item>
+        <item>Thousand Oaks</item>
+        <item>Toledo</item>
+        <item>Topeka</item>
+        <item>Torrance</item>
+        <item>Tucson</item>
+        <item>Tulsa</item>
+        <item>Vallejo</item>
+        <item>Vancouver</item>
+        <item>Victorville</item>
+        <item>Virginia Beach</item>
+        <item>Visalia</item>
+        <item>Waco</item>
+        <item>Warren</item>
+        <item>Washington</item>
+        <item>Waterbury</item>
+        <item>West Covina</item>
+        <item>West Jordan</item>
+        <item>West Palm Beach</item>
+        <item>West Valley City</item>
+        <item>Westminster</item>
+        <item>Wichita</item>
+        <item>Wichita Falls</item>
+        <item>Wilmington</item>
+        <item>Winston-Salem</item>
+        <item>Worcester</item>
+        <item>Yonkers</item>
     </string-array>
     <string-array name="want_kids_statuses">
         <item>default</item>
@@ -352,6 +1926,7 @@
     <attr format="float" name="flow_horizontalAlign">
         <enum name="start" value="0"/>
         <enum name="end" value="1"/>
+        <enum name="center" value="2"/>
     </attr>
     <attr format="float" name="flow_horizontalBias"/>
     <attr format="dimension" name="flow_horizontalGap"/>
@@ -909,6 +2484,7 @@
     <dimen name="dp4">4dp</dimen>
     <dimen name="dp40">40dp</dimen>
     <dimen name="dp48">48dp</dimen>
+    <dimen name="dp55">55dp</dimen>
     <dimen name="dp6">6dp</dimen>
     <dimen name="dp64">64dp</dimen>
     <dimen name="dp8">8dp</dimen>
@@ -1013,6 +2589,7 @@
     <dimen name="profile_action_layout_size">200dp</dimen>
     <dimen name="profile_img_size">220dp</dimen>
     <dimen name="regular_font">16sp</dimen>
+    <dimen name="sp12">12sp</dimen>
     <dimen name="sp14">14sp</dimen>
     <dimen name="sp20">20sp</dimen>
     <dimen name="subtitle_corner_radius">2dp</dimen>
@@ -1153,6 +2730,8 @@
     <string name="age_45_plus">45+</string>
     <string name="age_text">Age</string>
     <string name="age_updated">Age was updated</string>
+    <string name="agree_text_eng">Agree</string>
+    <string name="agree_text_rus">Согласен</string>
     <string name="also_like_text">You may also like them</string>
     <string name="app_name">RusWives</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
@@ -1169,11 +2748,14 @@
     <string name="btn_add_friend_text">+ ADD FRIEND</string>
     <string name="btn_start_chat_text">WRITE MESSAGE</string>
     <string name="buddhist">Buddhist</string>
+    <string name="button_back_text">Back</string>
     <string name="button_sign_filter">Filter...</string>
     <string name="buy">Buy</string>
     <string name="buy_tokens">Buy Tokens</string>
     <string name="cancel">Cancel</string>
     <string name="cancel_friend_request">Cancel Friend Request</string>
+    <string name="cancel_text_eng">Cancel</string>
+    <string name="cancel_text_rus">Отмена</string>
     <string name="change">CHANGE</string>
     <string name="change_filter">Change Filter</string>
     <string name="change_photo">Change photo</string>
@@ -1184,11 +2766,13 @@
     <string name="chats_title">Chats</string>
     <string name="check_your_search_parameters">CHECK YOUR SEARCH PARAMETERS</string>
     <string name="choose_languages_you_can_talk">Choose languages you can talk</string>
+    <string name="choose_your_city">Choose Your City</string>
     <string name="choose_your_country">Choose your country</string>
     <string name="christian">Christian</string>
     <string name="cigar_aficionado">Cigar aficionado</string>
+    <string name="city_updated">City Updated</string>
     <string name="close">Close</string>
-    <string name="com.crashlytics.android.build_id" ns2:ignore="UnusedResources,TypographyDashes" translatable="false">4c014e67-5640-4204-92b1-4fa1e55cf4c0</string>
+    <string name="com.crashlytics.android.build_id" ns2:ignore="UnusedResources,TypographyDashes" translatable="false">03dce940-ba2a-4632-bff1-1629a6d689c9</string>
     <string name="com_facebook_device_auth_instructions">Visit &lt;b>facebook.com/device&lt;/b> and enter the code shown above.</string>
     <string name="com_facebook_image_download_unknown_error">Unexpected error while downloading an image.</string>
     <string name="com_facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
@@ -1237,6 +2821,7 @@
     <string name="conversion_one">conversion one</string>
     <string name="conversion_two">Conversion two</string>
     <string name="country">Country</string>
+    <string name="country_city_updated">Country and city updated</string>
     <string name="country_updated">Country was updated</string>
     <string name="create_account">CREATE ACCOUNT</string>
     <string name="crop_image_activity_no_permissions">Cancelling, required permissions are not granted</string>
@@ -1261,6 +2846,11 @@
     <string name="dialog_search_error_standart">Please enter valid ID</string>
     <string name="dialog_search_quantity_error">Length of id must be 10 characters</string>
     <string name="didnt_fill_form_question">You Didn\'t Fill The Form. Do You Want To Fill It Now?</string>
+    <string name="disclaimer_description_eng">disclaimer_info</string>
+    <string name="disclaimer_description_rus">Текст описания</string>
+    <string name="disclaimer_dialog_question">Do you really want to cancel?</string>
+    <string name="disclaimer_title_eng">Title</string>
+    <string name="disclaimer_title_rus">заглавие</string>
     <string name="discribe_what_you_like_to_do_in_couple_words">Looking for...</string>
     <string name="display_name">Display Name</string>
     <string name="display_name_text">Display Name</string>
@@ -1297,6 +2887,9 @@
     <string name="faith_updated">Faith was updated</string>
     <string name="fcm_fallback_notification_channel_label">Miscellaneous</string>
     <string name="female_option">Female</string>
+    <string name="filter_switch_off">No</string>
+    <string name="filter_switch_on">Yes</string>
+    <string name="filter_switch_text">Online Users</string>
     <string name="finish">Finish</string>
     <string name="firebase_database_url" translatable="false">https://russianwives.firebaseio.com</string>
     <string name="firebase_web_host" translatable="false">CHANGE-ME</string>
@@ -1419,7 +3012,7 @@
     <string name="height_cm_text">CM</string>
     <string name="height_number_text">Number</string>
     <string name="height_updated">Height was updated</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="hide_bottom_view_on_scroll_behavior" translatable="false">android.support.design.behavior.HideBottomViewOnScrollBehavior</string>
     <string name="hobby_updated">Looking for was updated</string>
     <string name="how_many_kids_you_have">How Many Kids You Have</string>
@@ -1499,18 +3092,22 @@
     <string name="photo">Photo</string>
     <string name="photo_was_updated">Photo was updated</string>
     <string name="pick_image_intent_chooser_title">Select source</string>
+    <string name="play_video">play video</string>
     <string name="please_fill_profile">Please fill profile</string>
     <string name="please_register_to_interact_with_user">Please register to interact with the user</string>
     <string name="please_register_to_start">Please register to start</string>
     <string name="please_set_your_status">Set Your Status</string>
     <string name="please_update_application">Please update application</string>
     <string name="please_wait">Please Wait...</string>
+    <string name="previous_text">Previous</string>
     <string name="privacy_policy">By clicking OK you are confirming that you are over the age of 18 and allow this app
         to use your information in accordance with <a href="http://ruswives.com/terms-and-privacy/">privacy policy</a></string>
     <string name="probably_not">Probably not</string>
     <string name="profile_arrow_desc">Arrow image</string>
     <string name="profile_img_desc">profile image</string>
     <string name="project_id" translatable="false">russianwives</string>
+    <string name="record_video">record video</string>
+    <string name="record_video_first_text">Please Record video first</string>
     <string name="register">Register</string>
     <string name="registration_started">Registration Started</string>
     <string name="regularly">Regularly</string>
@@ -1608,13 +3205,17 @@
     <string name="sign_out">Log Out</string>
     <string name="slender">Slender</string>
     <string name="slider_language_text">English</string>
+    <string name="slider_toolbar_title_eng">Please complete Registration</string>
+    <string name="slider_toolbar_title_rus">Название панели инструментов видео</string>
     <string name="smoke_status">Smoke Status</string>
     <string name="smoking_status">Do you smoke?</string>
     <string name="smoking_updated">Smoking status was updated</string>
     <string name="soc_med_scrn_msg">Your Profile Will Be Added As Soon We Check It.</string>
     <string name="social_drinker">Social drinker</string>
+    <string name="some_wrong">Something went wrong..!Try again</string>
     <string name="someday">Someday</string>
     <string name="something_went_wrong">Something went wrong. Try again!</string>
+    <string name="start_text">Start</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="status_save_btn_text">Save changes</string>
     <string name="stocky">Stocky</string>
@@ -1630,15 +3231,33 @@
     <string name="twitter_consumer_key" translatable="false">CHANGE-ME</string>
     <string name="twitter_consumer_secret" translatable="false">CHANGE-ME</string>
     <string name="unfriend">Unfriend this Person</string>
+    <string name="upload">Upload video</string>
     <string name="uploading_image">Uploading Image</string>
+    <string name="uploading_text">Uploading …</string>
     <string name="user_avatar">User Avatar</string>
     <string name="user_block">User is Locked</string>
     <string name="user_default_status">User default Status</string>
     <string name="user_information_category">User Information</string>
     <string name="user_profile_text">Description</string>
     <string name="user_single_online_desc">Online icon</string>
+    <string name="video_disclaimer_description_eng" translatable="false">Video Disclaimer</string>
+    <string name="video_disclaimer_description_rus">Название панели инструментов видео</string>
+    <string name="video_disclaimer_title_eng" translatable="false">Vidoe Title</string>
+    <string name="video_disclaimer_title_rus">Название панели инструментов видео</string>
+    <string name="video_disclaimer_title_text">Video Title</string>
+    <string name="video_disclaimer_toolbar_title_eng" translatable="false">Video Info</string>
+    <string name="video_disclaimer_toolbar_title_rus">Название панели инструментов видео</string>
+    <string name="video_error_message_text">Video Not Uploaded</string>
+    <string name="video_not_available">Video Not Available</string>
+    <string name="video_record_error_text">An error occurred, please try again later.</string>
+    <string name="video_result_toolbar_title_eng">VideoRcording Activity</string>
+    <string name="video_result_toolbar_title_rus">Название панели инструментов видео</string>
+    <string name="video_upload_error_text">ERROR,PLEASE UPLOAD AGAIN</string>
+    <string name="video_upload_sucess_text">VIDEO UPLOADED SUCCESSFULLY</string>
+    <string name="video_upload_text">Upload video</string>
     <string name="visitors">Visitors</string>
     <string name="visits">Visits</string>
+    <string name="wait_for_approval">Please Wait untill your video approved from Admin</string>
     <string name="we_will_post_you_in_our_social_media">(we will post you in our social media)</string>
     <string name="what_age">What is your age?</string>
     <string name="what_age_looking_for">What age are you looking for?</string>
@@ -1660,6 +3279,7 @@
     <string name="where_are_you_from">Where are you from?</string>
     <string name="where_live">Where do you live?</string>
     <string name="which_best_ethnicities_best_describes_you">Which Best Ethnicities Best Describes You</string>
+    <string name="which_city_looking_for">Which City looking for</string>
     <string name="which_ethnicity_best_describe_you">Describe your ethnicity?</string>
     <string name="white_caucasian">White / Caucasian</string>
     <string name="who_are_you_looking_for">Change YOUR gender (will show opposit)</string>
@@ -5189,7 +6809,7 @@
             <enum name="add" value="16"/>
         </attr>
     </declare-styleable>
-    <declare-styleable name="Constraint"><attr name="android:orientation"/><attr name="android:id"/><attr name="android:visibility"/><attr name="visibilityMode"/><attr name="android:alpha"/><attr name="android:elevation"/><attr name="android:rotation"/><attr name="android:rotationX"/><attr name="android:rotationY"/><attr name="android:scaleX"/><attr name="android:scaleY"/><attr name="pivotAnchor"/><attr name="android:pivotX"/><attr name="android:pivotY"/><attr name="android:transformPivotX"/><attr name="android:transformPivotY"/><attr name="android:translationX"/><attr name="android:translationY"/><attr name="android:translationZ"/><attr name="android:layout_width"/><attr name="android:layout_height"/><attr name="android:layout_marginStart"/><attr name="android:layout_marginBottom"/><attr name="android:layout_marginTop"/><attr name="android:layout_marginEnd"/><attr name="android:layout_marginLeft"/><attr name="android:layout_marginRight"/><attr name="layout_constraintCircle"/><attr name="layout_constraintCircleRadius"/><attr name="layout_constraintCircleAngle"/><attr name="layout_constraintGuide_begin"/><attr name="layout_constraintGuide_end"/><attr name="layout_constraintGuide_percent"/><attr name="layout_constraintLeft_toLeftOf"/><attr name="layout_constraintLeft_toRightOf"/><attr name="layout_constraintRight_toLeftOf"/><attr name="layout_constraintRight_toRightOf"/><attr name="layout_constraintTop_toTopOf"/><attr name="layout_constraintTop_toBottomOf"/><attr name="layout_constraintBottom_toTopOf"/><attr name="layout_constraintBottom_toBottomOf"/><attr name="layout_constraintBaseline_toBaselineOf"/><attr name="layout_constraintStart_toEndOf"/><attr name="layout_constraintStart_toStartOf"/><attr name="layout_constraintEnd_toStartOf"/><attr name="layout_constraintEnd_toEndOf"/><attr name="layout_goneMarginLeft"/><attr name="layout_goneMarginTop"/><attr name="layout_goneMarginRight"/><attr name="layout_goneMarginBottom"/><attr name="layout_goneMarginStart"/><attr name="layout_goneMarginEnd"/><attr name="layout_constrainedWidth"/><attr name="layout_constrainedHeight"/><attr name="layout_constraintHorizontal_bias"/><attr name="layout_constraintVertical_bias"/><attr name="layout_constraintWidth_default"/><attr name="layout_constraintHeight_default"/><attr name="layout_constraintWidth_min"/><attr name="layout_constraintWidth_max"/><attr name="layout_constraintWidth_percent"/><attr name="layout_constraintHeight_min"/><attr name="layout_constraintHeight_max"/><attr name="layout_constraintHeight_percent"/><attr name="layout_constraintLeft_creator"/><attr name="layout_constraintTop_creator"/><attr name="layout_constraintRight_creator"/><attr name="layout_constraintBottom_creator"/><attr name="layout_constraintBaseline_creator"/><attr name="layout_constraintDimensionRatio"/><attr name="layout_constraintHorizontal_weight"/><attr name="layout_constraintVertical_weight"/><attr name="layout_constraintHorizontal_chainStyle"/><attr name="layout_constraintVertical_chainStyle"/><attr name="layout_editor_absoluteX"/><attr name="layout_editor_absoluteY"/><attr name="barrierDirection"/><attr name="barrierMargin"/><attr name="constraint_referenced_ids"/><attr name="android:maxHeight"/><attr name="android:maxWidth"/><attr name="android:minHeight"/><attr name="android:minWidth"/><attr name="barrierAllowsGoneWidgets"/><attr name="chainUseRtl"/><attr name="flow_horizontalStyle"/><attr name="flow_verticalStyle"/><attr name="flow_verticalAlign"/><attr name="flow_horizontalAlign"/><attr name="flow_verticalBias"/><attr name="flow_horizontalBias"/><attr name="flow_wrapMode"/><attr name="flow_maxElementsWrap"/><attr name="flow_horizontalGap"/><attr name="flow_verticalGap"/><attr name="flow_firstHorizontalStyle"/><attr name="flow_firstVerticalStyle"/><attr name="flow_firstHorizontalBias"/><attr name="flow_firstVerticalBias"/><attr name="flow_lastHorizontalStyle"/><attr name="flow_lastVerticalStyle"/><attr name="flow_lastHorizontalBias"/><attr name="flow_lastVerticalBias"/><attr name="animate_relativeTo"/><attr name="transitionEasing"/><attr name="pathMotionArc"/><attr name="transitionPathRotate"/><attr name="drawPath"/><attr name="progress"/><attr name="layout_constraintTag"/><attr name="motionStagger"/></declare-styleable>
+    <declare-styleable name="Constraint"><attr name="android:orientation"/><attr name="android:id"/><attr name="android:visibility"/><attr name="visibilityMode"/><attr name="android:alpha"/><attr name="android:elevation"/><attr name="android:rotation"/><attr name="android:rotationX"/><attr name="android:rotationY"/><attr name="android:scaleX"/><attr name="android:scaleY"/><attr name="pivotAnchor"/><attr name="android:transformPivotX"/><attr name="android:transformPivotY"/><attr name="android:translationX"/><attr name="android:translationY"/><attr name="android:translationZ"/><attr name="android:layout_width"/><attr name="android:layout_height"/><attr name="android:layout_marginStart"/><attr name="android:layout_marginBottom"/><attr name="android:layout_marginTop"/><attr name="android:layout_marginEnd"/><attr name="android:layout_marginLeft"/><attr name="android:layout_marginRight"/><attr name="layout_constraintCircle"/><attr name="layout_constraintCircleRadius"/><attr name="layout_constraintCircleAngle"/><attr name="layout_constraintGuide_begin"/><attr name="layout_constraintGuide_end"/><attr name="layout_constraintGuide_percent"/><attr name="layout_constraintLeft_toLeftOf"/><attr name="layout_constraintLeft_toRightOf"/><attr name="layout_constraintRight_toLeftOf"/><attr name="layout_constraintRight_toRightOf"/><attr name="layout_constraintTop_toTopOf"/><attr name="layout_constraintTop_toBottomOf"/><attr name="layout_constraintBottom_toTopOf"/><attr name="layout_constraintBottom_toBottomOf"/><attr name="layout_constraintBaseline_toBaselineOf"/><attr name="layout_constraintStart_toEndOf"/><attr name="layout_constraintStart_toStartOf"/><attr name="layout_constraintEnd_toStartOf"/><attr name="layout_constraintEnd_toEndOf"/><attr name="layout_goneMarginLeft"/><attr name="layout_goneMarginTop"/><attr name="layout_goneMarginRight"/><attr name="layout_goneMarginBottom"/><attr name="layout_goneMarginStart"/><attr name="layout_goneMarginEnd"/><attr name="layout_constrainedWidth"/><attr name="layout_constrainedHeight"/><attr name="layout_constraintHorizontal_bias"/><attr name="layout_constraintVertical_bias"/><attr name="layout_constraintWidth_default"/><attr name="layout_constraintHeight_default"/><attr name="layout_constraintWidth_min"/><attr name="layout_constraintWidth_max"/><attr name="layout_constraintWidth_percent"/><attr name="layout_constraintHeight_min"/><attr name="layout_constraintHeight_max"/><attr name="layout_constraintHeight_percent"/><attr name="layout_constraintLeft_creator"/><attr name="layout_constraintTop_creator"/><attr name="layout_constraintRight_creator"/><attr name="layout_constraintBottom_creator"/><attr name="layout_constraintBaseline_creator"/><attr name="layout_constraintDimensionRatio"/><attr name="layout_constraintHorizontal_weight"/><attr name="layout_constraintVertical_weight"/><attr name="layout_constraintHorizontal_chainStyle"/><attr name="layout_constraintVertical_chainStyle"/><attr name="layout_editor_absoluteX"/><attr name="layout_editor_absoluteY"/><attr name="barrierDirection"/><attr name="barrierMargin"/><attr name="constraint_referenced_ids"/><attr name="android:maxHeight"/><attr name="android:maxWidth"/><attr name="android:minHeight"/><attr name="android:minWidth"/><attr name="barrierAllowsGoneWidgets"/><attr name="chainUseRtl"/><attr name="flow_horizontalStyle"/><attr name="flow_verticalStyle"/><attr name="flow_verticalAlign"/><attr name="flow_horizontalAlign"/><attr name="flow_verticalBias"/><attr name="flow_horizontalBias"/><attr name="flow_wrapMode"/><attr name="flow_maxElementsWrap"/><attr name="flow_horizontalGap"/><attr name="flow_verticalGap"/><attr name="flow_firstHorizontalStyle"/><attr name="flow_firstVerticalStyle"/><attr name="flow_firstHorizontalBias"/><attr name="flow_firstVerticalBias"/><attr name="flow_lastHorizontalStyle"/><attr name="flow_lastVerticalStyle"/><attr name="flow_lastHorizontalBias"/><attr name="flow_lastVerticalBias"/><attr name="animate_relativeTo"/><attr name="transitionEasing"/><attr name="pathMotionArc"/><attr name="transitionPathRotate"/><attr name="drawPath"/><attr name="progress"/><attr name="layout_constraintTag"/><attr name="motionStagger"/></declare-styleable>
     <declare-styleable name="ConstraintLayout_Layout"><attr name="android:orientation"/><attr name="android:minWidth"/><attr name="android:minHeight"/><attr name="android:maxWidth"/><attr name="android:maxHeight"/><attr name="android:visibility"/><attr name="android:elevation"/><attr name="layout_optimizationLevel"/><attr name="layoutDescription"/><attr name="constraintSet"/><attr name="barrierDirection"/><attr name="barrierAllowsGoneWidgets"/><attr name="barrierMargin"/><attr name="constraint_referenced_ids"/><attr name="chainUseRtl"/><attr name="flow_horizontalStyle"/><attr name="flow_verticalStyle"/><attr name="flow_wrapMode"/><attr name="flow_maxElementsWrap"/><attr name="flow_horizontalGap"/><attr name="flow_verticalGap"/><attr name="android:padding"/><attr name="android:paddingTop"/><attr name="android:paddingBottom"/><attr name="android:paddingLeft"/><attr name="android:paddingRight"/><attr name="android:paddingStart"/><attr name="android:paddingEnd"/><attr name="flow_verticalAlign"/><attr name="flow_horizontalAlign"/><attr name="flow_verticalBias"/><attr name="flow_horizontalBias"/><attr name="flow_firstHorizontalStyle"/><attr name="flow_firstVerticalStyle"/><attr name="flow_firstHorizontalBias"/><attr name="flow_firstVerticalBias"/><attr name="flow_lastHorizontalStyle"/><attr name="flow_lastVerticalStyle"/><attr name="flow_lastHorizontalBias"/><attr name="flow_lastVerticalBias"/><attr name="layout_constraintCircle"/><attr name="layout_constraintCircleRadius"/><attr name="layout_constraintCircleAngle"/><attr name="layout_constraintGuide_begin"/><attr name="layout_constraintGuide_end"/><attr name="layout_constraintGuide_percent"/><attr name="layout_constraintLeft_toLeftOf"/><attr name="layout_constraintLeft_toRightOf"/><attr name="layout_constraintRight_toLeftOf"/><attr name="layout_constraintRight_toRightOf"/><attr name="layout_constraintTop_toTopOf"/><attr name="layout_constraintTop_toBottomOf"/><attr name="layout_constraintBottom_toTopOf"/><attr name="layout_constraintBottom_toBottomOf"/><attr name="layout_constraintBaseline_toBaselineOf"/><attr name="layout_constraintStart_toEndOf"/><attr name="layout_constraintStart_toStartOf"/><attr name="layout_constraintEnd_toStartOf"/><attr name="layout_constraintEnd_toEndOf"/><attr name="layout_goneMarginLeft"/><attr name="layout_goneMarginTop"/><attr name="layout_goneMarginRight"/><attr name="layout_goneMarginBottom"/><attr name="layout_goneMarginStart"/><attr name="layout_goneMarginEnd"/><attr name="layout_constrainedWidth"/><attr name="layout_constrainedHeight"/><attr name="layout_constraintHorizontal_bias"/><attr name="layout_constraintVertical_bias"/><attr name="layout_constraintWidth_default"/><attr name="layout_constraintHeight_default"/><attr name="layout_constraintWidth_min"/><attr name="layout_constraintWidth_max"/><attr name="layout_constraintWidth_percent"/><attr name="layout_constraintHeight_min"/><attr name="layout_constraintHeight_max"/><attr name="layout_constraintHeight_percent"/><attr name="layout_constraintLeft_creator"/><attr name="layout_constraintTop_creator"/><attr name="layout_constraintRight_creator"/><attr name="layout_constraintBottom_creator"/><attr name="layout_constraintBaseline_creator"/><attr name="layout_constraintDimensionRatio"/><attr name="layout_constraintHorizontal_weight"/><attr name="layout_constraintVertical_weight"/><attr name="layout_constraintHorizontal_chainStyle"/><attr name="layout_constraintVertical_chainStyle"/><attr name="layout_editor_absoluteX"/><attr name="layout_editor_absoluteY"/><attr name="layout_constraintTag"/></declare-styleable>
     <declare-styleable name="ConstraintLayout_placeholder"><attr name="placeholder_emptyVisibility"/><attr name="content"/></declare-styleable>
     <declare-styleable name="ConstraintSet"><attr format="reference" name="deriveConstraintsFrom"/><attr name="android:orientation"/><attr name="android:id"/><attr name="android:visibility"/><attr name="android:alpha"/><attr name="android:elevation"/><attr name="android:rotation"/><attr name="android:rotationX"/><attr name="android:rotationY"/><attr name="android:scaleX"/><attr name="android:scaleY"/><attr name="pivotAnchor"/><attr name="android:pivotX"/><attr name="android:pivotY"/><attr name="android:transformPivotX"/><attr name="android:transformPivotY"/><attr name="android:translationX"/><attr name="android:translationY"/><attr name="android:translationZ"/><attr name="android:layout_width"/><attr name="android:layout_height"/><attr name="android:layout_marginStart"/><attr name="android:layout_marginBottom"/><attr name="android:layout_marginTop"/><attr name="android:layout_marginEnd"/><attr name="android:layout_marginLeft"/><attr name="android:layout_marginRight"/><attr name="layout_constraintCircle"/><attr name="layout_constraintCircleRadius"/><attr name="layout_constraintCircleAngle"/><attr name="layout_constraintGuide_begin"/><attr name="layout_constraintGuide_end"/><attr name="layout_constraintGuide_percent"/><attr name="layout_constraintLeft_toLeftOf"/><attr name="layout_constraintLeft_toRightOf"/><attr name="layout_constraintRight_toLeftOf"/><attr name="layout_constraintRight_toRightOf"/><attr name="layout_constraintTop_toTopOf"/><attr name="layout_constraintTop_toBottomOf"/><attr name="layout_constraintBottom_toTopOf"/><attr name="layout_constraintBottom_toBottomOf"/><attr name="layout_constraintBaseline_toBaselineOf"/><attr name="layout_constraintStart_toEndOf"/><attr name="layout_constraintStart_toStartOf"/><attr name="layout_constraintEnd_toStartOf"/><attr name="layout_constraintEnd_toEndOf"/><attr name="layout_goneMarginLeft"/><attr name="layout_goneMarginTop"/><attr name="layout_goneMarginRight"/><attr name="layout_goneMarginBottom"/><attr name="layout_goneMarginStart"/><attr name="layout_goneMarginEnd"/><attr name="layout_constrainedWidth"/><attr name="layout_constrainedHeight"/><attr name="layout_constraintHorizontal_bias"/><attr name="layout_constraintVertical_bias"/><attr name="layout_constraintWidth_default"/><attr name="layout_constraintHeight_default"/><attr name="layout_constraintWidth_min"/><attr name="layout_constraintWidth_max"/><attr name="layout_constraintWidth_percent"/><attr name="layout_constraintHeight_min"/><attr name="layout_constraintHeight_max"/><attr name="layout_constraintHeight_percent"/><attr name="layout_constraintLeft_creator"/><attr name="layout_constraintTop_creator"/><attr name="layout_constraintRight_creator"/><attr name="layout_constraintBottom_creator"/><attr name="layout_constraintBaseline_creator"/><attr name="layout_constraintDimensionRatio"/><attr name="layout_constraintHorizontal_weight"/><attr name="layout_constraintVertical_weight"/><attr name="layout_constraintHorizontal_chainStyle"/><attr name="layout_constraintVertical_chainStyle"/><attr name="layout_editor_absoluteX"/><attr name="layout_editor_absoluteY"/><attr name="barrierDirection"/><attr name="constraint_referenced_ids"/><attr name="barrierMargin"/><attr name="android:maxHeight"/><attr name="android:maxWidth"/><attr name="android:minHeight"/><attr name="android:minWidth"/><attr name="barrierAllowsGoneWidgets"/><attr name="chainUseRtl"/><attr name="flow_horizontalStyle"/><attr name="flow_verticalStyle"/><attr name="flow_verticalAlign"/><attr name="flow_horizontalAlign"/><attr name="flow_verticalBias"/><attr name="flow_horizontalBias"/><attr name="flow_wrapMode"/><attr name="flow_maxElementsWrap"/><attr name="flow_horizontalGap"/><attr name="flow_verticalGap"/><attr name="flow_firstHorizontalStyle"/><attr name="flow_firstVerticalStyle"/><attr name="flow_firstHorizontalBias"/><attr name="flow_firstVerticalBias"/><attr name="flow_lastHorizontalStyle"/><attr name="flow_lastVerticalStyle"/><attr name="flow_lastHorizontalBias"/><attr name="flow_lastVerticalBias"/><attr name="animate_relativeTo"/><attr name="transitionEasing"/><attr name="pathMotionArc"/><attr name="transitionPathRotate"/><attr name="motionStagger"/><attr name="drawPath"/><attr name="motionProgress"/><attr name="layout_constraintTag"/></declare-styleable>
@@ -5404,7 +7024,7 @@
         <attr name="android:color"/>
     </declare-styleable>
     <declare-styleable name="ImageFilterView"><attr format="reference" name="altSrc"/><attr format="float" name="saturation"/><attr format="float" name="brightness"/><attr format="float" name="warmth"/><attr format="float" name="contrast"/><attr format="float" name="crossfade"/><attr format="dimension" name="round"/><attr format="boolean" name="overlay"/><attr format="float" name="roundPercent"/></declare-styleable>
-    <declare-styleable name="KeyAttribute"><attr name="framePosition"/><attr name="motionTarget"/><attr name="transitionEasing"/><attr name="curveFit"/><attr name="motionProgress"/><attr name="android:alpha"/><attr name="android:elevation"/><attr name="android:rotation"/><attr name="android:rotationX"/><attr name="android:rotationY"/><attr name="transitionPathRotate"/><attr name="android:scaleX"/><attr name="android:scaleY"/><attr name="android:translationX"/><attr name="android:translationY"/><attr name="android:translationZ"/></declare-styleable>
+    <declare-styleable name="KeyAttribute"><attr name="framePosition"/><attr name="motionTarget"/><attr name="transitionEasing"/><attr name="curveFit"/><attr name="motionProgress"/><attr name="android:alpha"/><attr name="android:elevation"/><attr name="android:rotation"/><attr name="android:rotationX"/><attr name="android:rotationY"/><attr name="android:transformPivotX"/><attr name="android:transformPivotY"/><attr name="transitionPathRotate"/><attr name="android:scaleX"/><attr name="android:scaleY"/><attr name="android:translationX"/><attr name="android:translationY"/><attr name="android:translationZ"/></declare-styleable>
     <declare-styleable name="KeyCycle"><attr name="motionTarget"/><attr name="curveFit"/><attr name="framePosition"/><attr name="transitionEasing"/><attr name="motionProgress"/><attr name="waveShape"/><attr name="wavePeriod"/><attr name="waveOffset"/><attr name="waveVariesBy"/><attr name="transitionPathRotate"/><attr name="android:alpha"/><attr name="android:elevation"/><attr name="android:rotation"/><attr name="android:rotationX"/><attr name="android:rotationY"/><attr name="android:scaleX"/><attr name="android:scaleY"/><attr name="android:translationX"/><attr name="android:translationY"/><attr name="android:translationZ"/></declare-styleable>
     <declare-styleable name="KeyFrame"/>
     <declare-styleable name="KeyFramesAcceleration"/>
@@ -5692,9 +7312,10 @@
             <flag name="jumpToEnd" value="0x100"/>
             <flag name="jumpToStart" value="0x1000"/>
         </attr></declare-styleable>
-    <declare-styleable name="OnSwipe"><attr format="float" name="dragScale"/><attr format="float" name="maxVelocity"/><attr format="float" name="maxAcceleration"/><attr name="dragDirection"/><attr name="touchAnchorId"/><attr name="touchAnchorSide"/><attr format="reference" name="touchRegionId"/><attr format="flags" name="nestedScrollFlags">
+    <declare-styleable name="OnSwipe"><attr format="float" name="dragScale"/><attr format="float" name="dragThreshold"/><attr format="float" name="maxVelocity"/><attr format="float" name="maxAcceleration"/><attr name="dragDirection"/><attr name="touchAnchorId"/><attr name="touchAnchorSide"/><attr format="reference" name="touchRegionId"/><attr format="reference" name="limitBoundsTo"/><attr format="flags" name="nestedScrollFlags">
             <flag name="none" value="0"/>
             <flag name="disablePostScroll" value="1"/>
+            <flag name="disableScroll" value="2"/>
         </attr><attr format="boolean" name="moveWhenScrollAtTop"/><attr format="enum" name="onTouchUp">
             <enum name="autoComplete" value="0"/>
             <enum name="autoCompleteToStart" value="1"/>
@@ -6007,7 +7628,7 @@
         <attr format="color" name="subtitleTextColor"/>
         <attr name="android:minHeight"/>
     </declare-styleable>
-    <declare-styleable name="Transform"><attr name="android:elevation"/><attr name="android:rotation"/><attr name="android:rotationX"/><attr name="android:rotationY"/><attr name="android:scaleX"/><attr name="android:scaleY"/><attr name="pivotAnchor"/><attr format="float|fraction" name="pivotX"/><attr format="float|fraction" name="pivotY"/><attr name="android:transformPivotX"/><attr name="android:transformPivotY"/><attr format="dimension" name="android:translationX"/><attr format="dimension" name="android:translationY"/><attr format="dimension" name="android:translationZ"/></declare-styleable>
+    <declare-styleable name="Transform"><attr name="android:elevation"/><attr name="android:rotation"/><attr name="android:rotationX"/><attr name="android:rotationY"/><attr name="android:scaleX"/><attr name="android:scaleY"/><attr name="android:transformPivotX"/><attr name="android:transformPivotY"/><attr format="dimension" name="android:translationX"/><attr format="dimension" name="android:translationY"/><attr format="dimension" name="android:translationZ"/></declare-styleable>
     <declare-styleable name="Transition"><attr name="android:id"/><attr format="reference" name="constraintSetStart"/><attr format="reference" name="constraintSetEnd"/><attr format="boolean" name="transitionDisable"/><attr name="layoutDuringTransition"/><attr name="pathMotionArc"/><attr format="enum" name="autoTransition">
             <enum name="none" value="0"/>
             <enum name="jumpToStart" value="1"/>

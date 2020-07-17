@@ -15,9 +15,9 @@ import java.lang.Override;
 public class PurchaseDialogFragment_ViewBinding implements Unbinder {
   private PurchaseDialogFragment target;
 
-  private View view2131296791;
+  private View view2131296814;
 
-  private View view2131296789;
+  private View view2131296812;
 
   @UiThread
   public PurchaseDialogFragment_ViewBinding(final PurchaseDialogFragment target, View source) {
@@ -26,7 +26,7 @@ public class PurchaseDialogFragment_ViewBinding implements Unbinder {
     View view;
     target.coinsAmountTv = Utils.findRequiredViewAsType(source, R.id.purchase_coins_text, "field 'coinsAmountTv'", TextView.class);
     view = Utils.findRequiredView(source, R.id.purchase_confirm_btn, "method 'onConfirmClicked'");
-    view2131296791 = view;
+    view2131296814 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -34,7 +34,7 @@ public class PurchaseDialogFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.purchase_cancel_btn, "method 'onCancelClicked'");
-    view2131296789 = view;
+    view2131296812 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -52,9 +52,9 @@ public class PurchaseDialogFragment_ViewBinding implements Unbinder {
 
     target.coinsAmountTv = null;
 
-    view2131296791.setOnClickListener(null);
-    view2131296791 = null;
-    view2131296789.setOnClickListener(null);
-    view2131296789 = null;
+    view2131296814.setOnClickListener(null);
+    view2131296814 = null;
+    view2131296812.setOnClickListener(null);
+    view2131296812 = null;
   }
 }
