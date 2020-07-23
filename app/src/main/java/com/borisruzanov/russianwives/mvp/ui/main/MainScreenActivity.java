@@ -68,6 +68,7 @@ import com.borisruzanov.russianwives.mvp.ui.search.SearchPresenter;
 import com.borisruzanov.russianwives.mvp.ui.slider.SliderActivity;
 import com.borisruzanov.russianwives.mvp.ui.unlockuser.UnlockUserActivity;
 import com.borisruzanov.russianwives.mvp.ui.usersearch.DialogUserSearch;
+import com.borisruzanov.russianwives.utils.CityConfig;
 import com.borisruzanov.russianwives.utils.Consts;
 import com.bumptech.glide.Glide;
 import com.firebase.ui.auth.AuthUI;
@@ -138,6 +139,7 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
     private CardView mSocMedContainer;
     private int mSocMedCounter;
 
+    public static boolean isNeedToCheck=true; //a boolean varaible to check if need to again check for all user info is completed or not.
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -345,11 +347,12 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
                 return;
             } else {
                 //check for userInfo
-                callUserInfoDialogs();
+                if (isNeedToCheck) //it is need to check again for all user info is completed or not
+                    callUserInfoDialogs();
             }
         }
         hideMenuItems();
-        Log.d(TAG_CLASS_NAME,"OnREsume");
+        Log.d(TAG_CLASS_NAME,"OnResume");
     }
 
     @Override
@@ -505,6 +508,7 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
     public void showDefaultDialogScreen(ArrayList<String> list) {
         //check if empty then return
         if (list.size() == 0){
+            checkForCity();
             return;
         }
         //check if only video reaming or not
@@ -520,6 +524,7 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
             startActivity(intent);
         }
     }
+
 
     /**
      * Showing the update app dialog
@@ -719,6 +724,7 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
                             public void onComplete(@NonNull Task<Void> task) {
                                 //remove user  from online Status after logged out.
                                 //set online field false in user db
+                                mPrefs.setValue(Consts.NEWUSER_DISCLAIMER_ACCEPT,Consts.FALSE);//reset a Accept value in SharedPrefences
                                 mPresenter.removeFromOnlineStatus(mFsUser.getUid());
                                 reload();
                             }
@@ -950,4 +956,26 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
     public void completeRegistration(){
         mPresenter.getDefaultList();
     }
+
+    /***
+     * check is city is belongs to country or not
+     * if not then call a SliderCountries
+     */
+    private void checkForCity(){
+        new Thread(() -> {
+            if (mFsUser!=null) { //if there is not user details
+                if (!new CityConfig(MainScreenActivity.this).checkCity(mFsUser.getCountry(), mFsUser.getCity())) {
+                    //if city is not valid
+                    Bundle bundle = new Bundle();
+                    bundle.putString("field_id", "Country");
+                    bundle.putString("intent", "list");
+                    Intent sliderIntent = new Intent(this, SliderActivity.class);
+                    sliderIntent.putExtras(bundle);
+                    startActivity(sliderIntent);
+                }
+            }
+        }).start();
+    }
+
+
 }

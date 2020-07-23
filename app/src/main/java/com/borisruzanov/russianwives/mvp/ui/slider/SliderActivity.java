@@ -17,9 +17,11 @@ import com.borisruzanov.russianwives.R;
 import com.borisruzanov.russianwives.eventbus.StringEvent;
 import com.borisruzanov.russianwives.models.Contract;
 import com.borisruzanov.russianwives.mvp.model.data.prefs.Prefs;
+import com.borisruzanov.russianwives.mvp.model.repository.slider.SliderRepository;
 import com.borisruzanov.russianwives.mvp.ui.disclamer.VideoDisclaimerActivity;
 import com.borisruzanov.russianwives.mvp.ui.main.MainScreenActivity;
 import com.borisruzanov.russianwives.mvp.ui.slider.adapter.UserInfoPagerAdapter;
+import com.borisruzanov.russianwives.utils.CityConfig;
 import com.borisruzanov.russianwives.utils.Consts;
 import com.borisruzanov.russianwives.utils.LanguageConfig;
 import com.google.firebase.analytics.FirebaseAnalytics;
@@ -59,7 +61,6 @@ public class SliderActivity extends MvpAppCompatActivity {
         setContentView(R.layout.activity_slider);
         toolbar = findViewById(R.id.toolbar_slider);
         setSupportActionBar(toolbar);
-
         firebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
         if (!EventBus.getDefault().isRegistered(this)) {
@@ -140,16 +141,14 @@ public class SliderActivity extends MvpAppCompatActivity {
         });
         Log.d("SliderDebug","size of fragment list:-"+fragmentList.size()+"value of isVideoAvailable "+String.valueOf(isVideoAvailable));
         //if there is no fragment call VideoDisclaimerActivity
-        if(fragmentList.size()==0) {
+        if(fragmentList.size()==completed) {
             //calling videoDisclaimerActivity if video not uploaded
             if (!isVideoAvailable) {
                 startActivity(new Intent(SliderActivity.this, VideoDisclaimerActivity.class));
-                finish();
             }
-            else{
-                //if all done then finish
-                finish();
-            }
+            EventBus.getDefault().post(new StringEvent(Consts.NO)); //set to false for checking again if all info is completed for slider
+            finish();
+
         }
         viewPager.addOnPageChangeListener(onPageChangeListener);
 
@@ -190,6 +189,7 @@ public class SliderActivity extends MvpAppCompatActivity {
         //check value for which event is triggered
         if (event.getStringParameter().equals(Consts.BUTTON_NEXT)){
             //if for next button
+                buttonNext.setVisibility(View.VISIBLE);
                 buttonNext.setClickable(true);
                 buttonNext.setBackgroundResource(R.color.colorAccent);
         }
@@ -213,6 +213,9 @@ public class SliderActivity extends MvpAppCompatActivity {
             completed++;
             //new Prefs(SliderActivity.this).setValue(Consts.LAST_SLIDER_NO, String.valueOf(viewPager.getCurrentItem()));
             arrCompleted[viewPager.getCurrentItem()]=true; //set value true for each fragment info completed
+        }
+        else if (event.getStringParameter().equals(Consts.DISABLE_NEXT_BUTTON)){
+            buttonNext.setVisibility(View.INVISIBLE);
         }
     }
 
@@ -243,18 +246,6 @@ public class SliderActivity extends MvpAppCompatActivity {
         Log.d("sliderDebug","list size:-"+list.size());
         for (int i=0;i<12;i++){
             switch (i){
-                /*case 0:
-                    if (list.contains(Consts.NAME))
-                        fragmentList.add(new SliderNameFragment());
-                    else
-                        completed++;
-                    break;
-                case 1:
-                    if (list.contains(Consts.GENDER))
-                        fragmentList.add(new SliderGenderFragment());
-                    else
-                        completed++;
-                    break;*/
                 case 0:
                     fragmentList.add(new SliderImageFragment());
                     if (!list.contains(Consts.IMAGE)) {
@@ -272,6 +263,7 @@ public class SliderActivity extends MvpAppCompatActivity {
                 case 2:
                     fragmentList.add(new SliderCountriesFragment());
                     if (!list.contains(Consts.COUNTRY)) {
+                        checkForCity(); //check for city validation
                         completed++;
                         arrCompleted[2]=true;
                     }
@@ -359,8 +351,9 @@ public class SliderActivity extends MvpAppCompatActivity {
             if (!isVideoAvailable){
                 Intent intent = new Intent(SliderActivity.this, VideoDisclaimerActivity.class);
                 startActivity(intent);
-                finish();
+
             }
+            finish();
 //            addFullProfileAchieve();
         }
     }
@@ -393,12 +386,14 @@ public class SliderActivity extends MvpAppCompatActivity {
         else{
             buttonNext.setText(R.string.next_text);
         }
+        buttonNext.setVisibility(View.INVISIBLE);
         buttonNext.setBackgroundResource(R.color.darkColor);
         buttonNext.setClickable(false);
 
         if (arrCompleted[viewPager.getCurrentItem()]){
             //if fragment info completed then next button set to clickable
             buttonNext.setClickable(true);
+            buttonNext.setVisibility(View.VISIBLE);
             buttonNext.setBackgroundResource(R.color.colorAccent);
         }
 
@@ -436,5 +431,34 @@ public class SliderActivity extends MvpAppCompatActivity {
         }
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("slider","onDestroy of a slider");
+    }
 
+    /***
+     * to check is city is valid or not
+     * if city is not valid then set fragment according to it.
+     */
+    private void checkForCity(){
+        new SliderRepository().getFieldFromCurrentUser(Consts.COUNTRY,value -> {
+            final String country=value;
+            new SliderRepository().getFieldFromCurrentUser(Consts.CITY,value1 -> {
+                final String city=value1;
+                Log.d("SliderDebug","Country-->"+country+" City-->"+city);
+                boolean valid=new CityConfig(SliderActivity.this).checkCity(country,city);
+                if (!valid){
+                    Log.d("SliderDEbug","city is invalid");
+                    if(arrCompleted[2]) {
+                        arrCompleted[2] = false;
+                        if (viewPager.getCurrentItem()!=2 && viewPager.getCurrentItem() > 2) {
+                            viewPager.setCurrentItem(2);
+                        }
+                        completed--;
+                    }
+                }
+            });
+        });
+    }
 }

@@ -124,6 +124,7 @@ public class VideoRecordingActivity extends AppCompatActivity  {
             mVideoView.start();
             mRecordVideo.setBackgroundResource(R.color.darkGrey);
             mUploadVideo.setBackgroundResource(R.color.colorAccent);
+            mRecordVideo.setText(getResources().getString(R.string.record_another_video));
         } else if (requestCode == REQUEST_VIDEO_CAPTURE && resultCode == RESULT_CANCELED) {
             Toast.makeText(getApplicationContext(), getResources().getString(R.string.video_record_error_text), Toast.LENGTH_LONG).show();
         }
@@ -223,8 +224,6 @@ public class VideoRecordingActivity extends AppCompatActivity  {
             return true;
         }
         return super.onOptionsItemSelected(item);
-
-
     }
 
     /***

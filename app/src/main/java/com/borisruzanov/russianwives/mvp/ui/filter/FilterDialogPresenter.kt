@@ -34,9 +34,16 @@ class FilterDialogPresenter @Inject constructor(private val interactor: FilterIn
     fun saveValues(spinners: List<Spinner>, checked: Boolean) {
         val models = ArrayList<SearchModel>()
         val keyList = Consts.keyList
+
         for (i in spinners.indices) {
             val item = spinners[i].selectedItem as String
-            models.add(SearchModel(keyList[i], item))
+            if (keyList[i] == Consts.CITY && item == Consts.ALL_CITIES){
+                //if key is city and value is all_cities then set to default in city key
+                models.add(SearchModel(keyList[i],Consts.DEFAULT))
+                Log.d("Filter", "item value:- $item  i--$i   keyList[i]--->${keyList[i]}");
+            }else {
+                models.add(SearchModel(keyList[i], item))
+            }
         }
         interactor.setPrefsValues(models)
         FilterConfig.setOnline(checked) //set Online in filterConfig

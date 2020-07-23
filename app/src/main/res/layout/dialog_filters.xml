@@ -15,7 +15,7 @@
         style="@style/AppTheme.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dp8"
+        android:layout_marginBottom="@dimen/dp4"
         android:text="@string/header_filters" />
 
     <android.support.v7.widget.SwitchCompat
@@ -23,8 +23,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
+        android:layout_below="@+id/filter_text"
         android:layout_marginEnd="5dp"
-        android:layout_marginBottom="@dimen/dp8"
+        android:layout_marginBottom="5dp"
         android:text="@string/filter_switch_text"
         app:showText="false"
         android:textSize="15sp" />

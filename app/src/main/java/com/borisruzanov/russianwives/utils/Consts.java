@@ -155,6 +155,8 @@ public final class Consts {
     public static final String PROGRESSBAR="progressbar";
     public static final String LEFT_STEP="steps_left";
     public static final String COMPLETE = "complete";
+    public static final String DISABLE_NEXT_BUTTON = "disable_next_button";
+
 
     public static final String WAIT_APPROVAL="wait_for_approval";
 
@@ -182,4 +184,8 @@ public final class Consts {
     public static final String VIDEO_RESULT_TOOLBAR_TITLE_RUS="video_result_toolbar_title_rus";
 
     public static final String NEWUSER_DISCLAIMER_ACCEPT ="newUser_Disclaimer_accept";//
+
+    public static final String ALL_CITIES="All Cities";
+    public static final String NO = "no";
+
 }

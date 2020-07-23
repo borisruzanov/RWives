@@ -32,6 +32,8 @@ public class FsUser implements ViewType {
 
     private String video;//a String variable to store video url
 
+    private  String city;//a String variable for city
+
     public String getFull_profile() {
         return full_profile;
     }
@@ -317,4 +319,11 @@ public class FsUser implements ViewType {
         this.video = video;
     }
 
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
 }

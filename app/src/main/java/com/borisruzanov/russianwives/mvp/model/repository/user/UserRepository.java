@@ -378,12 +378,19 @@ public class UserRepository {
             if (field.equals(Consts.VIDEO)){ //check for video field
                 if (value==null) //if null then add
                     valuesList.add(field);
-                else if (value.toLowerCase().trim().equals(Consts.DEFAULT)){ //if value is default then add
+                else if (value.toLowerCase().trim().equals(Consts.DEFAULT)){ //if value is. default then add
                     valuesList.add(field);
                 }
-            }else {
+            } else {
                 if (value != null && value.toLowerCase().trim().equals(Consts.DEFAULT)) {
                     valuesList.add(field);
+                }
+                //check is city is set for a country or not
+                if (field.equals(Consts.COUNTRY) && !valuesList.contains(field)){ //if field is country
+                    String city=document.getString(Consts.CITY);
+                    if (city!=null && city.toLowerCase().trim().equals(Consts.DEFAULT)){
+                        valuesList.add(field);
+                    }
                 }
             }
         }

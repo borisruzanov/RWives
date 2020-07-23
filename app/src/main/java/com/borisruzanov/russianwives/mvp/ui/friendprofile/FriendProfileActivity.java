@@ -115,6 +115,7 @@ public class FriendProfileActivity extends MvpAppCompatActivity implements Frien
     private String mFriendVideoUrl;
     private ProgressBar mProgressbar;
 
+    private Handler handler;
     @Inject
     @InjectPresenter
     FriendProfilePresenter mPresenter;
@@ -237,7 +238,7 @@ public class FriendProfileActivity extends MvpAppCompatActivity implements Frien
      * Phrases block logic
      */
     private void setupPhrasesBlock() {
-        final Handler handler = new Handler();
+        handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -331,7 +332,6 @@ public class FriendProfileActivity extends MvpAppCompatActivity implements Frien
                 }
             }
         }, 1000);
-
     }
 
     /**
@@ -646,4 +646,10 @@ public class FriendProfileActivity extends MvpAppCompatActivity implements Frien
     }
 
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        //stop a thread which run by handler
+        handler.removeCallbacksAndMessages(null);
+    }
 }
