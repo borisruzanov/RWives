@@ -45,6 +45,7 @@ import com.borisruzanov.russianwives.mvp.model.repository.friend.FriendRepositor
 import com.borisruzanov.russianwives.mvp.model.repository.hots.HotUsersRepository;
 import com.borisruzanov.russianwives.mvp.model.repository.rating.RatingRepository;
 import com.borisruzanov.russianwives.mvp.model.repository.search.SearchRepository;
+import com.borisruzanov.russianwives.mvp.model.repository.slider.SliderRepository;
 import com.borisruzanov.russianwives.mvp.model.repository.user.UserRepository;
 import com.borisruzanov.russianwives.mvp.ui.actions.ActionsActivity;
 import com.borisruzanov.russianwives.mvp.ui.chats.ChatsActivity;
@@ -341,7 +342,23 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
         super.onResume();
         if (FirebaseAuth.getInstance().getCurrentUser()!=null) {
             String accept = mPrefs.getValue(Consts.NEWUSER_DISCLAIMER_ACCEPT); //get Disclaimer accepted value
-            if (accept != null && accept.equals(Consts.FALSE)) { //check disclaimer accepted or not
+            if (accept==null || accept.equals(Consts.DEFAULT)){
+                new SliderRepository().getFieldFromCurrentUser(Consts.NEWUSER_DISCLAIMER_ACCEPT,value -> {
+                    if (value!=null){
+                        mPrefs.setValue(Consts.NEWUSER_DISCLAIMER_ACCEPT,value);
+                        if (value.equals(Consts.FALSE)){
+                            startActivity(new Intent(this, NewUserDisclaimerActivity.class));
+                        }
+                        else {
+                            if (isNeedToCheck) //it is need to check again for all user info is completed or not
+                                callUserInfoDialogs();
+                        }
+                    }else{
+                        startActivity(new Intent(this, NewUserDisclaimerActivity.class));
+                    }
+                });
+            }
+            else if (accept.equals(Consts.FALSE)) { //check disclaimer accepted or not
                 //if not accepted so here and go to disclaimerActivity
                 startActivity(new Intent(this, NewUserDisclaimerActivity.class));
                 return;
@@ -724,7 +741,7 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
                             public void onComplete(@NonNull Task<Void> task) {
                                 //remove user  from online Status after logged out.
                                 //set online field false in user db
-                                mPrefs.setValue(Consts.NEWUSER_DISCLAIMER_ACCEPT,Consts.FALSE);//reset a Accept value in SharedPrefences
+                                mPrefs.setValue(Consts.NEWUSER_DISCLAIMER_ACCEPT,null);//reset a Accept value in SharedPrefences
                                 mPresenter.removeFromOnlineStatus(mFsUser.getUid());
                                 reload();
                             }
@@ -972,6 +989,9 @@ public class MainScreenActivity extends AppCompatActivity implements FilterDialo
                     Intent sliderIntent = new Intent(this, SliderActivity.class);
                     sliderIntent.putExtras(bundle);
                     startActivity(sliderIntent);
+                }
+                else{
+                    isNeedToCheck=false;
                 }
             }
         }).start();

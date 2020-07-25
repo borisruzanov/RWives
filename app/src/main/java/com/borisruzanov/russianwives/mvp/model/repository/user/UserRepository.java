@@ -26,6 +26,7 @@ import com.borisruzanov.russianwives.utils.Consts;
 import com.borisruzanov.russianwives.utils.FirebaseRequestManager;
 import com.borisruzanov.russianwives.utils.OnlineUsersCallback;
 import com.borisruzanov.russianwives.utils.StringsCallback;
+import com.borisruzanov.russianwives.utils.UpdateCallback;
 import com.borisruzanov.russianwives.utils.UserCallback;
 import com.borisruzanov.russianwives.utils.UserHideCallback;
 import com.borisruzanov.russianwives.utils.network.ApiClient;
@@ -1432,4 +1433,13 @@ public class UserRepository {
         });
     }
 
+    /***
+     * update field in current user doc
+     * @param map a map object with a field and and its value
+     * @param callback callback to return
+     */
+    public void updateField(Map<String, Object> map, UpdateCallback callback){
+        //a setOptions.merge() will update existing field,if field is not available it create a new one
+        users.document(getUid()).set(map,SetOptions.merge()).addOnCompleteListener(task -> callback.onUpdate());
+    }
 }
