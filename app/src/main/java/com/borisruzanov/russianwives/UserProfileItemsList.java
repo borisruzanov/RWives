@@ -16,7 +16,7 @@ public class UserProfileItemsList {
 
         // check hide or not if hide then return if or else
         if (fsUser.isHide()){
-            String lockUserText="User is Locked";
+            String lockUserText="User is Locked forever";
             return Arrays.asList(new UserDescriptionModel("Gender", lockUserText),
                     new UserDescriptionModel("Relationship Status", lockUserText),
                     new UserDescriptionModel("Body Type", lockUserText),
