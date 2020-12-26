@@ -20,7 +20,7 @@ public class UserProfileItemsList {
             return Arrays.asList(new UserDescriptionModel("Gender", lockUserText),
                     new UserDescriptionModel("Relationship Status", lockUserText),
                     new UserDescriptionModel("Body Type", lockUserText),
-                    new UserDescriptionModel("Ethnicity", lockUserText),
+                    new UserDescriptionModel("Ethnicasdasdity", lockUserText),
                     new UserDescriptionModel("Faith", lockUserText),
                     new UserDescriptionModel("Smoke Status", lockUserText),
                     new UserDescriptionModel("How Often Do You Drink Alcohol", lockUserText),
