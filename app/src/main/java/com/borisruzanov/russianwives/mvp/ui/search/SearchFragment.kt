@@ -186,7 +186,13 @@ class SearchFragment : MvpAppCompatFragment(), SearchView, ConfirmDialogFragment
     }
 
     override fun userWereNotFoundMsg() {
-        mEmptyListLayout.visibility = View.VISIBLE
+        if (adapter.itemCount>0){
+            //if adapter size is more than zero then emptyView disable
+            mEmptyListLayout.visibility=View.GONE
+        }else{
+            //otherwise show
+            mEmptyListLayout.visibility = View.VISIBLE
+        }
         users_swipe_refresh.isRefreshing = false
     }
 

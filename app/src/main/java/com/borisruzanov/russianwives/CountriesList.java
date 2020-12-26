@@ -212,4 +212,18 @@ public class CountriesList {
             return countries;
         }
 
+    /***
+     * a create a list from a string array
+     * it is used to create a city list from a string array
+     * @param cityArray a string array of cities
+     * @return a list of cities
+     */
+    public static List<Country> initCity(String[] cityArray){
+            ArrayList<Country> cityList = new ArrayList<>();
+            for (int i=0;i<cityArray.length;i++){
+                    cityList.add(new Country(cityArray[i]));
+            }
+            return cityList;
+        }
+
 }

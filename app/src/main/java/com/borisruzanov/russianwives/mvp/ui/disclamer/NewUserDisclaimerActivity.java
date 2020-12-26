@@ -23,6 +23,9 @@ import com.firebase.ui.auth.AuthUI;
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -60,7 +63,6 @@ public class NewUserDisclaimerActivity extends AppCompatActivity {
 
     @OnClick(R.id.disclaimer_agree_button)
     public void onAgree(View view){
-        new Prefs(this).setValue(Consts.NEWUSER_DISCLAIMER_ACCEPT,Consts.TRUE);
         onNext();
     }
 
@@ -112,6 +114,11 @@ public class NewUserDisclaimerActivity extends AppCompatActivity {
      */
     public void onNext(){
         UserRepository userRepository= new UserRepository(new Prefs(getApplicationContext()));
+        Map<String, Object> map=new HashMap<>();
+        map.put(Consts.NEWUSER_DISCLAIMER_ACCEPT,Consts.TRUE);
+        userRepository.updateField(map,() -> {
+            new Prefs(this).setValue(Consts.NEWUSER_DISCLAIMER_ACCEPT,Consts.TRUE);
+        });
         userRepository.getDefaultFieldsList();
     }
 

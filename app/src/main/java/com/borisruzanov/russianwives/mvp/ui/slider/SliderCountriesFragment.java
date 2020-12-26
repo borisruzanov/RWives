@@ -7,8 +7,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.borisruzanov.russianwives.CountriesList;
 import com.borisruzanov.russianwives.R;
 import com.borisruzanov.russianwives.eventbus.StringEvent;
+import com.borisruzanov.russianwives.models.Country;
 import com.borisruzanov.russianwives.mvp.model.repository.slider.SliderRepository;
 import com.borisruzanov.russianwives.mvp.ui.slider.adapter.CountriesAdapter;
 import com.borisruzanov.russianwives.utils.Consts;
@@ -24,6 +25,7 @@ import com.borisruzanov.russianwives.utils.Consts;
 import org.greenrobot.eventbus.EventBus;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -37,6 +39,8 @@ public class SliderCountriesFragment extends Fragment {
     private boolean isComplete=false;
     private Button saveButton;
     private static int mSelectedPosition =-1;//a varaible to hold position of selected item from listView,-1 indicate that no item is selected
+    private boolean isChangeAgain=false;
+
     public SliderCountriesFragment() {
         // Required empty public constructor
     }
@@ -49,18 +53,21 @@ public class SliderCountriesFragment extends Fragment {
         return fragment;
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Log.d("SliderDebug","onCreateView of CountryCity");
         View view = inflater.inflate(R.layout.fragment_slider_countries, container, false);
         isCountry=true;
         countryCityList = view.findViewById(R.id.country_list);
+        countryCityList.setChoiceMode(AbsListView.CHOICE_MODE_SINGLE);
         TextView textView=view.findViewById(R.id.slider_countries_tv_question);
         saveButton=view.findViewById(R.id.fragment_slider_countries_btn_save);
         new SliderRepository().getFieldFromCurrentUser(Consts.CITY,value -> {
             try {
                 if (value != null && !value.equals(Consts.DEFAULT)) {
-                    isComplete = true;
+                    isComplete=true;
                 }
             }catch (IllegalStateException e){
                 e.printStackTrace();
@@ -89,12 +96,19 @@ public class SliderCountriesFragment extends Fragment {
                             isCountry=false;
                             setCity(country);
                             mSelectedPosition=-1;//reset to value
+                            if (isComplete){
+                                isChangeAgain=true;
+                                Log.d("SliderDebug","isChangeAgain set true");
+                                EventBus.getDefault().post(new StringEvent(Consts.DISABLE_NEXT_BUTTON));
+                            }
                         });
                     }
+
                 }
             else{
                 //else for a city
-                    String city= (String) countryCityList.getItemAtPosition(mSelectedPosition);
+                    Country cityObj= (Country) countryCityList.getItemAtPosition(mSelectedPosition); //get Country obj
+                    String city=cityObj.getCountryName(); //get City name
                     Log.d("SliderDebug","City:-"+city);
                     Map<String, Object> map = new HashMap<>();
                     map.put(Consts.CITY, city);
@@ -105,11 +119,15 @@ public class SliderCountriesFragment extends Fragment {
                         }
                         Toast.makeText(getActivity(), getString(R.string.city_updated), Toast.LENGTH_LONG).show();
                         if(!isComplete) {
+                            //if country and city not completed
                             EventBus.getDefault().post(new StringEvent(Consts.COMPLETE));
                             EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
                             EventBus.getDefault().post(new StringEvent(Consts.PROGRESSBAR));
                             EventBus.getDefault().post(new StringEvent(Consts.LEFT_STEP));
                             isComplete=true;
+                        }else if (isChangeAgain){
+                            //if after complete country is changed
+                            EventBus.getDefault().post(new StringEvent(Consts.BUTTON_NEXT));
                         }
                         setCountry();
                         isCountry=true;
@@ -118,8 +136,11 @@ public class SliderCountriesFragment extends Fragment {
             }
         });
         countryCityList.setOnItemClickListener((parent, view1, position, id) -> {
+            Log.d("selection","onclick pos:--->"+position);
+            countriesAdapter.removeSelection();
             mSelectedPosition =position; //save a selected item position
-
+            countriesAdapter.changeSelection(position);
+            //countryCityList.getChildAt(position).setBackgroundColor(getResources().getColor(R.color.colorAccent)); //change the selected item color
             /*if (isCountry) {
                 String country = CountriesList.initData().get(position).getCountryName();
                 Log.d("SliderDebug","Country:-"+country);
@@ -162,30 +183,43 @@ public class SliderCountriesFragment extends Fragment {
                 });
             }*/
         });
+
         return view;
     }
 
     private void setCity(String country){
-        ArrayAdapter<CharSequence> cityAdapter;
-        if (country.equals("USA")){
-            cityAdapter = ArrayAdapter.createFromResource(getActivity(),R.array.us_city,android.R.layout.simple_list_item_1);
-            countryCityList.setAdapter(cityAdapter);
-        }
-        else if (country.equals("Ukraine")){
-            cityAdapter = ArrayAdapter.createFromResource(getActivity(),R.array.ukraine_city,android.R.layout.simple_list_item_1);
-            countryCityList.setAdapter(cityAdapter);
-        }
-        else if (country.equals("Kazakhstan")){
-            cityAdapter = ArrayAdapter.createFromResource(getActivity(),R.array.kazakhstan_city,android.R.layout.simple_list_item_1);
-            countryCityList.setAdapter(cityAdapter);
-        }
-        else if (country.equals("Russia")){
-            cityAdapter = ArrayAdapter.createFromResource(getActivity(),R.array.russia_city,android.R.layout.simple_list_item_1);
-            countryCityList.setAdapter(cityAdapter);
-        }
-        else {
-            cityAdapter = ArrayAdapter.createFromResource(getActivity(),R.array.default_city,android.R.layout.simple_list_item_1);
-            countryCityList.setAdapter(cityAdapter);
+        List<Country> cityArrayList;
+        switch (country) {
+            case "USA":
+                cityArrayList = CountriesList.initCity(getResources().getStringArray(R.array.us_city));
+                cityArrayList.remove(0);
+                countriesAdapter = new CountriesAdapter(getActivity(), cityArrayList);
+                countryCityList.setAdapter(countriesAdapter);
+                break;
+            case "Ukraine":
+                cityArrayList = CountriesList.initCity(getResources().getStringArray(R.array.ukraine_city));
+                cityArrayList.remove(0);
+                countriesAdapter = new CountriesAdapter(getActivity(), cityArrayList);
+                countryCityList.setAdapter(countriesAdapter);
+                break;
+            case "Kazakhstan":
+                cityArrayList = CountriesList.initCity(getResources().getStringArray(R.array.kazakhstan_city));
+                cityArrayList.remove(0);
+                countriesAdapter = new CountriesAdapter(getActivity(), cityArrayList);
+                countryCityList.setAdapter(countriesAdapter);
+                break;
+            case "Russia":
+                cityArrayList = CountriesList.initCity(getResources().getStringArray(R.array.russia_city));
+                cityArrayList.remove(0);
+                countriesAdapter = new CountriesAdapter(getActivity(), cityArrayList);
+                countryCityList.setAdapter(countriesAdapter);
+                break;
+            default:
+                cityArrayList = CountriesList.initCity(getResources().getStringArray(R.array.default_city));
+                cityArrayList.remove(0);
+                countriesAdapter = new CountriesAdapter(getActivity(), cityArrayList);
+                countryCityList.setAdapter(countriesAdapter);
+                break;
         }
     }
 
@@ -195,6 +229,14 @@ public class SliderCountriesFragment extends Fragment {
     private void setCountry(){
         countriesAdapter = new CountriesAdapter(getActivity(), CountriesList.initData());
         countryCityList.setAdapter(countriesAdapter);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (isChangeAgain){
+            EventBus.getDefault().post(new StringEvent(Consts.DISABLE_NEXT_BUTTON));
+        }
     }
 
 

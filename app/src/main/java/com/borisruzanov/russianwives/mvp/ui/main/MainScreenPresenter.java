@@ -45,6 +45,9 @@ public class MainScreenPresenter {
         }  else if (result.getStringParameter().equals(Consts.UPDATE_MODULE)){
             //2 step if profile is full - check for updates
             mInteractor.checkForUpdateVersion();
+        }else if (result.getStringParameter().equals(Consts.NO)){
+            //change a isNeedToCheck to false for not check again about that
+            MainScreenActivity.isNeedToCheck=false;
         }
     }
 
@@ -168,6 +171,5 @@ public class MainScreenPresenter {
             Log.d("OnlineStatusDebug","Complete for uid:---"+uid);
         }
     }
-
 
 }

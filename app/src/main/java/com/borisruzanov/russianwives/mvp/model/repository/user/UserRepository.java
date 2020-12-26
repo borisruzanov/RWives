@@ -26,6 +26,7 @@ import com.borisruzanov.russianwives.utils.Consts;
 import com.borisruzanov.russianwives.utils.FirebaseRequestManager;
 import com.borisruzanov.russianwives.utils.OnlineUsersCallback;
 import com.borisruzanov.russianwives.utils.StringsCallback;
+import com.borisruzanov.russianwives.utils.UpdateCallback;
 import com.borisruzanov.russianwives.utils.UserCallback;
 import com.borisruzanov.russianwives.utils.UserHideCallback;
 import com.borisruzanov.russianwives.utils.network.ApiClient;
@@ -378,12 +379,19 @@ public class UserRepository {
             if (field.equals(Consts.VIDEO)){ //check for video field
                 if (value==null) //if null then add
                     valuesList.add(field);
-                else if (value.toLowerCase().trim().equals(Consts.DEFAULT)){ //if value is default then add
+                else if (value.toLowerCase().trim().equals(Consts.DEFAULT)){ //if value is. default then add
                     valuesList.add(field);
                 }
-            }else {
+            } else {
                 if (value != null && value.toLowerCase().trim().equals(Consts.DEFAULT)) {
                     valuesList.add(field);
+                }
+                //check is city is set for a country or not
+                if (field.equals(Consts.COUNTRY) && !valuesList.contains(field)){ //if field is country
+                    String city=document.getString(Consts.CITY);
+                    if (city!=null && city.toLowerCase().trim().equals(Consts.DEFAULT)){
+                        valuesList.add(field);
+                    }
                 }
             }
         }
@@ -1425,4 +1433,13 @@ public class UserRepository {
         });
     }
 
+    /***
+     * update field in current user doc
+     * @param map a map object with a field and and its value
+     * @param callback callback to return
+     */
+    public void updateField(Map<String, Object> map, UpdateCallback callback){
+        //a setOptions.merge() will update existing field,if field is not available it create a new one
+        users.document(getUid()).set(map,SetOptions.merge()).addOnCompleteListener(task -> callback.onUpdate());
+    }
 }

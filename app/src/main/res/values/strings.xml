@@ -702,6 +702,7 @@
 
     <!--USA Cities-->
     <string-array name="us_city">
+        <item>All Cities</item>
         <item>Akron</item>
         <item>Albuquerque</item>
         <item>Alexandria</item>
@@ -994,6 +995,7 @@
 
     <!--Russia Cities-->
     <string-array name="russia_city">
+        <item>All Cities</item>
         <item>Saint Petersburg</item>
         <item>Novosibirsk</item>
         <item>Yekaterinburg</item>
@@ -1673,6 +1675,7 @@
 
     <!--Kazakhstan Cities-->
     <string-array name="kazakhstan_city">
+        <item>All Cities</item>
         <item>Shymkent</item>
         <item>Qaraghandy</item>
         <item>Taraz</item>
@@ -1768,6 +1771,7 @@
 
     <!--Ukraine cities-->
     <string-array name="ukraine_city">
+        <item>All Cities</item>
         <item>Kharkiv</item>
         <item>Dnipro</item>
         <item>Odesa</item>
@@ -2317,4 +2321,5 @@
     <string name="some_wrong">Something went wrong..!Try again</string>
     <string name="country_city_updated">Country and city updated</string>
     <string name="wait_for_approval">Please Wait untill your video approved from Admin</string>
+    <string name="record_another_video">Record another video</string>
 </resources>
